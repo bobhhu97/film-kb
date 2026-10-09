@@ -110,6 +110,17 @@ const bundle = {
   graph
 };
 
+// 术语表（可选，shards/00-meta/glossary.json）
+const glossaryPath = path.join(SHARDS, '00-meta/glossary.json');
+if (fs.existsSync(glossaryPath)) {
+  const g = JSON.parse(fs.readFileSync(glossaryPath, 'utf8'));
+  const gseen = new Set();
+  bundle.glossary = (g.terms || []).filter(t => {
+    if (!t?.term || gseen.has(t.term)) return false;
+    gseen.add(t.term); return true;
+  });
+}
+
 fs.mkdirSync(OUT, { recursive: true });
 fs.writeFileSync(path.join(OUT, 'bundle.json'), JSON.stringify(bundle, null, 0));
 fs.writeFileSync(

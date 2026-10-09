@@ -84,6 +84,113 @@ function inline(text, ctx = '') {
   if (ctx === 'md') h = h.replace(/\n/g, '<br>');
   return h;
 }
+
+/* ================= 词库：虚线高亮 + 点击弹解释框 ================= */
+let TERM_MAP = null;
+function termMap() {
+  if (TERM_MAP) return TERM_MAP;
+  TERM_MAP = new Map();
+  const arr = KB.glossary || [];
+  arr.sort((a, b) => b.term.length - a.term.length); // 长词优先
+  for (const t of arr) TERM_MAP.set(t.term, t);
+  return TERM_MAP;
+}
+
+function markTerms(root) {
+  const terms = termMap();
+  if (!terms.size) return;
+  // 按 term 首字聚合，加速 TextWalker 匹配
+  const byFirst = new Map();
+  for (const [w] of terms) {
+    const ch = w[0];
+    if (!byFirst.has(ch)) byFirst.set(ch, []);
+    byFirst.get(ch).push(w);
+  }
+  const skip = new Set(['CODE', 'PRE', 'A', 'SCRIPT', 'STYLE', 'TEXTAREA', 'MARK', 'BUTTON']);
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+    acceptNode(node) {
+      if (!node.nodeValue || node.nodeValue.length < 2) return NodeFilter.FILTER_REJECT;
+      const p = node.parentElement;
+      if (!p || skip.has(p.tagName)) return NodeFilter.FILTER_REJECT;
+      if (p.closest('.term, .xref, .gtip, .modal-ov')) return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+  // 每个词全页只标第一次出现
+  const hit = new Set();
+  const targets = [];
+  let n;
+  while ((n = walker.nextNode())) {
+    let s = n.nodeValue;
+    // 找出该文本节点里第一个命中的词（长词优先）
+    let best = null, bestIdx = -1;
+    for (const [ch, ws] of byFirst) {
+      let from = 0;
+      while ((from = s.indexOf(ch, from)) !== -1) {
+        for (const w of ws) {
+          if (hit.has(w)) continue;
+          if (s.startsWith(w, from) && (bestIdx === -1 || from < bestIdx || (from === bestIdx && w.length > best.length))) {
+            best = w; bestIdx = from;
+          }
+        }
+        from += 1;
+      }
+    }
+    if (best) { hit.add(best); targets.push({ node: n, word: best }); }
+  }
+  for (const { node, word } of targets) {
+    const t = terms.get(word);
+    const parent = node.parentNode;
+    const s = node.nodeValue;
+    const before = document.createTextNode(s.slice(0, node.nodeValue.indexOf(word)));
+    const after = document.createTextNode(s.slice(s.indexOf(word) + word.length));
+    const mark = document.createElement('button');
+    mark.type = 'button';
+    mark.className = 'term';
+    mark.dataset.term = word;
+    mark.textContent = word;
+    mark.setAttribute('aria-label', `术语解释：${word}`);
+    parent.insertBefore(before, node);
+    parent.insertBefore(mark, node);
+    parent.insertBefore(after, node);
+    parent.removeChild(node);
+  }
+}
+
+function openTermPop(word) {
+  closeTermPop();
+  const t = termMap().get(word);
+  if (!t) return;
+  const pop = document.createElement('div');
+  pop.className = 'termpop';
+  pop.innerHTML = `<div class="tp-h"><span class="tp-t">${esc(t.term)}</span><span class="tp-en">${esc(t.en || '')}</span>
+    <button class="tp-x" aria-label="关闭">×</button></div>
+    <div class="tp-b">${esc(t.def)}</div>
+    ${t.see ? `<div class="tp-see">相关词条：<span class="xref" data-go="${esc(t.see)}">${esc(ENT.get(t.see)?.title || t.see)}</span></div>` : ''}`;
+  document.body.appendChild(pop);
+  const r = document.activeElement?.getBoundingClientRect?.() || window.innerWidth / 2;
+  const vw = window.innerWidth;
+  let x, y;
+  if (typeof r === 'object' && r.width !== undefined) {
+    x = Math.min(Math.max(12, r.left + r.width / 2), vw - 12);
+    y = r.bottom + 10;
+  } else { x = vw / 2; y = 120; }
+  const pw = Math.min(400, vw - 24);
+  pop.style.width = pw + 'px';
+  pop.style.left = Math.min(Math.max(12, x - pw / 2), vw - pw - 12) + 'px';
+  pop.style.top = y + 'px';
+  const ph = pop.offsetHeight;
+  if (y + ph > window.innerHeight - 12) pop.style.top = Math.max(12, y - ph - 42) + 'px';
+  pop.querySelector('.tp-x').addEventListener('click', closeTermPop);
+  requestAnimationFrame(() => pop.classList.add('on'));
+}
+function closeTermPop() { document.querySelectorAll('.termpop').forEach(p => p.remove()); }
+document.addEventListener('click', ev => {
+  const term = ev.target.closest('.term');
+  if (term) { ev.stopPropagation(); openTermPop(term.dataset.term); return; }
+  if (!ev.target.closest('.termpop')) closeTermPop();
+});
+document.addEventListener('keydown', ev => { if (ev.key === 'Escape') closeTermPop(); });
 function mdLite(src) {
   const lines = String(src).replace(/\r/g, '').split('\n');
   const out = [];
@@ -173,7 +280,7 @@ function render() {
   const v = $('#view');
   if (V.view === 'home') v.innerHTML = viewHome();
   else if (V.view === 'browse') v.innerHTML = viewBrowse();
-  else if (V.view === 'entry') v.innerHTML = viewEntry();
+  else if (V.view === 'entry') { v.innerHTML = viewEntry(); markTerms(v); }
   else if (V.view === 'graph') v.innerHTML = viewGraph();
   else if (V.view === 'progress') v.innerHTML = viewProgress();
   else if (V.view === 'guide') v.innerHTML = viewGuide();
@@ -275,15 +382,49 @@ function viewBrowse() {
   </div>
   <div style="margin-bottom:14px">${tagPool.slice(0, 40).map(t => `<span class="tag ${f.tag === t ? 'on' : ''}" data-tag="${esc(t)}">${esc(t)}</span>`).join('')}</div>
 
-  ${mid && m.count ? `<h3>按难度分层</h3>${[1, 2, 3, 4, 5].map(lv => {
-      const ids = m.levels[lv] || [];
-      if (!ids.length) return '';
-      return `<div style="margin-bottom:11px"><div class="dim" style="font-size:12px;margin-bottom:6px">level ${lv} · ${LV.get(lv)} · ${ids.length} 条</div>
-      <div>${ids.map(id => { const e = ENT.get(id); const s = statusOf(id);
-        return `<span class="tag ${s === 'mastered' ? 'on' : ''}" data-go="${id}" title="${esc(e.title_en)}">${esc(e.title)}</span>`; }).join('')}</div></div>`;
-    }).join('')}` : ''}
+  ${mid && m.count ? pathBlock(mid) : ''}
+
+  ${mid && m.count ? `<div class="lvlchips">
+    <button class="lchip ${!f.level && !f.type && !f.status && !f.tag && !f.q ? 'on' : ''}" data-act="lvchip" data-lv="">全部 <b>${m.count}</b></button>
+    ${[1, 2, 3, 4, 5].map(lv => { const n = (m.levels[lv] || []).length; return n ? `<button class="lchip ${String(f.level) === String(lv) ? 'on' : ''}" data-act="lvchip" data-lv="${lv}">L${lv} ${LV.get(lv)} <b>${n}</b></button>` : ''; }).join('')}
+  </div>` : ''}
 
   <div class="list">${list.length ? list.map(entryItem).join('') : '<div class="empty"><div class="ic"></div>没有匹配的条目</div>'}</div>`;
+}
+
+/* 模块学习路径：prereq 依赖拓扑排序（Kahn 分层 + level/id 决胜），level 升序为主序 */
+function modulePath(mid) {
+  const list = KB.entries.filter(e => e.id.split('.')[0] === mid);
+  const inMod = new Set(list.map(e => e.id));
+  const deps = new Map();
+  for (const e of list) deps.set(e.id, new Set((e.links?.prereq || []).filter(x => inMod.has(x))));
+  const out = [], done = new Set(), remaining = new Set(inMod);
+  while (remaining.size) {
+    let ready = [...remaining].filter(id => [...deps.get(id)].every(d => done.has(d)));
+    if (!ready.length) ready = [[...remaining].sort((a, b) => (ENT.get(a).level - ENT.get(b).level) || a.localeCompare(b))[0]]; // 依赖环兜底
+    ready.sort((a, b) => (ENT.get(a).level - ENT.get(b).level) || a.localeCompare(b));
+    for (const id of ready) { done.add(id); remaining.delete(id); out.push(id); }
+  }
+  return out;
+}
+
+function pathBlock(mid) {
+  const ids = modulePath(mid);
+  if (!ids.length) return '';
+  const mastered = ids.filter(id => statusOf(id) === 'mastered').length;
+  const nextId = ids.find(id => statusOf(id) !== 'mastered');
+  const next = nextId ? ENT.get(nextId) : null;
+  return `<details class="pathbox">
+  <summary>
+    <span class="pt">学习路径</span>
+    <span class="pstat">${mastered}/${ids.length} 已掌握${next ? '' : ' · 全部完成'}</span>
+    <span class="phint">按先学依赖排序，点展开</span>
+  </summary>
+  ${next ? `<div class="pnext"><button class="pri sm" data-act="pathgo" data-id="${next.id}">从「${esc(next.title)}」继续</button><span class="dim">L${next.level} ${LV.get(next.level)} · 第 ${ids.indexOf(next.id) + 1} 步</span></div>` : ''}
+  <ol class="pathlist">${ids.map((id, i) => { const e = ENT.get(id); const s = statusOf(id);
+    return `<li class="${s}" data-go="${id}"><span class="pn">${String(i + 1).padStart(2, '0')}</span><span class="ptt">${esc(e.title)}</span><span class="plv">L${e.level}</span><span class="pst">${STATUS_CN[s]}</span></li>`;
+  }).join('')}</ol>
+  </details>`;
 }
 
 function entryItem(e, i) {
@@ -1057,7 +1198,201 @@ function doImport(file) {
   fr.readAsText(file);
 }
 
-/* ================= 全局事件 ================= */
+/* ================= AI 学习助手（DeepSeek 官方接口，key 只存本机） ================= */
+const AI_KEY = 'filmkb:ai';
+const AI_EP = 'https://api.deepseek.com/chat/completions';
+const AI_MODEL = 'deepseek-chat';
+let AI_HIST = [];              // {role, content} 最近对话（内存）
+let AI_BUSY = false;
+
+function aiLoad() { try { return JSON.parse(localStorage.getItem(AI_KEY) || '{}'); } catch (e) { return {}; } }
+function aiSave(cfg) { try { localStorage.setItem(AI_KEY, JSON.stringify(cfg)); } catch (e) {} }
+
+function aiInject() {
+  if ($('#ai-fab')) return;
+  const fab = document.createElement('button');
+  fab.id = 'ai-fab';
+  fab.className = 'fab';
+  fab.setAttribute('aria-label', 'AI 学习助手');
+  fab.innerHTML = `<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path d="M12 3l1.9 4.6L18.5 9l-4.6 1.9L12 15.5l-1.9-4.6L5.5 9l4.6-1.4L12 3z" fill="currentColor" opacity=".9"/>
+    <circle cx="18.5" cy="16.5" r="2.5" fill="currentColor" opacity=".55"/>
+    <circle cx="6.5" cy="17.5" r="1.6" fill="currentColor" opacity=".4"/></svg>`;
+  fab.addEventListener('click', () => openAI());
+  document.body.appendChild(fab);
+
+  // 划词气泡
+  const bub = document.createElement('div');
+  bub.id = 'ai-bub';
+  bub.className = 'aibub';
+  bub.textContent = '提问';
+  bub.hidden = true;
+  bub.addEventListener('mousedown', ev => ev.preventDefault()); // 防止选区丢失
+  bub.addEventListener('click', () => {
+    const sel = String(window.getSelection?.() || '').trim();
+    bub.hidden = true;
+    openAI(sel ? `「${sel}」是什么意思？结合本页内容解释一下。` : '');
+  });
+  document.body.appendChild(bub);
+
+  document.addEventListener('mouseup', ev => {
+    if (ev.target.closest('.aibub, #ai-panel, #ai-fab')) return;
+    setTimeout(() => {
+      const sel = String(window.getSelection?.() || '').trim();
+      if (sel.length < 2 || sel.length > 300) { bub.hidden = true; return; }
+      const r = window.getSelection().getRangeAt(0).getBoundingClientRect();
+      if (!r.width && !r.height) { bub.hidden = true; return; }
+      bub.hidden = false;
+      bub.style.left = Math.min(Math.max(8, r.left + r.width / 2 - 30), window.innerWidth - 70) + 'px';
+      bub.style.top = Math.max(8, r.top - 40) + 'px';
+    }, 10);
+  });
+}
+
+function openAI(prefill) {
+  closeTermPop();
+  $('#ai-panel')?.remove();
+  const cfg = aiLoad();
+  const ov = document.createElement('div');
+  ov.id = 'ai-panel';
+  ov.className = 'ai-ov';
+  ov.innerHTML = `<div class="ai">
+    <div class="ai-h"><strong>AI 学习助手</strong>
+      <span class="dim">DeepSeek · 直连本机浏览器，密钥不上传</span>
+      <button class="sm" data-ai="close">关闭</button></div>
+    <div class="ai-log" id="ai-log"></div>
+    <div class="ai-settings" id="ai-set">
+      <div class="ai-krow">
+        <input type="password" id="ai-key" placeholder="粘贴 DeepSeek API Key（sk-…）" value="${esc(cfg.key || '')}" autocomplete="off">
+        <button class="sm" data-ai="savekey">保存</button>
+      </div>
+      <div class="dim" style="font-size:11.5px">密钥仅保存在浏览器 localStorage，不经过任何服务器。没有 Key？到 platform.deepseek.com 注册获取。</div>
+    </div>
+    <div class="ai-frow">
+      <textarea id="ai-in" rows="2" placeholder="问我任何胶片摄影问题…（Enter 发送，Shift+Enter 换行）"></textarea>
+      <button class="pri" data-ai="send" id="ai-send">发送</button>
+    </div></div>`;
+  document.body.appendChild(ov);
+  ov.addEventListener('click', ev => {
+    if (ev.target === ov) closeAI();
+    const b = ev.target.closest('[data-ai]');
+    if (!b) return;
+    const a = b.dataset.ai;
+    if (a === 'close') closeAI();
+    if (a === 'savekey') {
+      const k = $('#ai-key').value.trim();
+      aiSave({ key: k });
+      toast(k ? '密钥已保存到本机' : '密钥已清除');
+      $('#ai-set').classList.remove('warn');
+      aiLog('sys', k ? '密钥已保存，可以开始提问。' : '密钥已清除。');
+    }
+    if (a === 'send') aiSend();
+  });
+  const ta = $('#ai-in');
+  ta.addEventListener('keydown', ev => {
+    if (ev.key === 'Enter' && !ev.shiftKey) { ev.preventDefault(); aiSend(); }
+    if (ev.key === 'Escape') closeAI();
+  });
+  // 恢复最近一次对话
+  AI_HIST.forEach(m => aiLog(m.role === 'user' ? 'me' : 'ai', m.content));
+  if (!cfg.key) { $('#ai-set').classList.add('warn'); aiLog('sys', '首次使用：请先在下方输入 DeepSeek API Key。密钥只存在这台设备的浏览器里。'); }
+  if (prefill) { ta.value = prefill; aiSend(); }
+  else ta.focus();
+}
+function closeAI() { $('#ai-panel')?.remove(); }
+
+function aiLog(kind, text) {
+  const log = $('#ai-log'); if (!log) return;
+  const d = document.createElement('div');
+  d.className = 'ai-msg ' + kind;
+  if (kind === 'sys') { d.textContent = text; }
+  else {
+    // 纯文本渲染：textContent 防注入，换行转 <br>
+    const s = document.createElement('span');
+    s.textContent = text;
+    d.appendChild(s);
+  }
+  log.appendChild(d);
+  log.scrollTop = log.scrollHeight;
+  return d;
+}
+
+async function aiSend() {
+  if (AI_BUSY) return;
+  const cfg = aiLoad();
+  const ta = $('#ai-in'), log = $('#ai-log');
+  const q = ta.value.trim();
+  if (!q) return;
+  if (!cfg.key) { $('#ai-set').classList.add('warn'); $('#ai-key').focus(); aiLog('sys', '请先保存 DeepSeek API Key。'); return; }
+  ta.value = '';
+  aiLog('me', q);
+  AI_HIST.push({ role: 'user', content: q });
+
+  // 组装上下文：当前词条 + 最近对话（截断 ~4000 字）
+  const msgs = [{ role: 'system', content: '你是胶片摄影知识库的助教。用简体中文回答，简洁准确，面向摄影学习者。涉及化学操作时提醒安全。' }];
+  if (V.view === 'entry') {
+    const e = ENT.get(V.entry);
+    if (e) msgs.push({ role: 'system', content: `用户正在阅读词条《${e.title}》（${e.title_en}，level ${e.level}）：${e.summary}` });
+  }
+  let hist = 0;
+  for (const m of AI_HIST.slice(-8).reverse()) { hist += m.content.length; if (hist > 4000) break; msgs.push(m); }
+  msgs.reverse();
+
+  AI_BUSY = true;
+  $('#ai-send').disabled = true;
+  const holder = aiLog('ai', '');
+  holder.classList.add('stream');
+  holder.textContent = '…';
+  try {
+    const res = await fetch(AI_EP, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + cfg.key },
+      body: JSON.stringify({ model: AI_MODEL, messages: msgs, stream: true })
+    });
+    if (!res.ok) {
+      const t = await res.text().catch(() => '');
+      throw new Error(`HTTP ${res.status}${t ? '：' + t.slice(0, 200) : ''}`);
+    }
+    const reader = res.body.getReader();
+    const dec = new TextDecoder();
+    let buf = '', full = '';
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buf += dec.decode(value, { stream: true });
+      const lines = buf.split('\n');
+      buf = lines.pop();
+      for (const line of lines) {
+        const l = line.trim();
+        if (!l.startsWith('data:')) continue;
+        const data = l.slice(5).trim();
+        if (data === '[DONE]') continue;
+        try {
+          const j = JSON.parse(data);
+          const delta = j.choices?.[0]?.delta?.content;
+          if (delta) {
+            full += delta;
+            holder.textContent = full;
+            log.scrollTop = log.scrollHeight;
+          }
+        } catch (e) {}
+      }
+    }
+    if (!full) { holder.textContent = '（空回复）'; }
+    else AI_HIST.push({ role: 'assistant', content: full });
+    if (AI_HIST.length > 16) AI_HIST = AI_HIST.slice(-16);
+  } catch (err) {
+    holder.classList.remove('stream');
+    holder.innerHTML = `<span class="ai-err"></span>`;
+    holder.querySelector('.ai-err').textContent = '请求失败：' + err.message;
+    AI_HIST.pop(); // 失败的用户消息不入历史
+  }
+  holder.classList.remove('stream');
+  AI_BUSY = false;
+  const btn = $('#ai-send'); if (btn) btn.disabled = false;
+}
+
+
 document.addEventListener('click', ev => {
   const t = ev.target;
 
@@ -1109,6 +1444,8 @@ function doAct(act, d) {
     case 'delnote': if (e) { delete S.notes[e.id]; save(); render(); toast('笔记已删除'); } break;
     case 'copy': if (e) { navigator.clipboard?.writeText(entryToMarkdown(e)).then(() => toast('Markdown 已复制'), () => toast('复制失败')); } break;
     case 'clearf': V.filters = {}; rerenderBrowse(); break;
+    case 'lvchip': { const lv = d.lv || ''; if (String(V.filters.level || '') === String(lv) && lv !== '') V.filters.level = ''; else V.filters.level = lv; rerenderBrowse(); break; }
+    case 'pathgo': if (ENT.has(d.id)) go(d.id); break;
     case 'path': { gotoBrowse({ level: d.lv }, d.m); break; }
     case 'modpath': { gotoBrowse({}, d.m); break; }
     case 'due': {
@@ -1167,4 +1504,5 @@ window.addEventListener('hashchange', route);
 window.addEventListener('resize', () => {
   if (V.view === 'graph') { if (G) G.cleanup(); G = null; initGraph(); }
 });
+aiInject();
 route();
