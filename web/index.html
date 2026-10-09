@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>胶片摄影知识库 · Film Photography Knowledge Base</title>
+<meta name="description" content="胶片摄影、冲洗、放大、扫描的系统知识库。80% ASD-STE100 体例，含全文检索、知识图谱与学习进度追踪。">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0c0b0a">
+
+<link rel="preload" as="font" type="font/woff2" href="fonts/noto-sans-sc-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/noto-serif-sc-600.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/fraunces-var.woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230c0b0a'/><circle cx='16' cy='16' r='7.5' fill='none' stroke='%23e8a33d' stroke-width='2'/><circle cx='16' cy='16' r='2.6' fill='%23e8a33d'/></svg>">
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.4" opacity=".5"/>
+        <circle cx="12" cy="12" r="5.5" stroke="currentColor" stroke-width="1.4"/>
+        <circle cx="12" cy="12" r="1.9" fill="currentColor"/>
+      </svg>
+      <span class="nm">胶片摄影知识库<small>FILM PHOTOGRAPHY KB</small></span>
+    </div>
+
+    <div class="searchbox">
+      <svg class="lns" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <circle cx="6.8" cy="6.8" r="4.6" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M10.4 10.4 14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <input type="text" id="q" placeholder="搜索条目、药液、配方、机型、术语…" autocomplete="off" spellcheck="false" aria-label="搜索知识库">
+      <div class="suggest" id="sug"></div>
+    </div>
+
+    <nav class="tabs">
+      <button data-v="home" class="on">首页</button>
+      <button data-v="browse">浏览</button>
+      <button data-v="graph">知识图谱</button>
+      <button data-v="progress">学习进度</button>
+      <button data-v="guide">增补指南</button>
+    </nav>
+  </div>
+</header>
+
+<main id="view"></main>
+
+<footer>
+  <div>胶片摄影知识库 · 数据源 <code>shards/*.json</code> · 体例 80% ASD-STE100 · 构建 <span id="built">—</span></div>
+  <div>学习进度保存在本机浏览器 localStorage。换设备时用「进度」页的导出/导入迁移。</div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="data/bundle.js"></script>
+<script src="data/guide.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

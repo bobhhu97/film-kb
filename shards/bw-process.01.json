@@ -1,0 +1,3441 @@
+{
+ "module": "bw-process",
+ "shard": "bw-process.01",
+ "shard_zh": "显影剂原理与主流配方",
+ "note": "配方数值以厂商技术资料为准。本分片中标注 draft 的条目需以厂商最新说明书复核。",
+ "entries": [
+  {
+   "id": "bw-process.developer-chemistry",
+   "title": "显影剂的四种组分",
+   "title_en": "Four Components of a Developer",
+   "aliases": [
+    "显影液成分",
+    "reducing agent",
+    "保护剂",
+    "加速剂",
+    "抑制剂",
+    "restrainer",
+    "delxing"
+   ],
+   "type": "chemical",
+   "level": 3,
+   "era": "1874 至今",
+   "tags": [
+    "显影剂",
+    "化学",
+    "组分",
+    "原理"
+   ],
+   "summary": "显影剂（developer）由四种组分构成：显影剂主体、保护剂、加速剂、抑制剂。每种组分承担一项独立功能，配方设计即四种组分的取舍。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "显影剂主体（reducing agent / developing agent）"
+    },
+    {
+     "kind": "p",
+     "text": "显影剂主体把乳剂中的卤化银还原为金属银。它决定显影液的性格：Metol（对甲氨基酚硫酸盐）、对苯二酚（hydroquinone）、Phenidone（1-苯基-3-吡唑烷酮）、邻苯二酚（catechol）、焦性没食子酸（pyrogallic acid）、异抗坏血酸（sodium ascorbate）都属于主体。参见 $bw-process.hq-catechol。"
+    },
+    {
+     "kind": "image",
+     "src": "img/measuring-cylinder.jpg",
+     "alt": "量筒。显影剂配制按体积取水与按质量称药的环节都依赖容积与质量的量取。",
+     "caption": "量筒。显影剂配制按体积取水与按质量称药的环节都依赖容积与质量的量取。",
+     "credit": "Jeremyida002",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:A_measuring_cylinder.jpg"
+    },
+    {
+     "kind": "image",
+     "src": "img/developing-reel.png",
+     "alt": "显影卷轴与装入其中的胶片。药液在片距间流动，搅动方式影响显影均匀性。",
+     "caption": "显影卷轴与装入其中的胶片。药液在片距间流动，搅动方式影响显影均匀性。",
+     "credit": "きたし",
+     "license": "CC BY 2.5",
+     "source": "https://commons.wikimedia.org/wiki/File%3AFilm_developing_reel.svg"
+    },
+    {
+     "kind": "h2",
+     "text": "保护剂（preservative）"
+    },
+    {
+     "kind": "p",
+     "text": "无水亚硫酸钠（sodium sulfite）是最常用的保护剂。它捕获氧分子，延缓显影剂主体的氧化。保护剂同时溶解并分散显影过程中生成的细小银粒，这些银粒本身也起显影作用，称为物理显影（physical development）。亚硫酸盐过高会抑制染色显影剂，低亚硫酸盐会加快主体氧化。"
+    },
+    {
+     "kind": "h2",
+     "text": "加速剂（accelerator）"
+    },
+    {
+     "kind": "p",
+     "text": "加速剂把溶液 pH 提高到主体可工作的范围。硼砂（borax）、碳酸钠（sodium carbonate）、碳酸钾（potassium carbonate）、偏硼酸钠（Kodalk）、氢氧化钠（caustic soda）都属于加速剂。强碱使显影加快并提高反差，也增加氧化速度。"
+    },
+    {
+     "kind": "h2",
+     "text": "抑制剂（restrainer）"
+    },
+    {
+     "kind": "p",
+     "text": "抑制剂压低灰雾（base fog），抑制阴影区的自发觉影。溴化钾（potassium bromide）是常用抑制剂，作用随浓度上升而增强。抑制剂过量会使有效片速下降。Rodinal、D-76、Xtol、POTA 等配方不含抑制剂，依靠低 pH 与主体选择抑制灰雾。参见 $bw-process.exhaustion。"
+    },
+    {
+     "kind": "note",
+     "text": "配方设计不追求组分齐全，而追求取舍准确。取消氢醌可以得到稳定性高的 D-76H。取消抑制剂可以得到锐度高的 Rodinal。降低亚硫酸盐可以得到反差高的 ID-14。"
+    },
+    {
+     "kind": "warn",
+     "text": "羟基苯类显影剂有毒。接触皮肤、吸入粉尘都会造成伤害。操作时佩戴手套，在通风条件下称量。焦性没食子酸与邻苯二酚会染手和染容器。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "The Film Developing Cookbook（Troop / Anchell, 2019）第 5 章",
+     "url": "https://dupa.ie/wp-content/uploads/2023/03/Bill-Troop-Steve-Anchell-The-Film-Developing-Cookbook-2019-Routledge.pdf",
+     "kind": "book",
+     "note": "四种组分的定义、亚硫酸盐的双重作用、氧化产物对反差的影响。"
+    },
+    {
+     "name": "Kodak 白黑现像液 技術資料 TSC0599",
+     "url": "http://kodakalaris.co.jp/images/TSC0599.pdf",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "The Film Developing Cookbook（Troop / Anchell, 2019）附录方剂表",
+     "url": "https://dupa.ie/wp-content/uploads/2023/03/Bill-Troop-Steve-Anchell-The-Film-Developing-Cookbook-2019-Routledge.pdf",
+     "kind": "book",
+     "note": "DK-50、DK-40 等经典方剂的成分表与设计取舍。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "film-stock.halide-crystal"
+    ],
+    "next": [
+     "bw-process.hq-catechol",
+     "bw-process.developer-types"
+    ],
+    "related": [
+     "bw-process.exhaustion",
+     "bw-process.d-76"
+    ],
+    "contrast": []
+   },
+   "quiz": [
+    {
+     "q": "显影剂中最常用的保护剂是？",
+     "type": "single",
+     "options": [
+      "无水亚硫酸钠",
+      "硼砂",
+      "溴化钾",
+      "对苯二酚"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "亚硫酸钠捕获氧，延缓显影剂主体氧化，并参与物理显影。"
+    },
+    {
+     "q": "保护剂除抗氧化外还承担什么作用？",
+     "type": "single",
+     "options": [
+      "提高 pH",
+      "溶解并分散物理显影生成的细小银粒",
+      "压低灰雾",
+      "硬化明胶"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "亚硫酸盐溶解新生银粒，使物理显影参与成像。"
+    },
+    {
+     "q": "常用抑制剂是？",
+     "type": "single",
+     "options": [
+      "碘化钾",
+      "溴化钾",
+      "氯化钠",
+      "柠檬酸"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "溴化钾抑制阴影区自发觉影，浓度升高则灰雾下降。"
+    },
+    {
+     "q": "下列哪个配方不含抑制剂？",
+     "type": "single",
+     "options": [
+      "D-89",
+      "D-76",
+      "Rodinal",
+      "ID-14"
+     ],
+     "answer": [
+      2
+     ],
+     "why": "Rodinal 依靠对氨基酚的选择性和高 pH 条件控制灰雾，不加溴化物。"
+    }
+   ],
+   "updated": "2026-01-12",
+   "status": "reviewed"
+  },
+  {
+   "id": "bw-process.hq-catechol",
+   "title": "对苯二酚与邻苯二酚类显影剂",
+   "title_en": "Hydroquinone and Catechol Developers",
+   "aliases": [
+    "氢醌",
+    "hydroquinone",
+    "catechol",
+    "邻苯二酚",
+    "elpol",
+    "pyrogallic acid",
+    "ascorbate"
+   ],
+   "type": "chemical",
+   "level": 4,
+   "era": "1880 至今",
+   "tags": [
+    "显影剂",
+    "对苯二酚",
+    "邻苯二酚",
+    "染色",
+    "银"
+   ],
+   "summary": "对苯二酚在高 pH 下活性强，与 Metol 或 Phenidone 组合成标准 PQ 显影剂。邻苯二酚类显影剂（elpol）产生银染色，放大时用短波放大机效果更好。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "对苯二酚（hydroquinone）的双重性格"
+    },
+    {
+     "kind": "p",
+     "text": "对苯二酚在新鲜 D-76 的 pH 约 8.3 下几乎不显影。它在明胶内被亚硫酸盐氧化生成对苯二醌（quinhydrone），这个副产物再分解为半醌。半醌参与电子传递，使显影具有诱导期。存放数月后溶液 pH 升到 9，对苯二酚被激活，反差升高。这是 D-76 长期存放后表现漂移的原因。去掉对苯二酚可得稳定的 D-76H。"
+    },
+    {
+     "kind": "p",
+     "text": "对苯二酚与 Metol 或 Phenidone 组合后，对苯二酚在明胶层内被局部高 pH 激活，形成所谓的邻接效应（adjacency effect）：与已显影的银粒邻近区域显影加快。这一效应提高微粒反差，也提高锐度。显影时间短、搅拌强时效应最强。"
+    },
+    {
+     "kind": "h2",
+     "text": "邻苯二酚类显影剂（elpol）"
+    },
+    {
+     "kind": "p",
+     "text": "邻苯二酚（catechol）与焦性没食子酸（pyrogallic acid）在显影中直接还原成银并留在负片上，形成不可溶的黄色染料。负片因染料而呈现暖调印放效果（warm-tone print），黑位下降，最大密度降低。短波放大机（UV 光源）激发染料的效果强于长波光源，因此印放时间更短。参见 $bw-process.pyro。"
+    },
+    {
+     "kind": "h2",
+     "text": "异抗坏血酸（ascorbate）替代"
+    },
+    {
+     "kind": "p",
+     "text": "异抗坏血酸钠（sodium isoascorbate）可替代对苯二酚。D-96A 与 Xtol 采用这一路线。它的耗尽产物呈惰性，因此显影液自身即补充液。参见 $bw-process.xtol。"
+    },
+    {
+     "kind": "table",
+     "caption": "显影剂主体对比",
+     "rows": [
+      {
+       "c1": "对苯二酚",
+       "c2": "在 pH 8.3 几乎不工作",
+       "c3": "制造邻接效应，提高反差",
+       "c4": "在显影中耗尽",
+       "c5": "D-76、ID-11、HC-110、DD-X"
+      },
+      {
+       "c1": "Metol",
+       "c2": "低 pH 即工作",
+       "c3": "给出低反差起点",
+       "c4": "氧化产物减速显影",
+       "c5": "D-76、D-89、Xtol"
+      },
+      {
+       "c1": "Phenidone",
+       "c2": "对溴化物不敏感",
+       "c3": "适合浓缩补充式处理",
+       "c4": "氧化产物减速显影",
+       "c5": "Ilford PQ 配方、ID-19"
+      },
+      {
+       "c1": "邻苯二酚",
+       "c2": "生成染料",
+       "c3": "降低黑位，适合相纸",
+       "c4": "染色在显影后继续形成",
+       "c5": "Pyrocat-HD、ID-1"
+      },
+      {
+       "c1": "异抗坏血酸钠",
+       "c2": "低 pH 可工作",
+       "c3": "细颗粒，高锐度",
+       "c4": "耗尽产物惰性",
+       "c5": "Xtol、D-96A"
+      }
+     ],
+     "text": "显影剂主体对比"
+    }
+   ],
+   "refs": [
+    {
+     "name": "The Film Developing Cookbook 第 5、8 章（对苯二酚活化与 D-76H）",
+     "url": "https://dupa.ie/wp-content/uploads/2023/03/Bill-Troop-Steve-Anchell-The-Film-Developing-Cookbook-2019-Routledge.pdf",
+     "kind": "book"
+    },
+    {
+     "name": "Photo Formulary：Pyrocat-HD 配方与染色原理",
+     "url": "https://www.freestylephoto.com/static/pdf/pages/product_pdfs/formulary/01-5080.pdf",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "Massive Dev Chart（stringpuller 版，digitaltruth.com）",
+     "url": "https://www.digitaltruth.com/devchart.php",
+     "kind": "manufacturer",
+     "note": "各配方主体与工作条件对照表。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "bw-process.developer-chemistry"
+    ],
+    "next": [
+     "bw-process.d-76",
+     "bw-process.pyro"
+    ],
+    "related": [
+     "film-stock.characteristic-curve",
+     "bw-process.xtol"
+    ],
+    "contrast": []
+   },
+   "quiz": [
+    {
+     "q": "D-76 存放数月后反差升高，原因是？",
+     "type": "single",
+     "options": [
+      "Metol 失效",
+      "pH 升高激活了对苯二酚",
+      "亚硫酸盐结晶",
+      "溴化钾挥发"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "新鲜 D-76 的 pH 约 8.3，对苯二酚在此基本不工作；存放后 pH 接近 9，对苯二酚被激活。"
+    },
+    {
+     "q": "邻接效应的成因是什么？",
+     "type": "single",
+     "options": [
+      "明胶吸水膨胀",
+      "已显影银粒附近的对苯二酚被局部高 pH 激活",
+      "定影液扩散",
+      "溴化物在明胶内迁移"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "显影中的银粒使邻近区域对苯二酚活化，邻域显影加快，形成局部反差与锐度增益。"
+    },
+    {
+     "q": "邻苯二酚类显影剂在负片上留下什么？",
+     "type": "single",
+     "options": [
+      "可溶的卤化银",
+      "不可溶的银染料",
+      "碳酸钙结晶",
+      "银镜"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "显影过程中直接还原出的银沉积在明胶内，形成染色。黑位与最大密度同时下降。"
+    }
+   ],
+   "updated": "2026-01-12",
+   "status": "reviewed"
+  },
+  {
+   "id": "bw-process.developer-types",
+   "title": "显影剂类型比较",
+   "title_en": "Developer Types: Single-Solution, Two-Solution, Ascorbate",
+   "aliases": [
+    "developer types",
+    "single solution",
+    "two solution",
+    "three solution",
+    "ascorbate developer",
+    "一次性显影"
+   ],
+   "type": "comparison",
+   "level": 4,
+   "era": "1940 至今",
+   "tags": [
+    "显影剂",
+    "分类",
+    "一次性",
+    "补充液",
+    "抗坏血酸"
+   ],
+   "summary": "按组分数量与耗尽机制，显影剂分为单液、两液、三液与抗坏血酸体系。单液最简单，抗坏血酸体系最具一致性。",
+   "blocks": [
+    {
+     "kind": "table",
+     "caption": "四类显影剂",
+     "rows": [
+      {
+       "c1": "单液（single-solution）",
+       "c2": "各组分在同一瓶中",
+       "c3": "D-76、ID-11、Rodinal",
+       "c4": "自身耗尽，可作补充液",
+       "c5": "废弃后成分不再变化"
+      },
+      {
+       "c1": "两液（two-solution）",
+       "c2": "主体与补充液分开",
+       "c3": "D-76 + D-76R",
+       "c4": "靠补充液维持强度",
+       "c5": "适合机器处理与批量处理"
+      },
+      {
+       "c1": "三液（three-solution）",
+       "c2": "显影、补充、另加强化剂",
+       "c3": "机器处理配方 + booster",
+       "c4": "靠补液与强化的配比控制反差",
+       "c5": "机器处理用，家庭冲洗少用"
+      },
+      {
+       "c1": "抗坏血酸（ascorbate）",
+       "c2": "以异抗坏血酸钠替代对苯二酚",
+       "c3": "Xtol、D-96A",
+       "c4": "耗尽产物惰性，自身即补充液",
+       "c5": "一致性最好，需 DTPA 稳定"
+      }
+     ],
+     "text": "四类显影剂"
+    },
+    {
+     "kind": "p",
+     "text": "一次性显影（one-shot）指每卷胶片用新鲜配好的工作液。用过即弃。一致性最好，用量增加。Phenidone 类配方对溴化物不敏感，因此适合一次性使用；氢醌类配方重复使用会损失反差。参见 $bw-process.exhaustion。"
+    },
+    {
+     "kind": "p",
+     "text": "两液与三液体系服务机器处理与小批量连续冲洗。补充液维持显影液的组成与强度，避免长时间批量冲洗中强度下降。参见 $process-equipment.roller-processor。"
+    },
+    {
+     "kind": "note",
+     "text": "Xtol 属抗坏血酸体系。DTPA（五钠盐）是使 Phenidone 与异抗坏血酸组合保持稳定的唯一已证实化学品。用蒸馏水配制可把 DTPA 全部用于螯合矿物杂质，避免它与显影剂争夺。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "The Film Developing Cookbook 第 5 章（显影剂分类与耗尽行为）",
+     "url": "https://dupa.ie/wp-content/uploads/2023/03/Bill-Troop-Steve-Anchell-The-Film-Developing-Cookbook-2019-Routledge.pdf",
+     "kind": "book"
+    },
+    {
+     "name": "Kodak Professional D-76 说明书 TSC 0460（含补充液用途）",
+     "url": "https://kodakalaris.co.jp/images/TSC0460-D-76.pdf",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "Ilford Photo：Kodak 化学药品对照表",
+     "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/03/ILFORD-PHOTO-to-Kodak-equivalents.pdf",
+     "kind": "manufacturer"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "bw-process.developer-chemistry"
+    ],
+    "next": [
+     "bw-process.pulse-development"
+    ],
+    "related": [
+     "bw-process.xtol",
+     "bw-process.exhaustion"
+    ],
+    "contrast": []
+   },
+   "quiz": [
+    {
+     "q": "哪一类显影液的耗尽产物呈惰性，因此自身即补充液？",
+     "type": "single",
+     "options": [
+      "氢醌类",
+      "抗坏血酸类",
+      "邻苯二酚类",
+      "两液体系"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "异抗坏血酸的耗尽产物不加速也不减速显影，因此补充新鲜液体即可恢复强度。"
+    },
+    {
+     "q": "一次性显影特别适合哪一类主体？",
+     "type": "single",
+     "options": [
+      "Phenidone 类",
+      "对苯二酚单液",
+      "邻苯二酚类",
+      "焦性没食子酸"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "Phenidone 类对溴化物不敏感，重复使用时强度变化小。"
+    },
+    {
+     "q": "DTPA 在抗坏血酸显影剂中的功能是？",
+     "type": "single",
+     "options": [
+      "螯合矿物杂质并稳定 Phenidone-异抗坏血酸体系",
+      "充当显影主体",
+      "充当抑制剂",
+      "提高 pH"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "DTPA 络合硬水金属离子，防止它们破坏 Phenidone 与异抗坏血酸的稳定体系。"
+    }
+   ],
+   "updated": "2026-01-12",
+   "status": "reviewed"
+  },
+  {
+   "id": "bw-process.exhaustion",
+   "title": "显影液耗尽与副产物效应",
+   "title_en": "Developer Exhaustion and Catabolite Effect",
+   "aliases": [
+    "catabolite exhaustion",
+    "developer exhaustion",
+    "耗尽",
+    "副产物",
+    "显影液疲劳"
+   ],
+   "type": "concept",
+   "level": 4,
+   "era": "1929 至今",
+   "tags": [
+    "耗尽",
+    "反差",
+    "补充液",
+    "一次性"
+   ],
+   "summary": "显影剂在使用中氧化分解，产物在明胶内改变显影速率。高光区曝露银多，产物生成最多，因此耗尽直接影响反差。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "产物如何改变反差"
+    },
+    {
+     "kind": "p",
+     "text": "所有显影剂在使用中氧化，生成反应产物。这些产物不中性：它们可加速或减速显影。氧化产物在曝露银最多的高光区生成最多，在阴影区生成最少。产物加速显影则高光加快、阴影不变，反差上升；产物减速显影则高光变慢、阴影不变，反差下降。"
+    },
+    {
+     "kind": "p",
+     "text": "Metol、Phenidone 与 PPD 家族的氧化产物减速显影。多数其他显影剂（含对苯二酚、邻苯二酚、对氨基酚）的氧化产物加速显影。混合主体时情况复杂。POTA 显影剂在配好时即处于耗尽状态，Phenidone 氧化产物阻滞显影，这是 POTA 反差低的主要原因。"
+    },
+    {
+     "kind": "p",
+     "text": "社区把这个现象称为 catabolite exhaustion（代谢物耗尽）：显影剂的耗尽产物在明胶层内局部积累，造成反差异常。使用一次性显影液可完全避免。用补充液维持强度可避免。重复使用氢醌类显影液时损失最大。"
+    },
+    {
+     "kind": "h2",
+     "text": "低反差配方的控制点"
+    },
+    {
+     "kind": "p",
+     "text": "要获得低反差，选择减速型主体，并控制氧化量。三种手段：降低主体浓度、降低保护剂浓度、或两者同时。搅拌必须少，让高光区的副产物积累。每 2–3 分钟搅 10 秒，首分钟连续搅。理想显影时间至少 12 分钟。显影时间短于 8 分钟时不适用最少搅拌。"
+    },
+    {
+     "kind": "table",
+     "caption": "耗尽的可见征象",
+     "rows": [
+      {
+       "c1": "反差下降，阴影灰雾上升",
+       "c2": "显影液重复使用过久",
+       "c3": "换新鲜一次性工作液",
+       "c4": "调整曝光指数",
+       "c5": "改用新鲜原液"
+      },
+      {
+       "c1": "反差升高，高光粗化",
+       "c2": "pH 漂移（氢醌类存放后）",
+       "c3": "检查原液 pH 与储存时间",
+       "c4": "改用 D-76H 等无氢醌配方",
+       "c5": "缩短显影时间"
+      },
+      {
+       "c1": "高光密度不足",
+       "c2": "显影液被水稀释（见 $bw-process.mixing-temp-control）",
+       "c3": "排干后再转下一步",
+       "c4": "补足显影液量",
+       "c5": "重新计时"
+      },
+      {
+       "c1": "黄色污渍",
+       "c2": "显影剂氧化产物沉积",
+       "c3": "使用新鲜显影液",
+       "c4": "缩短储存期",
+       "c5": "参见 $bw-process.stain-troubleshoot"
+      }
+     ],
+     "text": "耗尽的可见征象"
+    },
+    {
+     "kind": "note",
+     "text": "Kodak D-76 在重复使用时，每处理 5 卷延长 15% 显影时间。Ilfortec DD-X 1+4 每升处理 5 卷 135-36，第 2 卷加 10%，第 5 卷加 40%。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "The Film Developing Cookbook 第 5、12 章（氧化产物与反差）",
+     "url": "https://dupa.ie/wp-content/uploads/2023/03/Bill-Troop-Steve-Anchell-The-Film-Developing-Cookbook-2019-Routledge.pdf",
+     "kind": "book"
+    },
+    {
+     "name": "Kodak 白黑现像液 技術資料 TSC0599（重复处理的时间补偿）",
+     "url": "http://kodakalaris.co.jp/images/TSC0599.pdf",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "Ilfortec DD-X 技术资料（重复使用的时间表）",
+     "url": "https://ilford.co.jp/photo/wp-content/uploads/2025/06/TDS_ILFOTEC_DDX_AUG19.pdf",
+     "kind": "manufacturer"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "bw-process.developer-chemistry"
+    ],
+    "next": [
+     "bw-process.push-pull"
+    ],
+    "related": [
+     "bw-process.developer-replenisher",
+     "bw-process.mixing-temp-control"
+    ],
+    "contrast": []
+   },
+   "quiz": [
+    {
+     "q": "显影剂氧化产物在负片的哪个区域生成最多？",
+     "type": "single",
+     "options": [
+      "阴影区",
+      "中间调",
+      "高光区",
+      "片边"
+     ],
+     "answer": [
+      2
+     ],
+     "why": "高光区曝露的卤化银最多，显影剂在此被消耗最多。"
+    },
+    {
+     "q": "哪一类显影主体的氧化产物减速显影？",
+     "type": "single",
+     "options": [
+      "对苯二酚",
+      "Metol、Phenidone 与 PPD 家族",
+      "邻苯二酚",
+      "对氨基酚"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "它们的氧化产物抑制显影，因此高光变慢、阴影不变，反差下降。"
+    },
+    {
+     "q": "POTA 反差低的主要原因是什么？",
+     "type": "single",
+     "options": [
+      "高 pH",
+      "配好时即处于耗尽状态，Phenidone 氧化产物阻滞显影",
+      "高亚硫酸盐",
+      "加了大量溴化钾"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "纯 Phenidone 在亚硫酸盐中保存差，溶液呈橙色，氧化产物直接阻滞显影。"
+    }
+   ],
+   "updated": "2026-01-12",
+   "status": "reviewed"
+  },
+  {
+   "id": "bw-process.pulse-development",
+   "title": "脉冲式显影",
+   "title_en": "Pulse Development",
+   "aliases": [
+    "pulse development",
+    "脉冲显影",
+    "节省显影液"
+   ],
+   "type": "technique",
+   "level": 4,
+   "era": "1960 至今",
+   "tags": [
+    "脉冲",
+    "显影",
+    "节水",
+    "机器处理"
+   ],
+   "summary": "脉冲式显影把显影时间切分为多段短浸入，中间插入停显或清水间隔。它用少量显影液处理多卷胶片，主要用于连续式机器处理。",
+   "blocks": [
+    {
+     "kind": "p",
+     "text": "脉冲式显影（pulse development）在显影过程中把胶片多次送入显影液，每次停留数秒到数十秒，随后抽出、滴干、再送入。间隔中显影剂在明胶层内继续少量作用，同时表面副产物被带出。它把显影液的耗尽速率降低到重复使用水平以下。"
+    },
+    {
+     "kind": "p",
+     "text": "该技术用于连续式黑白处理机与小型冲扩一体机。胶片在显影液中受控地周期浸入，工艺参数由机器设定。参见 $process-equipment.roller-processor。"
+    },
+    {
+     "kind": "table",
+     "caption": "脉冲显影与传统重复使用的差异",
+     "rows": [
+      {
+       "c1": "显影液用量",
+       "c2": "每卷数十毫升量级，多次循环浸入",
+       "c3": "每卷数百毫升，1–5 卷后更换",
+       "c4": "脉冲法省液",
+       "c5": "循环次数越多越省"
+      },
+      {
+       "c1": "反差一致性",
+       "c2": "间隔中副产物被清除，密度重复性好",
+       "c3": "耗尽使反差漂移",
+       "c4": "脉冲法更一致",
+       "c5": "以测试卷校正"
+      },
+      {
+       "c1": "灰雾",
+       "c2": "停显间隔抑制局部继续显影",
+       "c3": "重复使用后灰雾上升",
+       "c4": "脉冲法灰雾低",
+       "c5": "间隔用清水或酸停显液"
+      },
+      {
+       "c1": "操作复杂度",
+       "c2": "需要专用设备或精确计时",
+       "c3": "手工罐显即可完成",
+       "c4": "脉冲法适合机器",
+       "c5": "家庭冲洗以一次性显影替代"
+      }
+     ],
+     "text": "脉冲显影与传统重复使用的差异"
+    },
+    {
+     "kind": "note",
+     "text": "家庭冲洗若要接近脉冲显影的稳定性，使用一次性显影液或对氨基酚类高稀释显影液。参见 $bw-process.rodinal。"
+    },
+    {
+     "kind": "note",
+     "text": "本条目的参数范围需以厂商最新说明书为准。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "The Film Developing Cookbook 第 5 章（显影方式比较）",
+     "url": "https://dupa.ie/wp-content/uploads/2023/03/Bill-Troop-Steve-Anchell-The-Film-Developing-Cookbook-2019-Routledge.pdf",
+     "kind": "book"
+    },
+    {
+     "name": "Ilford Photo：Ilfortec 处理机与配药技术资料",
+     "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/03/ILFORD-PHOTO-to-Kodak-equivalents.pdf",
+     "kind": "manufacturer",
+     "note": "连续式处理机的显影系统说明。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "bw-process.developer-types"
+    ],
+    "next": [
+     "bw-process.d-76"
+    ],
+    "related": [
+     "process-equipment.roller-processor",
+     "bw-process.exhaustion"
+    ],
+    "contrast": []
+   },
+   "quiz": [
+    {
+     "q": "脉冲式显影的间隔期对显影有何作用？",
+     "type": "single",
+     "options": [
+      "完全停止显影",
+      "让表面副产物随排液带出",
+      "提高显影液 pH",
+      "降低乳剂含水量"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "抽出并滴干的间隔把带出的副产物移出，同时保留明胶内的缓慢显影。"
+    },
+    {
+     "q": "家庭冲洗要接近脉冲显影的稳定性，最直接的手段是？",
+     "type": "single",
+     "options": [
+      "延长显影时间",
+      "使用一次性显影液",
+      "提高显影温度",
+      "加大显影液稀释倍数"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "一次性工作液不含累积副产物，重复性最好。"
+    }
+   ],
+   "updated": "2026-01-12",
+   "status": "draft"
+  },
+  {
+   "id": "bw-process.d-76",
+   "title": "Kodak D-76 显影液",
+   "title_en": "Kodak D-76 Developer",
+   "aliases": [
+    "D-76",
+    "D76",
+    "Ilford ID-11",
+    "标准显影液"
+   ],
+   "type": "chemical",
+   "level": 3,
+   "era": "1929 至今",
+   "tags": [
+    "显影剂",
+    "PQ",
+    "补充液",
+    "标准"
+   ],
+   "summary": "D-76 是 1929 年推出的通用 PQ 显影液。它提供标准反差与优秀的阴影细节，可用原液或 1:1 稀释，配 D-76R 补充液可恢复强度。",
+   "blocks": [
+    {
+     "kind": "formula",
+     "caption": "D-76 原液（1 L）",
+     "text": "Metol（对甲氨基酚硫酸盐）2 g\n无水亚硫酸钠 100 g\n对苯二酚 5 g\n硼砂 2 g\n加水至 1 L"
+    },
+    {
+     "kind": "note",
+     "text": "配制：用 52 °C 的水 800 mL，边搅拌边加入粉末至完全溶解，再加水至 1 L，继续搅拌至均匀。Ilford ID-11 为专利配方，硼砂 3 g，并加三聚磷酸钠 3.5 g。"
+    },
+    {
+     "kind": "formula",
+     "caption": "D-76R 补充液（自配参考，配方待考证）",
+     "text": "Metol 3 g\n无水亚硫酸钠 100 g\n对苯二酚 7.5 g\n硼砂 20 g\n加水至 1 L"
+    },
+    {
+     "kind": "note",
+     "text": "D-76R 的配方出自 Kodak J-1 附录的旧版方剂表。D-76R 的强度规则为每 8×10 英寸（约 516 cm²）或每卷 135-36/120 加 22.2–29.6 mL 补充液。补充液的硼砂含量高于 D-76 工作液，用于补偿工作液的消耗。参见 $bw-process.developer-replenisher。"
+    },
+    {
+     "kind": "table",
+     "caption": "工作条件",
+     "rows": [
+      {
+       "c1": "推荐温度",
+       "c2": "20 °C",
+       "c3": "18–24 °C 有效",
+       "c4": "每偏离 1 °C 调整时间",
+       "c5": "温差处理见 $bw-process.mixing-temp-control"
+      },
+      {
+       "c1": "工作液",
+       "c2": "原液、1:1、1:3 稀释",
+       "c3": "1:1 用前现配，用后废弃",
+       "c4": "1:1 显影时间见下表",
+       "c5": "原液可重复使用"
+      },
+      {
+       "c1": "显影类型",
+       "c2": "小型罐、深罐、盘显",
+       "c3": "罐显 5 分钟以内可能不均",
+       "c4": "短时间显影须加强初始搅拌",
+       "c5": "参见 $process-equipment.tank"
+      },
+      {
+       "c1": "搅拌（小型罐）",
+       "c2": "入罐后 5 秒内 5–7 个翻转周期",
+       "c3": "首 30 s 静置",
+       "c4": "其后每 30 s 搅 5 s，2–5 周期",
+       "c5": "排气泡后再计时"
+      },
+      {
+       "c1": "搅拌（深罐）",
+       "c2": "首 15–30 s 连续上下搅",
+       "c3": "首 1 min 后每分钟提出滴干 5–10 s",
+       "c4": "倾斜方向交替",
+       "c5": "保持 reels 在液面下"
+      },
+      {
+       "c1": "容量（原液）",
+       "c2": "约 4 卷 135-36/120 每升（罐显，加仑 16 卷）",
+       "c3": "每加仑每 4 卷延长 15% 显影时间",
+       "c4": "加补充液后每加仑可延至 120 卷",
+       "c5": "1:1 稀释液每升约 2 卷，用后废弃"
+      },
+      {
+       "c1": "原液保存",
+       "c2": "密闭充满瓶 6 个月",
+       "c3": "半满瓶 2 个月",
+       "c4": "5–20 °C 避光保存",
+       "c5": "pH 随存放上升，反差升高"
+      },
+      {
+       "c1": "工作液保存",
+       "c2": "1:1 稀释液用后废弃",
+       "c3": "原液重复使用时按卷数延长时间",
+       "c4": "出现黄色即弃",
+       "c5": "参见 $bw-process.exhaustion"
+      }
+     ],
+     "text": "工作条件"
+    },
+    {
+     "kind": "table",
+     "caption": "原液显影时间（分）",
+     "rows": [
+      {
+       "c1": "胶片",
+       "c2": "18 °C",
+       "c3": "20 °C",
+       "c4": "21 °C",
+       "c5": "22 °C / 24 °C"
+      },
+      {
+       "c1": "T-MAX 100",
+       "c2": "7.5",
+       "c3": "6.5",
+       "c4": "5.5",
+       "c5": "5 / 4.25"
+      },
+      {
+       "c1": "T-MAX 400",
+       "c2": "9",
+       "c3": "8",
+       "c4": "7",
+       "c5": "6.5 / 5.5"
+      },
+      {
+       "c1": "Plus-X 125（135）",
+       "c2": "6.5",
+       "c3": "5.5",
+       "c4": "5",
+       "c5": "4.5 / 4"
+      },
+      {
+       "c1": "Plus-X 125（120、220）",
+       "c2": "7",
+       "c3": "6",
+       "c4": "5.5",
+       "c5": "5 / 4.25"
+      },
+      {
+       "c1": "Tri-X 400",
+       "c2": "8",
+       "c3": "6.75",
+       "c4": "6.25",
+       "c5": "5.5 / 4.75"
+      },
+      {
+       "c1": "Tri-X 320",
+       "c2": "10",
+       "c3": "9",
+       "c4": "8.25",
+       "c5": "7.5 / 6.5"
+      }
+     ],
+     "text": "原液显影时间（分）"
+    },
+    {
+     "kind": "table",
+     "caption": "1:1 稀释显影时间（分）",
+     "rows": [
+      {
+       "c1": "胶片",
+       "c2": "18 °C",
+       "c3": "20 °C",
+       "c4": "21 °C",
+       "c5": "22 °C / 24 °C"
+      },
+      {
+       "c1": "T-MAX 100",
+       "c2": "11",
+       "c3": "9.5",
+       "c4": "8.5",
+       "c5": "7.5 / 6.25"
+      },
+      {
+       "c1": "T-MAX 400",
+       "c2": "14.5",
+       "c3": "12.5",
+       "c4": "11",
+       "c5": "10 / 9"
+      },
+      {
+       "c1": "Plus-X 125",
+       "c2": "10",
+       "c3": "8.5",
+       "c4": "7.75",
+       "c5": "7.25 / 6"
+      },
+      {
+       "c1": "Tri-X 400",
+       "c2": "10.75",
+       "c3": "9.75",
+       "c4": "9",
+       "c5": "8.5 / 7.75"
+      }
+     ],
+     "text": "1:1 稀释显影时间（分）"
+    },
+    {
+     "kind": "tip",
+     "text": "1:1 稀释用于追求锐度与实增感约 1/3 档的场合。密度增加约 10%，可放大性提高。参见 $film-stock.latitude。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Kodak 白黑现像液 技術資料 TSC0599（D-76 配方、时间、容量、保存）",
+     "url": "http://kodakalaris.co.jp/images/TSC0599.pdf",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "Kodak Professional D-76 Developer TSC 0460（搅拌规范）",
+     "url": "https://kodakalaris.co.jp/images/TSC0460-D-76.pdf",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "Ilford ID-11 / Micro Phenol 技术资料（对照配方与时间）",
+     "url": "https://ilford.co.jp/photo/wp-content/uploads/2025/06/TDS_Powder_film_developers.pdf",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "The Film Developing Cookbook（Troop / Anchell, 2019）：D-76 与补充液章节",
+     "url": "https://dupa.ie/wp-content/uploads/2023/03/Bill-Troop-Steve-Anchell-The-Film-Developing-Cookbook-2019-Routledge.pdf",
+     "kind": "book",
+     "note": "D-76 与 D-76R 的方剂讨论与补充液实践。"
+    },
+    {
+     "name": "Kodak Publication J-1（1977）黑白显影剂方剂与补充液",
+     "url": "https://125px.com/docs/chemicals/kodak/j1-1977.pdf",
+     "kind": "manufacturer",
+     "note": "附录给出 D-76 与 D-76R 的完整成分表；正文给补充液用量。"
+    },
+    {
+     "name": "Kodak Publication J-78（2017）D-76 / D-76R 数据表",
+     "url": "https://125px.com/docs/chemicals/kodak/j78-2017.pdf",
+     "kind": "manufacturer",
+     "note": "容量、保存期与补充液率（每卷 22.2–29.6 mL，补充后每加仑 120 卷）。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "bw-process.developer-chemistry"
+    ],
+    "next": [
+     "bw-process.d-96-boost",
+     "bw-process.hc-110"
+    ],
+    "related": [
+     "bw-process.developer-replenisher",
+     "bw-process.push-pull",
+     "printing.toning"
+    ],
+    "contrast": [
+     "bw-process.dd-x",
+     "bw-process.rodinal"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "D-76 显影 1 L 需多少 52 °C 的水配制？",
+     "type": "single",
+     "options": [
+      "500 mL",
+      "800 mL",
+      "900 mL",
+      "1000 mL"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "Kodak 规定用 52 °C 的水 800 mL 溶解，再加水至 1 L。"
+    },
+    {
+     "q": "T-MAX 100 用 D-76 原液在 20 °C 的显影时间是多少？",
+     "type": "single",
+     "options": [
+      "4.25 分",
+      "5.5 分",
+      "6.5 分",
+      "8 分"
+     ],
+     "answer": [
+      2
+     ],
+     "why": "Kodak 说明书给出 20 °C 为 6.5 分钟。"
+    },
+    {
+     "q": "小型罐显影的搅拌节奏是？",
+     "type": "single",
+     "options": [
+      "每分钟搅 5 s，全程连续",
+      "首 5 s 内 5–7 个翻转周期，其后每 30 s 搅 5 s",
+      "首 30 s 静置，其后每分钟搅一次",
+      "每 30 s 完整翻转罐体一次"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "Kodak 规范为初始 5–7 周期快速排气泡与润湿，首 30 s 静置，之后每 30 s 搅 5 s。"
+    },
+    {
+     "q": "D-76 原液在密闭充满瓶中的保存期是？",
+     "type": "single",
+     "options": [
+      "1 个月",
+      "2 个月",
+      "6 个月",
+      "无限期"
+     ],
+     "answer": [
+      2
+     ],
+     "why": "Kodak 给出密闭充满瓶 6 个月、半满瓶 2 个月。"
+    }
+   ],
+   "updated": "2026-01-12",
+   "status": "reviewed"
+  },
+  {
+   "id": "bw-process.d-96-boost",
+   "title": "D-96、D-76 强化与显影增强补充剂",
+   "title_en": "D-96, Boosted D-76 and Developer Boosters",
+   "aliases": [
+    "D-96",
+    "boost",
+    "booster",
+    "D-76R",
+    "显影增强"
+   ],
+   "type": "chemical",
+   "level": 4,
+   "era": "1990 至今",
+   "tags": [
+    "显影剂",
+    "强化",
+    "补充",
+    "对比度"
+   ],
+   "summary": "D-96 用异抗坏血酸替代对苯二酚。反差用 booster 提升，强度用 replenisher 维持。两者用途不同：booster 只提高反差，replenisher 恢复全部组成。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "D-96 配方"
+    },
+    {
+     "kind": "formula",
+     "caption": "D-96A（每 L，自配参考）",
+     "text": "Metol 1.5 g\n无水亚硫酸钠 60 g\n异抗坏血酸（L-抗坏血酸）2 g\n无水亚硫酸氢钠 15 g\nCalgon 1 g\n溴化钠 0.35 g\n五水硼砂 3.8 g（十水硼砂则 5 g）\n蒸馏水 750 mL 起，加水至 1 L"
+    },
+    {
+     "kind": "note",
+     "text": "D-96 的显影时间应短于 D-76。Kodak 在 1990 年代一度推荐该配方，之后停止推荐。"
+    },
+    {
+     "kind": "h2",
+     "text": "Booster 与 replenisher 的区别"
+    },
+    {
+     "kind": "table",
+     "caption": "两种添加剂",
+     "rows": [
+      {
+       "c1": "补充液（replenisher）",
+       "c2": "恢复全部组分到初始浓度",
+       "c3": "显影时间不变",
+       "c4": "用于重复使用显影液",
+       "c5": "D-76R、ID-11R"
+      },
+      {
+       "c1": "强化剂（booster）",
+       "c2": "只提高显影强度与反差",
+       "c3": "显影时间通常缩短",
+       "c4": "用于一次性显影以提升反差",
+       "c5": "D-96、Kodak 三液强化剂"
+      }
+     ],
+     "text": "两种添加剂"
+    },
+    {
+     "kind": "p",
+     "text": "典型做法：把部分 D-76R 加入已用过的 D-76 工作液。少量补充液（如原液量的 10–20%）使工作液同时具备强度与反差，用于显影时间短于 5 分钟的胶片。D-76R 的配方见 $bw-process.d-76，补充液率的换算见 $bw-process.developer-replenisher。"
+    },
+    {
+     "kind": "table",
+     "caption": "工作条件",
+     "rows": [
+      {
+       "c1": "推荐温度",
+       "c2": "20 °C",
+       "c3": "18–24 °C 有效",
+       "c4": "偏离 1 °C 调整时间",
+       "c5": "参见 $bw-process.mixing-temp-control"
+      },
+      {
+       "c1": "显影类型",
+       "c2": "小型罐、深罐",
+       "c3": "D-96 显影时间短，须严格搅拌",
+       "c4": "短时间显影易不均",
+       "c5": "参见 $process-equipment.tank"
+      },
+      {
+       "c1": "容量",
+       "c2": "本条目未取得 D-96 的厂商处理能力数据",
+       "c3": "D-96 显影时间短于 D-76，单卷即用",
+       "c4": "厂商容量数据待考证",
+       "c5": "参见 $bw-process.developer-replenisher"
+      },
+      {
+       "c1": "保存",
+       "c2": "密闭充满瓶 6 个月",
+       "c3": "半满瓶 2 个月",
+       "c4": "5–20 °C 避光",
+       "c5": "Antioxidant 见 $bw-process.developer-replenisher"
+      }
+     ],
+     "text": "工作条件"
+    },
+    {
+     "kind": "note",
+     "text": "本表原引的容量行实为 Xtol 的厂商数据。D-96 的厂商处理能力数据未取得，容量一行按待考证处理。D-96 的显影时间短于 D-76，参见 $bw-process.d-76 的时间表与 $bw-process.developer-replenisher 的补液说明。"
+    },
+    {
+     "kind": "tip",
+     "text": "使用 booster 时先做测试卷。Kodak 指出显影时间 5 分钟以下容易出现不均。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "The Film Developing Cookbook（Troop / Anchell, 2019）：D-96A、TD-96、Xtol 容量",
+     "url": "https://dupa.ie/wp-content/uploads/2023/03/Bill-Troop-Steve-Anchell-The-Film-Developing-Cookbook-2019-Routledge.pdf",
+     "kind": "book"
+    },
+    {
+     "name": "Kodak 白黑现像液 技術資料 TSC0599（Xtol 时间与处理能力）",
+     "url": "http://kodakalaris.co.jp/images/TSC0599.pdf",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "Kodak T-MAX 400 胶片技术资料（增感与显影剂对照）",
+     "url": "https://kodakalaris.co.jp/images/NEW_T-MAX400.pdf",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "The Film Developing Cookbook（Troop / Anchell, 2019）：D-96、D-96A 与 TD-96",
+     "url": "https://dupa.ie/wp-content/uploads/2023/03/Bill-Troop-Steve-Anchell-The-Film-Developing-Cookbook-2019-Routledge.pdf",
+     "kind": "book"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "bw-process.d-76"
+    ],
+    "next": [
+     "bw-process.hc-110"
+    ],
+    "related": [
+     "bw-process.developer-replenisher",
+     "bw-process.xtol",
+     "bw-process.push-pull"
+    ],
+    "contrast": []
+   },
+   "quiz": [
+    {
+     "q": "D-96 用哪种成分替代对苯二酚？",
+     "type": "single",
+     "options": [
+      "焦性没食子酸",
+      "异抗坏血酸",
+      "对氨基酚",
+      "抗坏血酸镁"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "D-96 采用异抗坏血酸（抗坏血酸类）作第二显影主体。"
+    },
+    {
+     "q": "Booster 与 replenisher 的核心区别是什么？",
+     "type": "single",
+     "options": [
+      "前者提反差，后者恢复全部组成",
+      "前者补银，后者去银",
+      "前者降温，后者升温",
+      "前者用于定影，后者用于水洗"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "补充液恢复组分浓度；强化剂只提高显影强度，通常缩短显影时间。"
+    },
+    {
+     "q": "D-96 的显影时间相对 D-76 应如何设定？",
+     "type": "single",
+     "options": [
+      "更长",
+      "更短",
+      "相同",
+      "先短后长"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "异抗坏血酸体系活性高，显影时间应短于 D-76。"
+    }
+   ],
+   "updated": "2026-01-12",
+   "status": "draft"
+  },
+  {
+   "id": "bw-process.hc-110",
+   "title": "HC-110 显影液",
+   "title_en": "HC-110 Developer",
+   "aliases": [
+    "HC-110",
+    "Ilfortec HC",
+    "LC29",
+    "高反差浓缩显影液"
+   ],
+   "type": "chemical",
+   "level": 3,
+   "era": "1957 至今",
+   "tags": [
+    "显影剂",
+    "浓缩液",
+    "稀释",
+    "高反差"
+   ],
+   "summary": "HC-110 是高浓度液状显影液，先配贮藏液（stock），再按 B/D/E/F 等倍数稀释到工作液。稀释越高，片速越低、反差越低、锐度越高。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "两段稀释法"
+    },
+    {
+     "kind": "p",
+     "text": "HC-110 分两段稀释。第一段：1 份浓缩液加 3 份水，配成贮藏液（stock）。1 L 浓缩液可配 4 L 贮藏液。第二段：贮藏液加水配成工作液。Ilfortec HC 明确禁止用重复使用的工作液做补充液。"
+    },
+    {
+     "kind": "formula",
+     "caption": "贮藏液与工作液配制（配 1 L 工作液）",
+     "text": "第一步（配 1 L 贮藏液）：浓缩液 250 mL + 水 750 mL\n第二步（配 1 L 1+31 工作液）：贮藏液 125 mL + 水 875 mL"
+    },
+    {
+     "kind": "table",
+     "caption": "工作液稀释与特性",
+     "rows": [
+      {
+       "c1": "1+3 贮藏液",
+       "c2": "浓缩液 250 mL + 水 750 mL",
+       "c3": "pH 9.20，SG 1.065–1.070",
+       "c4": "贮藏液，非工作液",
+       "c5": "配制后存放，再稀释使用"
+      },
+      {
+       "c1": "1+11",
+       "c2": "贮藏液 333 mL + 水 667 mL",
+       "c3": "pH 9.10，SG 1.020",
+       "c4": "快速显影，片速偏高",
+       "c5": "滚筒输送、短引片机"
+      },
+      {
+       "c1": "1+15",
+       "c2": "贮藏液 250 mL + 水 750 mL",
+       "c3": "pH 9.05，SG 1.015",
+       "c4": "反差略高",
+       "c5": "小型罐快速显影"
+      },
+      {
+       "c1": "1+19",
+       "c2": "贮藏液 200 mL + 水 800 mL",
+       "c3": "pH 9.00，SG 1.013",
+       "c4": "中等",
+       "c5": "连续调、拷贝片"
+      },
+      {
+       "c1": "1+31",
+       "c2": "贮藏液 125 mL + 水 875 mL",
+       "c3": "pH 8.98，SG 1.006",
+       "c4": "标准家用选择",
+       "c5": "小型罐、深罐、盘显、旋转管"
+      },
+      {
+       "c1": "1+39",
+       "c2": "贮藏液 100 mL + 水 900 mL",
+       "c3": "pH 8.97，SG 1.005",
+       "c4": "更柔",
+       "c5": "连续调"
+      },
+      {
+       "c1": "1+47",
+       "c2": "贮藏液 84 mL + 水 916 mL",
+       "c3": "pH 8.95，SG 1.002",
+       "c4": "柔反差，高锐度",
+       "c5": "一次性单卷小型罐"
+      },
+      {
+       "c1": "1+79",
+       "c2": "贮藏液 50 mL + 水 950 mL",
+       "c3": "pH 8.90",
+       "c4": "极柔",
+       "c5": "专用印刷材料"
+      }
+     ],
+     "text": "工作液稀释与特性"
+    },
+    {
+     "kind": "table",
+     "caption": "Ilford 胶片显影时间（20 °C，分:秒）",
+     "rows": [
+      {
+       "c1": "胶片与速度",
+       "c2": "1+15",
+       "c3": "1+31",
+       "c4": "1+47",
+       "c5": "说明"
+      },
+      {
+       "c1": "DELTA 100 Pro EI100",
+       "c2": "—",
+       "c3": "6:00",
+       "c4": "7:30",
+       "c5": "1+31 与 1+47 同为标准反差"
+      },
+      {
+       "c1": "DELTA 400 Pro EI400",
+       "c2": "—",
+       "c3": "7:30",
+       "c4": "11:30",
+       "c5": "1+15 用于 EI320，4:00"
+      },
+      {
+       "c1": "DELTA 400 Pro EI800",
+       "c2": "5:30",
+       "c3": "10:00",
+       "c4": "17:00",
+       "c5": "高稀释时间增长快"
+      },
+      {
+       "c1": "HP5 Plus EI400",
+       "c2": "3:30",
+       "c3": "6:30",
+       "c4": "9:00",
+       "c5": "1+11 为 0:55"
+      },
+      {
+       "c1": "HP5 Plus EI1600",
+       "c2": "—",
+       "c3": "7:30",
+       "c4": "14:00",
+       "c5": "1+11 为 1:30"
+      },
+      {
+       "c1": "FP4 Plus EI125",
+       "c2": "4:00",
+       "c3": "8:00",
+       "c4": "12:00",
+       "c5": "1+11 为 1:10"
+      },
+      {
+       "c1": "SFX 200 EI200",
+       "c2": "—",
+       "c3": "5:00",
+       "c4": "9:00",
+       "c5": "1+47 用于 EI200 为 11:00"
+      }
+     ],
+     "text": "Ilford 胶片显影时间（20 °C，分:秒）"
+    },
+    {
+     "kind": "note",
+     "text": "上表时间为产生约 0.62 G-bar 标准反差负片的时间。1+47 每次使用新配液，不重复使用。"
+    },
+    {
+     "kind": "table",
+     "caption": "工作条件",
+     "rows": [
+      {
+       "c1": "推荐温度",
+       "c2": "20–24 °C",
+       "c3": "每降 1 °C 时间 +10%",
+       "c4": "每升 1 °C 时间 −10%",
+       "c5": "20 °C 4 分相当于 23 °C 3 分"
+      },
+      {
+       "c1": "搅拌（螺旋罐）",
+       "c2": "最初 10 s 内倒转 4 次",
+       "c3": "此后每分钟的头 10 s 内倒转 4 次",
+       "c4": "每次搅拌后轻敲罐排气泡",
+       "c5": "连续搅拌使推荐时间减约 15%"
+      },
+      {
+       "c1": "容量",
+       "c2": "1 L 1+31 工作液处理 5 卷 135-36",
+       "c3": "1+15 每升 10 卷",
+       "c4": "第 2 卷起每卷加 10% 时间",
+       "c5": "1 L 浓缩液可配 32 L 1+31"
+      },
+      {
+       "c1": "保存（未开瓶）",
+       "c2": "5–20 °C 无限期",
+       "c3": "开启后一次性配成贮藏液",
+       "c4": "避免反复开关",
+       "c5": "浓缩液本身稳定"
+      },
+      {
+       "c1": "保存（贮藏液）",
+       "c2": "密闭充满瓶 6 个月",
+       "c3": "半满瓶 2 个月",
+       "c4": "5–20 °C 避光",
+       "c5": "工作液不保存"
+      }
+     ],
+     "text": "工作条件"
+    },
+    {
+     "kind": "tip",
+     "text": "1 L 浓缩液的产量：1+11 得 12 L，1+15 得 16 L，1+31 得 32 L，1+47 得 48 L，1+79 得 80 L。"
+    },
+    {
+     "kind": "warn",
+     "text": "不得用重复使用的 HC-110 工作液做增感冲洗（push）。参见 $bw-process.push-pull。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Ilfortec HC 技术资料（HARMAN technology, Feb 2025）",
+     "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2025/02/ILFOTEC-HC-200225.pdf",
+     "kind": "manufacturer",
+     "note": "稀释体系、pH/SG（含 1+3 贮藏液 9.20）、Ilford 胶片时间表、搅拌与保存。"
+    },
+    {
+     "name": "Kodak 白黑现像液 技術資料 TSC0599（HC-110 B 稀释与 T-MAX/Tri-X 时间）",
+     "url": "http://kodakalaris.co.jp/images/TSC0599.pdf",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "Kodak T-MAX 400 胶片技术资料（HC-110 B 稀释时间表）",
+     "url": "https://kodakalaris.co.jp/images/NEW_T-MAX400.pdf",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "Ilford Photo：Kodak 化学药品对照表（HC-110 ↔ Ilfortec HC / LC29）",
+     "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/03/ILFORD-PHOTO-to-Kodak-equivalents.pdf",
+     "kind": "manufacturer"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "bw-process.developer-types"
+    ],
+    "next": [
+     "bw-process.rodinal"
+    ],
+    "related": [
+     "bw-process.dd-x",
+     "bw-process.mixing-temp-control"
+    ],
+    "contrast": [
+     "bw-process.xtol"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "HC-110 的第一段稀释比例是多少？",
+     "type": "single",
+     "options": [
+      "1 份浓缩液加 3 份水",
+      "1 份浓缩液加 7 份水",
+      "1 份浓缩液加 31 份水",
+      "1 份浓缩液加 11 份水"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "先配 1+3 贮藏液，1 L 浓缩液得到 4 L 贮藏液，再由贮藏液配工作液。"
+    },
+    {
+     "q": "1+31 工作液配制 1 L 时，贮藏液用量是多少？",
+     "type": "single",
+     "options": [
+      "125 mL",
+      "250 mL",
+      "333 mL",
+      "50 mL"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "1+31 即 1 份贮藏液加 7 份水，125 mL 贮藏液加水至 1 L。"
+    },
+    {
+     "q": "1 L 的 1+31 工作液可重复处理多少卷 135-36？",
+     "type": "single",
+     "options": [
+      "1 卷",
+      "5 卷",
+      "10 卷",
+      "20 卷"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "Ilfortec HC 给出每升 5 卷，第 2 卷起每处理一卷延长时间 10%。"
+    },
+    {
+     "q": "连续搅拌使推荐显影时间如何调整？",
+     "type": "single",
+     "options": [
+      "延长约 15%",
+      "减少约 15%",
+      "不变",
+      "延长 10%"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "搅拌加强使显影加快，Ilfortec HC 指出连续搅拌使推荐时间减少约 15%。"
+    }
+   ],
+   "updated": "2026-01-12",
+   "status": "reviewed"
+  },
+  {
+   "id": "bw-process.rodinal",
+   "title": "Rodinal 显影液",
+   "title_en": "Rodinal Developer",
+   "aliases": [
+    "Rodinal",
+    "Agfa Rodinal",
+    "Adox Rodinal",
+    "对氨基酚",
+    "485 稀释"
+   ],
+   "type": "chemical",
+   "level": 3,
+   "era": "1881 至今",
+   "tags": [
+    "显影剂",
+    "对氨基酚",
+    "稀释",
+    "锐度",
+    "增感"
+   ],
+   "summary": "Rodinal 是以对氨基酚为主体的浓缩液显影液，1881 年推出。稀释倍数决定片速、反差与锐度：稀释越高越慢、越柔、越锐。",
+   "blocks": [
+    {
+     "kind": "formula",
+     "caption": "传统 Rodinal 浓缩液（自配，A 液 + B 液）",
+     "text": "A 液：水（52 °C）750 mL + 对氨基酚盐酸盐 100 g + 偏重亚硫酸钾 300 g，冷水至 1 L\nB 液：冷水 300 mL + 氢氧化钠 200 g，冷水至 400 mL\n配制：A 液冷却后冰水浴中连续搅拌，缓慢加入 280 mL B 液；再极缓慢加 B 液至液体突然变暗；最后逐滴加至瓶底仅剩几颗结晶"
+    },
+    {
+     "kind": "warn",
+     "text": "瓶底必须保留几颗结晶。底部无结晶的显影液不能保存。B 液配制放热，须冷却。配制时把氢氧化钠加到水中，不要把水倒入碱液。不能用偏重亚硫酸钠替代偏重亚硫酸钾。"
+    },
+    {
+     "kind": "p",
+     "text": "现行 Agfa 产品的安全数据表显示使用氢氧化钾而非氢氧化钠，成分比例已调整并加入溴化钾。厂商时间表以商品浓缩液为准。"
+    },
+    {
+     "kind": "image",
+     "src": "img/rodinal-bottle.png",
+     "alt": "ADOX 出品的 Rodinal 浓缩液。对氨基酚类显影剂以高稀释、一次性使用为特征。",
+     "caption": "ADOX 出品的 Rodinal 浓缩液。对氨基酚类显影剂以高稀释、一次性使用为特征。",
+     "credit": "Pappapeter",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File%3ARodinal_bottle_from_ADOX_made_in_2018.jpg"
+    },
+    {
+     "kind": "table",
+     "caption": "485 稀释对照表（反差点约 0.65，20 °C）",
+     "rows": [
+      {
+       "c1": "稀释",
+       "c2": "1+25",
+       "c3": "1+50",
+       "c4": "1+75",
+       "c5": "1+100 及更稀"
+      },
+      {
+       "c1": "显影时间",
+       "c2": "短",
+       "c3": "中（常用）",
+       "c4": "长",
+       "c5": "很长"
+      },
+      {
+       "c1": "有效片速",
+       "c2": "接近标称",
+       "c3": "略低",
+       "c4": "明显降低",
+       "c5": "按时间推算，可做 push"
+      },
+      {
+       "c1": "反差",
+       "c2": "较高",
+       "c3": "中等偏低",
+       "c4": "偏低",
+       "c5": "柔"
+      },
+      {
+       "c1": "锐度",
+       "c2": "较低",
+       "c3": "中高",
+       "c4": "高",
+       "c5": "高"
+      },
+      {
+       "c1": "推荐容量",
+       "c2": "至少 500 mL",
+       "c3": "至少 500 mL",
+       "c4": "接近 1 L",
+       "c5": "至少 1 L"
+      }
+     ],
+     "text": "485 稀释对照表（反差点约 0.65，20 °C）"
+    },
+    {
+     "kind": "note",
+     "text": "厂商正式时间表只覆盖 1+25 与 1+50。1+75、1+100、1+200 属常用延伸稀释，数值需以厂商最新说明书为准。"
+    },
+    {
+     "kind": "table",
+     "caption": "厂商时间表（20 °C，螺旋罐，首分钟连续搅拌后每 30 s 搅一次）",
+     "rows": [
+      {
+       "c1": "胶片",
+       "c2": "1+25（分）",
+       "c3": "1+50（分）",
+       "c4": "备注",
+       "c5": "指标"
+      },
+      {
+       "c1": "Agfapan APX 100",
+       "c2": "8",
+       "c3": "17",
+       "c4": "反差点 0.65",
+       "c5": "标称速度"
+      },
+      {
+       "c1": "Agfapan APX 400",
+       "c2": "7",
+       "c3": "11",
+       "c4": "",
+       "c5": "标称速度"
+      },
+      {
+       "c1": "Fuji Neopan 400 Pro",
+       "c2": "6",
+       "c3": "11",
+       "c4": "",
+       "c5": "标称速度"
+      },
+      {
+       "c1": "Ilford FP4",
+       "c2": "9",
+       "c3": "18",
+       "c4": "",
+       "c5": "标称速度"
+      },
+      {
+       "c1": "Ilford HP5 Plus",
+       "c2": "8",
+       "c3": "不推荐",
+       "c4": "高稀释时间过长",
+       "c5": "标称速度"
+      },
+      {
+       "c1": "Ilford PAN F",
+       "c2": "5",
+       "c3": "15",
+       "c4": "",
+       "c5": "标称速度"
+      },
+      {
+       "c1": "Kodak Plus-X",
+       "c2": "6",
+       "c3": "13",
+       "c4": "",
+       "c5": "标称速度"
+      },
+      {
+       "c1": "Kodak Tri-X",
+       "c2": "7",
+       "c3": "12",
+       "c4": "",
+       "c5": "标称速度"
+      },
+      {
+       "c1": "Kodak T-MAX 100",
+       "c2": "5.5",
+       "c3": "12",
+       "c4": "",
+       "c5": "标称速度"
+      },
+      {
+       "c1": "Kodak T-MAX 400",
+       "c2": "5",
+       "c3": "10",
+       "c4": "",
+       "c5": "标称速度"
+      },
+      {
+       "c1": "Kodak T-MAX 3200",
+       "c2": "8",
+       "c3": "16",
+       "c4": "",
+       "c5": "标称速度"
+      }
+     ],
+     "text": "厂商时间表（20 °C，螺旋罐，首分钟连续搅拌后每 30 s 搅一次）"
+    },
+    {
+     "kind": "table",
+     "caption": "工作条件",
+     "rows": [
+      {
+       "c1": "推荐温度",
+       "c2": "20 °C",
+       "c3": "锐度对温度敏感",
+       "c4": "严格控温",
+       "c5": "参见 $bw-process.mixing-temp-control"
+      },
+      {
+       "c1": "显影类型",
+       "c2": "小型罐、深罐、盘显",
+       "c3": "高稀释时采用最少搅拌",
+       "c4": "搅拌须精确一致",
+       "c5": "参见 $process-equipment.tank"
+      },
+      {
+       "c1": "搅拌（螺旋罐）",
+       "c2": "首分钟连续搅拌",
+       "c3": "其后每 30 s 搅一次",
+       "c4": "每次搅拌后轻敲排气泡",
+       "c5": "锐度显影液对搅拌最敏感"
+      },
+      {
+       "c1": "容量",
+       "c2": "1+25 与 1+50 每升处理少量卷",
+       "c3": "1+100 需至少 1 L",
+       "c4": "高度稀释必须大体积",
+       "c5": "工作液短时使用"
+      },
+      {
+       "c1": "保存（浓缩液）",
+       "c2": "至少 6 个月可用",
+       "c3": "螺纹盖拧紧",
+       "c4": "部分配方可存数年",
+       "c5": "以厂商说明书为准"
+      },
+      {
+       "c1": "保存（工作液）",
+       "c2": "不保存，用前现配",
+       "c3": "短时内使用",
+       "c4": "高稀释液尤其如此",
+       "c5": "参见 $bw-process.exhaustion"
+      }
+     ],
+     "text": "工作条件"
+    },
+    {
+     "kind": "tip",
+     "text": "Rodinal 的实际有效片速通常略低于 D-76，原因是亚硫酸盐浓度低。延长显影时间可提高片速，但画质下降。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Rodinal 产品数据表（Agfa，经第三方站点转载）",
+     "url": "http://babardestcyr.free.fr/rodinal.htm",
+     "kind": "manufacturer",
+     "note": "485 稀释对照、1+25 与 1+50 时间表、保存期。"
+    },
+    {
+     "name": "The Film Developing Cookbook（Troop / Anchell, 2019）：传统 Rodinal 配方与工作特性",
+     "url": "https://dupa.ie/wp-content/uploads/2023/03/Bill-Troop-Steve-Anchell-The-Film-Developing-Cookbook-2019-Routledge.pdf",
+     "kind": "book"
+    },
+    {
+     "name": "Agfa Fotochemie Filmverarbeitung 技术手册（Rodinal 稀释说明）",
+     "url": "https://www.digitaltruth.com/devchart.php",
+     "kind": "manufacturer",
+     "note": "德文版处理手册中的 Rodinal 稀释说明，经 Massive Dev Chart 归档。"
+    },
+    {
+     "name": "FilmDev 用户实测配方（Rodinal 1+50 与 1+100 的时间记录）",
+     "url": "https://www.filmdev.org/user/show/1984?page=3",
+     "kind": "forum"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "bw-process.hc-110"
+    ],
+    "next": [
+     "bw-process.dd-x"
+    ],
+    "related": [
+     "bw-process.push-pull",
+     "bw-process.mixing-temp-control"
+    ],
+    "contrast": [
+     "bw-process.xtol",
+     "bw-process.d-76"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "Rodinal 传统配方要求瓶底保留什么？",
+     "type": "single",
+     "options": [
+      "一层亚硫酸盐结晶",
+      "几颗对氨基酚结晶",
+      "无水硼砂",
+      "溴化钾晶体"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "底部保留几颗结晶是稳定性的标志；无结晶的液体不能保存。"
+    },
+    {
+     "q": "Rodinal 稀释倍数增大时，片速与反差如何变化？",
+     "type": "single",
+     "options": [
+      "片速与反差同时上升",
+      "片速下降、反差下降、锐度上升",
+      "片速上升、反差下降",
+      "全部不变"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "高稀释下对氨基酚显影慢而柔和，配合长时间显影可获得高锐度与高实感反差。"
+    },
+    {
+     "q": "厂商正式时间表覆盖哪几个稀释倍数？",
+     "type": "single",
+     "options": [
+      "1+25 与 1+50",
+      "1+10 与 1+20",
+      "1+100 与 1+200",
+      "全系列 1+10 至 1+200"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "厂商表只给出 1+25 与 1+50；更高稀释属延伸用法，数值需另核。"
+    },
+    {
+     "q": "Rodinal 工作液的处理方式是？",
+     "type": "single",
+     "options": [
+      "重复使用并补充",
+      "用前现配，短时使用",
+      "装瓶保存一个月",
+      "冷冻保存"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "高稀释工作液稳定性差，厂商要求用前现配。"
+    }
+   ],
+   "updated": "2026-01-12",
+   "status": "reviewed"
+  },
+  {
+   "id": "bw-process.dd-x",
+   "title": "Ilfortec DD-X 显影液",
+   "title_en": "Ilfortec DD-X Developer",
+   "aliases": [
+    "DD-X",
+    "Ilfortec DD-X",
+    "通用显影液"
+   ],
+   "type": "chemical",
+   "level": 3,
+   "era": "1996 至今",
+   "tags": [
+    "显影剂",
+    "液体",
+    "通用",
+    "稀释"
+   ],
+   "summary": "DD-X 是 Ilford 的通用液状显影液，仅一种稀释（1+4），覆盖从 EI 50 到 EI 12500 的全部片速。它是 Kodak T-Max 系列的推荐显影剂之一。",
+   "blocks": [
+    {
+     "kind": "table",
+     "caption": "工作条件",
+     "rows": [
+      {
+       "c1": "稀释",
+       "c2": "1+4",
+       "c3": "配 1 L 取 200 mL 浓缩液加水至 1 L",
+       "c4": "pH 8.45–8.55",
+       "c5": "SG 1.070"
+      },
+      {
+       "c1": "推荐温度",
+       "c2": "20 °C",
+       "c3": "同时提供 24 °C 时间",
+       "c4": "偏离 1 °C 按厂商表换算",
+       "c5": "参见 $bw-process.mixing-temp-control"
+      },
+      {
+       "c1": "显影类型",
+       "c2": "小型罐、深罐、盘显、旋转管",
+       "c3": "按片速查表",
+       "c4": "高稀释度与长时间组合时用最少搅拌",
+       "c5": "参见 $process-equipment.tank"
+      },
+      {
+       "c1": "搅拌",
+       "c2": "与 Ilfortec HC 相同节奏",
+       "c3": "首 10 s 倒转 4 次",
+       "c4": "其后每分钟头 10 s 倒转 4 次",
+       "c5": "轻敲罐排气泡"
+      },
+      {
+       "c1": "容量",
+       "c2": "1 L 1+4 处理 5 卷 135-36",
+       "c3": "第 2 卷加 10% 时间",
+       "c4": "第 10 卷加 90%",
+       "c5": "参见 $bw-process.exhaustion"
+      },
+      {
+       "c1": "保存",
+       "c2": "4–20 °C 凉爽干燥条件",
+       "c3": "浓缩液与工作液的保存期以说明书为准",
+       "c4": "开启后尽快使用",
+       "c5": "见下方提示"
+      },
+      {
+       "c1": "配套",
+       "c2": "ILFOSTOP 1+19 停显",
+       "c3": "HYPAM / RAPID FIXER 1+4 定影",
+       "c4": "参见 $bw-process.stop-bath-fix",
+       "c5": "参见 $bw-process.washing-storage"
+      }
+     ],
+     "text": "工作条件"
+    },
+    {
+     "kind": "table",
+     "caption": "显影时间（分:秒）",
+     "rows": [
+      {
+       "c1": "胶片与速度",
+       "c2": "20 °C",
+       "c3": "24 °C",
+       "c4": "备注",
+       "c5": "显影类型"
+      },
+      {
+       "c1": "DELTA 100 Pro EI100",
+       "c2": "10:00",
+       "c3": "—",
+       "c4": "EI50 为 8:00",
+       "c5": "标准反差"
+      },
+      {
+       "c1": "DELTA 400 Pro EI800",
+       "c2": "14:00",
+       "c3": "—",
+       "c4": "EI400 为 10:00",
+       "c5": "标准反差"
+      },
+      {
+       "c1": "DELTA 3200 Pro EI6400",
+       "c2": "7:00",
+       "c3": "8:00",
+       "c4": "EI25000 用 HC 更合适",
+       "c5": "标准反差"
+      },
+      {
+       "c1": "HP5 Plus EI1600",
+       "c2": "10:00",
+       "c3": "12:30",
+       "c4": "EI400 为 7:00",
+       "c5": "标准反差"
+      },
+      {
+       "c1": "FP4 Plus EI125",
+       "c2": "18:00",
+       "c3": "—",
+       "c4": "EI50 为 9:00",
+       "c5": "标准反差"
+      },
+      {
+       "c1": "Kodak T-MAX 100 EI200",
+       "c2": "6:30",
+       "c3": "8:00",
+       "c4": "EI100 为 10:30",
+       "c5": "标准反差"
+      },
+      {
+       "c1": "Kodak T-MAX 400 EI1600",
+       "c2": "11:00",
+       "c3": "15:00",
+       "c4": "EI400 为 10:00",
+       "c5": "标准反差"
+      },
+      {
+       "c1": "Kodak Tri-X EI400",
+       "c2": "10:00",
+       "c3": "13:00",
+       "c4": "EI200 为 7:00",
+       "c5": "标准反差"
+      },
+      {
+       "c1": "Kodak T-MAX 3200 EI3200",
+       "c2": "5:00",
+       "c3": "7:00",
+       "c4": "EI1600 为 10:00",
+       "c5": "标准反差"
+      }
+     ],
+     "text": "显影时间（分:秒）"
+    },
+    {
+     "kind": "note",
+     "text": "上表时间为产生约 0.62 G-bar 标准反差负片的时间。厂商技术资料的保存期限需以最新说明书复核。"
+    },
+    {
+     "kind": "tip",
+     "text": "DD-X 与 Xtol 是 Kodak T-Max 系列的推荐显影液。Ilford 的对照表指出 Xtol 的对应产品 Ilfosol 3 (LC) 并非抗坏血酸基。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Ilfortec DD-X 技术资料（Aug 2019）",
+     "url": "https://ilford.co.jp/photo/wp-content/uploads/2025/06/TDS_ILFOTEC_DDX_AUG19.pdf",
+     "kind": "manufacturer",
+     "note": "1+4 稀释、pH/SG、片速时间表、重复使用时间表、配套药液。"
+    },
+    {
+     "name": "Ilford Photo：Kodak 化学药品对照表（Ilfotec DD-X ↔ T-Max）",
+     "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/03/ILFORD-PHOTO-to-Kodak-equivalents.pdf",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "Massive Dev Chart（stringpuller 版）",
+     "url": "https://www.digitaltruth.com/devchart.php",
+     "kind": "manufacturer"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "bw-process.rodinal"
+    ],
+    "next": [
+     "bw-process.xtol"
+    ],
+    "related": [
+     "bw-process.hc-110",
+     "bw-process.stop-bath-fix"
+    ],
+    "contrast": [
+     "bw-process.d-76"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "DD-X 的工作液稀释倍数是多少？",
+     "type": "single",
+     "options": [
+      "1+1",
+      "1+3",
+      "1+4",
+      "1+9"
+     ],
+     "answer": [
+      2
+     ],
+     "why": "DD-X 只提供 1+4 一种工作液，覆盖全部片速。"
+    },
+    {
+     "q": "1 L 的 1+4 工作液可处理多少卷 135-36？",
+     "type": "single",
+     "options": [
+      "2 卷",
+      "5 卷",
+      "10 卷",
+      "24 卷"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "厂商给出每升 5 卷，第 2 卷起每卷延长时间 10%。"
+    },
+    {
+     "q": "DD-X 工作液的 pH 范围是多少？",
+     "type": "single",
+     "options": [
+      "7.68–7.82",
+      "8.45–8.55",
+      "8.60–8.70",
+      "9.00–9.20"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "厂商技术资料给出 8.45–8.55。"
+    }
+   ],
+   "updated": "2026-01-12",
+   "status": "reviewed"
+  },
+  {
+   "id": "bw-process.xtol",
+   "title": "Kodak Xtol 显影液",
+   "title_en": "Kodak Xtol Developer",
+   "aliases": [
+    "Xtol",
+    "抗坏血酸显影液",
+    "Zawadzki"
+   ],
+   "type": "chemical",
+   "level": 3,
+   "era": "1998 至今",
+   "tags": [
+    "显影剂",
+    "抗坏血酸",
+    "粉末",
+    "细颗粒",
+    "可重复使用"
+   ],
+   "summary": "Xtol 是 1998 年公开的抗坏血酸显影液。它以异抗坏血酸替代对苯二酚、以 Dimezone-S 替代 Phenidone，低 pH 工作，自身即补充液。",
+   "blocks": [
+    {
+     "kind": "formula",
+     "caption": "Xtol 原液（1 L，自配参考）",
+     "text": "Part A：无水亚硫酸钠 10 g、DTPA 五钠盐 1 g、偏硼酸钠（8 mol）4 g、Dimezone-S 0.2 g\nPart B：无水亚硫酸钠 75 g、偏重亚硫酸钠 3.5 g、异抗坏血酸钠 12 g\n配制：Part A 加入 750 mL 常温水；再加入 Part B；加水至 1 L"
+    },
+    {
+     "kind": "p",
+     "text": "Xtol 用异抗坏血酸钠替代对苯二酚，用 Dimezone-S（4-羟甲基-4-甲基-1-苯基-3-吡唑烷酮）替代 Phenidone。它在低至 pH 8.2 的条件下工作，可在室温配制。它不含抑制剂，缓冲能力强，对溴化物不敏感，因此自身即补充液。"
+    },
+    {
+     "kind": "table",
+     "caption": "工作条件",
+     "rows": [
+      {
+       "c1": "工作液",
+       "c2": "原液、1+1、1+4 稀释",
+       "c3": "原液与稀释液均可重复使用",
+       "c4": "1+4 为推荐稀释",
+       "c5": "稀释提高感光度与锐度"
+      },
+      {
+       "c1": "推荐温度",
+       "c2": "20 °C",
+       "c3": "厂商提供 18–24 °C 时间",
+       "c4": "偏离 1 °C 调整时间",
+       "c5": "参见 $bw-process.mixing-temp-control"
+      },
+      {
+       "c1": "显影类型",
+       "c2": "小型罐、深罐、盘显",
+       "c3": "短时间显影须严格搅拌",
+       "c4": "显影时间 5 分钟以下易不均",
+       "c5": "参见 $process-equipment.tank"
+      },
+      {
+       "c1": "搅拌",
+       "c2": "按罐型执行规范节奏",
+       "c3": "锐度显影液对搅拌敏感",
+       "c4": "每次搅拌后排气",
+       "c5": "参见 $process-equipment.tank"
+      },
+      {
+       "c1": "容量",
+       "c2": "原液 1 L 处理 4 卷 135-36/120",
+       "c3": "可延至 8 卷再到 12 卷",
+       "c4": "每 15 张 8×10 约需 1 L",
+       "c5": "未稀释液至少 250 mL"
+      },
+      {
+       "c1": "原液保存",
+       "c2": "密闭充满瓶 6 个月",
+       "c3": "半满瓶 2 个月",
+       "c4": "5–20 °C 避光",
+       "c5": "以说明书为准"
+      },
+      {
+       "c1": "工作液保存",
+       "c2": "重复使用时按卷数延长时间",
+       "c3": "不需补充液",
+       "c4": "用纸测试法判断失效",
+       "c5": "参见 $bw-process.exhaustion"
+      }
+     ],
+     "text": "工作条件"
+    },
+    {
+     "kind": "table",
+     "caption": "Kodak 胶片显影时间（分）",
+     "rows": [
+      {
+       "c1": "胶片",
+       "c2": "原液 20 °C",
+       "c3": "1+4 20 °C",
+       "c4": "备注",
+       "c5": "显影类型"
+      },
+      {
+       "c1": "T-MAX 100",
+       "c2": "6.5",
+       "c3": "8",
+       "c4": "厂家强调 1+4 为推荐",
+       "c5": "标准反差"
+      },
+      {
+       "c1": "T-MAX 400",
+       "c2": "6",
+       "c3": "4.5",
+       "c4": "原液时间表见 TSC0599",
+       "c5": "标准反差"
+      },
+      {
+       "c1": "Tri-X 400",
+       "c2": "6",
+       "c3": "4.5",
+       "c4": "",
+       "c5": "标准反差"
+      },
+      {
+       "c1": "Tri-X 320",
+       "c2": "7.25",
+       "c3": "4",
+       "c4": "",
+       "c5": "标准反差"
+      },
+      {
+       "c1": "Plus-X 125",
+       "c2": "5.75",
+       "c3": "—",
+       "c4": "",
+       "c5": "标准反差"
+      }
+     ],
+     "text": "Kodak 胶片显影时间（分）"
+    },
+    {
+     "kind": "tip",
+     "text": "相对氢醌体系，Xtol 的有效片速高约 1/3–1/2 档，颗粒更细，可放大约 10%。提高曝光指数前先做测试卷。参见 $bw-process.push-pull。"
+    },
+    {
+     "kind": "note",
+     "text": "1+5 以上稀释不再属于 solvent developer。判定显影液是否失效需要用相纸测试法。参见 $printing.paper-testing。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Kodak 白黑现像液 技術資料 TSC0599（Xtol 时间与处理能力）",
+     "url": "http://kodakalaris.co.jp/images/TSC0599.pdf",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "Kodak T-MAX 400 胶片技术资料（Xtol 与 Xtol 1:1 时间）",
+     "url": "https://kodakalaris.co.jp/images/NEW_T-MAX400.pdf",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "The Film Developing Cookbook（Troop / Anchell, 2019）：Xtol 配方与技术特性",
+     "url": "https://dupa.ie/wp-content/uploads/2023/03/Bill-Troop-Steve-Anchell-The-Film-Developing-Cookbook-2019-Routledge.pdf",
+     "kind": "book",
+     "note": "配方源自 US Patent 5,756,271 (1998)；含 DTPA 作用与容量数据。"
+    },
+    {
+     "name": "Ilford Photo：Kodak 化学药品对照表（Xtol ↔ Ilfosol 3 LC）",
+     "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/03/ILFORD-PHOTO-to-Kodak-equivalents.pdf",
+     "kind": "manufacturer"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "bw-process.developer-types"
+    ],
+    "next": [
+     "bw-process.pyro"
+    ],
+    "related": [
+     "bw-process.d-96-boost",
+     "bw-process.push-pull"
+    ],
+    "contrast": [
+     "bw-process.rodinal"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "Xtol 用哪种成分替代对苯二酚？",
+     "type": "single",
+     "options": [
+      "焦性没食子酸",
+      "异抗坏血酸钠",
+      "对氨基酚",
+      "抗坏血酸钙"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "异抗坏血酸钠的耗尽产物惰性，因此 Xtol 自身即补充液。"
+    },
+    {
+     "q": "Xtol 为什么不加补充液也能重复使用？",
+     "type": "single",
+     "options": [
+      "它不含显影主体",
+      "耗尽产物惰性，缓冲强，对溴化物不敏感",
+      "它会自动再生银",
+      "它不含加速剂"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "无抑制剂、强缓冲、对溴化物不敏感，加上惰性耗尽产物，共同实现自身补充。"
+    },
+    {
+     "q": "Kodak 推荐的 Xtol 稀释倍数是多少？",
+     "type": "single",
+     "options": [
+      "1+1",
+      "1+4",
+      "1+9",
+      "1+19"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "Kodak 在 T-MAX 技术资料中注明推荐稀释率为 1+4。"
+    },
+    {
+     "q": "判定 Xtol 工作液是否失效需要用什么方法？",
+     "type": "single",
+     "options": [
+      "测 pH",
+      "纸测试法（用相纸曝光测试）",
+      "测比重",
+      "看颜色"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "抗坏血酸体系的失效不体现在 pH 或比重上，须用相纸测试法判断。"
+    }
+   ],
+   "updated": "2026-01-12",
+   "status": "reviewed"
+  },
+  {
+   "id": "bw-process.pyro",
+   "title": "Pyro 与 Pyrocat-HD 显影液",
+   "title_en": "Pyro and Pyrocat-HD Developers",
+   "aliases": [
+    "pyro",
+    "Pyrocat-HD",
+    "焦性没食子酸",
+    "PMK",
+    "染色显影"
+   ],
+   "type": "chemical",
+   "level": 4,
+   "era": "1943 至今",
+   "tags": [
+    "显影剂",
+    "染色",
+    "邻接效应",
+    "暖调印放"
+   ],
+   "summary": "Pyro 显影剂用焦性没食子酸显影，在负片上留下银染色。Pyrocat-HD 用邻苯二酚作主体，配合碳酸钾与 Phenidone，提供稳定的染色与高锐度。",
+   "blocks": [
+    {
+     "kind": "formula",
+     "caption": "Pyrocat-HD 工作液（A、B 母液）",
+     "text": "Stock A（100 mL）：偏重亚硫酸钠 1 g、邻苯二酚 5 g、Phenidone 0.2 g、溴化钾 0.2 g、水至 100 mL（可用 75 mL 丙二醇代水再加至 100 mL）\nStock B（100 mL）：碳酸钾 75 g、蒸馏水至 100 mL\n标准工作液：1 A + 1 B + 100 水（1:1:100）"
+    },
+    {
+     "kind": "formula",
+     "caption": "Pyrocat-HD 大方量母液（每 L，自配参考）",
+     "text": "Part A（1 L）：水 750 mL + 偏重亚硫酸钠 10 g + 邻苯二酚 50 g + Phenidone 2 g + 溴化钾 2 g，至 1 L\nPart B（1 L）：水 750 mL + 碳酸钾 750 g，至 1 L\n工作液：1 A + 1 B + 100 水"
+    },
+    {
+     "kind": "p",
+     "text": "Pyrocat-HD 是半补偿式高反差显影液，相对 PMK 有效片速高约 1/3 档，显影时间短 10–15%，染色更一致，毒性更低，减少搅拌也无线条与斑驳。用 Metol 2.5 g/L 替代 Phenidone 时损失少量片速。"
+    },
+    {
+     "kind": "table",
+     "caption": "时间与搅拌（1:1:100 稀释）",
+     "rows": [
+      {
+       "c1": "方式",
+       "c2": "搅拌",
+       "c3": "显影时间",
+       "c4": "胶片与速度",
+       "c5": "温度"
+      },
+      {
+       "c1": "旋转显影",
+       "c2": "连续搅拌，≥75 mL/张 4×5",
+       "c3": "8 分",
+       "c4": "Ilford FP4+ EI100",
+       "c5": "21 °C"
+      },
+      {
+       "c1": "旋转显影",
+       "c2": "连续搅拌",
+       "c3": "9 分",
+       "c4": "BPF-200 EI100",
+       "c5": "21 °C"
+      },
+      {
+       "c1": "旋转显影",
+       "c2": "连续搅拌",
+       "c3": "12 分",
+       "c4": "Kodak T-MAX 400 EI320",
+       "c5": "21 °C"
+      },
+      {
+       "c1": "旋转显影",
+       "c2": "连续搅拌",
+       "c3": "13 分",
+       "c4": "Ilford HP5+ EI320",
+       "c5": "21 °C"
+      },
+      {
+       "c1": "盘显（正常）",
+       "c2": "每分钟搅 10 s",
+       "c3": "按厂商表",
+       "c4": "慢速与中速片",
+       "c5": "21 °C"
+      },
+      {
+       "c1": "盘显（最少）",
+       "c2": "每 3 分钟搅 10 s",
+       "c3": "约为正常搅拌的 1.5 倍",
+       "c4": "慢速与中速片",
+       "c5": "21 °C"
+      },
+      {
+       "c1": "半静置",
+       "c2": "开始搅 1 min，中点搅 30 s",
+       "c3": "40–50 分",
+       "c4": "1:1:200 至 1:1:400 稀释",
+       "c5": "21 °C"
+      },
+      {
+       "c1": "半静置（快速片）",
+       "c2": "同上",
+       "c3": "50–60 分",
+       "c4": "快速片可能出现 dichroic fog",
+       "c5": "21 °C"
+      }
+     ],
+     "text": "时间与搅拌（1:1:100 稀释）"
+    },
+    {
+     "kind": "table",
+     "caption": "片盘时间（1:1:100 稀释，源表为 70/75/80 °F）",
+     "rows": [
+      {
+       "c1": "胶片与速度",
+       "c2": "21 °C",
+       "c3": "24 °C",
+       "c4": "27 °C",
+       "c5": "备注"
+      },
+      {
+       "c1": "Ilford HP5+ EI200",
+       "c2": "13 分",
+       "c3": "10 分",
+       "c4": "8 分",
+       "c5": "标准 1:1:100"
+      },
+      {
+       "c1": "Kodak T-MAX 100 EI64",
+       "c2": "14 分",
+       "c3": "11 分",
+       "c4": "9 分",
+       "c5": "标准 1:1:100"
+      },
+      {
+       "c1": "Kodak T-MAX 400 EI400",
+       "c2": "15 分",
+       "c3": "12 分",
+       "c4": "10 分",
+       "c5": "标准 1:1:100"
+      },
+      {
+       "c1": "Kodak Verichrome Pan EI125",
+       "c2": "9 分",
+       "c3": "7.5 分",
+       "c4": "6 分",
+       "c5": "标准 1:1:100"
+      }
+     ],
+     "text": "片盘时间（1:1:100 稀释）"
+    },
+    {
+     "kind": "p",
+     "text": "增加 B 母液比例可提高显影活性。1:1:100 稀释时 FP4+ 到 0.52 反差点需 8 分；1:2:100 稀释只需 5:30。该组合用于区域曝光放大（zonal expansion）。"
+    },
+    {
+     "kind": "table",
+     "caption": "工作条件",
+     "rows": [
+      {
+       "c1": "推荐温度",
+       "c2": "21 °C（70 °F）",
+       "c3": "染色显影对温度敏感",
+       "c4": "严格控温",
+       "c5": "参见 $bw-process.mixing-temp-control"
+      },
+      {
+       "c1": "显影类型",
+       "c2": "片盘、切片罐、旋转显影",
+       "c3": "不易出现显影不均",
+       "c4": "搅拌可减到每分钟 1 次或更少",
+       "c5": "参见 $process-equipment.tank"
+      },
+      {
+       "c1": "停显",
+       "c2": "流动清水 1 min",
+       "c3": "酸停显会中和染色",
+       "c4": "要最大化染色用流水停显",
+       "c5": "参见 $bw-process.stop-bath-fix"
+      },
+      {
+       "c1": "定影",
+       "c2": "碱性定影（无硬化剂的快速定影）5 min",
+       "c3": "推荐用于染色显影液",
+       "c4": "避免硬化剂压缩染色层",
+       "c5": "参见 $bw-process.stop-bath-fix"
+      },
+      {
+       "c1": "水洗",
+       "c2": "流水 10–15 min",
+       "c3": "预水洗 2 min",
+       "c4": "染色在水洗中继续形成",
+       "c5": "参见 $bw-process.washing-storage"
+      },
+      {
+       "c1": "保存",
+       "c2": "丙二醇母液可长期保存",
+       "c3": "工作液用后废弃",
+       "c4": "母液开封后避光",
+       "c5": "以说明书为准"
+      }
+     ],
+     "text": "工作条件"
+    },
+    {
+     "kind": "warn",
+     "text": "焦性没食子酸与邻苯二酚会染手、染容器。佩戴手套操作。参见 $bw-process.stain-troubleshoot。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Pyrocat-HD 使用说明（Bostick-Sullivan，2022）",
+     "url": "https://www.bostick-sullivan.com/wp-content/uploads/2022/03/Pyro-HD-instructions.pdf",
+     "kind": "manufacturer",
+     "note": "时间表、搅拌方式、1:2:100 变体、前后处理建议。原表温度为 70/75/80 °F，即约 21/24/27 °C。"
+    },
+    {
+     "name": "Photo Formulary：Pyrocat-HD 配方",
+     "url": "https://www.freestylephoto.com/static/pdf/pages/product_pdfs/formulary/01-5080.pdf",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "Pyrocat-HD 配方（lostlabours.co.uk 配方库）",
+     "url": "http://www.lostlabours.co.uk/photography/formulae/developers/devPC_hd.htm",
+     "kind": "book"
+    },
+    {
+     "name": "The Film Developing Cookbook 第 8 章（pyro 染色显影原理）",
+     "url": "https://dupa.ie/wp-content/uploads/2023/03/Bill-Troop-Steve-Anchell-The-Film-Developing-Cookbook-2019-Routledge.pdf",
+     "kind": "book"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "bw-process.hq-catechol"
+    ],
+    "next": [
+     "bw-process.micro-phenol"
+    ],
+    "related": [
+     "bw-process.stop-bath-fix",
+     "bw-process.washing-storage"
+    ],
+    "contrast": [
+     "bw-process.xtol"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "Pyrocat-HD 标准工作液的稀释是？",
+     "type": "single",
+     "options": [
+      "1 A + 1 B",
+      "1 A + 1 B + 100 水",
+      "1 A + 4 B + 100 水",
+      "2 A + 1 B + 50 水"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "标准工作液为 1:1:100，即两份母液加 100 份水。"
+    },
+    {
+     "q": "为什么 Pyro 显影后推荐用流动清水停显？",
+     "type": "single",
+     "options": [
+      "清水冷却更快",
+      "酸停显会中和染色效果",
+      "清水能定影",
+      "清水能提高片速"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "酸与碱中和染色显影液的染色效果；要最大化染色与邻接效应，用流动清水停显。"
+    },
+    {
+     "q": "Pyro 显影液推荐配哪种定影液？",
+     "type": "single",
+     "options": [
+      "酸硬化定影液",
+      "碱性定影液（无硬化剂的快速定影）",
+      "高浓度硫代硫酸铵",
+      "含明矾的定影液"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "碱性定影不溶解银影像，也不含硬化剂，适合染色显影的负片。"
+    },
+    {
+     "q": "把 B 母液比例加倍到 1:2:100 会怎样？",
+     "type": "single",
+     "options": [
+      "显影更慢",
+      "显影更活跃，FP4+ 到 0.52 反差点的时间由 8 分降到 5:30",
+      "染色完全消失",
+      "片速下降"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "碳酸钾浓度上升提高显影活性，该组合适合区域曝光放大。"
+    }
+   ],
+   "updated": "2026-01-12",
+   "status": "reviewed"
+  },
+  {
+   "id": "bw-process.micro-phenol",
+   "title": "Ilford Micro Phenol 显影液",
+   "title_en": "Ilford Micro Phenol Developer",
+   "aliases": [
+    "Micro Phenol",
+    "Microphen",
+    "DK-50",
+    "微粒显影液"
+   ],
+   "type": "chemical",
+   "level": 4,
+   "era": "1953 至今",
+   "tags": [
+    "显影剂",
+    "粉末",
+    "微粒",
+    "半补偿"
+   ],
+   "summary": "Micro Phenol 是 Ilford 的粉末显影液，1953 年推出，用于微粒显影与增感冲洗。它以 Phenidone 与对苯二酚组合，在较低 pH 下工作。",
+   "blocks": [
+    {
+     "kind": "formula",
+     "caption": "Micro Phenol 原液（网络流传的自配参考，配方待考证）",
+     "text": "Metol 2 g\n无水亚硫酸钠 100 g\n对苯二酚 5 g\n溴化钾 1 g\n硼酸 2 g\n硼砂 1 g\n加水至 1 L"
+    },
+    {
+     "kind": "note",
+     "text": "Ilford 未公开 Micro Phenol 的原液配方。本条目 refs 中的厂商资料只给 pH 与比重（第一条）与产品对应关系（第二条），不含该配方。上表用于理解组分结构，商品 Micro Phenol 的准确组成以厂商说明书为准。"
+    },
+    {
+     "kind": "table",
+     "caption": "工作条件",
+     "rows": [
+      {
+       "c1": "工作液",
+       "c2": "1+1 与 1+3 稀释",
+       "c3": "也可配原液使用",
+       "c4": "1+3 适合增感冲洗",
+       "c5": "参见 $bw-process.push-pull"
+      },
+      {
+       "c1": "pH 与比重",
+       "c2": "原液 pH 8.67–8.93",
+       "c3": "原液比重 1.095",
+       "c4": "1+1 比重 1.050",
+       "c5": "1+3 比重 1.024"
+      },
+      {
+       "c1": "推荐温度",
+       "c2": "20 °C",
+       "c3": "偏离 1 °C 调整时间",
+       "c4": "严格控温",
+       "c5": "参见 $bw-process.mixing-temp-control"
+      },
+      {
+       "c1": "显影类型",
+       "c2": "小型罐、深罐、盘显",
+       "c3": "短时间显影须严格搅拌",
+       "c4": "5 分钟以下可能不均",
+       "c5": "参见 $process-equipment.tank"
+      },
+      {
+       "c1": "容量",
+       "c2": "稀释液每升处理少量卷",
+       "c3": "工作液用后废弃",
+       "c4": "增感冲洗用新鲜液",
+       "c5": "参见 $bw-process.exhaustion"
+      },
+      {
+       "c1": "保存",
+       "c2": "原液密闭避光保存",
+       "c3": "5–20 °C",
+       "c4": "保存期以说明书为准",
+       "c5": "见下方提示"
+      }
+     ],
+     "text": "工作条件"
+    },
+    {
+     "kind": "table",
+     "caption": "显影时间（20 °C，分:秒）",
+     "rows": [
+      {
+       "c1": "胶片与速度",
+       "c2": "原液",
+       "c3": "1+1",
+       "c4": "1+3",
+       "c5": "推片档（原液/1+1/1+3）"
+      },
+      {
+       "c1": "DELTA 100 Pro EI100",
+       "c2": "6:30",
+       "c3": "10",
+       "c4": "14",
+       "c5": "EI200 为 8/14/20"
+      },
+      {
+       "c1": "DELTA 400 Pro EI200",
+       "c2": "5",
+       "c3": "8:30",
+       "c4": "16",
+       "c5": "EI800 8:30/15:30；EI1600 10:30/19；EI3200 14"
+      },
+      {
+       "c1": "HP5 Plus EI400",
+       "c2": "6:30",
+       "c3": "12",
+       "c4": "23",
+       "c5": "EI800 8/15；EI1600 11；EI3200 16"
+      },
+      {
+       "c1": "FP4 Plus EI125",
+       "c2": "8",
+       "c3": "10",
+       "c4": "14",
+       "c5": "EI200 为 9/14/18"
+      },
+      {
+       "c1": "Kodak T-MAX 100 EI100",
+       "c2": "8",
+       "c3": "11",
+       "c4": "16",
+       "c5": "—"
+      },
+      {
+       "c1": "Kodak T-MAX 400 EI400",
+       "c2": "7",
+       "c3": "10",
+       "c4": "15",
+       "c5": "—"
+      },
+      {
+       "c1": "Fuji Neopan 400 EI400",
+       "c2": "4:30",
+       "c3": "6:45",
+       "c4": "9",
+       "c5": "EI800 5:45；EI1600 8:30"
+      }
+     ],
+     "text": "Micro Phenol 显影时间（20 °C，分:秒）。厂商原表中不足一分钟或含秒的值以「分:秒」记录，例如 6:45 表示 6 分 45 秒。厂商未列出的组合标为 —。数值取自 Ilford 粉末显影液技术资料第 5、6 页 MICROPHEN 列。"
+    },
+    {
+     "kind": "note",
+     "text": "上表时间按厂商技术资料标称的约 0.62 G-bar 标准反差负片给出。同一目标值见 $bw-process.hc-110 的 Ilford 技术资料原文「the aim is for a Gbar of 0.62」。保存期数值需以厂商最新说明书为准。"
+    },
+    {
+     "kind": "p",
+     "text": "Micro Phenol 是 Ilford 对应 Kodak DK-50 的产品，定位为微粒显影与增感冲洗。它的颗粒度高于 D-76，微粒表现与 D-76 相当。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Ilford 粉末显影液技术资料（ID-11 / Micro Phenol / Perceptol，2025）",
+     "url": "https://ilford.co.jp/photo/wp-content/uploads/2025/06/TDS_Powder_film_developers.pdf",
+     "kind": "manufacturer",
+     "note": "第 2 页给 pH 与比重，第 5、6 页给 20 °C 的全片速与推片时间表（MICROPHEN 列）。"
+    },
+    {
+     "name": "Ilford Photo：Kodak 化学药品对照表（DK-50 ↔ Microphen）",
+     "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/03/ILFORD-PHOTO-to-Kodak-equivalents.pdf",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "Ilford Photo: ID-11 / Perceptol / Microphen 冲洗表（时间与稀释）",
+     "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2025/02/ILFOTEC-HC-200225.pdf",
+     "kind": "manufacturer",
+     "note": "同厂技术资料的页码格式与反差目标值（Gbar 0.62）。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "bw-process.pyro"
+    ],
+    "next": [
+     "bw-process.developer-replenisher"
+    ],
+    "related": [
+     "bw-process.push-pull",
+     "bw-process.d-76"
+    ],
+    "contrast": [
+     "bw-process.dd-x"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "Micro Phenol 的标准工作液稀释是？",
+     "type": "single",
+     "options": [
+      "1+1 与 1+3",
+      "1+4 与 1+7",
+      "仅原液",
+      "1+15 与 1+31"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "Ilford 粉末显影液技术资料给出 1+1 与 1+3 两种工作液。"
+    },
+    {
+     "q": "DELTA 100 Pro 在 Micro Phenol 1+3 中的 20 °C 显影时间是多少？",
+     "type": "single",
+     "options": [
+      "14 分",
+      "15 分",
+      "20 分",
+      "10 分"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "Ilford 技术资料给 DELTA 100 Pro EI100 的 Micro Phenol 1+3 为 14 分，1+1 为 10 分，原液为 6 分 30 秒。"
+    },
+    {
+     "q": "Micro Phenol 在 Kodak 产品线中的对应物是？",
+     "type": "single",
+     "options": [
+      "D-76",
+      "DK-50",
+      "HC-110",
+      "Xtol"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "Ilford 对照表把 DK-50（停产）对应到 Micro Phenol。"
+    }
+   ],
+   "updated": "2026-01-12",
+   "status": "draft"
+  },
+  {
+   "id": "bw-process.developer-replenisher",
+   "title": "显影液补充剂与增强剂",
+   "title_en": "Developer Replenisher and Booster",
+   "aliases": [
+    "replenisher",
+    "补充液",
+    "D-76R",
+    "ID-11R",
+    "booster"
+   ],
+   "type": "chemical",
+   "level": 4,
+   "era": "1930 至今",
+   "tags": [
+    "显影液",
+    "补充",
+    "强化",
+    "容量"
+   ],
+   "summary": "补充液把已用过的显影液的组成恢复到初始浓度。增强剂只提高反差。补液维持容量，强补液加反差。",
+   "blocks": [
+    {
+     "kind": "p",
+     "text": "补充液（replenisher）不含显影过程中生成的全部副产物。它按一定比例补回被消耗的组分，同时稀释副产物浓度，从而恢复强度并保持一致的反差。补液与补充量按 1:1 到 1:3 的比例配比，比例越低强度恢复越少。"
+    },
+    {
+     "kind": "table",
+     "caption": "常用补充液配方",
+     "rows": [
+      {
+       "c1": "名称",
+       "c2": "对应显影液",
+       "c3": "Metol",
+       "c4": "无水亚硫酸钠 / 对苯二酚 / 硼砂",
+       "c5": "备注"
+      },
+      {
+       "c1": "D-76R",
+       "c2": "D-76",
+       "c3": "3 g",
+       "c4": "100 g / 7.5 g / 20 g",
+       "c5": "加水至 1 L"
+      },
+      {
+       "c1": "ID-11R",
+       "c2": "ID-11",
+       "c3": "3 g",
+       "c4": "100 g / 7.5 g / 20 g",
+       "c5": "与 D-76R 同组分"
+      },
+      {
+       "c1": "Mwtol",
+       "c2": "ID-19 / D-19",
+       "c3": "4 g",
+       "c4": "72 g / 16 g / 碳酸钠 48 g / 氢氧化钠 7.5 g",
+       "c5": "加水至 1 L"
+      }
+     ],
+     "text": "常用补充液配方"
+    },
+    {
+     "kind": "table",
+     "caption": "补充液的加法",
+     "rows": [
+      {
+       "c1": "方法",
+       "c2": "补液比例",
+       "c3": "显影时间",
+       "c4": "适用",
+       "c5": "说明"
+      },
+      {
+       "c1": "维持强度",
+       "c2": "每卷 22–30 mL 补充液",
+       "c3": "按原液时间",
+       "c4": "机器处理、批量罐显",
+       "c5": "容量可提高到每加仑 120 卷"
+      },
+      {
+       "c1": "提高容量",
+       "c2": "每卷后加 10–15% 原液量",
+       "c3": "按原液时间",
+       "c4": "D-76 罐显",
+       "c5": "Kodak 给出每加仑 16 卷（约每升 4 卷），补充后每加仑 120 卷"
+      },
+      {
+       "c1": "强补液",
+       "c2": "原液量的 10–20%",
+       "c3": "适当缩短",
+       "c4": "一次性显影、提反差",
+       "c5": "同时提升强度与反差"
+      },
+      {
+       "c1": "不补液",
+       "c2": "0",
+       "c3": "每卷延长时间",
+       "c4": "家庭小量冲洗",
+       "c5": "参见 $bw-process.exhaustion"
+      }
+     ],
+     "text": "补充液的加法"
+    },
+    {
+     "kind": "p",
+     "text": "反差点（contrast index）可作为显影液状态的度量。不同显影液达到同一反差点所需的时间不同。参见 $film-stock.characteristic-curve。"
+    },
+    {
+     "kind": "warn",
+     "text": "补液不能恢复副产物引起的染色。已变色的显影液应废弃。"
+    },
+    {
+     "kind": "note",
+     "text": "补充液加入过多会使显影液 pH 上升。D-76 与 D-76R 存放后 pH 都会升高，因此长期存放的补充液需重新标定。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Kodak Professional D-76 说明书 TSC 0460（D-76R 用途）",
+     "url": "https://kodakalaris.co.jp/images/TSC0460-D-76.pdf",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "The Film Developing Cookbook 第 5、12 章（补充液体系与配比）",
+     "url": "https://dupa.ie/wp-content/uploads/2023/03/Bill-Troop-Steve-Anchell-The-Film-Developing-Cookbook-2019-Routledge.pdf",
+     "kind": "book"
+    },
+    {
+     "name": "LostLabours 配方库：Ilford ID-11 / ID-11R（D-76R）与 ID-19 / Mwtol",
+     "url": "https://www.lostlabours.co.uk/photography/formulae/developers/devID11.htm",
+     "kind": "article",
+     "note": "ID-11R 与 D-76R 同为 Metol 3 g / 无水亚硫酸钠 100 g / 对苯二酚 7.5 g / 硼砂 20 g；ID-19 的补充液 Mwtol 为 Metol 4 g / 无水亚硫酸钠 72 g / 对苯二酚 16 g / 无水碳酸钠 48 g / 氢氧化钠 7.5 g。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "bw-process.d-76"
+    ],
+    "next": [
+     "bw-process.push-pull"
+    ],
+    "related": [
+     "bw-process.exhaustion",
+     "bw-process.developer-types"
+    ],
+    "contrast": []
+   },
+   "quiz": [
+    {
+     "q": "补充液的主要作用是什么？",
+     "type": "single",
+     "options": [
+      "提高反差点",
+      "恢复被消耗的组分到初始浓度",
+      "清洁显影液",
+      "防止起泡"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "补充液按比例补回 Metol、亚硫酸钠、对苯二酚与碱，同时稀释副产物浓度。"
+    },
+    {
+     "q": "D-76R 中 Metol 与硼砂的含量相对 D-76 如何？",
+     "type": "single",
+     "options": [
+      "更低",
+      "相同",
+      "更高",
+      "Metol 更低、硼砂 相同"
+     ],
+     "answer": [
+      2
+     ],
+     "why": "D-76R 为 Metol 3 g、硼砂 20 g，D-76 为 2 g 与 2 g。"
+    },
+    {
+     "q": "补液能否修复显影液因副产物造成的染色？",
+     "type": "single",
+     "options": [
+      "能",
+      "不能，应废弃显影液",
+      "加稀释液即可",
+      "加酸可修复"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "副产物无法用补液去除，染色显影液应废弃。"
+    }
+   ],
+   "updated": "2026-01-12",
+   "status": "reviewed"
+  },
+  {
+   "id": "bw-process.push-pull",
+   "title": "增感冲洗与降感冲洗",
+   "title_en": "Push and Pull Processing",
+   "aliases": [
+    "push",
+    "pull",
+    "增感",
+    "降感",
+    "过片"
+   ],
+   "type": "technique",
+   "level": 4,
+   "era": "1889 至今",
+   "tags": [
+    "增感",
+    "降感",
+    "曝光指数",
+    "冲洗"
+   ],
+   "summary": "曝光不足时提高曝光指数冲洗（push）以获得所需密度。曝光过度时降低曝光指数冲洗（pull）。Kodak 对 T-MAX 系列的 push 推荐使用 T-MAX、Xtol 或 DD-X。",
+   "blocks": [
+    {
+     "kind": "p",
+     "text": "Push 指曝光不足后按更高速冲洗，牺牲颗粒与灰雾换取密度。Pull 指曝光过度后按较低速冲洗，损失暗部细节与密度换取较干净的曲线。参见 $film-stock.latitude。"
+    },
+    {
+     "kind": "table",
+     "caption": "Push 的代价",
+     "rows": [
+      {
+       "c1": "颗粒",
+       "c2": "明显变粗",
+       "c3": "与显影剂配方有关",
+       "c4": "对氨基酚类颗粒增粗最少",
+       "c5": "参见 $film-stock.grain"
+      },
+      {
+       "c1": "灰雾",
+       "c2": "上升",
+       "c3": "显影时间越长越明显",
+       "c4": "高 pH 显影液加速灰雾",
+       "c5": "参见 $bw-process.exhaustion"
+      },
+      {
+       "c1": "阴影细节",
+       "c2": "损失",
+       "c3": "趾部压缩",
+       "c4": "长显影加高 pH 最严重",
+       "c5": "先做测试卷"
+      },
+      {
+       "c1": "有效片速",
+       "c2": "上升约 1/3–1/2 档（Xtol 体系）",
+       "c3": "超出厂商范围时无法保证",
+       "c4": "厂商给出上限时间",
+       "c5": "以厂商表为准"
+      }
+     ],
+     "text": "Push 的代价"
+    },
+    {
+     "kind": "table",
+     "caption": "推荐显影剂（push 2 档）",
+     "rows": [
+      {
+       "c1": "显影液",
+       "c2": "推荐理由",
+       "c3": "注意事项",
+       "c4": "保存",
+       "c5": "条目"
+      },
+      {
+       "c1": "Xtol",
+       "c2": "Kodak 首选；阴影细节保持好",
+       "c3": "原液或 1:4；时间按厂家 push 表",
+       "c4": "原液密闭避光",
+       "c5": "$bw-process.xtol"
+      },
+      {
+       "c1": "DD-X",
+       "c2": "Ilford 与 Kodak 双推荐",
+       "c3": "1+4；用新鲜液",
+       "c4": "低温干燥保存",
+       "c5": "$bw-process.dd-x"
+      },
+      {
+       "c1": "Micro Phenol",
+       "c2": "微粒与 push 定位",
+       "c3": "1+3 适合 push",
+       "c4": "以说明书为准",
+       "c5": "$bw-process.micro-phenol"
+      },
+      {
+       "c1": "HC-110",
+       "c2": "适合 push 低档",
+       "c3": "用新鲜工作液",
+       "c4": "见 HC 条目",
+       "c5": "$bw-process.hc-110"
+      },
+      {
+       "c1": "D-76",
+       "c2": "可用但灰雾较高",
+       "c3": "1:1 或原液",
+       "c4": "见 D-76 条目",
+       "c5": "$bw-process.d-76"
+      }
+     ],
+     "text": "推荐显影剂（push 2 档）"
+    },
+    {
+     "kind": "table",
+     "caption": "Push 时的操作步骤",
+     "rows": [
+      {
+       "c1": "步骤",
+       "c2": "做法",
+       "c3": "目的",
+       "c4": "注意",
+       "c5": "参见"
+      },
+      {
+       "c1": "1 曝光",
+       "c2": "按 push 档数降低曝光指数（如 400 当 1600）",
+       "c3": "获得目标颗粒密度",
+       "c4": "用测光表按 push 后速测光",
+       "c5": "$capture.exposure-metering"
+      },
+      {
+       "c1": "2 选显影液",
+       "c2": "按胶片厂商推荐",
+       "c3": "保住阴影细节",
+       "c4": "优先抗坏血酸体系",
+       "c5": "$bw-process.xtol"
+      },
+      {
+       "c1": "3 定温度",
+       "c2": "20 °C",
+       "c3": "显影对温度敏感",
+       "c4": "见温表换算",
+       "c5": "$bw-process.mixing-temp-control"
+      },
+      {
+       "c1": "4 定时间",
+       "c2": "按厂商 push 表",
+       "c3": "达到目标反差点",
+       "c4": "超过上限会严重损失细节",
+       "c5": "$bw-process.sop-tank"
+      },
+      {
+       "c1": "5 搅拌",
+       "c2": "按规范节奏",
+       "c3": "防止显影不均",
+       "c4": "缩短灰雾",
+       "c5": "$process-equipment.tank"
+      },
+      {
+       "c1": "6 显影液",
+       "c2": "用新鲜液",
+       "c3": "避免副产物",
+       "c4": "不用重复使用的液",
+       "c5": "$bw-process.exhaustion"
+      }
+     ],
+     "text": "Push 时的操作步骤"
+    },
+    {
+     "kind": "note",
+     "text": "Pull 的时间表见各胶片厂商说明书。Ilford 指出不得用重复使用的 HC-110 工作液做 push。参见 $bw-process.hc-110。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Kodak T-MAX 400 胶片技术资料（push 曝光与显影剂推荐）",
+     "url": "https://kodakalaris.co.jp/images/NEW_T-MAX400.pdf",
+     "kind": "manufacturer",
+     "note": "1/2/3 档 push 的曝光指数、显影液推荐与时间。"
+    },
+    {
+     "name": "Ilfortec HC 技术资料（禁止用重复工作液做 push）",
+     "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2025/02/ILFOTEC-HC-200225.pdf",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "Ilfortec DD-X 技术资料（高片速时间表）",
+     "url": "https://ilford.co.jp/photo/wp-content/uploads/2025/06/TDS_ILFOTEC_DDX_AUG19.pdf",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "Pentax Forums：D-76 One Shot 使用经验帖（community archive）",
+     "url": "https://web.archive.org/web/2020/https://www.pentaxforums.com/forums/107-film-processing-scanning-darkroom/466657-kodak-d76-one-shot.html",
+     "kind": "forum"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "bw-process.exhaustion"
+    ],
+    "next": [
+     "bw-process.mixing-temp-control"
+    ],
+    "related": [
+     "film-stock.latitude",
+     "film-stock.grain"
+    ],
+    "contrast": []
+   },
+   "quiz": [
+    {
+     "q": "Push 冲洗牺牲的首要指标是？",
+     "type": "single",
+     "options": [
+      "分辨率",
+      "阴影细节与颗粒",
+      "色相",
+      "曝光宽容度"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "长时间高强度显影加粗颗粒并压缩趾部，损失阴影细节。"
+    },
+    {
+     "q": "Kodak 对 T-MAX 系列做 push 首选哪三种显影液？",
+     "type": "single",
+     "options": [
+      "D-76、HC-110、Rodinal",
+      "T-MAX、T-MAX RS 与 Xtol",
+      "DD-X、D-76、Perceptol",
+      "HC-110、Microdol-X、Duraflow"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "Kodak 技术资料把三者列为取得良好影调（阴影细节）的第一推荐。"
+    },
+    {
+     "q": "Push 时应使用哪一类显影液状态？",
+     "type": "single",
+     "options": [
+      "重复使用的显影液",
+      "新鲜配好的工作液",
+      "回收的旧药",
+      "加缓冲液的回收液"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "副产物在 push 的长显影中加速灰雾，新鲜液一致性最好。"
+    }
+   ],
+   "updated": "2026-01-12",
+   "status": "reviewed"
+  }
+ ]
+}

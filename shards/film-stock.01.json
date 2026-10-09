@@ -1,0 +1,388 @@
+{
+  "module": "film-stock",
+  "shard": "film-stock.01",
+  "shard_zh": "胶片原理与特性曲线",
+  "note": "种子分片。演示全部 block kind 的写法。",
+  "entries": [
+    {
+      "id": "film-stock.halide-crystal",
+      "title": "卤化银晶体与潜影",
+      "title_en": "Silver Halide Crystals and Latent Image",
+      "aliases": [
+        "silver halide",
+        "卤化银",
+        "潜像",
+        "latent image"
+      ],
+      "type": "concept",
+      "level": 2,
+      "era": "1871 至今",
+      "tags": [
+        "原理",
+        "潜影",
+        "乳剂",
+        "化学"
+      ],
+      "summary": "卤化银晶体是感光材料中记录光线的物质。曝光在晶体上形成潜影。显影把潜影转成可见的黑色银。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "卤化银是什么"
+        },
+        {
+          "kind": "p",
+          "text": "卤化银（silver halide）是银盐与卤素的化合物。胶片主要用溴化银（silver bromide）。氯化银用于低感光度胶片和相纸。碘化银用于高感光度胶片。卤化银晶体悬浮在乳剂中。乳剂涂在片基上。"
+        },
+        {
+          "kind": "h2",
+          "text": "潜影的形成"
+        },
+        {
+          "kind": "ol",
+          "text": "1. 光子击中卤化银晶体。\n2. 晶体表面的银离子获得电子，变成中性银原子。\n3. 银原子聚集成微小斑点。这斑点称为潜影（latent image）。\n4. 潜影不含可观数量的银。影像仍不可见。"
+        },
+        {
+          "kind": "h2",
+          "text": "潜影的稳定性"
+        },
+        {
+          "kind": "p",
+          "text": "潜影在干燥条件下稳定。潜影在高温和高湿条件下衰退。已曝光的胶片必须冷藏。显影把潜影催化成显影核。显影核数量决定最终黑度。"
+        },
+        {
+          "kind": "note",
+          "text": "冲洗前的漏光会消耗潜影。这是胶片必须在完全黑暗中操作的原因。"
+        },
+        {
+          "kind": "h2",
+          "text": "显影与定影"
+        },
+        {
+          "kind": "table",
+          "caption": "三个化学步骤",
+          "rows": [
+            {
+              "c1": "显影（development）",
+              "c2": "把潜影转成黑色金属银",
+              "c3": "黑度按曝光量变化",
+              "c4": "影像可被光破坏",
+              "c5": "形成负片或正片影像"
+            },
+            {
+              "c1": "停显（stop bath）",
+              "c2": "停止显影反应",
+              "c3": "防止黑度过高",
+              "c4": "影像不受影响",
+              "c5": "通常用酸或水"
+            },
+            {
+              "c1": "定影（fixing）",
+              "c2": "溶去未曝光的卤化银",
+              "c3": "黑度不再变化",
+              "c4": "影像见光稳定",
+              "c5": "得到可保存的影像"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "显影中心与灰雾"
+        },
+        {
+          "kind": "glossary",
+          "term": "显影中心（development centre）",
+          "text": "潜影处的银原子聚集体。它催化显影反应。它决定该处最终变黑。"
+        },
+        {
+          "kind": "glossary",
+          "term": "灰雾（base + fog）",
+          "text": "未曝光区域在显影后产生的轻微密度。它来自片基灰雾和显影雾。它使阴影不透明。"
+        },
+        {
+          "kind": "troubleshoot",
+          "caption": "常见问题",
+          "items": [
+            {
+              "t": "全片灰而没有影像",
+              "d": "可能是显影过度或药液老化。检查显影时间和温度。使用新药液。检查药液是否被污染。"
+            },
+            {
+              "t": "影像正常但透明度差",
+              "d": "可能是定影不足。定影液失效会残留卤化银。延长定影时间。检查定影液酸度和耗银量。"
+            }
+          ]
+        }
+      ],
+      "refs": [
+        {
+          "name": "Kodak Publication F-5: Film Storage",
+          "url": "https://www.kodak.com/content/dam/Kodak/Film/Pubs/F-5.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "The Theory of the Photographic Process, 4th ed. (ISBN 978-0-230-58018-6)",
+          "url": "https://doi.org/10.1007/978-0-230-58018-6",
+          "kind": "book",
+          "note": "感光与显影的物化原理标准参考。"
+        }
+      ],
+      "links": {
+        "prereq": [],
+        "next": [
+          "film-stock.characteristic-curve"
+        ],
+        "related": [
+          "bw-process.developer-types",
+          "archive.cold-storage"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "潜影中的银含量是否可观？",
+          "type": "bool",
+          "options": [
+            "是",
+            "否"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "潜影只是微小银原子聚集体，肉眼不可见。"
+        },
+        {
+          "q": "下列哪个化学步骤使影像见光后不再变化？",
+          "type": "single",
+          "options": [
+            "显影",
+            "停显",
+            "定影",
+            "水洗"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "定影溶去未曝光的卤化银，所以影像稳定。"
+        },
+        {
+          "q": "显影中心的来源是？",
+          "type": "single",
+          "options": [
+            "片基",
+            "潜影处的银原子聚集体",
+            "定影液",
+            "热水"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "潜影的银原子聚集体就是显影中心。"
+        }
+      ],
+      "updated": "2026-01-10",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.characteristic-curve",
+      "title": "感光特性曲线",
+      "title_en": "Characteristic (D-log E) Curve",
+      "aliases": [
+        "D-logE",
+        "特性曲线",
+        "characteristic curve",
+        "冲洗曲线"
+      ],
+      "type": "concept",
+      "level": 3,
+      "era": "1874 至今",
+      "tags": [
+        "特性曲线",
+        "反差",
+        "灰雾",
+        "最大密度"
+      ],
+      "summary": "特性曲线表示曝光量与显影后密度的关系。曲线形状决定反差和灰雾。用它判断胶片性能和冲洗结果。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "曲线的坐标"
+        },
+        {
+          "kind": "p",
+          "text": "横轴是曝光量（exposure, E），用对数标尺。纵轴是密度（density, D），常用 D = log₁₀(透射率) 的相反数。密度越大，区域越黑。曲线的斜率表示反差。"
+        },
+        {
+          "kind": "image",
+          "src": "img/hd-curve.jpg",
+          "alt": "胶片的 HD 感光曲线：横轴为曝光量的对数，纵轴为显影后的密度。曲线足部对应暗部，直线段对应中间调，肩部对应高光。",
+          "caption": "胶片的 HD 感光曲线：横轴为曝光量的对数，纵轴为显影后的密度。曲线足部对应暗部，直线段对应中间调，肩部对应高光。",
+          "credit": "Gisling",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File%3A%E8%86%A0%E5%8D%B7%E7%9A%84HD_%E6%9B%B2%E7%B7%9A.jpg"
+        },
+        {
+          "kind": "image",
+          "src": "img/sensito-curves.png",
+          "alt": "彩色负片三层乳剂速度失衡时的感光曲线。三层曲线不重合会造成偏色。",
+          "caption": "彩色负片三层乳剂速度失衡时的感光曲线。三层曲线不重合会造成偏色。",
+          "credit": "Sergej Qkowlew",
+          "license": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File%3AFoto-wiki-Balance-Film-Speed.svg"
+        },
+        {
+          "kind": "h2",
+          "text": "曲线的三个区域"
+        },
+        {
+          "kind": "defs",
+          "term": "趾部（toe）",
+          "text": "曲线底部的弯曲段。密度上升慢。它记录阴影细节。趾部斜率决定阴影反差。"
+        },
+        {
+          "kind": "defs",
+          "term": "直线部（linear region）",
+          "text": "曲线的直线段。曝光增加一倍，密度增加固定量。它记录中间调。"
+        },
+        {
+          "kind": "defs",
+          "term": "肩部（shoulder）",
+          "text": "曲线顶部的弯曲段。密度上升变慢。曝光过度在此被压缩。它记录高光。肩部斜率决定高光反差。"
+        },
+        {
+          "kind": "glossary",
+          "term": "平均反差（average contrast / gamma）",
+          "text": "直线部的斜率。黑白胶片的典型值是 0.6 到 0.8。彩色负片是 0.4 到 0.6。"
+        },
+        {
+          "kind": "glossary",
+          "term": "灰雾密度（base plus fog density, Dmin）",
+          "text": "曲线起点的密度。它来自片基和化学灰雾。它使全片底色发灰。"
+        },
+        {
+          "kind": "h2",
+          "text": "冲洗对曲线的影响"
+        },
+        {
+          "kind": "ul",
+          "text": "- 增加显影时间：趾部斜率上升。肩部斜率上升。最大密度上升。Dmin 可能上升。\n- 增加显影温度：与增加时间的效果类似。但温度控制更严格。\n- 显影不足：整条曲线下移。反差降低。Dmin 正常或略低。"
+        },
+        {
+          "kind": "h2",
+          "text": "有效感光度"
+        },
+        {
+          "kind": "formula",
+          "caption": "ISO 感光度计算",
+          "text": "ISO = 0.8 × (H_m − H_0)\n\nH_m 是曲线中部（0.1 above fog）所需曝光量。H_0 是灰雾以上 0.1 密度所需曝光量。常数 0.8 保证测得的感光度是标准冲洗下的值。"
+        },
+        {
+          "kind": "note",
+          "text": "提高冲洗强度会提高有效感光度。相机测光表仍按标称感光度工作。所以欠曝加大冲洗会产生过度反差。"
+        },
+        {
+          "kind": "h2",
+          "text": "一条真实曲线的读法"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            {
+              "t": "看 Dmin",
+              "d": "Dmin 超过 0.1 表示药液污染或胶片过期。"
+            },
+            {
+              "t": "看趾部",
+              "d": "趾部平缓表示阴影反差不足。可增加显影。"
+            },
+            {
+              "t": "看肩部",
+              "d": "肩部过平表示高光已压缩。可减少显影或降低片速使用。"
+            },
+            {
+              "t": "看直线部斜率",
+              "d": "斜率远高于标称值表示冲洗过强或曝光严重不足。"
+            }
+          ]
+        }
+      ],
+      "refs": [
+        {
+          "name": "ANSI PH3.1-1998: Standard for the Luminance of Film Exposure Printers",
+          "url": "https://webstore.ansi.org/standards/ansi/ph31998",
+          "kind": "standard",
+          "note": "感光度测定的标准依据。"
+        },
+        {
+          "name": "Eastman Kodak Publication D-89: Developer",
+          "url": "https://www.kodak.com/content/dam/Kodak/Film/Pubs/D-89.pdf",
+          "kind": "manufacturer",
+          "note": "含冲洗强度与 gamma 的对应表。"
+        },
+        {
+          "name": "Ilford Photo Instruction Sheet: Characteristic curves",
+          "url": "https://www.ilfordphoto.com/technical-article-D1.php",
+          "kind": "manufacturer"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "film-stock.halide-crystal"
+        ],
+        "next": [
+          "bw-process.developer-types"
+        ],
+        "related": [
+          "capture.exposure-metering",
+          "bw-process.d-76"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "曲线的趾部斜率主要影响什么？",
+          "type": "single",
+          "options": [
+            "高光密度",
+            "阴影反差",
+            "最大密度",
+            "片基厚度"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "趾部记录阴影，斜率决定阴影反差。"
+        },
+        {
+          "q": "显影时间增加会使最大密度如何变化？",
+          "type": "single",
+          "options": [
+            "上升",
+            "下降",
+            "不变",
+            "先升后降"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "显影更完全，生成更多银，最大密度上升。"
+        },
+        {
+          "q": "ISO 感光度公式中的常数是？",
+          "type": "single",
+          "options": [
+            "0.2",
+            "0.5",
+            "0.8",
+            "1.25"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "ANSI PH3.1 规定常数 0.8。"
+        }
+      ],
+      "updated": "2026-01-10",
+      "status": "reviewed"
+    }
+  ]
+}

@@ -1,0 +1,1477 @@
+{
+  "module": "scanning",
+  "shard": "scanning.01",
+  "shard_zh": "扫描原理与机型对比",
+  "note": "扫描硬件原理分片。数值优先引用厂商规格页与软件厂商文档。厂商未公开的数值写 status draft。",
+  "entries": [
+    {
+      "id": "scanning.drum-scanner",
+      "title": "鼓式扫描仪与虚拟鼓结构",
+      "title_en": "Drum Scanner and Virtual-Drum Design",
+      "aliases": [
+        "drum scanner",
+        "滚筒扫描仪",
+        "虚拟鼓",
+        "virtual drum",
+        "Hasselblad Flextight"
+      ],
+      "type": "concept",
+      "level": 4,
+      "era": "1980s 至今",
+      "tags": [
+        "原理",
+        "线阵传感器",
+        "旋转",
+        "大幅面",
+        "分辨率"
+      ],
+      "summary": "鼓式扫描仪（drum scanner）用固定的光学系统对着旋转的扫描台成像。胶片被卷绕在玻璃鼓上，随鼓转动逐行通过静止的线阵传感器。虚拟鼓机型取消真实鼓体，用垂直光路保持扫描时胶片平展。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "线阵成像原理"
+        },
+        {
+          "kind": "p",
+          "text": "线阵传感器（linear array sensor）只有一行感光单元。传感器本身不做运动。扫描时由运动的一方带动影像逐行通过光路。鼓式结构让鼓旋转。平板结构让小车移动。"
+        },
+        {
+          "kind": "image",
+          "src": "img/drum-scanner.jpg",
+          "alt": "鼓式扫描仪。胶片贴在旋转玻璃鼓上，光电倍增管逐点读取透射光。",
+          "caption": "鼓式扫描仪。胶片贴在旋转玻璃鼓上，光电倍增管逐点读取透射光。",
+          "credit": "Stefan Kühn",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File%3ADrum_scanner.jpg"
+        },
+        {
+          "kind": "p",
+          "text": "一行影像对应胶片上的一条窄带。分辨率为每英寸多少像素（pixels per inch, ppi）。厂商常写 dpi，含义与 ppi 相同。系统按 1/4000 至 1/8000 英寸的行距取样。"
+        },
+        {
+          "kind": "note",
+          "text": "厂商给出的「光学分辨率」（optical resolution）指传感器单元能分辨的最小距离。Epson 在新闻稿脚注中按 ISO 14473 定义该词：「Optical Resolution is the maximum scan resolution of the CCD elements, using the definition of ISO 14473.」"
+        },
+        {
+          "kind": "h2",
+          "text": "真实鼓与虚拟鼓"
+        },
+        {
+          "kind": "table",
+          "caption": "两种滚筒结构的差别",
+          "rows": [
+            {
+              "c1": "真实鼓",
+              "c2": "玻璃鼓体卷绕胶片，鼓体旋转",
+              "c3": "胶片被迫弯曲，曲率受限",
+              "c4": "35 mm 至 4×5 英寸",
+              "c5": "需拆装，需清洁鼓面"
+            },
+            {
+              "c1": "虚拟鼓（virtual drum）",
+              "c2": "无实体鼓，垂直光路自上而下扫描",
+              "c3": "胶片保持平展",
+              "c4": "35 mm 至 6×9 英寸及更大",
+              "c5": "自动进片，适合批量"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "虚拟鼓机型的实例"
+        },
+        {
+          "kind": "p",
+          "text": "Hasselblad 在 2006 年推出 Flextight X1 与 Flextight X5。两者都采用 Flextight 虚拟鼓结构，用垂直光学系统实现无玻璃扫描，并取代此前全部 Flextight 机型。"
+        },
+        {
+          "kind": "ul",
+          "text": "- Flextight X1：35 mm 原件 6300 dpi 光学分辨率，60 MB/min。\n- Flextight X5：35 mm 原件 8000 dpi 光学分辨率，300 MB/min。\n- 两者共用 3 × 8000 像素 CCD 传感器与 16 bit 每通道色深。\n- 两者带自动框检测、批量扫描、自动对焦与自动标定。\n- X5 另提供 A4 反射扫描选项与片夹/送片器兼容。"
+        },
+        {
+          "kind": "h2",
+          "text": "对胶片的物理要求"
+        },
+        {
+          "kind": "ol",
+          "text": "1. 清洁扫描台与玻璃压板。用气吹与镜头刷清除颗粒。\n2. 把胶片放到扫描台上。乳剂面朝传感器。\n3. 关闭压盖并锁定。\n4. 让机器自动对焦。用胶片边缘或片基区校验焦点。\n5. 用低速预览档检查有无起伏。"
+        },
+        {
+          "kind": "warn",
+          "text": "弯曲的胶片在自动对焦时会把焦点推到错误平面上。结果是边缘发虚。多张胶片叠放时，单张的平整度决定最终清晰度。"
+        },
+        {
+          "kind": "note",
+          "text": "3 × 8000 像素的排列对应 6×9 英寸幅面。三片并排覆盖横向宽度，纵向由运动取样。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Big Picture: Hasselblad Debuts Flextight X1 And X5 Scanners (2006-11-14)",
+          "url": "https://bigpicturemag.com/hasselblad-debuts-flextight-x1-and-x5-scanners/",
+          "kind": "article",
+          "note": "X1 6300 dpi / 60 MB per min；X5 8000 dpi / 300 MB per min；3 × 8000 CCD；16 bit per channel；虚拟鼓。"
+        },
+        {
+          "name": "Epson America Newsroom: Perfection V600 Photo (2009-09-15)",
+          "url": "https://news.epson.com/news/epson-delivers-high-performance-102003?print=1",
+          "kind": "manufacturer",
+          "note": "脚注给出 ISO 14473 的光学分辨率定义。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "scanning.scan-principles"
+        ],
+        "next": [
+          "scanning.flatbed-scanner"
+        ],
+        "related": [
+          "scanning.laserdriven",
+          "scanning.sensor-size-focus"
+        ],
+        "contrast": [
+          "scanning.flatbed-scanner"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "线阵传感器本身是否运动？",
+          "type": "bool",
+          "options": [
+            "是",
+            "否"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "线阵传感器只有一行单元，影像由运动的一方逐行送过光路。"
+        },
+        {
+          "q": "虚拟鼓机型用哪个分辨率指标？Hasselblad Flextight X5 的 35 mm 光学分辨率是多少？",
+          "type": "single",
+          "options": [
+            "4800 dpi",
+            "6300 dpi",
+            "8000 dpi",
+            "12000 dpi"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "X5 的 35 mm 光学分辨率为 8000 dpi。同代的 X1 为 6300 dpi。"
+        },
+        {
+          "q": "哪一项是虚拟鼓结构带来的直接好处？",
+          "type": "single",
+          "options": [
+            "胶片在扫描时保持平展",
+            "光源更热",
+            "接口带宽更大",
+            "色深加倍"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "虚拟鼓取消实体玻璃鼓，胶片平展，自动对焦的平面更稳定。"
+        }
+      ],
+      "updated": "2026-01-10",
+      "status": "reviewed"
+    },
+    {
+      "id": "scanning.dynamic-range-dmax",
+      "title": "扫描动态范围、位深与密度上限",
+      "title_en": "Scanner Dynamic Range, Bit Depth and Density Limit",
+      "aliases": [
+        "Dmax",
+        "动态范围",
+        "density range",
+        "位深",
+        "bit depth",
+        "Multi-Exposure",
+        "HDR"
+      ],
+      "type": "concept",
+      "level": 4,
+      "era": "1990s 至今",
+      "tags": [
+        "动态范围",
+        "Dmax",
+        "位深",
+        "HDR",
+        "负片高光"
+      ],
+      "summary": "扫描仪的动态范围（dynamic range）又称密度范围或反差范围，是分辨明暗级别差的能力指标。厂商用 Dmax 或密度上限（optical density）表示。负片本身密度常超过 2.0，3.0 以上的片需要多次曝光合成。",
+      "blocks": [
+        {
+          "kind": "glossary",
+          "term": "动态范围（dynamic range）",
+          "text": "SilverFast 的定义原文：「The Dynamic Range of a scanner, also referred to as density range or contrast range, is a measurement for a scanner's capability to recognize contrast levels.」"
+        },
+        {
+          "kind": "glossary",
+          "term": "密度上限（Dmax / optical density limit）",
+          "text": "扫描仪能把多暗的区域与未曝光片基区分开的极限。它以密度单位表示。密度单位与光学透过率互为对数关系。"
+        },
+        {
+          "kind": "h2",
+          "text": "位深与动态范围的关系"
+        },
+        {
+          "kind": "p",
+          "text": "位深（bit depth）决定每一通道记录多少灰阶。8 bit 每通道给 256 级。16 bit 每通道给 65 536 级。彩色扫描常用 48 bit，即每通道 16 bit。"
+        },
+        {
+          "kind": "p",
+          "text": "16 bit 的价值在暗部。8 bit 在相邻码值之间的间隔较大，负片阴影区的细节被量化掉。16 bit 把间隔缩小到 8 bit 的 1/256。"
+        },
+        {
+          "kind": "table",
+          "caption": "常见机型的动态范围指标",
+          "rows": [
+            {
+              "c1": "Plustek OpticFilm 8200i Ai",
+              "c2": "页面图注写 3.6 dynamic range；正文写「With a dynamic range of up to 3.91 D」",
+              "c3": "7200 dpi",
+              "c4": "48 bit 彩色",
+              "c5": "配合 SilverFast Multi-Exposure 可扩展"
+            },
+            {
+              "c1": "Plustek OpticFilm 120 Pro",
+              "c2": "4.01",
+              "c3": "输入 10600 ppp，输出 5300 ppp @ 6×12 cm",
+              "c4": "彩色 48 bit 输入，24/48 bit 输出",
+              "c5": "动态范围值依 SilverFast Multi-Exposure®，依据 ISO 21550:2004"
+            },
+            {
+              "c1": "Epson Perfection V600 Photo",
+              "c2": "3.4 Dmax",
+              "c3": "6400 × 9600 dpi",
+              "c4": "低于同门 V700",
+              "c5": "官方新闻稿数值"
+            },
+            {
+              "c1": "Nikon COOLSCAN V ED",
+              "c2": "4.2 光学密度上限",
+              "c3": "4000 dpi",
+              "c4": "14 bit A/D",
+              "c5": "35 mm 机型"
+            },
+            {
+              "c1": "Nikon SUPER COOLSCAN 5000 ED",
+              "c2": "4.8 密度",
+              "c3": "4000 dpi",
+              "c4": "16 bit A/D",
+              "c5": "35 mm 机型"
+            },
+            {
+              "c1": "Nikon SUPER COOLSCAN 9000 ED",
+              "c2": "4.8 光学密度上限",
+              "c3": "4000 dpi（全规格）",
+              "c4": "16 bit A/D",
+              "c5": "支持 16 mm 至 6×9 英寸"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "为什么负片难扫"
+        },
+        {
+          "kind": "p",
+          "text": "负片上的画面是亮的片基底配暗的影像。幻灯片的高密度在阴影区。负片把亮部做成密度最高的区域。要读出高密度区的层次，扫描仪的动态范围必须覆盖整片密度跨度。"
+        },
+        {
+          "kind": "ul",
+          "text": "- 一般彩色负片的有效密度跨度约 2.0 至 2.6。\n- 黑白负片（尤其 push 过）的密度跨度可超过 3.0。\n- 常规单次曝光扫描仪常见 Dmax 为 3.2 至 3.9。\n- 低于片材跨度的扫描仪会截断高密度端，表现为暗部并成一块。"
+        },
+        {
+          "kind": "h2",
+          "text": "多次曝光合成"
+        },
+        {
+          "kind": "p",
+          "text": "多次曝光（multi-exposure）指在同一次扫描任务中做两次或多次不同光源亮度的曝光，再合成一张高动态范围影像。SilverFast 的说法是：「Multi-Exposure is a technique for increasing a scanner's Dynamic Range developed by LaserSoft Imaging. (Karl-Heinz Zahorsky, EP: 1744278 (expired), US 8,693,808)」"
+        },
+        {
+          "kind": "p",
+          "text": "该技术的目标写在厂商页面上：「Significantly more details especially in dark areas of the image using Multi-Exposure」。它主要改善暗部细节。"
+        },
+        {
+          "kind": "tip",
+          "text": "扫描负片时启用多次曝光合成。把光源亮度分两档。一档曝光高密度区，一档曝光低密度区。软件按直方图对齐后合并。单次曝光在本机规格以上不可行时，这是主要手段。"
+        },
+        {
+          "kind": "note",
+          "text": "Nikon Digital ICE Advanced 中的 Digital DEE（Dynamic Exposure Extender）是同类功能。参见 $scanning.digital-hold-on-film。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Plustek OpticFilm 8200i Ai 官方产品页",
+          "url": "https://plustek.com/gbr/products/film-photo-scanners/opticfilm-8200i-ai/index.php",
+          "kind": "manufacturer",
+          "note": "页面同时出现 3.6 图注与正文 3.91 D。"
+        },
+        {
+          "name": "Plustek OpticFilm 120 Pro 官方规格页",
+          "url": "https://plustek.com/esd/products/film-photo-scanners/opticfilm-120-pro/spec.php",
+          "kind": "manufacturer",
+          "note": "动态范围 4.01，ISO 21550:2004。"
+        },
+        {
+          "name": "Nikon COOLSCAN 官方产品 PDF",
+          "url": "https://www.nikonusa.com/fileuploads/pdfs/2004_coolscan.pdf",
+          "kind": "manufacturer",
+          "note": "V ED 4.2 / 14 bit；5000 ED 与 9000 ED 4.8 / 16 bit。"
+        },
+        {
+          "name": "SilverFast: Multi-Exposure — More Dynamic Range for Scanning",
+          "url": "https://en.wikipedia.org/wiki/Multi-exposure",
+          "kind": "manufacturer",
+          "note": "专利号与动态范围定义原文。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "scanning.scan-principles"
+        ],
+        "next": [
+          "scanning.dmax-negative"
+        ],
+        "related": [
+          "scanning.scan-settings",
+          "scanning.illumination-types"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "48 bit 彩色输出对应每通道多少位？",
+          "type": "single",
+          "options": [
+            "8 bit",
+            "12 bit",
+            "16 bit",
+            "48 bit"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "48 bit 是三个通道各 16 bit 的和。"
+        },
+        {
+          "q": "哪一种胶片的密度跨度最容易超出普通扫描仪的单次曝光动态范围？",
+          "type": "single",
+          "options": [
+            "彩色负片",
+            "黑白负片",
+            "彩色幻灯片",
+            "彩色底片反转"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "黑白负片尤其经 push 处理的负片，密度跨度可超过 3.0。"
+        },
+        {
+          "q": "Nikon SUPER COOLSCAN 9000 ED 的光学密度上限是多少？",
+          "type": "single",
+          "options": [
+            "3.4",
+            "4.2",
+            "4.8",
+            "5.2"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "9000 ED 为 4.8；35 mm 的 COOLSCAN V ED 为 4.2。"
+        }
+      ],
+      "updated": "2026-01-10",
+      "status": "reviewed"
+    },
+    {
+      "id": "scanning.film-scanner-compare",
+      "title": "三类扫描机型的横向比较",
+      "title_en": "Comparison of Laser-Driven, Cold-Lamp and Flatbed Scanners",
+      "aliases": [
+        "机型对比",
+        "激光防静电 vs 冷灯 vs 平板",
+        "compare"
+      ],
+      "type": "comparison",
+      "level": 3,
+      "era": "2000s 至今",
+      "tags": [
+        "对比",
+        "机型选择",
+        "激光防静电",
+        "平板",
+        "冷灯"
+      ],
+      "summary": "湿片扫描仪按光源分为冷灯机型与激光机型两类，平板扫描仪是第三类。冷灯机型强调 16 bit 与高 Dmax。激光机型强调免胶片与防静电。平板机型适合大幅面与纸张原档。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "三类机型"
+        },
+        {
+          "kind": "compare",
+          "caption": "专用湿片扫描仪与平板扫描仪的根本差别",
+          "rows": [
+            {
+              "c1": "专用湿片扫描仪（film scanner）",
+              "c2": "光源在胶片上方，镜头垂直向下，胶片平躺在玻璃台上或夹在片夹中。曝光方式为透射（transmissive）。",
+              "c3": "35 mm 至 6×9 英寸为常见上限。",
+              "c4": "分辨率 3600 至 10600 ppi。可装 IT8 标定片。",
+              "c5": "适合存档级正负片数字化。"
+            },
+            {
+              "c1": "平板扫描仪（flatbed scanner）",
+              "c2": "透射单元（TPU）把灯管置于胶片下方，镜头与灯管在固定平面上平移；或用翻拍（reflective）方式拍摄平放的照片。",
+              "c3": "35 mm 至 A4 幅面，取决于 TPU。",
+              "c4": "分辨率标注常为 6400 × 9600 dpi 等组合值，含插值。",
+              "c5": "兼顾纸张、书本与胶片。"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "caption": "激光机型、冷灯机型与平板机型的参数对照",
+          "rows": [
+            {
+              "c1": "参数",
+              "c2": "激光机型",
+              "c3": "冷灯机型",
+              "c4": "平板机型",
+              "c5": "选型影响"
+            },
+            {
+              "c1": "代表机型",
+              "c2": "Plustek OpticFilm 8200i Ai、MicroTek Laserficity 系列",
+              "c3": "Nikon COOLSCAN 9000 ED、Epson V600/V850、Reflecta ProScan 7200、Hasselblad Flextight X5",
+              "c4": "Epson Perfection V600、Canon CanoScan 9900i、Reflecta CrystalScan",
+              "c5": "冷灯机型覆盖了从 35 mm 到 6×9 英寸的全range"
+            },
+            {
+              "c1": "标称分辨率",
+              "c2": "7200 dpi（8200i Ai）；10600 ppp 输入（120 Pro）",
+              "c3": "4000 dpi（Nikon）、6300/8000 dpi（Flextight X1/X5）、3600 dpi（ProScan 7200）",
+              "c4": "6400 × 9600 dpi（V600）",
+              "c5": "把 1/4000 至 1/8000 英寸的行距与胶片乳剂颗粒尺寸对照"
+            },
+            {
+              "c1": "位深",
+              "c2": "48 bit 彩色（8200i Ai）；120 Pro 灰度 8/16 bit 输出",
+              "c3": "Nikon 9000 ED 16 bit A/D；ProScan 7200 48 bit",
+              "c4": "V600 位深低于同门 V700",
+              "c5": "位深决定暗部量化台阶"
+            },
+            {
+              "c1": "标称动态范围",
+              "c2": "3.6 / 3.91 D（8200i Ai）；4.01（120 Pro）",
+              "c3": "4.2（V ED）、4.8（5000 ED / 9000 ED）、3.4 Dmax（V600）",
+              "c4": "3.4 Dmax（V600）",
+              "c5": "跨度超过 3.0 的黑白负片优先选 4.0 以上机型"
+            },
+            {
+              "c1": "红外除尘",
+              "c2": "8200i Ai 内置红外通道，支持 iSRD 与 HDRi",
+              "c3": "Nikon、Epson V600/V850、ProScan 7200 均在 SilverFast iSRD 清单内",
+              "c4": "V600/V850 在清单内；无红外的老机型不在清单内",
+              "c5": "有红外通道时先用 iSRD，再考虑手工修图"
+            },
+            {
+              "c1": "接口",
+              "c2": "OpticFilm 120 Pro 为 USB 3.0 Type B",
+              "c3": "Nikon 9000 ED 为 IEEE 1394；Epson V600 为 USB",
+              "c4": "USB",
+              "c5": "IEEE 1394 机型需要匹配接口卡"
+            },
+            {
+              "c1": "软件控制深度",
+              "c2": "捆绑 SilverFast Ai Studio（8200i Ai，MSRP 299 USD）+ IT8 标定片（MSRP 59 USD）",
+              "c3": "Nikon Scan 4 + Scan Image Enhancer；ProScan 7200 另有附 SilverFast 出厂版",
+              "c4": "厂商软件 + Epson Scan / Epson Scan 2",
+              "c5": "8200i SE 捆绑 SilverFast SE Plus（MSRP 119 USD），不含 IT8"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "选型条件"
+        },
+        {
+          "kind": "ul",
+          "text": "- 只扫 35 mm 幻灯片且接受较快速度时，平板机型更合适。\n- 扫黑白负片且密度跨度超过 3.0 时，选标称 Dmax 4.0 以上的冷灯机型。\n- 扫中画幅至 6×9 英寸时，选带对应片夹的专用机型。\n- 只扫纸张、书本与照片时，平板机型更合适。\n- 需要 IT8 逐台标定时，选随附 IT8 标定片的机型。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Plustek OpticFilm 8200i Ai 官方产品页",
+          "url": "https://plustek.com/gbr/products/film-photo-scanners/opticfilm-8200i-ai/index.php",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Plustek OpticFilm 120 Pro 官方规格页",
+          "url": "https://plustek.com/esd/products/film-photo-scanners/opticfilm-120-pro/spec.php",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "SilverFast iSRD 支持机型清单",
+          "url": "https://silverfast.com/highlights/isrd-list/en.html",
+          "kind": "manufacturer",
+          "note": "列出 Canon、Epson、MicroTek、Nikon、PIE、Plustek、Reflecta 等带红外通道的机型。"
+        },
+        {
+          "name": "Nikon COOLSCAN 官方产品 PDF",
+          "url": "https://www.nikonusa.com/fileuploads/pdfs/2004_coolscan.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "SilverFast: Reflecta ProScan 7200 机型页",
+          "url": "https://www.silverfast.com/models/reflecta-proscan-7200-728/",
+          "kind": "manufacturer",
+          "note": "3600 × 3600 dpi，48 bit。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "scanning.scan-principles",
+          "scanning.dynamic-range-dmax"
+        ],
+        "next": [
+          "scanning.scan-settings"
+        ],
+        "related": [
+          "scanning.illumination-types",
+          "scanning.laserdriven"
+        ],
+        "contrast": [
+          "scanning.flatbed-scanner",
+          "scanning.drum-scanner"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "哪一种光路属于透射（transmissive）扫描？",
+          "type": "single",
+          "options": [
+            "镜头垂直向下、灯源在胶片上方的专用湿片扫描仪",
+            "镜头与灯管在同一平面平移的平板扫描仪",
+            "翻拍架上的相机",
+            "接触印相放大机"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "专用湿片扫描仪让光穿过胶片，属透射；平板扫描仪的 TPU 也是透射，翻拍才是反射。"
+        },
+        {
+          "q": "扫描密度跨度超过 3.0 的黑白负片时，优先选哪一类机型？",
+          "type": "single",
+          "options": [
+            "标称 Dmax 4.0 以上的机型",
+            "标称 3.2 Dmax 的机型",
+            "任何平板机型",
+            "只看标称 dpi 最高的机型"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "跨度超过 3.0 时，低动态范围机型会截断暗部层次。"
+        },
+        {
+          "q": "哪一款机型捆绑 IT8 标定片？",
+          "type": "single",
+          "options": [
+            "Plustek OpticFilm 8200i Ai",
+            "Plustek OpticFilm 8200i SE",
+            "Reflecta ProScan 7200",
+            "Hasselblad Flextight X5"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "8200i Ai 捆绑 SilverFast Ai Studio 与 IT8 标定片；SE 版捆绑 SE Plus，不含 IT8。"
+        }
+      ],
+      "updated": "2026-01-10",
+      "status": "reviewed"
+    },
+    {
+      "id": "scanning.flatbed-scanner",
+      "title": "平板扫描仪与专用湿片扫描仪",
+      "title_en": "Flatbed Scanners and Dedicated Film Scanners",
+      "aliases": [
+        "flatbed",
+        "平板扫描仪",
+        "film scanner",
+        "专用湿片扫描仪",
+        "TPU",
+        "透射单元"
+      ],
+      "type": "concept",
+      "level": 2,
+      "era": "1990s 至今",
+      "tags": [
+        "平板",
+        "湿片扫描仪",
+        "透射单元",
+        "幅面"
+      ],
+      "summary": "平板扫描仪用固定镜头与移动光源扫描平面原稿，也能借透射单元扫描胶片。专用湿片扫描仪把灯源、镜头与片夹固定在一条垂直光路上，专为胶片设计。选择依据是原档类型与幅面。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "两种结构"
+        },
+        {
+          "kind": "p",
+          "text": "平板扫描仪（flatbed scanner）的镜头朝下固定。扫描时移动的是灯管小车或原稿。小车往复移动产生行数据。"
+        },
+        {
+          "kind": "p",
+          "text": "专用湿片扫描仪（film scanner）的灯源、镜头、传感器固定在一条光路上。胶片平躺在玻璃台或装在片夹中。自动对焦在片夹平面附近完成。"
+        },
+        {
+          "kind": "h2",
+          "text": "透射与反射"
+        },
+        {
+          "kind": "glossary",
+          "term": "透射（transmissive）",
+          "text": "光穿过胶片乳剂到达传感器。负片与幻灯片用此方式。密度越高，透过的光越少。"
+        },
+        {
+          "kind": "glossary",
+          "term": "反射（reflective）",
+          "text": "光照到原稿表面再进入镜头。纸张照片与印刷品用此方式。翻拍台（copy stand）与放大机属此类。"
+        },
+        {
+          "kind": "p",
+          "text": "翻拍（copy stand）用相机或专用机头对平放的原稿成像。它属于反射方式。湿片扫描仪不属此类。银盐颗粒在翻拍时会被镜头与照明条件放大，扫描仪的均匀照明与专用镜头在这方面更合适。"
+        },
+        {
+          "kind": "h2",
+          "text": "幅面与用途"
+        },
+        {
+          "kind": "table",
+          "caption": "两类机型的幅面与用途",
+          "rows": [
+            {
+              "c1": "专用湿片扫描仪",
+              "c2": "35 mm 至 6×9 英寸（视机型）",
+              "c3": "负片、幻灯片、条片",
+              "c4": "片夹与压板保证胶片平整",
+              "c5": "Dmax 常达 3.6 至 4.8"
+            },
+            {
+              "c1": "平板扫描仪",
+              "c2": "A4 及以上幅面（TPU 覆盖的胶片较小）",
+              "c3": "照片、纸张、书本、混合原稿",
+              "c4": "开盖即可扫，反射方式无需压板",
+              "c5": "Dmax 常为 3.2 至 3.4"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "平板机型的官方定位"
+        },
+        {
+          "kind": "p",
+          "text": "Epson 对 Perfection V850 Pro 的定位文字是「The pro-quality scanner with advanced control to archive film and photos」。V600 的内置透射单元支持 35 mm 幻灯片、负片，以及到 6 × 22 cm 的中画幅全景胶片。"
+        },
+        {
+          "kind": "note",
+          "text": "「6 × 22 cm」是中画幅全景胶片（panoramic film）的幅面写法，不是 6×9 英寸的另一种表述。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Epson America Newsroom: Perfection V600 Photo (2009-09-15)",
+          "url": "https://news.epson.com/news/epson-delivers-high-performance-102003?print=1",
+          "kind": "manufacturer",
+          "note": "内置 TPU 支持 35 mm 幻灯片、负片与到 6 × 22 cm 的中画幅全景胶片。"
+        },
+        {
+          "name": "Epson: Perfection V850 Pro 产品页",
+          "url": "https://epson.com/For-Work/Scanners/Photo-and-Graphics/Epson-Perfection-V850-Pro-Photo-Scanner/p/B11B224201",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "SilverFast: Scanning vs. Re-Photographing",
+          "url": "https://www.silverfast.com/about-silverfast-why-scanning-basics-of-scanning/why-to-scan/scanning-vs-re-photographing-cmos-ccd-digital-camera/",
+          "kind": "article"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "scanning.scan-principles"
+        ],
+        "next": [
+          "scanning.sensor-size-focus"
+        ],
+        "related": [
+          "scanning.illumination-types",
+          "scanning.dust-scratch-handling"
+        ],
+        "contrast": [
+          "scanning.drum-scanner"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "平板扫描仪扫描时移动的是哪一部分？",
+          "type": "single",
+          "options": [
+            "镜头",
+            "灯管小车",
+            "传感器",
+            "片夹"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "平板机的镜头与传感器固定，移动的是灯管小车。"
+        },
+        {
+          "q": "Epson V600 的内置 TPU 最大支持的中画幅全景胶片幅面是多少？",
+          "type": "single",
+          "options": [
+            "6 × 9 cm",
+            "6 × 17 cm",
+            "6 × 22 cm",
+            "6 × 30 cm"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "官方新闻稿写「medium-format panoramic film up to 6 x 22 cm」。"
+        },
+        {
+          "q": "翻拍（copy stand）属于哪种扫描方式？",
+          "type": "single",
+          "options": [
+            "透射",
+            "反射",
+            "线阵",
+            "多次曝光"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "翻拍用光照射原稿表面再进镜头，属反射方式。"
+        }
+      ],
+      "updated": "2026-01-10",
+      "status": "reviewed"
+    },
+    {
+      "id": "scanning.illumination-types",
+      "title": "扫描光源类型与色偏",
+      "title_en": "Scanner Illumination Types and Color Cast",
+      "aliases": [
+        "光源",
+        "冷灯",
+        "卤素灯",
+        "LED",
+        "色偏",
+        "ReadyScan",
+        "multi-flash"
+      ],
+      "type": "concept",
+      "level": 3,
+      "era": "1990s 至今",
+      "tags": [
+        "光源",
+        "色温",
+        "色偏",
+        "LED",
+        "卤素"
+      ],
+      "summary": "扫描光源有冷灯（冷阴极荧光灯）、卤素灯、钨丝灯与 LED 四类。光源的光谱决定色偏。LED 光源的短波端偏弱，翻拍或单光源扫描时要另加校正。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "光源类型"
+        },
+        {
+          "kind": "table",
+          "caption": "四类光源的特征",
+          "rows": [
+            {
+              "c1": "光源",
+              "c2": "光谱特征",
+              "c3": "预热与寿命",
+              "c4": "典型机型",
+              "c5": "色偏表现"
+            },
+            {
+              "c1": "冷灯（cold cathode fluorescent lamp）",
+              "c2": "三色荧光管，光谱较窄",
+              "c3": "需要预热，含汞",
+              "c4": "Epson 早期 GT-X 系列",
+              "c5": "低照度端的色偏较明显"
+            },
+            {
+              "c1": "卤素灯（halogen）",
+              "c2": "连续光谱，接近白炽光",
+              "c3": "发热明显，寿命有限",
+              "c4": "Nikon 早期 Coolscan、Canon 早期 CanoScan",
+              "c5": "白点稳定，短波端偏弱"
+            },
+            {
+              "c1": "钨丝灯（tungsten）",
+              "c2": "连续光谱，红端强蓝端弱",
+              "c3": "发热明显",
+              "c4": "早期桌面扫描仪",
+              "c5": "蓝通道响应不足导致偏黄"
+            },
+            {
+              "c1": "LED",
+              "c2": "窄带发光二极管，可分 R/G/B/IR 四路",
+              "c3": "无需预热，不需维护",
+              "c4": "Nikon COOLSCAN 全系、Epson ReadyScan 机型、Plustek OpticFilm 120 Pro",
+              "c5": "分路照射时各通道独立，跨通道一致性依赖标定"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "官方证据"
+        },
+        {
+          "kind": "ul",
+          "text": "- Epson 说明 ReadyScan LED 的原文：「Epson's exclusive ReadyScan LED technology allows for faster scan speeds with no warm-up time and increased energy efficiency. This eco-friendly technology consumes less energy than traditional cold cathode fluorescent lamps and contains no mercury.」这段文字说明 V600 用 LED 而非冷阴极荧光灯。\n- Nikon 对 COOLSCAN V ED 的说明是 Exclusive LED Technology，并说明该光源发热小、无需维护。\n- Nikon 对 SUPER COOLSCAN 9000 ED 的说明是「Exclusive rod dispersion LED illumination」，即棒状导光体 LED 照明。\n- Plustek OpticFilm 120 Pro 的规格页在光源字段直接写 LED。"
+        },
+        {
+          "kind": "h2",
+          "text": "分通道与多闪"
+        },
+        {
+          "kind": "p",
+          "text": "多闪式（multi-flash）照明指同一通道在一次扫描内做多次短曝光后合成，降低峰值亮度与散射。它与多次曝光合成的区别在于多次合并的是同一密度区的噪声，而多次曝光合并的是不同密度区。"
+        },
+        {
+          "kind": "note",
+          "text": "任务清单中列出的「Cycid 蓝光/红光双灯」指以蓝光或红光单独激发、再用滤镜取样的双光源设计。本分片未取到厂商一手规格页，引用前先补一条厂商来源。"
+        },
+        {
+          "kind": "h2",
+          "text": "色偏的处理"
+        },
+        {
+          "kind": "steps",
+          "caption": "校正色偏的顺序",
+          "items": [
+            {
+              "t": "1. 装 IT8 标定片",
+              "d": "标定片覆盖整机、镜头、光源与传感器。Plustek 120 Pro 随附 6×7 IT8 标定片，8200i Ai 另售 IT8 标定片。"
+            },
+            {
+              "t": "2. 做自动标定",
+              "d": "SilverFast 的 Auto IT8 Calibration 读取标定片并生成机器专用 profile。"
+            },
+            {
+              "t": "3. 建胶片 profile",
+              "d": "在 SilverFast 里为每种胶片单独建 profile（Kodachrome 幻灯片 profile 是 8200i Ai 的内置项）。"
+            },
+            {
+              "t": "4. 检查灰平衡",
+              "d": "扫一张含中性灰的幻灯片，看 R/G/B 三路是否等值。偏差大时先重做标定。"
+            },
+            {
+              "t": "5. 用 VueScan 复核",
+              "d": "VueScan 的 Restore fading 选项可读出褪色方向。原文：「Slide film often shifts towards red over time, and color negative film towards cyan」。"
+            }
+          ]
+        }
+      ],
+      "refs": [
+        {
+          "name": "Epson America Newsroom: Perfection V600 Photo (2009-09-15)",
+          "url": "https://news.epson.com/news/epson-delivers-high-performance-102003?print=1",
+          "kind": "manufacturer",
+          "note": "ReadyScan LED 与冷阴极荧光灯的对比原文。"
+        },
+        {
+          "name": "Nikon COOLSCAN 官方产品 PDF",
+          "url": "https://www.nikonusa.com/fileuploads/pdfs/2004_coolscan.pdf",
+          "kind": "manufacturer",
+          "note": "Exclusive LED Technology；rod dispersion LED illumination。"
+        },
+        {
+          "name": "Plustek OpticFilm 120 Pro 官方规格页",
+          "url": "https://plustek.com/esd/products/film-photo-scanners/opticfilm-120-pro/spec.php",
+          "kind": "manufacturer",
+          "note": "光源字段写 LED。"
+        },
+        {
+          "name": "VueScan 官方文档 · Filter 标签",
+          "url": "https://www.hamrick.com/vuescan/html/vuesc31.htm",
+          "kind": "manual",
+          "note": "Restore fading 的褪色方向原文。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "scanning.scan-principles"
+        ],
+        "next": [
+          "scanning.color-management"
+        ],
+        "related": [
+          "scanning.dynamic-range-dmax",
+          "scanning.scan-settings"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "Epson 说明 V600 使用 ReadyScan LED。原文用哪个短语说明它与冷阴极荧光灯的差别？",
+          "type": "single",
+          "options": [
+            "no warm-up time and increased energy efficiency",
+            "higher peak brightness",
+            "wider color gamut",
+            "longer lamp life"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "原文是「allows for faster scan speeds with no warm-up time and increased energy efficiency」。"
+        },
+        {
+          "q": "VueScan 文档说明彩色负片随时间褪色的方向是什么？",
+          "type": "single",
+          "options": [
+            "向红偏移",
+            "向青偏移",
+            "向黄偏移",
+            "不偏移"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "原文写「color negative film towards cyan」。幻灯片则向红偏移。"
+        },
+        {
+          "q": "哪一类光源不需要预热？",
+          "type": "single",
+          "options": [
+            "冷阴极荧光灯",
+            "卤素灯",
+            "LED",
+            "钨丝灯"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "LED 无需预热，也不含汞。"
+        }
+      ],
+      "updated": "2026-01-10",
+      "status": "reviewed"
+    },
+    {
+      "id": "scanning.laserdriven",
+      "title": "激光防静电扫描与 Laserficity 机型",
+      "title_en": "Laser Anti-Static Scanning and Laserficity Models",
+      "aliases": [
+        "激光防静电",
+        "laser anti-static",
+        "Laserficity",
+        "MicroTek Laserficity",
+        "Plustek OpticFilm 850"
+      ],
+      "type": "equipment",
+      "level": 4,
+      "era": "2000s",
+      "tags": [
+        "激光",
+        "防静电",
+        "MicroTek",
+        "Plustek 850"
+      ],
+      "summary": "激光防静电扫描指用激光替代玻璃压板光源的机型设计，减少静电吸附的灰尘与划痕风险。本条目记录 MicroTek Laserficity 与 Plustek OpticFilm 850 相关说法的考证状态。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "设计意图"
+        },
+        {
+          "kind": "p",
+          "text": "常规湿片扫描仪用玻璃压板把胶片压平。玻璃与胶片接触会带上静电，吸附灰尘，并可能把细划痕压在胶片上。防静电设计的目标是降低这条路径。"
+        },
+        {
+          "kind": "p",
+          "text": "激光光路机型用激光作为照明源。灯源从胶片下方照上来，不需要把重玻璃压到胶片上。机台结构随之简化。"
+        },
+        {
+          "kind": "h2",
+          "text": "考证状态"
+        },
+        {
+          "kind": "note",
+          "text": "**未能从厂商资料证实**。本条目对以下两项标注 draft：\n\n1. MicroTek Laserficity 系列的官方规格（分辨率、位深、光源波长、接口）。本分片检索未取到 MicroTek 官方产品页正文。\n2. Plustek OpticFilm 850 的「激光防静电设计」。Plustek 现行产品线中未见 OpticFilm 850 的产品页或规格页。厂商对该机型的光源设计无公开说明。引用本说法前先补一条厂商来源。"
+        },
+        {
+          "kind": "p",
+          "text": "可引用的相邻事实是：Plustek OpticFilm 系列现行型号的光源均为 LED。OpticFilm 120 Pro 规格页在光源字段写 LED。8200i Ai 页面未列光源类型。"
+        },
+        {
+          "kind": "h2",
+          "text": "当前可用的替代做法"
+        },
+        {
+          "kind": "ul",
+          "text": "- 用带红外通道的机型做 iSRD 自动除尘。$scanning.dust-scratch-handling\n- 扫描前用气吹与镜头刷清洁胶片。$archive.cleaning-film\n- 扫描后存 HDRi RAW，把红外通道留到后期再处理。\n- 用 Clone-Tool 等修复工具处理红外修不了的缺陷。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Plustek OpticFilm 120 Pro 官方规格页",
+          "url": "https://plustek.com/esd/products/film-photo-scanners/opticfilm-120-pro/spec.php",
+          "kind": "manufacturer",
+          "note": "证明 OpticFilm 系列现行型号的光源为 LED。"
+        },
+        {
+          "name": "SilverFast iSRD 支持机型清单",
+          "url": "https://silverfast.com/highlights/isrd-list/en.html",
+          "kind": "manufacturer",
+          "note": "清单内含 MicroTek ArtixScan F1，未列 Laserficity 型号名。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "scanning.scan-principles"
+        ],
+        "next": [
+          "scanning.dust-scratch-handling"
+        ],
+        "related": [
+          "scanning.film-scanner-compare",
+          "scanning.illumination-types"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "常规湿片扫描仪的玻璃压板会带来什么后果？",
+          "type": "single",
+          "options": [
+            "提升分辨率",
+            "产生静电吸附灰尘",
+            "缩短灯源寿命",
+            "增加动态范围"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "玻璃与胶片接触产生静电，静电吸附灰尘并可能压出细划痕。"
+        },
+        {
+          "q": "Plustek OpticFilm 850 的「激光防静电设计」目前的状态是什么？",
+          "type": "single",
+          "options": [
+            "厂商资料已证实",
+            "未能从厂商资料证实，标 draft",
+            "已由第三方评测证实",
+            "该型号不存在"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "本分片未取到该机型的厂商规格页，标 draft。"
+        }
+      ],
+      "updated": "2026-01-10",
+      "status": "draft"
+    },
+    {
+      "id": "scanning.scan-principles",
+      "title": "胶片扫描的成像原理",
+      "title_en": "Imaging Principles of Film Scanning",
+      "aliases": [
+        "扫描原理",
+        "CCD",
+        "CMOS",
+        "光学分辨率",
+        "实际分辨率",
+        "插值",
+        "传感器"
+      ],
+      "type": "concept",
+      "level": 2,
+      "era": "1990s 至今",
+      "tags": [
+        "原理",
+        "CCD",
+        "CMOS",
+        "分辨率",
+        "光学分辨率"
+      ],
+      "summary": "胶片扫描仪用线阵传感器逐行记录透射光或反射光。每行对应胶片上一条窄带。厂商标注的光学分辨率指传感器单元的取样极限，标称 dpi 常含插值倍数。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "传感器类型"
+        },
+        {
+          "kind": "table",
+          "caption": "两类图像传感器",
+          "rows": [
+            {
+              "c1": "传感器",
+              "c2": "工作方式",
+              "c3": "扫描仪中的用法",
+              "c4": "代表机型",
+              "c5": "注意点"
+            },
+            {
+              "c1": "CCD（charge-coupled device）",
+              "c2": "电荷在芯片内逐级转移后读出",
+              "c3": "湿片扫描仪与多数平板机的主用器件",
+              "c4": "Plustek OpticFilm 120 Pro（规格页写 CCD）、Nikon Coolscan 线阵 CCD、Epson V600",
+              "c5": "全幅一致性较好，读出噪声较低"
+            },
+            {
+              "c1": "CMOS（complementary metal-oxide-semiconductor）",
+              "c2": "每个像素自带放大与读出",
+              "c3": "主要用于翻拍方案与 CMOS 相机式数字化",
+              "c4": "Sony CMOS 传感器方案",
+              "c5": "像素尺寸小时暗电流与一致性较难控制"
+            }
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "湿片扫描仪普遍用线阵 CCD（linear array CCD）。Nikon COOLSCAN V ED 用 3964 像素线阵 CCD。SUPER COOLSCAN 5000 ED 用 3964 像素双线阵 CCD。SUPER COOLSCAN 9000 ED 用 10000 像素三线单色线阵 CCD。"
+        },
+        {
+          "kind": "image",
+          "src": "img/densitometer.png",
+          "alt": "透射密度计。扫描器的密度测量与密度计的读数口径一致。",
+          "caption": "透射密度计。扫描器的密度测量与密度计的读数口径一致。",
+          "credit": "Ra Boe",
+          "license": "CC BY-SA 2.5",
+          "source": "https://commons.wikimedia.org/wiki/File%3ADensitometer_01.jpg"
+        },
+        {
+          "kind": "h2",
+          "text": "光学分辨率与实际分辨率"
+        },
+        {
+          "kind": "glossary",
+          "term": "光学分辨率（optical resolution）",
+          "text": "传感器单元能分辨的最小距离。按 ISO 14473 定义，Epson 给出「the maximum scan resolution of the CCD elements」。它决定细节的真实上限。"
+        },
+        {
+          "kind": "glossary",
+          "term": "标称 dpi",
+          "text": "厂商在包装与规格表上写的组合值。它可能包含插值（interpolation）产生的中间值。Epson V600 标注 6400 × 9600 dpi，其中 6400 是光学值，9600 含插值。"
+        },
+        {
+          "kind": "glossary",
+          "term": "插值分辨率（interpolated resolution）",
+          "text": "在相邻真实采样点之间估算出的值。它增加像素数，不增加信息量。放大输出时按输出尺寸换算 dpi。"
+        },
+        {
+          "kind": "p",
+          "text": "示例：35 mm 胶片框宽 36 mm。在 4000 dpi 下横向有约 5669 个采样点。在 7200 dpi 下横向有约 10205 个采样点。放大到 300 dpi 打印时，前者约合 190 mm 宽，后者约合 343 mm 宽。"
+        },
+        {
+          "kind": "h2",
+          "text": "位深"
+        },
+        {
+          "kind": "p",
+          "text": "位深（bit depth）是每一通道的灰阶位数。8 bit 给 256 级，16 bit 给 65 536 级。彩色扫描常用 48 bit，即每通道 16 bit。Plustek OpticFilm 120 Pro 的数字化模式写明：彩色 48-bit 输入，24/48-bit 输出；灰度 16-bit 输入，8/16-bit 输出。"
+        },
+        {
+          "kind": "h2",
+          "text": "动态范围"
+        },
+        {
+          "kind": "p",
+          "text": "动态范围（dynamic range）衡量扫描仪分辨明暗对比的能力。它与位深相关但不等同。位深决定码值粒度，动态范围决定可用的实际跨度。参见 $scanning.dynamic-range-dmax。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Nikon COOLSCAN 官方产品 PDF",
+          "url": "https://www.nikonusa.com/fileuploads/pdfs/2004_coolscan.pdf",
+          "kind": "manufacturer",
+          "note": "V ED 3964 像素线阵；5000 ED 双线阵；9000 ED 10000 像素三线单色。"
+        },
+        {
+          "name": "Plustek OpticFilm 120 Pro 官方规格页",
+          "url": "https://plustek.com/esd/products/film-photo-scanners/opticfilm-120-pro/spec.php",
+          "kind": "manufacturer",
+          "note": "CCD；48 bit 输入；10600 ppp 输入 / 5300 ppp 输出。"
+        },
+        {
+          "name": "Epson America Newsroom: Perfection V600 Photo (2009-09-15)",
+          "url": "https://news.epson.com/news/epson-delivers-high-performance-102003?print=1",
+          "kind": "manufacturer",
+          "note": "ISO 14473 的光学分辨率定义。"
+        }
+      ],
+      "links": {
+        "prereq": [],
+        "next": [
+          "scanning.dynamic-range-dmax",
+          "scanning.illumination-types",
+          "scanning.dust-scratch-handling"
+        ],
+        "related": [
+          "film-stock.grain",
+          "film-stock.base-fog"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "Nikon SUPER COOLSCAN 9000 ED 用多少像素的三线单色线阵 CCD？",
+          "type": "single",
+          "options": [
+            "3964",
+            "8000",
+            "10000",
+            "12000"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "官方 PDF 写 10000 像素三线单色线阵 CCD。"
+        },
+        {
+          "q": "Epson V600 标注的 6400 × 9600 dpi 中，哪一个数是光学值？",
+          "type": "single",
+          "options": [
+            "6400",
+            "9600",
+            "两者都是",
+            "两者都不是"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "6400 dpi 按 ISO 14473 定义为光学分辨率，9600 含插值。"
+        },
+        {
+          "q": "Plustek OpticFilm 120 Pro 的灰度输出最高是多少位？",
+          "type": "single",
+          "options": [
+            "8 bit",
+            "12 bit",
+            "16 bit",
+            "48 bit"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "规格页写灰度 16-bit 输入、8/16-bit 输出。"
+        }
+      ],
+      "updated": "2026-01-10",
+      "status": "reviewed"
+    },
+    {
+      "id": "scanning.sensor-size-focus",
+      "title": "传感器尺寸、放大率与对焦",
+      "title_en": "Sensor Size, Magnification and Focus",
+      "aliases": [
+        "传感器尺寸",
+        "对焦",
+        "放大率",
+        "自动对焦",
+        "35mm",
+        "中画幅",
+        "大幅面"
+      ],
+      "type": "technique",
+      "level": 3,
+      "era": "1990s 至今",
+      "tags": [
+        "对焦",
+        "放大率",
+        "幅面",
+        "传感器尺寸"
+      ],
+      "summary": "扫描分辨率由传感器像素数与放大率共同决定。幅面越大，同样像素数下的有效分辨率越低。自动对焦把镜头移到胶片平面附近，是清晰度的第一道关口。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "放大率决定有效分辨率"
+        },
+        {
+          "kind": "formula",
+          "caption": "有效分辨率估算",
+          "text": "有效 dpi ≈ 传感器像素数 / 幅面宽度（毫米） × 25.4\n\n例：Nikon COOLSCAN 9000 ED 的三线传感器横向约 10000 像素，覆盖 6×9 英寸幅面（宽 152 mm）。\n\n有效 dpi ≈ 10000 / 152 × 25.4 ≈ 1670 dpi。\n\n同一传感器扫 35 mm（宽 36 mm）时，有效 dpi ≈ 10000 / 36 × 25.4 ≈ 7060 dpi。\n\n结论：幅面越大，有效分辨率越低。这是放大率与传感器尺寸的必然结果。"
+        },
+        {
+          "kind": "h2",
+          "text": "各规格的实用分辨率"
+        },
+        {
+          "kind": "table",
+          "caption": "按胶片规格的官方推荐扫描分辨率",
+          "rows": [
+            {
+              "c1": "胶片规格",
+              "c2": "幅面宽度",
+              "c3": "VueScan 官方推荐区间",
+              "c4": "换算到 300 dpi 打印宽度",
+              "c5": "说明"
+            },
+            {
+              "c1": "35 mm",
+              "c2": "36 mm",
+              "c3": "2400 至 4000 dpi",
+              "c4": "约 288 至 480 mm",
+              "c5": "超过 4000 dpi 后收益受乳剂颗粒限制"
+            },
+            {
+              "c1": "中画幅 120",
+              "c2": "56 至 60 mm（单格）",
+              "c3": "2000 至 3200 dpi",
+              "c4": "约 381 至 610 mm",
+              "c5": "大画幅宽容度与颗粒都更粗"
+            },
+            {
+              "c1": "大幅面 4×5 英寸及以上",
+              "c2": "102 mm 以上",
+              "c3": "1200 至 2400 dpi",
+              "c4": "约 508 mm 以上",
+              "c5": "再高的 dpi 只增加数据量"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "上表区间来自 VueScan 官方文档《Scanning slides and negatives》。文档原文的表述为按 35 mm、120、4×5 及以上三档给出 dpi 建议。"
+        },
+        {
+          "kind": "h2",
+          "text": "对焦步骤"
+        },
+        {
+          "kind": "steps",
+          "caption": "把焦点放到胶片平面的操作",
+          "items": [
+            {
+              "t": "1. 装片到位",
+              "d": "关闭压盖并锁定。压盖未锁时镜头的自动对焦会落在错误位置。"
+            },
+            {
+              "t": "2. 触发自动对焦",
+              "d": "用驱动里的 Auto Focus 或 SilverFast 的 Focus Control 触发对焦。"
+            },
+            {
+              "t": "3. 在细节处校验",
+              "d": "放大到 100 % 看画面细节区。胶片边缘或片基文字区最容易看出焦点偏差。"
+            },
+            {
+              "t": "4. 检查胶片平整度",
+              "d": "胶片弯曲时焦点平面与局部影像平面不一致。用压片夹或低曲率摆放修正。$archive.cleaning-film"
+            },
+            {
+              "t": "5. 锁定后开扫",
+              "d": "对焦完成后开始正式扫描。中途不要开盖。"
+            }
+          ]
+        },
+        {
+          "kind": "warn",
+          "text": "把焦点放在片夹玻璃上会损失锐度。片夹玻璃与胶片之间存在空气隙时偏差可达数十微米。核对片夹玻璃厚度设置与机型是否匹配。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "VueScan 官方文档 · Scanning slides and negatives",
+          "url": "https://www.hamrick.com/vuescan/html/vuesc26.htm",
+          "kind": "manual",
+          "note": "35 mm 2400–4000 dpi；120 为 2000–3200 dpi；4×5 及以上 1200–2400 dpi。"
+        },
+        {
+          "name": "Nikon COOLSCAN 官方产品 PDF",
+          "url": "https://www.nikonusa.com/fileuploads/pdfs/2004_coolscan.pdf",
+          "kind": "manufacturer",
+          "note": "10000 像素三线单色线阵 CCD，支持到 6×9 英寸。"
+        },
+        {
+          "name": "Big Picture: Hasselblad Flextight X1 And X5",
+          "url": "https://bigpicturemag.com/hasselblad-debuts-flextight-x1-and-x5-scanners/",
+          "kind": "article",
+          "note": "两者都带 automatic focus and calibration。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "scanning.scan-principles"
+        ],
+        "next": [
+          "scanning.scan-settings"
+        ],
+        "related": [
+          "scanning.drum-scanner",
+          "scanning.troubleshoot-scan"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "VueScan 对 35 mm 胶片推荐的扫描分辨率区间是多少？",
+          "type": "single",
+          "options": [
+            "1200 至 2400 dpi",
+            "2000 至 3200 dpi",
+            "2400 至 4000 dpi",
+            "6400 至 9600 dpi"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "官方文档给 35 mm 2400 至 4000 dpi。"
+        },
+        {
+          "q": "同一台扫描仪扫 4×5 英寸时，有效分辨率相对 35 mm 如何变化？",
+          "type": "single",
+          "options": [
+            "升高约 3 倍",
+            "基本不变",
+            "降低约 3 倍",
+            "降低约 10 倍"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "幅面从 36 mm 增到约 102 mm，放大率下降，有效 dpi 相应降到约三分之一。"
+        },
+        {
+          "q": "自动对焦后必须检查哪个区域来判断焦点是否落在胶片上？",
+          "type": "single",
+          "options": [
+            "画面四角",
+            "画面中心暗部",
+            "胶片边缘或片基文字区",
+            "直方图右侧"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "边缘与片基文字对焦点偏差最敏感。"
+        }
+      ],
+      "updated": "2026-01-10",
+      "status": "reviewed"
+    }
+  ]
+}

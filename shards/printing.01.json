@@ -1,0 +1,2436 @@
+{
+  "module": "printing",
+  "shard": "printing.01",
+  "shard_zh": "放大机、相纸与曝光测试",
+  "note": "覆盖放大机构造、光源、镜头、相纸类型、纤维基与涂塑对比、可变反差系统与曝光测试。配方与印放流程见 printing.02。",
+  "entries": [
+    {
+      "id": "printing.enlarger",
+      "title": "放大机",
+      "title_en": "Enlarger",
+      "aliases": [
+        "enlarger",
+        "放大机",
+        "投影印相机",
+        "enlarger head"
+      ],
+      "type": "equipment",
+      "level": 2,
+      "era": "1900s 至今",
+      "tags": [
+        "放大",
+        "设备",
+        "暗房"
+      ],
+      "summary": "放大机（enlarger）把负片影像投印到相纸上。它把底片夹、放大镜头和底片台排成一条光轴。放大机决定印相的尺寸、锐度和均匀度。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "放大机做什么"
+        },
+        {
+          "kind": "p",
+          "text": "放大机把负片放在光源和相纸之间。光源发出的光穿过负片。放大镜头在底片台上重新成像。底片台上的相纸接收影像。放大机把负片的小影像转成可观看的大影像。"
+        },
+        {
+          "kind": "image",
+          "src": "img/darkroom-enlarger.png",
+          "alt": "放大机剖视图：升降旋钮、片夹、放大镜头与底板的位置关系。",
+          "caption": "放大机剖视图：升降旋钮、片夹、放大镜头与底板的位置关系。",
+          "credit": "きたし",
+          "license": "CC BY-SA 2.5",
+          "source": "https://commons.wikimedia.org/wiki/File%3ADarkroom_enlarger_en.svg"
+        },
+        {
+          "kind": "p",
+          "text": "放大机只完成曝光。显影、定影和水洗属于印相处理，见 $printing.print-processing。"
+        },
+        {
+          "kind": "h2",
+          "text": "光路顺序"
+        },
+        {
+          "kind": "ol",
+          "text": "1. 灯箱（light box, housing）发出光。光源类型见 $printing.enlarger-light-source。\n2. 光经过聚光镜（condenser）或扩散板（diffusion screen）。\n3. 负片装在底片夹（negative carrier）的玻璃板上。乳剂面朝向相纸。\n4. 负片夹进入镜头下方的镜头板（lens board）。镜头板上开有滤光片插口（filter drawer）。\n5. 放大镜头（enlarger lens, 见 $printing.enlarger-lens）成像。\n6. 影像落在底片台（easel）上的相纸。相纸乳剂面朝上。"
+        },
+        {
+          "kind": "h2",
+          "text": "主要部件"
+        },
+        {
+          "kind": "table",
+          "caption": "放大机部件与作用",
+          "rows": [
+            {
+              "c1": "灯箱",
+              "c2": "light box / housing",
+              "c3": "容纳光源，把光导向下方。",
+              "c4": "通风良好，灯距相纸 ≥1.2 m。",
+              "c5": "温度过高使相纸卷曲，负片乳剂受热增雾。"
+            },
+            {
+              "c1": "聚光镜",
+              "c2": "condenser",
+              "c3": "把光集中到底片平面上。",
+              "c4": "负片放在聚光焦点平面上。",
+              "c5": "位置偏高时印相反差偏硬，见 $printing.enlarger-light-source。"
+            },
+            {
+              "c1": "扩散板",
+              "c2": "diffusion screen",
+              "c3": "把光散成漫射光。",
+              "c4": "与聚光镜互换安装。",
+              "c5": "老化发黄改变曝光量，需重新试印。"
+            },
+            {
+              "c1": "底片夹",
+              "c2": "negative carrier",
+              "c3": "夹住负片并对焦负片的框。",
+              "c4": "用毛刷除尘后再插入。",
+              "c5": "玻璃上的灰尘在印相上形成白色斑点。"
+            },
+            {
+              "c1": "镜头板与滤光抽屉",
+              "c2": "lens board / filter drawer",
+              "c3": "在镜头下方插放反差滤片或减光片。",
+              "c4": "可变反差滤片插在抽屉里，见 $printing.multigrade。",
+              "c5": "滤片脏污降低印相反差并产生污痕。"
+            },
+            {
+              "c1": "放大镜头",
+              "c2": "enlarger lens",
+              "c3": "把负片影像放大成实像。",
+              "c4": "在最佳光圈成像，一般为最大光圈收小 3 档。",
+              "c5": "使用 f/8 以上小光圈时清晰度下降。"
+            },
+            {
+              "c1": "底片台",
+              "c2": "easel / baseboard",
+              "c3": "承托相纸并确定影像尺寸与留白。",
+              "c4": "先定尺寸，再对焦。",
+              "c5": "倾斜底片台可校正建筑透视。"
+            },
+            {
+              "c1": "计时器",
+              "c2": "timer",
+              "c3": "控制曝光秒数。",
+              "c4": "首印之后重复计时同一秒数。",
+              "c5": "秒数漂移导致同一相纸上出现密度差。"
+            }
+          ],
+          "text": "放大机部件与作用"
+        },
+        {
+          "kind": "h2",
+          "text": "结构型式"
+        },
+        {
+          "kind": "compare",
+          "caption": "垂直式与水平式放大机",
+          "rows": [
+            {
+              "c1": "布局",
+              "c2": "灯头在立柱上垂直移动。相纸平放在底座板上。",
+              "c3": "灯头沿水平支架移动。相纸竖放在支柱上。",
+              "c4": "35 mm 至 4×5 底片用垂直式。大画幅与大幅印相用水平式。",
+              "c5": "水平式放大时无梯子造成的振动，成像更稳。"
+            },
+            {
+              "c1": "放大倍率上限",
+              "c2": "受立柱与灯箱高度限制，一般到 10× 至 12×。",
+              "c3": "受支架长度限制，可放大到 20× 以上。",
+              "c4": "倍率超过镜头设计范围时清晰度下降。",
+              "c5": "镜头在 2× 至 10× 范围内成像最好。"
+            }
+          ],
+          "text": "垂直式与水平式放大机"
+        },
+        {
+          "kind": "note",
+          "text": "放大机温度上升会缩短曝光时间。每次印相前检查曝光时间。Ilford 指出冷阴极管灯头与钨丝灯头的曝光时间不同。参见 $printing.enlarger-light-source。"
+        },
+        {
+          "kind": "warn",
+          "text": "放大机灯头发光时不要打开底片夹。关灯后 30 秒再开底片夹，防止余热烤伤负片。"
+        },
+        {
+          "kind": "settings",
+          "caption": "垂直式放大机的通用设置",
+          "items": [
+            {
+              "t": "对焦光圈",
+              "d": "开最大光圈对焦。对焦完成后改到 f/8。"
+            },
+            {
+              "t": "工作光圈",
+              "d": "从最大光圈收小 3 档。f/2.8 镜头的工作值为 f/8。"
+            },
+            {
+              "t": "对焦顺序",
+              "d": "先调灯头高度和底片台导轨定尺寸，再调清晰度。改变尺寸后重新对焦。"
+            },
+            {
+              "t": "曝光基准",
+              "d": "做一次试印条，见 $printing.paper-testing。"
+            },
+            {
+              "t": "放大倍率范围",
+              "d": "把倍率保持在 2× 至 10×。超出范围时清晰度下降。"
+            }
+          ],
+          "text": "垂直式放大机的通用设置"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Wikipedia: Enlarger",
+          "url": "https://en.wikipedia.org/wiki/Enlarger",
+          "kind": "article",
+          "note": "部件清单、Callier 效应、点光源与冷阴极管光型的通识说明。"
+        },
+        {
+          "name": "Ilford Photo: Contrast control for Ilford Multigrade",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/03/Contrast-control-for-Ilford-Multigrade.pdf",
+          "kind": "manufacturer",
+          "note": "第 4 页讨论扩散型与聚光型印相反差差异。"
+        },
+        {
+          "name": "Ilford Photo: MULTIGRADE IV RC Papers Technical Data Sheet",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2021/01/MULTIGRADE-IV-RC-Papers-060619.pdf",
+          "kind": "manufacturer",
+          "note": "相纸对放大光源与滤片的要求。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "bw-process.d-76"
+        ],
+        "next": [
+          "printing.enlarger-light-source",
+          "printing.enlarger-lens"
+        ],
+        "related": [
+          "printing.contact-printing",
+          "process-equipment.home-lab"
+        ],
+        "contrast": [
+          "printing.contact-printing"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "放大机中哪个部件承托相纸并确定影像尺寸？",
+          "type": "single",
+          "options": [
+            "底片夹",
+            "镜头板",
+            "底片台 easel",
+            "聚光镜"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "底片台承托相纸。它的导轨和遮光边框确定影像尺寸与留白。"
+        },
+        {
+          "q": "对焦完成后的工作光圈一般设为多少？",
+          "type": "single",
+          "options": [
+            "最大光圈",
+            "最大光圈收小 3 档，例如 f/2.8 镜头的 f/8",
+            "f/16",
+            "f/22"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "放大镜头在最大光圈收小约 3 档处达到最佳成像。"
+        },
+        {
+          "q": "哪些操作必须在关闭放大机灯源后进行？",
+          "type": "multi",
+          "options": [
+            "打开底片夹",
+            "抽出底片",
+            "把毛刷用于底片表面",
+            "调整计时器秒数"
+          ],
+          "answer": [
+            0,
+            1,
+            2
+          ],
+          "why": "这三项在暗房操作中接触负片与相纸。开灯状态下操作会漏光。"
+        }
+      ],
+      "checklist": [
+        "确认底片夹玻璃干净",
+        "确认底片乳剂面朝向相纸",
+        "先定尺寸后对焦",
+        "对焦后把光圈改到 f/8",
+        "关灯 30 秒后再打开底片夹",
+        "印前检查一次试印条"
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "printing.enlarger-light-source",
+      "title": "放大机光源与滤光系统",
+      "title_en": "Enlarger Light Source and Filter System",
+      "aliases": [
+        "condenser enlarger",
+        "diffusion enlarger",
+        "point-to-point enlarger",
+        "冷光放大机",
+        "冷阴极管灯头",
+        "condenser",
+        "diffusion"
+      ],
+      "type": "concept",
+      "level": 3,
+      "era": "1860s 至今",
+      "tags": [
+        "光源",
+        "放大机",
+        "滤片",
+        "反差"
+      ],
+      "summary": "放大机光源类型决定印相反差、曝光时间和负片受热程度。聚光型印相反差偏硬，扩散型印相反差接近拷贝印相。灯头下方的滤光片或滤光抽屉同时承担反差控制和曝光控制。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "三种光路"
+        },
+        {
+          "kind": "p",
+          "text": "光源类型指光从灯箱到负片之间的光路形式。类型改变光线穿过负片时的角度分布。角度分布改变负片银粒的散射行为。结果是印相反差发生变化。"
+        },
+        {
+          "kind": "table",
+          "caption": "常见放大光源类型",
+          "rows": [
+            {
+              "c1": "聚光型 condenser",
+              "c2": "灯泡下方装聚光镜。光线会聚到底片平面再发散。",
+              "c3": "偏硬。Ilford 指出对多数负片比扩散型高约一级反差。",
+              "c4": "中等。",
+              "c5": "负片必须位于聚光焦点平面。放大负片灰尘、划痕和 $film-stock.grain 。"
+            },
+            {
+              "c1": "扩散型 diffusion",
+              "c2": "灯泡下方装半透明玻璃或塑料扩散板。",
+              "c3": "接近拷贝印相的反差。",
+              "c4": "中等。",
+              "c5": "扩散板老化发黄会降低曝光量，需重新试印。"
+            },
+            {
+              "c1": "点光源型 point-to-point",
+              "c2": "使用小灯丝灯泡，不磨砂，不装扩散片。",
+              "c3": "偏硬。",
+              "c4": "最短。",
+              "c5": "镜头须开最大光圈。收到 f/5.6 之后底板上出现灯泡像，形成暗角。"
+            },
+            {
+              "c1": "冷阴极管 cold light",
+              "c2": "用荧光灯管代替灯泡，光谱偏蓝，对准明胶银感光区。",
+              "c3": "按可变反差设计的冷阴极管可给全反差范围，级距不均匀。未按此设计的灯头印相反差偏软。",
+              "c4": "比钨丝灯短。",
+              "c5": "发热低，减少负片卷曲与增雾。未按可变反差设计的灯头会缩窄反差范围。"
+            },
+            {
+              "c1": "钨丝灯 tungsten",
+              "c2": "白炽灯泡，光谱连续偏黄红。",
+              "c3": "中性基准。",
+              "c4": "基准时间。",
+              "c5": "发热高，需注意灯箱散热。灯泡老化使光量下降。"
+            },
+            {
+              "c1": "钨卤素灯 tungsten-halogen",
+              "c2": "白炽灯泡内充少量卤素，光谱接近日光。",
+              "c3": "中性基准。",
+              "c4": "接近钨丝灯。",
+              "c5": "对相纸与底片的热负荷与钨丝灯相近。"
+            },
+            {
+              "c1": "彩色灯头 color head",
+              "c2": "光源与负片之间装可调黄/品红/青/蓝滤光层，用于彩色印相。",
+              "c3": "为彩色相纸优化。把滤光调到品红端可印可变反差相纸，但最大反差略低。",
+              "c4": "按滤光值计算。",
+              "c5": "混色腔老化发黄会永久性偏软反差。滤片需要定期检查。"
+            },
+            {
+              "c1": "LED 改装头 LED retrofit",
+              "c2": "用 LED 光源替换原灯箱灯泡或整组灯头。",
+              "c3": "取决于 LED 光谱与相纸的匹配。",
+              "c4": "多数改装头比钨丝灯快。",
+              "c5": "须做反差范围测试。未针对可变反差设计的 LED 光源可能缩窄反差范围。"
+            }
+          ],
+          "text": "常见放大光源类型"
+        },
+        {
+          "kind": "h2",
+          "text": "Callier 效应"
+        },
+        {
+          "kind": "p",
+          "text": "负片的银粒把入射光向各方向散射。聚光型光路把散射光也送进镜头。散射光在印相上抬起阴影与高光之间的密度差。结果是印相反差上升。这个现象称为 Callier 效应，用 Q 因子描述：Q 等于定向密度除以漫射密度，数值不小于 1。"
+        },
+        {
+          "kind": "p",
+          "text": "Ilford 指出聚光型与扩散型的反差差异取决于负片残留银量。对很淡很平的负片，差异很小。对染料影像负片，差异也很小。"
+        },
+        {
+          "kind": "compare",
+          "caption": "聚光型与扩散型",
+          "rows": [
+            {
+              "c1": "印相反差",
+              "c2": "高约一级（对多数负片）。",
+              "c3": "接近拷贝印相。",
+              "c4": "同一负片在两种光路下印出的影调不同。",
+              "c5": "换光路后重新做试印条。"
+            },
+            {
+              "c1": "负片缺陷显示",
+              "c2": "灰尘、划痕与颗粒被放大。",
+              "c3": "灰尘与划痕较不明显。",
+              "c4": "清洁负片与底片夹玻璃。",
+              "c5": "用毛刷与除尘液清洁，见 $bw-process.stop-bath-fix 。"
+            }
+          ],
+          "text": "聚光型与扩散型"
+        },
+        {
+          "kind": "h2",
+          "text": "滤光片与滤光抽屉"
+        },
+        {
+          "kind": "ul",
+          "text": "- 滤光抽屉（filter drawer）装在镜头板下方。抽屉在光路上叠加一片滤光片。\n- 滤片架（filter holder）夹在底片夹与镜头之间。位置在镜头下方。\n- 镜头内置滤片（filter in the lens）装在镜头后组之内。位置最靠近影像。\n- 减光片（neutral density filter）用于降低曝光量，不改变反差。"
+        },
+        {
+          "kind": "note",
+          "text": "滤片的三种位置给出不同的曝光量。Ilford 的滤片说明书指出，滤片位置改变时曝光时间随之改变。位置接近相纸的滤片影响最大。每次改变滤片位置后重新计算曝光时间。"
+        },
+        {
+          "kind": "timeline",
+          "caption": "放大机光源与滤光系统的沿革",
+          "rows": [
+            {
+              "c1": "1860s",
+              "c2": "印相用日光与钨丝灯。",
+              "c3": "曝光时间随光源强度变化。"
+            },
+            {
+              "c1": "1900s",
+              "c2": "聚光型放大机成为标准。",
+              "c3": "印相反差被确定为设备参数。"
+            },
+            {
+              "c1": "1950s",
+              "c2": "扩散型与扩散板式放大机用于印柔和反差。",
+              "c3": "出现两种反差倾向的光路。"
+            },
+            {
+              "c1": "1960s",
+              "c2": "彩色印相机灯头加入可调滤光层。",
+              "c3": "同一灯头兼顾彩色印相与可变反差印相。"
+            },
+            {
+              "c1": "1970s",
+              "c2": "冷阴极管灯头（cold light）用于放大。",
+              "c3": "发热降低，负片卷曲与增雾减少。"
+            },
+            {
+              "c1": "1980s",
+              "c2": "钨卤素灯头与混色腔老化问题被记录。",
+              "c3": "印相反差需要定期校正。"
+            },
+            {
+              "c1": "1990s",
+              "c2": "程序化放大机加入曝光探头与滤镜设定存储。",
+              "c3": "同一设定可重复。"
+            },
+            {
+              "c1": "2010s",
+              "c2": "LED 改装灯头进入暗房市场。",
+              "c3": "曝光时间缩短，低发热。"
+            },
+            {
+              "c1": "2020s",
+              "c2": "LED 灯头成为新机默认配置。滤片组转向全滤片式可变反差。",
+              "c3": "反差范围取决于 LED 光源与滤片组的匹配，需实测。"
+            }
+          ],
+          "text": "放大机光源与滤光系统的沿革"
+        },
+        {
+          "kind": "warn",
+          "text": "脉冲氙灯与其他未针对可变反差设计的冷阴极管灯头会缩窄反差范围。Ilford 建议改用 00 滤片或加最多 70Y 黄色滤光。用试印条确认反差范围。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Wikipedia: Enlarger",
+          "url": "https://en.wikipedia.org/wiki/Enlarger",
+          "kind": "article",
+          "note": "点光源、扩散型与冷阴极管光型的通识说明。"
+        },
+        {
+          "name": "Ilford Photo: Contrast control for Ilford Multigrade",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/03/Contrast-control-for-Ilford-Multigrade.pdf",
+          "kind": "manufacturer",
+          "note": "扩散型与聚光型反差的原文表述、冷阴极管与彩色灯头的反差范围说明。"
+        },
+        {
+          "name": "Ilford Photo: MULTIGRADE IV RC Papers Technical Data Sheet",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2021/01/MULTIGRADE-IV-RC-Papers-060619.pdf",
+          "kind": "manufacturer",
+          "note": "列出相纸适用的光源：钨丝/钨卤素、为可变反差设计的冷阴极管、为可变反差设计的 LED 灯头。"
+        },
+        {
+          "name": "Kodak Publication G-4037: POLYCONTRAST IV RC Paper",
+          "url": "https://125px.com/docs/paper/kodak/g4037.pdf",
+          "kind": "manufacturer",
+          "note": "混色腔老化发黄导致反差永久变软，各机型反差滤光值表。"
+        },
+        {
+          "name": "Wikipedia: Callier effect（银粒散射与 Q 因子）",
+          "url": "https://en.wikipedia.org/wiki/Callier_effect",
+          "kind": "article",
+          "note": "Q = D_dir / D_dif ≥ 1；染料型软片两种光路反差接近；机制由 Chavel 与 Loewenthal 在 1978 年给出。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "printing.enlarger"
+        ],
+        "next": [
+          "printing.multigrade"
+        ],
+        "related": [
+          "capture.filter",
+          "film-stock.characteristic-curve"
+        ],
+        "contrast": [
+          "printing.contact-printing"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Ilford 指出聚光型与扩散型放大机印出的反差相差多少？",
+          "type": "single",
+          "options": [
+            "基本相同",
+            "聚光型约高一级",
+            "聚光型约低一级",
+            "聚光型高两级以上"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "原文：In practical terms with most negatives, condenser enlargers give about an extra grade of contrast compared with a diffuser enlarger。"
+        },
+        {
+          "q": "使用点光源型放大机时，镜头应该怎样设置？",
+          "type": "single",
+          "options": [
+            "收到 f/11 提高景深",
+            "开最大光圈",
+            "收到 f/5.6",
+            "关闭光圈用长曝光"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "收到 f/5.6 之后底板上会出现灯泡像，形成暗角。"
+        },
+        {
+          "q": "Callier 效应在聚光型放大机上产生什么结果？",
+          "type": "multi",
+          "options": [
+            "印相反差上升",
+            "负片灰尘被放大",
+            "负片划痕被放大",
+            "曝光时间延长一倍"
+          ],
+          "answer": [
+            0,
+            1,
+            2
+          ],
+          "why": "聚光型把银粒散射光送入镜头，抬升反差，同时放大负片缺陷。"
+        },
+        {
+          "q": "Ilford 建议用什么方法确认某个冷阴极管灯头能否给出全反差范围？",
+          "type": "single",
+          "options": [
+            "查阅灯头型号",
+            "用试印条实测",
+            "测量灯箱温度",
+            "更换聚光镜"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "Ilford 指出唯一确定的办法是用试印条实测。"
+        }
+      ],
+      "checklist": [
+        "确认光源类型与相纸匹配",
+        "确认聚光镜位置",
+        "确认滤片位置与滤片清洁度",
+        "换滤片位置后重新计算曝光时间",
+        "换光源后重新做试印条"
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "printing.enlarger-lens",
+      "title": "放大镜头",
+      "title_en": "Enlarger Lens",
+      "aliases": [
+        "enlarger lens",
+        "放大镜头",
+        "放大倍率",
+        "有效光圈",
+        "放大机专用镜头"
+      ],
+      "type": "equipment",
+      "level": 3,
+      "era": "1900s 至今",
+      "tags": [
+        "镜头",
+        "放大",
+        "光学"
+      ],
+      "summary": "放大镜头（enlarger lens）在负片到相纸的距离之间成像。它是短焦距、可微距对焦的专用镜头。它决定印相的锐度、场曲和最大倍率。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "放大镜头的构造"
+        },
+        {
+          "kind": "p",
+          "text": "放大镜头的焦距短，一般 50 mm 至 75 mm。镜头与相纸的距离是负片距离的放大倍率倍。例如放大 10× 时，镜头到相纸的距离是镜头到负片距离的 10 倍。"
+        },
+        {
+          "kind": "image",
+          "src": "img/enlarger-lens.png",
+          "alt": "Elgeet 51 mm f/4 放大镜头。放大镜头按低倍率成像优化，与摄影镜头的光学要求不同。",
+          "caption": "Elgeet 51 mm f/4 放大镜头。放大镜头按低倍率成像优化，与摄影镜头的光学要求不同。",
+          "credit": "Brycemilton",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File%3AElgeet_51mm_1-4_Enlarging_Lens.jpg"
+        },
+        {
+          "kind": "p",
+          "text": "多数放大镜头是对称式结构。这类结构的畸变小，适合印相。放大镜头必须能做微距对焦。普通摄影镜头的最近对焦距离通常不足。"
+        },
+        {
+          "kind": "h2",
+          "text": "放大倍率与有效光圈"
+        },
+        {
+          "kind": "p",
+          "text": "放大倍率改变时，像距与负片到相纸的距离改变，有效光圈（effective aperture, 见 $capture.exposure-metering）随之改变。倍率越高，有效光圈越小，景深越浅。"
+        },
+        {
+          "kind": "formula",
+          "caption": "有效光圈计算",
+          "text": "有效光圈 f_e = 镜头标称光圈 f × (1 + 放大倍率)\n\n示例：f/2.8 镜头放大 8× 时，f_e = 2.8 × (1 + 8) = 25.2，等效于 f/25。"
+        },
+        {
+          "kind": "p",
+          "text": "放大时曝光量同时受有效光圈和灯箱亮度影响。放大倍率增加一档，影像面积变为四倍。曝光时间与放大倍率成正比。公式见 $printing.exposure-calculation 。"
+        },
+        {
+          "kind": "h2",
+          "text": "最佳工作光圈"
+        },
+        {
+          "kind": "p",
+          "text": "放大镜头的最佳清晰区在最大光圈收小约 3 档处。f/2.8 镜头的最佳工作光圈是 f/8。收小光圈减少球差与彗差，但衍射使清晰度下降。工作光圈一般保持在 f/5.6 至 f/11 之间。"
+        },
+        {
+          "kind": "table",
+          "caption": "放大镜头的使用要点",
+          "rows": [
+            {
+              "c1": "工作光圈",
+              "c2": "从最大光圈收小 3 档。",
+              "c3": "这个位置像差最小。",
+              "c4": "f/2.8 镜头用 f/8；f/3.5 镜头用 f/11。",
+              "c5": "清晰度达到该镜头的最佳值。"
+            },
+            {
+              "c1": "最大光圈的用途",
+              "c2": "只在放大时对焦使用。",
+              "c3": "大光圈景深深，便于对焦。",
+              "c4": "f/2.8 或更大。",
+              "c5": "对焦完成立即收小。"
+            },
+            {
+              "c1": "f/5.6 以下的成像",
+              "c2": "慎用。",
+              "c3": "倍率增加使有效光圈变小，彗差与场曲影响增大。",
+              "c4": "高倍率时按 f/5.6 或更小工作。",
+              "c5": "印相边缘清晰度下降，颗粒感变强。"
+            },
+            {
+              "c1": "倍率上限",
+              "c2": "保持在镜头设计范围内。",
+              "c3": "超出范围时像差迅速上升。",
+              "c4": "多数放大镜头标称 2× 至 10×。",
+              "c5": "超大印相用拼接印相，见 $printing.consecutive-prints 。"
+            },
+            {
+              "c1": "特写放大",
+              "c2": "使用微距放大镜头。",
+              "c3": "负片上局部小区域放大到很大。",
+              "c4": "倍率达到 20× 以上。",
+              "c5": "颗粒被放大到可见，见 $film-stock.grain 。"
+            },
+            {
+              "c1": "改变尺寸后",
+              "c2": "重新对焦。",
+              "c3": "像距改变。",
+              "c4": "每次改变放大高度后重做对焦。",
+              "c5": "避免整批印相失焦。"
+            }
+          ],
+          "text": "放大镜头的使用要点"
+        },
+        {
+          "kind": "h2",
+          "text": "常见故障"
+        },
+        {
+          "kind": "troubleshoot",
+          "caption": "放大镜头的印相缺陷",
+          "items": [
+            {
+              "t": "印相四边清晰、边缘发虚",
+              "d": "镜头在 f/5.6 以下工作。收小 2 至 3 档到 f/8 附近。"
+            },
+            {
+              "t": "印相角落比中心暗",
+              "d": "未做均匀曝光或灯箱亮度不足。用整体减光补偿，见 $printing.dodging-burning 。"
+            },
+            {
+              "t": "同一负片放大尺寸越大越模糊",
+              "d": "超出镜头设计倍率。改用较小倍率并拼接印相。"
+            },
+            {
+              "t": "对焦时清晰度低",
+              "d": "底片夹玻璃与负片之间有间隙，或灯箱有振动。检查负片平整度与放大机稳定性。"
+            }
+          ],
+          "text": "放大镜头的印相缺陷"
+        },
+        {
+          "kind": "note",
+          "text": "同一放大机上换用不同焦距镜头会改变影像尺寸。更换焦距后重新计算底片台位置与曝光时间。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Wikipedia: Enlarger",
+          "url": "https://en.wikipedia.org/wiki/Enlarger",
+          "kind": "article",
+          "note": "放大镜头对称式结构、最佳光圈与倍率范围。"
+        },
+        {
+          "name": "Ilford Photo: Contrast control for Ilford Multigrade",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/03/Contrast-control-for-Ilford-Multigrade.pdf",
+          "kind": "manufacturer",
+          "note": "MULTIGRADE 600 系统的镜头与滤光控制说明。"
+        },
+        {
+          "name": "Ilford Photo: MULTIGRADE IV RC Papers Technical Data Sheet",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2021/01/MULTIGRADE-IV-RC-Papers-060619.pdf",
+          "kind": "manufacturer",
+          "note": "相纸与放大光源、滤片位置的匹配条件。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "printing.enlarger"
+        ],
+        "next": [
+          "printing.paper-testing"
+        ],
+        "related": [
+          "capture.exposure-metering",
+          "film-stock.grain"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "f/2.8 放大镜头放大 8× 时的有效光圈约是多少？",
+          "type": "single",
+          "options": [
+            "f/4.5",
+            "f/11",
+            "f/25",
+            "f/45"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "f_e = 2.8 × (1 + 8) = 25.2，约等于 f/25。"
+        },
+        {
+          "q": "放大镜头的最佳工作光圈通常是多少？",
+          "type": "single",
+          "options": [
+            "最大光圈",
+            "最大光圈收小约 3 档",
+            "f/22",
+            "f/45"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "这个位置像差最小。f/2.8 镜头的最佳值是 f/8。"
+        },
+        {
+          "q": "放大倍率从 4× 提高到 8× 时，曝光时间大约怎样变化？",
+          "type": "single",
+          "options": [
+            "减半",
+            "不变",
+            "约加倍",
+            "变为四倍"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "曝光时间与放大倍率成正比。倍率加倍，时间加倍。"
+        },
+        {
+          "q": "改变放大高度后必须执行哪一步？",
+          "type": "single",
+          "options": [
+            "更换负片夹",
+            "重新对焦",
+            "清洗聚光镜",
+            "清洁计时器"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "像距随放大高度改变。不重新对焦会使印相失焦。"
+        }
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "printing.multigrade",
+      "title": "可变反差相纸与滤片",
+      "title_en": "Multigrade and Variable Contrast Paper",
+      "aliases": [
+        "Multigrade",
+        "MG",
+        "variable contrast",
+        "可变反差相纸",
+        "Variable Contrast",
+        "Polycontrast",
+        "Multigrade filter"
+      ],
+      "type": "concept",
+      "level": 3,
+      "era": "1940 至今",
+      "tags": [
+        "可变反差",
+        "相纸",
+        "滤片",
+        "反差对照"
+      ],
+      "summary": "可变反差（variable contrast）相纸用一组反差滤片改变同一张相纸的有效反差。一次曝光即可得到所需反差，不需换纸。可变反差相纸是当代放大印相的主流相纸。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "工作原理"
+        },
+        {
+          "kind": "p",
+          "text": "Ilford MULTIGRADE 乳剂由三种基本蓝敏乳剂混合而成。三种乳剂的反差相同，对蓝光速度相同，对绿光速度不同。全蓝曝光时三层同时反应，叠加后的特性曲线反差高、曝光范围窄。全绿曝光时只有高绿敏层先反应，叠加曲线曝光范围宽、反差低。"
+        },
+        {
+          "kind": "p",
+          "text": "品红滤片吸绿光、透蓝光，给出高反差。黄滤片吸蓝光、透绿光，给出低反差。中间各级由黄与品红混合给出。"
+        },
+        {
+          "kind": "note",
+          "text": "Kodak POLYMAX 滤片与 Ilford MG 滤片的光谱不同。两套滤片编号不能直接互换。使用另一套滤片时重新做试印条。"
+        },
+        {
+          "kind": "h2",
+          "text": "滤片组"
+        },
+        {
+          "kind": "p",
+          "text": "Ilford MULTIGRADE 滤片共 12 枚。编号从 00 到 5，步进 ½。编号越低反差越软。滤片 00 至 3½ 的曝光速度匹配。滤片 4 与 5 一般需要比 00 至 3½ 多 0.5 至 1 档曝光。"
+        },
+        {
+          "kind": "p",
+          "text": "滤片尺寸有 8.9 cm × 8.9 cm（3.5 英寸）与 15.2 cm × 15.2 cm（6 英寸）。30 cm × 30 cm 可订制。Ilford 提供镜头下滤片套件，含 12 枚滤片、安全灯滤片与滤片架。"
+        },
+        {
+          "kind": "table",
+          "caption": "MG 滤片编号对应的等效滤光片",
+          "rows": [
+            {
+              "c1": "00",
+              "c2": "150Y",
+              "c3": "120Y",
+              "c4": "199Y",
+              "c5": "150Y"
+            },
+            {
+              "c1": "0",
+              "c2": "90Y",
+              "c3": "70Y",
+              "c4": "90Y",
+              "c5": "90Y"
+            },
+            {
+              "c1": "½",
+              "c2": "70Y",
+              "c3": "50Y",
+              "c4": "70Y",
+              "c5": "70Y"
+            },
+            {
+              "c1": "1",
+              "c2": "55Y",
+              "c3": "40Y",
+              "c4": "50Y",
+              "c5": "55Y"
+            },
+            {
+              "c1": "1½",
+              "c2": "30Y",
+              "c3": "25Y",
+              "c4": "30Y",
+              "c5": "30Y"
+            },
+            {
+              "c1": "2",
+              "c2": "0",
+              "c3": "0",
+              "c4": "0",
+              "c5": "0"
+            },
+            {
+              "c1": "2½",
+              "c2": "20M",
+              "c3": "10M",
+              "c4": "5M",
+              "c5": "20M"
+            },
+            {
+              "c1": "3",
+              "c2": "45M",
+              "c3": "30M",
+              "c4": "25M",
+              "c5": "40M"
+            },
+            {
+              "c1": "3½",
+              "c2": "65M",
+              "c3": "50M",
+              "c4": "50M",
+              "c5": "65M"
+            },
+            {
+              "c1": "4",
+              "c2": "100M",
+              "c3": "75M",
+              "c4": "80M",
+              "c5": "85M"
+            },
+            {
+              "c1": "4½",
+              "c2": "140M",
+              "c3": "120M",
+              "c4": "140M",
+              "c5": "200M"
+            },
+            {
+              "c1": "5",
+              "c2": "170M（取该机型最大品红值作近似）",
+              "c3": "130M",
+              "c4": "199M",
+              "c5": "无对应值"
+            }
+          ],
+          "text": "MG 滤片编号对应的等效滤光片"
+        },
+        {
+          "kind": "note",
+          "text": "上表数值来自 Ilford 的滤光片换算表。最后一行 5 级在部分机型上无法给出精确等效值，须用试印条实测。"
+        },
+        {
+          "kind": "h2",
+          "text": "滤片编号对应的相纸反差"
+        },
+        {
+          "kind": "p",
+          "text": "Ilford 相纸数据表给出每个滤片下的 ISO 范围值（R）与 ISO 感光度值（P）。R 值等于负片有效密度范围乘以 100 后取最接近的 10 的倍数。选滤片的做法是：读出负片的有效密度范围，乘以 100，在表上找最接近的 R 值。"
+        },
+        {
+          "kind": "table",
+          "caption": "MULTIGRADE RC 相纸的 ISO 范围值（R）",
+          "rows": [
+            {
+              "c1": "00",
+              "c2": "180",
+              "c3": "190",
+              "c4": "180",
+              "c5": "—（见各行）"
+            },
+            {
+              "c1": "0",
+              "c2": "160",
+              "c3": "160",
+              "c4": "160",
+              "c5": "—"
+            },
+            {
+              "c1": "1",
+              "c2": "130",
+              "c3": "130",
+              "c4": "120",
+              "c5": "—"
+            },
+            {
+              "c1": "2",
+              "c2": "110",
+              "c3": "110",
+              "c4": "100",
+              "c5": "—"
+            },
+            {
+              "c1": "3",
+              "c2": "90",
+              "c3": "90",
+              "c4": "80",
+              "c5": "—"
+            },
+            {
+              "c1": "4",
+              "c2": "60",
+              "c3": "70",
+              "c4": "60",
+              "c5": "—"
+            },
+            {
+              "c1": "5",
+              "c2": "40",
+              "c3": "50",
+              "c4": "50",
+              "c5": "—"
+            },
+            {
+              "c1": "无滤片 None",
+              "c2": "110",
+              "c3": "110",
+              "c4": "100",
+              "c5": "—"
+            }
+          ],
+          "text": "MULTIGRADE RC 相纸的 ISO 范围值（R）"
+        },
+        {
+          "kind": "table",
+          "caption": "MULTIGRADE RC 相纸的 ISO 感光度值（P）",
+          "rows": [
+            {
+              "c1": "00 至 3½",
+              "c2": "200",
+              "c3": "100",
+              "c4": "200",
+              "c5": "与曝光速度匹配说明一致。"
+            },
+            {
+              "c1": "4 至 5",
+              "c2": "100",
+              "c3": "50",
+              "c4": "100",
+              "c5": "滤片 4 与 5 需更多曝光。"
+            },
+            {
+              "c1": "无滤片 None",
+              "c2": "500",
+              "c3": "200",
+              "c4": "500",
+              "c5": "无滤片时曝光时间最短。"
+            }
+          ],
+          "text": "MULTIGRADE RC 相纸的 ISO 感光度值（P）"
+        },
+        {
+          "kind": "p",
+          "text": "Ilford MULTIGRADE RC 相纸的等效胶片感光度约在 ISO 3 至 ISO 6 之间。等效值仅用于与胶片的曝光宽容度对比，不用于测光。"
+        },
+        {
+          "kind": "h2",
+          "text": "Kodak 可变反差相纸滤片"
+        },
+        {
+          "kind": "p",
+          "text": "Kodak POLYMAX 滤片编号从 -1 到 5+，另有无滤片与 5+ 以上的位置。Kodak 的做法与 Ilford 相同：相纸 ISO 范围约为负片密度范围的 100 倍时，印相反差通常合适。"
+        },
+        {
+          "kind": "table",
+          "caption": "Kodak POLYMAX 滤片的相纸范围值（R）",
+          "rows": [
+            {
+              "c1": "None",
+              "c2": "R100（P500）",
+              "c3": "R100（P500）",
+              "c4": "无滤片。",
+              "c5": "显影时间最长。"
+            },
+            {
+              "c1": "-1",
+              "c2": "R140（P250）",
+              "c3": "R140（P320）",
+              "c4": "最软级。",
+              "c5": "机器显影曝光量更大。"
+            },
+            {
+              "c1": "0",
+              "c2": "R140",
+              "c3": "R140",
+              "c4": "软。",
+              "c5": ""
+            },
+            {
+              "c1": "½",
+              "c2": "R130",
+              "c3": "R120",
+              "c4": "软。",
+              "c5": ""
+            },
+            {
+              "c1": "1",
+              "c2": "R130",
+              "c3": "R120",
+              "c4": "",
+              "c5": ""
+            },
+            {
+              "c1": "1½",
+              "c2": "R120",
+              "c3": "R120",
+              "c4": "",
+              "c5": ""
+            },
+            {
+              "c1": "2",
+              "c2": "R120",
+              "c3": "R110",
+              "c4": "中性反差。",
+              "c5": ""
+            },
+            {
+              "c1": "2½",
+              "c2": "R110",
+              "c3": "R110",
+              "c4": "",
+              "c5": ""
+            },
+            {
+              "c1": "3",
+              "c2": "R110",
+              "c3": "R90",
+              "c4": "",
+              "c5": ""
+            },
+            {
+              "c1": "3½",
+              "c2": "R100",
+              "c3": "R80",
+              "c4": "硬。",
+              "c5": ""
+            },
+            {
+              "c1": "4",
+              "c2": "R80",
+              "c3": "R80",
+              "c4": "硬。",
+              "c5": ""
+            },
+            {
+              "c1": "4½",
+              "c2": "R70",
+              "c3": "R70",
+              "c4": "硬。",
+              "c5": ""
+            },
+            {
+              "c1": "5",
+              "c2": "R50",
+              "c3": "R60",
+              "c4": "最硬级。",
+              "c5": "机器显影反差略低。"
+            },
+            {
+              "c1": "5+",
+              "c2": "R40",
+              "c3": "R50",
+              "c4": "机器显影专用级。",
+              "c5": ""
+            }
+          ],
+          "text": "Kodak POLYMAX 滤片的相纸范围值（R）"
+        },
+        {
+          "kind": "note",
+          "text": "上表只列 F 面（光泽面）数据。N 面与 E 面在同样滤片下给出略低的 R 值。完整数据见 Kodak G-4037。"
+        },
+        {
+          "kind": "h2",
+          "text": "滤片的使用与保养"
+        },
+        {
+          "kind": "steps",
+          "caption": "使用可变反差滤片",
+          "items": [
+            {
+              "t": "选滤片",
+              "d": "按负片有效密度范围查上表选滤片编号。"
+            },
+            {
+              "t": "插滤片",
+              "d": "把滤片插到镜头板下方的滤光抽屉，或夹在底片夹与镜头之间的滤片架。"
+            },
+            {
+              "t": "查曝光系数",
+              "d": "从曝光系数表查新滤片相对基准滤片的曝光乘数。基准用滤片 2 或 3。"
+            },
+            {
+              "t": "计算曝光",
+              "d": "新曝光时间 = 基准曝光时间 × 曝光乘数。"
+            },
+            {
+              "t": "确认范围",
+              "d": "印一条覆盖全滤片序列的测试条，确认反差范围与曝光时间。"
+            },
+            {
+              "t": "清洁与归位",
+              "d": "只用软布或刷子清洁滤片。只捏边缘。印完把滤片放回信封。"
+            }
+          ],
+          "text": "使用可变反差滤片"
+        },
+        {
+          "kind": "warn",
+          "text": "灰尘或指纹在滤片上形成污痕。Ilford 指出污痕降低印相反差并劣化影像。接触滤片后立即清洁。"
+        },
+        {
+          "kind": "tip",
+          "text": "从滤片 2 改到滤片 3 时，乘数约 0.74。从滤片 3 改到滤片 4 时，乘数约 0.88。从滤片 0 改到滤片 00 时，乘数约 0.93。矩阵值以所用灯头实测为准。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Ilford Photo: Contrast control for Ilford Multigrade (April 2010)",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/03/Contrast-control-for-Ilford-Multigrade.pdf",
+          "kind": "manufacturer",
+          "note": "原理说明、各机型滤光片换算表与曝光补偿矩阵。"
+        },
+        {
+          "name": "Ilford Photo: MULTIGRADE IV RC Papers Technical Data Sheet (2019-06)",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2021/01/MULTIGRADE-IV-RC-Papers-060619.pdf",
+          "kind": "manufacturer",
+          "note": "各相纸的 ISO 范围值（R）与 ISO 感光度值（P）对照表。"
+        },
+        {
+          "name": "Ilford Photo: Multigrade Filters Instructions (2024)",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2024/09/1762628-Multigrade-Filters-QR-code-PDF-i24.pdf",
+          "kind": "manufacturer",
+          "note": "12 枚速度匹配滤片、滤片 4 与 5 的曝光补偿、清洁方法。"
+        },
+        {
+          "name": "Kodak Publication G-4037: POLYCONTRAST IV RC Paper",
+          "url": "https://125px.com/docs/paper/kodak/g4037.pdf",
+          "kind": "manufacturer",
+          "note": "POLYMAX 滤片各级的 Paper Range R 值与各机型反差滤光值表。"
+        },
+        {
+          "name": "Manualshelf: Ilford MULTIGRADE IV RC Data Sheet, page 4",
+          "url": "https://www.manualshelf.com/manual/ilford/har1762617/datasheet-english/page-4.html",
+          "kind": "archive",
+          "note": "转载 Aristo 冷阴极管灯头加 W45 与 40Y 的曝光系数矩阵。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "printing.enlarger-light-source"
+        ],
+        "next": [
+          "printing.paper-testing"
+        ],
+        "related": [
+          "printing.fiber-paper-vs-rc",
+          "film-stock.latitude"
+        ],
+        "contrast": [
+          "printing.fiber-paper-vs-rc"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "负片有效密度范围为 1.25 时，Ilford MULTIGRADE 相纸应选哪个滤片？",
+          "type": "single",
+          "options": [
+            "00",
+            "1",
+            "3",
+            "5"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "1.25 × 100 = 125，取最接近的 130。R130 对应滤片 1。"
+        },
+        {
+          "q": "MULTIGRADE 滤片 4 与 5 的曝光与滤片 00 至 3½ 相比怎样？",
+          "type": "single",
+          "options": [
+            "相同",
+            "需要更多曝光，约多 0.5 至 1 档",
+            "需要更少曝光",
+            "曝光时间减半"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "Ilford 指出滤片 00 至 3½ 速度匹配。滤片 4 与 5 需比它们多 0.5 至 1 档曝光。"
+        },
+        {
+          "q": "下列哪一项是正确的做法？",
+          "type": "single",
+          "options": [
+            "把 Kodak POLYMAX 3 号滤片当作 Ilford MG 3 号使用",
+            "换用另一套滤片后重新做试印条",
+            "把滤片放在相纸上方",
+            "用手握滤片的中央面清洁"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "两套滤片光谱不同，编号不能直接互换。换滤片系统后重做试印条。"
+        },
+        {
+          "q": "哪个滤片编号给出可变反差相纸的最低反差？",
+          "type": "single",
+          "options": [
+            "00",
+            "0",
+            "2",
+            "5"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "编号从 00 到 5 递增。编号越低反差越软。最低级是 00。"
+        }
+      ],
+      "checklist": [
+        "确认相纸类型为可变反差",
+        "按负片密度范围选滤片",
+        "查曝光系数并计算曝光时间",
+        "印全滤片测试条",
+        "清洁滤片并归位",
+        "记录滤片编号与曝光时间"
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "printing.paper-types",
+      "title": "黑白相纸类型",
+      "title_en": "Black-and-White Photographic Paper Types",
+      "aliases": [
+        "相纸",
+        "放大纸",
+        "拷贝纸",
+        "photographic paper",
+        "enlarging paper",
+        "contact paper",
+        "glossy",
+        "satin",
+        "pearl"
+      ],
+      "type": "table",
+      "level": 2,
+      "era": "1870s 至今",
+      "tags": [
+        "相纸",
+        "分类",
+        "表面"
+      ],
+      "summary": "黑白相纸按用途分为放大纸与拷贝纸，按基面分为纤维基与涂塑，按乳剂特性分为可变反差与定反差。表面、基重与基面共同决定印相的手感与保存性。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "按用途分类"
+        },
+        {
+          "kind": "table",
+          "caption": "放大纸与拷贝纸",
+          "rows": [
+            {
+              "c1": "曝光方式",
+              "c2": "曝光来自放大机镜头投射的影像。",
+              "c3": "曝光来自负片与相纸直接接触的光。",
+              "c4": "放大机聚光或散射光线，拷贝印相用直接透射光。",
+              "c5": "见 $printing.contact-printing 。"
+            },
+            {
+              "c1": "颗粒",
+              "c2": "颗粒感较明显。印相倍率把负片颗粒放大。",
+              "c3": "颗粒感较细。颗粒不被放大。",
+              "c4": "放大后颗粒尺度增加。",
+              "c5": "大幅印相时颗粒最明显，见 $film-stock.grain 。"
+            },
+            {
+              "c1": "反差范围",
+              "c2": "配合可变反差滤片使用。",
+              "c3": "一般只有一到两个固定级数。",
+              "c4": "拷贝印相的曝光宽容度决定印相反差。",
+              "c5": "拷贝印相多用于选片与构图确认。"
+            },
+            {
+              "c1": "常用场合",
+              "c2": "正式放大印相、展览印相。",
+              "c3": "印样片（proof sheet）、接触印相、拷贝底片。",
+              "c4": "拷贝印相成本低、速度快。",
+              "c5": "先印拷贝片选片，再放大。"
+            }
+          ],
+          "text": "放大纸与拷贝纸"
+        },
+        {
+          "kind": "h2",
+          "text": "按表面分类"
+        },
+        {
+          "kind": "table",
+          "caption": "Ilford 相纸表面代码",
+          "rows": [
+            {
+              "c1": "Glossy",
+              "c2": "1",
+              "c3": "最平滑。",
+              "c4": "反光最强。",
+              "c5": "最高影像密度与最强反差。"
+            },
+            {
+              "c1": "Satin",
+              "c2": "25",
+              "c3": "轻微纹理。",
+              "c4": "反光弱。",
+              "c5": "反差略低于光泽面。"
+            },
+            {
+              "c1": "Pearl",
+              "c2": "44",
+              "c3": "明显纹理。",
+              "c4": "反光很弱。",
+              "c5": "反差最低。影像层次柔和。"
+            }
+          ],
+          "text": "Ilford 相纸表面代码"
+        },
+        {
+          "kind": "note",
+          "text": "同一相纸的 N 面与 E 面给出略低的反差。Ilford 与 Kodak 的数据表按面分别给出反差值。选面时固定使用一面。"
+        },
+        {
+          "kind": "h2",
+          "text": "按基重与基面分类"
+        },
+        {
+          "kind": "table",
+          "caption": "Ilford 相纸基重代码",
+          "rows": [
+            {
+              "c1": "M",
+              "c2": "190 gsm",
+              "c3": "薄。",
+              "c4": "小尺寸印相。",
+              "c5": "湿加工时长控制在 15 分钟以内。"
+            },
+            {
+              "c1": "K",
+              "c2": "250 gsm",
+              "c3": "厚。",
+              "c4": "中大幅印相。",
+              "c5": "可承受更长的水洗。"
+            }
+          ],
+          "text": "Ilford 相纸基重代码"
+        },
+        {
+          "kind": "p",
+          "text": "纤维基（fiber-based）相纸把乳剂涂在纸基上。每平方米约加 70 g 聚乙烯涂层的相纸称为涂塑（resin-coated）相纸，代号 RC。两种相纸的对比见 $printing.fiber-paper-vs-rc 。"
+        },
+        {
+          "kind": "image",
+          "src": "img/photo-paper-box.png",
+          "alt": "东德 VEB Berlofot 的黑白放大纸包装。包装面标注纸号、反差等级与纸面类型。",
+          "caption": "东德 VEB Berlofot 的黑白放大纸包装。包装面标注纸号、反差等级与纸面类型。",
+          "credit": "Robbespairs",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File%3AFotopapier_Packung_Berlofot.jpg"
+        },
+        {
+          "kind": "h2",
+          "text": "按显影特性分类"
+        },
+        {
+          "kind": "table",
+          "caption": "可变反差与定反差相纸",
+          "rows": [
+            {
+              "c1": "反差调整方式",
+              "c2": "换滤片。一张相纸覆盖全反差范围。",
+              "c3": "换相纸。每一级是一张独立相纸。",
+              "c4": "乳剂由多层不同感光特性组成。",
+              "c5": "见 $printing.multigrade 。"
+            },
+            {
+              "c1": "反差一致性",
+              "c2": "依靠滤片与光源的匹配。滤片脏污会改变反差。",
+              "c3": "相纸自身反差固定。",
+              "c4": "定反差相纸不含滤光分层。",
+              "c5": "定反差相纸适合反差可预判的连续冲洗。"
+            },
+            {
+              "c1": "库存状态",
+              "c2": "Ilford 仍生产。Kodak 于 2005 年起因数码化停产全部黑白相纸。",
+              "c3": "Kodak 1967 年推出的等间距分级纤维基相纸为典型。",
+              "c4": "数码普及后可变反差相纸成为唯一连续供应的黑白相纸。",
+              "c5": "定反差相纸只能购买库存或再生产品。"
+            }
+          ],
+          "text": "可变反差与定反差相纸"
+        },
+        {
+          "kind": "h2",
+          "text": "保存与包装"
+        },
+        {
+          "kind": "p",
+          "text": "Ilford 指出未使用相纸在原包装内阴凉干燥处可存 2 年。相纸在出厂时已有潜影衰退。Kodak 指出相纸应在 21 °C 以下、相对湿度 30% 至 50% 的条件下原包装保存。相纸的长期保存另见 $archive.washing-storage 。"
+        },
+        {
+          "kind": "warn",
+          "text": "相纸在高温高湿下加速衰退。存放处避免阁楼、车尾与阳光直射的柜子。开封后用密封袋并放入干燥剂。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Ilford Photo: MULTIGRADE IV RC Papers Technical Data Sheet (2019-06)",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2021/01/MULTIGRADE-IV-RC-Papers-060619.pdf",
+          "kind": "manufacturer",
+          "note": "表面代码、基重代码、聚乙烯涂量、保存期与包装规格。"
+        },
+        {
+          "name": "Kodak Publication G-4037: POLYCONTRAST IV RC Paper",
+          "url": "https://125px.com/docs/paper/kodak/g4037.pdf",
+          "kind": "manufacturer",
+          "note": "相纸种类、存储条件与安全灯条件。"
+        },
+        {
+          "name": "Ilford Photo: Ilford to Kodak equivalents",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/03/ILFORD-PHOTO-to-Kodak-equivalents.pdf",
+          "kind": "manufacturer",
+          "note": "Dektol 对应 Bromophen，Polymax T 对应 Multigrade Developer。"
+        },
+        {
+          "name": "Wikipedia: Photographic paper",
+          "url": "https://en.wikipedia.org/wiki/Photographic_paper",
+          "kind": "article",
+          "note": "相纸构造、基面与定影的通识说明。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "printing.multigrade"
+        ],
+        "next": [
+          "printing.fiber-paper-vs-rc"
+        ],
+        "related": [
+          "printing.contact-printing",
+          "archive.washing-storage"
+        ],
+        "contrast": [
+          "printing.fiber-paper-vs-rc"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Ilford 相纸表面代码 25 表示哪种表面？",
+          "type": "single",
+          "options": [
+            "Glossy",
+            "Satin",
+            "Pearl",
+            "Fiber"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "代码 1 是 Glossy，代码 25 是 Satin，代码 44 是 Pearl。"
+        },
+        {
+          "q": "同样一张相纸，哪一个面给出的反差最高？",
+          "type": "single",
+          "options": [
+            "N 面",
+            "E 面",
+            "两面相同",
+            "取决于显影时间"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "同一相纸的 N 面与 E 面给出略低的反差。选面时固定使用一面。"
+        },
+        {
+          "q": "选片用的印样片通常用什么相纸？",
+          "type": "single",
+          "options": [
+            "拷贝纸",
+            "可变反差放大纸",
+            "彩色相纸",
+            "直接正片相纸"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "拷贝纸成本低、速度快，用于确认构图与选片。"
+        },
+        {
+          "q": "Ilford 指出未使用相纸在原包装内可存多久？",
+          "type": "single",
+          "options": [
+            "2 个月",
+            "2 年",
+            "10 年",
+            "无限期"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "原包装阴凉干燥处可存 2 年。"
+        }
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "printing.fiber-paper-vs-rc",
+      "title": "纤维基相纸与涂塑相纸",
+      "title_en": "Fiber-Based versus Resin-Coated Paper",
+      "aliases": [
+        "fiber-based paper",
+        "FB paper",
+        "resin-coated",
+        "RC paper",
+        "涂塑相纸",
+        "纤维基相纸",
+        "相纸开裂",
+        "silver mirroring"
+      ],
+      "type": "comparison",
+      "level": 3,
+      "era": "1968 至今",
+      "tags": [
+        "相纸",
+        "基面",
+        "保存性",
+        "RC"
+      ],
+      "summary": "纤维基相纸把乳剂涂在纸上。涂塑相纸在纸两面加聚乙烯涂层。涂塑相纸水洗快、便于自动化，但存在光致开裂与变色风险。纤维基相纸的印相反差略高。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "构造差异"
+        },
+        {
+          "kind": "p",
+          "text": "纤维基相纸（fiber-based paper, FB）的乳剂直接涂在纸基上。涂塑相纸（resin-coated paper, RC）在纸基两面涂聚乙烯，乳剂再涂在聚乙烯层上。每平方米约加 70 g 聚乙烯。"
+        },
+        {
+          "kind": "table",
+          "caption": "两种相纸的完整对比",
+          "rows": [
+            {
+              "c1": "构造",
+              "c2": "纸基 + 乳剂层。",
+              "c3": "纸基 + 聚乙烯层 + 乳剂层。",
+              "c4": "聚乙烯层阻水，水洗效率高。",
+              "c5": "选片时看包装标注 FB 或 RC。"
+            },
+            {
+              "c1": "水洗时间",
+              "c2": "流动水 60 分钟（Ilford，厚纸），或用 PQ UNIVERSAL 1+19 洗 20 分钟，再用 WASHAID。",
+              "c3": "流动水 120 秒，水温高于 5 °C。",
+              "c4": "聚乙烯层阻水，残留药液易洗出。",
+              "c5": "RC 纸按 2 分钟洗。FB 纸按厂商要求洗。"
+            },
+            {
+              "c1": "显影时间",
+              "c2": "MULTIGRADE 1+9 显影 1 分 30 秒。",
+              "c3": "MULTIGRADE 1+9 显影 1 分 00 秒。",
+              "c4": "乳剂结构不同，反应速度不同。",
+              "c5": "同一张相纸只用一个显影时间。"
+            },
+            {
+              "c1": "印相反差",
+              "c2": "略高。",
+              "c3": "略低。",
+              "c4": "FB 乳剂未压在涂层上，密度略高。",
+              "c5": "换基面后重新做试印条。"
+            },
+            {
+              "c1": "印相手感",
+              "c2": "纸张较软，易折痕。上光不必要。",
+              "c3": "纸张较硬，挺括。可上光机压光。",
+              "c4": "聚乙烯层增加刚性。",
+              "c5": "RC 纸不能压光时按厂商说明处理。"
+            },
+            {
+              "c1": "干燥",
+              "c2": "需要较长时间。湿加工时长控制在 15 分钟以内可避免边缘渗水。",
+              "c3": "干燥快。可用热风干燥，最高 85 °C。",
+              "c4": "聚乙烯层不透水。",
+              "c5": "RC 纸可用去水刮片，FB 纸用吸水纸。"
+            },
+            {
+              "c1": "长期保存",
+              "c2": "经调色处理后极稳定。Wilhelm 指出正确处理并加保护调色的现代黑白纤维基印相稳定性极高。",
+              "c3": "存在光致开裂与变色风险。",
+              "c4": "见下节化学机理。",
+              "c5": "长期保存选 FB 纸，见 $archive.cold-storage 。"
+            },
+            {
+              "c1": "包装规格",
+              "c2": "1 L 显影液处理 70 张 8×10（Ilford MULTIGRADE 1+9）。",
+              "c3": "1 L 显影液处理 100 张 8×10。",
+              "c4": "RC 纸每张占液量少。",
+              "c5": "RC 纸适合机器冲洗。"
+            }
+          ],
+          "text": "两种相纸的完整对比"
+        },
+        {
+          "kind": "h2",
+          "text": "涂塑相纸黄化与发脆的化学机理"
+        },
+        {
+          "kind": "p",
+          "text": "聚乙烯涂层中的二氧化钛（titanium dioxide, TiO2）白色颜料是光化学活性物质。二氧化钛受光后生成活性氧。活性氧攻击周围的聚乙烯分子链。"
+        },
+        {
+          "kind": "p",
+          "text": "聚乙烯长期受光和紫外线照射后逐渐氧化变脆。相对湿度在 30% 至 60% 之间波动时，材料产生应力。乳剂面的聚乙烯层与乳剂一起开裂。Wilhelm 把这一过程称为光致开裂。"
+        },
+        {
+          "kind": "p",
+          "text": "光与紫外在含二氧化钛的聚乙烯层中生成过氧化物和其他氧化剂。这些氧化剂氧化银影像中的丝状银粒，把银转成银离子。银离子再被还原，生成黄橙色胶体银。这一变色称为银镜变色（silver mirroring）。"
+        },
+        {
+          "kind": "p",
+          "text": "装框相片把氧化剂困在玻璃与相纸之间的微气候中，变色因此加速。未装框印相的氧化剂可扩散进空气。Wilhelm 的实验数据：1.35 klux 展示曝光下，装框相片 4 年出现明显黄色变色，2 年后出现橙色表面银镜微斑；同一实验的未装框件在 6 年内未观察到基材或乳剂开裂。"
+        },
+        {
+          "kind": "table",
+          "caption": "RC 相纸劣变的时间线",
+          "rows": [
+            {
+              "c1": "1968-09",
+              "c2": "Kodak Ektacolor 20 RC 进入消费市场。",
+              "c3": "首个快速 RC 彩色相纸，同时引入二氧化钛聚乙烯层的光致开裂问题。"
+            },
+            {
+              "c1": "1970 年代",
+              "c2": "Kodak Polycontrast Rapid RC、Kodabrome II RC 等黑白 RC 纸出现严重开裂与氧化变色。",
+              "c3": "1970 年代的一批 RC 黑白相纸被使用者称为会自毁。"
+            },
+            {
+              "c1": "约 1977",
+              "c2": "Kodak 在 RC 纸芯中加入聚乙烯稳定剂。",
+              "c3": "稳定剂扩散进相邻聚乙烯层，抗脆裂能力显著提高。"
+            },
+            {
+              "c1": "1980 年前",
+              "c2": "Kodak 的通用彩色与黑白 RC 纸完成芯层稳定化改造。",
+              "c3": "物理稳定性问题在制造端得到控制。"
+            },
+            {
+              "c1": "1994",
+              "c2": "含加速试验的黑白印相稳定性标准制定完成。",
+              "c3": "截至 2003 年，RC 纸物理稳定性仍无 ANSI 标准覆盖。"
+            }
+          ],
+          "text": "RC 相纸劣变的时间线"
+        },
+        {
+          "kind": "note",
+          "text": "纤维基相纸因加工、水洗与干燥耗时较长，不具备 RC 纸的光致开裂条件。纤维基彩色相纸在湿度循环下仍会产生乳剂裂纹。这种裂纹由湿度驱动，与 RC 纸的光致开裂性质不同。"
+        },
+        {
+          "kind": "h2",
+          "text": "保护措施"
+        },
+        {
+          "kind": "ul",
+          "text": "- 展示前做调色（toning）。Ilford 建议硒调色或硫化物调色。\n- Image Permanence Institute 的测试显示硫化物调色（多硫化物）比金调色与硒调色更有效。\n- 使用银稳定剂或过塑。\n- 避免用 Plexiglas UF-3 等亚克力装框。某些亚克力在光照下释放微量过氧化物。\n- 控制展示照度与湿度。高湿度与高温都加速变色。\n- 需要永久保存时选纤维基印相，见 $archive.digital-preservation 。"
+        },
+        {
+          "kind": "warn",
+          "text": "Wilhelm 指出 RC 相纸上的银影像在展示光照下本质不稳定。把 RC 印相当作永久档案时采用纤维基相纸并做调色。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "G. Michael Wilhelm, The Permanence and Care of Color Photographs, Chapter 17",
+          "url": "http://wilhelm-research.com/pdf/HW_Book_17_of_20_HiRes_v1c.pdf",
+          "kind": "book",
+          "note": "二氧化钛光化学活性、聚乙烯氧化开裂、银镜变色与装框微气候的实验数据。"
+        },
+        {
+          "name": "G. Michael Wilhelm, The Permanence and Care of Color Photographs, 全书",
+          "url": "http://wilhelm-research.com/pdf/HW_Book_761_Pages_HiRes_v1c.pdf",
+          "kind": "book",
+          "note": "1968 年 Ektacolor 20 RC、1977 年聚乙烯稳定剂与纤维基相纸的对比。"
+        },
+        {
+          "name": "Ilford Photo: MULTIGRADE IV RC Papers Technical Data Sheet (2019-06)",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2021/01/MULTIGRADE-IV-RC-Papers-060619.pdf",
+          "kind": "manufacturer",
+          "note": "RC 纸水洗时间、干燥温度、每升显影液可处理张数、聚乙烯涂量。"
+        },
+        {
+          "name": "Ilford Photo: TDS Black and White Paper Developers",
+          "url": "http://ilfordphoto.com.cn/wp-content/uploads/2022/04/Processing-black-and-white-RC-paper.pdf",
+          "kind": "manufacturer",
+          "note": "MULTIGRADE 在 RC 纸上的显影 1:00 与 FB 纸上的 1:30 定影与水洗差异。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "printing.paper-types"
+        ],
+        "next": [
+          "printing.print-processing"
+        ],
+        "related": [
+          "archive.cold-storage",
+          "archive.washing-storage"
+        ],
+        "contrast": [
+          "printing.paper-types"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "导致涂塑相纸光致开裂的直接诱因是什么？",
+          "type": "single",
+          "options": [
+            "相纸基重过大",
+            "聚乙烯层中的二氧化钛颜料在光照下生成活性氧",
+            "显影液温度过高",
+            "定影液硬化"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "二氧化钛受光生成活性氧，活性氧氧化聚乙烯链，聚乙烯变脆后在湿度波动下开裂。"
+        },
+        {
+          "q": "Wilhelm 的实验中，装框 RC 相纸在 1.35 klux 曝光下多久出现明显黄色变色？",
+          "type": "single",
+          "options": [
+            "6 个月",
+            "2 年",
+            "4 年",
+            "20 年"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "装框件 4 年出现明显黄色变色，2 年后出现橙色银镜微斑。未装框件 6 年未观察到开裂。"
+        },
+        {
+          "q": "MULTIGRADE 1+9 显影 RC 纸与 FB 纸的时间分别是多少？",
+          "type": "single",
+          "options": [
+            "RC 1:00，FB 1:30",
+            "RC 1:30，FB 1:00",
+            "两者都是 1:00",
+            "RC 2:00，FB 2:00"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "Ilford 给出 RC 纸 20 °C 显影 1 分 00 秒，FB 纸 1 分 30 秒。"
+        },
+        {
+          "q": "Image Permanence Institute 测试中，哪种调色对 RC 印相最有效？",
+          "type": "single",
+          "options": [
+            "金调色",
+            "硒调色",
+            "硫化物调色（多硫化物）",
+            "漂白"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "Wilhelm 指出硫化物调色比金调色与硒调色更有效。"
+        }
+      ],
+      "checklist": [
+        "确认相纸基面 FB 或 RC",
+        "按基面设定显影时间",
+        "按基面设定水洗时间",
+        "RC 纸水洗 2 分钟，FB 纸按厂商要求",
+        "展示前做调色处理",
+        "避免用亚克力材料装框"
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "printing.paper-testing",
+      "title": "曝光测试与试印条",
+      "title_en": "Exposure Testing and Test Strip",
+      "aliases": [
+        "test strip",
+        "试印条",
+        "step wedge",
+        "灰梯尺",
+        "曝光测试",
+        "proof strip"
+      ],
+      "type": "technique",
+      "level": 2,
+      "era": "1870s 至今",
+      "tags": [
+        "曝光测试",
+        "试印条",
+        "反差"
+      ],
+      "summary": "曝光测试用一条分档曝光的相纸确定印相的正确曝光时间。试印条把同一张相纸分成若干段，每段曝光时间不同。段与段的密度差给出印相的时间基准。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "试印条做什么"
+        },
+        {
+          "kind": "p",
+          "text": "试印条（test strip）把一张相纸沿宽度分成若干段。每段用不同的曝光时间曝光。相纸显影后，比较各段的密度。选中最接近正确影调的段，该段的曝光时间就是正式印相的基准时间。"
+        },
+        {
+          "kind": "p",
+          "text": "试印条同时检验三件事：曝光时间是否正确、反差是否合适、显影液是否工作正常。"
+        },
+        {
+          "kind": "h2",
+          "text": "标准试印条流程"
+        },
+        {
+          "kind": "steps",
+          "caption": "Kodak Z-133 记载的试印条流程",
+          "items": [
+            {
+              "t": "清洁底片",
+              "d": "手持负片边缘。用驼毛刷除去表面灰尘。灰尘在印相上形成白色斑点。"
+            },
+            {
+              "t": "装入底片夹",
+              "d": "负片乳剂面朝下装入底片夹。合上底片夹。"
+            },
+            {
+              "t": "插入白相纸",
+              "d": "在底片台导轨下滑入一张普通相纸作对焦辅助。"
+            },
+            {
+              "t": "开灯与定尺寸",
+              "d": "打开放大机灯头，镜头开最大光圈。升降灯头并调整导轨，确定影像尺寸与构图。"
+            },
+            {
+              "t": "对焦",
+              "d": "把影像调到最清晰。"
+            },
+            {
+              "t": "设定工作光圈",
+              "d": "把光圈改到 f/8。"
+            },
+            {
+              "t": "关灯与放条",
+              "d": "关灯。在安全光下放入一条 1 至 2 英寸宽的相纸，乳剂面朝上。条的位置必须覆盖负片的重要影调。"
+            },
+            {
+              "t": "首段曝光",
+              "d": "整条曝光 5 秒。"
+            },
+            {
+              "t": "逐段加时",
+              "d": "用厚纸板盖住已曝光段的五分之一，再曝光 2 秒。再盖一段曝光 3 秒。再曝光 4 秒。再曝光 6 秒。"
+            },
+            {
+              "t": "显影与判读",
+              "d": "显影试印条。比较各段密度。"
+            }
+          ],
+          "text": "Kodak Z-133 记载的试印条流程"
+        },
+        {
+          "kind": "p",
+          "text": "上述流程给出五段曝光，合计约 2 档曝光量范围。每段相差约半档。Kodak 原文把各段的总时间标为 20、14、10、7、5 秒。"
+        },
+        {
+          "kind": "h2",
+          "text": "判读"
+        },
+        {
+          "kind": "table",
+          "caption": "试印条判读表",
+          "rows": [
+            {
+              "c1": "所有段都浅",
+              "c2": "曝光量不足。",
+              "c3": "开大光圈或延长曝光时间。",
+              "c4": "印相呈灰雾状。",
+              "c5": "延长后重新做试印条。"
+            },
+            {
+              "c1": "所有段都深",
+              "c2": "曝光量过大。",
+              "c3": "收小光圈或缩短曝光时间。",
+              "c4": "影调并死，高光与阴影并级。",
+              "c5": "缩短后重新做试印条。"
+            },
+            {
+              "c1": "影调够深但发灰发闷",
+              "c2": "反差不足。",
+              "c3": "换用更高编号的 MG 滤片增加反差。",
+              "c4": "影调分离度低。",
+              "c5": "换滤片后重新查曝光系数。"
+            },
+            {
+              "c1": "影调硬、细节少",
+              "c2": "反差过高。",
+              "c3": "换用更低编号的 MG 滤片。",
+              "c4": "中间调层次压缩。",
+              "c5": "换滤片后重新查曝光系数。"
+            },
+            {
+              "c1": "全条密度不均",
+              "c2": "光源亮度不均，或滤片位置偏移。",
+              "c3": "检查扩散板与灯头通风。",
+              "c4": "需做整体减光。",
+              "c5": "见 $printing.dodging-burning 。"
+            }
+          ],
+          "text": "试印条判读表"
+        },
+        {
+          "kind": "p",
+          "text": "判读出大致时间后，再做一条级差更细的试印条确定最终时间。Ilford 的参考值：在 MULTIGRADE 1+9 下，正确曝光的印相约 6 至 15 秒出现影像。最高质量的印相最少需要 45 秒。"
+        },
+        {
+          "kind": "h2",
+          "text": "灰梯尺与连续调判断"
+        },
+        {
+          "kind": "p",
+          "text": "连续调（continuous tone）印相必须能分辨出很小的密度差。灰阶梯尺（step wedge）提供已知的密度级。比较印相上的灰阶与密度计（densitometer）读数，可以判断显影是否正常。Ilford 指出用 densitometer 测量洗出的试印条，是判断显影液状态的方法。"
+        },
+        {
+          "kind": "table",
+          "caption": "洗出试印条的密度检查",
+          "rows": [
+            {
+              "c1": "白场",
+              "c2": "无雾，密度接近 0。",
+              "c3": "白场发灰。",
+              "c4": "显影液氧化、药液失效或安全灯漏光。",
+              "c5": "换新显影液，检查安全灯距离。"
+            },
+            {
+              "c1": "高光",
+              "c2": "最浅段仍有层次。",
+              "c3": "最浅段全黑。",
+              "c4": "曝光过量。",
+              "c5": "缩短曝光时间。"
+            },
+            {
+              "c1": "黑场",
+              "c2": "最深段黑而不死。",
+              "c3": "最深段呈灰。",
+              "c4": "曝光不足或显影不足。",
+              "c5": "延长曝光或延长显影。"
+            }
+          ],
+          "text": "洗出试印条的密度检查"
+        },
+        {
+          "kind": "note",
+          "text": "Ilford 指出曝光后的潜影稳定：曝光后 24 小时再冲洗，印相品质无明显变化。备份底片可以做试印条，不必立即冲洗。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Kodak Publication Z-133: How to Process and Print Black-and-White Film",
+          "url": "https://business.kodakmoments.com/sites/default/files/wysiwyg/pro/chemistry/z133.pdf",
+          "kind": "manufacturer",
+          "note": "试印条五段曝光流程与判读方法。"
+        },
+        {
+          "name": "Ilford Photo: MULTIGRADE IV RC Papers Technical Data Sheet (2019-06)",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2021/01/MULTIGRADE-IV-RC-Papers-060619.pdf",
+          "kind": "manufacturer",
+          "note": "影像出现时间、最低高质量曝光时间、潜影稳定时间。"
+        },
+        {
+          "name": "Ilford Photo: TDS Black and White Paper Developers",
+          "url": "http://ilfordphoto.com.cn/wp-content/uploads/2022/04/Processing-black-and-white-RC-paper.pdf",
+          "kind": "manufacturer",
+          "note": "MULTIGRADE 1+9 下影像出现时间与最低曝光时间。"
+        },
+        {
+          "name": "Wikipedia: Densitometer",
+          "url": "https://en.wikipedia.org/wiki/Densitometer",
+          "kind": "article",
+          "note": "用密度计测量印相密度以判断显影状态。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "printing.enlarger-lens",
+          "printing.multigrade"
+        ],
+        "next": [
+          "printing.print-processing"
+        ],
+        "related": [
+          "film-stock.characteristic-curve",
+          "capture.exposure-metering"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "试印条上所有段都偏浅时应该怎样处理？",
+          "type": "single",
+          "options": [
+            "换用更高编号的 MG 滤片",
+            "开大光圈或延长曝光时间",
+            "换更低编号的 MG 滤片",
+            "缩短显影时间"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "所有段浅表示曝光量不足。提高曝光量。反差问题才换滤片。"
+        },
+        {
+          "q": "试印条影调够深但整体发灰，原因是？",
+          "type": "single",
+          "options": [
+            "曝光量不足",
+            "反差不足",
+            "显影液温度过低",
+            "相纸受潮"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "发灰表示影调分离度低，即反差不足。换更高编号的 MG 滤片。"
+        },
+        {
+          "q": "Kodak Z-133 的五段试印条覆盖的曝光量范围是多少？",
+          "type": "single",
+          "options": [
+            "约半档",
+            "约 1 档",
+            "约 2 档",
+            "约 5 档"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "五段曝光合计约 2 档范围。每段相差约半档。"
+        },
+        {
+          "q": "Ilford 给出的 MULTIGRADE 1+9 下最高质量印相的最低曝光时间是多少？",
+          "type": "single",
+          "options": [
+            "5 秒",
+            "15 秒",
+            "45 秒",
+            "120 秒"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "正确曝光的印相约 6 至 15 秒出现影像。最高质量的印相最少需要 45 秒。"
+        }
+      ],
+      "checklist": [
+        "清洁负片与底片夹玻璃",
+        "确认试印条覆盖重要影调",
+        "用五段曝光做粗测",
+        "用细级差再测一次",
+        "记录滤片编号与曝光时间",
+        "换光源或相纸后重做试印条"
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "printing.contact-printing",
+      "title": "拷贝印相与放大印相",
+      "title_en": "Contact Printing and Enlarging",
+      "aliases": [
+        "contact printing",
+        "拷贝印相",
+        "contact print",
+        "放大印相",
+        "印样片",
+        "proof sheet",
+        "拷贝机"
+      ],
+      "type": "technique",
+      "level": 2,
+      "era": "1840s 至今",
+      "tags": [
+        "拷贝印相",
+        "放大",
+        "选片"
+      ],
+      "summary": "拷贝印相让负片直接压在相纸上曝光。影像与负片同尺寸。放大印相用放大机把影像投印到放大尺寸。放大印相反差取决于光源类型。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "两种印相方式"
+        },
+        {
+          "kind": "p",
+          "text": "拷贝印相（contact printing）把负片乳剂面朝下压在一张相纸上。光源在负片背面。相纸紧贴负片，影像落在相纸上。影像尺寸等于底片尺寸。"
+        },
+        {
+          "kind": "image",
+          "src": "img/contact-sheet.png",
+          "alt": "一页印相样张（contact sheet），一格一幅底片，用于整卷筛选与曝光参照。",
+          "caption": "一页印相样张（contact sheet），一格一幅底片，用于整卷筛选与曝光参照。",
+          "credit": "White House Photographic Office (WHPO) – Schumacher",
+          "license": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File%3AFord_A1427_NLGRF_photo_contact_sheet_(1974-10-15)(Gerald_Ford_Library).jpg"
+        },
+        {
+          "kind": "p",
+          "text": "放大印相（enlarging）用放大机把影像投到相纸上。相纸与负片之间有一整个镜头距离。影像尺寸由放大倍率决定。"
+        },
+        {
+          "kind": "table",
+          "caption": "拷贝印相与放大印相",
+          "rows": [
+            {
+              "c1": "成像方式",
+              "c2": "负片直接接触相纸。",
+              "c3": "镜头把负片影像投到相纸。",
+              "c4": "拷贝印相没有投影环节。",
+              "c5": "拷贝印相用于确认构图与选片。"
+            },
+            {
+              "c1": "影像尺寸",
+              "c2": "等于底片尺寸。",
+              "c3": "由放大倍率决定。",
+              "c4": "拷贝印相没有放大环节。",
+              "c5": "需要放大尺寸时只能用放大机。"
+            },
+            {
+              "c1": "反差",
+              "c2": "接近扩散型放大机。",
+              "c3": "取决于光源类型。聚光型偏硬。",
+              "c4": "Callier 效应，见 $printing.enlarger-light-source 。",
+              "c5": "聚光型比拷贝印相高约一级。"
+            },
+            {
+              "c1": "光源",
+              "c2": "单个灯泡，功率小，靠近印相框。",
+              "c3": "放大机灯箱。",
+              "c4": "拷贝印相不需要均匀光路。",
+              "c5": "Kodak Z-133 给出 7 W 灯泡挂在印相框上方 2 英尺，约 10 秒。"
+            },
+            {
+              "c1": "颗粒",
+              "c2": "颗粒不放大，印相细腻。",
+              "c3": "颗粒随倍率放大。",
+              "c4": "放大倍率增加颗粒尺度。",
+              "c5": "大幅印相时颗粒最明显。"
+            },
+            {
+              "c1": "速度",
+              "c2": "快。适合做印样片。",
+              "c3": "慢。需要试印条确定时间。",
+              "c4": "拷贝印相曝光量小。",
+              "c5": "先用拷贝印相选片，再放大。"
+            }
+          ],
+          "text": "拷贝印相与放大印相"
+        },
+        {
+          "kind": "h2",
+          "text": "拷贝印相的设备"
+        },
+        {
+          "kind": "ul",
+          "text": "- 印相框（printing frame）：玻璃框加压紧机构，把负片压在相纸上。\n- 拷贝机（contact printer）：带灯泡、计时器与玻璃压板的小型设备。常用玻璃压板或真空吸板。\n- 放大机印样片：Kodak Z-133 给出一种做法。把底片夹置空，镜头开到 f/11，把放大高度调到光略大于相纸，曝光约 8 秒。"
+        },
+        {
+          "kind": "h2",
+          "text": "盐印法与明胶银印相"
+        },
+        {
+          "kind": "p",
+          "text": "最早的印相方法用盐印法（salt print）。该方法用氯化银在纸纤维上直接成像。影像附着力弱，需上光定影。"
+        },
+        {
+          "kind": "p",
+          "text": "1870 年代后明胶银（gelatin silver）工艺成为主流。乳剂中含明胶，显影时明胶膨胀使银粒定位。相纸的颗粒、层次与保存性由此奠定。"
+        },
+        {
+          "kind": "note",
+          "text": "拷贝印相是放大印放流程的第一步，也是唯一不损失分辨率的选片方式。见 $printing.print-processing 。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Kodak Publication Z-133: How to Process and Print Black-and-White Film",
+          "url": "https://business.kodakmoments.com/sites/default/files/wysiwyg/pro/chemistry/z133.pdf",
+          "kind": "manufacturer",
+          "note": "拷贝印相的灯泡功率、距离、时间，以及用放大机做印样片的方法。"
+        },
+        {
+          "name": "Wikipedia: Enlarger",
+          "url": "https://en.wikipedia.org/wiki/Enlarger",
+          "kind": "article",
+          "note": "扩散型印相反差等同拷贝印相的表述。"
+        },
+        {
+          "name": "Ilford Photo: Contrast control for Ilford Multigrade",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/03/Contrast-control-for-Ilford-Multigrade.pdf",
+          "kind": "manufacturer",
+          "note": "聚光型与扩散型的反差差异原文。"
+        },
+        {
+          "name": "Wikipedia: Albumen print",
+          "url": "https://en.wikipedia.org/wiki/Albumen_print",
+          "kind": "article",
+          "note": "印相工艺沿革的通识说明。"
+        },
+        {
+          "name": "Wikipedia: Gelatin silver process",
+          "url": "https://en.wikipedia.org/wiki/Gelatin_silver_process",
+          "kind": "article",
+          "note": "明胶银工艺的通识说明。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "printing.enlarger"
+        ],
+        "next": [
+          "printing.print-processing"
+        ],
+        "related": [
+          "printing.paper-types",
+          "printing.enlarger-history"
+        ],
+        "contrast": [
+          "printing.enlarger"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "拷贝印相的影像尺寸由什么决定？",
+          "type": "single",
+          "options": [
+            "放大倍率",
+            "负片本身的尺寸",
+            "相纸尺寸",
+            "灯泡功率"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "负片直接压在相纸上，影像与底片同尺寸。"
+        },
+        {
+          "q": "拷贝印相的印相反差接近哪种放大机？",
+          "type": "single",
+          "options": [
+            "聚光型放大机",
+            "扩散型放大机",
+            "点光源型放大机",
+            "彩色灯头放大机"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "扩散型放大的反差等同拷贝印相。聚光型高约一级。"
+        },
+        {
+          "q": "Kodak Z-133 给出的拷贝印相光源设置是什么？",
+          "type": "single",
+          "options": [
+            "7 W 灯泡挂在印相框上方 2 英尺，约 10 秒",
+            "100 W 灯泡挂在下方，约 60 秒",
+            "放大机灯箱，镜头 f/11",
+            "冷阴极管灯头，约 3 秒"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "原文给出 7 W 灯泡，挂在印相框上方 2 英尺，曝光约 10 秒。"
+        },
+        {
+          "q": "现代暗房中拷贝印相最常见的用途是什么？",
+          "type": "single",
+          "options": [
+            "做展览级放大",
+            "印样片并选片",
+            "做永久档案",
+            "测光"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "拷贝印相快、成本低，用于确认构图与选片。"
+        }
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    }
+  ]
+}

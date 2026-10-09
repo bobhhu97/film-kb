@@ -1,0 +1,1540 @@
+{
+  "module": "capture",
+  "shard": "capture.02",
+  "shard_zh": "胶片相机、镜头与机身机制",
+  "note": "拍摄与曝光第二分片。覆盖机身机械、镜头与像差、卡口沿革、画幅规格、过片与暗盒。数值以 Wikipedia 英文条目核对，具体机型以厂商说明书为准。",
+  "entries": [
+    {
+      "id": "capture.camera-mechanics",
+      "title": "胶片相机机械结构",
+      "title_en": "Film Camera Mechanics",
+      "aliases": [
+        "机身机构",
+        "camera mechanics",
+        "焦平面快门",
+        "focal-plane shutter",
+        "叶片快门",
+        "leaf shutter",
+        "反光镜",
+        "mirror lock-up",
+        "压片板",
+        "pressure plate"
+      ],
+      "type": "concept",
+      "level": 3,
+      "era": "1925 至今",
+      "tags": [
+        "机身",
+        "快门",
+        "反光镜",
+        "过片",
+        "机械"
+      ],
+      "summary": "胶片相机由快门、反光镜、过片机构、片门与后盖组成。这些机构决定曝光时刻、成像平面与胶片位置。了解结构有助于判断故障来源。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "两类快门"
+        },
+        {
+          "kind": "p",
+          "text": "焦平面快门（focal-plane shutter）装在胶片前方。帘幕在曝光时间内扫过片门。叶片快门（leaf shutter）装在镜头内部。叶片开合并形成曝光孔径。"
+        },
+        {
+          "kind": "image",
+          "src": "img/slr-cutaway.png",
+          "alt": "单镜反光相机剖视示意图：反光镜、五棱镜、取景光路与焦平面快门的位置关系。",
+          "caption": "单镜反光相机剖视示意图：反光镜、五棱镜、取景光路与焦平面快门的位置关系。",
+          "credit": "Astrocog",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File%3AReflex_camera_simple_labels.svg"
+        },
+        {
+          "kind": "compare",
+          "caption": "焦平面快门与叶片快门的差别",
+          "rows": [
+            {
+              "c1": "焦平面快门",
+              "c2": "帘幕扫过片门，缝隙限制同步速度",
+              "c3": "速度上限高，可达 1/4000 s 以上",
+              "c4": "高速端产生运动畸变",
+              "c5": "镜头结构简单，全系列共用一个快门"
+            },
+            {
+              "c1": "叶片快门",
+              "c2": "叶片在镜头内叠合成近圆孔径",
+              "c3": "典型上限为 1/500 s",
+              "c4": "全速范围内闪光同步良好",
+              "c5": "每支镜头自带快门与联动机构"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "帘幕缝隙与闪光同步"
+        },
+        {
+          "kind": "p",
+          "text": "缝隙宽度等于曝光时间内帘幕前进的距离。速度越高缝隙越窄。闪光持续时间短于缝隙通过时间时，闪光只照亮缝隙前方的胶片。X 同步（X-sync）速度由帘幕行程决定。"
+        },
+        {
+          "kind": "p",
+          "text": "早期横走帘的行程序常为 36 mm。帘幕在预张力下约 18 ms 走完行程。水平帘的标称同步速度通常为 1/60 s 量级。Konica F（1960）把标称同步速度提高到 1/125 s。Copal Square（1965）改用金属竖走帘，行程缩短到 24 mm，同步速度为 1/125 s。"
+        },
+        {
+          "kind": "p",
+          "text": "Nikon FM2（1982）的钛蜂窝帘行程为 3.6 ms，同步速度为 1/200 s，无变形速度达到 1/4000 s。Minolta Maxxum 9xi（1992）行程为 1.8 ms，同步速度为 1/300 s。竖走帘在画面上部产生前倾变形。横走帘在胶片运动方向与帘幕运动同向时拉长，反向时压缩。"
+        },
+        {
+          "kind": "h2",
+          "text": "反光镜与焦屏"
+        },
+        {
+          "kind": "p",
+          "text": "单镜头反光相机用反光镜把光线折向上方五棱镜。反光镜抬起时机身内部变暗。焦屏（viewing screen）把影像投到取景器磨砂面上。镜锁（mirror lock-up）在长曝光时锁住反光镜。镜锁期间测光与自动对焦停止工作。"
+        },
+        {
+          "kind": "p",
+          "text": "Nikon F（1959–1973）提供 Type A 到 Type T 多种可换焦屏。Type A 是水平裂像加 12 mm 测光参考圈。Type B 是磨砂面。Type K 与 Type L 是水平与对角裂像。该机还能锁定反光镜，并完全拆卸后盖。"
+        },
+        {
+          "kind": "p",
+          "text": "机械联动测光把光圈拨杆与快门速度盘互相耦合。光圈拨杆推动测光表指针。指针居中表示曝光正确。测光方式与曝光补偿见 $capture.exposure-metering。"
+        },
+        {
+          "kind": "p",
+          "text": "过片扳手把胶片从供片轴卷到收片轴。扳手行程同时完成计数与反光镜复位。压片板（pressure plate）把胶片压在片门平面上。压片板与片门不平行会造成局部离焦。后盖闭合后机身保持密闭。"
+        },
+        {
+          "kind": "troubleshoot",
+          "caption": "机身机械故障排查",
+          "items": [
+            {
+              "t": "扳手推到末端卡住",
+              "d": "收片轴未脱离计数机构，或计数盘齿轮卡滞。检查过片离合与棘轮。"
+            },
+            {
+              "t": "整卷同样模糊",
+              "d": "压片板变形，或片门与压片板平行度误差。更换压片板或调整平行度。"
+            },
+            {
+              "t": "高速档画面有拉长或压缩",
+              "d": "帘幕张力衰减使缝隙偏宽，或驱动行程变慢。重新标定帘幕张力。"
+            },
+            {
+              "t": "计数与实际画格差一格",
+              "d": "棘爪磨损，或手动退出扳手设定与机身逻辑不一致。核对说明书设定。"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "快门速度盘的刻度序列随机型变化。老机身在两档之间提供中间速度。核对具体机型的档位时查该机说明书。"
+        },
+        {
+          "kind": "note",
+          "text": "Compur、Copal 与 Seikosha 名下的叶片快门已停止制造。老镜头的叶片快门故障多与润滑脂干涸有关。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Wikipedia: Focal-plane shutter",
+          "url": "https://en.wikipedia.org/wiki/Focal-plane_shutter",
+          "kind": "article",
+          "note": "帘幕行程、缝隙宽度与 X 同步速度数据来源。"
+        },
+        {
+          "name": "Wikipedia: Shutter (photography)",
+          "url": "https://en.wikipedia.org/wiki/Shutter_(photography)",
+          "kind": "article",
+          "note": "叶片快门原理与厂商沿革。"
+        },
+        {
+          "name": "Wikipedia: Nikon F",
+          "url": "https://en.wikipedia.org/wiki/Nikon_F",
+          "kind": "article",
+          "note": "焦屏型号、镜锁与可拆后盖。"
+        },
+        {
+          "name": "Wikipedia: Leica M3",
+          "url": "https://en.wikipedia.org/wiki/Leica_M3",
+          "kind": "article",
+          "note": "过片扳手与快门速度序列的具体例子。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "capture.shutter-speed-diaphragm"
+        ],
+        "next": [
+          "capture.exposure-metering",
+          "capture.lens-aberrations"
+        ],
+        "related": [
+          "capture.lens",
+          "capture.film-transport",
+          "capture.mount-history",
+          "capture.motion-exposure"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "焦平面快门的 X 同步速度主要由什么决定？",
+          "type": "single",
+          "options": [
+            "帘幕行程与缝隙通过时间",
+            "镜头最大光圈",
+            "胶片感光度",
+            "反光镜尺寸"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "闪光持续时间必须覆盖缝隙通过片门的时间，行程决定缝隙宽度。"
+        },
+        {
+          "q": "叶片快门的最高速度通常是多少？",
+          "type": "single",
+          "options": [
+            "1/60 s",
+            "1/500 s",
+            "1/2000 s",
+            "1/8000 s"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "叶片叠合需要行程时间，叶片快门典型上限为 1/500 s。"
+        },
+        {
+          "q": "长曝光时锁住反光镜会带来什么影响？",
+          "type": "single",
+          "options": [
+            "取景器变亮",
+            "测光与自动对焦停止工作",
+            "快门速度提高一档",
+            "压片板自动前移"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "反光镜锁起后测光元件被遮挡，自动对焦也失去反射光。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "capture.lens",
+      "title": "镜头：焦距、光圈与卡口",
+      "title_en": "Photographic Lens: Focal Length, Aperture and Mount",
+      "aliases": [
+        "镜头",
+        "lens",
+        "焦距",
+        "focal length",
+        "光圈",
+        "aperture",
+        "f-number",
+        "视角",
+        "angle of view",
+        "法兰距",
+        "flange distance"
+      ],
+      "type": "concept",
+      "level": 3,
+      "era": "1920 至今",
+      "tags": [
+        "镜头",
+        "焦距",
+        "光圈",
+        "卡口",
+        "视角"
+      ],
+      "summary": "镜头由镜组、光圈与卡口组成。焦距决定视角，光圈决定进光量与景深。卡口决定镜头与机身的兼容范围。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "焦距与视角"
+        },
+        {
+          "kind": "p",
+          "text": "焦距（focal length）以毫米计。焦距越长视角越窄。焦距越短视角越宽。视角由焦距与画幅对角线之比决定。画幅规格见 $capture.camera-format。"
+        },
+        {
+          "kind": "image",
+          "src": "img/aperture-blades.jpg",
+          "alt": "奥林巴斯 Zuiko OM 50 mm f/1.8 镜头，可见六片光圈叶片形成的多边形通光孔。",
+          "caption": "奥林巴斯 Zuiko OM 50 mm f/1.8 镜头，可见六片光圈叶片形成的多边形通光孔。",
+          "credit": "Petar Milošević",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File%3AOlympus_Zuiko_OM_50_mm_lens.jpg"
+        },
+        {
+          "kind": "table",
+          "caption": "135 画幅常用焦距与用途",
+          "rows": [
+            {
+              "c1": "18–24 mm",
+              "c2": "超广角",
+              "c3": "室内空间与大幅风景",
+              "c4": "边缘变形明显",
+              "c5": "需短后焦或特定设计"
+            },
+            {
+              "c1": "28–35 mm",
+              "c2": "广角",
+              "c3": "纪实与环境人像",
+              "c4": "透视夸张",
+              "c5": "常用大三元焦段之一"
+            },
+            {
+              "c1": "43–60 mm",
+              "c2": "标准",
+              "c3": "日常与人像",
+              "c4": "透视接近人眼",
+              "c5": "50 mm 最常见"
+            },
+            {
+              "c1": "85–135 mm",
+              "c2": "中长焦",
+              "c3": "人像与远景",
+              "c4": "透视压缩",
+              "c5": "工作距离较远"
+            },
+            {
+              "c1": "200 mm 以上",
+              "c2": "长焦",
+              "c3": "远处细节与压缩透视",
+              "c4": "景深很浅",
+              "c5": "手持需更快速度"
+            }
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "135 画幅的对角线约 43 mm。厂商把 43 mm 到 60 mm 的镜头列为标准镜头。视角换算按画幅对角线比例计算。"
+        },
+        {
+          "kind": "h2",
+          "text": "光圈与 f 值"
+        },
+        {
+          "kind": "defs",
+          "term": "光圈数（f-number）",
+          "text": "光圈数等于焦距除以有效孔径直径。数值越小进光量越大。f/2 的进光量是 f/4 的四倍。标定 f 值时按镜头的最大通光孔径计算。"
+        },
+        {
+          "kind": "p",
+          "text": "收小光圈可减小球差（spherical aberration）。f/16 以上的衍射使细节变软。厂商标称 f/2.8 通常指全开时的分辨表现。各类像差见 $capture.lens-aberrations。"
+        },
+        {
+          "kind": "p",
+          "text": "收小光圈可减小球差（spherical aberration）。f/16 以上的衍射使细节变软。厂商标称 f/2.8 通常指全开时的分辨表现。各类像差见 $capture.lens-aberrations。"
+        },
+        {
+          "kind": "h2",
+          "text": "卡口与转接"
+        },
+        {
+          "kind": "p",
+          "text": "卡口（lens mount）由法兰距与卡爪形式决定。法兰距（flange distance）是卡口面到胶片平面的距离。机身法兰距大于镜头法兰距时，镜头可在无穷远合焦。"
+        },
+        {
+          "kind": "p",
+          "text": "Leica M 卡口于 1954 年推出，法兰距为 27.8 mm。Nikon F 卡口于 1959 年推出。Canon FD 卡口于 1971 年 3 月推出，法兰距为 42 mm。Canon EF 卡口于 1987 年推出，法兰距为 44 mm。沿革细节见 $capture.mount-history。"
+        },
+        {
+          "kind": "p",
+          "text": "转接环只解决机械连接。老镜头装到 FD 机身的转接环上仍能在无穷远合焦。测光与自动光圈需要额外的耦合件。镜片与滤镜的影响见 $capture.filter。"
+        },
+        {
+          "kind": "h2",
+          "text": "常见镜头机械故障"
+        },
+        {
+          "kind": "troubleshoot",
+          "caption": "镜头机械故障排查",
+          "items": [
+            {
+              "t": "光圈拨杆松手后不回位",
+              "d": "拨杆机构积垢或弹簧疲劳。拆开光圈环，清洗后加少量润滑脂。"
+            },
+            {
+              "t": "全焦位合焦失败",
+              "d": "转接环法兰距错误，或机身与镜头组合厚度超差。核对卡口与法兰距数据。"
+            },
+            {
+              "t": "卡口松旷、镜头松动",
+              "d": "卡爪磨损或螺丝松动。紧固螺丝，磨损严重的卡口环需要更换。"
+            },
+            {
+              "t": "边缘画质突然下降",
+              "d": "镜片霉菌或油污。检查前组与后组，镜片清洁另见 $archive.cleaning-and-handling。"
+            }
+          ]
+        }
+      ],
+      "refs": [
+        {
+          "name": "Wikipedia: Leica M mount",
+          "url": "https://en.wikipedia.org/wiki/Leica_M_mount",
+          "kind": "article",
+          "note": "M 卡口法兰距、卡爪数与镜头命名规则。"
+        },
+        {
+          "name": "Wikipedia: Canon FD lens mount",
+          "url": "https://en.wikipedia.org/wiki/Canon_FD_lens_mount",
+          "kind": "article",
+          "note": "FD 卡口法兰距与机械信号机构。"
+        },
+        {
+          "name": "Wikipedia: 135 film",
+          "url": "https://en.wikipedia.org/wiki/135_film",
+          "kind": "article",
+          "note": "135 画幅对角线与常用焦距分类。"
+        },
+        {
+          "name": "Wikipedia: Optical aberration",
+          "url": "https://en.wikipedia.org/wiki/Optical_aberration",
+          "kind": "article",
+          "note": "光圈收缩对像差的影响。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "capture.camera-format",
+          "capture.shutter-speed-diaphragm"
+        ],
+        "next": [
+          "capture.lens-aberrations",
+          "capture.exposure-metering"
+        ],
+        "related": [
+          "capture.mount-history",
+          "capture.filter",
+          "printing.enlarger-lens"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "焦距从 50 mm 换成 100 mm，视角如何变化？",
+          "type": "single",
+          "options": [
+            "视角变宽",
+            "视角变窄",
+            "视角不变",
+            "视角变为两倍"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "视角由焦距与画幅对角线之比决定，焦距加倍则视角按比例收窄。"
+        },
+        {
+          "q": "光圈从 f/4 收到 f/5.6，曝光量如何变化？",
+          "type": "single",
+          "options": [
+            "增加一档",
+            "减少一档",
+            "不变",
+            "减少两档"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "f/5.6 是 f/4 之后的一档，进光量减半。"
+        },
+        {
+          "q": "机身法兰距 44 mm、镜头法兰距 42 mm 时，镜头能否在无穷远合焦？",
+          "type": "bool",
+          "options": [
+            "是",
+            "否"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "机身法兰距大于镜头法兰距时，镜头可被推到更远位置，达到无穷远合焦。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "capture.film-transport",
+      "title": "过片、倒片与暗盒",
+      "title_en": "Film Transport, Rewind and Cassettes",
+      "aliases": [
+        "过片",
+        "film advance",
+        "倒片",
+        "rewind",
+        "暗盒",
+        "cassette",
+        "dark slide",
+        "片基朝向",
+        "film base orientation"
+      ],
+      "type": "process",
+      "level": 3,
+      "era": "1925 至今",
+      "tags": [
+        "过片",
+        "倒片",
+        "暗盒",
+        "片基",
+        "操作"
+      ],
+      "summary": "过片把胶片按格距送到片门。倒片把曝光后的胶片卷回暗盒。装片方向与片基朝向决定影像方向与漏光位置。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "手动过片节奏"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            {
+              "t": "推满过片扳手",
+              "d": "扳手一次推到最大行程。中途停手会让胶片停在格间位置。"
+            },
+            {
+              "t": "核对计数",
+              "d": "确认计数数字跳到下一格。多数机身在扳手未推满时锁住快门。"
+            },
+            {
+              "t": "确认反光镜复位",
+              "d": "扳手末端行程把反光镜放回取景光路。取景器变清晰即为复位。"
+            },
+            {
+              "t": "听到定位声后松手",
+              "d": "棘爪声表示到位。轻轻松手可延长棘爪寿命。"
+            }
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "135 胶片每格前进 8 个齿孔，总距离为 38.00 mm。齿孔为 Kodak Standard（KS-1870），齿距为 4.75 mm。片门开口通常与齿孔对齐。齿孔规格见 $capture.camera-format。"
+        },
+        {
+          "kind": "image",
+          "src": "img/film-loading.jpg",
+          "alt": "把 135 胶片装入单镜反光相机，机背开启。片头插入卷片轴的卡槽后过片。",
+          "caption": "把 135 胶片装入单镜反光相机，机背开启。片头插入卷片轴的卡槽后过片。",
+          "credit": "Kotivalo",
+          "license": "CC0",
+          "source": "https://commons.wikimedia.org/wiki/File%3ALoading_35mm_film_into_old_SLR_camera.jpg"
+        },
+        {
+          "kind": "p",
+          "text": "Leica M3（1954–1967）早期使用双行程扳手，以降低撕裂胶片的风险。机身号 919251 起改为单行程。Nikon F（1959–1973）采用单行程棘轮扳手。"
+        },
+        {
+          "kind": "h2",
+          "text": "倒片"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            {
+              "t": "按下倒片钮",
+              "d": "按钮把收片轴与过片棘轮脱开。脱开后收片轴可自由转动。"
+            },
+            {
+              "t": "按机身指示方向转摇柄",
+              "d": "多数 135 机身顺时针转动。持续匀速转动到片尾脱离收片轴。"
+            },
+            {
+              "t": "听到轻响后停止",
+              "d": "片尾离轴的轻响表示倒片完成。此时可打开后盖。"
+            },
+            {
+              "t": "取出暗盒",
+              "d": "取出后盖后再取出暗盒。先取暗盒会带动胶片。"
+            }
+          ]
+        },
+        {
+          "kind": "warn",
+          "text": "收片轴未释放时转动摇柄会拉伤片头。片头被拉出暗盒口即视为失效。"
+        },
+        {
+          "kind": "p",
+          "text": "一次性 135 暗盒（cartridge）在装片时片头固定在收片轴上。片头须完全收入盒内。片头留在盒外会在第一张产生漏光黑边。片尾经过切角处理，比片头薄。"
+        },
+        {
+          "kind": "h2",
+          "text": "一次性暗盒与可复用暗盒"
+        },
+        {
+          "kind": "compare",
+          "caption": "一次性暗盒与可复用暗盒的差别",
+          "rows": [
+            {
+              "c1": "一次性暗盒",
+              "c2": "片头与片尾由厂方固定",
+              "c3": "白天可直接装片",
+              "c4": "拍摄后必须倒片",
+              "c5": "主要用于 135 相机"
+            },
+            {
+              "c1": "可复用暗盒",
+              "c2": "片头与片尾夹在轴上",
+              "c3": "装片须在暗房或换袋中进行",
+              "c4": "可直接抽出胶卷",
+              "c5": "用于 120 与大画幅相机"
+            }
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "乳剂面朝向镜头成像。乳剂面朝后时影像左右反转。装片方向错误会使齿孔与画格错位。彩色胶片的防晕层只覆盖一侧，从片基侧曝光会损失画质。片尾比片头薄。片基侧呈灰白半透明。"
+        },
+        {
+          "kind": "h2",
+          "text": "常见故障"
+        },
+        {
+          "kind": "troubleshoot",
+          "caption": "过片与装片故障排查",
+          "items": [
+            {
+              "t": "第一张全黑或发灰",
+              "d": "片头未收入暗盒，或暗盒在阳光下打开。换新暗盒或换袋装片。"
+            },
+            {
+              "t": "齿孔边缘出现锯齿或拉毛",
+              "d": "倒片过猛，或张力过大。匀速转动摇柄到轻响为止。"
+            },
+            {
+              "t": "每张画面重复同一格",
+              "d": "收片轴与倒片轴同时收卷，或收片轴离合失效。检查离合弹簧。"
+            },
+            {
+              "t": "画格间距不均",
+              "d": "片门张力不足，或压片板偏斜。检查片门压片板与导轨。"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "135 暗盒的倒片式机型在装片后先把胶片完全过片，再由机身反向曝光到暗盒内。此时未曝光的胶片报废，已曝光的画格受到保护。存放条件见 $archive.storage-environment。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Wikipedia: 135 film",
+          "url": "https://en.wikipedia.org/wiki/135_film",
+          "kind": "article",
+          "note": "暗盒结构、DX 编码与倒片式机型的过片方式。"
+        },
+        {
+          "name": "Wikipedia: Film perforations",
+          "url": "https://en.wikipedia.org/wiki/Film_perforations",
+          "kind": "article",
+          "note": "KS-1870 齿距与齿孔规格。"
+        },
+        {
+          "name": "Wikipedia: Leica M3",
+          "url": "https://en.wikipedia.org/wiki/Leica_M3",
+          "kind": "article",
+          "note": "双行程与单行程过片扳手的切换机身号。"
+        },
+        {
+          "name": "Wikipedia: Nikon F",
+          "url": "https://en.wikipedia.org/wiki/Nikon_F",
+          "kind": "article",
+          "note": "单行程棘轮过片扳手。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "capture.camera-format"
+        ],
+        "next": [
+          "archive.storage-environment"
+        ],
+        "related": [
+          "capture.camera-mechanics",
+          "film-stock.film-base",
+          "scanning.film-handling"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "135 胶片每格前进多少个齿孔？",
+          "type": "single",
+          "options": [
+            "4 个",
+            "6 个",
+            "8 个",
+            "10 个"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "标准 135 片门每格前进 8 个齿孔，共 38.00 mm。"
+        },
+        {
+          "q": "倒片前必须先做什么？",
+          "type": "single",
+          "options": [
+            "按下倒片钮释放收片轴",
+            "把镜头卸下",
+            "把速度盘设到 B 档",
+            "打开后盖取出胶片"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "收片轴与棘轮脱开后胶片才能自由卷回暗盒。"
+        },
+        {
+          "q": "乳剂面朝向镜头时，胶片记录的画面是否与取景所见一致？",
+          "type": "bool",
+          "options": [
+            "是",
+            "否"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "乳剂面朝向镜头时投影方向正确，画面与取景一致。"
+        }
+      ],
+      "checklist": [
+        "装片前确认片尾朝向机身内部",
+        "片头完全收入暗盒",
+        "扳手一次推满并核对计数",
+        "倒片前释放收片轴",
+        "听到片尾轻响后停止倒片"
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "capture.shutter-speed-diaphragm",
+      "title": "快门速度与光圈的组合",
+      "title_en": "Shutter Speed and Aperture Combination",
+      "aliases": [
+        "快门速度",
+        "shutter speed",
+        "光圈",
+        "aperture",
+        "档位",
+        "stop",
+        "闪光同步",
+        "flash sync",
+        "景深",
+        "depth of field"
+      ],
+      "type": "concept",
+      "level": 2,
+      "era": "1920 至今",
+      "tags": [
+        "曝光",
+        "快门",
+        "光圈",
+        "档位",
+        "景深"
+      ],
+      "summary": "快门速度与光圈共同决定曝光量。两者各改变一档时曝光量变化一倍。机身结构与同步限制见 $capture.camera-mechanics。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "一档的定义"
+        },
+        {
+          "kind": "p",
+          "text": "档（stop）是曝光量加倍或减半的单位。速度提高一档使曝光时间减半。光圈开大一档使进光量加倍。两者反向各动一档时曝光量不变。"
+        },
+        {
+          "kind": "image",
+          "src": "img/focal-plane-shutter.jpg",
+          "alt": "Yashica TL Electro-X 的焦平面快门帘幕。帘幕缝隙宽度决定曝光时间。",
+          "caption": "Yashica TL Electro-X 的焦平面快门帘幕。帘幕缝隙宽度决定曝光时间。",
+          "credit": "Hustvedt",
+          "license": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File%3AFocal-plane_shutter.jpg"
+        },
+        {
+          "kind": "table",
+          "caption": "标准档位对应表",
+          "rows": [
+            {
+              "c1": "1/30 s",
+              "c2": "f/4",
+              "c3": "室内手持基准",
+              "c4": "阴天户外",
+              "c5": "对 135 画幅 ISO 400"
+            },
+            {
+              "c1": "1/60 s",
+              "c2": "f/5.6",
+              "c3": "标准镜头手持",
+              "c4": "多云天",
+              "c5": "对 135 画幅 ISO 200"
+            },
+            {
+              "c1": "1/125 s",
+              "c2": "f/8",
+              "c3": "晴天户外",
+              "c4": "明亮阴影",
+              "c5": "对 135 画幅 ISO 100"
+            },
+            {
+              "c1": "1/250 s",
+              "c2": "f/11",
+              "c3": "直射阳光",
+              "c4": "需要补光",
+              "c5": "常用 f/16 上限"
+            },
+            {
+              "c1": "1/500 s",
+              "c2": "f/16",
+              "c3": "强光静物",
+              "c4": "衍射开始明显",
+              "c5": "叶片快门速度上限附近"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "表中组合按晴天 f/16 法则的常见对应关系整理。具体场景用测光表核对，方法见 $capture.exposure-metering。"
+        },
+        {
+          "kind": "h2",
+          "text": "速度序列"
+        },
+        {
+          "kind": "p",
+          "text": "全档速度序列按 1 秒减半排列：1 s、1/2、1/4、1/8、1/15、1/30、1/60、1/125、1/250、1/500、1/1000。标称值取整到常用档位。老机身在两档之间提供中间速度。"
+        },
+        {
+          "kind": "p",
+          "text": "Leica M3 的速度盘在 1 s 到 1/8、1/15 到 1/30、1/50 到 1/1000 之间可设中间速度。1/8 到 1/15 与 1/30 到 1/50 之间没有中间速度，因为对应不同的齿轮机构。"
+        },
+        {
+          "kind": "h2",
+          "text": "光圈序列"
+        },
+        {
+          "kind": "p",
+          "text": "全档光圈序列按 1.414 倍排列：f/1.4、f/2、f/2.8、f/4、f/5.6、f/8、f/11、f/16、f/22。标定值取整到常用档位。老镜头常标 f/3.5 或 f/4.5 等非标准值。"
+        },
+        {
+          "kind": "h2",
+          "text": "手持与景深"
+        },
+        {
+          "kind": "p",
+          "text": "手持常用 1/f 法则：快门设为焦距倒数。标准镜头取 1/60 s。光圈越大景深越浅。景深随距离增加而增加。微分式景深近似值见 $capture.lens。"
+        },
+        {
+          "kind": "h2",
+          "text": "闪光同步"
+        },
+        {
+          "kind": "p",
+          "text": "叶片快门在全速范围内保持同步。焦平面快门只在 X 同步速度内同步。超出同步速度拍摄会得到上下半幅亮度不同的画面。高速端闪光技巧见 $capture.camera-mechanics。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Wikipedia: Shutter (photography)",
+          "url": "https://en.wikipedia.org/wiki/Shutter_(photography)",
+          "kind": "article",
+          "note": "叶片快门速度上限与同步特性。"
+        },
+        {
+          "name": "Wikipedia: Focal-plane shutter",
+          "url": "https://en.wikipedia.org/wiki/Focal-plane_shutter",
+          "kind": "article",
+          "note": "焦平面快门 X 同步速度数据。"
+        },
+        {
+          "name": "Wikipedia: 135 film",
+          "url": "https://en.wikipedia.org/wiki/135_film",
+          "kind": "article",
+          "note": "135 画幅常用焦距与手持速度参考。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "film-stock.iso-speed"
+        ],
+        "next": [
+          "capture.exposure-metering"
+        ],
+        "related": [
+          "capture.camera-mechanics",
+          "capture.lens",
+          "film-stock.latitude",
+          "capture.motion-exposure"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "速度从 1/125 s 提高到 1/250 s 时，曝光量如何变化？",
+          "type": "single",
+          "options": [
+            "曝光量增加一倍",
+            "曝光量减少一倍",
+            "曝光量不变",
+            "曝光量减少四倍"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "时间减半使曝光量减半。"
+        },
+        {
+          "q": "要保持曝光量不变，速度提高一档时光圈应该如何变化？",
+          "type": "single",
+          "options": [
+            "光圈开大一档",
+            "光圈收小一档",
+            "光圈保持不变",
+            "光圈开到最大"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "速度提高一档减半曝光量，光圈开大一档补回这半档。"
+        },
+        {
+          "q": "焦平面快门超过 X 同步速度拍摄时，画面会出现什么现象？",
+          "type": "single",
+          "options": [
+            "画面上下亮度不同",
+            "画面出现彩色条纹",
+            "画格间距变宽",
+            "快门速度显示错误"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "闪光只照亮帘幕缝隙通过的那一段胶片，形成半幅曝光。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "draft"
+    },
+    {
+      "id": "capture.mount-history",
+      "title": "镜头卡口沿革与转接",
+      "title_en": "Lens Mount History and Adaptation",
+      "aliases": [
+        "卡口",
+        "lens mount",
+        "M39",
+        "Leica M mount",
+        "Nikon F mount",
+        "Canon FD",
+        "Canon EF",
+        "法兰距",
+        "flange distance",
+        "转接环",
+        "adapter"
+      ],
+      "type": "timeline",
+      "level": 4,
+      "era": "1920-至今",
+      "tags": [
+        "卡口",
+        "法兰距",
+        "转接",
+        "沿革",
+        "系统"
+      ],
+      "summary": "卡口沿革决定镜头能否装在机身上并正常联动。法兰距是转接可行性的关键尺寸。机械卡口与电子卡口在 1980 年代分开演进。",
+      "blocks": [
+        {
+          "kind": "timeline",
+          "caption": "主要卡口的年代沿革",
+          "rows": [
+            {
+              "c1": "1925",
+              "c2": "Leica I 使用 39 mm 螺纹卡口（M39）",
+              "c3": "螺纹对焦，拆装镜头慢，无自动光圈"
+            },
+            {
+              "c1": "1954",
+              "c2": "Leica M3 推出 M 卡口",
+              "c3": "卡口式对焦，法兰距 27.8 mm，测距联动"
+            },
+            {
+              "c1": "1959",
+              "c2": "Nikon F 推出 F 卡口",
+              "c3": "单反系统核心卡口，金属卡爪支撑重型镜头"
+            },
+            {
+              "c1": "1971",
+              "c2": "Canon 推出 FD 卡口",
+              "c3": "旋转卡扣配全开信号销，法兰距 42 mm"
+            },
+            {
+              "c1": "1978",
+              "c2": "New FD 改为旋转整个镜头筒",
+              "c3": "安装方式改变，老卡口镜头仍可使用"
+            },
+            {
+              "c1": "1987",
+              "c2": "Canon 推出 EF 卡口",
+              "c3": "法兰距 44 mm，电子接口驱动光圈与测光"
+            },
+            {
+              "c1": "2009",
+              "c2": "Leica 停产 R9 与 R 系列镜头",
+              "c3": "Leica 退出单反生产"
+            },
+            {
+              "c1": "2024",
+              "c2": "Pentax 17 半格机身发布",
+              "c3": "135 半格格式仍有新机身上市"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "法兰距与转接条件"
+        },
+        {
+          "kind": "p",
+          "text": "转接可行性取决于两组法兰距之差。机身法兰距减去镜头法兰距的差值等于转接环的厚度。差值为正时镜头可推到无穷远合焦。差值为零或负时需要加正透镜才能合焦。"
+        },
+        {
+          "kind": "p",
+          "text": "Canon FD 法兰距为 42 mm，EF 为 44 mm。EF 镜头加转接环装到 FD 机身时需要修正环。FD 镜头加转接环装到 FD 机身时保持无穷远合焦。"
+        },
+        {
+          "kind": "h2",
+          "text": "机械联动与电子联动"
+        },
+        {
+          "kind": "p",
+          "text": "机械卡口靠光圈拨杆与测光耦合杆传递信息。Canon FD 的光圈信号销把光圈值传给机身。Nikon F 卡口的后半段凸起向机身顶针传递光圈位置。"
+        },
+        {
+          "kind": "p",
+          "text": "电子卡口通过触点传递光圈、测光与防抖指令。跨代转接需要独立供电的转接环。仅做机械转接的镜头在电子卡口机身上只提供手动模式。"
+        },
+        {
+          "kind": "h2",
+          "text": "仍在生产的系统"
+        },
+        {
+          "kind": "p",
+          "text": "Leica M 卡口在 2020 年代仍由 Leica M-A 与 Leica M11 使用。M 卡口也用于部分 Epson、Minolta、Konica、Cosina Voigtländer 与 Rollei 机身。Leica M6 于 2022 年重新上市。Canon EOS 与 Nikon F 系统的 35 mm 单反在 2018 至 2020 年间陆续停产。"
+        },
+        {
+          "kind": "note",
+          "text": "各机身的具体法兰距与转接环厚度以厂商说明书与转接环说明书为准。本条目只给已核对的经典机型数据。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Wikipedia: Leica M mount",
+          "url": "https://en.wikipedia.org/wiki/Leica_M_mount",
+          "kind": "article",
+          "note": "M 卡口法兰距与胶片机身生产年份。"
+        },
+        {
+          "name": "Wikipedia: Canon FD lens mount",
+          "url": "https://en.wikipedia.org/wiki/Canon_FD_lens_mount",
+          "kind": "article",
+          "note": "FD 到 New FD 的演进与法兰距数据。"
+        },
+        {
+          "name": "Wikipedia: Nikon F",
+          "url": "https://en.wikipedia.org/wiki/Nikon_F",
+          "kind": "article",
+          "note": "F 卡口的推出年份与系统化设计。"
+        },
+        {
+          "name": "Wikipedia: 135 film",
+          "url": "https://en.wikipedia.org/wiki/135_film",
+          "kind": "article",
+          "note": "EOS-1V 与 Nikon F6 的停产年份。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "capture.lens"
+        ],
+        "next": [],
+        "related": [
+          "capture.camera-mechanics",
+          "capture.camera-format"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "机身法兰距 44 mm、镜头法兰距 42 mm，转接环厚度应为多少？",
+          "type": "single",
+          "options": [
+            "0 mm",
+            "1 mm",
+            "2 mm",
+            "4 mm"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "转接环厚度等于两组法兰距之差，即 2 mm。"
+        },
+        {
+          "q": "M 卡口的法兰距是多少？",
+          "type": "single",
+          "options": [
+            "27.8 mm",
+            "42 mm",
+            "44 mm",
+            "46.5 mm"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "Leica M 卡口自 1954 年起法兰距为 27.8 mm。"
+        },
+        {
+          "q": "机械卡口镜头装到电子卡口机身时通常提供哪些功能？",
+          "type": "single",
+          "options": [
+            "完整测光与自动光圈",
+            "仅手动模式",
+            "仅自动模式",
+            "防抖功能"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "跨代转接缺少电子触点，只能手动控制光圈与对焦。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "capture.lens-aberrations",
+      "title": "镜头像差基础",
+      "title_en": "Lens Aberration Basics",
+      "aliases": [
+        "像差",
+        "aberration",
+        "球差",
+        "spherical aberration",
+        "彗差",
+        "coma",
+        "像散",
+        "astigmatism",
+        "场曲",
+        "field curvature",
+        "畸变",
+        "distortion",
+        "色差",
+        "chromatic aberration"
+      ],
+      "type": "concept",
+      "level": 4,
+      "era": "1728 至今",
+      "tags": [
+        "像差",
+        "光学",
+        "色差",
+        "球差",
+        "旧镜头"
+      ],
+      "summary": "像差是镜头成像偏离理想几何光学的表现。分为单色像差与色差两类。收小光圈可减轻多数单色像差。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "分类"
+        },
+        {
+          "kind": "p",
+          "text": "像差（aberration）分为单色像差与色差。单色像差由镜片几何形状引起，单色光下也存在。色差由折射率随波长变化引起，只在混色光下出现。离焦在分类上属于最低阶像差，但可通过移动镜头或像面修正，因此不算镜头像差。"
+        },
+        {
+          "kind": "h2",
+          "text": "单色像差"
+        },
+        {
+          "kind": "table",
+          "caption": "五种单色像差与表现",
+          "rows": [
+            {
+              "c1": "球差 spherical aberration",
+              "c2": "边缘光束与近轴光束焦点不重合",
+              "c3": "全开时整幅均匀变软",
+              "c4": "收小光圈可减轻",
+              "c5": "大光圈镜头最明显"
+            },
+            {
+              "c1": "彗差 coma",
+              "c2": "离轴点光斑呈彗星状",
+              "c3": "画面边缘出现拖尾",
+              "c4": "收小光圈可减轻",
+              "c5": "大光圈与边角位置最明显"
+            },
+            {
+              "c1": "像散 astigmatism",
+              "c2": "子午与弧矢方向各有焦线",
+              "c3": "焦点偏向前后时两个方向分别模糊",
+              "c4": "选择折中焦面",
+              "c5": "边角与近距离最明显"
+            },
+            {
+              "c1": "场曲 field curvature",
+              "c2": "像面呈曲面，多为凹面",
+              "c3": "平面对焦时边缘失焦",
+              "c4": "用弯像面片基或标定焦屏",
+              "c5": "广角镜头较明显"
+            },
+            {
+              "c1": "畸变 distortion",
+              "c2": "放大率随像场位置变化",
+              "c3": "直线变桶形或枕形",
+              "c4": "无成像手段可修正",
+              "c5": "广角多桶形，长焦多枕形"
+            }
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "球差随光束高度增加而增大，因此收小光圈可以减轻。彗差出现在离轴点使用宽光束的场合。像散使离轴点成像在两个互相垂直的焦线上，两个像面在轴上相切。两个像面重合的系统称消像散（anastigmatic）。无畸变的系统称正像（orthoscopic）。"
+        },
+        {
+          "kind": "h2",
+          "text": "色差"
+        },
+        {
+          "kind": "p",
+          "text": "色差（chromatic aberration）来自色散（dispersion），即折射率随波长变化。轴向色差使不同色光焦点分离，表现为高光与暗部边缘的彩色轮廓。横向色差使不同色光的成像位置偏移，表现为边角出现紫绿色边。"
+        },
+        {
+          "kind": "p",
+          "text": "消两色色差的镜头称消色差（achromatic）。残留的色差称二级光谱（secondary spectrum）。冕牌玻璃（crown glass）色散低，阿贝数大。火石玻璃（flint glass）色散高。用冕牌正透镜配火石负透镜可实现消两色。"
+        },
+        {
+          "kind": "p",
+          "text": "消三色色差的镜头称复消色差（apochromatic）。Abbe 与 Schott 在耶拿推出高折射率冕牌玻璃后，Petzval 的设计实现了实用消像差镜头。这类镜头成为彩色与放大机镜片的基准。"
+        },
+        {
+          "kind": "h2",
+          "text": "设计取向"
+        },
+        {
+          "kind": "p",
+          "text": "实际镜头在光圈与像场之间做折中。大孔径镜头侧重轴上像质。广角镜头侧重像场像质。长焦镜头像场小，轴上像质优先。三级像差消去后通常剩下场曲，Petzval 场曲方程给出各折射面的贡献。"
+        },
+        {
+          "kind": "note",
+          "text": "厂商标称的光圈值按全开时的分辨表现判定。老镜头全开表现下降快，收小一档后中心与边角都变均匀。老镜头与新镜头的取舍见 $capture.lens。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Wikipedia: Optical aberration",
+          "url": "https://en.wikipedia.org/wiki/Optical_aberration",
+          "kind": "article",
+          "note": "像差分类、Petzval 方程与设计取向。"
+        },
+        {
+          "name": "Wikipedia: Chromatic aberration",
+          "url": "https://en.wikipedia.org/wiki/Chromatic_aberration",
+          "kind": "article",
+          "note": "轴向与横向色差的定义。"
+        },
+        {
+          "name": "Wikipedia: Petzval field curvature",
+          "url": "https://en.wikipedia.org/wiki/Petzval_field_curvature",
+          "kind": "article",
+          "note": "场曲的经典表述。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "capture.lens"
+        ],
+        "next": [],
+        "related": [
+          "printing.enlarger-lens",
+          "capture.camera-format"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "哪一类像差在收小光圈后减轻最明显？",
+          "type": "single",
+          "options": [
+            "色差",
+            "球差",
+            "场曲",
+            "畸变"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "球差随光束高度增大而增大，收小光圈直接减少光束高度。"
+        },
+        {
+          "q": "画面边缘的直线变成枕形，属于哪一类像差？",
+          "type": "single",
+          "options": [
+            "像散",
+            "彗差",
+            "畸变",
+            "场曲"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "畸变表现为放大率随像场变化，枕形与桶形是两个方向。"
+        },
+        {
+          "q": "消三色色差的镜头叫什么？",
+          "type": "single",
+          "options": [
+            "消色差 achromatic",
+            "复消色差 apochromatic",
+            "消像散 anastigmatic",
+            "正像 orthoscopic"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "消两色为 achromatic，消三色为 apochromatic。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "capture.camera-format",
+      "title": "画幅规格与齿孔标准",
+      "title_en": "Film Formats and Perforation Standards",
+      "aliases": [
+        "画幅",
+        "film format",
+        "135",
+        "35mm",
+        "120",
+        "220",
+        "620",
+        "半格",
+        "half-frame",
+        "齿孔",
+        "sprocket hole",
+        "画格",
+        "frame"
+      ],
+      "type": "concept",
+      "level": 3,
+      "era": "1901 至今",
+      "tags": [
+        "画幅",
+        "135",
+        "120",
+        "齿孔",
+        "规格"
+      ],
+      "summary": "画幅由片门开口尺寸决定。135 画幅单格为 24 × 36 mm。120 画幅按机身给出多种画格。齿孔与格距由 ISO 标准固定。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "画幅定义"
+        },
+        {
+          "kind": "p",
+          "text": "画幅（film format）由片门开口尺寸决定。同一卷 120 胶片可拍多种画格。换片背即可改变画格。视角换算见 $capture.lens。"
+        },
+        {
+          "kind": "image",
+          "src": "img/half-frame.png",
+          "alt": "半幅 135（左右）与标准 135（中间）画幅的对照。半幅在同样片长上得到双倍张数。",
+          "caption": "半幅 135（左右）与标准 135（中间）画幅的对照。半幅在同样片长上得到双倍张数。",
+          "credit": "Ashley Pomeroy",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File%3AHalf-Frame_4442.jpg"
+        },
+        {
+          "kind": "image",
+          "src": "img/slr-camera.jpg",
+          "alt": "Nikon F-501 单镜反光相机与 Nikkor 镜头。135 画幅的片窗为 24 × 36 mm。",
+          "caption": "Nikon F-501 单镜反光相机与 Nikkor 镜头。135 画幅的片窗为 24 × 36 mm。",
+          "credit": "Shun Miyazaki",
+          "license": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File%3ANikon_F-501-Nikkor.jpg"
+        },
+        {
+          "kind": "table",
+          "caption": "常见画幅的画格尺寸与张数",
+          "rows": [
+            {
+              "c1": "135 全画幅",
+              "c2": "24 × 36 mm",
+              "c3": "36 张",
+              "c4": "长宽比 2:3",
+              "c5": "单张暗盒装片"
+            },
+            {
+              "c1": "135 半格",
+              "c2": "18 × 24 mm",
+              "c3": "约 72 张",
+              "c4": "长宽比 3:4 竖构图",
+              "c5": " Olympus Pen F 推广"
+            },
+            {
+              "c1": "120 6×4.5",
+              "c2": "56 × 41.5 mm",
+              "c3": "15 或 16 张",
+              "c4": "645 系统",
+              "c5": "片背带过片遮幅板"
+            },
+            {
+              "c1": "120 6×6",
+              "c2": "56 × 56 mm",
+              "c3": "12 或 13 张",
+              "c4": "1:1 方画幅",
+              "c5": "双反相机常用"
+            },
+            {
+              "c1": "120 6×7",
+              "c2": "56 × 70 mm",
+              "c3": "10 张",
+              "c4": "长宽比 1:1.25",
+              "c5": "可放大到 8×10 英寸"
+            },
+            {
+              "c1": "120 6×9",
+              "c2": "56 × 84 mm",
+              "c3": "8 张",
+              "c4": "长宽比与 135 相同",
+              "c5": "早期 6×9 画幅"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "135 画幅的机械标准"
+        },
+        {
+          "kind": "p",
+          "text": "135 胶片标准由 ISO 1007 规定。胶片装在一次性或可复用暗盒内。齿孔为 Kodak Standard（KS-1870），齿距为 4.750 mm。片门开口 24 × 36 mm。每格前进 8 个齿孔，总距离 38.00 mm，格间留 2 mm 间隔。"
+        },
+        {
+          "kind": "p",
+          "text": "135 胶片厚度约 0.14 mm。片头一侧有一侧斜切的引出片头。片尾比片头薄。DX 编码自 1983 年起印在暗盒上，供机身读取感光度。"
+        },
+        {
+          "kind": "h2",
+          "text": "120 与 220"
+        },
+        {
+          "kind": "p",
+          "text": "120 卷片宽约 61 mm，长度按 ISO 732 为 820 mm 到 850 mm。120 背纸印有 6×4.5、6×6 与 6×9 的框号数字。220 于 1965 年推出，宽度与 120 相同，长度约为两倍。"
+        },
+        {
+          "kind": "p",
+          "text": "220 采用无背纸结构，因此背纸上缺少框号数字。带红窗读数的机身读数到框号。红窗机身需要带两档压片板位置的片背，例如 Pentax 6×7、Mamiya C220 与 Mamiya C330。"
+        },
+        {
+          "kind": "p",
+          "text": "620 于 1931 年推出，是 120 的窄芯金属卷轴版本。Kodak 于 1995 年停产 620。120 可在暗房中卷到 620 卷轴上继续使用。"
+        },
+        {
+          "kind": "h2",
+          "text": "片门与齿孔对齐"
+        },
+        {
+          "kind": "p",
+          "text": "片门在胶片平面上的纵向位置随机型不同。多数机身让片门边缘对准齿孔。齿孔位置影响扫描定位与放映配准。片门与齿孔数据也用于胶片裁切参考。"
+        },
+        {
+          "kind": "note",
+          "text": "视角换算以画幅对角线为基准。135 画幅对角线约 43 mm。换算系数为画幅对角线之比，不是长边之比。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Wikipedia: Film perforations",
+          "url": "https://en.wikipedia.org/wiki/Film_perforations",
+          "kind": "article",
+          "note": "KS-1870 齿孔尺寸与齿距规格。"
+        },
+        {
+          "name": "Wikipedia: 120 film",
+          "url": "https://en.wikipedia.org/wiki/120_film",
+          "kind": "article",
+          "note": "ISO 732 定义的 120 与 220 长度规格。"
+        }
+      ],
+      "links": {
+        "prereq": [],
+        "next": [
+          "capture.lens",
+          "capture.film-transport"
+        ],
+        "related": [
+          "capture.mount-history",
+          "scanning.scan-principles"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "135 画幅每格前进多少毫米？",
+          "type": "single",
+          "options": [
+            "24.00 mm",
+            "38.00 mm",
+            "43.00 mm",
+            "61.00 mm"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "每格前进 8 个齿孔，总距离为 38.00 mm。"
+        },
+        {
+          "q": "带红窗计数的机身使用 220 胶片时读数失败，原因是什么？",
+          "type": "single",
+          "options": [
+            "220 比 120 窄",
+            "220 采用无背纸结构",
+            "220 需要预装片",
+            "220 齿孔更小"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "220 只有引出片头和片尾，背纸上没有框号数字，红窗读不到数字。"
+        },
+        {
+          "q": "120 胶片的 6×7 画格尺寸是多少？",
+          "type": "single",
+          "options": [
+            "56 × 56 mm",
+            "56 × 70 mm",
+            "56 × 84 mm",
+            "56 × 41.5 mm"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "6×7 画格的实际尺寸为 56 × 70 mm。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    }
+  ]
+}

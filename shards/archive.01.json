@@ -1,0 +1,1411 @@
+{
+  "module": "archive",
+  "shard": "archive.01",
+  "shard_zh": "保存环境与片基分解",
+  "note": "保存模块第一分片。内容为保存环境、片基类型、醋酸基分解机理与判据、霉菌预防。数值依据美国国会图书馆照片保存须知、图像永久性研究所醋酸片基存储指南、加拿大图书馆与档案馆醋酸劣化分级、以及国家电影保存基金会保存指南。",
+  "entries": [
+    {
+      "id": "archive.acetate-decomposition",
+      "title": "醋酸片基分解机理",
+      "title_en": "Acetate Film Base Decomposition",
+      "aliases": [
+        "醋酸基分解",
+        "cellulose acetate hydrolysis",
+        "自催化",
+        "autocatalysis",
+        "游离酸度",
+        "free acidity"
+      ],
+      "type": "chemical",
+      "level": 4,
+      "era": "1920s 至今",
+      "tags": [
+        "醋酸片基",
+        "自催化",
+        "游离酸度",
+        "自动老化"
+      ],
+      "summary": "醋酸片基的主链上带有乙酰基侧链。水解使乙酰基脱落并释放游离醋酸。释放出的醋酸催化其余侧链脱落，形成自催化循环。游离酸度（free acidity）是量化这一过程最灵敏的指标。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "化学反应"
+        },
+        {
+          "kind": "p",
+          "text": "醋酸纤维素（cellulose acetate）是纤维素衍生物。主链上每个葡萄糖单位都带一个乙酰基侧链。酯键水解（ester hydrolysis）时乙酰基从主链脱落。脱落的主链质量转化为游离醋酸。"
+        },
+        {
+          "kind": "p",
+          "text": "醋酸起初释放在塑料内部。它随后扩散到表面，形成刺鼻的醋酸味。家用醋是 5% 的醋酸水溶液。图像保存机构用这个气味判断分解程度。"
+        },
+        {
+          "kind": "h2",
+          "text": "三个诱发因素与自催化"
+        },
+        {
+          "kind": "ol",
+          "text": "1. 热。储存温度决定可用的热能。\n2. 水。储存环境的相对湿度决定片基含水量。\n3. 酸。片基已生成的醋酸。"
+        },
+        {
+          "kind": "p",
+          "text": "早期称为诱导期（induction period）。此时片基内酸量很少，反应速度主要由热和水决定。这一阶段可持续数年到数百年。经过这个转折点后，酸成为第三个驱动因素。醋酸催化其余侧链脱落，整个过程 snowball 式加速。"
+        },
+        {
+          "kind": "defs",
+          "term": "游离酸度（free acidity）",
+          "text": "中和片基内全部游离酸所需的碱量。它不是 pH 值。测量方法由 ANSI IT9.1-1992 规定。图像永久性研究所认为它是最灵敏、最可靠的醋酸降解度量。"
+        },
+        {
+          "kind": "table",
+          "caption": "游离酸度标尺",
+          "rows": [
+            {
+              "c1": "0.05",
+              "c2": "新制成胶片的典型低值",
+              "c3": "无",
+              "c4": "低温或常温保存",
+              "head": [
+                "游离酸度",
+                "含义",
+                "可观察症状",
+                "处置方向"
+              ]
+            },
+            {
+              "c1": "0.5",
+              "c2": "自催化点（autocatalytic point）",
+              "c3": "醋酸味，其他症状尚可无",
+              "c4": "低温低湿保存，并监测"
+            },
+            {
+              "c1": "1.0",
+              "c2": "自 0.5 翻倍，酸度仍远未到破坏阶段",
+              "c3": "醋酸味略强",
+              "c4": "继续低温保存，同时准备复制"
+            },
+            {
+              "c1": "5.0",
+              "c2": "接近卷曲与脆化的临界点",
+              "c3": "皱褶、脆化",
+              "c4": "复制或冷冻保存"
+            },
+            {
+              "c1": "5.0 到 10.0 或更高",
+              "c2": "晚期",
+              "c3": "强烈醋酸味、收缩、隆起、增塑剂渗出",
+              "c4": "冻结并尽快复制"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "分解产物的量级"
+        },
+        {
+          "kind": "p",
+          "text": "图像保存基金会的指南给出量级参考。降解后期的 35 mm 电影胶片每 4 英尺可产生 9 茶匙以上家用醋。一卷 1000 英尺的 35 mm 胶片约相当于 250 茶匙家用醋。这个数字说明醋酸在密闭容器内会持续累积。"
+        },
+        {
+          "kind": "note",
+          "text": "加州大学阿曼德研究者的论文报告了低温干燥保存后仍出现醋酸综合症的个案。这说明温度与湿度是主要因素，同时片基配方与批次差异也起作用。"
+        },
+        {
+          "kind": "h2",
+          "text": "对影像与乳剂的影响"
+        },
+        {
+          "kind": "ul",
+          "text": "- 醋酸属于弱酸，对金属罐的腐蚀远轻于硝酸片基。\n- 醋酸属于弱氧化剂，银像保持较好，褪色远轻于硝酸分解。\n- 极端情况下醋酸会使明胶软化。\n- 醋酸会加快彩色染料的褪色速度。"
+        },
+        {
+          "kind": "p",
+          "text": "详细症状与分级见 $archive.vinegar-syndrome。片基年代判定见 $archive.base-type。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Storage Guide for Acetate Film, Image Permanence Institute",
+          "url": "https://s3.cad.rit.edu/ipi-assets/publications/acetate_guide.pdf",
+          "kind": "manual",
+          "note": "游离酸度标尺 0.05/0.5/5.0、三个诱发因素、7 加仑增塑剂含量、每 4 英尺 9 茶匙醋的量级，均出自此文件。"
+        },
+        {
+          "name": "Care, Handling, and Storage of Photographs, Library of Congress",
+          "url": "https://www.loc.gov/preservation/care/photolea.html",
+          "kind": "archive",
+          "note": "给出醋酸片基的收缩、起皱、分层与醋酸味作为分解征兆的描述。"
+        },
+        {
+          "name": "Effect of relative humidity and temperature on acetate film (Curran, Ahmad et al., Polymer Degradation and Stability 172 (2020) 109050)",
+          "url": "https://discovery.ucl.ac.uk/10089012/7/Curran_IAhmad%20et%20al.%20PDSt%202019.pdf",
+          "kind": "article",
+          "note": "报告低温干燥保存后仍发生醋酸综合症的个案。"
+        },
+        {
+          "name": "Six stages of acetate film base deterioration, Library and Archives Canada",
+          "url": "https://www.canada.ca/en/library-archives/collection/engage-learn/publications/lingua-franca/visual-glossary/acetate.html",
+          "kind": "archive",
+          "note": "六阶段外观判据。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "archive.base-type"
+        ],
+        "next": [
+          "archive.vinegar-syndrome"
+        ],
+        "related": [
+          "archive.storage-environment",
+          "archive.mold-prevention"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "醋酸片基水解后释放出哪种酸？",
+          "type": "single",
+          "options": [
+            "硝酸",
+            "醋酸",
+            "盐酸",
+            "碳酸"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "乙酰基侧链水解后生成游离醋酸，这就是醋酸综合症名称的来源。"
+        },
+        {
+          "q": "游离酸度达到多少时被图像永久性研究所标为自催化点？",
+          "type": "single",
+          "options": [
+            "0.05",
+            "0.5",
+            "1.0",
+            "5.0"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "0.5 是曲线陡升的转折点，也是醋酸开始大量自我催化的位置。"
+        },
+        {
+          "q": "诱导期阶段主导降解速度的两个因素是？",
+          "type": "multi",
+          "options": [
+            "热",
+            "水",
+            "酸",
+            "光"
+          ],
+          "answer": [
+            0,
+            1
+          ],
+          "why": "诱导期片基内酸量很少，速度主要由热和水决定；酸在自催化点之后才成为第三个因素。"
+        },
+        {
+          "q": "醋酸片基的银像比硝酸片基的银像更易褪色。",
+          "type": "bool",
+          "options": [
+            "是",
+            "否"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "醋酸属于弱氧化剂，acetate 的银像保持较好；强烈氧化与褪色主要出现在硝酸分解中。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "archive.base-type",
+      "title": "片基类型与识别",
+      "title_en": "Film Base Types and Identification",
+      "aliases": [
+        "nitrate",
+        "acetate",
+        "polyester",
+        "硝酸片基",
+        "醋酸片基",
+        "聚酯片基",
+        "SAFETY",
+        "safety film"
+      ],
+      "type": "concept",
+      "level": 4,
+      "era": "1889 至今",
+      "tags": [
+        "片基",
+        "硝酸",
+        "醋酸",
+        "聚酯",
+        "识别"
+      ],
+      "summary": "硝酸、醋酸、聚酯三类片基决定了不同的保存要求。硝酸片基易燃并自分解放出氮氧化物。醋酸片基会老化并释放醋酸。聚酯片基稳定性最高。识别片基是分库、分容器与分处置的第一步。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "三类片基"
+        },
+        {
+          "kind": "table",
+          "caption": "片基类型对照",
+          "rows": [
+            {
+              "c1": "硝酸纤维素（cellulose nitrate）",
+              "c2": "1889 年起量产，35 mm 电影片基用到 1951 年",
+              "c3": "易燃，自分解放出氮氧化物与硝酸",
+              "c4": "单独存放，低温低湿，通风，纸质缓冲袋",
+              "head": [
+                "类型",
+                "主要年代",
+                "主要风险",
+                "长期保存要求"
+              ]
+            },
+            {
+              "c1": "醋酸纤维素（cellulose acetate）",
+              "c2": "1920 年代起量产，1948 年后三醋酸片基广泛使用",
+              "c3": "醋酸综合症，收缩，脆化，隆起",
+              "c4": "缓冲纸质袋，冷藏或冻结保存"
+            },
+            {
+              "c1": "聚酯（polyester / PET）",
+              "c2": "1955 年起供应切幅片基，1960 年代起广泛使用",
+              "c3": "机械强度好，化学稳定性高",
+              "c4": "常温避光保存即可满足长期要求"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "1955 年以前标注 SAFETY 的片基一定是醋酸片基。醋酸片基与聚酯片基都会印 SAFETY 字样。"
+        },
+        {
+          "kind": "h2",
+          "text": "聚酯的年代与采纳过程"
+        },
+        {
+          "kind": "timeline",
+          "caption": "聚酯片基的推广节点",
+          "rows": [
+            {
+              "c1": "1950 年代中期",
+              "c2": "电影片基开始试用聚酯"
+            },
+            {
+              "c1": "1955 年",
+              "c2": "聚酯切幅片基上市，用于 X 光与印刷工业"
+            },
+            {
+              "c1": "1960 年代到 1970 年代",
+              "c2": "聚酯取代多数切幅片基"
+            },
+            {
+              "c1": "1980 年代",
+              "c2": "聚酯在电影片基上的使用比例上升，拼接困难拖慢了采纳"
+            },
+            {
+              "c1": "1980 年代末至今",
+              "c2": "使用比例持续上升。今天的缩微胶片几乎全为聚酯片基"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "四种醋酸片基变体"
+        },
+        {
+          "kind": "ul",
+          "text": "- 二醋酸纤维素（cellulose diacetate），1909 年起推出的早期醋酸片基。\n- 醋酸丙酸纤维素（cellulose acetate propionate），1930 年代起。\n- 醋酸丁酸纤维素（cellulose acetate butyrate），1930 年代起。\n- 三醋酸纤维素（cellulose triacetate），1940 年代后期起，强度最高。"
+        },
+        {
+          "kind": "h2",
+          "text": "非破坏性识别方法"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            {
+              "t": "偏振光检查",
+              "d": "把片基置于交叉偏振片之间观察。只有聚酯片基出现双折射彩色边缘。"
+            },
+            {
+              "t": "透光对照",
+              "d": "侧对光源观察卷芯边缘。聚酯片基透过的光量远多于醋酸与硝酸。"
+            },
+            {
+              "t": "撕裂测试",
+              "d": "聚酯片基极难撕开，需要先切出缺口。醋酸与硝酸片基容易撕开。"
+            },
+            {
+              "t": "边缘印字与缺口码",
+              "d": "查看 SAFETY 字样、右上角缺口码与乳剂朝向的印字。缺口码含生产年月信息。"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "加拿大图书与档案馆的六阶段页同时列出二苯胺试剂试验、燃烧试验与浮力试验。这些属于破坏性试验，会损伤原件。"
+        },
+        {
+          "kind": "h2",
+          "text": "症状指向"
+        },
+        {
+          "kind": "compare",
+          "caption": "两种纤维素片基的典型症状",
+          "rows": [
+            {
+              "c1": "硝酸片基",
+              "c2": "乳剂发黏，银像褪成橙红色，放出氮氧化物气味，自行升温",
+              "c3": "易燃，分解气体助燃"
+            },
+            {
+              "c1": "醋酸片基",
+              "c2": "醋酸味，乳剂隆起形成沟道，收缩，脆化，塑料罐有时被腐蚀",
+              "c3": "本身不易燃，分解产物为弱酸"
+            }
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "片基年代决定保存环境，见 $archive.storage-environment。醋酸片基的老化机理见 $archive.acetate-decomposition。"
+        },
+        {
+          "kind": "image",
+          "src": "img/safety-film-reel.jpg",
+          "alt": "比利时 Gevaert 出品的安全片基片盒，片上明确标注 Safety Film。Safety 标记是片基类型最直接的识别依据。",
+          "caption": "比利时 Gevaert 出品的安全片基片盒，片上明确标注 Safety Film。Safety 标记是片基类型最直接的识别依据。",
+          "credit": "Joost J. Bakker IJmuiden",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File%3AGevaert_Negative_Reversal_Safety_Film_made_in_Belgium_%2851879455806%29.jpg"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Storage Guide for Acetate Film, Image Permanence Institute",
+          "url": "https://s3.cad.rit.edu/ipi-assets/publications/acetate_guide.pdf",
+          "kind": "manual",
+          "note": "硝酸 1890-1950、醋酸 1925 年至今、聚酯 1960 年至今的年代划分，以及偏振光、透光、撕裂三项识别方法与 SAFETY 判读。"
+        },
+        {
+          "name": "Film Preservation Guide, chapter 2: The Film Stock, National Film Preservation Foundation",
+          "url": "https://www.filmpreservation.org/userfiles/image/PDFs/fpg_2.pdf",
+          "kind": "book",
+          "note": "1909 年起醋酸片基各变体的推出顺序、聚酯 1950 年代中期上市，以及聚酯商品名。"
+        },
+        {
+          "name": "Six stages of acetate film base deterioration, Library and Archives Canada",
+          "url": "https://www.canada.ca/en/library-archives/collection/engage-learn/publications/lingua-franca/visual-glossary/acetate.html",
+          "kind": "archive",
+          "note": "缺口码、偏振观察与三种破坏性试验的清单。"
+        },
+        {
+          "name": "Care, Handling, and Storage of Photographs, Library of Congress",
+          "url": "https://www.loc.gov/preservation/care/photolea.html",
+          "kind": "archive",
+          "note": "美国硝酸片基 1889-1951、1934 年引入醋酸片、1960 年引入聚酯片、1948 年引入三醋酸片的年代。"
+        }
+      ],
+      "links": {
+        "prereq": [],
+        "next": [
+          "archive.acetate-decomposition"
+        ],
+        "related": [
+          "archive.storage-environment",
+          "archive.vinegar-syndrome"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "把片基置于交叉偏振片之间观察，哪种片基会出现双折射彩色边缘？",
+          "type": "single",
+          "options": [
+            "硝酸",
+            "醋酸",
+            "聚酯",
+            "玻璃"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "聚酯片基的双折射使它在交叉偏振光下显出彩色边缘。"
+        },
+        {
+          "q": "标注 SAFETY 字样的片基一定是哪一种？",
+          "type": "single",
+          "options": [
+            "醋酸",
+            "聚酯",
+            "硝酸",
+            "玻璃"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "醋酸片基与聚酯片基都印 SAFETY 字样。1955 年以前的 SAFETY 片基一定是醋酸。"
+        },
+        {
+          "q": "35 mm 电影硝酸片基的停产年份是？",
+          "type": "single",
+          "options": [
+            "1929 年",
+            "1949 年",
+            "1951 年",
+            "1960 年"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "美国 35 mm 电影硝酸片基用到 1951 年。16 mm 与 8 mm 从未使用硝酸片基。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "archive.mold-prevention",
+      "title": "霉菌预防",
+      "title_en": "Mold Prevention",
+      "aliases": [
+        "mold",
+        "霉菌",
+        "fungus",
+        "mildew",
+        "relative humidity threshold"
+      ],
+      "type": "process",
+      "level": 3,
+      "era": "至今",
+      "tags": [
+        "霉菌",
+        "相对湿度",
+        "预防",
+        "防护装备"
+      ],
+      "summary": "霉菌攻击明胶粘结剂，相对湿度是决定因素。各机构给出的生长阈值在 55% 到 70% 之间。降到阈值以下是唯一实用的预防手段。分装隔离是抑制孢子扩散的日常做法。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "生长条件"
+        },
+        {
+          "kind": "table",
+          "caption": "各来源给出的霉菌生长阈值",
+          "rows": [
+            {
+              "c1": "美国国会图书馆照片保存须知",
+              "c2": "高于 60%",
+              "c3": "高于 24 °C 到 27 °C",
+              "head": [
+                "来源",
+                "相对湿度阈值",
+                "温度条件"
+              ]
+            },
+            {
+              "c1": "图像永久性研究所 FilmCare",
+              "c2": "高于 65%",
+              "c3": "未指定"
+            },
+            {
+              "c1": "国家电影保存基金会保存指南",
+              "c2": "低于 65% 时孢子不萌发",
+              "c3": "未指定"
+            },
+            {
+              "c1": "美国文物保护学会修复组词条",
+              "c2": "理想 65% 到 70%，55% 起可能生长",
+              "c3": "最佳 23.8 °C 到 28.7 °C，部分种类 2 °C 到 40 °C"
+            }
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "美国国会图书馆同时写明：霉菌在更低的温度下也能生长，例如在潮湿的冰箱里。图像保存基金会指明霉菌孢子在低于 65% 相对湿度时不萌发。"
+        },
+        {
+          "kind": "warn",
+          "text": "美国国会图书馆写明：霉菌一旦侵染照片材料，通常无法在不损伤照片的前提下清除。"
+        },
+        {
+          "kind": "h2",
+          "text": "为什么添加剂挡不住霉菌"
+        },
+        {
+          "kind": "p",
+          "text": "图像永久性研究所的霉菌页写明：部分片材在制造时把杀真菌剂掺入明胶，但霉菌生长仍无法用添加剂阻止。图像保存基金会同样写明，摄影胶片从未开发出防霉添加剂，预防是唯一实用的答案。原因在于霉菌酶会软化并溶解明胶，同时留下污渍。"
+        },
+        {
+          "kind": "h2",
+          "text": "预防步骤"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            {
+              "t": "控制相对湿度",
+              "d": "把相对湿度长期保持在 60% 以下。这是四个来源中最低的阈值。"
+            },
+            {
+              "t": "分开存放",
+              "d": "醋酸与硝酸片基分库存放。降解中的片基与健康片基分开放置，避免酸蒸气与孢子互相影响。"
+            },
+            {
+              "t": "降低温度",
+              "d": "温度降低同时抑制化学反应与霉菌生长。图像永久性研究所写明冷而干燥的环境既防霉也减缓醋酸降解。"
+            },
+            {
+              "t": "巡检",
+              "d": "定期检查片库，查看白色斑点、絮状物与异常气味。美国国会图书馆写明保持长期平均温湿度在可接受范围内比维持恒定值更重要。"
+            },
+            {
+              "t": "断绝食源",
+              "d": "藏品区禁止饮食，定期吸尘与擦拭。虫害与鼠类会污染环境并损坏包装。"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "发现疑似霉菌时先做什么"
+        },
+        {
+          "kind": "ol",
+          "text": "1. 请有经验的保护专业人员判断。图像永久性研究所把这一步列为第一项。\n2. 隔离藏品，装入密封箱或袋，用塑料布隔开。潮湿物件临时装袋，等干燥后再处理。\n3. 找出诱因。降低相对湿度、增加空气流通、降低室温、清除积水。\n4. 设定处置等级，见下表。\n5. 按等级配置防护装备。"
+        },
+        {
+          "kind": "table",
+          "caption": "爆发规模分级与呼吸防护",
+          "rows": [
+            {
+              "c1": "1 级",
+              "c2": "小于 0.3 m²",
+              "c3": "N95 或 N100 一次性呼吸器",
+              "head": [
+                "等级",
+                "面积",
+                "呼吸防护"
+              ]
+            },
+            {
+              "c1": "2 级",
+              "c2": "0.3 m² 到 3 m²",
+              "c3": "半面罩 N100"
+            },
+            {
+              "c1": "3 级",
+              "c2": "3 m² 到 10 m²",
+              "c3": "全面罩 N100"
+            },
+            {
+              "c1": "4 级",
+              "c2": "大于 10 m²",
+              "c3": "全面罩 N100 或带高效颗粒滤层的送风式呼吸防护"
+            }
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "该表来自加拿大文物保护研究所的应急响应页，依据是该所技术通报第 26 号。N 系列表示不耐油，N100 等于高效颗粒过滤。闻到霉味时加装有机蒸气滤罐。手套用聚氯乙烯或丁腈。1 级需手套与护目镜，2 级加防护服，3 级与 4 级连头部与靴子一起覆盖。防护服在离开污染区前脱下，装入 6 密耳厚的塑料袋密封后丢入室外垃圾桶。"
+        },
+        {
+          "kind": "note",
+          "text": "加拿大文物保护研究所写明：霉菌孢子无需保持活性即可保留致敏与产毒特性。健康影响清单包括鼻喉刺激、咳嗽喘息、头痛、眩晕、视物模糊、皮疹与低热。呼吸防护依据加拿大标准协会 Z94.4。"
+        },
+        {
+          "kind": "h2",
+          "text": "冻结的作用与限度"
+        },
+        {
+          "kind": "p",
+          "text": "加拿大文物保护研究所写明：冻结是杀死正在生长的霉菌的快速方法，孢子仍能耐受低温并保持活性。该所把纺织物、兽皮、羽毛、皮革、纸与木材列为可冻结处理的对象，把玻璃干板负片、油画与丙烯画列为不推荐冻结的对象。家用卧式冷冻柜一般工作在 -18 °C 到 -28 °C，可处理少量物件，冻结前装入透明聚乙烯袋。"
+        },
+        {
+          "kind": "warn",
+          "text": "美国文物保护学会修复组词条写明：冻结不是杀真菌技术，照片需要冻结到 -20 °C 才能完全停止霉菌生长。高于此温度时，生长只是变慢。"
+        },
+        {
+          "kind": "p",
+          "text": "环境阈值见 $archive.storage-environment。处置流程与药剂见 $archive.mold-treatment。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Mold, Image Permanence Institute FilmCare",
+          "url": "https://www.filmcare.org/vd_mold.php",
+          "kind": "manual",
+          "note": "65% 阈值、添加剂无效、霉菌形态与不可逆损伤的表述。"
+        },
+        {
+          "name": "Care, Handling, and Storage of Photographs, Library of Congress",
+          "url": "https://www.loc.gov/preservation/care/photolea.html",
+          "kind": "archive",
+          "note": "60% 相对湿度与 24 °C 到 27 °C 阈值、低温仍可生长、入侵后通常无法无损清除。"
+        },
+        {
+          "name": "Mould Outbreak – An Immediate Response, Canadian Conservation Institute",
+          "url": "https://www.canada.ca/en/conservation-institute/services/preventive-conservation/mould-outbreak-immediate-response.html",
+          "kind": "article",
+          "note": "四级面积分级与对应呼吸防护、防护服与手套要求、冻结的适用与不适用对象、健康影响清单。"
+        },
+        {
+          "name": "Photographic Materials Group, Mold Remediation, AIC Conservation Wiki",
+          "url": "https://conservation-wiki.com/wiki/PMG_Mold_Remediation",
+          "kind": "article",
+          "note": "最佳温湿度区间、冻结到 -20 °C 才完全停止生长的表述。"
+        },
+        {
+          "name": "Film Preservation Guide, chapter 6: Storage, National Film Preservation Foundation",
+          "url": "https://www.filmpreservation.org/userfiles/image/PDFs/fpg_6.pdf",
+          "kind": "book",
+          "note": "低于 65% 相对湿度时霉菌孢子不萌发。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "archive.storage-environment"
+        ],
+        "next": [
+          "archive.mold-treatment"
+        ],
+        "related": [
+          "archive.acetate-decomposition",
+          "archive.cold-storage"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "各来源中最低的霉菌生长相对湿度阈值是？",
+          "type": "single",
+          "options": [
+            "50%",
+            "55%",
+            "60%",
+            "70%"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "美国国会图书馆写明高于 60% 相对湿度时霉菌容易生长，是四个来源中最低的阈值。"
+        },
+        {
+          "q": "在胶片明胶中加入杀真菌剂能否阻止霉菌生长？",
+          "type": "bool",
+          "options": [
+            "是",
+            "否"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "图像永久性研究所写明添加剂挡不住霉菌，图像保存基金会写明摄影胶片从未开发出防霉添加剂。"
+        },
+        {
+          "q": "加拿大文物保护研究所把哪类物件列为不推荐冻结处理？",
+          "type": "single",
+          "options": [
+            "纸",
+            "纺织品",
+            "皮革",
+            "玻璃干板负片"
+          ],
+          "answer": [
+            3
+          ],
+          "why": "该所把纸、纺织品、兽皮、羽毛、皮革与木材列为可冻结对象，把玻璃干板负片、油画与丙烯画列为不推荐对象。"
+        },
+        {
+          "q": "0.3 m² 到 3 m² 的霉菌爆发属于哪一级？",
+          "type": "single",
+          "options": [
+            "1 级",
+            "2 级",
+            "3 级",
+            "4 级"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "分级按面积划分：小于 0.3 m² 为 1 级，0.3 m² 到 3 m² 为 2 级，3 m² 到 10 m² 为 3 级，大于 10 m² 为 4 级。"
+        }
+      ],
+      "checklist": [
+        "把库房相对湿度长期保持在 60% 以下。",
+        "把醋酸与硝酸片基分库存放。",
+        "把降解中的片基与健康片基分开。",
+        "每月巡检片库，记录温湿度与异常气味。",
+        "储备隔离用密封袋、塑料布与对应等级的呼吸防护。"
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "archive.storage-environment",
+      "title": "保存环境指标",
+      "title_en": "Storage Environment Specifications",
+      "aliases": [
+        "RH",
+        "相对湿度",
+        "temperature",
+        "cold storage",
+        "ISO 18911",
+        "ISO 18920",
+        "缓冲纸套",
+        "buffered enclosure"
+      ],
+      "type": "setting",
+      "level": 4,
+      "era": "1970s 至今",
+      "tags": [
+        "温度",
+        "相对湿度",
+        "冷存储",
+        "封装",
+        "标准"
+      ],
+      "summary": "温度与相对湿度决定醋酸降解、染料褪色与霉变的速度。低温低湿显著延长片基寿命。封装材料与家具材质同样影响片基。取放时先做温度与湿度平衡。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "温度与湿度的组合"
+        },
+        {
+          "kind": "p",
+          "text": "美国国会图书馆照片保存须知给出混合历史照片藏品的理想设定点为 30% 到 50% 相对湿度，日波动控制在正负 5% 以内。只含照片时，30% 到 40% 更合适。玻璃干板按 ISO 18918 取 30% 到 40%。彩色照片取 2 °C 与 20% 到 50% 相对湿度。"
+        },
+        {
+          "kind": "p",
+          "text": "同一须知引述 ISO 18911 说明温度与湿度的协同效应。7 °C 时推荐湿度区间为 20% 到 30%；-3 °C 时可放宽到 20% 到 40%；-10 °C 时可放宽到 20% 到 50%。温度越低，可接受的湿度上限越高。"
+        },
+        {
+          "kind": "table",
+          "caption": "分级温度区间与适用片基",
+          "rows": [
+            {
+              "c1": "室温",
+              "c2": "20 °C（68 °F）",
+              "c3": "可能发生明显损伤",
+              "c4": "可接受但不理想",
+              "head": [
+                "区间",
+                "温度",
+                "硝酸与醋酸片基",
+                "聚酯片基"
+              ]
+            },
+            {
+              "c1": "凉",
+              "c2": "12 °C（54 °F）",
+              "c3": "醋酸片基可能可以",
+              "c4": "符合 ISO 推荐"
+            },
+            {
+              "c1": "冷",
+              "c2": "4 °C（40 °F）",
+              "c3": "符合 ISO 推荐",
+              "c4": "符合 ISO 推荐"
+            },
+            {
+              "c1": "冻",
+              "c2": "0 °C（32 °F）",
+              "c3": "提供延寿",
+              "c4": "符合 ISO 推荐"
+            }
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "该表来自国家电影保存基金会保存指南第 6 章，适用于 30% 到 50% 相对湿度。指南脚注写明，出现分解迹象的硝酸与醋酸片基应当冻结。"
+        },
+        {
+          "kind": "h2",
+          "text": "长期保存的温度上限"
+        },
+        {
+          "kind": "p",
+          "text": "美国国会图书馆照片保存须知引述 ISO 18920。黑白照片与聚酯片基负片的长期保存最高推荐温度为 18 °C，日温度波动应控制在正负 2 °C 以内。硝酸、醋酸与彩色染料照片在 18 °C 下劣化很快，长期保存需要 10 °C 到 16 °C 的凉温、2 °C 到 8 °C 的冷温或 0 °C 以下的冻结条件。"
+        },
+        {
+          "kind": "p",
+          "text": "图像永久性研究所保存指南还给出三条环境规则。明胶在 20% 到 50% 平均相对湿度下状态最好。相对湿度持续高于约 70% 数天即可能滋生霉菌。低于约 15% 时出现物理损伤，包括乳剂变脆、卷曲加剧与电影胶卷的「辐裂」。"
+        },
+        {
+          "kind": "note",
+          "text": "湿度平衡比温度平衡慢得多。温度平衡以小时计，湿度平衡以天到月计。自由悬挂的片条约 8 小时，卷在罐内的胶片可达 3 个月。"
+        },
+        {
+          "kind": "h2",
+          "text": "封装材料"
+        },
+        {
+          "kind": "ul",
+          "text": "- 醋酸片基与硝酸片基装入单张缓冲纸质袋（buffered paper sleeve）。纸质袋可吸走释放出的酸。\n- 塑料封装会把酸蒸气困在内部，加速影像与片基劣化。\n- 长期保存的醋酸材料采用缓冲纸质袋。\n- 缓冲纸为 α-纤维素 87% 的无木质素纸，缓冲剂把 pH 调到 7.0 到 9.5。\n- 塑料只用聚酯、聚乙烯、聚丙烯、纺粘聚烯烃与聚苯乙烯。\n- 未做冷存储时，早期醋酸片基与硝酸片基不使用任何塑料封装。"
+        },
+        {
+          "kind": "warn",
+          "text": "木浆纸、玻璃纸与聚氯乙烯（PVC）会释放酸性物质或添加剂。选封装材料时按 ISO 18902 与 ISO 18916 检查。"
+        },
+        {
+          "kind": "p",
+          "text": "容器需要通过光化学活性测试（Photographic Activity Test, PAT）。这项测试由图像永久性研究所开发。图像保存基金会的容器要求是塑料罐用聚丙烯或聚乙烯，纸板用中性或缓冲的无木质素材料，防腐蚀金属可用，尺寸与胶片匹配。容器始终平放堆叠，使胶片平躺。"
+        },
+        {
+          "kind": "h2",
+          "text": "家具与选址"
+        },
+        {
+          "kind": "ul",
+          "text": "- 用不锈钢、阳极氧化铝或粉末喷涂钢制家具。\n- 木质货架含木质素、过氧化物与油脂，会加速劣化。新烤漆钢架初期也会放气。\n- 避开地下室与地面层、阁楼、直射阳光与窗边、暖器与散热器、喷淋头、化学品与漆料排风口。\n- 空气污染物中的氧化性气体（氮氧化物、臭氧）、颗粒物与酸性气体会损伤银像。明胶与纤维玻璃配合化学吸收过滤，并定期更换滤材。"
+        },
+        {
+          "kind": "h2",
+          "text": "监测"
+        },
+        {
+          "kind": "p",
+          "text": "国家电影保存基金会给出两类工具。温湿度记录仪价格低于 100 美元，可远程传输数据。温湿度计价格低于 50 美元，适合人工巡检。该指南同时指出，把长期平均温湿度保持在可接受范围内比维持恒定值更重要。"
+        },
+        {
+          "kind": "h2",
+          "text": "冷库与取放"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            {
+              "t": "回温",
+              "d": "胶片连同外包装在相对湿度不高于 60% 的环境中回到室温。从炎热潮湿环境回温需要数周。"
+            },
+            {
+              "t": "密封",
+              "d": "用胶带封住罐口，装入可重复封口的聚乙烯冷冻袋，或热封的铝箔聚乙烯复合袋。复合袋保护更好。排出多余空气后封口并贴标签。"
+            },
+            {
+              "t": "双层",
+              "d": "罐子外套一层袋并封住最终封口。"
+            },
+            {
+              "t": "出库",
+              "d": "在湿度不高于 60% 的条件下回冻的胶片可直接放回。取出时先套进防潮袋，使凝结水出现在袋外。机构级最短回温时间为 24 小时。"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "乔治·伊士曼博物馆的冷库保持在 4 °C 与 30% 相对湿度，缓冲间设在 13 °C 与 50% 相对湿度，至少 24 小时回温。内布拉斯加历史学会的一间 1918 年 35 mm 硝酸拷贝案例说明密封室温组合的损失速度。"
+        },
+        {
+          "kind": "warn",
+          "text": "使用任何冷存储系统都要避免湿度升高与水凝结。取片前让胶片与环境达到平衡。"
+        },
+        {
+          "kind": "p",
+          "text": "具体冷库做法见 $archive.cold-storage。片基类型与保存环境的关系见 $archive.base-type。霉菌阈值见 $archive.mold-prevention。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Care, Handling, and Storage of Photographs, Library of Congress",
+          "url": "https://www.loc.gov/preservation/care/photolea.html",
+          "kind": "archive",
+          "note": "30% 到 50% 相对湿度设定点、ISO 18911 温度湿度协同表、ISO 18920 长期温度上限、缓冲纸与塑料封装规则、家具材质与空气污染物。"
+        },
+        {
+          "name": "Film Preservation Guide, chapter 6: Storage, National Film Preservation Foundation",
+          "url": "https://www.filmpreservation.org/userfiles/image/PDFs/fpg_6.pdf",
+          "kind": "book",
+          "note": "室温/凉/冷/冻分级表、PAT 容器要求、平放堆叠、冷冻包装步骤、监测工具价格区间。"
+        },
+        {
+          "name": "Storage Guide for Acetate Film, Image Permanence Institute",
+          "url": "https://s3.cad.rit.edu/ipi-assets/publications/acetate_guide.pdf",
+          "kind": "manual",
+          "note": "明胶最佳湿度区间、65% 以上霉菌阈值、15% 以下物理损伤、温度与湿度平衡速度差异。"
+        },
+        {
+          "name": "Low Temperature Storage Implementation Basics, Image Permanence Institute",
+          "url": "https://filmcare.org/lowtempstorage.php",
+          "kind": "manual",
+          "note": "低温低湿对硝酸、醋酸与彩色片基的稳定作用，最低 20% 相对湿度的建议，以及立式冷冻柜、分层冷库、控湿冷库三种方案。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "archive.base-type"
+        ],
+        "next": [
+          "archive.cold-storage",
+          "archive.mold-prevention"
+        ],
+        "related": [
+          "archive.vinegar-syndrome",
+          "archive.mold-prevention",
+          "archive.display-framing"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "按 ISO 18911，7 °C 时推荐的相对湿度区间是？",
+          "type": "single",
+          "options": [
+            "20% 到 30%",
+            "20% 到 40%",
+            "20% 到 50%",
+            "30% 到 50%"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "温度越低可接受的湿度上限越高：7 °C 为 20% 到 30%，-3 °C 为 20% 到 40%，-10 °C 为 20% 到 50%。"
+        },
+        {
+          "q": "按 ISO 18920，黑白照片与聚酯片基负片长期保存的最高推荐温度是？",
+          "type": "single",
+          "options": [
+            "18 °C",
+            "21 °C",
+            "12 °C",
+            "4 °C"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "ISO 18920 给出 18 °C 上限；醋酸、硝酸与彩色照片在 18 °C 下劣化很快，需要更低温。"
+        },
+        {
+          "q": "醋酸片基应使用哪类封装？",
+          "type": "single",
+          "options": [
+            "单个缓冲纸质袋",
+            "密封塑料袋",
+            "玻璃纸袋",
+            "聚氯乙烯袋"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "缓冲纸吸走释放出的酸；塑料、玻璃纸与 PVC 会困住酸蒸气或释放酸性物质。"
+        },
+        {
+          "q": "相对哪种变化，温度平衡更快？",
+          "type": "single",
+          "options": [
+            "温度平衡",
+            "湿度平衡",
+            "两者相同",
+            "无法判断"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "温度平衡以小时计，湿度平衡以天到月计，卷在罐内的胶片可达 3 个月。"
+        }
+      ],
+      "checklist": [
+        "记录库房设定点温度与相对湿度，并设定正负 2 °C 与正负 5% RH 的报警线。",
+        "连续记录温湿度，保留长期曲线。",
+        "醋酸与硝酸片基单张装缓冲纸质袋。",
+        "容器平放堆叠，使胶片平躺。",
+        "使用前把胶片与环境做温度与湿度平衡，回温至少 24 小时。"
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "archive.vinegar-syndrome",
+      "title": "醋酸综合症判据",
+      "title_en": "Vinegar Syndrome Criteria and Stages",
+      "aliases": [
+        "vinegar syndrome",
+        "醋酸综合症",
+        "醋酸老化",
+        "A-D Strip",
+        "acid detector strip",
+        "channeling",
+        "沟道"
+      ],
+      "type": "concept",
+      "level": 5,
+      "era": "1950s 至今",
+      "tags": [
+        "醋酸综合症",
+        "分级",
+        "检测条",
+        "收缩",
+        "脆化"
+      ],
+      "summary": "醋酸综合症指醋酸片基自动加速老化的现象。判据有两套：检测条等级与外观阶段。两套判据合并后决定该片是继续保存还是立即复制。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "机理一句话"
+        },
+        {
+          "kind": "p",
+          "text": "酯酸水解释放醋酸。醋酸催化其余乙酰基侧链脱落。酸越多，脱落越快。"
+        },
+        {
+          "kind": "image",
+          "src": "img/vinegar-syndrome.jpg",
+          "alt": "醋酸综合症导致脆裂与卷曲的电影胶片。片基分解会释放醋酸并沿卷芯向外扩散。",
+          "caption": "醋酸综合症导致脆裂与卷曲的电影胶片。片基分解会释放醋酸并沿卷芯向外扩散。",
+          "credit": "Danielteolijr",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File%3AVinegar_Syndrome_D.D._Teoli_Jr_(1).jpg"
+        },
+        {
+          "kind": "h2",
+          "text": "第一套判据：检测条等级"
+        },
+        {
+          "kind": "p",
+          "text": "图像永久性研究所的 A-D 条（A-D Strip）是涂染料的纸带。它检测从降解醋酸片基逸出的酸蒸气。图像永久性研究所因这项工作获得 1997 年美国电影艺术与科学学会技术成就奖。参考色卡分五档，编号 0 到 3。"
+        },
+        {
+          "kind": "table",
+          "caption": "A-D 条等级与片基状态",
+          "rows": [
+            {
+              "c1": "0",
+              "c2": "良好，未见劣化",
+              "c3": "低温或冷藏保存",
+              "head": [
+                "等级",
+                "片基状态",
+                "建议措施"
+              ]
+            },
+            {
+              "c1": "1",
+              "c2": "尚好到良好，劣化开始",
+              "c3": "冷藏保存，密切监测"
+            },
+            {
+              "c1": "1.5",
+              "c2": "快速衰减开始，自催化衰减的起点",
+              "c3": "冷藏或冻结保存"
+            },
+            {
+              "c1": "2",
+              "c2": "差，正在主动降解",
+              "c3": "冻结保存，宜尽快复制"
+            },
+            {
+              "c1": "3",
+              "c2": "危急，收缩与翘曲即将出现，存在操作风险",
+              "c3": "立即冻结，复制"
+            }
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "图像永久性研究所的醋酸片基存储计算器把「已降解醋酸」定义为检测条读数 1.5。醋酸综合症的发生点对应读数约 1.5。等级 2 处于降解过程的临界阈值。"
+        },
+        {
+          "kind": "h2",
+          "text": "第二套判据：六阶段外观分级"
+        },
+        {
+          "kind": "p",
+          "text": "加拿大图书与档案馆给出六阶段外观分级。总体规律是：三阶段之前负片仍保有可读的影像细节，仍可复制。四到六阶段可读性下降。"
+        },
+        {
+          "kind": "table",
+          "caption": "醋酸片基劣化六阶段",
+          "rows": [
+            {
+              "c1": "1",
+              "c2": "可读",
+              "c3": "无可见劣化，用检测条测量",
+              "head": [
+                "阶段",
+                "影像可读性",
+                "外观与气味"
+              ]
+            },
+            {
+              "c1": "2",
+              "c2": "可读",
+              "c3": "有醋酸味，开始卷曲"
+            },
+            {
+              "c1": "3",
+              "c2": "可读",
+              "c3": "醋酸味明显，开始收缩，变脆，防卷曲层染料可能转粉红或转蓝"
+            },
+            {
+              "c1": "4",
+              "c2": "可读",
+              "c3": "翘曲，醋酸味"
+            },
+            {
+              "c1": "5",
+              "c2": "可读或部分可读",
+              "c3": "强烈醋酸味，层间出现气泡与结晶沉积"
+            },
+            {
+              "c1": "6",
+              "c2": "可读或部分可读",
+              "c3": "极强醋酸味，乳剂侧与片基侧均出现沟道"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "劣化在同一卷片上分布不均。判断时以状况最差的区域为准。粉红色来自部分柯达黑白片，蓝紫色来自部分爱克发与安思高黑白片，机理是防光晕染料在酸性环境中回复原色。"
+        },
+        {
+          "kind": "h2",
+          "text": "物理症状与临界点"
+        },
+        {
+          "kind": "table",
+          "caption": "症状与数值临界点",
+          "rows": [
+            {
+              "c1": "收缩",
+              "c2": "超过 1% 已给电影胶片带来实际困难；晚期可达 10%",
+              "c3": "乳剂尺寸通常保持不变，两者错位后产生沟道",
+              "head": [
+                "症状",
+                "数值或表现",
+                "说明"
+              ]
+            },
+            {
+              "c1": "脆化",
+              "c2": "轻微弯折即碎",
+              "c3": "酸使聚合物链断裂并缩短，片基失去韧性"
+            },
+            {
+              "c1": "卷曲",
+              "c2": "边缘先出现波浪状变形",
+              "c3": "常是早期可见征兆"
+            },
+            {
+              "c1": "增塑剂渗出",
+              "c2": "增塑剂占片基重量 12% 到 15%",
+              "c3": "针状结晶遇微热熔化，冷却后重现；或呈液泡状出现在乳剂下"
+            },
+            {
+              "c1": "沟道",
+              "c2": "乳剂隆起成网状皱纹",
+              "c3": "切幅片两面均有明胶，晚期常严重沟道"
+            }
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "图像保存基金会的指南给出一条对照数据：1918 年 35 mm 硝酸拷贝装在密封塑料袋内、置于 62 °F（16.7 °C）环境两年，图像内容再损失 5%。这说明「密封 + 室温」是最坏的组合。"
+        },
+        {
+          "kind": "h2",
+          "text": "温度与湿度的寿命预测"
+        },
+        {
+          "kind": "p",
+          "text": "图像永久性研究所的存储指南用「转盘」给出预测。转盘一侧预测新鲜醋酸片基达到自催化点所需的年数。该侧的温度范围为 30 °F 到 120 °F，相对湿度 20% 到 80%，按 10% 步进。另一侧只给出 20%、50%、80% 三个湿度值，用于预测已降解片基的游离酸度翻倍时间。"
+        },
+        {
+          "kind": "table",
+          "caption": "新鲜醋酸片基到达自催化点的预测年数",
+          "rows": [
+            {
+              "c1": "21 °C（70 °F）",
+              "c2": "50%",
+              "c3": "约 40 年",
+              "head": [
+                "温度",
+                "相对湿度",
+                "预测年数"
+              ]
+            },
+            {
+              "c1": "21 °C（70 °F）",
+              "c2": "40%",
+              "c3": "约 50 年"
+            },
+            {
+              "c1": "16 °C（60 °F）",
+              "c2": "40%",
+              "c3": "约 100 年"
+            },
+            {
+              "c1": "13 °C（55 °F）",
+              "c2": "40%",
+              "c3": "约 150 年"
+            },
+            {
+              "c1": "18 °C（65 °F）",
+              "c2": "50%",
+              "c3": "约 50 年（国家电影保存基金会引用值）"
+            }
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "已降解片基一侧的预测：16 °C（60 °F）与 50% 相对湿度下，游离酸度从 0.5 翻倍到 1.0 需约 10 年；同温度 20% 相对湿度下需约 45 年；4 °C（40 °F）与 50% 相对湿度下需约 50 年，插值到 40% 相对湿度约 100 年。"
+        },
+        {
+          "kind": "p",
+          "text": "指南给出的经验规律是：片基在 20% 相对湿度下的降解速度约为 50% 相对湿度下的三分之一到二分之一。时间等值线表覆盖从 54 °C 与 50% 相对湿度下 1 年，到 -1 °C 与 50% 相对湿度下 1000 年以上。指南原文写明，醋酸综合症的反应在 -1 °C 下比 21 °C 下慢约 17 倍。"
+        },
+        {
+          "kind": "note",
+          "text": "本条目按任务要求查证了「加速腐蚀率湿度（accelerated corrosion rate humidity, ACRH）」这一术语。图像永久性研究所存储指南全文与国家电影保存基金会保存指南第 6 章都未出现该词。本条目因此改用该指南自身的游离酸度与时间预测，并把这一点写成编辑说明。引用 ACRH 数值表前需另补一条公开来源。"
+        },
+        {
+          "kind": "h2",
+          "text": "剥层与脱层的判读"
+        },
+        {
+          "kind": "p",
+          "text": "任务要求中提到的「可剥离程度分级」与「漂白脱层的分层（bleach out acetate layering）」在本次查证范围内未找到公开分级标准。图像永久性研究所指南与加拿大图书与档案馆六阶段页均使用外观描述与检测条等级，未给出剥层程度的数值分级。本库以检测条等级加六阶段外观作为等效判据。可剥离程度需要另补来源。"
+        },
+        {
+          "kind": "h2",
+          "text": "银像的氧化"
+        },
+        {
+          "kind": "p",
+          "text": "美国国会图书馆照片保存须知把银像劣化的主因归于冲洗与水洗残留。定影液耗尽、定影时间不足或水洗不充分会留下硫代硫酸盐络合物。这些残留物使影像、粘结剂与支撑体变黄变褐，并使银像褪色。高温与高湿加快这一过程。"
+        },
+        {
+          "kind": "note",
+          "text": "本次查证范围内未找到专门定义银镜（silver mirroring）成因与判级的公开权威页面。上面一段只写残留定影剂导致的银像劣化。银镜条目待补来源后另立。"
+        },
+        {
+          "kind": "h2",
+          "text": "为什么冷存储有效"
+        },
+        {
+          "kind": "p",
+          "text": "醋酸降解是化学反应。温度每降低一段，反应速度大幅下降。图像永久性研究所的实测体验是：高于室温保存的片基约 30 年出现降解，低于室温保存 50 年的片基未见降解信号。美国国会图书馆的表述是：温度敏感材料在无冷存储时数十年内劣化，有冷存储时可保持数百年。"
+        },
+        {
+          "kind": "warn",
+          "text": "把正在降解的片基与新鲜片基放在同一密闭空间会加速前者以外所有片基的降解。分开放置。取片时先取健康片基。"
+        },
+        {
+          "kind": "p",
+          "text": "存储条件与操作步骤见 $archive.storage-environment。复制优先级见 $archive.digitization-strategy。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Using A-D Strips to Measure Acetic Acid Accumulation, Image Permanence Institute",
+          "url": "https://filmcare.org/ad_strips.php",
+          "kind": "measurement",
+          "note": "0/1/1.5/2/3 各级对应的片基状态与建议措施，1997 年学会奖，五档参考色卡。"
+        },
+        {
+          "name": "Six stages of acetate film base deterioration, Library and Archives Canada",
+          "url": "https://www.canada.ca/en/library-archives/collection/engage-learn/publications/lingua-franca/visual-glossary/acetate.html",
+          "kind": "archive",
+          "note": "六阶段外观判据、卷曲收缩脆化顺序、粉红与蓝紫防光晕染料。"
+        },
+        {
+          "name": "Storage Guide for Acetate Film, Image Permanence Institute",
+          "url": "https://s3.cad.rit.edu/ipi-assets/publications/acetate_guide.pdf",
+          "kind": "manual",
+          "note": "转盘两侧的年数预测、游离酸度 0.5 自催化点、17 倍温差效应、增塑剂 12% 到 15%、收缩 1% 与 10%。"
+        },
+        {
+          "name": "Film Preservation Guide, chapter 6: Storage, National Film Preservation Foundation",
+          "url": "https://www.filmpreservation.org/userfiles/image/PDFs/fpg_6.pdf",
+          "kind": "book",
+          "note": "18 °C 与 50% 相对湿度约 50 年的引用值，密封袋两年再损失 5% 的案例，检测条 1.5 与等级 2 的处置建议。"
+        },
+        {
+          "name": "Care, Handling, and Storage of Photographs, Library of Congress",
+          "url": "https://www.loc.gov/preservation/care/photolea.html",
+          "kind": "archive",
+          "note": "残留定影剂导致银像褪色与黄化的机理，冷存储可保持数世纪的表述。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "archive.acetate-decomposition"
+        ],
+        "next": [
+          "archive.digitization-strategy"
+        ],
+        "related": [
+          "archive.base-type",
+          "archive.cold-storage"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "检测条读数 1.5 表示什么状态？",
+          "type": "single",
+          "options": [
+            "良好，未见劣化",
+            "快速衰减开始，自催化衰减的起点",
+            "正在主动降解",
+            "危急"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "图像永久性研究所把 1.5 定为快速衰减与自催化起点，并把它作为「已降解醋酸」的计算基准。"
+        },
+        {
+          "q": "晚期醋酸片基的收缩可达多少？",
+          "type": "single",
+          "options": [
+            "1%",
+            "3%",
+            "10%",
+            "25%"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "超过 1% 已给电影胶片带来实际困难，晚期可达 10%。"
+        },
+        {
+          "q": "16 °C 与 50% 相对湿度下，已降解片基的游离酸度从 0.5 翻倍到 1.0 约需多久？",
+          "type": "single",
+          "options": [
+            "约 1 年",
+            "约 10 年",
+            "约 50 年",
+            "约 150 年"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "存储指南转盘第二侧给出的值是 16 °C、50% 相对湿度下约 10 年；同温度 20% 相对湿度下约 45 年。"
+        },
+        {
+          "q": "发生顺序中最早出现的可观察征兆是什么？",
+          "type": "single",
+          "options": [
+            "醋酸味",
+            "乳剂起洞",
+            "脆化",
+            "塑料罐腐蚀"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "醋酸味来自片基本身的分解，出现最早；起洞、脆化、罐体腐蚀都属晚期。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "stable"
+    }
+  ]
+}

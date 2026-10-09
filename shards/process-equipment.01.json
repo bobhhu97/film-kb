@@ -1,0 +1,2244 @@
+{
+ "module": "process-equipment",
+ "shard": "process-equipment.01",
+ "shard_zh": "药盆、罐与小型冲洗器",
+ "note": "药盆、Paterson 罐、Jobo 旋转系统、温度控制与手用滚轴。数值取自 JOBO Analog 2020 目录与官网产品页、ILFORD 目录页与 ILFOSOL 3 技术资料。",
+ "entries": [
+  {
+   "id": "process-equipment.tank",
+   "title": "罐式冲洗与螺旋卷轴",
+   "title_en": "Tank Processing and Film Reels",
+   "aliases": [
+    "tank",
+    "冲洗罐",
+    "螺旋卷轴",
+    "reel",
+    "spool",
+    "装片袋"
+   ],
+   "type": "process",
+   "level": 3,
+   "era": "1940s 至今",
+   "tags": [
+    "罐式冲洗",
+    "螺旋卷轴",
+    "搅拌",
+    "避光",
+    "耗材"
+   ],
+   "summary": "罐式冲洗（tank processing）把胶片装上螺旋卷轴，置入不透光罐体，注入药液后靠倒转或旋转完成搅拌。它让普通房间也能完成黑白显影。ILFORD 的 Paterson 罐与 JOBO 罐构成两大主流系统。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "工作原理"
+    },
+    {
+     "kind": "p",
+     "text": "螺旋卷轴（reel 或 spool）把胶片拉成螺旋形状。卷轴上的隔片为药液留出通道。罐体配可拆顶盖形成不透光腔体。装片在装片袋（changing bag）里完成，之后全部步骤在明房进行。"
+    },
+    {
+     "kind": "h2",
+     "text": "三种搅拌方式"
+    },
+    {
+     "kind": "table",
+     "text": "",
+     "caption": "罐式冲洗的搅拌方式与代价",
+     "rows": [
+      {
+       "c1": "搅拌方式",
+       "c2": "动力来源",
+       "c3": "药液需求",
+       "c4": "均匀性",
+       "c5": "典型故障"
+      },
+      {
+       "c1": "倒转（inversion）",
+       "c2": "人力",
+       "c3": "满罐，约 500 ml 级",
+       "c4": "罐壁处药液交换充分",
+       "c5": "倒转幅度不足造成密度偏低"
+      },
+      {
+       "c1": "轴上手转（spinning by spindle）",
+       "c2": "人力",
+       "c3": "满罐",
+       "c4": "胶片易脱轴贴壁，边缘显影偏深",
+       "c5": "贴壁与气泡"
+      },
+      {
+       "c1": "电动底座旋转（motor rotation）",
+       "c2": "马达",
+       "c3": "可减量到 140 ml 级",
+       "c4": "各处显影均匀",
+       "c5": "水封老化后漏液"
+      }
+     ]
+    },
+    {
+     "kind": "h2",
+     "text": "搅拌节奏"
+    },
+    {
+     "kind": "steps",
+     "caption": "倒转式罐的冲洗节奏",
+     "text": "",
+     "items": [
+      {
+       "t": "装片与排气",
+       "d": "在装片袋或全黑环境中把胶片绕上卷轴，装进罐体并合上顶盖。顶盖的通道用于注液与排液，密封盖用于倒转时防漏。"
+      },
+      {
+       "t": "显影前 10 秒",
+       "d": "把罐体倒转 4 次。每次倒转后在台面上轻磕罐体，使气泡脱离胶片。"
+      },
+      {
+       "t": "显影每一分钟",
+       "d": "在每分钟开始的头 10 秒内再倒转 4 次。其余时间静置。"
+      },
+      {
+       "t": "停显",
+       "d": "倒转 2 次后等待 10 秒再倒出。停显时间不严格，10 秒是下限。"
+      },
+      {
+       "t": "定影",
+       "d": "ILFORD 的黑白流程给 3 分钟以上，并重复与显影相同的倒转节奏。"
+      },
+      {
+       "t": "水洗",
+       "d": "可用流水冲洗 5 至 10 分钟。也可在罐内换水：注满同温水倒转 5 次，倒掉换水倒转 10 次，再倒掉倒转 20 次后排干。"
+      }
+     ]
+    },
+    {
+     "kind": "note",
+     "text": "上表的倒转次数取自 ILFORD 的冲洗指南与 2018 年 12 月版冲洗表。ILFORD 冲洗表同时写明：药盆与连续搅拌的设备把上述时间最多缩短 15%。时间短于 5 分钟会造成显影不匀。 卷绕方向（乳剂面朝内或朝外）与是否贴胶带固定，属于厂商与摄影师经验范畴。本条目未找到厂商的官方规定。缺口：需要 ILFORD 或 JOBO 卷轴使用说明的装片章节原文。装片方向错误先影响药液对乳剂的润湿，本条目不给出结论。"
+    },
+    {
+     "kind": "h2",
+     "text": "系统与卷轴的配套关系"
+    },
+    {
+     "kind": "warn",
+     "text": "卷轴属于各自品牌系统。Paterson 罐配 Paterson 卷轴，JOBO 罐配 JOBO 卷轴。混用会使胶片偏心，增加漏光与划伤的风险。"
+    },
+    {
+     "kind": "h2",
+     "text": "药液量与品种对照"
+    },
+    {
+     "kind": "table",
+     "text": "",
+     "caption": "常见罐型的片数与药液量",
+     "rows": [
+      {
+       "c1": "罐型",
+       "c2": "装片量",
+       "c3": "摆动冲洗药液",
+       "c4": "旋转冲洗药液",
+       "c5": "来源"
+      },
+      {
+       "c1": "ILFORD Paterson Universal Tank",
+       "c2": "2 卷 135 或 1 卷 120",
+       "c3": "500 ml",
+       "c4": "—",
+       "c5": "ILFORD 目录页"
+      },
+      {
+       "c1": "ILFORD Paterson Multi Reel 3 Tank",
+       "c2": "3 卷 135 或 2 卷 120",
+       "c3": "按片数递减",
+       "c4": "—",
+       "c5": "ILFORD 目录页"
+      },
+      {
+       "c1": "JOBO 1510 35 mm Tank",
+       "c2": "1 卷 135",
+       "c3": "250 ml",
+       "c4": "140 ml",
+       "c5": "JOBO 2020 目录 p19"
+      },
+      {
+       "c1": "JOBO 1520 Uni Tank",
+       "c2": "2 卷 135 或 2 卷 120",
+       "c3": "485 ml",
+       "c4": "240 ml",
+       "c5": "JOBO 2020 目录 p20"
+      },
+      {
+       "c1": "JOBO 1540 Multi Tank",
+       "c2": "4 卷 135 或 4 卷 120",
+       "c3": "975 ml",
+       "c4": "470 ml",
+       "c5": "JOBO 2020 目录 p21"
+      }
+     ]
+    },
+    {
+     "kind": "h2",
+     "text": "常见故障"
+    },
+    {
+     "kind": "troubleshoot",
+     "text": "",
+     "caption": "罐式冲洗故障排查",
+     "items": [
+      {
+       "t": "气泡贴附",
+       "d": "症状是画面出现圆形亮斑或密度不匀。原因：倒转后胶片立即贴回罐壁，药液被困在两片之间。处理：每次倒转后停顿两秒，让气泡上浮；显影末段轻敲工作台排气。"
+      },
+      {
+       "t": "密度整体偏低",
+       "d": "症状是全片发薄。原因：倒转幅度与次数低于工艺要求，或药液温度低于规定值。处理：按 $bw-process.d-76 的 20 °C 时间加 10% 校正，先测温再计时。"
+      },
+      {
+       "t": "边缘密度偏高",
+       "d": "症状是四周比中心深。原因：胶片在罐内盘绕过松，药液对罐壁附近交换过强。处理：换密配合适的卷轴，改用倒转式搅拌。"
+      },
+      {
+       "t": "划伤",
+       "d": "症状是沿螺旋方向的细线。原因：卷轴隔片毛刺、罐壁划痕、卷轴装反。处理：换卷轴，用软水冲洗罐体，装片时确认卷轴方向。"
+      },
+      {
+       "t": "漏光",
+       "d": "症状是全片灰雾增加。原因：顶盖密封圈老化、装片袋漏气、卷轴未卡到中心柱。处理：更换密封圈，用装片袋抽气测试，确认卷轴到位。"
+      }
+     ]
+    },
+    {
+     "kind": "note",
+     "text": "ILFORD 目录把 Multi Reel 3 Tank 描述为可装任意数量卷轴，并提示装片偏少时搅拌会过猛。冲洗 1 卷 135 时按满罐量配液，药液量随片数递减。"
+    },
+    {
+     "kind": "note",
+     "text": "考证范围：ILFORD 与 JOBO 罐的片数与药液量取自厂商页面与目录。搅拌节奏取自 ILFORD 的冲洗指南与冲洗表。钢罐与自制转鼓的容量数据取自 Jollinger 暗房设备指南，属二手来源。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "bw-process.sop-tank"
+    ],
+    "next": [
+     "process-equipment.paterson",
+     "process-equipment.rotator"
+    ],
+    "related": [
+     "process-equipment.temperature-control",
+     "bw-process.mixing-temp-control",
+     "process-equipment.nikonos"
+    ],
+    "contrast": [
+     "process-equipment.trays"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "Paterson Universal Tank 冲洗两卷 135 胶片需要多少药液？",
+     "type": "single",
+     "options": [
+      "500 ml",
+      "250 ml",
+      "140 ml",
+      "975 ml"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "ILFORD 目录页写明两卷 135 或一卷 120 需 500 ml 药液。250 ml 与 140 ml 是 JOBO 1510 的两种模式用量，975 ml 是 JOBO 1540 的摆动量。"
+    },
+    {
+     "q": "把 Paterson 卷轴装进 JOBO 罐会出现什么后果？",
+     "type": "single",
+     "options": [
+      "胶片偏心，漏光与划伤风险上升",
+      "药液自动变成 1+9 稀释",
+      "卷轴自动适配中心柱",
+      "温度精度提高到 0.2 °C"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "卷轴属于各自系统，径向尺寸不同会使胶片偏心。稀释比与温度精度由化学配方与加热器决定。"
+    },
+    {
+     "q": "下面哪些属于罐式冲洗的常见故障？",
+     "type": "multi",
+     "options": [
+      "气泡贴附",
+      "边缘密度偏高",
+      "定影液银离子超标",
+      "漏光"
+     ],
+     "answer": [
+      0,
+      1,
+      3
+     ],
+     "why": "气泡、边缘密度差与漏光都来自罐体与搅拌环节。银离子超标属于定影液与废液管理问题，参见 $bw-process.stop-bath-fix。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "ILFORD Paterson Universal Tank and Two Reels 产品页（archive.org 快照 20260511）",
+     "url": "http://web.archive.org/web/20260511063825/https://www.ilfordphoto.com/catalog/product/view/id/1579/s/universal-tank-and-two-reels/category/77/",
+     "kind": "archive"
+    },
+    {
+     "name": "JOBO Analog 2020 产品目录",
+     "url": "https://www.jobo.com//bin/ecms_streamer.php?emb_label=flyer_jobo_analog_2020_final&inline=",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "Jollinger Darkroom Equipment Guide",
+     "url": "http://www.jollinger.com/photo/articles/darkequp.htm",
+     "kind": "article"
+    },
+    {
+     "name": "ILFORD 冲洗第一卷黑白胶片（2003 年 10 月）",
+     "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/04/Processing-your-first-black-and-white-film.pdf",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "ILFORD 胶片与相纸的省水洗法",
+     "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/03/Reducing-Wash-Water.pdf",
+     "kind": "manufacturer"
+    }
+   ],
+   "updated": "2026-10-09",
+   "status": "reviewed"
+  },
+  {
+   "id": "process-equipment.trays",
+   "title": "药盆、显影盘与温度控制",
+   "title_en": "Processing Trays and Temperature Control",
+   "aliases": [
+    "tray",
+    "药盆",
+    "显影盘",
+    "盘式冲洗",
+    "tank and tray"
+   ],
+   "type": "equipment",
+   "level": 3,
+   "era": "1900s 至今",
+   "tags": [
+    "药盆",
+    "盘式冲洗",
+    "相纸",
+    "温度控制",
+    "搅拌"
+   ],
+   "summary": "药盆（tray）是最早的冲洗容器，1900 年代的手工暗房靠它在红光下完成相纸冲洗。它结构简单，温度靠人工水浴维持。今天它仍是黑白相纸与小幅面胶片的首选。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "药盆的构造要点"
+    },
+    {
+     "kind": "p",
+     "text": "药盆是无盖浅盘。尺寸取比常用相纸大一档的规格，留出边缘以便手指或夹子取片。盆底带凸筋或波纹，相纸悬空放置，减少与盆底贴合。盆角设倒液口，倒液时减少泼洒。"
+    },
+    {
+     "kind": "image",
+     "src": "img/darkroom-tray.png",
+     "alt": "柯达黑色塑料盘显用显影盘。盘显时药液面浅，需连续轻推保证均匀。",
+     "caption": "柯达黑色塑料盘显用显影盘。盘显时药液面浅，需连续轻推保证均匀。",
+     "credit": "Eastman Kodak Company",
+     "license": "Public domain",
+     "source": "https://commons.wikimedia.org/wiki/File%3AEastman_Kodak_Darkroom_Tray_-_DPLA_-_6d4d4f5c4399519ab48bed18a53562eb_(page_1).jpg"
+    },
+    {
+     "kind": "h2",
+     "text": "药盆与转鼓的分工"
+    },
+    {
+     "kind": "table",
+     "text": "",
+     "caption": "药盆与转鼓的使用场景",
+     "rows": [
+      {
+       "c1": "容器",
+       "c2": "典型用途",
+       "c3": "暗房光照",
+       "c4": "药液成本",
+       "c5": "手工难度"
+      },
+      {
+       "c1": "药盆",
+       "c2": "黑白相纸、小幅面胶片",
+       "c3": "红光安全灯即可",
+       "c4": "药液可循环使用",
+       "c5": "需要连续搅动"
+      },
+      {
+       "c1": "避光转鼓",
+       "c2": "彩色相纸、胶片",
+       "c3": "全黑或装片袋",
+       "c4": "药液耗量大",
+       "c5": "倒转即可"
+      }
+     ]
+    },
+    {
+     "kind": "h2",
+     "text": "温度控制的三种做法"
+    },
+    {
+     "kind": "ol",
+     "text": "1. 常温水浴。把药盆放入水盆，用冷水或温水调节。水温变化慢，接近恒温。\n2. 药液恒温。把配好的药液置于水浴中，靠混合维持温度。\n3. 加热器控温。用带恒温器的加热棒或加热垫，配一支可校准的温度计。JOBO CPE-3 与 CPP-3 的水浴温度范围 20 至 40 °C，精度 ±0.2 °C（CPE-3 目录值 ±0.4 °C）。"
+    },
+    {
+     "kind": "h2",
+     "text": "温度计的选择"
+    },
+    {
+     "kind": "ul",
+     "text": "- 黑白冲洗用 2 °C 分度即可，折合 1 °F 读数。\n- 彩色冲洗用 1 °C 分度。\n- 黑白常用温度区间约 65 至 80 °F，彩色约 75 至 105 °F。\n- 调药需要热水时，最高温度见到 125 °F。\n- 玻璃温度计易碎并含汞，塑料温度计韧性更好，金属温度计最耐用。\n- JOBO #3321 彩色温度计量程至 50 °C，分度 0.2 °C。"
+    },
+    {
+     "kind": "h2",
+     "text": "搅拌与水痕"
+    },
+    {
+     "kind": "p",
+     "text": "黑白相纸在显影首段连续搅动，随后按间隔搅动。搅动幅度不足会让药液与乳剂接触不均。定影末段使用海綿或刮水器挤除表面水分，可减少水痕。胶片冲洗的旋转式搅拌把这一环节交给机器。参见 $process-equipment.rotator。"
+    },
+    {
+     "kind": "h2",
+     "text": "药盆的常见问题"
+    },
+    {
+     "kind": "troubleshoot",
+     "text": "",
+     "caption": "药盆冲洗故障排查",
+     "items": [
+      {
+       "t": "相纸贴盆底",
+       "d": "症状是相纸取出时撕破或带白斑。原因：盆底为平面，相纸面积与盆底相近。处理：改用带凸筋的盆，或让相纸一角架空。"
+      },
+      {
+       "t": "药液覆盖不足",
+       "d": "症状是相纸局部显影浅。原因：盆底凸筋过高，液面低于相纸。处理：减少药液量，让相纸靠盆壁浸没。"
+      },
+      {
+       "t": "密度偏浅",
+       "d": "症状是全片显影不足。原因：温度偏低或显影时间偏短。处理：先测药液温度，再按 $bw-process.d-96-boost 的时间系数补偿。"
+      },
+      {
+       "t": "药盆开裂",
+       "d": "症状是塑料盆出现渗漏。原因：材料老化或受冲击。处理：更换药盆，旧盆只用于水洗。"
+      }
+     ]
+    },
+    {
+     "kind": "note",
+     "text": "考证范围：药盆与温度计的选择建议取自 Jollinger 暗房设备指南，属二手来源。加热器温度范围与精度取自 JOBO 2020 目录。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "bw-process.sop-tank"
+    ],
+    "next": [
+     "process-equipment.temperature-control",
+     "process-equipment.roller-processor"
+    ],
+    "related": [
+     "printing.print-processing",
+     "process-equipment.tank"
+    ],
+    "contrast": [
+     "process-equipment.roller-processor"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "彩色冲洗应选哪种分度的温度计？",
+     "type": "single",
+     "options": [
+      "1 °C 分度",
+      "2 °C 分度",
+      "5 °C 分度",
+      "刻度盘式即可"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "Jollinger 指南指出彩色冲洗需 1 °C 分度，黑白用 2 °C 分度已够。刻度盘式温度计读数方便，长期使用需定期与标准温度计比对。"
+    },
+    {
+     "q": "药盆底部凸筋的作用是什么？",
+     "type": "single",
+     "options": [
+      "让相纸悬空，减少贴底",
+      "加快药液蒸发",
+      "提高安全灯亮度",
+      "降低药液成本"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "凸筋与波纹让相纸与盆底保持间隙，取片时不易撕破。凸筋过高会抬高所需液面。"
+    },
+    {
+     "q": "下面哪些属于药盆冲洗的常见问题？",
+     "type": "multi",
+     "options": [
+      "相纸贴盆底",
+      "药液覆盖不足",
+      "水浴温度漂移",
+      "卷轴偏心"
+     ],
+     "answer": [
+      0,
+      1,
+      2
+     ],
+     "why": "贴底、覆盖不足与温度漂移都出现在盘式流程。卷轴偏心属于罐式流程的问题。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Jollinger Darkroom Equipment Guide",
+     "url": "http://www.jollinger.com/photo/articles/darkequp.htm",
+     "kind": "article"
+    },
+    {
+     "name": "JOBO Colorthermometer #3321 产品页",
+     "url": "https://www.jobo.com/analog/3321-jobo-colorthermometer-new-style",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "JOBO Analog 2020 产品目录",
+     "url": "https://www.jobo.com//bin/ecms_streamer.php?emb_label=flyer_jobo_analog_2020_final&inline=",
+     "kind": "manufacturer"
+    }
+   ],
+   "updated": "2026-10-09",
+   "status": "reviewed"
+  },
+  {
+   "id": "process-equipment.paterson",
+   "title": "Paterson 三盘与通用罐系统",
+   "title_en": "Paterson Tank System",
+   "aliases": [
+    "Paterson",
+    "Paterson tank",
+    "paterson tank",
+    "universal tank",
+    "multi reel"
+   ],
+   "type": "equipment",
+   "level": 3,
+   "era": "1940s 至今",
+   "tags": [
+    "Paterson",
+    "Ilford",
+    "罐式冲洗",
+    "卷轴",
+    "耗材"
+   ],
+   "summary": "Paterson 是 ILFORD 授权生产的螺旋罐系统，1940 年代进入市场。它靠中心柱与自动装片卷轴完成罐式冲洗，是目前仍在产的家用黑白罐。ILFORD 同时在售 35 mm 单卷罐、通用罐与三卷八卷多轴罐。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "构造与工作方式"
+    },
+    {
+     "kind": "p",
+     "text": "Paterson 罐由避光塑料罐体、中心柱与可拆顶盖组成。卷轴卡在中心柱上，胶片呈螺旋排列。卷轴数量可少于罐体最大容量。冲洗在明房完成，靠倒转罐体搅拌。"
+    },
+    {
+     "kind": "h2",
+     "text": "在售型号与规格"
+    },
+    {
+     "kind": "table",
+     "text": "",
+     "caption": "ILFORD 在售 Paterson 罐规格",
+     "rows": [
+      {
+       "c1": "型号",
+       "c2": "料号",
+       "c3": "装片量",
+       "c4": "参考价",
+       "c5": "随附卷轴"
+      },
+      {
+       "c1": "35 mm Tank and Reel",
+       "c2": "PTP",
+       "c3": "1 卷 135",
+       "c4": "44.17 美元",
+       "c5": "含 1 个"
+      },
+      {
+       "c1": "Universal Tank and Two Reels",
+       "c2": "PTP115",
+       "c3": "2 卷 135 或 1 卷 120",
+       "c4": "42.27 美元",
+       "c5": "含 2 个自动装片卷轴"
+      },
+      {
+       "c1": "Multi Reel 3 Tank",
+       "c2": "PTP116",
+       "c3": "3 卷 135 或 2 卷 120",
+       "c4": "49.87 美元",
+       "c5": "卷轴另购"
+      },
+      {
+       "c1": "Multi Reel 8 Tank",
+       "c2": "PTP",
+       "c3": "8 卷 135 量级",
+       "c4": "目录在售",
+       "c5": "卷轴另购"
+      }
+     ]
+    },
+    {
+     "kind": "h2",
+     "text": "药液量规则"
+    },
+    {
+     "kind": "p",
+     "text": "ILFORD 目录写明冲洗两卷 135 或一卷 120 需 500 ml 药液。片数增加时按比例增加药液量。片数少于罐体容量时搅拌力度相对增强，ILFORD 提示此时注意密度变化。"
+    },
+    {
+     "kind": "h2",
+     "text": "配方与保存"
+    },
+    {
+     "kind": "table",
+     "text": "",
+     "caption": "Paterson 罐使用的 ILFOSOL 3 配液与保存",
+     "rows": [
+      {
+       "c1": "项目",
+       "c2": "1+9 稀释",
+       "c3": "1+14 稀释",
+       "c4": "说明",
+       "c5": "来源"
+      },
+      {
+       "c1": "显影温度",
+       "c2": "20 °C",
+       "c3": "20 °C",
+       "c4": "可用范围 20 至 24 °C，容差 ±1 °C",
+       "c5": "ILFOSOL 3 资料"
+      },
+      {
+       "c1": "500 ml 罐的浓缩液",
+       "c2": "50 ml",
+       "c3": "33 ml",
+       "c4": "余量用水补足",
+       "c5": "ILFOSOL 3 稀释表"
+      },
+      {
+       "c1": "500 ml 原液可冲卷数",
+       "c2": "16 卷 135/36",
+       "c3": "24 卷",
+       "c4": "工作液一次性使用",
+       "c5": "ILFOSOL 3 资料"
+      }
+     ]
+    },
+    {
+     "kind": "note",
+     "text": "ILFOSOL 3 资料写明该显影液适合螺旋罐、药盆与旋转处理器，不配补充液。工作液一次性使用，显影后立即弃去。"
+    },
+    {
+     "kind": "h2",
+     "text": "常见问题"
+    },
+    {
+     "kind": "troubleshoot",
+     "text": "",
+     "caption": "Paterson 罐故障排查",
+     "items": [
+      {
+       "t": "卷轴卡不到位",
+       "d": "症状是装片时胶片长度不合。原因：卷轴未推到中心柱底。处理：装片时听到到位声，或装好后轻拉胶片确认阻力。"
+      },
+      {
+       "t": "搅拌过猛",
+       "d": "症状是同一批胶片密度波动。原因：装片数少于罐体容量。处理：增加卷轴数量，或改用配重片（MOD 54）填补空间。"
+      },
+      {
+       "t": "顶盖漏光",
+       "d": "症状是全片灰雾升高。原因：密封圈变形或顶盖螺纹磨损。处理：更换顶盖密封圈，检查螺纹是否有异物。"
+      },
+      {
+       "t": "罐体刮伤",
+       "d": "症状是胶片出现竖向划线。原因：罐壁被硬物刮伤。处理：换罐，或在刮伤处贴透明胶带垫高。"
+      }
+     ]
+    },
+    {
+     "kind": "note",
+     "text": "考证范围：型号、料号、价格与 500 ml 药液量取自 ILFORD 官方目录页。Paterson 品牌由 ILFORD 授权生产，历史沿革见 $process-equipment.equipment-history。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "process-equipment.tank"
+    ],
+    "next": [
+     "process-equipment.combi-tank",
+     "process-equipment.home-lab"
+    ],
+    "related": [
+     "process-equipment.jobo",
+     "bw-process.sop-tank",
+     "bw-process.developer-chemistry"
+    ],
+    "contrast": [
+     "process-equipment.jobo"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "Paterson Universal Tank 冲洗一卷 120 胶片需要多少药液？",
+     "type": "single",
+     "options": [
+      "500 ml",
+      "250 ml",
+      "140 ml",
+      "1 L"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "ILFORD 目录写明 500 ml 药液可冲两卷 135 或一卷 120。"
+    },
+    {
+     "q": "ILFOSOL 3 的工作液使用方式是？",
+     "type": "single",
+     "options": [
+      "一次性使用，显影后弃去",
+      "配补充液循环使用",
+      "低温保存后重复使用",
+      "与定影液混合使用"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "ILFOSOL 3 技术资料写明该液不配补充液，工作液一次性使用。需要补充液的工艺见 $process-equipment.mixed-chemistry。"
+    },
+    {
+     "q": "Multi Reel 3 Tank 装片数少于最大容量时会怎样？",
+     "type": "single",
+     "options": [
+      "搅拌变剧烈，密度波动",
+      "自动降低药液量",
+      "温度上升 1 °C",
+      "顶盖自动排气"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "ILFORD 产品页提示装片偏少会导致药液搅拌过猛。可用 MOD 54 片夹架填补空位。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "ILFORD Paterson Universal Tank and Two Reels 产品页（archive.org 快照 20260511）",
+     "url": "http://web.archive.org/web/20260511063825/https://www.ilfordphoto.com/catalog/product/view/id/1579/s/universal-tank-and-two-reels/category/77/",
+     "kind": "archive"
+    },
+    {
+     "name": "ILFORD Paterson Multi Reel 3 Tank 产品页（archive.org 快照 20260521）",
+     "url": "http://web.archive.org/web/20260521053243/https://www.ilfordphoto.com/catalog/product/view/id/1580/s/multi-reel-3-tank-excl-reels/category/77/",
+     "kind": "archive"
+    },
+    {
+     "name": "ILFORD ILFOSOL 3 技术资料",
+     "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2019/08/ILFOSOL-3-June2019.pdf",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "ILFORD Darkroom Accessories 目录页（archive.org 快照 20260413）",
+     "url": "http://web.archive.org/web/20260413042246/https://www.ilfordphoto.com/accessories/darkroom-accessories",
+     "kind": "archive"
+    }
+   ],
+   "updated": "2026-10-09",
+   "status": "reviewed"
+  },
+  {
+   "id": "process-equipment.jobo",
+   "title": "JOBO 手动盘式处理器与 Lift",
+   "title_en": "JOBO CPE and CPP Manual Processors",
+   "aliases": [
+    "JOBO",
+    "CPE-2",
+    "CPE-Plus",
+    "CPE-3",
+    "CPP-3",
+    "CPP-Classic",
+    "Colorprocessor"
+   ],
+   "type": "equipment",
+   "level": 4,
+   "era": "1972 至今",
+   "tags": [
+    "JOBO",
+    "旋转冲洗",
+    "处理器",
+    "Lift",
+    "温度控制",
+    "耗材"
+   ],
+   "summary": "JOBO 是 1923 年创立的德国冲洗设备厂，1972 年起以 CPE 系列盘式处理器进入市场。当前产品线含 CPE-3、CPP-3 与 CPP-Classic。Lift 附件让药液在旋转中更换，无需手动倒罐。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "厂家与产品谱系"
+    },
+    {
+     "kind": "p",
+     "text": "JOBO International GmbH 位于德国 Gummersbach，创立于 1923 年，现为第三代家族经营。厂家自述阿波罗 11 号首次登月照片使用 JOBO 设备冲洗。旋转冲洗加一次性药液是厂家推广的核心组合。"
+    },
+    {
+     "kind": "image",
+     "src": "img/jobo-processor.jpg",
+     "alt": "JOBO CPE2 旋转冲洗机与药液槽。旋转加工依赖恒温水浴与转速控制。",
+     "caption": "JOBO CPE2 旋转冲洗机与药液槽。旋转加工依赖恒温水浴与转速控制。",
+     "credit": "Jacopo188",
+     "license": "CC BY-SA 3.0",
+     "source": "https://commons.wikimedia.org/wiki/File%3AJobo_CPE_2.JPG"
+    },
+    {
+     "kind": "h2",
+     "text": "CPE-3 规格"
+    },
+    {
+     "kind": "table",
+     "text": "",
+     "caption": "JOBO CPE-3 技术数据",
+     "rows": [
+      {
+       "c1": "项目",
+       "c2": "数值",
+       "c3": "项目",
+       "c4": "数值",
+       "c5": "来源"
+      },
+      {
+       "c1": "水浴容积",
+       "c2": "9 L",
+       "c3": "温度范围",
+       "c4": "20 至 40 °C",
+       "c5": "2020 目录 p12"
+      },
+      {
+       "c1": "温度精度",
+       "c2": "±0.4 °C",
+       "c3": "官网产品页",
+       "c4": "±0.2 °C",
+       "c5": "两处数值存在差异"
+      },
+      {
+       "c1": "电机转速",
+       "c2": "75 rpm",
+       "c3": "空重",
+       "c4": "3 kg",
+       "c5": "官网产品页"
+      },
+      {
+       "c1": "电源",
+       "c2": "230 V/50 Hz 330 W",
+       "c3": "110 V/60 Hz 300 W",
+       "c5": "官网产品页"
+      },
+      {
+       "c1": "片容量",
+       "c2": "5 卷 135，6 卷 120",
+       "c3": "12 张 4x5\"",
+       "c5": "2020 目录 p13"
+      },
+      {
+       "c1": "相纸容量",
+       "c2": "至 30×40 cm",
+       "c3": "供货含",
+       "c4": "4×600 ml 瓶、Tank #1520、Lift #4062",
+       "c5": "2020 目录 p13"
+      }
+     ]
+    },
+    {
+     "kind": "h2",
+     "text": "CPP-3 与 CPP-Classic 规格"
+    },
+    {
+     "kind": "table",
+     "text": "",
+     "caption": "JOBO CPP 系列技术数据",
+     "rows": [
+      {
+       "c1": "项目",
+       "c2": "CPP-3",
+       "c3": "CPP-Classic",
+       "c4": "说明",
+       "c5": "来源"
+      },
+      {
+       "c1": "水浴容积",
+       "c2": "18 L",
+       "c3": "18 L",
+       "c4": "配自来水接口",
+       "c5": "2020 目录 p3"
+      },
+      {
+       "c1": "温度范围与精度",
+       "c2": "20 至 40 °C，±0.2 °C",
+       "c3": "20 至 40 °C，±0.2 °C",
+       "c4": "带自动冷却",
+       "c5": "2020 目录 p3"
+      },
+      {
+       "c1": "电机转速",
+       "c2": "25 至 75 rpm",
+       "c3": "25 至 75 rpm",
+       "c4": "转速可调",
+       "c5": "2020 目录 p32"
+      },
+      {
+       "c1": "操作面板",
+       "c2": "液晶显示加软触面板",
+       "c3": "传统旋钮加外接计时器",
+       "c4": "CPP-3 为 2013 年改版机型",
+       "c5": "官网产品页"
+      },
+      {
+       "c1": "可存流程",
+       "c2": "32 个，预装 13 个",
+       "c3": "无",
+       "c4": "每步可编程计时",
+       "c5": "官网产品页"
+      },
+      {
+       "c1": "片容量",
+       "c2": "7 卷 135，8 卷 120",
+       "c3": "7 卷 135，8 卷 120",
+       "c4": "18 张 4x5\"，相纸至 50×60 cm",
+       "c5": "2020 目录 p32"
+      },
+      {
+       "c1": "电源与重量",
+       "c2": "330 W，9 kg",
+       "c3": "880 W，6.8 kg",
+       "c4": "230 V 与 110 V 两种版本",
+       "c5": "官网与目录"
+      }
+     ]
+    },
+    {
+     "kind": "h2",
+     "text": "Lift 的作用"
+    },
+    {
+     "kind": "p",
+     "text": "Lift 让罐体保持旋转的同时完成排药与加药。旧式罐底压入齿圈 #1505 即可升级为 Lift 用罐。CPE-3 配 Lift #4062，CPP-3 配 Lift #4072，CPP-Classic 配 #4095。E-6 改装套装 #4061 可把 CPE-2 与 CPE-3 改为 6 浴反转片冲洗机。"
+    },
+    {
+     "kind": "h2",
+     "text": "代际变化"
+    },
+    {
+     "kind": "timeline",
+     "text": "",
+     "caption": "JOBO 处理器型号推进",
+     "rows": [
+      {
+       "c1": "1972 起",
+       "c2": "CPE 系列进入市场",
+       "c3": "确立 JOBO 旋转冲洗的名声"
+      },
+      {
+       "c1": "1990 年代",
+       "c2": "CPP 系列面世",
+       "c3": "加入可编程流程与水浴控温"
+      },
+      {
+       "c1": "2013",
+       "c2": "CPP-3 全面改版",
+       "c3": "官网写明该年重新设计，加入液晶显示与软触面板"
+      },
+      {
+       "c1": "现行",
+       "c2": "CPE-3 与 CPP-3 在产",
+       "c3": "CPE-3 官网售价 1990 欧元，含 Lift"
+      }
+     ]
+    },
+    {
+     "kind": "h2",
+     "text": "常见故障"
+    },
+    {
+     "kind": "troubleshoot",
+     "text": "",
+     "caption": "JOBO 处理器故障排查",
+     "items": [
+      {
+       "t": "温度达不到设定值",
+       "d": "症状是水浴温度长期低于设定 1 °C 以上。原因：加热器老化、水量不足、室温过低。处理：补足水浴到规定水位，用另一支温度计比对；仍偏离时更换加热器。"
+      },
+      {
+       "t": "罐体漏液",
+       "d": "症状是药液从顶盖渗出。原因：Membrankappe 压力平衡盖老化或齿圈未到位。处理：更换顶盖盖膜，确认磁铁 #1504 或齿圈 #1505 压到位。"
+      },
+      {
+       "t": "药液起泡",
+       "d": "症状是罐内液面出现泡沫。原因：药液被搅拌卷入空气、自来水含气量高。处理：配液后静置数分钟，或用 ILFOSOL 3 资料推荐的做法先接水静置。"
+      },
+      {
+       "t": "显影密度波动",
+       "d": "症状是同一批胶片密度不匀。原因：药量与片数不匹配，或补充液补充规则执行偏差。处理：按 $process-equipment.mixed-chemistry 的补充规则校核。"
+      }
+     ]
+    },
+    {
+     "kind": "note",
+     "text": "考证范围：CPE-3 的温度精度在 JOBO 2020 目录与官网产品页分别为 ±0.4 °C 与 ±0.2 °C。引用时按来源标注。#4059 CPE-3 官网售价 1990 欧元，供货期 4 至 6 周。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "process-equipment.temperature-control"
+    ],
+    "next": [
+     "process-equipment.rotator",
+     "process-equipment.home-lab"
+    ],
+    "related": [
+     "process-equipment.jobo-xtrollers",
+     "color-process.e6",
+     "color-process.ra4-home-lab"
+    ],
+    "contrast": [
+     "process-equipment.roller-processor"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "CPP-3 的水浴温度范围与精度是多少？",
+     "type": "single",
+     "options": [
+      "20 至 40 °C，±0.2 °C",
+      "20 至 40 °C，±0.4 °C",
+      "25 至 45 °C，±0.5 °C",
+      "18 至 30 °C，±1 °C"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "JOBO 2020 目录 p3 给出 CPP-3 与 CPP-Classic 为 20 至 40 °C、±0.2 °C。CPE-3 的目录值为 ±0.4 °C。"
+    },
+    {
+     "q": "CPP-3 与 CPP-Classic 的主要差别是什么？",
+     "type": "single",
+     "options": [
+      "面板形式，前者液晶加软触面板，后者旋钮",
+      "转速上限不同",
+      "水浴容积不同",
+      "相纸容量不同"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "两者的水浴容积、转速与容量相同。差别在操作面板：CPP-3 用液晶显示与软触面板，CPP-Classic 用旋钮并需外接计时器。"
+    },
+    {
+     "q": "Lift 附件解决的是哪个环节的问题？",
+     "type": "single",
+     "options": [
+      "旋转中排药与加药，省去手动倒罐",
+      "加热器温控校准",
+      "相纸干燥",
+      "卷轴装配"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "Lift 让罐体旋转不停的同时完成换液。旧罐压入齿圈 #1505 即可升级使用。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "JOBO Analog 2020 产品目录",
+     "url": "https://www.jobo.com//bin/ecms_streamer.php?emb_label=flyer_jobo_analog_2020_final&inline=",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "JOBO Colorprocessor CPE-3 Lift Kit #4059 产品页",
+     "url": "https://www.jobo.com/analog/4059-jobo-colorprocessor-cpe-3-lift-kit",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "JOBO Colorprocessor CPP-3 Lift Kit #4089 产品页",
+     "url": "https://www.jobo.com/analog/4089-jobo-colorprocessor-cpp-3-lift-kit",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "JOBO 公司介绍",
+     "url": "https://www.jobo.com/wir-ueber-uns",
+     "kind": "manufacturer"
+    }
+   ],
+   "updated": "2026-10-09",
+   "status": "reviewed"
+  },
+  {
+   "id": "process-equipment.jobo-xtrollers",
+   "title": "JOBO 1500 与 2500 系列罐及手用滚轴",
+   "title_en": "JOBO 1500 and 2500 Series Tanks and Manual Roller",
+   "aliases": [
+    "JOBO roller",
+    "手用滚轴",
+    "1500 series",
+    "2500 series",
+    "Expert Drum",
+    "Zahnkranz"
+   ],
+   "type": "equipment",
+   "level": 4,
+   "era": "1972 至今",
+   "tags": [
+    "JOBO",
+    "滚轴",
+    "模块化罐",
+    "Expert Drum",
+    "旋转冲洗"
+   ],
+   "summary": "JOBO 的罐系统分两支：1500 系列模块化罐靠倒转冲洗，可加装磁铁或齿圈转为旋转；2500 系列为专业旋转罐。手用滚轴 #1509 让用户在购机前先用旋转方式冲洗。Expert Drum 3000 系列用于大幅面平面片。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "1500 系列：摆动与旋转两用"
+    },
+    {
+     "kind": "p",
+     "text": "1500 系列由 #1510、#1520、#1540 与 #1530 模块四件组成。罐底压入磁铁 #1504 或齿圈 #1505，罐体即可转为旋转模式用于处理器。齿圈盖 #1503 让摆动盖与齿圈盖互换。罐体配 Membrankappe 压力平衡盖，材质为防碎塑料。"
+    },
+    {
+     "kind": "table",
+     "text": "",
+     "caption": "1500 系列容量",
+     "rows": [
+      {
+       "c1": "型号",
+       "c2": "装片量",
+       "c3": "摆动冲洗",
+       "c4": "旋转冲洗",
+       "c5": "随附卷轴"
+      },
+      {
+       "c1": "#1510 35 mm Tank",
+       "c2": "1 卷 135",
+       "c3": "250 ml",
+       "c4": "140 ml",
+       "c5": "#1501"
+      },
+      {
+       "c1": "#1520 Uni Tank",
+       "c2": "2 卷 135 或 2 卷 120",
+       "c3": "485 ml",
+       "c4": "240 ml",
+       "c5": "#1501"
+      },
+      {
+       "c1": "#1530 模块",
+       "c2": "加 3 卷 135 或 4 卷 120",
+       "c3": "725 ml",
+       "c4": "330 ml",
+       "c5": "#1501"
+      },
+      {
+       "c1": "#1540 Multi Tank",
+       "c2": "4 卷 135 或 4 卷 120",
+       "c3": "975 ml",
+       "c4": "470 ml",
+       "c5": "#1501"
+      }
+     ]
+    },
+    {
+     "kind": "h2",
+     "text": "2500 系列：专业旋转罐"
+    },
+    {
+     "kind": "p",
+     "text": "2500 系列只用于旋转冲洗。#2540 Multi Tank 1 装 1 卷 #2502 卷轴，旋转药液 140 ml。#2520 Multi Tank 2 装 2 个 #2502 或 1 个 #2509N 平面卷轴，旋转药液 270 ml。#2550 Multi Tank 5 装 5 个 #2502 或 2 个 #2509N，旋转药液 640 ml。#2502 卷轴宽度可调，省去上片器。#2509N 平面卷轴可装 6 张 6x9、9x12 或 4x5 平面片。"
+    },
+    {
+     "kind": "h2",
+     "text": "手用滚轴 #1509"
+    },
+    {
+     "kind": "p",
+     "text": "滚轴 #1509 售价 89.90 欧元，可让所有罐与 Expert Drum 获得旋转冲洗。厂家定位为未购处理器用户的过渡方案。它实现了无处理器条件下的旋转冲洗流程。"
+    },
+    {
+     "kind": "h2",
+     "text": "Expert Drum 大幅面鼓"
+    },
+    {
+     "kind": "table",
+     "text": "",
+     "caption": "Expert Drum 型号与容量",
+     "rows": [
+      {
+       "c1": "型号",
+       "c2": "适用幅面",
+       "c3": "最大片数",
+       "c4": "药液上限",
+       "c5": "备注"
+      },
+      {
+       "c1": "#3005 Expert 5",
+       "c2": "8x10\"",
+       "c3": "5 张",
+       "c4": "900 ml",
+       "c5": "270 至 640 ml 视片数"
+      },
+      {
+       "c1": "#3006 Expert 6",
+       "c2": "5x7\"",
+       "c3": "6 张",
+       "c4": "500 ml",
+       "c5": "210 至 470 ml 视片数"
+      },
+      {
+       "c1": "#3010 Expert 10",
+       "c2": "4x5\"",
+       "c3": "10 张",
+       "c4": "500 ml",
+       "c5": "210 至 330 ml 视片数"
+      },
+      {
+       "c1": "#3062 Multi Drum",
+       "c2": "18x24 至 50x60 cm 相纸",
+       "c3": "按幅面",
+       "c4": "最小 210 ml",
+       "c5": "相纸用"
+      },
+      {
+       "c1": "#3063 Multi Drum",
+       "c2": "30x40 至 50x60 cm 相纸",
+       "c3": "按幅面",
+       "c4": "最小 300 ml",
+       "c5": "相纸用"
+      }
+     ]
+    },
+    {
+     "kind": "p",
+     "text": "Expert Drum 圆柱表面带微凸结构，防止平面片贴壁。预洗时水流可冲掉片背的防晕光层。鼓盖用脚踏泵 #3360 打开。干燥棒 #3007 与 #3008 每 12 个月更换一次，避免损伤筒壁。每支鼓可洗 5 至 10 张平面片。"
+    },
+    {
+     "kind": "warn",
+     "text": "CPE-3 处理器与 3000 系列 Expert Drum 及 Multi Drum 互不兼容。CPP-3 可配 2500 系列罐。选机前先确认罐与鼓的兼容性。"
+    },
+    {
+     "kind": "h2",
+     "text": "耗材与维护"
+    },
+    {
+     "kind": "ul",
+     "text": "- #1507 轴管替换件：更换磨损的旋转轴管。\n- #1506 替换支柱组件：修复摆动罐的转轴。\n- #3310 600 ml 刻度瓶四支套装：配 CPE-3 使用。\n- #3300 1000 ml 刻度瓶套装：2 黑 4 白，100 ml 刻度。\n- 瓶盖为锥形内唇密封，厂家称可保持数年密封，无需泡棉垫。"
+    },
+    {
+     "kind": "note",
+     "text": "配液提示：JOBO 的最小填充量只保证浸润乳剂。补开发等高稀释工艺需按比例减少片数或调整药量，参见 $bw-process.push-pull。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "process-equipment.jobo"
+    ],
+    "next": [
+     "process-equipment.rotator",
+     "process-equipment.combi-tank"
+    ],
+    "related": [
+     "bw-process.push-pull"
+    ],
+    "contrast": [
+     "process-equipment.paterson"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "JOBO 1520 Uni Tank 的旋转冲洗药液量是多少？",
+     "type": "single",
+     "options": [
+      "240 ml",
+      "250 ml",
+      "485 ml",
+      "470 ml"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "1520 摆动冲洗用 485 ml，旋转冲洗用 240 ml。250 ml 是 1510 的摆动量，470 ml 是 1540 的旋转量。"
+    },
+    {
+     "q": "手用滚轴 #1509 的作用是什么？",
+     "type": "single",
+     "options": [
+      "在罐与鼓上实现旋转冲洗，省去处理器",
+      "替代卷轴装片",
+      "提高水洗效率",
+      "给罐体加热"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "厂家把 #1509 定位为未购处理器用户的旋转方案，售价 89.90 欧元。"
+    },
+    {
+     "q": "下面哪些部件属于 Expert Drum 的配套件？",
+     "type": "multi",
+     "options": [
+      "脚踏泵 #3360",
+      "干燥棒 #3007",
+      "磁铁 #1504",
+      "卷轴 #2502"
+     ],
+     "answer": [
+      0,
+      1
+     ],
+     "why": "脚踏泵用于开鼓盖，干燥棒每 12 个月更换。磁铁 #1504 用于把 1500 系列罐转为旋转罐，卷轴 #2502 配 2500 系列罐。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "JOBO Analog 2020 产品目录",
+     "url": "https://www.jobo.com//bin/ecms_streamer.php?emb_label=flyer_jobo_analog_2020_final&inline=",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "JOBO 1510 35 mm Tank 产品页",
+     "url": "https://www.jobo.com/analog/1510-jobo-35mm-tank-",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "JOBO 1520 Uni Tank 产品页",
+     "url": "https://www.jobo.com/analog/1520-jobo-uni-tank-",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "JOBO 1540 Multi Tank 产品页",
+     "url": "https://www.jobo.com/analog/1540-jobo-multi-tank-",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "JOBO Roller #1509 产品页",
+     "url": "https://www.jobo.com/analog/1509-jobo-roller",
+     "kind": "manufacturer"
+    }
+   ],
+   "updated": "2026-10-09",
+   "status": "reviewed"
+  },
+  {
+   "id": "process-equipment.combi-tank",
+   "title": "多卷罐与日光罐的组合设计",
+   "title_en": "Multi-Reel Tanks and Daylight Tanks",
+   "aliases": [
+    "Combi-Tank",
+    "多卷罐",
+    "Multi Reel",
+    "日光罐",
+    "daylight tank"
+   ],
+   "type": "equipment",
+   "level": 3,
+   "era": "1970s 至今",
+   "tags": [
+    "多卷罐",
+    "日光操作",
+    "Ilford",
+    "JOBO",
+    "产能"
+   ],
+   "summary": "多卷罐把数卷胶片放进同一罐内冲洗，用一次配液换更高的产能。ILFORD 的 Multi Reel 3 与 8 号罐承担这一角色，JOBO 用 1500 与 2500 系列模块实现。带避光顶盖的罐可在明房完成全部步骤。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "多卷罐的设计逻辑"
+    },
+    {
+     "kind": "p",
+     "text": "多卷罐靠多个卷轴沿中心柱并排布置实现。每个卷轴处理一卷胶片。药液量按片数增加，同时搅拌力度随药液与片数比例变化。这一设计把显影成本摊到单卷上。"
+    },
+    {
+     "kind": "h2",
+     "text": "两家厂商的多卷方案"
+    },
+    {
+     "kind": "compare",
+     "text": "",
+     "caption": "ILFORD 与 JOBO 的多卷罐对照",
+     "rows": [
+      {
+       "c1": "ILFORD Paterson Multi Reel 3 Tank（PTP116）与 Multi Reel 8 Tank",
+       "c2": "3 卷 135 或 2 卷 120；8 卷罐为更大批量",
+       "c3": "卷轴可少于最大容量，装片不足时搅拌过猛",
+       "c4": "倒转式；罐体在售，卷轴另购",
+       "c5": "49.87 美元 起"
+      },
+      {
+       "c1": "JOBO 1540 Multi Tank（1500 系列）与 2550 Multi Tank 5（2500 系列）",
+       "c2": "4 卷 135 或 4 卷 120；5 个 #2502 卷轴",
+       "c3": "1500 系列靠磁铁或齿圈转旋转，2500 系列直接旋转",
+       "c4": "配处理器或手用滚轴；2500 系列与 Expert Drum 分开",
+       "c5": "旋转药液 470 ml 与 640 ml"
+      }
+     ]
+    },
+    {
+     "kind": "h2",
+     "text": "日光操作罐"
+    },
+    {
+     "kind": "p",
+     "text": "带避光顶盖的罐可省去暗房环节。装片在装片袋里完成，上片后即可在明房配液与冲洗。Jollinger 指南指出日式罐在暗房里用量少，小型钢罐每卷 35 mm 需 9 至 10 oz 以上药液，大容量塑料罐的性能取决于厂家的密封与搅拌设计。"
+    },
+    {
+     "kind": "h2",
+     "text": "配套的机器化方案"
+    },
+    {
+     "kind": "p",
+     "text": "Nova 日光胶片处理器把 Paterson 罐嵌入机身恒温孔位，直接为罐体加热并控温。FP 2/1、FP 3/2 与 FP 5/3 分别对应 2 卷 135、3 卷 135 与 5 卷 135 的批次量。详见 $process-equipment.home-lab。"
+    },
+    {
+     "kind": "h2",
+     "text": "常见问题"
+    },
+    {
+     "kind": "troubleshoot",
+     "text": "",
+     "caption": "多卷罐故障排查",
+     "items": [
+      {
+       "t": "批次密度差",
+       "d": "症状是同批各卷密度不一致。原因：卷轴间距不足，药液在罐内分布不均。处理：按罐型额定片数装载，减少同批卷数。"
+      },
+      {
+       "t": "药液量偏少",
+       "d": "症状是显影偏浅。原因：按单卷量配液却装了多卷。处理：按 $process-equipment.jobo-xtrollers 的容量表重新计算。"
+      },
+      {
+       "t": "装片袋进片困难",
+       "d": "症状是多卷同时装片时袋内混淆。原因：卷轴规格不同或顺序混乱。处理：按卷号依次装片，装一片确认一片。"
+      }
+     ]
+    }
+   ],
+   "links": {
+    "prereq": [
+     "process-equipment.paterson"
+    ],
+    "next": [
+     "process-equipment.home-lab"
+    ],
+    "related": [
+     "process-equipment.jobo-xtrollers",
+     "bw-process.exhaustion"
+    ],
+    "contrast": [
+     "process-equipment.trays"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "ILFORD Multi Reel 3 Tank 最多装几卷？",
+     "type": "single",
+     "options": [
+      "3 卷 135 或 2 卷 120",
+      "2 卷 135 或 1 卷 120",
+      "4 卷 135",
+      "8 卷 135"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "ILFORD 产品页写明 3 卷 35 mm 或 2 卷 120。8 卷 的是 Multi Reel 8 Tank。"
+    },
+    {
+     "q": "Nova 日光胶片处理器为何选择 Paterson 罐？",
+     "type": "single",
+     "options": [
+      "机身恒温孔位专为该罐尺寸设计，可直接加热控温",
+      "该罐比 JOBO 罐更便宜",
+      "该罐容量更大",
+      "该罐自带电动搅拌"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "Nova 产品页写明系统围绕 Paterson 罐设计，罐体嵌入机身开口并受温控。搅拌仍由倒转或随附搅棒完成。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "ILFORD Paterson Multi Reel 3 Tank 产品页（archive.org 快照 20260521）",
+     "url": "http://web.archive.org/web/20260521053243/https://www.ilfordphoto.com/catalog/product/view/id/1580/s/multi-reel-3-tank-excl-reels/category/77/",
+     "kind": "archive"
+    },
+    {
+     "name": "JOBO Analog 2020 产品目录",
+     "url": "https://www.jobo.com//bin/ecms_streamer.php?emb_label=flyer_jobo_analog_2020_final&inline=",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "Nova Daylight Film Processors 产品页",
+     "url": "https://www.theimagingwarehouse.com/Products/Nova-Daylight-Film-Processors",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "Jollinger Darkroom Equipment Guide",
+     "url": "http://www.jollinger.com/photo/articles/darkequp.htm",
+     "kind": "article"
+    }
+   ],
+   "updated": "2026-10-09",
+   "status": "reviewed"
+  },
+  {
+   "id": "process-equipment.nikonos",
+   "title": "Nikonos 水下系统与配套罐式冲洗",
+   "title_en": "Nikonos Underwater System and Associated Tank Processing",
+   "aliases": [
+    "Nikonos",
+    "水下相机",
+    "Calypso",
+    "La Spirotechnique"
+   ],
+   "type": "equipment",
+   "level": 2,
+   "era": "1963 起",
+   "tags": [
+    "Nikonos",
+    "水下摄影",
+    "Nikon",
+    "历史"
+   ],
+   "summary": "Nikonos 是 Nikon 于 1963 年推出的 35 mm 水下相机系列，设计源自 Cousteau 与 Jean de Wouters 的 Calypso。它的意义在于密闭机身把取景移到水面下，冲洗环节仍回到常规螺旋罐流程。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "产品谱系"
+    },
+    {
+     "kind": "p",
+     "text": "Nikonos 的原型 Calypso 由 Jacques-Yves Cousteau 与比利时工程师 Jean de Wouters 设计，1961 年由法国 La Spirotechnique 量产。1961 年 6 月该公司向 Nippon Kogaku 请求授权，1962 年 2 月签约授予 Nikon 法国及欧洲经济共同体以外地区的销售权。1963 年 Nippon Kogaku 取得 Calypso 专利并以 Nikkor 光学件生产 Nikonos I。"
+    },
+    {
+     "kind": "timeline",
+     "caption": "Nikonos 主要型号的年代",
+     "text": "",
+     "rows": [
+      {
+       "c1": "Nikonos I",
+       "c2": "1963-03 至 1969-03",
+       "c3": "125 × 97 × 68 mm",
+       "c4": "700 g",
+       "c5": "JPY 28500"
+      },
+      {
+       "c1": "Nikonos II",
+       "c2": "1968-05 至 1976-03",
+       "c3": "129 × 99 × 47 mm",
+       "c4": "495 g",
+       "c5": "JPY 23000"
+      },
+      {
+       "c1": "Nikonos III",
+       "c2": "1975-06 至 1983-09",
+       "c3": "144 × 99 × 47 mm",
+       "c4": "620 g",
+       "c5": "JPY 45000"
+      },
+      {
+       "c1": "Nikonos IV-A",
+       "c2": "1980-07 至 1984",
+       "c3": "厂商资料未列",
+       "c4": "厂商资料未列",
+       "c5": "厂商资料未列"
+      }
+     ]
+    },
+    {
+     "kind": "note",
+     "text": "上表的年代、尺寸、重量与售价取自公开的机型列表。该列表未给出 IV-A 的完整参数，也未给出防水深度的逐型号变化。Nikonos V 于 2001 年 9 月终止生产。补全 IV-A 参数需要 Nikon 官方机型档案页原文。"
+    },
+    {
+     "kind": "h2",
+     "text": "与冲洗工艺的关系"
+    },
+    {
+     "kind": "p",
+     "text": "Nikonos 是相机品牌，冲洗走常规螺旋罐流程。早期水下拍摄常用黑白或彩色负片，回岸后按 $bw-process.d-76 或 $color-process.c41 处理。密封机身让摄影师在水下完成取景与曝光，胶片罐负责随后的化学环节。"
+    },
+    {
+     "kind": "h2",
+     "text": "从水下取景到暗房冲洗"
+    },
+    {
+     "kind": "ol",
+     "text": "1. 密闭机身在水面下完成取景与曝光，胶片不接触海水。\n2. 回到岸上后在全暗环境或全黑换片袋中把胶片装入卷轴。\n3. 装入螺旋罐并排气，参见 $process-equipment.tank。\n4. 按胶片类型选择工艺：黑白负片用 $bw-process.d-76 一类配方，彩色负片用 $color-process.c41。\n5. 水洗与保存按 $archive.washing-storage 的要求执行。"
+    },
+    {
+     "kind": "h2",
+     "text": "使用中的常见问题"
+    },
+    {
+     "kind": "troubleshoot",
+     "caption": "Nikonos 相关冲洗问题",
+     "text": "",
+     "items": [
+      {
+       "t": "进水后取景窗起雾",
+       "d": "密封圈老化或未完全压紧。拆下密封圈清洗并检查是否扭曲变形。"
+      },
+      {
+       "t": "上弦或快门不动",
+       "d": "海水进入机内并凝固。送修时说明是否在淡水冲洗后停用。"
+      },
+      {
+       "t": "胶片边缘出现水痕",
+       "d": "机内海水未排净。取片前倒转机身让咸水流出，并在淡水中短暂浸泡。"
+      },
+      {
+       "t": "换片时胶片被拉断",
+       "d": "换片袋内操作不当。换片袋应带袖口，避免空气进入。"
+      }
+     ]
+    },
+    {
+     "kind": "note",
+     "text": "考证范围：本条目只覆盖水下相机与常规罐式冲洗的衔接。原任务清单把 Nikonos 列为罐式冲洗条目，但公开资料中没有 Nikonos 自有显影罐的规格。本条目未收录任何 Nikonos 罐的容量与配件编号。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "process-equipment.tank"
+    ],
+    "next": [
+     "archive.washing-storage"
+    ],
+    "related": [
+     "color-process.c41",
+     "bw-process.d-76"
+    ],
+    "contrast": []
+   },
+   "quiz": [
+    {
+     "q": "Nikonos 系列由哪家公司在 1963 年推出？",
+     "type": "single",
+     "options": [
+      "Nikon",
+      "La Spirotechnique",
+      "Cousteau",
+      "Beseler"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "1963 年 Nippon Kogaku 取得 Calypso 专利并以 Nikkor 光学件生产 Nikonos I，Nikon 随后推出该系列。"
+    },
+    {
+     "q": "Nikonos 胶片在拍摄后如何冲洗？",
+     "type": "single",
+     "options": [
+      "按常规螺旋罐流程处理",
+      "由水下专用罐处理",
+      "由相机内冲洗机构处理",
+      "直接上放大机"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "Nikonos 是相机品牌，冲洗走常规螺旋罐流程，参见 $process-equipment.tank。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Nikon 官方：Nikonos 历史",
+     "url": "https://imaging.nikon.com/history/chronicle/history-nikonos/index.htm",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "Nikon 官方：水下相机先驱（Calypso 与 Cousteau）",
+     "url": "https://imaging.nikon.com/history/chronicle/cousins17-e/index.htm",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "Wikipedia: Nikonos",
+     "url": "https://en.wikipedia.org/wiki/Nikonos",
+     "kind": "article"
+    }
+   ],
+   "updated": "2026-10-09",
+   "status": "draft"
+  },
+  {
+   "id": "process-equipment.temperature-control",
+   "title": "冲洗温度控制：水浴、温度计与加热器",
+   "title_en": "Process Temperature Control",
+   "aliases": [
+    "temperature control",
+    "水浴",
+    "恒温",
+    "温度计",
+    "thermostat"
+   ],
+   "type": "setting",
+   "level": 4,
+   "era": "1900s 至今",
+   "tags": [
+    "温度控制",
+    "水浴",
+    "温度计",
+    "加热器",
+    "彩色",
+    "温控",
+    "工艺参数",
+    "黑白"
+   ],
+   "summary": "温度控制（temperature control）是冲洗工艺的第一变量。水浴法靠水的大热容量稳住温度，机器法靠恒温器加热。C-41 与 E-6 的容差在零点几摄氏度量级，温度计分度决定可读精度。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "三种控温方式"
+    },
+    {
+     "kind": "table",
+     "text": "",
+     "caption": "控温方式与适用工艺",
+     "rows": [
+      {
+       "c1": "方式",
+       "c2": "原理",
+       "c3": "典型精度",
+       "c4": "适用工艺",
+       "c5": "成本"
+      },
+      {
+       "c1": "水浴法",
+       "c2": "罐或盆置于恒温水中",
+       "c3": "±0.5 °C 级",
+       "c4": "黑白罐式与盘式",
+       "c5": "低"
+      },
+      {
+       "c1": "加热器控温",
+       "c2": "恒温器加热并循环",
+       "c3": "±0.2 至 ±0.4 °C",
+       "c4": "彩色与旋转冲洗",
+       "c5": "中"
+      },
+      {
+       "c1": "机器水浴",
+       "c2": "处理器内置恒温槽",
+       "c3": "±0.2 °C（CPP-3）",
+       "c4": "C-41、E-6、RA-4",
+       "c5": "高"
+      }
+     ]
+    },
+    {
+     "kind": "p",
+     "text": "显影剂与卤化银的反应速率随温度上升。温度偏高时，同一显影时间得到的密度更高。反差与灰雾同时变化。温度控制失效会同时改变密度、反差和色彩平衡。"
+    },
+    {
+     "kind": "image",
+     "src": "img/water-bath.jpg",
+     "alt": "实验室数字恒温水浴。彩显等工序把药液瓶浸入水浴以维持 ±0.3 °C 的控制精度。",
+     "caption": "实验室数字恒温水浴。彩显等工序把药液瓶浸入水浴以维持 ±0.3 °C 的控制精度。",
+     "credit": "Confidence24",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File%3ADigital_laboratory_water_bath.jpg"
+    },
+    {
+     "kind": "table",
+     "text": "",
+     "caption": "常见工艺的冲洗温度",
+     "rows": [
+      {
+       "c1": "黑白负片",
+       "c2": "20 °C",
+       "c3": "厂商给出标准时间",
+       "c4": "允许偏差较小",
+       "c5": "偏离时按温度补偿表修正时间"
+      },
+      {
+       "c1": "黑白 RC 相纸",
+       "c2": "20 °C",
+       "c3": "显影与停显温度一致",
+       "c4": "干版纸在 20 °C",
+       "c5": "参见 $printing.print-processing"
+      },
+      {
+       "c1": "C-41 负片",
+       "c2": "37.8 °C 到 38 °C",
+       "c3": "各浴温度统一",
+       "c4": "偏差会改变密度与色彩平衡",
+       "c5": "参见 $color-process.temperature-critical"
+      },
+      {
+       "c1": "E-6 反转片",
+       "c2": "37.8 °C",
+       "c3": "首显与首洗的温度要求最严",
+       "c4": "偏差会改变反差与色罩",
+       "c5": "三浴版本首显为 100 °F，上下 0.5 °F"
+      }
+     ]
+    },
+    {
+     "kind": "steps",
+     "text": "",
+     "caption": "建立温度控制",
+     "items": [
+      {
+       "t": "先调温再配药",
+       "d": "把工作液配好并调到目标温度后再装片。"
+      },
+      {
+       "t": "用温度计复核",
+       "d": "用独立温度计复核机身显示值。机身显示不等于药液实际温度。"
+      },
+      {
+       "t": "记录批次温度",
+       "d": "每批记录显影开始时的实际温度。事后可据此修正时间。"
+      },
+      {
+       "t": "按补偿表修正时间",
+       "d": "温度偏离标准值时按厂商温度补偿表修正显影时间。"
+      },
+      {
+       "t": "热源远离胶片",
+       "d": "加热器与热水浴与未显影胶片保持距离。"
+      }
+     ]
+    },
+    {
+     "kind": "warn",
+     "text": "彩色药液的温度偏差会同时影响三层染料。不要用手握药液瓶判断温度。"
+    },
+    {
+     "kind": "h2",
+     "text": "温度计分度与容差"
+    },
+    {
+     "kind": "ul",
+     "text": "- 黑白冲洗：2 °C 分度即可，折合 1 °F 读数。\n- 彩色冲洗：1 °C 分度。\n- JOBO #3321 彩色温度计：量程至 50 °C，分度 0.2 °C。\n- ILFOSOL 3 推荐显影 20 °C，可用范围 20 至 24 °C，容差 ±1 °C。\n- JOBO CPP-3 水浴 20 至 40 °C，精度 ±0.2 °C；CPE-3 目录值为 ±0.4 °C。"
+    },
+    {
+     "kind": "h2",
+     "text": "配液时的温度管理"
+    },
+    {
+     "kind": "ol",
+     "text": "1. 先按配方量取浓缩液，倒入混合容器。\n2. 用量杯回冲混合容器，减少残留损失。\n3. 加冷水到目标体积的三分之二。\n4. 加热水至目标温度，最后补足体积。\n5. 充分搅拌后测温，记录读数。"
+    },
+    {
+     "kind": "note",
+     "text": "ILFOSOL 3 资料提示自来水含气量高时，先接水静置数分钟再量取。浓度低于 10 ml 时用量杯难以准确，改用刻度吸管。"
+    },
+    {
+     "kind": "h2",
+     "text": "常见故障"
+    },
+    {
+     "kind": "troubleshoot",
+     "text": "",
+     "caption": "温度控制故障排查",
+     "items": [
+      {
+       "t": "温度计读数偏差",
+       "d": "症状是同一支温度计在不同位置读数不同。原因：刻度盘式温度计长期使用后失调。处理：与标准温度计比对，按可调表盘重新校准。"
+      },
+      {
+       "t": "水浴温度漂移",
+       "d": "症状是显影中途温度下降。原因：水量不足、室温变化、加热器功率偏低。处理：补足水浴，室温过低时减少开盖次数。"
+      },
+      {
+       "t": "彩色片色偏",
+       "d": "症状是彩色负片出现偏色。原因：显影温度偏离工艺规定。处理：按 $color-process.temperature-critical 的补偿表调整时间。"
+      },
+      {
+       "t": "药液温度高于室温 2 °C 以上",
+       "d": "症状是室温下温度计读数持续上行。原因：照明灯与器材发热。处理：使用避光操作，改在暗房外完成配液步骤。"
+      }
+     ]
+    }
+   ],
+   "links": {
+    "prereq": [
+     "process-equipment.trays"
+    ],
+    "next": [
+     "process-equipment.jobo",
+     "process-equipment.home-lab"
+    ],
+    "related": [
+     "bw-process.mixing-temp-control",
+     "color-process.temperature-critical"
+    ],
+    "contrast": []
+   },
+   "quiz": [
+    {
+     "q": "彩色冲洗应选几分度的温度计？",
+     "type": "single",
+     "options": [
+      "1 °C",
+      "2 °C",
+      "5 °C",
+      "10 °C"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "Jollinger 指南给出彩色 1 °C 分度、黑白 2 °C 分度的口径。"
+    },
+    {
+     "q": "JOBO CPP-3 水浴的温度范围是多少？",
+     "type": "single",
+     "options": [
+      "20 至 40 °C",
+      "18 至 30 °C",
+      "25 至 45 °C",
+      "20 至 45 °C"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "JOBO 2020 目录 p3 给出 CPP-3 与 CPP-Classic 的水浴范围为 20 至 40 °C，精度 ±0.2 °C。"
+    },
+    {
+     "q": "配液时先接水静置的目的是什么？",
+     "type": "single",
+     "options": [
+      "让自来水中的气泡逸出",
+      "提高水温",
+      "加快化学反应",
+      "软化水质"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "ILFOSOL 3 资料提示自来水含气量高会影响量取精度，先接水静置可减少气泡。"
+    },
+    {
+     "q": "Ilford 黑白胶片的常规冲洗温度是多少？",
+     "type": "single",
+     "options": [
+      "18 °C",
+      "20 °C",
+      "24 °C",
+      "30 °C"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "Ilford 技术文档把 20 °C（68 °F）作为常规冲洗温度。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "JOBO Analog 2020 产品目录",
+     "url": "https://www.jobo.com//bin/ecms_streamer.php?emb_label=flyer_jobo_analog_2020_final&inline=",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "ILFORD ILFOSOL 3 技术资料",
+     "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2019/08/ILFOSOL-3-June2019.pdf",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "ILFORD 显影温度补偿表（18 至 30 °C）",
+     "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/03/Temperature-compensation-chart.pdf",
+     "kind": "manufacturer",
+     "note": "厂商给出的 20 °C 以外温度的冲洗时间修正指南。"
+    },
+    {
+     "name": "ILFORD 胶片冲洗表（2018 年 12 月版）",
+     "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2018/11/Film-processing-chart-301118-Final-version.pdf",
+     "kind": "manufacturer",
+     "note": "Ilford 与 Kentmere 胶片在各药液中的反应时间表。"
+    },
+    {
+     "name": "ILFORD 冲洗第一卷黑白胶片（2003 年 10 月）",
+     "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/04/Processing-your-first-black-and-white-film.pdf",
+     "kind": "manufacturer",
+     "note": "厂商把 20 °C 作为常规冲洗温度，并要求配好温度计。"
+    }
+   ],
+   "updated": "2026-10-09",
+   "status": "reviewed"
+  },
+  {
+   "id": "process-equipment.rotator",
+   "title": "旋转冲洗与手用滚轴",
+   "title_en": "Rotation Processing and Manual Roller",
+   "aliases": [
+    "rotator",
+    "旋转冲洗",
+    "rotational processing",
+    "滚轴",
+    "roller"
+   ],
+   "type": "technique",
+   "level": 4,
+   "era": "1972 至今",
+   "tags": [
+    "旋转冲洗",
+    "搅拌",
+    "一次性药液",
+    "补开发",
+    "均匀性"
+   ],
+   "summary": "旋转冲洗（rotational processing）把罐或鼓沿轴线匀速转动，让药液持续冲刷乳剂面。JOBO 把这一原理做成处理器的核心，并声明可节省 50% 以上药液。旋转方式让补开发与区调法变得可控。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "工作原理"
+    },
+    {
+     "kind": "p",
+     "text": "罐体横置于驱动端，齿圈或磁铁耦合后由电机带动旋转。转速可调，CPP-3 与 CPP-Classic 为 25 至 75 rpm，CPE-3 固定 75 rpm。药液沿罐壁形成连续流，冲刷螺旋排列的胶片表面。"
+    },
+    {
+     "kind": "h2",
+     "text": "旋转与摆动的差异"
+    },
+    {
+     "kind": "compare",
+     "text": "",
+     "caption": "摆动冲洗与旋转冲洗对照",
+     "rows": [
+      {
+       "c1": "摆动冲洗（Kippentwicklung）",
+       "c2": "人手倒转罐体，药液充满罐腔后往复流动",
+       "c3": "药液量大：1510 为 250 ml，1520 为 485 ml，1540 为 975 ml",
+       "c4": "每个循环的流速与方向由人手决定",
+       "c5": "适合罐式初学者与无电环境"
+      },
+      {
+       "c1": "旋转冲洗（Rotation）",
+       "c2": "电机或手用滚轴带动罐体转动，药液沿罐壁成流",
+       "c3": "药液量小：1510 为 140 ml，1520 为 240 ml，1540 为 470 ml",
+       "c4": "转速稳定，流向一致，可编程",
+       "c5": "适合处理器作业与补开发"
+      }
+     ]
+    },
+    {
+     "kind": "p",
+     "text": "JOBO 厂家称处理器较手工摆动冲洗节省药液 50% 以上。节省来自两处：罐内药液量按旋转模式减半，固定搅拌取代手工操作带来的额外消耗。厂家同时指出恒定搅拌带来可复现结果，高感乳剂如 DELTA 与 T-Grain 类对搅拌强度敏感。"
+    },
+    {
+     "kind": "h2",
+     "text": "旋转与补开发"
+    },
+    {
+     "kind": "p",
+     "text": "厂家在目录第 36 页指出旋转冲洗适合补开发与拉开发。Ansel Adams 的区调法可通过调整显影时间在 N-3 至 N+3 区间内实现。厂家同时写明补开发提高中间调与高光密度，真实感光度由曝光决定。参见 $bw-process.push-pull。"
+    },
+    {
+     "kind": "h2",
+     "text": "手用旋转机与电动处理器的差异"
+    },
+    {
+     "kind": "table",
+     "caption": "JOBO 手动旋转机型对照",
+     "text": "",
+     "rows": [
+      {
+       "c1": "型号",
+       "c2": "状态",
+       "c3": "转速",
+       "c4": "容量",
+       "c5": "恒温槽"
+      },
+      {
+       "c1": "CPE-2（#4060）",
+       "c2": "1992 年停产",
+       "c3": "约 25 与 65 rpm 两档",
+       "c4": "厂商手册未给出完整表",
+       "c5": "与 CPE-2 Plus 同级"
+      },
+      {
+       "c1": "CPE-2 Plus（#4065）",
+       "c2": "在售手册 1997 年 6 月修订",
+       "c3": "固定 75 rpm",
+       "c4": "5 卷 135 或 6 卷 120 或 12 张 4×5 英寸",
+       "c5": "2 加仑约 7.6 L"
+      },
+      {
+       "c1": "CPA-2（#4070）",
+       "c2": "与 CPE-2 Plus 并列",
+       "c3": "固定 75 rpm",
+       "c4": "8 卷 135 或 10 卷 120 或 18 张 4×5 英寸",
+       "c5": "与 CPE-2 Plus 相同"
+      },
+      {
+       "c1": "CPE-3（#4059）",
+       "c2": "现行目录在售",
+       "c3": "固定 75 rpm",
+       "c4": "5 卷 135 或 6 卷 120 或 12 张 4×5 英寸",
+       "c5": "9 L"
+      },
+      {
+       "c1": "CPP-3（#4072 改装）",
+       "c2": "现行目录在售",
+       "c3": "25 至 75 rpm 可调",
+       "c4": "7 卷 135 或 8 卷 120 或 18 张 4×5 英寸",
+       "c5": "18 L"
+      }
+     ]
+    },
+    {
+     "kind": "note",
+     "text": "CPE-2 Plus 手册编号 66051，1997 年 6 月修订。手册把面板的 75 档标为约每分钟 75 转，并说明该机型不能安装 3000 系列的 Expert Drum 与 Multi Drum。手册的判温口径是：恒温槽内的水温比瓶内与量杯内高零点几度，工艺温度以瓶与量杯中稳定的读数为准。温控盘读数本身存在正负 2.0 °C 偏差。"
+    },
+    {
+     "kind": "warn",
+     "text": "高稀释工艺下药液的有效药量随之下降。JOBO 提示最小填充量只保证浸润乳剂，补开发时按比例减少片数或调整药量。"
+    },
+    {
+     "kind": "p",
+     "text": "静止显影（stand development）在稀药液中长时间不搅拌。旋转冲洗与静止显影互斥。旋转冲洗必须持续或间歇搅拌。静止显影改用装片量少、药液稀释、长时间静置的组合。"
+    },
+    {
+     "kind": "note",
+     "text": "ILFORD 冲洗表写明：药盆与部分罐式设备用连续搅拌时，把间歇搅拌的显影时间最多缩短 15%。旋转处理器无预洗时同样最多缩短 15%。该表同时写明预洗不推荐，因为会造成显影不匀。参见 $process-equipment.trays。"
+    },
+    {
+     "kind": "h2",
+     "text": "常见问题"
+    },
+    {
+     "kind": "troubleshoot",
+     "text": "",
+     "caption": "旋转冲洗故障排查",
+     "items": [
+      {
+       "t": "罐体转速异常",
+       "d": "症状是转速忽快忽慢或停止。原因：齿圈磨损、磁铁脱落、马达负载过重。处理：检查齿圈 #1505 与磁铁 #1504 是否到位，清理齿圈上的药垢。"
+      },
+      {
+       "t": "药液漏入机身",
+       "d": "症状是处理器底盘出现药液。原因：Membrankappe 盖老化或罐体安装不到位。处理：更换盖膜，按手册确认罐体到位后再启动。"
+      },
+      {
+       "t": "密度不匀但机温正常",
+       "d": "症状是同罐各卷密度差。原因：卷轴数量与药量不匹配，或转速过低。处理：校核片数与药量配比，把转速设在中段。"
+      },
+      {
+       "t": "高感胶片密度偏高",
+       "d": "症状是 DELTA 一类胶片偏深。原因：转速高于工艺规定，搅拌强度过大。处理：按胶片厂推荐转速下调，或改用手用滚轴控制节奏。"
+      }
+     ]
+    }
+   ],
+   "links": {
+    "prereq": [
+     "process-equipment.jobo-xtrollers"
+    ],
+    "next": [
+     "process-equipment.roller-processor",
+     "process-equipment.mixed-chemistry"
+    ],
+    "related": [
+     "bw-process.push-pull",
+     "film-stock.grain"
+    ],
+    "contrast": [
+     "process-equipment.trays"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "JOBO 1520 Uni Tank 在旋转模式下用多少药液？",
+     "type": "single",
+     "options": [
+      "240 ml",
+      "485 ml",
+      "140 ml",
+      "470 ml"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "1520 摆动模式 485 ml，旋转模式 240 ml。"
+    },
+    {
+     "q": "CPE-3 的电机转速是多少？",
+     "type": "single",
+     "options": [
+      "75 rpm",
+      "25 至 75 rpm",
+      "60 rpm",
+      "90 rpm"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "JOBO 2020 目录给出 CPE-3 固定 75 rpm，CPP-3 与 CPP-Classic 为 25 至 75 rpm 可调。"
+    },
+    {
+     "q": "厂家对旋转冲洗节约药液的说法是什么？",
+     "type": "single",
+     "options": [
+      "比手工摆动冲洗节省 50% 以上",
+      "节省 10% 左右",
+      "药液用量与摆动相同",
+      "药液用量增加 20%"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "JOBO 目录与产品页称处理器较手工摆动冲洗节省药液 50% 以上。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "JOBO CPE-2 Plus 操作手册（archive.org 快照，手册编号 66051）",
+     "url": "http://web.archive.org/web/20080107045418/http://www.jobo.com/jobo_service/us_analog/instructions/instructions_manual_cpe-2_plus_05.htm",
+     "kind": "manual"
+    },
+    {
+     "name": "JOBO 常见问题：CPE-2 与 CPE-2 Plus 的差别（archive.org 快照）",
+     "url": "http://web.archive.org/web/20080107045418/http://www.jobo.com/jobo_service/us_analog/faq/cpevscpe+.htm",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "JOBO 常见问题：CPE-2 Plus 与 CPA-2 的对照（archive.org 快照）",
+     "url": "http://web.archive.org/web/20080107045418/http://www.jobo.com/jobo_service/us_analog/faq/comparison_cpe-2_plus_vs_cpa-2.htm",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "JOBO Analog 2020 产品目录",
+     "url": "https://www.jobo.com//bin/ecms_streamer.php?emb_label=flyer_jobo_analog_2020_final&inline=",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "JOBO Roller #1509 产品页",
+     "url": "https://www.jobo.com/analog/1509-jobo-roller",
+     "kind": "manufacturer"
+    }
+   ],
+   "updated": "2026-10-09",
+   "status": "reviewed"
+  }
+ ]
+}

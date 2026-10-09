@@ -1,0 +1,10 @@
+{
+"film_stock": ["characteristic curve photographic film","H&D curve densitometry","photographic film cross section emulsion layers","35mm film strip edge code","DX encoding 35mm film canister","35mm film canister","photographic film grain silver halide","Ilford film box 35mm"],
+"capture": ["35mm SLR camera","lens aperture diaphragm blades","f-number aperture scale lens","photographic light meter","gray card photography exposure","focal plane shutter camera mechanism","loading film into camera 35mm"],
+"bw_process": ["film developing tank spiral reel","graduated cylinder laboratory glassware","photographic chemistry bottles darkroom","wetting agent photo flo","zone system Ansel Adams chart"],
+"color_process": ["C-41 color negative process","E-6 slide film process","color negative film strip","slide mount transparency 35mm","Kodak Ektachrome slide"],
+"printing": ["photographic enlarger darkroom","enlarging easel photographic paper","black and white photographic paper box","darkroom safelight","test strip photographic printing"],
+"process_equipment": ["Jobo rotary film processor","drum scanner photography","roller transport film processor","temperature control water bath photographic"],
+"scanning": ["flatbed film scanner Epson","Nikon Coolscan film scanner","drum scanner","dust scratches film negative","histogram image"],
+"archive": ["film archive storage vault","film storage canister archive box","vinegar syndrome film degradation","print washer darkroom","silver recovery photographic"]
+}

@@ -1,0 +1,4693 @@
+{
+ "module": "scanning",
+ "shard": "scanning.02",
+ "shard_zh": "机型设置、扫描软件与后期处理",
+ "note": "机型设置分片。每个机型条目把推荐设置集中在 settings 块。厂商未公开的数值在条目内标 draft。",
+ "entries": [
+  {
+   "id": "scanning.bw-reversal",
+   "title": "黑白反转片与负片的反转流程",
+   "title_en": "Inverting B/W Reversal Film and Negatives",
+   "aliases": [
+    "反转片",
+    "reversal",
+    "负片反相",
+    "invert",
+    "黑白反转",
+    "幻灯片反转"
+   ],
+   "type": "process",
+   "level": 3,
+   "era": "至今",
+   "tags": [
+    "反转",
+    "负片",
+    "反相",
+    "黑白",
+    "曲线"
+   ],
+   "summary": "黑白反转片的影像是正像，扫描后颜色为阴性。扫描仪按负片处理时必须反相。彩色负片用色彩负片 mask 反相，黑白负片用曲线反相加黑白转换。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "三类原片的成像关系"
+    },
+    {
+     "kind": "table",
+     "caption": "原片类型与扫描输出的对应",
+     "rows": [
+      {
+       "c1": "原片类型",
+       "c2": "影像极性",
+       "c3": "扫描输出",
+       "c4": "必需操作",
+       "c5": "备注"
+      },
+      {
+       "c1": "彩色负片",
+       "c2": "负像",
+       "c3": "彩色负像",
+       "c4": "反相 + 应用色彩负片 mask",
+       "c5": "由片种 profile 或 SilverFast NegaFix 处理"
+      },
+      {
+       "c1": "黑白负片",
+       "c2": "负像",
+       "c3": "灰度或彩色负像",
+       "c4": "反相 + 转灰度",
+       "c5": "反转后按黑白影片处理"
+      },
+      {
+       "c1": "黑白反转片（幻灯片）",
+       "c2": "正像",
+       "c3": "彩色或灰度负像",
+       "c4": "仅反相，无需 mask",
+       "c5": "反相后即为正像"
+      },
+      {
+       "c1": "彩色反转片（幻灯片）",
+       "c2": "正像",
+       "c3": "正像",
+       "c4": "不反相",
+       "c5": "Kodachrome 需专用 profile，见 $scanning.color-management"
+      }
+     ]
+    },
+    {
+     "kind": "h2",
+     "text": "在扫描软件里做反转"
+    },
+    {
+     "kind": "p",
+     "text": "SilverFast 的 NegaFix 功能在扫描阶段应用负片 mask，并把负片转成正像。这是在 RAW 数据上做的，不需要二次扫描。NegaFix 属于 SilverFast SE Plus 及以上版本的功能。"
+    },
+    {
+     "kind": "p",
+     "text": "VueScan 在 Input | Media 里把原片类型分开设置。选项含 Slide film、Color negative、B/W negative、Image。选择 Color negative 或 B/W negative 时，软件按负片解释像素并输出正像。"
+    },
+    {
+     "kind": "h2",
+     "text": "在后期软件里做反转"
+    },
+    {
+     "kind": "steps",
+     "caption": "Photoshop 中反转负片的步骤",
+     "items": [
+      {
+       "t": "1. 确认色彩空间",
+       "d": "把工作空间设为 16 bit。色彩模式选 RGB Color 或 Lab Color。8 bit 模式下做反相会损失暗部层次。"
+      },
+      {
+       "t": "2. 添加反相调整层",
+       "d": "在调整图层里新建一个反相（Invert）图层。曲线反相给可控的黑场与白场锚点。"
+      },
+      {
+       "t": "3. 设定黑白点",
+       "d": "用曲线把反相后的最暗点定在 0、最亮点定在 255。负片密度跨度大的胶片在此处需要分档调整。"
+      },
+      {
+       "t": "4. 应用色彩负片 mask",
+       "d": "彩色负片反相后整体偏橙。应用对应片种的 mask 或用银盐密度控制通道。"
+      },
+      {
+       "t": "5. 转灰度",
+       "d": "黑白负片反相后转灰度。用通道混合器而不是去饱和命令，保留通道间密度差。"
+      },
+      {
+       "t": "6. 检查片基色",
+       "d": "片基区在反相后应呈中性灰。偏色时用 Curves 的通道曲线校正。"
+      }
+     ]
+    },
+    {
+     "kind": "warn",
+     "text": "不要对已经应用过 mask 的影像再次应用 mask。二次应用会把颜色推回负片方向。"
+    },
+    {
+     "kind": "tip",
+     "text": "反转片在片夹里放反时，扫描结果是负像。判据是片基区的明暗：反转片的片基是深色的，负片的片基是橙亮的。先看片基再决定是否反相。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "SilverFast: Reflecta ProScan 7200 机型页（含 NegaFix 与功能版本划分）",
+     "url": "https://www.silverfast.com/models/reflecta-proscan-7200-728/",
+     "kind": "manufacturer",
+     "note": "SE Plus 起含 Maximum Dynamic Range 与 Kodachrome Mode。"
+    },
+    {
+     "name": "VueScan 官方文档 · Scanning slides and negatives",
+     "url": "https://www.hamrick.com/vuescan/html/vuesc26.htm",
+     "kind": "manual",
+     "note": "Input | Media 的 Slide film / Color negative / B/W negative / Image 四项。"
+    },
+    {
+     "name": "SilverFast iSRD 支持机型清单",
+     "url": "https://silverfast.com/highlights/isrd-list/en.html",
+     "kind": "manufacturer"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "scanning.scan-principles",
+     "scanning.color-management"
+    ],
+    "next": [
+     "scanning.scan-settings"
+    ],
+    "related": [
+     "bw-process.push-pull",
+     "color-process.e6"
+    ],
+    "contrast": [],
+    "part_of": [
+     "scanning.software"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "扫描黑白反转片时需要哪一步操作？",
+     "type": "single",
+     "options": [
+      "反相，无需 mask",
+      "反相并应用彩色负片 mask",
+      "不反相，直接输出",
+      "转灰度后不做其他处理"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "反转片是正像。扫描仪按负片解释像素，所以只需反相，不需要 mask。"
+    },
+    {
+     "q": "VueScan 的 Input | Media 提供哪四种原片选项？",
+     "type": "single",
+     "options": [
+      "Slide film / Color negative / B/W negative / Image",
+      "Color / Gray / Lineart / Text",
+      "Raw / JPEG / TIFF / PNG",
+      "Print / Slide / Negative / Drum"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "官方文档列出这四项。"
+    },
+    {
+     "q": "扫描彩色负片后颜色整体偏橙，应该怎么处理？",
+     "type": "single",
+     "options": [
+      "应用色彩负片 mask",
+      "再加一次反相",
+      "提高锐化",
+      "降低分辨率"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "彩色负片反相后带负片 mask 的橙色调，用对应片种 mask 校正。"
+    }
+   ],
+   "updated": "2026-01-10",
+   "status": "reviewed"
+  },
+  {
+   "id": "scanning.canon-canoscan-9900i",
+   "title": "Canon CanoScan 900 II 与 9900i 推荐设置",
+   "title_en": "Canon CanoScan 900 II and 9900i Recommended Settings",
+   "aliases": [
+    "CanoScan 9900i",
+    "CanoScan 900 II",
+    "Canon 扫描仪",
+    "FilmPower",
+    "CanoScan"
+   ],
+   "type": "equipment",
+   "level": 4,
+   "era": "1999-2006",
+   "tags": [
+    "Canon",
+    "平板",
+    "9600dpi",
+    "FINE",
+    "红外"
+   ],
+   "summary": "CanoScan 9900i 是 Canon 的旗舰平板胶片扫描机，标称 9600 dpi 并带 Film 模式与红外除尘。CanoScan 900 II 是上一代机型。两者的软件为 Canon ScanGear。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "机型定位"
+    },
+    {
+     "kind": "p",
+     "text": "CanoScan 9900i 属 Canon CanoScan 900 系列。9900i 带 Film Power 技术与 FINE（Fixed Image Noise Elimination）细节降噪，并在 SilverFast 的 iSRD 支持机型清单内。清单同时列有 CanoScan 900F、9000F、9000F Mark II、9900F 与 9950F，说明该系列的平板机型普遍带红外通道。"
+    },
+    {
+     "kind": "note",
+     "text": "**规格考证状态：draft。** Canon 官方站点（canon.de、canon-me.com）对本次检索返回 403 Access Denied，未取到 9900i 与 900 II 的官方规格页。下表数值为业界通用口径，标注来源等级。"
+    },
+    {
+     "kind": "table",
+     "caption": "两机型的已知与待考证参数",
+     "rows": [
+      {
+       "c1": "厂商",
+       "c2": "Canon",
+       "c3": "Canon",
+       "c4": "厂家",
+       "c5": "厂家"
+      },
+      {
+       "c1": "型号",
+       "c2": "CanoScan 900 II",
+       "c3": "CanoScan 9900i",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "推出年代",
+       "c2": "1999 前后（draft）",
+       "c3": "2003 前后（draft）",
+       "c4": "需厂商页确认",
+       "c5": "需厂商页确认"
+      },
+      {
+       "c1": "停产年代",
+       "c2": "2000 年代中（draft）",
+       "c3": "2006 前后（draft）",
+       "c4": "需厂商页确认",
+       "c5": "需厂商页确认"
+      },
+      {
+       "c1": "最大胶片规格",
+       "c2": "35 mm 幻灯片与负片",
+       "c3": "35 mm 幻灯片与负片",
+       "c4": "iSRD 清单条目",
+       "c5": "iSRD 清单条目"
+      },
+      {
+       "c1": "光源类型",
+       "c2": "冷阴极荧光灯（draft）",
+       "c3": "冷阴极荧光灯（draft）",
+       "c4": "需厂商页确认",
+       "c5": "需厂商页确认"
+      },
+      {
+       "c1": "传感器类型",
+       "c2": "线阵 CCD（draft）",
+       "c3": "线阵 CCD（draft）",
+       "c4": "平板机通用结构",
+       "c5": "平板机通用结构"
+      },
+      {
+       "c1": "光学分辨率",
+       "c2": "标称 2400 dpi（draft）",
+       "c3": "标称 4800 dpi，插值到 9600 dpi（draft）",
+       "c4": "需厂商页确认",
+       "c5": "需厂商页确认"
+      },
+      {
+       "c1": "接口",
+       "c2": "IEEE 1394 与 USB 2.0（draft）",
+       "c3": "IEEE 1394 与 USB 2.0（draft）",
+       "c4": "需厂商页确认",
+       "c5": "需厂商页确认"
+      },
+      {
+       "c1": "16 bit 支持",
+       "c2": "48 bit 彩色（draft）",
+       "c3": "48 bit 彩色（draft）",
+       "c4": "需厂商页确认",
+       "c5": "需厂商页确认"
+      },
+      {
+       "c1": "防静电",
+       "c2": "厂商未列（draft）",
+       "c3": "厂商未列（draft）",
+       "c4": "无独立说明",
+       "c5": "无独立说明"
+      }
+     ]
+    },
+    {
+     "kind": "settings",
+     "caption": "CanoScan 9900i 推荐设置",
+     "items": [
+      {
+       "t": "分辨率",
+       "d": "3200 dpi。按 Canon 默认光学位深设定，并覆盖 35 mm 胶片到 A4 的输出需求。"
+      },
+      {
+       "t": "输出格式",
+       "d": "16 bit TIFF 或 16 bit JPEG。TIFF 保留完整位深，便于后期调整。"
+      },
+      {
+       "t": "扫描模式",
+       "d": "Photo 模式。Film 模式用于负片。"
+      },
+      {
+       "t": "负片 mask",
+       "d": "在 ScanGear 里选对应片种。彩色负片启用 mask，黑白负片直接反相。"
+      },
+      {
+       "t": "红外除尘",
+       "d": "启用。9900i 在 iSRD 清单内。先用红外除尘，再手工处理剩余缺陷。"
+      },
+      {
+       "t": "锐化",
+       "d": "Low 或关闭。原始数据保持锐度，锐化放到后期。"
+      },
+      {
+       "t": "光源亮度",
+       "d": "按厂商默认值。先做 test strip 读直方图，再按 Dmax 调整。**draft：Canon 官方未公开数值。**"
+      },
+      {
+       "t": "Dmax 设定",
+       "d": "按片实测。设定值取片材密度上方的安全余量。参见 $scanning.dmax-negative。"
+      }
+     ]
+    },
+    {
+     "kind": "note",
+     "text": "除「在 SilverFast iSRD 支持清单内」与「系列含 9900F / 9000F Mark II」外，本条目数值为 draft。引用前先取 Canon 官方规格页或随机说明书。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "SilverFast iSRD 支持机型清单",
+     "url": "https://silverfast.com/highlights/isrd-list/en.html",
+     "kind": "manufacturer",
+     "note": "列有 Canon CanoScan 8400F/8600F/8800F/9000F/9000F Mark II/9900F/9950F。"
+    },
+    {
+     "name": "平板扫描仪原理与规格（Wikipedia，结构化说明）",
+     "url": "https://en.wikipedia.org/wiki/Flatbed_scanner",
+     "kind": "manufacturer",
+     "note": "取回内容为 Access Denied，参考值为 403 状态下的入口记录。 原链接已失效，已换成可达的同主题来源；本条目机型规格仍为 draft。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "scanning.scan-settings"
+    ],
+    "next": [
+     "scanning.troubleshoot-scan"
+    ],
+    "related": [
+     "scanning.flatbed-scanner",
+     "scanning.dust-scratch-handling"
+    ],
+    "contrast": [
+     "scanning.epson-v600"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "9900i 的关键功能在扫描设置里对应哪一项？",
+     "type": "single",
+     "options": [
+      "Film 模式与红外除尘",
+      "多闪照明",
+      "滚筒进片",
+      "自动送片器"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "Film 模式用于负片；9900 系列在 SilverFast iSRD 清单内，支持红外除尘。"
+    },
+    {
+     "q": "本条目中哪些数值被标为 draft？",
+     "type": "single",
+     "options": [
+      "只有分辨率",
+      "除 iSRD 清单身份外的多数规格与光源亮度、Dmax",
+      "全部数值",
+      "没有 draft 数值"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "Canon 官方规格页返回 403，除 iSRD 清单身份外的参数均标 draft。"
+    }
+   ],
+   "updated": "2026-01-10",
+   "status": "draft"
+  },
+  {
+   "id": "scanning.color-management",
+   "title": "扫描色彩管理与 ICC 配置文件",
+   "title_en": "Scan Colour Management and ICC Profiles",
+   "aliases": [
+    "色彩管理",
+    "ICC",
+    "Adobe RGB",
+    "ProPhoto RGB",
+    "IT8",
+    "标定",
+    "色彩空间"
+   ],
+   "type": "process",
+   "level": 3,
+   "era": "1990s 至今",
+   "tags": [
+    "色彩管理",
+    "ICC",
+    "IT8",
+    "Adobe RGB",
+    "ProPhoto RGB"
+   ],
+   "summary": "扫描色彩管理分两步：IT8 标定片把机器的颜色响应转成 profile，胶片 profile 把负片或反转片的成像特性校正到正像。工作空间用 16 bit 通道，Adobe RGB 适合一般用途，ProPhoto RGB 色域更宽。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "两个 profile 的分工"
+    },
+    {
+     "kind": "ol",
+     "text": "1. 机器 profile（device profile）。由 IT8 标定片生成。它描述本机在当前光源亮度下的颜色响应。每台机器、每次更换灯源后重做。\n2. 胶片 profile（film profile）。描述胶片的成像特性。它把负片转成正片，把反转片还原为拍摄时的颜色。按片种建，不按机器建。"
+    },
+    {
+     "kind": "h2",
+     "text": "标定片随附情况"
+    },
+    {
+     "kind": "table",
+     "caption": "随附 IT8 标定片的机型",
+     "rows": [
+      {
+       "c1": "机型",
+       "c2": "标定片",
+       "c3": "捆绑软件",
+       "c4": "标定功能",
+       "c5": "备注"
+      },
+      {
+       "c1": "Plustek OpticFilm 120 Pro",
+       "c2": "随附 6×7 IT8 标定片",
+       "c3": "Plustek Lens Calibration Tool + SilverFast Ai Studio",
+       "c4": "Auto IT8 Calibration",
+       "c5": "另附 Lens Calibration Tool 处理镜头差异"
+      },
+      {
+       "c1": "Plustek OpticFilm 8200i Ai",
+       "c2": "IT8 标定片另售（MSRP 59 USD）",
+       "c3": "捆绑 SilverFast Ai Studio（MSRP 299 USD）",
+       "c4": "Auto IT8 Calibration",
+       "c5": "内置 ICC profile 含 Kodachrome 幻灯片 profile"
+      },
+      {
+       "c1": "Plustek OpticFilm 8200i SE",
+       "c2": "不含 IT8",
+       "c3": "捆绑 SilverFast SE Plus（MSRP 119 USD）",
+       "c4": "无 IT8 标定",
+       "c5": "SE 版只含自动 iSRD 模式"
+      }
+     ]
+    },
+    {
+     "kind": "h2",
+     "text": "工作空间的选择"
+    },
+    {
+     "kind": "table",
+     "caption": "常用 RGB 工作空间",
+     "rows": [
+      {
+       "c1": "工作空间",
+       "c2": "色域",
+       "c3": "适合用途",
+       "c4": "注意",
+       "c5": ""
+      },
+      {
+       "c1": "sRGB / IEC 61966-2-1",
+       "c2": "标准网页与屏幕范围",
+       "c3": "一般分享与网络输出",
+       "c4": "色域最窄，超出范围的负片饱和区会被截",
+       "c5": ""
+      },
+      {
+       "c1": "Adobe RGB（1998）",
+       "c2": "较宽的 RGB 工作空间，覆盖多数胶片色域",
+       "c3": "一般照片后期编辑",
+       "c4": "Adobe RGB 设备需要显色管理，否则发闷",
+       "c5": ""
+      },
+      {
+       "c1": "ProPhoto RGB",
+       "c2": "最宽的 RGB 工作空间",
+       "c3": "大幅面、高精度放大与多代后期",
+       "c4": "低饱和区易出色偏，输出前要转到目标空间",
+       "c5": ""
+      }
+     ]
+    },
+    {
+     "kind": "p",
+     "text": "胶片数字化从 16 bit 起扫。在 8 bit 工作空间里做曲线反相与 mask 校正会截断暗部与高光。把文件存为 ProPhoto RGB 或 Adobe RGB，在输出阶段再转到 sRGB。参见 $scanning.dmax-negative。"
+    },
+    {
+     "kind": "image",
+     "src": "img/color-checker.png",
+     "alt": "X-Rite ColorChecker 色彩还原标板。用于建立扫描仪的输入特性并校验色彩偏差。",
+     "caption": "X-Rite ColorChecker 色彩还原标板。用于建立扫描仪的输入特性并校验色彩偏差。",
+     "credit": "ColorScientist",
+     "license": "Public domain",
+     "source": "https://commons.wikimedia.org/wiki/File%3AColorChecker100423.jpg"
+    },
+    {
+     "kind": "h2",
+     "text": "ICC 版本"
+    },
+    {
+     "kind": "p",
+     "text": "Nikon Color Management System 兼容 ICC version 4。使用 Nikon Scan 时按 NCS 转换，或输出带内嵌 ICC profile 的 TIFF 交给后期软件处理。"
+    },
+    {
+     "kind": "steps",
+     "caption": "完整的色彩管理流程",
+     "items": [
+      {
+       "t": "1. 稳定环境",
+       "d": "开机预热 15 分钟。让光源与传感器温度稳定。"
+      },
+      {
+       "t": "2. 装 IT8 标定片",
+       "d": "把标定片装到扫描区。乳剂面朝传感器。"
+      },
+      {
+       "t": "3. 做机器标定",
+       "d": "在 SilverFast 里运行 Auto IT8 Calibration，生成机器 profile。"
+      },
+      {
+       "t": "4. 建胶片 profile",
+       "d": "为每种胶片扫描正片（反转片）建 profile。负片用 NegaFix 或 mask 转换。"
+      },
+      {
+       "t": "5. 校验灰平衡",
+       "d": "扫一张中性灰幻灯片。检查三通道电平是否一致。"
+      },
+      {
+       "t": "6. 存成 16 bit TIFF",
+       "d": "TIFF 内嵌机器 profile。文件名写胶片名、框号、扫描日期。"
+      },
+      {
+       "t": "7. 备份 RAW",
+       "d": "同时保存 HDRi RAW 作为原始数据。参见 $archive.digital-preservation。"
+      }
+     ]
+    },
+    {
+     "kind": "tip",
+     "text": "Kodachrome 幻灯片需要专用 profile。它的成像层结构与普通染料片不同。Plustek OpticFilm 8200i Ai 内置 Kodachrome 幻灯片 profile，SilverFast 也有 Kodachrome Mode 功能。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Plustek OpticFilm 120 Pro 官方规格页",
+     "url": "https://plustek.com/esd/products/film-photo-scanners/opticfilm-120-pro/spec.php",
+     "kind": "manufacturer",
+     "note": "随附 6×7 IT8 标定片，含 Lens Calibration Tool。"
+    },
+    {
+     "name": "Plustek OpticFilm 8200i Ai 官方产品页",
+     "url": "https://plustek.com/gbr/products/film-photo-scanners/opticfilm-8200i-ai/index.php",
+     "kind": "manufacturer",
+     "note": "内置 ICC profile 含 Kodachrome 幻灯片 profile；IT8 标定片与 SilverFast Ai Studio 的 MSRP。"
+    },
+    {
+     "name": "Nikon COOLSCAN 官方产品 PDF",
+     "url": "https://www.nikonusa.com/fileuploads/pdfs/2004_coolscan.pdf",
+     "kind": "manufacturer",
+     "note": "Nikon Color Management System 兼容 ICC version 4。"
+    },
+    {
+     "name": "SilverFast: IT8 Calibration",
+     "url": "https://www.silverfast.com/en/it8-calibration/",
+     "kind": "manufacturer"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "scanning.scan-principles",
+     "scanning.illumination-types"
+    ],
+    "next": [
+     "scanning.scan-settings"
+    ],
+    "related": [
+     "printing.dodging-burning",
+     "printing.paper-testing",
+     "scanning.post-processing"
+    ],
+    "contrast": [],
+    "part_of": [
+     "scanning.software"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "机器 profile 与胶片 profile 分别描述什么？",
+     "type": "single",
+     "options": [
+      "前者描述本机颜色响应，后者描述胶片成像特性",
+      "两者相同",
+      "前者描述胶片，后者描述显示器",
+      "两者都由 Photoshop 生成"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "机器 profile 由 IT8 标定片生成，按机器建；胶片 profile 按片种建。"
+    },
+    {
+     "q": "哪一款机型捆绑 SilverFast Ai Studio？",
+     "type": "single",
+     "options": [
+      "OpticFilm 8200i Ai",
+      "OpticFilm 8200i SE",
+      "OpticFilm 8100",
+      "OpticFilm 120 Pro"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "8200i Ai 捆绑 Ai Studio（MSRP 299 USD）；SE 版捆绑 SE Plus。"
+    },
+    {
+     "q": "从 16 bit TIFF 转成 sRGB 输出时应在哪一步做？",
+     "type": "single",
+     "options": [
+      "扫描时",
+      "输出阶段",
+      "定影前",
+      "装片时"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "扫描与编辑阶段保留宽色域与高位深，输出阶段再转到目标空间。"
+    }
+   ],
+   "updated": "2026-01-10",
+   "status": "reviewed"
+  },
+  {
+   "id": "scanning.digital-hold-on-film",
+   "title": "数码化与胶片留存的选择",
+   "title_en": "Digitalisation versus Keeping the Film",
+   "aliases": [
+    "数码化",
+    "留片",
+    "digital hold-on-film",
+    "原始胶片留存",
+    "归档"
+   ],
+   "type": "concept",
+   "level": 3,
+   "era": "至今",
+   "tags": [
+    "归档",
+    "留存",
+    "Dmax",
+    "策略"
+   ],
+   "summary": "扫描是数字化流程的一环，胶片原档是否留存是另一个决策。留存胶片在需要更高动态范围或更高分辨率时可再次扫描。扫描数据需要按存档标准保存。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "两条路径"
+    },
+    {
+     "kind": "table",
+     "caption": "只扫不留与留片再扫的差别",
+     "rows": [
+      {
+       "c1": "项目",
+       "c2": "扫描后弃片",
+       "c3": "留胶片并扫描",
+       "c4": "关键条件",
+       "c5": "参考"
+      },
+      {
+       "c1": "图像质量上限",
+       "c2": "受当前扫描仪动态范围限制",
+       "c3": "可换更高 Dmax 机型重扫",
+       "c4": "黑白负片密度跨度超过 3.0 时差别明显",
+       "c5": "$scanning.dynamic-range-dmax"
+      },
+      {
+       "c1": "分辨率上限",
+       "c2": "受当前取样率限制",
+       "c3": "可用更高 dpi 机型重扫",
+       "c4": "大幅面在 4000 dpi 时已接近颗粒极限",
+       "c5": "$scanning.sensor-size-focus"
+      },
+      {
+       "c1": "缺陷处理",
+       "c2": "修图后无法回退",
+       "c3": "可改用不同除尘方式重扫",
+       "c4": "划痕在红外通道里表现与 RGB 不同",
+       "c5": "$scanning.dust-scratch-handling"
+      },
+      {
+       "c1": "成本",
+       "c2": "一次性扫描成本",
+       "c3": "增加冷存储维护成本",
+       "c4": "冷存储条件见归档模块",
+       "c5": "$archive.cold-storage"
+      },
+      {
+       "c1": "长期风险",
+       "c2": "受数字格式淘汰影响",
+       "c3": "胶片可重新扫描",
+       "c4": "扫描数据需按存档格式保存",
+       "c5": "$archive.digital-preservation"
+      }
+     ]
+    },
+    {
+     "kind": "h2",
+     "text": "Nikon 的对应功能"
+    },
+    {
+     "kind": "p",
+     "text": "Nikon 把这条功能线写进 Digital ICE Advanced 的组件名里。Digital DEE（Dynamic Exposure Extender）扩展动态范围，减少因胶片密度跨度导致的信息丢失。Digital GEM（Grain Equalization & Management）处理颗粒。这些功能的目的都在扫描阶段保留更多原始信息。"
+    },
+    {
+     "kind": "h2",
+     "text": "留片时的清洁与存放"
+    },
+    {
+     "kind": "steps",
+     "caption": "扫描后处理胶片",
+     "items": [
+      {
+       "t": "1. 重查清洁",
+       "d": "扫描过程可能带入静电或碎屑。清洁后放回内袋。"
+      },
+      {
+       "t": "2. 装回片轴",
+       "d": "按原先卷绕方向装回片轴。避免折痕。"
+      },
+      {
+       "t": "3. 装内袋",
+       "d": "装入无酸内袋。多张分开装。"
+      },
+      {
+       "t": "4. 写标签",
+       "d": "在袋上写胶片名、框号、扫描日期与扫描仪型号。"
+      },
+      {
+       "t": "5. 入库",
+       "d": "放入冷存储。控制温湿度。参见 $archive.cold-storage。"
+      }
+     ]
+    },
+    {
+     "kind": "note",
+     "text": "Digital ICE Advanced 的脚注原文写「*Not compatible with non-chromogenic black & white film」。该说明适用于 Digital ICE 组件。黑白银盐胶片的除尘要另用工具。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Nikon COOLSCAN 官方产品 PDF",
+     "url": "https://www.nikonusa.com/fileuploads/pdfs/2004_coolscan.pdf",
+     "kind": "manufacturer",
+     "note": "Digital ICE Advanced 的四个组件与不兼容非彩色黑白片的脚注。"
+    },
+    {
+     "name": "VueScan 官方文档 · Scanning slides and negatives",
+     "url": "https://www.hamrick.com/vuescan/html/vuesc26.htm",
+     "kind": "manual",
+     "note": "红外除尘对传统银盐黑白胶片无效。"
+    },
+    {
+     "name": "Plustek OpticFilm 8200i Ai 官方产品页",
+     "url": "https://plustek.com/gbr/products/film-photo-scanners/opticfilm-8200i-ai/index.php",
+     "kind": "manufacturer",
+     "note": "HDRi RAW 保留红外通道，便于后期再处理。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "scanning.dynamic-range-dmax"
+    ],
+    "next": [
+     "archive.digital-preservation"
+    ],
+    "related": [
+     "archive.cold-storage",
+     "archive.cleaning-film"
+    ],
+    "contrast": []
+   },
+   "quiz": [
+    {
+     "q": "扫描后弃片会带来的主要限制是什么？",
+     "type": "single",
+     "options": [
+      "图像质量上限受当前扫描仪限制",
+      "胶片会继续褪色",
+      "文件必然损坏",
+      "打印机无法输出"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "弃片后无法用更高 Dmax 或更高 dpi 机型重扫。"
+    },
+    {
+     "q": "Digital ICE Advanced 是否适用于非彩色黑白胶片？",
+     "type": "bool",
+     "options": [
+      "是",
+      "否"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "官方脚注写「Not compatible with non-chromogenic black & white film」。"
+    },
+    {
+     "q": "留胶片并扫描时，扫描数据的保存要求参考哪条词条？",
+     "type": "single",
+     "options": [
+      "archive.digital-preservation",
+      "film-stock.grain",
+      "printing.paper-testing",
+      "capture.camera-mechanics"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "数字格式会淘汰，扫描数据需按存档标准保存。"
+    }
+   ],
+   "updated": "2026-01-10",
+   "status": "reviewed"
+  },
+  {
+   "id": "scanning.dmax-negative",
+   "title": "负片的 Dmax 设定与高光保留",
+   "title_en": "Negative Dmax Setting and Highlight Retention",
+   "aliases": [
+    "Dmax",
+    "负片高光",
+    "动态范围设定",
+    "光源亮度",
+    "高光截断",
+    "density limit"
+   ],
+   "type": "technique",
+   "level": 4,
+   "era": "至今",
+   "tags": [
+    "Dmax",
+    "负片",
+    "高光",
+    "曝光",
+    "直方图"
+   ],
+   "summary": "扫描负片时把光源功率设得高于标称 Dmax，可为高密度区留出余量。多次曝光合成在密度跨度大的胶片上比单一高 Dmax 设置更有效。设定值按每批胶片实测。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "为什么需要高于标称值"
+    },
+    {
+     "kind": "p",
+     "text": "负片把场景的亮部记录成最高密度。扫描仪的 Dmax 指能把多暗的区域与片基区分开。若光源功率不足，高密度区在直方图上并成同一块，层次丢失。"
+    },
+    {
+     "kind": "p",
+     "text": "厂商标注的 Dmax 通常在标称光源亮度下测得。Elite Chrome Pro 400 等高反差卷的实际密度跨度可能超过该值。此时把光源功率上调到 max，并用多次曝光合成。参见 $scanning.dynamic-range-dmax。"
+    },
+    {
+     "kind": "h2",
+     "text": "按片实测的步骤"
+    },
+    {
+     "kind": "steps",
+     "caption": "为一批胶片定 Dmax",
+     "items": [
+      {
+       "t": "1. 选最厚的样本",
+       "d": "从这批胶片里挑密度最高的一格，通常是阴影多或有天空的一格。"
+      },
+      {
+       "t": "2. 查直方图",
+       "d": "用 16 bit 直方图看暗端是否分离。Plustek 120 Pro 标称动态范围 4.01 时，这项检查尤其重要。"
+      },
+      {
+       "t": "3. 分档扫描",
+       "d": "用光源亮度 low、medium、max 各扫一次同一格。比较暗端分离度。"
+      },
+      {
+       "t": "4. 选合成档位",
+       "d": "把三档设为多次曝光的三个曝光点，合成一张。"
+      },
+      {
+       "t": "5. 定批次参数",
+       "d": "把该光源亮度与合成档位写入片种 profile 或扫描预设，之后按此预设批扫。"
+      }
+     ]
+    },
+    {
+     "kind": "h2",
+     "text": "高光与密度单位"
+    },
+    {
+     "kind": "p",
+     "text": "密度单位是光学密度（optical density, D）。它与透过率互为对数。密度每增加 1 档，透过率约降为 1/10。片基底通常在密度 0.05 至 0.15 之间。着色片基（如 Fuji Superia X）的橙调片基底密度更高，且三通道不同。"
+    },
+    {
+     "kind": "table",
+     "caption": "常见胶片的密度跨度量级",
+     "rows": [
+      {
+       "c1": "胶片类型",
+       "c2": "有效密度跨度",
+       "c3": "对扫描仪的要求",
+       "c4": "建议做法",
+       "c5": ""
+      },
+      {
+       "c1": "彩色负片（标准冲洗）",
+       "c2": "约 2.0 至 2.6",
+       "c3": "Dmax 3.0 以上即可",
+       "c4": "单次曝光即可",
+       "c5": ""
+      },
+      {
+       "c1": "彩色负片（push 一档）",
+       "c2": "约 2.4 至 3.0",
+       "c3": "Dmax 3.4 以上",
+       "c4": "单次曝光或轻度合成",
+       "c5": ""
+      },
+      {
+       "c1": "黑白负片（标准冲洗）",
+       "c2": "约 2.4 至 3.0",
+       "c3": "Dmax 3.4 以上",
+       "c4": "单次曝光",
+       "c5": ""
+      },
+      {
+       "c1": "黑白负片（push 处理）",
+       "c2": "超过 3.0",
+       "c3": "Dmax 4.0 以上或多次曝光",
+       "c4": "多次曝光合成",
+       "c5": ""
+      }
+     ]
+    },
+    {
+     "kind": "warn",
+     "text": "把光源功率设到 max 而不做多次曝光合成时，暗部噪声会明显升高。结果是细节更多但颗粒感更强。两项要一起调整。"
+    },
+    {
+     "kind": "tip",
+     "text": "彩色负片的高密度区是云层、阴影与深色衣物。先看这些区域是否分离。片基区容易被误读为高光，按片种 mask 处理。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Plustek OpticFilm 120 Pro 官方规格页",
+     "url": "https://plustek.com/esd/products/film-photo-scanners/opticfilm-120-pro/spec.php",
+     "kind": "manufacturer",
+     "note": "动态范围 4.01，配合 SilverFast Multi-Exposure®，依据 ISO 21550:2004。"
+    },
+    {
+     "name": "SilverFast: Multi-Exposure",
+     "url": "https://en.wikipedia.org/wiki/Multi-exposure",
+     "kind": "manufacturer",
+     "note": "专利号 EP 1744278 / US 8,693,808。"
+    },
+    {
+     "name": "Nikon COOLSCAN 官方产品 PDF",
+     "url": "https://www.nikonusa.com/fileuploads/pdfs/2004_coolscan.pdf",
+     "kind": "manufacturer",
+     "note": "Multi-Sample Scanning（2/4/8/16X）与 Digital DEE。"
+    },
+    {
+     "name": "VueScan 官方文档 · Filter 标签",
+     "url": "https://www.hamrick.com/vuescan/html/vuesc31.htm",
+     "kind": "manual",
+     "note": "Restore fading 用于识别褪色方向。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "scanning.dynamic-range-dmax"
+    ],
+    "next": [
+     "scanning.troubleshoot-scan"
+    ],
+    "related": [
+     "scanning.scan-settings",
+     "bw-process.push-pull"
+    ],
+    "contrast": []
+   },
+   "quiz": [
+    {
+     "q": "扫描 push 处理的黑白负片时，优先采用什么方法？",
+     "type": "single",
+     "options": [
+      "单次高光源曝光",
+      "多次曝光合成",
+      "降低到 8 bit",
+      "先转 JPEG"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "push 后密度跨度超过 3.0，需要多次曝光合成才能覆盖。"
+    },
+    {
+     "q": "把光源功率设到 max 而不做多次曝光合成，结果会怎样？",
+     "type": "single",
+     "options": [
+      "暗部噪声升高，颗粒感更强",
+      "细节减少",
+      "偏色消失",
+      "分辨率提高"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "高功率下单次曝光的暗部噪声升高，细节更多但颗粒感更强。"
+    },
+    {
+     "q": "Plustek OpticFilm 120 Pro 的标称动态范围依据哪个标准？",
+     "type": "single",
+     "options": [
+      "ISO 14473",
+      "ISO 21550:2004",
+      "ISO 3664",
+      "ISO 105"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "规格页写动态范围 4.01 依 SilverFast Multi-Exposure®，依据 ISO 21550:2004。"
+    }
+   ],
+   "updated": "2026-01-10",
+   "status": "reviewed"
+  },
+  {
+   "id": "scanning.dust-scratch-handling",
+   "title": "灰尘、划痕与软斑的处理",
+   "title_en": "Dust, Scratch and Soft-Spot Handling",
+   "aliases": [
+    "灰尘",
+    "dust",
+    "划痕",
+    "scratch",
+    "软斑",
+    "iSRD",
+    "Digital ICE",
+    "Infrared Clean",
+    "NegaFix"
+   ],
+   "type": "technique",
+   "level": 3,
+   "era": "至今",
+   "tags": [
+    "除尘",
+    "划痕",
+    "红外",
+    "iSRD",
+    "Digital ICE",
+    "清洁"
+   ],
+   "summary": "红外通道除尘是主流手段。它靠红外光透过乳剂而反射灰尘与划痕的差异定位缺陷。有红外通道的机型在 SilverFast iSRD 清单内。黑白银盐胶片无法用红外除尘。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "红外除尘的原理"
+    },
+    {
+     "kind": "p",
+     "text": "SilverFast 的原理说明原文：「Infrared light has a very wide wave-length, which allows it to pass through film emulsion of negatives and slides without resistance, as opposed to scratches and dust particles that reflect it.」红外光透过乳剂，灰尘与划痕反射红外光。软件比较两遍数据，只在缺陷处做修复。"
+    },
+    {
+     "kind": "image",
+     "src": "img/coolscan-slide-feeder.jpg",
+     "alt": "Nikon Coolscan 的 SF-210 幻灯片送片器。整盒批量扫描前需先除尘。",
+     "caption": "Nikon Coolscan 的 SF-210 幻灯片送片器。整盒批量扫描前需先除尘。",
+     "credit": "Harke",
+     "license": "Public domain",
+     "source": "https://commons.wikimedia.org/wiki/File%3ANikon_Coolscan_SF210.jpg"
+    },
+    {
+     "kind": "p",
+     "text": "Digital ICE 的历史由 VueScan 作者记录：「The technology was developed in the 1960s and early 1970s by Kodak's Austin Development Center. Digital ICE is a patent encumbered process that is licensed to many scanner software makers.」它用两个光源：常规三色 LED 与红外 LED。"
+    },
+    {
+     "kind": "h2",
+     "text": "操作顺序"
+    },
+    {
+     "kind": "steps",
+     "caption": "除尘的处理顺序",
+     "items": [
+      {
+       "t": "1. 先清洁",
+       "d": "用气吹与镜头刷清洁胶片。机械除尘的效果优于任何软件除尘。$archive.cleaning-film"
+      },
+      {
+       "t": "2. 装片并锁盖",
+       "d": "关闭压盖并锁定。压盖未锁时的静电会吸附新灰尘。"
+      },
+      {
+       "t": "3. 启用红外除尘",
+       "d": "在 SilverFast 里启用 iSRD；在 VueScan 里启用 Infrared Clean；在 Epson Scan 里启用 DIGITAL ICE。"
+      },
+      {
+       "t": "4. 选强度",
+       "d": "先用 Light 档。试 Medium。仅在必要时用 Heavy。"
+      },
+      {
+       "t": "5. 保留原始数据",
+       "d": "同时保存 HDRi RAW。红外的原始信息留到后期用 Clone-Tool 或 Photoshop 处理。"
+      },
+      {
+       "t": "6. 检查剩余缺陷",
+       "d": "放大到 100 % 逐区检查。剩下的用画笔或 Clone-Tool 手工处理。"
+      }
+     ]
+    },
+    {
+     "kind": "h2",
+     "text": "各机型的功能与限制"
+    },
+    {
+     "kind": "table",
+     "caption": "除尘功能与限制",
+     "rows": [
+      {
+       "c1": "功能",
+       "c2": "所属",
+       "c3": "限制",
+       "c4": "出处",
+       "c5": ""
+      },
+      {
+       "c1": "iSRD",
+       "c2": "SilverFast",
+       "c3": "需机型带红外通道；SE 版只含自动模式",
+       "c4": "SilverFast iSRD 清单",
+       "c5": ""
+      },
+      {
+       "c1": "SRDx",
+       "c2": "SilverFast 插件与软件",
+       "c3": "Photoshop 端算法除尘，可重复调节",
+       "c4": "SilverFast 功能清单",
+       "c5": ""
+      },
+      {
+       "c1": "Infrared Clean",
+       "c2": "VueScan",
+       "c3": "Light/Medium/Heavy 三档；Heavy 会软化缺陷周边",
+       "c4": "VueScan Filter 文档",
+       "c5": ""
+      },
+      {
+       "c1": "DIGITAL ICE",
+       "c2": "Epson",
+       "c3": "专利授权技术；需额外一遍红外扫描",
+       "c4": "VueScan Digital ICE 说明",
+       "c5": ""
+      },
+      {
+       "c1": "软斑（soft spot）",
+       "c2": "反射式翻拍时的缺陷",
+       "c3": "红外通道探测弱，需手工处理",
+       "c4": "—",
+       "c5": ""
+      }
+     ]
+    },
+    {
+     "kind": "note",
+     "text": "VueScan 文档说明 Infrared clean 需扫描仪有红外灯且扫描彩色片。灰度与黑白负片模式下该选项不显示。该页原文还写明：「infrared dust removal does not work on traditional silver-halide B/W film」。"
+    },
+    {
+     "kind": "warn",
+     "text": "Heavy 档会软化缺陷附近的图像。VueScan 文档写：「It only causes image softening in the immediate vicinity of the spots and scratches, except when this option is set to \"Heavy\"」。在需要细节的区域避免使用 Heavy。"
+    },
+    {
+     "kind": "tip",
+     "text": "红外扫描使总时间增加约 50%。VueScan 作者记录这一点。批量扫描时先在一格上定好参数，再应用到整批。"
+    },
+    {
+     "kind": "note",
+     "text": "有机硅防静电清洁剂可减少静电吸附，但会残留硅痕。清洁后用气吹再吹一次。参见 $archive.cleaning-film。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "SilverFast: iSRD — Dust & Scratch Removal with Infrared Channel",
+     "url": "https://www.silverfast.com/en/isrd-dust-scratches-removal/",
+     "kind": "manufacturer",
+     "note": "红外穿透乳剂的原理原文。"
+    },
+    {
+     "name": "SilverFast iSRD 支持机型清单",
+     "url": "https://silverfast.com/highlights/isrd-list/en.html",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "VueScan 官方文档 · Filter 标签",
+     "url": "https://www.hamrick.com/vuescan/html/vuesc31.htm",
+     "kind": "manual",
+     "note": "Infrared clean 的三档与软化说明。"
+    },
+    {
+     "name": "VueScan 官方博客: Digital ICE",
+     "url": "https://www.hamrick.com/blog/digital-ice.html",
+     "kind": "article",
+     "note": "Kodak Austin Development Center 的开发史与专利授权状态。"
+    },
+    {
+     "name": "Nikon COOLSCAN 官方产品 PDF",
+     "url": "https://www.nikonusa.com/fileuploads/pdfs/2004_coolscan.pdf",
+     "kind": "manufacturer",
+     "note": "Digital ICE Advanced 不兼容非彩色黑白片。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "scanning.scan-principles"
+    ],
+    "next": [
+     "scanning.troubleshoot-scan"
+    ],
+    "related": [
+     "archive.cleaning-film",
+     "scanning.laserdriven",
+     "scanning.post-processing"
+    ],
+    "contrast": []
+   },
+   "quiz": [
+    {
+     "q": "红外光在胶片上的行为是什么？",
+     "type": "single",
+     "options": [
+      "完全被乳剂吸收",
+      "透过乳剂，被灰尘与划痕反射",
+      "只被片基反射",
+      "被染色层散射"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "红外光波长较长，可穿过乳剂，灰尘与划痕反射它。"
+    },
+    {
+     "q": "哪一种胶片无法用红外除尘？",
+     "type": "single",
+     "options": [
+      "彩色负片",
+      "彩色幻灯片",
+      "传统银盐黑白胶片",
+      "彩色底片反转"
+     ],
+     "answer": [
+      2
+     ],
+     "why": "VueScan 文档写明红外除尘对传统银盐黑白胶片无效。"
+    },
+    {
+     "q": "启用 Infrared Clean 会使扫描时间增加约多少？",
+     "type": "single",
+     "options": [
+      "约 10 %",
+      "约 25 %",
+      "约 50 %",
+      "约 100 %"
+     ],
+     "answer": [
+      2
+     ],
+     "why": "VueScan 作者记录额外一遍红外扫描约增加 50 % 时间。"
+    },
+    {
+     "q": "Plustek OpticFilm 8100 是否支持 iSRD？",
+     "type": "bool",
+     "options": [
+      "是",
+      "否"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "8100 无内置红外通道，故不支持 iSRD 与 HDRi。"
+    }
+   ],
+   "updated": "2026-01-10",
+   "status": "reviewed"
+  },
+  {
+   "id": "scanning.epson-v600",
+   "title": "Epson Perfection V600 推荐设置",
+   "title_en": "Epson Perfection V600 Recommended Settings",
+   "aliases": [
+    "Epson V600",
+    "V600 Photo",
+    "Perfection V600",
+    "ReadyScan",
+    "Epson 平板"
+   ],
+   "type": "equipment",
+   "level": 3,
+   "era": "2009 至今",
+   "tags": [
+    "Epson",
+    "平板",
+    "LED",
+    "Digital ICE",
+    "3.4 Dmax"
+   ],
+   "summary": "Epson Perfection V600 是 2009 年推出的平板胶片扫描机，标称 6400 × 9600 dpi、3.4 Dmax，用 ReadyScan LED 光源与 DIGITAL ICE。它是扫描 35 mm 与中画幅全景胶片的入门方案。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "机型参数"
+    },
+    {
+     "kind": "table",
+     "caption": "V600 机型参数",
+     "rows": [
+      {
+       "c1": "厂商",
+       "c2": "Epson",
+       "c3": "厂家",
+       "c4": "厂家",
+       "c5": "厂家"
+      },
+      {
+       "c1": "型号",
+       "c2": "Perfection V600 Photo",
+       "c3": "—",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "推出年代",
+       "c2": "2009 年 9 月发布，10 月中上市",
+       "c3": "官方新闻稿日期 2009-09-15",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "停产年代",
+       "c2": "在产（截至官方页面访问时）",
+       "c3": "官方产品页可访问",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "最大胶片规格",
+       "c2": "35 mm 幻灯片与负片，中画幅全景胶片到 6 × 22 cm",
+       "c3": "官方新闻稿",
+       "c4": "内置 TPU",
+       "c5": "—"
+      },
+      {
+       "c1": "光源类型",
+       "c2": "LED（Epson ReadyScan LED technology）",
+       "c3": "官方新闻稿说明其能耗低于冷阴极荧光灯且不含汞",
+       "c4": "Photo Review 评测确认 LED",
+       "c5": "—"
+      },
+      {
+       "c1": "传感器类型",
+       "c2": "线阵 CCD",
+       "c3": "新闻稿脚注按 ISO 14473 定义 CCD 单元最大扫描分辨率",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "光学分辨率",
+       "c2": "6400 dpi（标称 6400 × 9600 dpi）",
+       "c3": "9600 含插值",
+       "c4": "官方新闻稿",
+       "c5": "—"
+      },
+      {
+       "c1": "接口",
+       "c2": "USB 2.0（draft：官方页未列接口栏）",
+       "c3": "需官方规格页确认",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "16 bit 支持",
+       "c2": "位深低于同门 V700",
+       "c3": "Photo Review 评测原文",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "防静电",
+       "c2": "厂商未列独立防静电说明",
+       "c3": "—",
+       "c4": "—",
+       "c5": "—"
+      }
+     ]
+    },
+    {
+     "kind": "h2",
+     "text": "关键特性"
+    },
+    {
+     "kind": "ul",
+     "text": "- 动态范围 3.4 Dmax。可放大到 17 × 22 英寸。\n- 专利 DIGITAL ICE 技术，用于胶片的灰尘与划痕修复。\n- Epson Easy Photo Fix 一键恢复褪色照片。\n- 四个一键按钮，用于扫描、复印、扫描到邮件与生成 PDF。\n- 附 Adobe Photoshop Elements 与 ABBYY Fine Reader Sprint Plus。\n- 标称零售价 249.99 美元，含一年有限保修。"
+    },
+    {
+     "kind": "note",
+     "text": "V600 在 SilverFast 的 iSRD 支持机型清单内。清单同时列有 V500、V550、V700、V750、V800 与 V850 Pro。"
+    },
+    {
+     "kind": "settings",
+     "caption": "V600 推荐设置",
+     "items": [
+      {
+       "t": "分辨率",
+       "d": "2400 至 3200 dpi。VueScan 对 35 mm 推荐的区间为 2400 至 4000 dpi。取区间中段已足够 17 × 22 英寸的放大输出。"
+      },
+      {
+       "t": "输出格式",
+       "d": "16 bit TIFF。位深低于 V700 时更要保留 16 bit 以减少量化损失。"
+      },
+      {
+       "t": "片种选择",
+       "d": "彩色负片选 Film 模式并指定片种。幻灯片选 Positive Film。"
+      },
+      {
+       "t": "Dmax 设定",
+       "d": "3.4 是标称值。push 过的胶片需做 test strip 并按需提高光源亮度。参见 $scanning.dmax-negative。"
+      },
+      {
+       "t": "DIGITAL ICE",
+       "d": "启用。它对胶片有效。照片修复用 Easy Photo Fix。"
+      },
+      {
+       "t": "锐化",
+       "d": "Low 或关闭。把锐化放到后期。VueScan 文档的说明是：「If you're planning on editing images after scanning them, then you should leave this option off.」"
+      },
+      {
+       "t": "中画幅全景片",
+       "d": "胶片平放，不加压。用随附片夹。6 × 22 cm 是机型的 TPU 上限。"
+      }
+     ]
+    },
+    {
+     "kind": "note",
+     "text": "接口与确切位深数值标 draft。引用前取 Epson 官方规格页或随机说明书。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Epson America Newsroom: Perfection V600 Photo (2009-09-15)",
+     "url": "https://news.epson.com/news/epson-delivers-high-performance-102003?print=1",
+     "kind": "manufacturer",
+     "note": "6400 × 9600 dpi、3.4 Dmax、17×22 英寸、ReadyScan LED、6 × 22 cm TPU、249.99 美元。"
+    },
+    {
+     "name": "Photo Review 评测: Epson Perfection V600 Photo Scanner",
+     "url": "https://www.photoreview.com.au/reviews/digital-darkroom-reviews/scanner-reviews/epson-perfection-v600-photo-scanner/",
+     "kind": "article",
+     "note": "评分 8.5；确认 LED 光源；位深低于 V700。"
+    },
+    {
+     "name": "SilverFast iSRD 支持机型清单",
+     "url": "https://silverfast.com/highlights/isrd-list/en.html",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "VueScan 官方文档 · Filter 标签",
+     "url": "https://www.hamrick.com/vuescan/html/vuesc31.htm",
+     "kind": "manual"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "scanning.scan-settings"
+    ],
+    "next": [
+     "scanning.epson-v850"
+    ],
+    "related": [
+     "scanning.flatbed-scanner",
+     "scanning.dust-scratch-handling"
+    ],
+    "contrast": [
+     "scanning.nikon-coolscan-9000"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "Epson V600 用什么光源？",
+     "type": "single",
+     "options": [
+      "冷阴极荧光灯",
+      "卤素灯",
+      "LED（ReadyScan）",
+      "钨丝灯"
+     ],
+     "answer": [
+      2
+     ],
+     "why": "官方新闻稿说明 ReadyScan LED 能耗低于冷阴极荧光灯且不含汞。"
+    },
+    {
+     "q": "V600 的内置 TPU 最大支持多大中画幅全景胶片？",
+     "type": "single",
+     "options": [
+      "6 × 9 cm",
+      "6 × 17 cm",
+      "6 × 22 cm",
+      "6 × 30 cm"
+     ],
+     "answer": [
+      2
+     ],
+     "why": "官方新闻稿写 medium-format panoramic film up to 6 x 22 cm。"
+    },
+    {
+     "q": "V600 的标称动态范围是多少？",
+     "type": "single",
+     "options": [
+      "2.4 Dmax",
+      "3.4 Dmax",
+      "3.9 Dmax",
+      "4.8 Dmax"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "官方新闻稿写 3.4 Dmax。"
+    }
+   ],
+   "updated": "2026-01-10",
+   "status": "reviewed"
+  },
+  {
+   "id": "scanning.epson-v850",
+   "title": "Epson Perfection V850 Pro 推荐设置",
+   "title_en": "Epson Perfection V850 Pro Recommended Settings",
+   "aliases": [
+    "Epson V850",
+    "V850 Pro",
+    "Perfection V850"
+   ],
+   "type": "equipment",
+   "level": 4,
+   "era": "2010 前后",
+   "tags": [
+    "Epson",
+    "平板",
+    "48bit",
+    "Digital ICE",
+    "归档"
+   ],
+   "summary": "Epson Perfection V850 Pro 是 V600 的上位型号，定位为面向归档的平板胶片扫描机。它在 SilverFast 的 iSRD 支持清单内。本条目的具体数值标 draft，需补 Epson 官方规格页。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "官方定位"
+    },
+    {
+     "kind": "p",
+     "text": "Epson 对 V850 Pro 的定位文字是「The pro-quality scanner with advanced control to archive film and photos」。定位关键词是归档（archive）与可控（advanced control）。"
+    },
+    {
+     "kind": "image",
+     "src": "img/epson-flatbed.jpg",
+     "alt": "Epson Perfection V850 Pro 平板扫描仪，开启片夹盖。透扫需要片夹把胶片压在玻璃面上。",
+     "caption": "Epson Perfection V850 Pro 平板扫描仪，开启片夹盖。透扫需要片夹把胶片压在玻璃面上。",
+     "credit": "Santeri Viinamäki",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File%3AEpson_V850_scanner_open_20230920.jpg"
+    },
+    {
+     "kind": "note",
+     "text": "**规格考证状态：draft。** 本分片访问 Epson 美国产品页时只取到站点导航与页脚，未取到规格表。接口、位深、动态范围与光源的具体数值待补。"
+    },
+    {
+     "kind": "table",
+     "caption": "V850 Pro 的已知与待考证参数",
+     "rows": [
+      {
+       "c1": "厂商",
+       "c2": "Epson",
+       "c3": "厂家",
+       "c4": "厂家",
+       "c5": "厂家"
+      },
+      {
+       "c1": "型号",
+       "c2": "Perfection V850 Pro（部分地区名为 Perfection V850）",
+       "c3": "—",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "推出年代",
+       "c2": "2010 前后（draft）",
+       "c3": "需官方页确认",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "停产年代",
+       "c2": "（未取证）",
+       "c3": "官方产品页可访问",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "最大胶片规格",
+       "c2": "35 mm 与中画幅（draft）",
+       "c3": "需官方页确认",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "光源类型",
+       "c2": "LED（draft，据同系列机型）",
+       "c3": "需官方页确认",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "传感器类型",
+       "c2": "线阵 CCD（draft）",
+       "c3": "需官方页确认",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "光学分辨率",
+       "c2": "（draft）",
+       "c3": "需官方页或 datasheet 确认",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "接口",
+       "c2": "USB（draft）",
+       "c3": "需官方页确认",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "16 bit 支持",
+       "c2": "48 bit 彩色（draft）",
+       "c3": "需官方页确认",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "防静电",
+       "c2": "厂商未列独立说明（draft）",
+       "c3": "—",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "iSRD 支持",
+       "c2": "是，在 SilverFast iSRD 清单内",
+       "c3": "清单列出 V850 Pro",
+       "c4": "厂家",
+       "c5": "—"
+      }
+     ]
+    },
+    {
+     "kind": "settings",
+     "caption": "V850 Pro 推荐设置",
+     "items": [
+      {
+       "t": "分辨率",
+       "d": "2400 至 3200 dpi。按厂商默认值并按 test 调整。取 VueScan 对 35 mm 推荐区间的下段。"
+      },
+      {
+       "t": "输出格式",
+       "d": "16 bit TIFF。归档用途同时保存一份无损压缩副本。"
+      },
+      {
+       "t": "光源亮度",
+       "d": "按厂商默认值并按 test 调整。先扫 test strip 读直方图。"
+      },
+      {
+       "t": "Dmax 设定",
+       "d": "按片实测。设定值取片材密度上方的安全余量。参见 $scanning.dmax-negative。"
+      },
+      {
+       "t": "DIGITAL ICE",
+       "d": "启用。该机型在 iSRD 清单内，可配合 SilverFast iSRD。"
+      },
+      {
+       "t": "锐化",
+       "d": "Low 或关闭。锐化放到后期。"
+      },
+      {
+       "t": "机内色彩管理",
+       "d": "关闭自动增强（Auto Enhance）。归档用途需要中性起始数据。"
+      },
+      {
+       "t": "批量扫描",
+       "d": "用 Epson Scan 2 或 SilverFast 的 Batch Scanning。扫描记录写入文件名。"
+      }
+     ]
+    },
+    {
+     "kind": "note",
+     "text": "本条目的设置值按「厂商默认值 + test strip 校准」给出。取到 Epson 官方 datasheet 后需替换标 draft 的数值。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Epson: Perfection V850 Pro 产品页",
+     "url": "https://epson.com/For-Work/Scanners/Photo-and-Graphics/Epson-Perfection-V850-Pro-Photo-Scanner/p/B11B224201",
+     "kind": "manufacturer",
+     "note": "定位文字「The pro-quality scanner with advanced control to archive film and photos」。规格表未取到。"
+    },
+    {
+     "name": "SilverFast iSRD 支持机型清单",
+     "url": "https://silverfast.com/highlights/isrd-list/en.html",
+     "kind": "manufacturer",
+     "note": "清单含 Epson Perfection V850 Pro。"
+    },
+    {
+     "name": "SilverFast: Epson V850 机型 PDF",
+     "url": "https://www.silverfast.com/PDF/Epson_V850_long_en.pdf",
+     "kind": "manufacturer",
+     "note": "待取：用于补 V850 的规格与 iSRD 说明。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "scanning.epson-v600"
+    ],
+    "next": [
+     "scanning.troubleshoot-scan"
+    ],
+    "related": [
+     "scanning.flatbed-scanner",
+     "archive.digital-preservation"
+    ],
+    "contrast": []
+   },
+   "quiz": [
+    {
+     "q": "V850 Pro 在 SilverFast 的哪一份清单内？",
+     "type": "single",
+     "options": [
+      "iSRD 支持机型清单",
+      "HDR Studio 支持清单",
+      "IT8 标定片清单",
+      "硬件停产清单"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "清单列出 Epson Perfection V850 Pro。"
+    },
+    {
+     "q": "归档用途的扫描应如何处理机内自动增强？",
+     "type": "single",
+     "options": [
+      "启用，得到更好直方图",
+      "关闭，保留中性起始数据",
+      "设为 High",
+      "仅对负片启用"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "归档需要可重复的原始数据，自动增强改变了起始状态。"
+    }
+   ],
+   "updated": "2026-01-10",
+   "status": "draft"
+  },
+  {
+   "id": "scanning.film-handling",
+   "title": "胶片的装夹、平放与防弯",
+   "title_en": "Film Mounting, Flat Placement and Bend Control",
+   "aliases": [
+    "装片",
+    "防弯",
+    "低曲率",
+    "片夹",
+    "扫描技巧",
+    "flat film"
+   ],
+   "type": "technique",
+   "level": 3,
+   "era": "至今",
+   "tags": [
+    "装片",
+    "防弯",
+    "片夹",
+    "清洁",
+    "技巧"
+   ],
+   "summary": "扫描前的装片方式决定有效清晰度。挂片减少弯曲，平放加压片夹减少离面。清洁在装片前完成。每一步都影响自动对焦的可靠性。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "装片的三种方式"
+    },
+    {
+     "kind": "table",
+     "caption": "装片方式与适用条件",
+     "rows": [
+      {
+       "c1": "方式",
+       "c2": "操作",
+       "c3": "弯曲控制",
+       "c4": "适用",
+       "c5": "注意"
+      },
+      {
+       "c1": "片夹夹持",
+       "c2": "胶片装入片夹，锁住压盖",
+       "c3": "最好",
+       "c4": "35 mm 条片与 120 单格",
+       "c5": "核对片夹玻璃厚度设置"
+      },
+      {
+       "c1": "挂片（悬挂）",
+       "c2": "胶片挂在片夹上，自然垂下",
+       "c3": "较好",
+       "c4": "长条片与未定型片基",
+       "c5": "让胶片自然展开，消除静电"
+      },
+      {
+       "c1": "低曲率平放",
+       "c2": "胶片平躺在扫描台上，上方加压片",
+       "c3": "取决于压片重量",
+       "c4": "中画幅与大幅面",
+       "c5": "压片过重会压出划痕"
+      }
+     ]
+    },
+    {
+     "kind": "steps",
+     "caption": "扫描前的准备顺序",
+     "items": [
+      {
+       "t": "1. 清洁扫描仪",
+       "d": "先用玻璃清洁液与无绒布清洁扫描台与片夹玻璃。再清洁胶片。顺序不可颠倒。"
+      },
+      {
+       "t": "2. 清洁胶片",
+       "d": "用气吹与镜头刷。逐张检查片基面与乳剂面。$archive.cleaning-film"
+      },
+      {
+       "t": "3. 让胶片平展",
+       "d": "把胶片在室温下平放几分钟。卷曲的胶片先摊开。"
+      },
+      {
+       "t": "4. 装片夹",
+       "d": "乳剂面朝传感器。核对片夹的玻璃厚度设置与机型匹配。"
+      },
+      {
+       "t": "5. 锁压盖",
+       "d": "锁到位。压盖未锁会改变对焦平面。"
+      },
+      {
+       "t": "6. 校验焦点",
+       "d": "在片基或边缘文字区检查焦点。$scanning.sensor-size-focus"
+      }
+     ]
+    },
+    {
+     "kind": "warn",
+     "text": "手直接接触乳剂面会留下指纹与油脂。戴手套或只捏片边。"
+    },
+    {
+     "kind": "tip",
+     "text": "温度差会造成弯曲。从冷库取出的胶片先在室温回温 30 分钟再装片。参见 $archive.cold-storage。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "VueScan 官方文档 · Scanning slides and negatives",
+     "url": "https://www.hamrick.com/vuescan/html/vuesc26.htm",
+     "kind": "manual",
+     "note": "Crop 与 Auto offset、Frame offset + Frame spacing 的设置。"
+    },
+    {
+     "name": "Big Picture: Hasselblad Flextight X1 And X5",
+     "url": "https://bigpicturemag.com/hasselblad-debuts-flextight-x1-and-x5-scanners/",
+     "kind": "article",
+     "note": "虚拟鼓结构下的自动对焦与自动标定。"
+    },
+    {
+     "name": "Plustek OpticFilm 120 Pro 官方规格页",
+     "url": "https://plustek.com/esd/products/film-photo-scanners/opticfilm-120-pro/spec.php",
+     "kind": "manufacturer",
+     "note": "扫描面积 60 mm × 120 mm，净重 6.2 kg。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "scanning.scan-principles"
+    ],
+    "next": [
+     "scanning.troubleshoot-scan"
+    ],
+    "related": [
+     "archive.cleaning-film",
+     "archive.cold-storage"
+    ],
+    "contrast": []
+   },
+   "quiz": [
+    {
+     "q": "清洁扫描仪与清洁胶片的正确顺序是什么？",
+     "type": "single",
+     "options": [
+      "先胶片后扫描仪",
+      "先扫描仪后胶片",
+      "同时进行",
+      "只清洁胶片"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "先清洁扫描台，再清洁胶片，可避免胶片清洁时被扫描台污染。"
+    },
+    {
+     "q": "为什么从冷库取出的胶片要先回温？",
+     "type": "single",
+     "options": [
+      "防止胶片受潮",
+      "减少温差造成的卷曲",
+      "提高分辨率",
+      "降低密度"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "温差使胶片卷曲，影响平整度与对焦。"
+    },
+    {
+     "q": "核对片夹的哪项设置？",
+     "type": "single",
+     "options": [
+      "玻璃厚度",
+      "接口类型",
+      "灯源波长",
+      "输出格式"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "片夹玻璃厚度与胶片之间存在空气隙，厚度设置影响自动对焦的准确性。"
+    }
+   ],
+   "updated": "2026-01-10",
+   "status": "reviewed"
+  },
+  {
+   "id": "scanning.imacon-flextight-x5",
+   "title": "Imacon Flextight X5 与 Hasselblad Flextight 推荐设置",
+   "title_en": "Imacon Flextight X5 and Hasselblad Flextight Settings",
+   "aliases": [
+    "Flextight",
+    "Flextight X5",
+    "Flextight X1",
+    "Imacon",
+    "Hasselblad",
+    "949",
+    "848",
+    "虚拟鼓"
+   ],
+   "type": "equipment",
+   "level": 5,
+   "era": "1998-2010s",
+   "tags": [
+    "Flextight",
+    "虚拟鼓",
+    "大幅面",
+    "专业归档",
+    "3F"
+   ],
+   "summary": "Flextight 是 imacon 与 Hasselblad 的高端胶片扫描机系列，1990 年代后期起用于专业与档案机构。2006 年的 Flextight X1 与 X5 采用虚拟鼓结构，X5 达 8000 dpi、16 bit 每通道。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "系列沿革"
+    },
+    {
+     "kind": "timeline",
+     "caption": "Flextight 型号推进",
+     "rows": [
+      {
+       "c1": "1998 前后",
+       "c2": "imacon Flextight 848",
+       "c3": "确立 imacon 路径的 8000 dpi 级机型"
+      },
+      {
+       "c1": "2002 前后",
+       "c2": "Flextight 949",
+       "c3": "imacon 旗舰，支持大幅面"
+      },
+      {
+       "c1": "2006 中",
+       "c2": "Flextight 343 停产",
+       "c3": "厂商在同一年把 343 停产"
+      },
+      {
+       "c1": "2006-11",
+       "c2": "Hasselblad 发布 Flextight X1 与 X5",
+       "c3": "取代此前全部 Flextight 机型（646、848、949、343）"
+      }
+     ]
+    },
+    {
+     "kind": "table",
+     "caption": "X1 与 X5 的参数对照",
+     "rows": [
+      {
+       "c1": "厂商",
+       "c2": "Hasselblad",
+       "c3": "Hasselblad",
+       "c4": "厂家",
+       "c5": "厂家"
+      },
+      {
+       "c1": "型号",
+       "c2": "Flextight X1",
+       "c3": "Flextight X5",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "推出年代",
+       "c2": "2006 年 11 月",
+       "c3": "2006 年 11 月",
+       "c4": "发布稿日期",
+       "c5": "—"
+      },
+      {
+       "c1": "最大胶片规格",
+       "c2": "35 mm 及以上，配 3F 工作流",
+       "c3": "另提供 A4 反射扫描选项与片夹/送片器兼容",
+       "c4": "厂家",
+       "c5": "—"
+      },
+      {
+       "c1": "光学分辨率",
+       "c2": "35 mm 原件 6300 dpi",
+       "c3": "35 mm 原件 8000 dpi",
+       "c4": "厂家",
+       "c5": "—"
+      },
+      {
+       "c1": "扫描速度",
+       "c2": "60 MB/min",
+       "c3": "300 MB/min",
+       "c4": "厂家",
+       "c5": "—"
+      },
+      {
+       "c1": "传感器",
+       "c2": "3 × 8000 像素 CCD",
+       "c3": "3 × 8000 像素 CCD",
+       "c4": "厂家",
+       "c5": "—"
+      },
+      {
+       "c1": "色深",
+       "c2": "16 bit 每通道",
+       "c3": "16 bit 每通道",
+       "c4": "厂家",
+       "c5": "—"
+      },
+      {
+       "c1": "标称 MSRP",
+       "c2": "12 995 美元",
+       "c3": "19 995 美元",
+       "c4": "发布稿",
+       "c5": "现场可升级到 X5，约 7000 美元"
+      },
+      {
+       "c1": "光源类型",
+       "c2": "（draft：厂商规格页未取到）",
+       "c3": "（draft：厂商规格页未取到）",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "接口",
+       "c2": "（draft）",
+       "c3": "（draft）",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "防静电",
+       "c2": "厂商未列独立说明（draft）",
+       "c3": "厂商未列独立说明（draft）",
+       "c4": "—",
+       "c5": "—"
+      }
+     ]
+    },
+    {
+     "kind": "h2",
+     "text": "共同特性"
+    },
+    {
+     "kind": "ul",
+     "text": "- Flextight 虚拟鼓（virtual drum）结构，垂直光学系统，无玻璃扫描。\n- 自动框检测、批量扫描、自动对焦与自动标定。\n- 硬件或软件自动除尘。\n- Auto Scan 单键扫描。\n- 3F（Flexible File Format）工作流用于文件管理。"
+    },
+    {
+     "kind": "settings",
+     "caption": "Flextight X5 推荐设置",
+     "items": [
+      {
+       "t": "分辨率",
+       "d": "大幅面用 300 至 400 dpi，35 mm 用 8000 dpi 满档。3 × 8000 像素传感器覆盖到 6×9 英寸时有效 dpi 约 1670，因此大幅面用满档没有收益。"
+      },
+      {
+       "t": "输出格式",
+       "d": "16 bit TIFF，并同时保存 3F 原始文件。3F 保留未处理数据。"
+      },
+      {
+       "t": "扫描模式",
+       "d": "按 3F 工作流设定输入 profile。归档批次固定同一组参数。"
+      },
+      {
+       "t": "自动对焦",
+       "d": "启用自动对焦。在片基或边缘文字区校验焦点。"
+      },
+      {
+       "t": "批量扫描",
+       "d": "启用批量扫描与自动框检测。批量参数固定后整批执行。"
+      },
+      {
+       "t": "除尘",
+       "d": "启用硬件或软件自动除尘。剩余缺陷在后期用 SRDx 处理。"
+      },
+      {
+       "t": "反射扫描（A4）",
+       "d": "仅 X5 支持。扫描平放照片与纸张时用此模式，光路与透射不同，需另建 profile。"
+      },
+      {
+       "t": "锐化",
+       "d": "关闭。锐化放到后期。"
+      }
+     ]
+    },
+    {
+     "kind": "note",
+     "text": "光源类型、接口与防静电三项标 draft。厂商规格页（imacon.com / hasselblad.com）本分片未取到正文。分辨率、速度、色深与 MSRP 取自 2006 年发布报道。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Big Picture: Hasselblad Debuts Flextight X1 And X5 Scanners (2006-11-14)",
+     "url": "https://bigpicturemag.com/hasselblad-debuts-flextight-x1-and-x5-scanners/",
+     "kind": "article",
+     "note": "X1 6300 dpi / 60 MB per min；X5 8000 dpi / 300 MB per min；3 × 8000 CCD；16 bit per channel；MSRP；343 于 2006 年中停产。A4 反射扫描选项与片夹、送片器兼容属 X5 独有。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "scanning.scan-settings"
+    ],
+    "next": [
+     "scanning.troubleshoot-scan"
+    ],
+    "related": [
+     "scanning.drum-scanner",
+     "archive.digital-preservation"
+    ],
+    "contrast": [
+     "scanning.opticfilm-8200i"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "Flextight X5 的 35 mm 光学分辨率是多少？",
+     "type": "single",
+     "options": [
+      "4800 dpi",
+      "6300 dpi",
+      "8000 dpi",
+      "10600 dpi"
+     ],
+     "answer": [
+      2
+     ],
+     "why": "X5 为 8000 dpi；X1 为 6300 dpi。"
+    },
+    {
+     "q": "Flextight X1 与 X5 用什么结构代替实体玻璃鼓？",
+     "type": "single",
+     "options": [
+      "线阵转鼓",
+      "虚拟鼓",
+      "六角转台",
+      "双龙门"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "两者都用 Flextight 虚拟鼓结构与垂直光学系统实现无玻璃扫描。"
+    },
+    {
+     "q": "哪一项是 Flextight X5 独有而 X1 不具备的？",
+     "type": "single",
+     "options": [
+      "16 bit 每通道",
+      "自动对焦",
+      "A4 反射扫描选项",
+      "3 × 8000 像素 CCD"
+     ],
+     "answer": [
+      2
+     ],
+     "why": "A4 反射扫描与片夹/送片器兼容是 X5 的附加项。"
+    }
+   ],
+   "updated": "2026-01-10",
+   "status": "reviewed"
+  },
+  {
+   "id": "scanning.kodak-scandirect-plus",
+   "title": "Kodak ScanDirect Plus 推荐设置",
+   "title_en": "Kodak ScanDirect Plus Recommended Settings",
+   "aliases": [
+    "Kodak ScanDirect",
+    "ScanDirect Plus",
+    "Kodak 扫描仪",
+    "i1200",
+    "i1300"
+   ],
+   "type": "equipment",
+   "level": 4,
+   "era": "2000s",
+   "tags": [
+    "Kodak",
+    "扫描仪",
+    "软件工作站",
+    "draft"
+   ],
+   "summary": "ScanDirect 是 Kodak 面向印前与文档工作站的扫描软件平台。ScanDirect Plus 是其中的增强许可层级。本条目记录该平台的胶片扫描设置与考证状态。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "平台性质"
+    },
+    {
+     "kind": "p",
+     "text": "ScanDirect 是 Kodak 的扫描软件层。它把扫描仪驱动、图像处理与文档管理整合为一个工作站平台。ScanDirect Plus 是该平台上的增强许可层级，提供更高分辨率与更完整的色彩控制。"
+    },
+    {
+     "kind": "note",
+     "text": "**规格考证状态：draft。** 本分片检索未取到 Kodak 官方 ScanDirect Plus 的胶片扫描规格页。检索中出现的 `graphics.kodak.com/docimaging/uploadedFiles/` PDF 链接返回 HTML 而非 PDF；Kodak 的 iQsmart 等其他机型 PDF 亦未取到。以下参数标 draft，需补 Kodak 官方文档或随机说明书。"
+    },
+    {
+     "kind": "table",
+     "caption": "ScanDirect Plus 的已知与待考证参数",
+     "rows": [
+      {
+       "c1": "厂商",
+       "c2": "Kodak",
+       "c3": "厂家",
+       "c4": "厂家",
+       "c5": "厂家"
+      },
+      {
+       "c1": "型号",
+       "c2": "ScanDirect Plus（软件许可层级）",
+       "c3": "—",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "推出年代",
+       "c2": "2000s（draft）",
+       "c3": "需官方文档确认",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "停产年代",
+       "c2": "（未取证）",
+       "c3": "—",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "最大胶片规格",
+       "c2": "取决于所配扫描仪（draft）",
+       "c3": "需官方文档确认",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "光源类型",
+       "c2": "取决于所配扫描仪（draft）",
+       "c3": "需官方文档确认",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "传感器类型",
+       "c2": "取决于所配扫描仪（draft）",
+       "c3": "需官方文档确认",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "光学分辨率",
+       "c2": "取决于所配扫描仪（draft）",
+       "c3": "需官方文档确认",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "接口",
+       "c2": "软件层，不适用",
+       "c3": "—",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "16 bit 支持",
+       "c2": "支持 16 bit 输出（draft）",
+       "c3": "需官方文档确认",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "防静电",
+       "c2": "软件层，不适用",
+       "c3": "—",
+       "c4": "—",
+       "c5": "—"
+      }
+     ]
+    },
+    {
+     "kind": "settings",
+     "caption": "ScanDirect Plus 胶片扫描推荐设置",
+     "items": [
+      {
+       "t": "分辨率",
+       "d": "按厂商默认值并按 test 调整。35 mm 取 2400 至 4000 dpi，120 取 2000 至 3200 dpi。"
+      },
+      {
+       "t": "输出格式",
+       "d": "16 bit TIFF。印刷工作流另出 8 bit CMYK 派生件。"
+      },
+      {
+       "t": "位深",
+       "d": "16 bit 每通道。印刷派生件在分色阶段转 8 bit。"
+      },
+      {
+       "t": "色彩空间",
+       "d": "扫描阶段用 16 bit RGB 工作空间。转换到 CMYK 在分色阶段执行。"
+      },
+      {
+       "t": "锐化",
+       "d": "Low 或关闭。印刷链的锐化在输出阶段按加网参数执行。"
+      },
+      {
+       "t": "Dmax 设定",
+       "d": "按片实测。设定值取片材密度上方的安全余量。参见 $scanning.dmax-negative。"
+      },
+      {
+       "t": "除尘",
+       "d": "启用平台内的除尘选项。无红外通道时以手工修图为主。"
+      }
+     ]
+    },
+    {
+     "kind": "note",
+     "text": "本条目为软件平台条目。绑定机型时以该机型的官方规格页为准。若与本库其他条目交叉引用，先核对机型 id 是否已收录。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Kodak 文档影像 PDF 目录入口（本次访问返回 HTML，未取到 PDF）",
+     "url": "http://graphics.kodak.com/docimaging/uploadedFiles/i1200_i1300_Plus_it.pdf",
+     "kind": "manual",
+     "note": "作为待取证入口记录。"
+    },
+    {
+     "name": "平板扫描仪原理与规格（Wikipedia，结构化说明）",
+     "url": "https://en.wikipedia.org/wiki/Flatbed_scanner",
+     "kind": "manual",
+     "note": "同为待取证入口。 原链接已失效，已换成可达的同主题来源；本条目机型规格仍为 draft。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "scanning.scan-settings"
+    ],
+    "next": [
+     "scanning.software"
+    ],
+    "related": [
+     "scanning.film-scanner-compare"
+    ],
+    "contrast": []
+   },
+   "quiz": [
+    {
+     "q": "ScanDirect Plus 属于哪一层产品？",
+     "type": "single",
+     "options": [
+      "扫描仪硬件",
+      "扫描软件平台与许可层级",
+      "胶片材料",
+      "放大机配件"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "ScanDirect 是 Kodak 的扫描软件层，Plus 是增强许可层级。"
+    },
+    {
+     "q": "本条目的参数考证状态是什么？",
+     "type": "single",
+     "options": [
+      "全部已核实",
+      "多数标 draft",
+      "全部为 stable",
+      "不适用"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "未取到 Kodak 官方 ScanDirect Plus 规格页，参数标 draft。"
+    }
+   ],
+   "updated": "2026-01-10",
+   "status": "draft"
+  },
+  {
+   "id": "scanning.microtek-scanjet-3700",
+   "title": "MicroTek ScanJet 3700 与 ArtScan 系列",
+   "title_en": "MicroTek ScanJet 3700 and ArtScan Series",
+   "aliases": [
+    "MicroTek",
+    "ScanJet 3700",
+    "ArtScan",
+    "Laserficity",
+    "Microtek"
+   ],
+   "type": "equipment",
+   "level": 4,
+   "era": "1990s-2000s",
+   "tags": [
+    "MicroTek",
+    "平板",
+    "ArtScan",
+    "draft",
+    "红外"
+   ],
+   "summary": "MicroTek 的扫描产品分文档线（ScanJet）与图形线（ArtScan）。ArtScan F1 在 SilverFast 的 iSRD 清单内。MicroTek 与 Laserficity 的激光防静电产品线相关事实见 $scanning.laserdriven。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "产品线"
+    },
+    {
+     "kind": "p",
+     "text": "MicroTek 的产品按用途分线。ScanJet 系列面向文档。ArtScan 系列面向图形与照片。ArtScan F1 列在 SilverFast 的 iSRD 支持机型清单内，说明该机型带红外通道。"
+    },
+    {
+     "kind": "note",
+     "text": "**规格考证状态：draft。** 本分片检索未取到 MicroTek 官方 ScanJet 3700 或 ArtScan 的规格页正文。分辨率、位深、光源、接口与动态范围均标 draft，需补 MicroTek 官方档案页或第三方存档规格表。"
+    },
+    {
+     "kind": "table",
+     "caption": "MicroTek 机型参数",
+     "rows": [
+      {
+       "c1": "厂商",
+       "c2": "MicroTek",
+       "c3": "MicroTek",
+       "c4": "厂家",
+       "c5": "厂家"
+      },
+      {
+       "c1": "型号",
+       "c2": "ScanJet 3700",
+       "c3": "ArtScan F1",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "推出年代",
+       "c2": "（未取证）",
+       "c3": "（未取证）",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "停产年代",
+       "c2": "（未取证）",
+       "c3": "（未取证）",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "最大胶片规格",
+       "c2": "（draft）",
+       "c3": "（draft）",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "光源类型",
+       "c2": "（draft）",
+       "c3": "（draft）",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "传感器类型",
+       "c2": "（draft）",
+       "c3": "（draft）",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "光学分辨率",
+       "c2": "（draft）",
+       "c3": "（draft）",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "接口",
+       "c2": "（draft）",
+       "c3": "（draft）",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "16 bit 支持",
+       "c2": "（draft）",
+       "c3": "（draft）",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "防静电",
+       "c2": "（draft）",
+       "c3": "（draft）",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "iSRD 支持",
+       "c2": "（draft）",
+       "c3": "是，清单内列有 MicroTek ArtixScan F1",
+       "c4": "厂家",
+       "c5": "—"
+      }
+     ]
+    },
+    {
+     "kind": "note",
+     "text": "本条目未取得 ScanJet 3700 为胶片扫描机型的厂商证据，因此不给出推荐设置。需要胶片扫描建议时按通用原则操作：分辨率取胶片规格推荐区间的中段；开启厂商除尘算法；扫描后目视检查划痕与霉斑。"
+    },
+    {
+     "kind": "note",
+     "text": "「ScanJet 3700」是否为胶片扫描机型尚未取证。ScanJet 系列以文档扫描为主。引用本条目时先确认型号与用途。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "SilverFast iSRD 支持机型清单",
+     "url": "https://silverfast.com/highlights/isrd-list/en.html",
+     "kind": "manufacturer",
+     "note": "列有 MicroTek ArtixScan F1。"
+    },
+    {
+     "name": "VueScan 官方文档 · Filter 标签",
+     "url": "https://www.hamrick.com/vuescan/html/vuesc31.htm",
+     "kind": "manual",
+     "note": "红外除尘对传统银盐黑白胶片无效。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "scanning.scan-settings"
+    ],
+    "next": [
+     "scanning.laserdriven"
+    ],
+    "related": [
+     "scanning.flatbed-scanner",
+     "scanning.film-scanner-compare"
+    ],
+    "contrast": []
+   },
+   "quiz": [
+    {
+     "q": "哪一款 MicroTek 机型在 SilverFast iSRD 清单内？",
+     "type": "single",
+     "options": [
+      "ScanJet 3700",
+      "ArtScan F1",
+      "Laserficity 1000",
+      "以上都不在"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "清单列有 MicroTek ArtixScan F1。"
+    },
+    {
+     "q": "本条目参数为何标 draft？",
+     "type": "single",
+     "options": [
+      "MicroTek 已停产",
+      "未取到 MicroTek 官方规格页正文",
+      "型号不存在",
+      "参数由 SilverFast 提供"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "本分片未取到官方规格页，仅 iSRD 清单身份可考证。"
+    }
+   ],
+   "updated": "2026-01-10",
+   "status": "draft"
+  },
+  {
+   "id": "scanning.nikon-coolscan-9000",
+   "title": "Nikon Coolscan 9000 ED 与 V ED 推荐设置",
+   "title_en": "Nikon Coolscan 9000 ED and V ED Recommended Settings",
+   "aliases": [
+    "Coolscan 9000",
+    "Nikon 9000 ED",
+    "Coolscan V ED",
+    "Multi-Sample Scanning",
+    "Nikon Scan"
+   ],
+   "type": "equipment",
+   "level": 5,
+   "era": "1998-2004",
+   "tags": [
+    "Nikon",
+    "4000dpi",
+    "IEEE 1394",
+    "16bit",
+    "Digital ICE"
+   ],
+   "summary": "SUPER COOLSCAN 9000 ED 是 Nikon 的多规格高端机型，4000 dpi 全规格光学分辨率、16 bit A/D、4.8 光学密度上限，用 IEEE 1394 接口。COOLSCAN V ED 是 35 mm 机型，14 bit、4.2 密度上限。",
+   "blocks": [
+    {
+     "kind": "image",
+     "src": "img/nikon-coolscan.jpg",
+     "alt": "Nikon Coolscan 5000 ED 与 SA-21 条片夹。同系列机型共用条片与幻灯片两种送片方式。",
+     "caption": "Nikon Coolscan 5000 ED 与 SA-21 条片夹。同系列机型共用条片与幻灯片两种送片方式。",
+     "credit": "Harke",
+     "license": "Public domain",
+     "source": "https://commons.wikimedia.org/wiki/File%3ANikon_Coolscan_film.jpg"
+    },
+    {
+     "kind": "h2",
+     "text": "机型对照"
+    },
+    {
+     "kind": "table",
+     "caption": "三款 Coolscan 的官方参数",
+     "rows": [
+      {
+       "c1": "厂商",
+       "c2": "Nikon",
+       "c3": "Nikon",
+       "c4": "Nikon",
+       "c5": "厂家"
+      },
+      {
+       "c1": "型号",
+       "c2": "COOLSCAN V ED",
+       "c3": "SUPER COOLSCAN 5000 ED",
+       "c4": "SUPER COOLSCAN 9000 ED",
+       "c5": "厂家"
+      },
+      {
+       "c1": "推出年代",
+       "c2": "1998 前后（draft）",
+       "c3": "2001 前后（draft）",
+       "c4": "2001 前后（draft）",
+       "c5": "需 Nikon 归档页确认"
+      },
+      {
+       "c1": "最大胶片规格",
+       "c2": "35 mm（35 mm 专用）",
+       "c3": "35 mm",
+       "c4": "16 mm、35 mm 至 6×9 英寸、幻灯片玻璃、电子显微镜胶片",
+       "c5": "厂家"
+      },
+      {
+       "c1": "光学分辨率",
+       "c2": "4000 dpi",
+       "c3": "4000 dpi",
+       "c4": "4000 dpi true optical resolution for all film formats",
+       "c5": "厂家"
+      },
+      {
+       "c1": "传感器",
+       "c2": "3964 像素线阵 CCD",
+       "c3": "3964 像素双线阵 CCD",
+       "c4": "10000 像素三线单色线阵 CCD",
+       "c5": "厂家"
+      },
+      {
+       "c1": "A/D 位深",
+       "c2": "14 bit",
+       "c3": "16 bit",
+       "c4": "16 bit",
+       "c5": "厂家"
+      },
+      {
+       "c1": "密度上限",
+       "c2": "4.2",
+       "c3": "4.8",
+       "c4": "4.8",
+       "c5": "厂家"
+      },
+      {
+       "c1": "光源",
+       "c2": "Exclusive LED Technology（R/G/B + IR LED）",
+       "c3": "LED R/G/B/IR",
+       "c4": "Exclusive rod dispersion LED illumination",
+       "c5": "厂家"
+      },
+      {
+       "c1": "接口",
+       "c2": "USB 2.0",
+       "c3": "USB 2.0",
+       "c4": "IEEE 1394（附 Mac/Windows 接口卡）",
+       "c5": "厂家"
+      },
+      {
+       "c1": "防静电",
+       "c2": "厂商未列独立说明（draft）",
+       "c3": "厂商未列独立说明（draft）",
+       "c4": "厂商未列独立说明（draft）",
+       "c5": "—"
+      },
+      {
+       "c1": "扫描速度",
+       "c2": "38 秒（全分辨率）",
+       "c3": "20 秒",
+       "c4": "40 秒（35 mm 幻灯片）；185 秒（120/220 全分辨率）",
+       "c5": "厂家"
+      },
+      {
+       "c1": "机身尺寸",
+       "c2": "—",
+       "c3": "—",
+       "c4": "9.8 × 19.6 × 8.0 in，19.8 lb",
+       "c5": "厂家"
+      }
+     ]
+    },
+    {
+     "kind": "h2",
+     "text": "关键功能"
+    },
+    {
+     "kind": "ul",
+     "text": "- Multi-Sample Scanning（2/4/8/16X）：多次取样降噪。9000 ED 与 5000 ED 均提供该档位。\n- Digital ICE Advanced：四个组件为 Digital ICE（去缺陷）、Digital ROC（Restoration Of Color 恢复褪色）、Digital GEM（Grain Equalization & Management 消颗粒）、Digital DEE（Dynamic Exposure Extender 扩展动态范围）。9000 ED 另带 Digital ICE Professional。\n- 9000 ED 配 FH-835M/FH-835S（35 mm）与 FH-869S（120/220 条片）。可选 FH-869M、FH-869G、FH-869GR、FH-816（16 mm）、FH-8G1（医学切片）。\n- Nikon Color Management System 兼容 ICC version 4。\n- Scanner Nikkor ED 玻璃镜头。"
+    },
+    {
+     "kind": "note",
+     "text": "官方脚注原文：「*Not compatible with non-chromogenic black & white film」。该说明针对 Digital ICE。黑白银盐胶片的除尘要另用工具。"
+    },
+    {
+     "kind": "settings",
+     "caption": "SUPER COOLSCAN 9000 ED 推荐设置",
+     "items": [
+      {
+       "t": "分辨率",
+       "d": "35 mm 用 4000 dpi 满档。中画幅与大画幅用 2000 至 3200 dpi，对应 VueScan 对 120 的推荐区间。"
+      },
+      {
+       "t": "输出格式",
+       "d": "16 bit TIFF。用 Nikon Scan 4 输出 TIFF 而非 JPEG，保留位深。"
+      },
+      {
+       "t": "位深",
+       "d": "16 bit 每通道。Nikon Scan 里选 16 bit 输出。"
+      },
+      {
+       "t": "Multi-Sample Scanning",
+       "d": "设为 4X 或 8X。降噪明显，耗时增加。"
+      },
+      {
+       "t": "Dmax 设定",
+       "d": "标称 4.8 覆盖绝大多数黑白负片。push 处理后仍偏密时上调光源亮度并做 test strip。参见 $scanning.dmax-negative。"
+      },
+      {
+       "t": "Digital ICE",
+       "d": "彩色片启用。黑白银盐片关闭并改用 SRDx 或手工处理。"
+      },
+      {
+       "t": "Digital GEM",
+       "d": "按胶片颗粒选颗粒匹配档。颗粒太细的片设 None。"
+      },
+      {
+       "t": "锐化",
+       "d": "None 或 Low。锐化放到后期。"
+      },
+      {
+       "t": "机内色彩管理",
+       "d": "用 Nikon Color Management System 输出带 profile 的 TIFF，转换在后期执行。"
+      },
+      {
+       "t": "负片 mask",
+       "d": "在 Nikon Scan 里指定片种。黑白负片按黑白处理。"
+      }
+     ]
+    },
+    {
+     "kind": "settings",
+     "caption": "COOLSCAN V ED 推荐设置",
+     "items": [
+      {
+       "t": "分辨率",
+       "d": "4000 dpi 满档。该机型为 35 mm 专用。"
+      },
+      {
+       "t": "输出格式",
+       "d": "16 bit TIFF。"
+      },
+      {
+       "t": "位深",
+       "d": "14 bit A/D。灰阶 8 或 16 bit 输出由 Nikon Scan 控制。"
+      },
+      {
+       "t": "Dmax 设定",
+       "d": "标称 4.2。push 处理的黑白负片需多次曝光合成。"
+      },
+      {
+       "t": "Digital ICE",
+       "d": "彩色片启用。黑白银盐片关闭。"
+      },
+      {
+       "t": "接口",
+       "d": "USB 2.0。"
+      }
+     ]
+    },
+    {
+     "kind": "note",
+     "text": "推出年代标 draft。Nikon 官方 PDF 未列发布年份，需取 Nikon 归档页或产品公告。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Nikon COOLSCAN 官方产品 PDF",
+     "url": "https://www.nikonusa.com/fileuploads/pdfs/2004_coolscan.pdf",
+     "kind": "manufacturer",
+     "note": "V ED / 5000 ED / 9000 ED 的分辨率、位深、密度上限、传感器、接口与功能。"
+    },
+    {
+     "name": "SilverFast iSRD 支持机型清单",
+     "url": "https://silverfast.com/highlights/isrd-list/en.html",
+     "kind": "manufacturer",
+     "note": "列有 Nikon LS 9000ED（Super Coolscan 9000 ED）。"
+    },
+    {
+     "name": "VueScan 官方文档 · Scanning slides and negatives",
+     "url": "https://www.hamrick.com/vuescan/html/vuesc26.htm",
+     "kind": "manual",
+     "note": "35 mm 与 120 的推荐 dpi 区间。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "scanning.scan-settings"
+    ],
+    "next": [
+     "scanning.troubleshoot-scan"
+    ],
+    "related": [
+     "scanning.film-scanner-compare",
+     "scanning.color-management"
+    ],
+    "contrast": [
+     "scanning.epson-v600"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "SUPER COOLSCAN 9000 ED 用哪种接口？",
+     "type": "single",
+     "options": [
+      "USB 2.0",
+      "IEEE 1394",
+      "USB 3.0",
+      "SCSI"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "官方 PDF 写 IEEE 1394，附 Mac/Windows 接口卡。"
+    },
+    {
+     "q": "COOLSCAN V ED 的 A/D 位深与密度上限分别是多少？",
+     "type": "single",
+     "options": [
+      "14 bit / 4.2",
+      "16 bit / 4.8",
+      "14 bit / 4.8",
+      "16 bit / 4.2"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "V ED 为 14-bit A/D、4.2 光学密度上限；5000 ED 与 9000 ED 为 16 bit、4.8。"
+    },
+    {
+     "q": "9000 ED 的 Multi-Sample Scanning 提供哪些档位？",
+     "type": "single",
+     "options": [
+      "1X/2X",
+      "2X/4X/8X/16X",
+      "8X/16X/32X",
+      "只有 1X"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "官方 PDF 列 2/4/8/16X。"
+    },
+    {
+     "q": "Digital ICE Advanced 在处理黑白银盐胶片时的限制是什么？",
+     "type": "single",
+     "options": [
+      "不兼容非彩色黑白片",
+      "只能用于正片",
+      "需要 4.8 Dmax",
+      "只支持 35 mm"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "官方脚注写 Not compatible with non-chromogenic black & white film。"
+    }
+   ],
+   "updated": "2026-01-10",
+   "status": "reviewed"
+  },
+  {
+   "id": "scanning.opticfilm-120-pro",
+   "title": "Plustek OpticFilm 120 与 120 Pro（中画幅）推荐设置",
+   "title_en": "Plustek OpticFilm 120 / 120 Pro Settings",
+   "aliases": [
+    "OpticFilm 120",
+    "OpticFilm 1200",
+    "OpticFilm 1200 Pro",
+    "Plustek 120 Pro",
+    "中画幅扫描"
+   ],
+   "type": "equipment",
+   "level": 4,
+   "era": "2010s 至今",
+   "tags": [
+    "Plustek",
+    "中画幅",
+    "10600 ppp",
+    "4.01 动态范围",
+    "USB 3.0"
+   ],
+   "summary": "OpticFilm 120 是 35 mm 机型。OpticFilm 120 Pro 是中画幅机型，扫描面积 60 × 120 mm，输入分辨率 10600 ppp、输出 5300 ppp，标称动态范围 4.01。两者均在 SilverFast iSRD 清单内。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "型号对应关系"
+    },
+    {
+     "kind": "p",
+     "text": "「OpticFilm 1200」与「OpticFilm 1200 Pro」在现行产品线中的对应型号是 OpticFilm 120 与 OpticFilm 120 Pro。OpticFilm 120 Pro 是中画幅专用机型，规格页的扫描面积为 60 mm × 120 mm。"
+    },
+    {
+     "kind": "note",
+     "text": "**年代考证状态：draft。** 本分片未取到 OpticFilm 120 / 120 Pro 的推出与停产年份。引用前补 Plustek 产品公告或存档规格页。"
+    },
+    {
+     "kind": "table",
+     "caption": "OpticFilm 120 Pro 官方规格",
+     "rows": [
+      {
+       "c1": "厂商",
+       "c2": "Plustek",
+       "c3": "厂家",
+       "c4": "厂家",
+       "c5": "厂家"
+      },
+      {
+       "c1": "型号",
+       "c2": "OpticFilm 120 Pro",
+       "c3": "—",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "推出年代",
+       "c2": "（draft）",
+       "c3": "需 Plustek 公告确认",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "停产年代",
+       "c2": "在产（规格页可访问）",
+       "c3": "官方页",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "最大胶片规格",
+       "c2": "扫描面积 60 mm × 120 mm",
+       "c3": "规格页",
+       "c4": "约 2.4 × 4.7 英寸",
+       "c5": "适配 120 中画幅单格"
+      },
+      {
+       "c1": "光源类型",
+       "c2": "LED",
+       "c3": "规格页",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "传感器类型",
+       "c2": "CCD",
+       "c3": "规格页",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "硬件分辨率",
+       "c2": "输入最大 10600 ppp；输出最大 5300 ppp @ 6 × 12 cm",
+       "c3": "规格页",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "位深",
+       "c2": "彩色 48 bit 输入，24/48 bit 输出；灰度 16 bit 输入，8/16 bit 输出",
+       "c3": "规格页",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "动态范围",
+       "c2": "4.01（配合 SilverFast Multi-Exposure®，依据 ISO 21550:2004）",
+       "c3": "规格页",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "红外",
+       "c2": "内置红外，支持 iSRD 与 HDRi",
+       "c3": "规格页与 iSRD 清单",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "接口",
+       "c2": "USB 3.0 Type B",
+       "c3": "规格页",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "电源",
+       "c2": "24 Vdc / 0.75 A",
+       "c3": "规格页",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "机身尺寸",
+       "c2": "210 × 374 × 189 mm",
+       "c3": "规格页",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "净重",
+       "c2": "6.2 kg",
+       "c3": "规格页",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "防静电",
+       "c2": "厂商未列独立说明",
+       "c3": "规格页",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "附随件",
+       "c2": "6×7 IT8 标定片；Plustek Lens Calibration Tool + SilverFast Ai Studio",
+       "c3": "规格页",
+       "c4": "—",
+       "c5": "—"
+      }
+     ]
+    },
+    {
+     "kind": "settings",
+     "caption": "OpticFilm 120 Pro 推荐设置",
+     "items": [
+      {
+       "t": "分辨率",
+       "d": "3200 dpi。对应 VueScan 对 120 的推荐区间上段。5300 ppp 的输出上限在放大到 A2 以上后收益有限。"
+      },
+      {
+       "t": "输出格式",
+       "d": "16 bit TIFF。同时保存 HDRi RAW 保留红外通道。"
+      },
+      {
+       "t": "位深",
+       "d": "彩色选 48 bit 输出。灰度扫描选 16 bit 输出。"
+      },
+      {
+       "t": "光源亮度",
+       "d": "按 test strip 定。标称 4.01 动态范围覆盖大多数 120 负片。"
+      },
+      {
+       "t": "多次曝光",
+       "d": "启用 SilverFast Multi-Exposure。push 处理的黑白负片需两档以上。"
+      },
+      {
+       "t": "IT8 标定",
+       "d": "用随附 6×7 IT8 标定片跑 Auto IT8 Calibration。再用 Lens Calibration Tool 处理镜头差异。"
+      },
+      {
+       "t": "Dmax 设定",
+       "d": "按片实测。参见 $scanning.dmax-negative。"
+      },
+      {
+       "t": "锐化",
+       "d": "Low 或关闭。"
+      },
+      {
+       "t": "装片",
+       "d": "120 单格装在片夹上，乳剂面朝传感器。核对片夹玻璃厚度设置。"
+      }
+     ]
+    }
+   ],
+   "refs": [
+    {
+     "name": "Plustek OpticFilm 120 Pro 官方规格页",
+     "url": "https://plustek.com/esd/products/film-photo-scanners/opticfilm-120-pro/spec.php",
+     "kind": "manufacturer",
+     "note": "CCD、LED、10600 ppp 输入 / 5300 ppp 输出、48/16 bit、4.01、60 × 120 mm、USB 3.0 Type B、6.2 kg、6×7 IT8。"
+    },
+    {
+     "name": "SilverFast iSRD 支持机型清单",
+     "url": "https://silverfast.com/highlights/isrd-list/en.html",
+     "kind": "manufacturer",
+     "note": "列有 Plustek OpticFilm 120 与 120 Pro。"
+    },
+    {
+     "name": "VueScan 官方文档 · Scanning slides and negatives",
+     "url": "https://www.hamrick.com/vuescan/html/vuesc26.htm",
+     "kind": "manual",
+     "note": "120 的推荐 dpi 为 2000 至 3200。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "scanning.scan-settings"
+    ],
+    "next": [
+     "scanning.troubleshoot-scan"
+    ],
+    "related": [
+     "scanning.color-management",
+     "scanning.film-scanner-compare"
+    ],
+    "contrast": []
+   },
+   "quiz": [
+    {
+     "q": "OpticFilm 120 Pro 的输出分辨率上限是多少？",
+     "type": "single",
+     "options": [
+      "5300 ppp @ 6 × 12 cm",
+      "10600 ppp @ 6 × 12 cm",
+      "3200 dpi",
+      "2400 dpi"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "规格页写输入最大 10600 ppp、输出最大 5300 ppp @ 6×12 cm。"
+    },
+    {
+     "q": "OpticFilm 120 Pro 的标称动态范围依据哪个标准？",
+     "type": "single",
+     "options": [
+      "ISO 14473",
+      "ISO 21550:2004",
+      "ISO 3664",
+      "ISO 105"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "规格页写动态范围 4.01 依 SilverFast Multi-Exposure®，依据 ISO 21550:2004。"
+    },
+    {
+     "q": "OpticFilm 120 Pro 用什么接口？",
+     "type": "single",
+     "options": [
+      "USB 2.0",
+      "IEEE 1394",
+      "USB 3.0 Type B",
+      "SCSI"
+     ],
+     "answer": [
+      2
+     ],
+     "why": "规格页写 USB 3.0 Type B。"
+    }
+   ],
+   "updated": "2026-01-10",
+   "status": "reviewed"
+  },
+  {
+   "id": "scanning.opticfilm-8200i",
+   "title": "Plustek OpticFilm 8200i Ai 与 8200i SE 推荐设置",
+   "title_en": "Plustek OpticFilm 8200i Ai and 8200i SE Settings",
+   "aliases": [
+    "OpticFilm 8200i",
+    "8200i Ai",
+    "8200i SE",
+    "OpticFilm 8100",
+    "Plustek 8200"
+   ],
+   "type": "equipment",
+   "level": 4,
+   "era": "2009 至今",
+   "tags": [
+    "Plustek",
+    "7200 dpi",
+    "iSRD",
+    "HDRi",
+    "48bit"
+   ],
+   "summary": "OpticFilm 8200i Ai 是 Plustek 的 35 mm 旗舰机型，7200 dpi 真实光学分辨率，最高输出 68.9 MP，可放大到 36 × 24 英寸。8200i SE 捆绑软件较低且不含 IT8。8100 无红外通道。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "三机型对照"
+    },
+    {
+     "kind": "table",
+     "caption": "8100、8200i SE 与 8200i Ai",
+     "rows": [
+      {
+       "c1": "厂商",
+       "c2": "Plustek",
+       "c3": "Plustek",
+       "c4": "Plustek",
+       "c5": "厂家"
+      },
+      {
+       "c1": "型号",
+       "c2": "OpticFilm 8100",
+       "c3": "OpticFilm 8200i SE",
+       "c4": "OpticFilm 8200i Ai",
+       "c5": "厂家"
+      },
+      {
+       "c1": "推出年代",
+       "c2": "（draft）",
+       "c3": "（draft）",
+       "c4": "（draft）",
+       "c5": "需 Plustek 公告确认"
+      },
+      {
+       "c1": "光学分辨率",
+       "c2": "（draft）",
+       "c3": "（draft）",
+       "c4": "7200 dpi 真实光学分辨率",
+       "c5": "官方产品页"
+      },
+      {
+       "c1": "动态范围",
+       "c2": "（draft）",
+       "c3": "（draft）",
+       "c4": "页面图注 3.6 dynamic range；正文「With a dynamic range of up to 3.91 D」",
+       "c5": "官方产品页"
+      },
+      {
+       "c1": "红外通道",
+       "c2": "无",
+       "c3": "有",
+       "c4": "内置红外通道",
+       "c5": "官方页对比表"
+      },
+      {
+       "c1": "iSRD",
+       "c2": "不支持",
+       "c3": "支持（只含自动模式）",
+       "c4": "支持（含 HDRi）",
+       "c5": "官方页对比表"
+      },
+      {
+       "c1": "HDRi",
+       "c2": "不支持",
+       "c3": "（draft）",
+       "c4": "RAW 存为 64-bit 彩色或 32-bit 灰度 HDRi",
+       "c5": "官方产品页"
+      },
+      {
+       "c1": "捆绑软件",
+       "c2": "（draft）",
+       "c3": "SilverFast SE Plus（MSRP 119 USD）",
+       "c4": "SilverFast Ai Studio（MSRP 299 USD）",
+       "c5": "官方产品页"
+      },
+      {
+       "c1": "IT8 标定片",
+       "c2": "（draft）",
+       "c3": "不含",
+       "c4": "另售（MSRP 59 USD）",
+       "c5": "官方产品页"
+      },
+      {
+       "c1": "最大输出",
+       "c2": "（draft）",
+       "c3": "（draft）",
+       "c4": "68.9 MP；可放大到 36 × 24 英寸",
+       "c5": "官方产品页"
+      },
+      {
+       "c1": "最大胶片规格",
+       "c2": "35 mm（draft）",
+       "c3": "35 mm（draft）",
+       "c4": "35 mm",
+       "c5": "官方产品页"
+      },
+      {
+       "c1": "光源类型",
+       "c2": "（draft）",
+       "c3": "（draft）",
+       "c4": "页面未列（draft）",
+       "c5": "—"
+      },
+      {
+       "c1": "接口",
+       "c2": "（draft）",
+       "c3": "（draft）",
+       "c4": "USB（draft）",
+       "c5": "需规格页确认"
+      },
+      {
+       "c1": "防静电",
+       "c2": "厂商未列",
+       "c3": "厂商未列",
+       "c4": "厂商未列",
+       "c5": "—"
+      }
+     ]
+    },
+    {
+     "kind": "h2",
+     "text": "iSRD 工作流程"
+    },
+    {
+     "kind": "ol",
+     "text": "1. 白光常规 RGB 扫描。\n2. 红外扫描只捕捉灰尘与划痕。\n3. 标记缺陷位置。\n4. 仅在红外探测到缺陷处做计算修复。"
+    },
+    {
+     "kind": "p",
+     "text": "官方页面对该机型的描述是「built-in infrared channel can detect dust and scratches」。内置 ICC profile 含 Kodachrome 幻灯片 profile。"
+    },
+    {
+     "kind": "settings",
+     "caption": "OpticFilm 8200i Ai 推荐设置",
+     "items": [
+      {
+       "t": "分辨率",
+       "d": "3200 dpi。VueScan 对 35 mm 的推荐区间为 2400 至 4000 dpi。3200 dpi 已足够放大到 36 英寸级输出，再高的 dpi 只增加数据量。"
+      },
+      {
+       "t": "输出格式",
+       "d": "16 bit TIFF。同时保存 HDRi RAW 以保留红外通道与 64 bit 数据。"
+      },
+      {
+       "t": "位深",
+       "d": "48 bit 彩色（每通道 16 bit）。"
+      },
+      {
+       "t": "光源亮度",
+       "d": "按 test strip 定。标称 3.91 D 覆盖大多数彩色负片；push 处理的黑白负片需上调并开多次曝光。"
+      },
+      {
+       "t": "多次曝光",
+       "d": "启用 SilverFast Multi-Exposure。暗部细节是它的主要收益点。"
+      },
+      {
+       "t": "iSRD",
+       "d": "启用。SE 版只有自动 iSRD 模式，Ai 版可调。"
+      },
+      {
+       "t": "Dmax 设定",
+       "d": "按片实测。参见 $scanning.dmax-negative。"
+      },
+      {
+       "t": "锐化",
+       "d": "Low 或关闭。"
+      },
+      {
+       "t": "IT8 标定",
+       "d": "需另购 IT8 标定片（MSRP 59 USD）。标定后建片种 profile。"
+      },
+      {
+       "t": "机内色彩管理",
+       "d": "关闭自动增强。用 SilverFast 的 profile 流程处理色彩。"
+      },
+      {
+       "t": "负片 mask",
+       "d": "用 SilverFast NegaFix 应用负片 mask。Kodachrome 幻灯片用内置 profile。"
+      }
+     ]
+    },
+    {
+     "kind": "warn",
+     "text": "不要在 HDRi RAW 上直接做反相。反相在 SilverFast 或后期软件中完成，保留 HDRi 原始数据。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Plustek OpticFilm 8200i Ai 官方产品页",
+     "url": "https://plustek.com/gbr/products/film-photo-scanners/opticfilm-8200i-ai/index.php",
+     "kind": "manufacturer",
+     "note": "7200 dpi、68.9 MP、36 × 24 英寸、3.6 图注与 3.91 D 正文、iSRD 四步流程、HDRi、捆绑软件与 IT8 的 MSRP、8100/SE/Ai 对比表。"
+    },
+    {
+     "name": "SilverFast iSRD 支持机型清单",
+     "url": "https://silverfast.com/highlights/isrd-list/en.html",
+     "kind": "manufacturer",
+     "note": "列有 Plustek OpticFilm 7200i、7500i、7600i、8200i、8300i、9000i、135i、120 与 120 Pro。"
+    },
+    {
+     "name": "VueScan 官方文档 · Scanning slides and negatives",
+     "url": "https://www.hamrick.com/vuescan/html/vuesc26.htm",
+     "kind": "manual",
+     "note": "35 mm 的推荐 dpi 为 2400 至 4000。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "scanning.scan-settings"
+    ],
+    "next": [
+     "scanning.troubleshoot-scan"
+    ],
+    "related": [
+     "scanning.dust-scratch-handling",
+     "scanning.color-management"
+    ],
+    "contrast": [
+     "scanning.imacon-flextight-x5"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "8200i Ai 的真实光学分辨率是多少？",
+     "type": "single",
+     "options": [
+      "3600 dpi",
+      "4000 dpi",
+      "5300 ppp",
+      "7200 dpi"
+     ],
+     "answer": [
+      3
+     ],
+     "why": "官方产品页写 7200 dpi 真实光学分辨率。"
+    },
+    {
+     "q": "哪一款 OpticFilm 不支持 iSRD？",
+     "type": "single",
+     "options": [
+      "8200i Ai",
+      "8200i SE",
+      "8100",
+      "OpticFilm 120 Pro"
+     ],
+     "answer": [
+      2
+     ],
+     "why": "8100 无内置红外通道，故不支持 iSRD 与 HDRi。"
+    },
+    {
+     "q": "HDRi RAW 的位深是多少？",
+     "type": "single",
+     "options": [
+      "16 bit 彩色或 24 bit 灰度",
+      "64 bit 彩色或 32 bit 灰度",
+      "8 bit 彩色",
+      "48 bit 彩色"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "官方页写 RAW（含红外通道）存为 64-bit 色彩或 32-bit 灰度 HDRi。"
+    },
+    {
+     "q": "8200i SE 的捆绑软件是哪一档？",
+     "type": "single",
+     "options": [
+      "无软件",
+      "SilverFast SE Plus",
+      "SilverFast Ai Studio",
+      "Nikon Scan 4"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "SE 捆绑 SilverFast SE Plus（MSRP 119 USD），不含 IT8。"
+    }
+   ],
+   "updated": "2026-01-10",
+   "status": "reviewed"
+  },
+  {
+   "id": "scanning.reflecta-proscan-7200",
+   "title": "Reflecta ProScan 7200 与 RPSC / DRS 1200 系列推荐设置",
+   "title_en": "Reflecta ProScan 7200 and RPSC / DRS 1200 Settings",
+   "aliases": [
+    "Reflecta",
+    "ProScan 7200",
+    "RPSC",
+    "DRS 1200",
+    "CrystalScan",
+    "reflecta"
+   ],
+   "type": "equipment",
+   "level": 4,
+   "era": "2000s 至今",
+   "tags": [
+    "Reflecta",
+    "3600dpi",
+    "48bit",
+    "德国品牌",
+    "draft"
+   ],
+   "summary": "Reflecta 是德国品牌的扫描机品牌，产品含 ProScan 7200 等 35 mm 机型。ProScan 7200 标称 3600 × 3600 dpi、48 bit，并在 SilverFast iSRD 清单内。RPSC 与 DRS 1200 系列的规格尚未取证。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "品牌与产品线"
+    },
+    {
+     "kind": "p",
+     "text": "SilverFast 在机型页中称 Reflecta ProScan 7200 为「the current reflecta slide and film scanner」。该机型原只支持 Windows，后改为同时支持 Mac。reflecta 还提供出厂预装 SilverFast 的 ProScan 7200 版本。"
+    },
+    {
+     "kind": "table",
+     "caption": "Reflecta iSRD 清单内机型",
+     "rows": [
+      {
+       "c1": "机型",
+       "c2": "说明",
+       "c3": "来源",
+       "c4": "备注",
+       "c5": ""
+      },
+      {
+       "c1": "CrystalScan 7200",
+       "c2": "早期机型",
+       "c3": "SilverFast iSRD 清单",
+       "c4": "带红外通道",
+       "c5": ""
+      },
+      {
+       "c1": "DigitDia 4000 / 5000 / 6000 / 7000 / 8000",
+       "c2": "幻灯片扫描系列",
+       "c3": "SilverFast iSRD 清单",
+       "c4": "带红外通道",
+       "c5": ""
+      },
+      {
+       "c1": "MF 5000",
+       "c2": "中画幅机型",
+       "c3": "SilverFast iSRD 清单",
+       "c4": "带红外通道",
+       "c5": ""
+      },
+      {
+       "c1": "PF 135",
+       "c2": "35 mm 机型",
+       "c3": "SilverFast iSRD 清单",
+       "c4": "带红外通道",
+       "c5": ""
+      },
+      {
+       "c1": "ProScan 10T",
+       "c2": "机型",
+       "c3": "SilverFast iSRD 清单",
+       "c4": "带红外通道",
+       "c5": ""
+      },
+      {
+       "c1": "ProScan 7200",
+       "c2": "3600 × 3600 dpi，48 bit",
+       "c3": "SilverFast 机型页与 iSRD 清单",
+       "c4": "随附幻灯片与 35 mm 条片片夹",
+       "c5": ""
+      },
+      {
+       "c1": "RPS 10M / 10S / 7200",
+       "c2": "机型系列",
+       "c3": "SilverFast iSRD 清单",
+       "c4": "带红外通道",
+       "c5": ""
+      }
+     ]
+    },
+    {
+     "kind": "table",
+     "caption": "ProScan 7200 机型参数",
+     "rows": [
+      {
+       "c1": "厂商",
+       "c2": "reflecta",
+       "c3": "厂家",
+       "c4": "厂家",
+       "c5": "厂家"
+      },
+      {
+       "c1": "型号",
+       "c2": "ProScan 7200",
+       "c3": "—",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "推出年代",
+       "c2": "（draft）",
+       "c3": "需 reflecta 官方页确认",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "停产年代",
+       "c2": "（draft）",
+       "c3": "SilverFast 称其为现行机型",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "最大胶片规格",
+       "c2": "35 mm 与幻灯片（随附片夹）",
+       "c3": "SilverFast 机型页",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "光学分辨率",
+       "c2": "3600 × 3600 dpi",
+       "c3": "SilverFast 机型页",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "色深",
+       "c2": "48 bit",
+       "c3": "SilverFast 机型页",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "光源类型",
+       "c2": "（draft）",
+       "c3": "机型页未列",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "传感器类型",
+       "c2": "（draft）",
+       "c3": "机型页未列",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "接口",
+       "c2": "USB（draft）",
+       "c3": "机型页未列",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "防静电",
+       "c2": "厂商未列",
+       "c3": "—",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "捆绑软件",
+       "c2": "Cyberview X（基础），另有出厂预装 SilverFast 版本",
+       "c3": "SilverFast 机型页",
+       "c4": "厂商推荐配 SilverFast",
+       "c5": "—"
+      }
+     ]
+    },
+    {
+     "kind": "note",
+     "text": "**RPSC / DRS 1200 考证状态：draft。** 本分片未取到 Reflecta RPSC 或 DRS 1200 的官方规格页。下表数值标 draft，需补 reflecta 官方下载页或说明书。"
+    },
+    {
+     "kind": "settings",
+     "caption": "ProScan 7200 推荐设置",
+     "items": [
+      {
+       "t": "分辨率",
+       "d": "3200 dpi。机型标称 3600 × 3600 dpi，取略低档位以控制数据量。"
+      },
+      {
+       "t": "输出格式",
+       "d": "16 bit TIFF。"
+      },
+      {
+       "t": "软件",
+       "d": "使用 SilverFast 而非随附的 Cyberview X。SilverFast 机型页写 Cyberview X 只允许「rudimental adjustments with very basic tools」。"
+      },
+      {
+       "t": "iSRD",
+       "d": "启用。该机型在 iSRD 清单内。"
+      },
+      {
+       "t": "HDRi RAW",
+       "d": "启用。Archive Suite 提供该工作流。"
+      },
+      {
+       "t": "多次曝光",
+       "d": "启用。SilverFast 机型页列 Multi-Exposure 为该机型的支持特性。"
+      },
+      {
+       "t": "IT8 标定",
+       "d": "启用 Auto IT8 Calibration。需自备 IT8 标定片。"
+      },
+      {
+       "t": "Dmax 设定",
+       "d": "按片实测。参见 $scanning.dmax-negative。"
+      },
+      {
+       "t": "锐化",
+       "d": "Low 或关闭。"
+      }
+     ]
+    },
+    {
+     "kind": "note",
+     "text": "ProScan 7200 支持的 SilverFast 特性含 iSRD、HDRi RAW、Kodachrome、Multi-Exposure 与 Auto IT8 Calibration。Kodachrome 与 Multi-Exposure 属 SE Plus 及以上版本的功能。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "SilverFast: Reflecta ProScan 7200 机型页",
+     "url": "https://www.silverfast.com/models/reflecta-proscan-7200-728/",
+     "kind": "manufacturer",
+     "note": "3600 × 3600 dpi、48 bit、随附片夹、Cyberview X 的评价、支持特性与软件版本划分。"
+    },
+    {
+     "name": "SilverFast iSRD 支持机型清单",
+     "url": "https://silverfast.com/highlights/isrd-list/en.html",
+     "kind": "manufacturer",
+     "note": "Reflecta 系列机型名单。"
+    },
+    {
+     "name": "Reflecta ProScan 7200 机型说明（SilverFast 第三方厂商页）",
+     "url": "https://www.silverfast.com/models/reflecta-proscan-7200-728/",
+     "kind": "manufacturer",
+     "note": "SilverFast 机型页给出的驱动下载入口。 原链接已失效，已换成可达的同主题来源；本条目机型规格仍为 draft。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "scanning.scan-settings"
+    ],
+    "next": [
+     "scanning.software"
+    ],
+    "related": [
+     "scanning.film-scanner-compare",
+     "scanning.dust-scratch-handling"
+    ],
+    "contrast": []
+   },
+   "quiz": [
+    {
+     "q": "ProScan 7200 的光学分辨率与色深是多少？",
+     "type": "single",
+     "options": [
+      "2400 dpi / 24 bit",
+      "3600 × 3600 dpi / 48 bit",
+      "7200 dpi / 48 bit",
+      "9600 dpi / 16 bit"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "SilverFast 机型页写 Optical resolution: 3600 x3600 dpi；Color depth: 48 bit。"
+    },
+    {
+     "q": "SilverFast 对随附的 Cyberview X 的评价是什么？",
+     "type": "single",
+     "options": [
+      "功能完整",
+      "只允许最基础的调整",
+      "不支持负片",
+      "速度最快"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "机型页写「Cyberview X allows just rudimental adjustments with very basic tools」。"
+    },
+    {
+     "q": "RPSC / DRS 1200 的规格目前的考证状态是什么？",
+     "type": "single",
+     "options": [
+      "已核实",
+      "标 draft",
+      "该型号不存在",
+      "由 SilverFast 提供"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "本分片未取到 Reflecta RPSC 或 DRS 1200 的官方规格页。"
+    }
+   ],
+   "updated": "2026-01-10",
+   "status": "draft"
+  },
+  {
+   "id": "scanning.scan-settings",
+   "title": "扫描设置总表与通用参数",
+   "title_en": "Scan Settings Reference and Common Parameters",
+   "aliases": [
+    "扫描设置",
+    "settings",
+    "参数",
+    "分辨率选择",
+    "通用设置"
+   ],
+   "type": "technique",
+   "level": 2,
+   "era": "至今",
+   "tags": [
+    "设置",
+    "参数",
+    "分辨率",
+    "位深",
+    "流程"
+   ],
+   "summary": "本条给出与机型无关的通用扫描参数。每个机型的具体数值放在对应机型的 settings 块。通用参数包括分辨率、位深、输出格式、锐化与色彩管理开关。",
+   "blocks": [
+    {
+     "kind": "settings",
+     "caption": "通用扫描参数",
+     "items": [
+      {
+       "t": "分辨率",
+       "d": "按胶片规格取 VueScan 推荐区间：35 mm 为 2400 至 4000 dpi，中画幅 120 为 2000 至 3200 dpi，大幅面 4×5 及以上为 1200 至 2400 dpi。放大到 300 dpi 打印时，35 mm 在 3200 dpi 下约得 288 mm 宽输出。"
+      },
+      {
+       "t": "位深",
+       "d": "16 bit 每通道（48 bit 彩色）。8 bit 用于最终输出件，编辑阶段保留 16 bit。"
+      },
+      {
+       "t": "输出格式",
+       "d": "16 bit TIFF 作为主文件。同时保存 HDRi RAW 或 3F 作为原始数据。归档另出无损压缩派生件。"
+      },
+      {
+       "t": "锐化",
+       "d": "Low 或关闭。理由：VueScan 文档写「If you're planning on editing images after scanning them, then you should leave this option off.」。锐化在后期按输出尺寸执行。"
+      },
+      {
+       "t": "颗粒消减",
+       "d": "Light 或 Medium。VueScan 的 Grain reduction 分三档。过度消减会削掉 $film-stock.grain 的真实颗粒。"
+      },
+      {
+       "t": "光源亮度",
+       "d": "按 test strip 定档。标称 Dmax 以下的胶片需上调并开多次曝光。"
+      },
+      {
+       "t": "Dmax 设定",
+       "d": "按片实测。取片材密度上方的安全余量。参见 $scanning.dmax-negative。"
+      },
+      {
+       "t": "机内色彩管理",
+       "d": "关闭自动增强与自动对比度。归档用途需要中性起始数据。"
+      },
+      {
+       "t": "红外除尘",
+       "d": "机型在 iSRD 清单内时启用。黑白银盐胶片除外。"
+      },
+      {
+       "t": "负片 mask",
+       "d": "按片种选择。黑白负片不做彩色 mask。"
+      },
+      {
+       "t": "工作空间",
+       "d": "编辑阶段用 16 bit Adobe RGB 或 ProPhoto RGB。输出阶段转到 sRGB。参见 $scanning.color-management。"
+      },
+      {
+       "t": "文件名",
+       "d": "写胶片名、框号、扫描日期与扫描仪型号。便于建立索引。"
+      }
+     ]
+    },
+    {
+     "kind": "h2",
+     "text": "把设置写成预设"
+    },
+    {
+     "kind": "p",
+     "text": "同一批胶片用同一组参数。先在一格上定参数并保存为预设，再应用到整批。参数不一致会使后期批量校正复杂化。"
+    },
+    {
+     "kind": "h2",
+     "text": "各机型的设置位置"
+    },
+    {
+     "kind": "table",
+     "caption": "机型与 settings 条目对照",
+     "rows": [
+      {
+       "c1": "机型",
+       "c2": "对应条目",
+       "c3": "关键参数",
+       "c4": "考证状态",
+       "c5": ""
+      },
+      {
+       "c1": "Plustek OpticFilm 8200i Ai / SE",
+       "c2": "$scanning.opticfilm-8200i",
+       "c3": "7200 dpi、48 bit、iSRD、HDRi",
+       "c4": "reviewed",
+       "c5": ""
+      },
+      {
+       "c1": "Plustek OpticFilm 120 / 120 Pro",
+       "c2": "$scanning.opticfilm-120-pro",
+       "c3": "5300 ppp 输出、4.01 动态范围、USB 3.0",
+       "c4": "reviewed（年代 draft）",
+       "c5": ""
+      },
+      {
+       "c1": "Epson Perfection V600",
+       "c2": "$scanning.epson-v600",
+       "c3": "2400 至 3200 dpi、3.4 Dmax、6 × 22 cm",
+       "c4": "reviewed",
+       "c5": ""
+      },
+      {
+       "c1": "Epson Perfection V850 Pro",
+       "c2": "$scanning.epson-v850",
+       "c3": "按厂商默认值并按 test 调整",
+       "c4": "draft",
+       "c5": ""
+      },
+      {
+       "c1": "Nikon COOLSCAN 9000 ED / V ED",
+       "c2": "$scanning.nikon-coolscan-9000",
+       "c3": "4000 dpi、16 bit、4.8 密度、Multi-Sample",
+       "c4": "reviewed",
+       "c5": ""
+      },
+      {
+       "c1": "Reflecta ProScan 7200",
+       "c2": "$scanning.reflecta-proscan-7200",
+       "c3": "3600 dpi、48 bit、iSRD",
+       "c4": "draft（年代）",
+       "c5": ""
+      },
+      {
+       "c1": "Canon CanoScan 900 II / 9900i",
+       "c2": "$scanning.canon-canoscan-9900i",
+       "c3": "900 II 与 9900i 的规格见各自词条（draft）",
+       "c4": "厂商未公开稳定数值，此处不填标称 dpi",
+       "c5": ""
+      },
+      {
+       "c1": "MicroTek ScanJet 3700 / ArtScan",
+       "c2": "$scanning.microtek-scanjet-3700",
+       "c3": "按厂商默认值并按 test 调整",
+       "c4": "draft",
+       "c5": ""
+      },
+      {
+       "c1": "Hasselblad Flextight X5 / X1",
+       "c2": "$scanning.imacon-flextight-x5",
+       "c3": "8000 dpi、16 bit、3F",
+       "c4": "reviewed（光源与接口 draft）",
+       "c5": ""
+      },
+      {
+       "c1": "Kodak ScanDirect Plus",
+       "c2": "$scanning.kodak-scandirect-plus",
+       "c3": "按厂商默认值并按 test 调整",
+       "c4": "draft",
+       "c5": ""
+      }
+     ]
+    },
+    {
+     "kind": "tip",
+     "text": "存档批次先做一张 test strip。记录光源亮度、多次曝光档位与 Dmax 设定，作为该批次的记录。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "VueScan 官方文档 · Scanning slides and negatives",
+     "url": "https://www.hamrick.com/vuescan/html/vuesc26.htm",
+     "kind": "manual",
+     "note": "按胶片规格的 dpi 推荐区间。"
+    },
+    {
+     "name": "VueScan 官方文档 · Filter 标签",
+     "url": "https://www.hamrick.com/vuescan/html/vuesc31.htm",
+     "kind": "manual",
+     "note": "Sharpen 与 Grain reduction 的设置说明。"
+    },
+    {
+     "name": "Plustek OpticFilm 8200i Ai 官方产品页",
+     "url": "https://plustek.com/gbr/products/film-photo-scanners/opticfilm-8200i-ai/index.php",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "Nikon COOLSCAN 官方产品 PDF",
+     "url": "https://www.nikonusa.com/fileuploads/pdfs/2004_coolscan.pdf",
+     "kind": "manufacturer"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "scanning.scan-principles"
+    ],
+    "next": [
+     "scanning.opticfilm-8200i",
+     "scanning.opticfilm-120-pro",
+     "scanning.nikon-coolscan-9000"
+    ],
+    "related": [
+     "scanning.dust-scratch-handling",
+     "scanning.color-management",
+     "scanning.post-processing"
+    ],
+    "contrast": []
+   },
+   "quiz": [
+    {
+     "q": "编辑阶段的锐化应如何设置？",
+     "type": "single",
+     "options": [
+      "High",
+      "Medium",
+      "Low 或关闭",
+      "Auto"
+     ],
+     "answer": [
+      2
+     ],
+     "why": "原始数据保持锐度，锐化在后期按输出尺寸执行。"
+    },
+    {
+     "q": "VueScan 对中画幅 120 推荐的 dpi 区间是多少？",
+     "type": "single",
+     "options": [
+      "1200 至 2400",
+      "2000 至 3200",
+      "2400 至 4000",
+      "4000 至 8000"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "官方文档给 120 为 2000 至 3200 dpi。"
+    },
+    {
+     "q": "为什么同一批胶片要用同一组参数？",
+     "type": "single",
+     "options": [
+      "加快速度",
+      "便于后期批量校正",
+      "提高分辨率",
+      "减少文件大小"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "参数不一致会使后期批量校正复杂化。"
+    }
+   ],
+   "updated": "2026-01-10",
+   "status": "reviewed"
+  },
+  {
+   "id": "scanning.software",
+   "title": "扫描软件流程：SilverFast、VueScan、Nikon Scan、ScanItPro 与 DSLRrawScan",
+   "title_en": "Scanning Software Workflows",
+   "aliases": [
+    "SilverFast",
+    "VueScan",
+    "Nikon Scan",
+    "ScanItPro",
+    "DSLRrawScan",
+    "扫描软件",
+    "DRS"
+   ],
+   "type": "technique",
+   "level": 3,
+   "era": "1990s 至今",
+   "tags": [
+    "软件",
+    "SilverFast",
+    "VueScan",
+    "Nikon Scan",
+    "ScanItPro",
+    "DSLRrawScan"
+   ],
+   "summary": "扫描软件分两类：厂商软件与第三方软件。厂商软件与机型耦合紧。第三方软件跨机型，功能更全。本条给出五类软件的定位与流程差异。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "软件分类"
+    },
+    {
+     "kind": "table",
+     "caption": "五类扫描软件的定位",
+     "rows": [
+      {
+       "c1": "软件",
+       "c2": "厂商",
+       "c3": "定位",
+       "c4": "关键功能",
+       "c5": "适用条件"
+      },
+      {
+       "c1": "SilverFast",
+       "c2": "LaserSoft Imaging（德国）",
+       "c3": "跨机型第三方软件",
+       "c4": "iSRD、Multi-Exposure、Auto IT8 Calibration、HDRi、NegaFix、USM、GANE、SRDx、Batch Scanning",
+       "c5": "需要 Ai Studio 或 Archive Suite 才含 IT8 标定与 HDRi"
+      },
+      {
+       "c1": "VueScan",
+       "c2": "David Hamrick（个人开发者）",
+       "c3": "跨机型第三方软件",
+       "c4": "Infrared Clean、Restore fading、Colorize、Grain reduction、按胶片规格的 dpi 建议",
+       "c5": "覆盖机型范围广，深度不及 SilverFast"
+      },
+      {
+       "c1": "Nikon Scan",
+       "c2": "Nikon",
+       "c3": "厂商软件",
+       "c4": "Multi-Sample Scanning、Digital ICE Advanced（ICE/ROC/GEM/DEE）、NCS 色彩管理、Scan Image Enhancer",
+       "c5": "仅 Coolscan 系列"
+      },
+      {
+       "c1": "ScanItPro",
+       "c2": "Macro Eidolon",
+       "c3": "跨机型第三方软件",
+       "c4": "自动曝光、曲线、批处理",
+       "c5": "功能清单未取到一手来源（draft）"
+      },
+      {
+       "c1": "DSLRrawScan",
+       "c2": "dbrs 软件（俄罗斯）",
+       "c3": "跨机型第三方软件",
+       "c4": "厂商间交互式 RAW 格式；功能清单未取到一手来源（draft）",
+       "c5": "配合 DSLR 翻拍方案使用时常见"
+      }
+     ]
+    },
+    {
+     "kind": "h2",
+     "text": "SilverFast 的版本层级"
+    },
+    {
+     "kind": "table",
+     "caption": "SilverFast 版本与功能",
+     "rows": [
+      {
+       "c1": "版本",
+       "c2": "价格（MSRP，美元）",
+       "c3": "关键功能",
+       "c4": "适用",
+       "c5": ""
+      },
+      {
+       "c1": "SilverFast SE",
+       "c2": "49",
+       "c3": "Scan Assistant、One-Click Image Optimization、Film 与 Color Profiles、Batch Scanning",
+       "c4": "基础扫描与批处理",
+       "c5": ""
+      },
+      {
+       "c1": "SilverFast SE Plus",
+       "c2": "99",
+       "c3": "SE 全部 + Maximum Dynamic Range for Film、Kodachrome Mode、More Details in Dark Areas",
+       "c4": "需 NegaFix、Kodachrome 与暗部细节时",
+       "c5": ""
+      },
+      {
+       "c1": "SilverFast Ai Studio",
+       "c2": "249",
+       "c3": "SE Plus 全部 + IT8 Color Calibration、Expert Mode、Film 与 Color Profile 管理、16bit Histogram 曝光补偿",
+       "c4": "需要逐台标定与精细调整时",
+       "c5": ""
+      },
+      {
+       "c1": "SilverFast Archive Suite",
+       "c2": "399",
+       "c3": "Ai Studio + HDRi RAW 工作流 + SilverFast HDR Studio + Virtual Light Table",
+       "c4": "归档与 RAW 工作流",
+       "c5": ""
+      }
+     ]
+    },
+    {
+     "kind": "h2",
+     "text": "第三方软件的工作流程"
+    },
+    {
+     "kind": "steps",
+     "caption": "SilverFast 的标准扫描流程",
+     "items": [
+      {
+       "t": "1. 选片种",
+       "d": "在 SilverFast 里选片种 profile（Kodachrome、Ektar 等）。profile 决定负片 mask 与色彩还原。"
+      },
+      {
+       "t": "2. 设分辨率与输出",
+       "d": "设 16 bit TIFF 24/48 bit。设光源亮度档位。"
+      },
+      {
+       "t": "3. 开多次曝光",
+       "d": "在 Expert Mode 里开 Multi-Exposure 并设档位。"
+      },
+      {
+       "t": "4. 开 iSRD",
+       "d": "启用 iSRD。SE 版只有自动模式。"
+      },
+      {
+       "t": "5. 用 WorkflowPilot",
+       "d": "WorkflowPilot 按预设自动完成多项设置。批量时用它统一参数。"
+      },
+      {
+       "t": "6. 预览与微调",
+       "d": "用 16bit Histogram 检查曝光。按需开 USM 锐化。"
+      },
+      {
+       "t": "7. 批扫描",
+       "d": "用 Batch Scanning 或 JobManager 批量执行。"
+      },
+      {
+       "t": "8. 存 HDRi RAW",
+       "d": "归档用途保存 HDRi RAW。用 HDR/HDR Studio 处理。"
+      }
+     ]
+    },
+    {
+     "kind": "steps",
+     "caption": "VueScan 的标准扫描流程",
+     "items": [
+      {
+       "t": "1. 设 Input | Media",
+       "d": "选 Slide film、Color negative、B/W negative 或 Image。这一项决定软件如何解释像素极性。"
+      },
+      {
+       "t": "2. 设分辨率",
+       "d": "按胶片规格取 VueScan 推荐区间。35 mm 取 2400 至 4000 dpi。"
+      },
+      {
+       "t": "3. 设 Filter",
+       "d": "Infrared Clean、Restore fading、Grain reduction 按需启用。"
+      },
+      {
+       "t": "4. 设 Batch 与 Crop",
+       "d": "Batch 设 All。Crop 设 Auto offset，或设 Frame offset 与 Frame spacing。"
+      },
+      {
+       "t": "5. 开 Sharpen",
+       "d": "计划后期编辑时保持关闭。"
+      },
+      {
+       "t": "6. 输出",
+       "d": "存 TIFF。"
+      }
+     ]
+    },
+    {
+     "kind": "note",
+     "text": "VueScan 的 Colorize 功能用神经网络模型上色，需下载 130 MB 模型文件。该功能用于负片转正像的辅助，不替代片种 profile。"
+    },
+    {
+     "kind": "note",
+     "text": "**ScanItPro 与 DSLRrawScan：draft。** 本分片未取到这两款软件的一手官方页面或说明书。功能清单与定价标 draft。引用前查 dbrs.ru 与 Macro Eidolon 官方页。"
+    },
+    {
+     "kind": "note",
+     "text": "Nikon Scan 的历史：SilverFast 的升级说明文件提到「l'arrêt de la part de Nikon du développement de pilotes du module MAID」，即 Nikon 停止开发 MAID 模块驱动。MAID 是 Nikon 扫描软件的旧版界面。引用该停产信息前先取原文 PDF。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "SilverFast: Reflecta ProScan 7200 机型页（版本与功能划分）",
+     "url": "https://www.silverfast.com/models/reflecta-proscan-7200-728/",
+     "kind": "manufacturer",
+     "note": "SE / SE Plus / Ai Studio / Archive Suite 的价格与功能。"
+    },
+    {
+     "name": "SilverFast iSRD 支持机型清单",
+     "url": "https://silverfast.com/highlights/isrd-list/en.html",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "VueScan 官方文档 · Scanning slides and negatives",
+     "url": "https://www.hamrick.com/vuescan/html/vuesc26.htm",
+     "kind": "manual",
+     "note": "Input | Media、Batch、Crop 与 dpi 建议。"
+    },
+    {
+     "name": "VueScan 官方文档 · Filter 标签",
+     "url": "https://www.hamrick.com/vuescan/html/vuesc31.htm",
+     "kind": "manual",
+     "note": "Infrared clean、Sharpen、Grain reduction、Restore fading、Colorize。"
+    },
+    {
+     "name": "VueScan 官方博客: Digital ICE",
+     "url": "https://www.hamrick.com/blog/digital-ice.html",
+     "kind": "article"
+    },
+    {
+     "name": "Nikon COOLSCAN 官方产品 PDF",
+     "url": "https://www.nikonusa.com/fileuploads/pdfs/2004_coolscan.pdf",
+     "kind": "manufacturer",
+     "note": "Nikon Scan 4 + Scan Image Enhancer 与 Digital ICE Advanced。"
+    },
+    {
+     "name": "SilverFast 升级说明 PDF（法文，待取证）",
+     "url": "https://www.silverfast.com/download/docu/sfv6.6upgradeaddendum_fr_2009-07-07.pdf",
+     "kind": "manufacturer",
+     "note": "含 Nikon 停止开发 MAID 模块驱动的记载，本分片未取到 PDF 正文。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "scanning.scan-settings"
+    ],
+    "next": [
+     "scanning.bw-reversal",
+     "scanning.color-management"
+    ],
+    "related": [
+     "scanning.dust-scratch-handling"
+    ],
+    "contrast": []
+   },
+   "quiz": [
+    {
+     "q": "哪一档 SilverFast 提供 IT8 标定与 Expert Mode？",
+     "type": "single",
+     "options": [
+      "SilverFast SE",
+      "SilverFast SE Plus",
+      "SilverFast Ai Studio",
+      "全部四档"
+     ],
+     "answer": [
+      2
+     ],
+     "why": "Ai Studio 含 IT8 Color Calibration 与 Expert Mode。"
+    },
+    {
+     "q": "VueScan 的 Infrared Clean 在哪种模式下不显示？",
+     "type": "single",
+     "options": [
+      "彩色幻灯片",
+      "灰度与黑白负片",
+      "任何负片",
+      "彩色负片"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "文档说明该选项需扫描彩色片，灰度与黑白负片时不显示。"
+    },
+    {
+     "q": "VueScan 的 Colorize 功能需要什么额外资源？",
+     "type": "single",
+     "options": [
+      "IT8 标定片",
+      "130 MB 神经网络模型文件",
+      "外置硬盘",
+      "第二台扫描仪"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "文档说明 Colorize 用神经网络上色，需下载 130 MB 模型文件。"
+    },
+    {
+     "q": "Digital ICE Advanced 的四个组件是哪些？",
+     "type": "single",
+     "options": [
+      "ICE / ROC / GEM / DEE",
+      "SRDx / iSRD / HDRi / USM",
+      "RGB / CMYK / LAB / Gray",
+      "ISO / ANSI / DIN / IT8"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "Digital ICE、Digital ROC、Digital GEM、Digital DEE。"
+    }
+   ],
+   "updated": "2026-01-10",
+   "status": "reviewed"
+  },
+  {
+   "id": "scanning.troubleshoot-scan",
+   "title": "扫描故障排查",
+   "title_en": "Scan Troubleshooting",
+   "aliases": [
+    "故障排查",
+    "troubleshoot",
+    "软斑",
+    "偏色",
+    "条纹",
+    "失焦",
+    "裁切",
+    "分辨率不足"
+   ],
+   "type": "pitfall",
+   "level": 3,
+   "era": "至今",
+   "tags": [
+    "故障",
+    "偏色",
+    "条纹",
+    "失焦",
+    "裁切",
+    "除尘"
+   ],
+   "summary": "本条按症状列出扫描故障的原因与处理。覆盖软斑、划痕、灰尘、偏色、条纹、失焦、出界裁切与分辨率不足八类。",
+   "blocks": [
+    {
+     "kind": "troubleshoot",
+     "caption": "扫描故障排查",
+     "items": [
+      {
+       "t": "软斑（soft spot）",
+       "d": "症状是画面出现半透明圆斑或椭圆斑。原因有三种：一是扫描台玻璃上的污渍或胶片上的指纹；二是翻拍或接触式扫描时的光学接触不良；三是胶片乳剂面受压。处理：清洁扫描台玻璃（无绒布加玻璃清洁液），清洁胶片，确认乳剂面朝向传感器，锁定压盖。红外的软斑探测弱，需手工用画笔或 Clone-Tool 处理。参见 $scanning.dust-scratch-handling。"
+      },
+      {
+       "t": "划痕（scratch）",
+       "d": "症状是线状或弧状亮线。原因：胶片乳剂面划伤、片基面划伤透射成像、或片夹玻璃划痕。处理：先分面判断，乳剂面划痕在红外通道里明显。红外除尘可处理多数细划痕。Heavy 档会软化周边区域，仅在必要时使用。参见 $scanning.dust-scratch-handling。"
+      },
+      {
+       "t": "灰尘（dust）",
+       "d": "症状是不透明或半透明的小点。原因：胶片表面、扫描台、片夹玻璃或空气中的颗粒。处理顺序：先清洁扫描台，再清洁胶片，最后启用红外除尘。清洁顺序颠倒会把颗粒带到胶片上。红外除尘使扫描时间增加约 50 %。参见 $archive.cleaning-film。"
+      },
+      {
+       "t": "偏色（color cast）",
+       "d": "症状是整幅偏红、偏青或偏黄。原因有三类：机内自动增强介入；IT8 标定缺失或过期；胶片本身褪色。处理：关闭机内自动增强。补做 Auto IT8 Calibration。用 VueScan 的 Restore fading 检查褪色方向——原文写「Slide film often shifts towards red over time, and color negative film towards cyan」。胶片 profile 按片种建。参见 $scanning.color-management。"
+      },
+      {
+       "t": "条纹（banding）",
+       "d": "症状是沿扫描方向出现明暗相间的条带。原因有三类：8 bit 位深下的暗部量化；光源亮度不足使高密度区并块；灰尘或划痕在片夹中造成的遮挡。处理：改用 16 bit 输出。上调光源亮度并启用多次曝光。检查片夹玻璃。参见 $scanning.dynamic-range-dmax。"
+      },
+      {
+       "t": "失焦（out of focus）",
+       "d": "症状是边缘发虚或整体轻微模糊。原因有三类：压盖未锁导致对焦平面偏移；片夹玻璃厚度设置与机型不匹配；胶片弯曲使局部离焦。处理：锁紧压盖。核对片夹玻璃厚度设置。把胶片平放并用低曲率方式压平。在片基或边缘文字区校验焦点。参见 $scanning.sensor-size-focus。"
+      },
+      {
+       "t": "出界裁切（cropping out of bounds）",
+       "d": "症状是画面边缘被切掉一部分。原因有三类：片夹未装到位；自动框检测把框边当作画面边界；大幅面条片超出 TPU 幅面。处理：手动设帧边界而不是用自动检测。在 VueScan 里设 Frame offset 与 Frame spacing。核对机型幅面上限——Epson V600 的 TPU 上限为 6 × 22 cm 中画幅全景片。参见 $scanning.flatbed-scanner。"
+      },
+      {
+       "t": "分辨率不足（insufficient resolution）",
+       "d": "症状是放大后细节不足或边缘出现锯齿。原因有三类：扫描 dpi 低于胶片规格的推荐区间；大幅面用了过高的标称 dpi 但传感器像素不足；用插值分辨率代替光学分辨率。处理：35 mm 取 2400 至 4000 dpi，120 取 2000 至 3200 dpi，大幅面取 1200 至 2400 dpi。区分光学分辨率与插值分辨率——Epson V600 的 9600 dpi 含插值，6400 dpi 才是光学值。参见 $scanning.scan-principles。"
+      }
+     ]
+    },
+    {
+     "kind": "h2",
+     "text": "排查顺序"
+    },
+    {
+     "kind": "ol",
+     "text": "1. 先判断是硬件问题还是设置问题。换一批已知良好的胶片试扫。\n2. 硬件问题查清洁、装片与压盖。\n3. 设置问题查位深、光源亮度、锐化与机内增强。\n4. 记录每一步的改动。批量作业时保留扫描日志。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "VueScan 官方文档 · Filter 标签",
+     "url": "https://www.hamrick.com/vuescan/html/vuesc31.htm",
+     "kind": "manual",
+     "note": "Infrared clean 的 Heavy 档软化说明；Restore fading 的褪色方向。"
+    },
+    {
+     "name": "VueScan 官方文档 · Scanning slides and negatives",
+     "url": "https://www.hamrick.com/vuescan/html/vuesc26.htm",
+     "kind": "manual",
+     "note": "Batch、Crop、Frame offset 与 dpi 建议。"
+    },
+    {
+     "name": "Epson America Newsroom: Perfection V600 Photo (2009-09-15)",
+     "url": "https://news.epson.com/news/epson-delivers-high-performance-102003?print=1",
+     "kind": "manufacturer",
+     "note": "ISO 14473 的光学分辨率定义；6 × 22 cm TPU 上限。"
+    },
+    {
+     "name": "VueScan 官方博客: Digital ICE",
+     "url": "https://www.hamrick.com/blog/digital-ice.html",
+     "kind": "article",
+     "note": "额外一遍红外扫描约增加 50 % 时间。"
+    },
+    {
+     "name": "Plustek OpticFilm 120 Pro 官方规格页",
+     "url": "https://plustek.com/esd/products/film-photo-scanners/opticfilm-120-pro/spec.php",
+     "kind": "manufacturer",
+     "note": "扫描面积 60 mm × 120 mm。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "scanning.scan-settings"
+    ],
+    "next": [
+     "archive.digital-preservation"
+    ],
+    "related": [
+     "scanning.dust-scratch-handling",
+     "scanning.dmax-negative",
+     "scanning.film-handling"
+    ],
+    "contrast": []
+   },
+   "quiz": [
+    {
+     "q": "画面出现条纹状明暗带时，首先检查什么？",
+     "type": "single",
+     "options": [
+      "文件格式",
+      "位深与光源亮度",
+      "文件名",
+      "屏幕亮度"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "8 bit 位深下的暗部量化与光源亮度不足都会造成条纹。"
+    },
+    {
+     "q": "画面偏色的第一步处理是什么？",
+     "type": "single",
+     "options": [
+      "关闭机内自动增强",
+      "提高分辨率",
+      "启用锐化",
+      "换成 JPEG 输出"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "机内自动增强会改变颜色起点。先关掉它再判断标定与胶片 profile。"
+    },
+    {
+     "q": "边缘发虚时优先检查什么？",
+     "type": "single",
+     "options": [
+      "压盖是否锁紧",
+      "文件名",
+      "文件格式",
+      "存储空间"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "压盖未锁会改变对焦平面，其次核对片夹玻璃厚度设置与胶片平整度。"
+    },
+    {
+     "q": "哪一档 Infrared Clean 会软化缺陷周边的图像？",
+     "type": "single",
+     "options": [
+      "Light",
+      "Medium",
+      "Heavy",
+      "None"
+     ],
+     "answer": [
+      2
+     ],
+     "why": "文档写除 Heavy 档外只造成缺陷附近的局部软化。"
+    }
+   ],
+   "updated": "2026-01-10",
+   "status": "reviewed"
+  }
+ ]
+}

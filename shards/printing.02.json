@@ -1,0 +1,2283 @@
+{
+  "module": "printing",
+  "shard": "printing.02",
+  "shard_zh": "放大配方、局部控制与印放流程",
+  "note": "覆盖印放药液配方、局部控制、曝光计算、完整印放流程、连印对照、故障排查与印放工艺史。",
+  "entries": [
+    {
+      "id": "printing.dodging-burning",
+      "title": "遮挡与加光减光",
+      "title_en": "Dodging and Burning",
+      "aliases": [
+        "dodging",
+        "burning",
+        "加光减光",
+        "burning-in",
+        "局部控制",
+        "遮挡法",
+        "multi-contrast printing"
+      ],
+      "type": "technique",
+      "level": 3,
+      "era": "1860s 至今",
+      "tags": [
+        "印放",
+        "局部控制",
+        "加光",
+        "遮挡"
+      ],
+      "summary": "遮挡（dodging）减少局部曝光量，使该区域变浅。加光（burning）增加局部曝光量，使该区域变深。两者在放大机灯亮着时完成，用于调整单张印相的影调分布。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "两种局部控制"
+        },
+        {
+          "kind": "table",
+          "caption": "遮挡与加光",
+          "rows": [
+            {
+              "c1": "作用方向",
+              "c2": "减少该区域的曝光量。区域变浅。",
+              "c3": "增加该区域的曝光量。区域变深。",
+              "c4": "遮挡减少到达相纸的光。加光在基础曝光外再加一次曝光。",
+              "c5": "遮挡用手或专用遮挡棒。加光用带孔遮光片。"
+            },
+            {
+              "c1": "时机",
+              "c2": "灯亮着，遮住该区域并计时。",
+              "c3": "先做基础曝光。然后在灯亮时做额外曝光。",
+              "c4": "遮挡贯穿基础曝光。加光是独立的一次曝光。",
+              "c5": "两者都在安全光环境下插拔相纸。"
+            },
+            {
+              "c1": "常见用途",
+              "c2": "天空、草地等本应更浅的区域。",
+              "c3": "面部高光丢失的暗部、印刷文字、剪影天空。",
+              "c4": "负片给出的影调偏离需要的结果。",
+              "c5": "见 $film-stock.characteristic-curve 。"
+            },
+            {
+              "c1": "补偿量",
+              "c2": "一般占总曝光量的 10% 至 30%。",
+              "c3": "一般占总曝光量的 5% 至 20%。",
+              "c4": "补偿量过大会出现可见边界。",
+              "c5": "先做小量补偿，洗出后评估再加量。"
+            }
+          ],
+          "text": "遮挡与加光"
+        },
+        {
+          "kind": "h2",
+          "text": "加光的执行步骤"
+        },
+        {
+          "kind": "steps",
+          "caption": "加光一张印相",
+          "items": [
+            {
+              "t": "选区域",
+              "d": "在底片台上确定需要加光的区域。该区域在负片上密度不足。"
+            },
+            {
+              "t": "做基础曝光",
+              "d": "按试印条确定的基准时间做一次完整曝光。记录基础时间。"
+            },
+            {
+              "t": "选择孔径",
+              "d": "在遮光片上开一个与区域匹配的孔。孔径取目标区域的大小。孔的边缘要做成渐变过渡。"
+            },
+            {
+              "t": "计算加光时间",
+              "d": "加光时间 = 基础时间 × 补偿比例。补偿比例从 10% 起试。"
+            },
+            {
+              "t": "执行加光",
+              "d": "把相纸放回原位。灯亮起后立刻把遮光片移到相纸上方，露出目标区域。保持遮光片轻微晃动。"
+            },
+            {
+              "t": "评估",
+              "d": "显影后检查区域边界与影调。加光不足时按同样方法再补一次。"
+            }
+          ],
+          "text": "加光一张印相"
+        },
+        {
+          "kind": "h2",
+          "text": "遮挡的执行步骤"
+        },
+        {
+          "kind": "steps",
+          "caption": "遮挡一张印相",
+          "items": [
+            {
+              "t": "选区域",
+              "d": "确定需要变浅的区域。常见为天空与地面高光。"
+            },
+            {
+              "t": "备工具",
+              "d": "用遮挡棒（dodging rod）。棒端缠金属丝形成柔边。手掌也可充当遮挡面。"
+            },
+            {
+              "t": "确定遮挡高度",
+              "d": "遮挡棒距相纸越近，阴影边缘越柔。约 20 cm 到 30 cm 给出柔和过渡。"
+            },
+            {
+              "t": "执行遮挡",
+              "d": "灯亮起后把遮挡棒移到相纸上方。棒持续作小幅度横扫，覆盖该区域。"
+            },
+            {
+              "t": "移动速度",
+              "d": "移动越慢，减光越多。移动越快，减光越少。"
+            },
+            {
+              "t": "评估",
+              "d": "显影后检查边界是否可见。边界可见时提高移动速度或抬高遮挡棒。"
+            }
+          ],
+          "text": "遮挡一张印相"
+        },
+        {
+          "kind": "warn",
+          "text": "遮挡棒或遮光片保持静止会在印相上留下硬边。工具必须持续移动。"
+        },
+        {
+          "kind": "h2",
+          "text": "大面积均匀曝光"
+        },
+        {
+          "kind": "p",
+          "text": "放大机的灯箱亮度通常不均。灯箱中心比边缘亮。相纸上的均匀曝光（even exposure）指用少量额外曝光给整张相纸一个基础密度，使边缘与中心的差异不再明显。"
+        },
+        {
+          "kind": "image",
+          "src": "img/enlarging-easel.jpg",
+          "alt": "约 1980 年的 Monami 放大尺板。压边框固定相纸，可调挡板用于留白边。",
+          "caption": "约 1980 年的 Monami 放大尺板。压边框固定相纸，可调挡板用于留白边。",
+          "credit": "R. Henrik Nilsson",
+          "license": "CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File%3ACa_1980_Monami_darkroom_enlarging_easel.jpg"
+        },
+        {
+          "kind": "p",
+          "text": "做法：把底片夹置空或取出负片。相纸放在底片台上。灯亮起后把遮挡棒在相纸上方做缓慢移动，让整张相纸接受一段均匀的额外曝光。额外曝光时间一般占总曝光量的 10% 至 20%。"
+        },
+        {
+          "kind": "p",
+          "text": "均匀曝光的时间取决于灯箱亮度与放大倍率。Ilford 的 MULTIGRADE 600 系统在相纸下方装曝光探头，自动计算均匀曝光与加光量。"
+        },
+        {
+          "kind": "note",
+          "text": "扩散型放大机的灯箱不均程度通常小于聚光型。更换光源类型后重新确定均匀曝光时间。"
+        },
+        {
+          "kind": "h2",
+          "text": "可变反差印放"
+        },
+        {
+          "kind": "p",
+          "text": "可变反差印放（multi-contrast printing）用同一张相纸配不同滤片做出不同影调。操作顺序是：先选滤片编号，再按滤片查曝光系数，再算曝光时间。"
+        },
+        {
+          "kind": "formula",
+          "caption": "可变反差印放的曝光换算",
+          "text": "T_new = T_base × F_filter × F_light\n\n其中：\n- T_new = 新曝光时间（秒）\n- T_base = 基准曝光时间（秒），来自试印条\n- F_filter = 换滤片后的曝光乘数，来自曝光系数表\n- F_light = 换光源后的曝光乘数，来自实测"
+        },
+        {
+          "kind": "troubleshoot",
+          "caption": "局部控制的常见问题",
+          "items": [
+            {
+              "t": "加光区出现明显方框",
+              "d": "遮光片上的孔边缘太硬。在孔的周边做渐变过渡，或把孔开得比目标略大后缩小遮光范围。"
+            },
+            {
+              "t": "遮挡区出现放射状边缘",
+              "d": "遮挡棒离相纸太近或移动轨迹是直线。抬高遮挡棒并做圆周运动。"
+            },
+            {
+              "t": "加光区比预期深",
+              "d": "补偿比例过高。按试印结果把比例降到一半以下。"
+            },
+            {
+              "t": "遮挡后边界仍可见",
+              "d": "遮挡棒未持续移动，或相纸在曝光期间移动。固定相纸并持续移动遮挡棒。"
+            },
+            {
+              "t": "均匀曝光后整体偏灰",
+              "d": "均匀曝光时间过长。缩短均匀曝光时间后重做。"
+            }
+          ],
+          "text": "局部控制的常见问题"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Wikipedia: Dodging and burning",
+          "url": "https://en.wikipedia.org/wiki/Dodging_and_burning",
+          "kind": "article",
+          "note": "遮挡与加光的定义、工具与移动要求。"
+        },
+        {
+          "name": "Wikipedia: Enlarger",
+          "url": "https://en.wikipedia.org/wiki/Enlarger",
+          "kind": "article",
+          "note": "easel 倾斜校正透视，局部控制的通识说明。"
+        },
+        {
+          "name": "Ilford Photo: Contrast control for Ilford Multigrade",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/03/Contrast-control-for-Ilford-Multigrade.pdf",
+          "kind": "manufacturer",
+          "note": "曝光补偿矩阵与可变反差印放的换算方法。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "printing.enlarger",
+          "printing.multigrade"
+        ],
+        "next": [
+          "printing.exposure-calculation"
+        ],
+        "related": [
+          "film-stock.latitude",
+          "printing.troubleshoot-print"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "要把印相中的天空变浅，应该用哪种操作？",
+          "type": "single",
+          "options": [
+            "遮挡 dodging",
+            "加光 burning",
+            "换用更低编号的 MG 滤片",
+            "缩短显影时间"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "遮挡减少该区域的曝光量，使该区域变浅。"
+        },
+        {
+          "q": "加光时遮光片上的孔边缘为什么要做渐变过渡？",
+          "type": "single",
+          "options": [
+            "减少曝光时间",
+            "避免印相上出现硬边",
+            "提高印相反差",
+            "减少相纸用量"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "硬边会在印相上留下方框轮廓。渐变过渡使边界融入周围影调。"
+        },
+        {
+          "q": "遮挡时把遮挡棒抬高会怎样？",
+          "type": "single",
+          "options": [
+            "减光更强",
+            "减光更弱，阴影边缘更柔",
+            "曝光时间缩短",
+            "反差上升"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "遮挡面离相纸越远，阴影边缘越柔和，减光量也越少。"
+        },
+        {
+          "q": "MULTIGRADE 600 系统用什么部件计算曝光？",
+          "type": "single",
+          "options": [
+            "手背测光",
+            "装在相纸下方的曝光探头 600P",
+            "镜头光圈读数",
+            "安全灯亮度"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "600 系统用 600H 灯头、600S 电源、600C 控制单元与 600P 曝光探头组成闭环。"
+        }
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "printing.exposure-calculation",
+      "title": "放大曝光计算",
+      "title_en": "Enlarging Exposure Calculation",
+      "aliases": [
+        "曝光计算",
+        "exposure calculation",
+        "放大倍率换算",
+        "曝光时间计算",
+        "曝光系数"
+      ],
+      "type": "concept",
+      "level": 3,
+      "era": "1870s 至今",
+      "tags": [
+        "曝光计算",
+        "放大",
+        "换算"
+      ],
+      "summary": "放大曝光时间与放大倍率成正比。改变放大高度、换滤片或换光源后，用乘数从已知曝光推算新曝光。曝光乘数由试印条实测。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "倍率与曝光"
+        },
+        {
+          "kind": "p",
+          "text": "放大倍率提高一档时，影像面积变为四倍。相纸上每单位面积接收的光量减少。曝光时间与放大倍率成正比。"
+        },
+        {
+          "kind": "formula",
+          "caption": "按放大倍率换算曝光",
+          "text": "T_new = T_base × (M_new / M_base)\n\n其中：\n- T_new = 新曝光时间（秒）\n- T_base = 基准曝光时间（秒）\n- M_base = 基准放大倍率\n- M_new = 新放大倍率\n\n示例：从 4× 放大到 8× 时，T_new = T_base × 8/4 = T_base × 2。"
+        },
+        {
+          "kind": "calc",
+          "caption": "算例",
+          "text": "已知：f/8 镜头在 4× 时曝光 10 秒。\n\n第 1 步：放大到 8×。10 秒 × (8/4) = 20 秒。\n\n第 2 步：把滤片从 2 改到 3。曝光乘数 0.74。20 秒 × 0.74 = 14.8 秒，取 15 秒。\n\n第 3 步：换用冷阴极管灯头。实测乘数 0.6。15 秒 × 0.6 = 9 秒。\n\n结果：8×、滤片 3、冷阴极管灯头、f/8，曝光 9 秒。"
+        },
+        {
+          "kind": "h2",
+          "text": "换滤片的乘数"
+        },
+        {
+          "kind": "p",
+          "text": "Ilford 的曝光系数矩阵给出每个滤片相对基准滤片的曝光乘数。矩阵来自 Aristo 冷阴极管灯头加 W45 与 40Y 滤光的实测。矩阵对称，可双向查表。"
+        },
+        {
+          "kind": "table",
+          "caption": "MG 滤片之间的曝光乘数（Aristo 冷阴极管灯头 + W45 + 40Y 实测节选）",
+          "rows": [
+            {
+              "c1": "2",
+              "c2": "3",
+              "c3": "0.74",
+              "c4": "加反差，曝光减少。",
+              "c5": ""
+            },
+            {
+              "c1": "3",
+              "c2": "4",
+              "c3": "0.88",
+              "c4": "加反差，曝光略减。",
+              "c5": "滤片 4 与 5 需额外补偿。"
+            },
+            {
+              "c1": "0",
+              "c2": "00",
+              "c3": "0.93",
+              "c4": "减反差，曝光略减。",
+              "c5": ""
+            },
+            {
+              "c1": "2",
+              "c2": "00",
+              "c3": "1.10",
+              "c4": "减反差，曝光增加。",
+              "c5": ""
+            },
+            {
+              "c1": "2",
+              "c2": "5",
+              "c3": "1.70",
+              "c4": "最高反差，曝光增加最多。",
+              "c5": "光谱端点差异最大，数值偏差也最大。"
+            }
+          ],
+          "text": "MG 滤片之间的曝光乘数（Aristo 冷阴极管灯头 + W45 + 40Y 实测节选）"
+        },
+        {
+          "kind": "note",
+          "text": "上表数值来自单一灯头的实测矩阵。换用其他灯头或彩色灯头时，乘数会不同。用试印条重新测定基准曝光。"
+        },
+        {
+          "kind": "h2",
+          "text": "换光源的乘数"
+        },
+        {
+          "kind": "p",
+          "text": "钨丝灯、钨卤素灯、冷阴极管与 LED 的光量与光谱都不同。Ilford 指出冷阴极管灯头的曝光时间与钨丝灯不同。Kodak 指出各机型的反差滤光值不同，需按机型查表。"
+        },
+        {
+          "kind": "p",
+          "text": "换光源后保持放大倍率与光圈不变。做一次试印条，读出新曝光时间。用新旧时间之比作为光源乘数。"
+        },
+        {
+          "kind": "h2",
+          "text": "有效光圈与曝光"
+        },
+        {
+          "kind": "p",
+          "text": "放大时曝光量同时受有效光圈与影像面积影响。有效光圈公式见 $printing.enlarger-lens 。两个因素的变化量乘在一起，得到总乘数。"
+        },
+        {
+          "kind": "warn",
+          "text": "改变放大高度后必须重新对焦。对焦不准时曝光计算仍然有效，但印相会失焦。"
+        },
+        {
+          "kind": "tip",
+          "text": "在放大机的立柱上贴一张倍率标尺。标尺上同时写上对应的基准曝光时间。换高度时直接查表。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Ilford Photo: Contrast control for Ilford Multigrade (April 2010)",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/03/Contrast-control-for-Ilford-Multigrade.pdf",
+          "kind": "manufacturer",
+          "note": "Aristo 灯头加 W45 与 40Y 的 12×12 曝光系数矩阵。"
+        },
+        {
+          "name": "Manualshelf: Ilford MULTIGRADE IV RC Data Sheet, page 4",
+          "url": "https://www.manualshelf.com/manual/ilford/har1762617/datasheet-english/page-4.html",
+          "kind": "archive",
+          "note": "转载完整曝光系数矩阵与扩散型、聚光型对比原文。"
+        },
+        {
+          "name": "Kodak Publication G-4037: POLYCONTRAST IV RC Paper",
+          "url": "https://125px.com/docs/paper/kodak/g4037.pdf",
+          "kind": "manufacturer",
+          "note": "各机型反差滤光值表，说明换灯头后需重新计算。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "printing.paper-testing",
+          "printing.multigrade"
+        ],
+        "next": [
+          "printing.print-processing"
+        ],
+        "related": [
+          "capture.exposure-metering",
+          "printing.enlarger-lens"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "曝光 10 秒、倍率 4× 的曝光，改到 8× 后应该是多少？",
+          "type": "single",
+          "options": [
+            "5 秒",
+            "10 秒",
+            "20 秒",
+            "40 秒"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "曝光时间与倍率成正比。10 × 8/4 = 20 秒。"
+        },
+        {
+          "q": "基准曝光 20 秒，从滤片 2 改到滤片 3 后约是多少？",
+          "type": "single",
+          "options": [
+            "14.8 秒",
+            "20 秒",
+            "27 秒",
+            "34 秒"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "曝光乘数 0.74。20 × 0.74 = 14.8 秒。"
+        },
+        {
+          "q": "曝光时间与放大倍率的关系是什么？",
+          "type": "single",
+          "options": [
+            "与倍率成反比",
+            "与倍率成正比",
+            "与倍率的平方成正比",
+            "与倍率无关"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "倍率提高一档，影像面积变为四倍。曝光时间按倍率线性增加。"
+        },
+        {
+          "q": "更换放大机光源后应该怎样确定新曝光？",
+          "type": "single",
+          "options": [
+            "用原曝光时间乘以 2",
+            "保持放大倍率与光圈，做一次试印条",
+            "用测光表测相纸",
+            "用安全灯照射时间"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "各光源的光量与光谱不同。用试印条读出新曝光时间，再算光源乘数。"
+        }
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "printing.print-developer",
+      "title": "放大印放用显影液",
+      "title_en": "Print Developers",
+      "aliases": [
+        "MULTIGRADE developer",
+        "Bromophen",
+        "Dektol",
+        "D-72",
+        "Ansco 130",
+        "ID-11",
+        "ID-96",
+        "D-196",
+        "500T Plus",
+        "DD-X",
+        "PQ Universal",
+        "显影液配方"
+      ],
+      "type": "chemical",
+      "level": 4,
+      "era": "1940 至今",
+      "tags": [
+        "显影液",
+        "配方",
+        "印放"
+      ],
+      "summary": "放大印放显影液分对苯二酚型与邻苯二酚型两类。MULTIGRADE、Bromophen、Dektol、D-72 与 D-196 属对苯二酚型。PQ Universal 属邻苯二酚型。稀释比与显影时间共同决定印相反差。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "两类显影剂"
+        },
+        {
+          "kind": "p",
+          "text": "对苯二酚型显影剂用对苯二酚（hydroquinone）作显影主药。邻苯二酚型（parahydroxylamine, PQ）显影剂用 Phenidone 作主药。两类显影剂都可控制印相反差。PQ 型的印相反差潜力更高，污染更低。显影剂类型见 $bw-process.developer-types 。"
+        },
+        {
+          "kind": "h2",
+          "text": "厂商工作液规格"
+        },
+        {
+          "kind": "table",
+          "caption": "印放显影液的厂商规格",
+          "rows": [
+            {
+              "c1": "Ilford MULTIGRADE（液体）",
+              "c2": "对苯二酚型",
+              "c3": "1+9 或 1+14（体积比）",
+              "c4": "20 °C ±0.5 °C",
+              "c5": "RC 纸 1:00；FB 纸 1:30（1+9）。1+14 时 1:30。现配现用。"
+            },
+            {
+              "c1": "Ilford PQ UNIVERSAL",
+              "c2": "邻苯二酚型",
+              "c3": "1+9",
+              "c4": "20 °C（范围 18–22 °C）",
+              "c5": "2:00。可用 2 至 5 分钟。"
+            },
+            {
+              "c1": "Ilford BROMOPHEN（粉末）",
+              "c2": "对苯二酚型",
+              "c3": "1+3",
+              "c4": "20 °C",
+              "c5": "2:00。未开封粉末可无限期保存。"
+            },
+            {
+              "c1": "Ilford ID-11 / D-76 型",
+              "c2": "对苯二酚型（胶片用）",
+              "c3": "1+1",
+              "c4": "20 °C",
+              "c5": "用于胶片。可稀释后印相。原液密闭保存。"
+            },
+            {
+              "c1": "Ilford ILFOTEC DD-X",
+              "c2": "邻苯二酚型（双液）",
+              "c3": "1+4",
+              "c4": "20 °C",
+              "c5": "9 至 13 分钟。用于胶片。"
+            },
+            {
+              "c1": "Kodak DEKTOL（液体）",
+              "c2": "对苯二酚型",
+              "c3": "1+9",
+              "c4": "20 °C",
+              "c5": "1:00，连续搅拌。"
+            },
+            {
+              "c1": "Kodak DEKTOL（粉末）",
+              "c2": "对苯二酚型",
+              "c3": "1+2",
+              "c4": "20 °C",
+              "c5": "1:00。"
+            },
+            {
+              "c1": "Kodak POLYMAX T",
+              "c2": "对苯二酚型",
+              "c3": "1+9",
+              "c4": "20 °C",
+              "c5": "1:00。每加仑可印 120 张 8×10。"
+            },
+            {
+              "c1": "Kodak D-72",
+              "c2": "对苯二酚型",
+              "c3": "1+2（标准），可 1:1 至 1:4",
+              "c4": "20 °C",
+              "c5": "1.5 至 3 分钟。"
+            }
+          ],
+          "text": "印放显影液的厂商规格"
+        },
+        {
+          "kind": "h2",
+          "text": "印放显影液的稀释与反差"
+        },
+        {
+          "kind": "p",
+          "text": "相纸显影液的原液是浓缩液。工作液用体积比稀释。低稀释比（1+1、1+2）给出高反差。高稀释比（1+4、1+9）给出低反差。反差来自显影主药与抑制剂的比例变化。"
+        },
+        {
+          "kind": "p",
+          "text": "以 D-72 为标准工作液（1+2）。稀释到 1+3 或 1+4 并每升加约 8 mL 10% 溴化钾可得到暖色调。稀释到 1+1 并每升加 1 mL 10% 溴化钾可得到高反差。"
+        },
+        {
+          "kind": "p",
+          "text": "以 Ansco 130 为例：原液给高反差，1+1 给常规反差，1+2 给低反差。溴素相纸 2 至 6 分钟，氯溴相纸 1.5 至 3 分钟。"
+        },
+        {
+          "kind": "h2",
+          "text": "Ilford MULTIGRADE 显影液"
+        },
+        {
+          "kind": "formula",
+          "caption": "Ilford MULTIGRADE 显影液的工作条件",
+          "text": "工作液：1+9（体积比，1 份原液 + 9 份水）\n温度：20 °C ±0.5 °C\n显影时间：RC 相纸 1 分 00 秒；FB 相纸 1 分 30 秒\n搅拌：显影全程保持相纸在液中移动\n\n变体 1：稀释 1+14。20 °C 时显影 1 分 30 秒。\n变体 2：配 1 L 工作液可印 100 张 8×10 RC 相纸，或 70 张 FB 相纸。\n变体 3：稀释 1+9 时每升可印 100 张 8×10。\n\n存放：\n- 未开封原液在 5 °C 至 20 °C 阴凉处可存 1 年。\n- 开封原液在 3 个月内用完。\n- 工作液现配现用。密闭瓶中最长存放 24 小时。\n\n来源：Ilford TDS Black and White Paper Developers。数值以厂商说明书为准。"
+        },
+        {
+          "kind": "h2",
+          "text": "Kodak D-72（Dektol）配方"
+        },
+        {
+          "kind": "formula",
+          "caption": "Kodak D-72 原液（1 L）",
+          "text": "配方（Formula #92，1 L）：\n- 水（52 °C）750 mL\n- Metol（对甲氨基酚硫酸盐）3.0 g\n- 无水亚硫酸钠 45 g\n- 氢醌 12 g\n- 一水碳酸钠 80 g\n- 溴化钾 2.0 g\n- 加水至 1000 mL\n\n工作液：稀释 1+2（标准）。可 1:1 至 1:4。\n温度：20 °C。\n时间：1.5 至 3 分钟。\n变体：稀释 1+3 或 1+4 并每升加约 8 mL 10% 溴化钾可得暖色调。\n变体：稀释 1+1 并每升加 1 mL 10% 溴化钾可得高反差。\n\n来源：The Darkroom Cookbook（Anchell & Troop, 2016, ISBN 9781315660615），Formula #92。配方数值为常见变体，以厂商说明书为准。"
+        },
+        {
+          "kind": "h2",
+          "text": "Ansco 130 配方"
+        },
+        {
+          "kind": "formula",
+          "caption": "Ansco 130 原液（1 L）",
+          "text": "配方（Formula #87，1 L）：\n- 水 750 mL\n- Metol（对甲氨基酚硫酸盐）2.2 g\n- 无水亚硫酸钠 50 g\n- 氢醌 11 g\n- 一水碳酸钠 78 g\n- 溴化钾 5.5 g\n- 甘氨酸（glycine）11 g\n- 加水至 1000 mL\n\n5 L 版本：Metol 11 g、无水亚硫酸钠 250 g、氢醌 55 g、一水碳酸钠 390 g、溴化钾 27.5 g、甘氨酸 55 g。先加 3.85 L 水，再加水至 5 L。\n\n工作液：原液给高反差；1+1 给常规；1+2 给低反差。\n温度：20 °C。\n时间：溴素相纸 2 至 6 分钟；氯溴相纸 1.5 至 3 分钟。\n存放：Ansco 130 的存放期比其他相纸显影液长。原液密闭保存。\n\n来源：The Darkroom Cookbook（Anchell & Troop, 2016, ISBN 9781315660615），Formula #87；darkroom-fyi 配方集。配方数值为常见变体，以厂商说明书为准。"
+        },
+        {
+          "kind": "h2",
+          "text": "Ilford PQ Universal 配方"
+        },
+        {
+          "kind": "formula",
+          "caption": "Ilford PQ Universal 原液（1 L）",
+          "text": "原液组成（1 L）：\n- 水 750 mL\n- Phenidone 0.5 g\n- 无水亚硫酸钠 50 g\n- 氢醌 12 g\n- 无水碳酸钠 60 g\n- 溴化钾 2.0 g\n- 1% 苯并三唑（benzotriazole）20 mL\n- 加水至 1000 mL\n\n工作液：稀释 1+3。高反差用 1+1 至 1+2。\n温度：20 °C。\n时间：1.5 至 3 分钟。\n\n来源：darkroom-fyi 配方集（ID-62）。此配方为文献配方，数值与厂商工作液可能有差异。"
+        },
+        {
+          "kind": "h2",
+          "text": "D-196 与 ID-11 用于印相"
+        },
+        {
+          "kind": "p",
+          "text": "Kodak D-196 是高反差（pentachrome）的对苯二酚型显影液。Kodak D-76 与 Ilford ID-11 组成相同，是通用胶片显影液。两者都可稀释后用于相纸。D-76 的配方与组成见 $bw-process.d-76 。Ilford 把 Metol 与亚硫酸钠分装成 A、B 两包。"
+        },
+        {
+          "kind": "note",
+          "text": "本条目未取得 D-196、ID-11 与 Ilford DD-5 的厂商公开配方数值。使用前按厂商说明书核对成分、稀释、温度与时间。"
+        },
+        {
+          "kind": "warn",
+          "text": "D-76 与 ID-11 是胶片显影液。它们会污染相纸药液。同一显影液不混用于胶片与相纸。"
+        },
+        {
+          "kind": "h2",
+          "text": "容量与搅拌"
+        },
+        {
+          "kind": "p",
+          "text": "Ilford MULTIGRADE 1+9 配 1 L 工作液，可印 100 张 8×10 RC 相纸或 70 张 FB 相纸。1+14 配 1 L 可印 70 张 8×10。PQ UNIVERSAL 1+9 配 1 L 可印 70 张。BROMOPHEN 1+3 配 1 L 可印 70 张，处理 Cooltone 时容量约减半。"
+        },
+        {
+          "kind": "p",
+          "text": "Kodak 指出 POLYMAX T 1+9 每加仑显影液印 120 张 8×10，即每升约 32 张。搅拌：20 °C 连续搅拌。相纸乳剂面朝下入液后翻面轻摇。"
+        },
+        {
+          "kind": "table",
+          "caption": "对苯二酚型与邻苯二酚型印放显影液",
+          "rows": [
+            {
+              "c1": "主药",
+              "c2": "对苯二酚 hydroquinone，配 Metol 或 Phenidone。",
+              "c3": "Phenidone 作主药。",
+              "c4": "两类显影剂的反应机理不同。",
+              "c5": "PQ 型与可变反差相纸配合良好。"
+            },
+            {
+              "c1": "反差潜力",
+              "c2": "中。",
+              "c3": "高。可给出很硬的印相反差。",
+              "c4": "PQ 型在高稀释下仍保持反差。",
+              "c5": "硬调印相用 PQ UNIVERSAL。"
+            },
+            {
+              "c1": "污染",
+              "c2": "易污染药液。",
+              "c3": "污染低。",
+              "c4": "对苯二酚氧化产物易染色。",
+              "c5": "PQ 型适合长时间连续印放。"
+            },
+            {
+              "c1": "保存",
+              "c2": "工作液寿命较短。BROMOPHEN 粉末可长期保存。",
+              "c3": "工作液寿命较长。",
+              "c4": "氧化速度不同。",
+              "c5": "见配方块的存放条件。"
+            }
+          ],
+          "text": "对苯二酚型与邻苯二酚型印放显影液"
+        },
+        {
+          "kind": "tip",
+          "text": "显影液温度每升高 1 °C，显影速度上升。Ilford 指出 PQ UNIVERSAL 工作液温度范围为 18 °C 至 22 °C。超出范围时按厂家曲线修正时间。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Ilford Photo: TDS Black and White Paper Developers",
+          "url": "http://ilfordphoto.com.cn/wp-content/uploads/2022/04/Processing-black-and-white-RC-paper.pdf",
+          "kind": "manufacturer",
+          "note": "MULTIGRADE、PQ UNIVERSAL、BROMOPHEN 的稀释、温度、时间与存放条件。"
+        },
+        {
+          "name": "Ilford Photo: MULTIGRADE IV RC Papers Technical Data Sheet (2019-06)",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2021/01/MULTIGRADE-IV-RC-Papers-060619.pdf",
+          "kind": "manufacturer",
+          "note": "MULTIGRADE 1+9 与 1+14 的显影时间、每升可印张数、保存期。"
+        },
+        {
+          "name": "The Darkroom Cookbook, Anchell & Troop, Bloomsbury 2016, ISBN 9781315660615",
+          "url": "https://en.wikipedia.org/wiki/Photographic_developer",
+          "kind": "book",
+          "note": "D-72（#92）与 Ansco 130（#87）的成分与工作条件。本条目数值为该书给出的常见变体。"
+        },
+        {
+          "name": "darkroom-fyi: Dark Room Formulas",
+          "url": "https://darkroom-fyi.com/resources/files/dark-room-formulas",
+          "kind": "article",
+          "note": "D-72、Ansco 130、ID-62、ID-78 的成分表。"
+        },
+        {
+          "name": "Kodak Publication G-4037: POLYCONTRAST IV RC Paper",
+          "url": "https://125px.com/docs/paper/kodak/g4037.pdf",
+          "kind": "manufacturer",
+          "note": "DEKTOL 与 POLYMAX T 的稀释、时间、容量与搅拌条件。"
+        },
+        {
+          "name": "Kodak Publication Z-133: How to Process and Print Black-and-White Film",
+          "url": "https://business.kodakmoments.com/sites/default/files/wysiwyg/pro/chemistry/z133.pdf",
+          "kind": "manufacturer",
+          "note": "显影温度范围 18–24 °C，停显与定影时间。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "bw-process.developer-types"
+        ],
+        "next": [
+          "printing.print-processing"
+        ],
+        "related": [
+          "bw-process.d-76",
+          "bw-process.mixing-temp-control"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "Ilford MULTIGRADE 1+9 在 20 °C 显影 RC 相纸的时间是多少？",
+          "type": "single",
+          "options": [
+            "30 秒",
+            "1 分 00 秒",
+            "1 分 30 秒",
+            "2 分 00 秒"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "Ilford 给出 RC 相纸 1 分 00 秒，FB 相纸 1 分 30 秒。"
+        },
+        {
+          "q": "Kodak D-72 标准工作液的稀释比是多少？",
+          "type": "single",
+          "options": [
+            "1+1",
+            "1+2",
+            "1+9",
+            "原液直接使用"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "D-72 标准稀释为 1+2。可在 1:1 至 1:4 之间调整。"
+        },
+        {
+          "q": "哪种显影剂类型适合需要很硬反差的印相？",
+          "type": "single",
+          "options": [
+            "对苯二酚型，稀释 1+9",
+            "邻苯二酚型 PQ UNIVERSAL",
+            "清水",
+            "停显液"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "PQ 型在高稀释下仍保持反差，反差潜力高于对苯二酚型。"
+        },
+        {
+          "q": "Ilford BROMOPHEN 未开封粉末可以存放多久？",
+          "type": "single",
+          "options": [
+            "3 个月",
+            "1 年",
+            "无限期（阴凉干燥 5–25 °C）",
+            "24 小时"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "未开封粉末在 5 °C 至 25 °C 阴凉干燥处可无限期保存。开封后立即配成原液。"
+        }
+      ],
+      "checklist": [
+        "确认显影液类型与相纸匹配",
+        "按体积比稀释",
+        "把温度调到 20 °C",
+        "确认相纸基面并选显影时间",
+        "显影全程搅拌",
+        "记录显影液配制日期",
+        "工作液现配现用"
+      ],
+      "updated": "2026-01-12",
+      "status": "draft"
+    },
+    {
+      "id": "printing.print-processing",
+      "title": "印相的冲洗流程",
+      "title_en": "Print Processing Sequence",
+      "aliases": [
+        "印放流程",
+        "显影",
+        "停显",
+        "定影",
+        "水洗",
+        "上光",
+        "print processing"
+      ],
+      "type": "process",
+      "level": 2,
+      "era": "1870s 至今",
+      "tags": [
+        "印放",
+        "冲洗",
+        "流程"
+      ],
+      "summary": "印相的冲洗顺序是显影、停显、定影、水洗、干燥。涂塑相纸的水洗只需 2 分钟。纤维基相纸的水洗时间显著更长。Ilford 建议使用无硬化成分的定影液。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "完整流程"
+        },
+        {
+          "kind": "steps",
+          "caption": "印相冲洗的标准顺序",
+          "items": [
+            {
+              "t": "显影 develop",
+              "d": "相纸乳剂面朝下入显影液。随即翻面并轻摇。多张相纸同时处理时交替上下翻转。20 °C 下按相纸基面与显影液类型定时。"
+            },
+            {
+              "t": "停显 stop",
+              "d": "把相纸移入停显液。Ilford ILFOSTOP 1+19 在 20 °C 下停 10 秒。Kodak 的停显时间至少 10 秒。"
+            },
+            {
+              "t": "定影 fix",
+              "d": "把相纸移入定影液。Ilford RAPID FIXER 1+4 或 HYPAM 1+4 在 18–24 °C 下，RC 纸 2 分钟，FB 纸 3 分钟。Ilford ILFOFIX II 原液 RC 纸 1–2 分钟，FB 纸 2 分钟。"
+            },
+            {
+              "t": "检查 fix",
+              "d": "定影结束后在安全光下取出相纸。开室内灯检查。高光透光即表示定影完成。"
+            },
+            {
+              "t": "水洗 wash",
+              "d": "RC 纸在高于 5 °C 的流动水中洗 120 秒。FB 纸在流动水中洗 60 分钟，或用 PQ UNIVERSAL 1+19 洗 20 分钟，再用 ILFORD WASHAID 1+4 洗 10 分钟后流动水 5 分钟。"
+            },
+            {
+              "t": "最后水洗",
+              "d": "最后水洗时加 ILFOTOL 1+200 防斑点。"
+            },
+            {
+              "t": "去水",
+              "d": "RC 纸用去水刮片。FB 纸用吸水纸轻压。"
+            },
+            {
+              "t": "干燥",
+              "d": "RC 纸室温平放干燥，或用热风干燥，最高 85 °C。Kodak 指出热风温度低于 88 °C。"
+            },
+            {
+              "t": "保存",
+              "d": "印相在调色后可长期保存。见 $archive.washing-storage 。"
+            }
+          ],
+          "text": "印相冲洗的标准顺序"
+        },
+        {
+          "kind": "h2",
+          "text": "Ilford 给出的定影与水洗参数"
+        },
+        {
+          "kind": "table",
+          "caption": "Ilford 印放药液的稀释与时间",
+          "rows": [
+            {
+              "c1": "MULTIGRADE 显影液",
+              "c2": "1+9",
+              "c3": "20 °C",
+              "c4": "RC 1:00；FB 1:30",
+              "c5": "100 张 8×10（RC）或 70 张（FB）"
+            },
+            {
+              "c1": "MULTIGRADE 显影液",
+              "c2": "1+14",
+              "c3": "20 °C",
+              "c4": "1:30",
+              "c5": "70 张 8×10"
+            },
+            {
+              "c1": "PQ UNIVERSAL",
+              "c2": "1+9",
+              "c3": "20 °C（18–22 °C）",
+              "c4": "2:00",
+              "c5": "70 张 8×10"
+            },
+            {
+              "c1": "BROMOPHEN",
+              "c2": "1+3",
+              "c3": "20 °C",
+              "c4": "2:00",
+              "c5": "70 张 8×10"
+            },
+            {
+              "c1": "ILFOSTOP 停显液",
+              "c2": "1+19",
+              "c3": "18–24 °C",
+              "c4": "0:10",
+              "c5": "15 张 8×10"
+            },
+            {
+              "c1": "ILFOSTOP PRO",
+              "c2": "1+19",
+              "c3": "18–24 °C",
+              "c4": "0:10",
+              "c5": "22 张 8×10"
+            },
+            {
+              "c1": "ILFORD RAPID FIXER",
+              "c2": "1+4",
+              "c3": "18–24 °C",
+              "c4": "RC 2:00；FB 3:00",
+              "c5": "24 张 8×10"
+            },
+            {
+              "c1": "HYPAM FIXER",
+              "c2": "1+4",
+              "c3": "18–24 °C",
+              "c4": "RC 2:00；FB 3:00",
+              "c5": "24 张 8×10"
+            },
+            {
+              "c1": "ILFOFIX II",
+              "c2": "原液",
+              "c3": "18–24 °C",
+              "c4": "RC 1:00–2:00；FB 2:00",
+              "c5": "24 张 8×10"
+            },
+            {
+              "c1": "ILFORD WASHAID",
+              "c2": "1+4",
+              "c3": "18–24 °C",
+              "c4": "10:00，之后流动水 5:00",
+              "c5": "用于 FB 纸"
+            }
+          ],
+          "text": "Ilford 印放药液的稀释与时间"
+        },
+        {
+          "kind": "h2",
+          "text": "定影液的选择"
+        },
+        {
+          "kind": "p",
+          "text": "Ilford 建议使用无硬化成分的定影液。硬化剂降低水洗效率。含硬化剂的定影液会使残留的络合物滞留在相纸内，影响长期保存。"
+        },
+        {
+          "kind": "note",
+          "text": "Ilford 指出 RC 相纸不能使用压光或上光机。压光会损伤聚乙烯层。"
+        },
+        {
+          "kind": "h2",
+          "text": "Kodak 的冲洗条件"
+        },
+        {
+          "kind": "table",
+          "caption": "Kodak 给出的冲洗参数",
+          "rows": [
+            {
+              "c1": "显影",
+              "c2": "POLYMAX T",
+              "c3": "1:9",
+              "c4": "20 °C",
+              "c5": "1:00，连续搅拌"
+            },
+            {
+              "c1": "显影",
+              "c2": "DEKTOL（粉末）",
+              "c3": "1:2",
+              "c4": "20 °C",
+              "c5": "1:00"
+            },
+            {
+              "c1": "显影",
+              "c2": "DEKTOL（液体）",
+              "c3": "1:9",
+              "c4": "20 °C",
+              "c5": "1:00"
+            },
+            {
+              "c1": "显影",
+              "c2": "D-72",
+              "c3": "1:2",
+              "c4": "20 °C",
+              "c5": "1:00"
+            },
+            {
+              "c1": "停显",
+              "c2": "Indicator",
+              "c3": "1:63",
+              "c4": "20 °C",
+              "c5": "0:10"
+            },
+            {
+              "c1": "停显",
+              "c2": "EKTAFLO",
+              "c3": "1:31",
+              "c4": "20 °C",
+              "c5": "0:10"
+            },
+            {
+              "c1": "定影",
+              "c2": "Rapid Fixer Solution A（非硬膜）",
+              "c3": "1:7",
+              "c4": "20 °C",
+              "c5": "2:00"
+            },
+            {
+              "c1": "水洗",
+              "c2": "流动水",
+              "c3": "—",
+              "c4": "10–30 °C",
+              "c5": "4:00"
+            }
+          ],
+          "text": "Kodak 给出的冲洗参数"
+        },
+        {
+          "kind": "h2",
+          "text": "机器冲洗"
+        },
+        {
+          "kind": "p",
+          "text": "Ilford ILFOLAB 2150RC 使用 2150XL 显影定影药。Ilford 2000RT 稀释 1+4，补充率 150 mL/m² 至 250 mL/m²。处理时间随温度变化。"
+        },
+        {
+          "kind": "table",
+          "caption": "Ilford 2000RT 的处理时间",
+          "rows": [
+            {
+              "c1": "20 °C",
+              "c2": "46 秒",
+              "c3": "标准。",
+              "c4": "",
+              "c5": ""
+            },
+            {
+              "c1": "25 °C",
+              "c2": "32 秒",
+              "c4": "",
+              "c5": ""
+            },
+            {
+              "c1": "30 °C",
+              "c2": "22 秒",
+              "c3": "",
+              "c4": "",
+              "c5": ""
+            },
+            {
+              "c1": "35 °C",
+              "c2": "15 秒",
+              "c4": "",
+              "c5": ""
+            },
+            {
+              "c1": "40 °C",
+              "c2": "12 秒",
+              "c3": "",
+              "c4": "",
+              "c5": ""
+            }
+          ],
+          "text": "Ilford 2000RT 的处理时间"
+        },
+        {
+          "kind": "p",
+          "text": "Ilford 2000RT 的工作液寿命：无补充时 7 天。有补充时 3 个月。热风干燥最高 85 °C。设备配置见 $process-equipment.home-lab 。"
+        },
+        {
+          "kind": "warn",
+          "text": "湿加工时间超过 15 分钟时，相纸边缘开始渗水并卷曲。RC 纸尤其明显。"
+        },
+        {
+          "kind": "note",
+          "text": "水洗温度低于 5 °C 时，水洗效率下降。Ilford 规定水洗水温高于 5 °C。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Ilford Photo: TDS Black and White Paper Developers",
+          "url": "http://ilfordphoto.com.cn/wp-content/uploads/2022/04/Processing-black-and-white-RC-paper.pdf",
+          "kind": "manufacturer",
+          "note": "停显、定影与水洗的稀释、温度、时间与容量。"
+        },
+        {
+          "name": "Ilford Photo: MULTIGRADE IV RC Papers Technical Data Sheet (2019-06)",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2021/01/MULTIGRADE-IV-RC-Papers-060619.pdf",
+          "kind": "manufacturer",
+          "note": "RC 纸水洗 120 秒、Ilfolab 2150RC 与 Ilford 2000RT 的处理时间与补充率。"
+        },
+        {
+          "name": "Kodak Publication G-4037: POLYCONTRAST IV RC Paper",
+          "url": "https://125px.com/docs/paper/kodak/g4037.pdf",
+          "kind": "manufacturer",
+          "note": "20 °C 连续搅拌下的显影、停显与定影参数。"
+        },
+        {
+          "name": "Kodak Publication Z-133: How to Process and Print Black-and-White Film",
+          "url": "https://business.kodakmoments.com/sites/default/files/wysiwyg/pro/chemistry/z133.pdf",
+          "kind": "manufacturer",
+          "note": "显影盘操作、停显与定影时间、水洗与干燥条件。"
+        },
+        {
+          "name": "Ilford Photo: Reducing Wash Water（纤维基相纸的定影—水洗—ILFORD WASHAID 1+4 间断搅动 10 分钟—终洗序列）",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/03/Reducing-Wash-Water.pdf",
+          "kind": "manufacturer",
+          "note": "厂商原文给出 10 分钟，2015 年 4 月版。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "printing.print-developer",
+          "bw-process.stop-bath-fix"
+        ],
+        "next": [
+          "printing.consecutive-prints"
+        ],
+        "related": [
+          "bw-process.mixing-temp-control",
+          "process-equipment.tank",
+          "archive.washing-storage",
+          "printing.toning"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "印相冲洗的正确顺序是什么？",
+          "type": "single",
+          "options": [
+            "显影、定影、停显、水洗",
+            "显影、停显、定影、水洗",
+            "定影、显影、停显、水洗",
+            "停显、显影、水洗、定影"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "显影生成金属银。停显终止显影。定影溶去未曝光的银盐。水洗洗去残留。"
+        },
+        {
+          "q": "Ilford 建议使用哪种定影液？",
+          "type": "single",
+          "options": [
+            "含硬化剂的定影液",
+            "无硬化成分的定影液",
+            "清水",
+            "显影液"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "硬化剂降低水洗效率，使残留络合物滞留在相纸内。"
+        },
+        {
+          "q": "涂塑 RC 相纸在流动水中洗多长时间？",
+          "type": "single",
+          "options": [
+            "30 秒",
+            "2 分钟",
+            "20 分钟",
+            "60 分钟"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "Ilford 规定 RC 纸流动水洗 120 秒，水温高于 5 °C。FB 纸需 60 分钟。"
+        },
+        {
+          "q": "定影结束后怎样判断定影是否完成？",
+          "type": "single",
+          "options": [
+            "在安全光下看相纸是否变白",
+            "开室内灯看高光是否透光",
+            "用放大镜看表面",
+            "称相纸重量"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "开室内灯检查。高光透光表示未曝光的银盐已溶去。"
+        }
+      ],
+      "checklist": [
+        "显影液温度 20 °C",
+        "停显 10 秒",
+        "用无硬化定影液",
+        "RC 纸水洗 2 分钟，FB 纸按厂商要求",
+        "最后水洗加 ILFOTOL",
+        "湿加工不超过 15 分钟",
+        "热风干燥不超过 85 °C"
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "printing.print-workflow",
+      "title": "完整印放流程",
+      "title_en": "Complete Printing Workflow",
+      "aliases": [
+        "印放流程",
+        "工作流程",
+        "从负片到印相",
+        "printing workflow"
+      ],
+      "type": "process",
+      "level": 2,
+      "era": "1870s 至今",
+      "tags": [
+        "印放",
+        "流程",
+        "操作"
+      ],
+      "summary": "完整印放从负片准备开始，到印相干燥为止。流程包含负片清洁、拷贝印样片、放大对焦、试印条、正式印相、冲洗与检查。共 14 步。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "从负片到印相"
+        },
+        {
+          "kind": "steps",
+          "caption": "完整印放流程",
+          "items": [
+            {
+              "t": "准备暗房",
+              "d": "关灯。检查安全灯在工作距离 ≥1.2 m 时对相纸的影响。Ilford 指出安全灯直接照射相纸的时间不超过 4 分钟。"
+            },
+            {
+              "t": "检查负片",
+              "d": "取负片边缘手持。检查是否有指纹、划痕与霉斑。指纹在印相上形成白色轮廓。"
+            },
+            {
+              "t": "清洁负片",
+              "d": "用驼毛刷与除尘液清洁负片两面。底片夹玻璃也要清洁。灰尘在聚光型放大上被放大。"
+            },
+            {
+              "t": "配药",
+              "d": "按体积比配制显影液、停显液与定影液。把温度调到 20 °C。混合与温度控制见 $bw-process.mixing-temp-control 。"
+            },
+            {
+              "t": "拷贝印样片",
+              "d": "印一张拷贝印样片用于选片。见 $printing.contact-printing 。"
+            },
+            {
+              "t": "装底片",
+              "d": "负片乳剂面朝下装入底片夹。合上底片夹。"
+            },
+            {
+              "t": "定尺寸",
+              "d": "开灯，镜头开最大光圈。升降灯头并调整底片台导轨，定影像尺寸与构图。透视不正时倾斜底片台。"
+            },
+            {
+              "t": "对焦",
+              "d": "把影像调到最清晰。对焦完成后把光圈改到 f/8。"
+            },
+            {
+              "t": "选反差",
+              "d": "按负片有效密度范围查表选 MG 滤片编号。查曝光系数。"
+            },
+            {
+              "t": "做试印条",
+              "d": "关灯后在安全光下放入 1 至 2 英寸宽的试印条。做五段曝光。见 $printing.paper-testing 。"
+            },
+            {
+              "t": "判读试印条",
+              "d": "显影试印条。选中最接近正确影调的段。做一条级差更细的试印条确认。"
+            },
+            {
+              "t": "正式曝光",
+              "d": "放入整张相纸。做基础曝光。按需要做加光与遮挡。做均匀曝光。"
+            },
+            {
+              "t": "冲洗",
+              "d": "显影、停显、定影、水洗、干燥。见 $printing.print-processing 。"
+            },
+            {
+              "t": "检查与记录",
+              "d": "在正常光下检查影调与密度。记录滤片编号、曝光时间与显影液批号。多张印相用连印法保持一致，见 $printing.consecutive-prints 。"
+            }
+          ],
+          "text": "完整印放流程"
+        },
+        {
+          "kind": "h2",
+          "text": "安全与检查要点"
+        },
+        {
+          "kind": "ul",
+          "text": "- 安全灯直接照射相纸的时间控制在 4 分钟以内。\n- 安全灯与相纸的距离保持 ≥1.2 m。\n- 每次印相前确认计时器秒数。\n- 每次更换滤片、相纸或光源后重做试印条。\n- 显影液温度每印一批重新测量。温度计插在药液中，不用手指试温。"
+        },
+        {
+          "kind": "note",
+          "text": "Ilford 指出曝光后的潜影稳定。曝光后 24 小时再冲洗，印相品质无明显变化。这一特性使印放可以分批进行。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Kodak Publication Z-133: How to Process and Print Black-and-White Film",
+          "url": "https://business.kodakmoments.com/sites/default/files/wysiwyg/pro/chemistry/z133.pdf",
+          "kind": "manufacturer",
+          "note": "负片清洁、装底片、定尺寸、对焦、试印条的完整操作顺序。"
+        },
+        {
+          "name": "Ilford Photo: MULTIGRADE IV RC Papers Technical Data Sheet (2019-06)",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2021/01/MULTIGRADE-IV-RC-Papers-060619.pdf",
+          "kind": "manufacturer",
+          "note": "安全灯条件与潜影稳定时间。"
+        },
+        {
+          "name": "Wikipedia: Enlarger",
+          "url": "https://en.wikipedia.org/wiki/Enlarger",
+          "kind": "article",
+          "note": "对焦顺序、底片台倾斜校正透视。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "printing.paper-testing",
+          "printing.print-processing"
+        ],
+        "next": [
+          "printing.consecutive-prints"
+        ],
+        "related": [
+          "bw-process.mixing-temp-control",
+          "printing.contact-printing"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "完整印放流程中，先做哪一步？",
+          "type": "single",
+          "options": [
+            "正式放大",
+            "负片准备与清洁",
+            "上光",
+            "装框"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "负片上的灰尘、指纹与划痕在聚光型放大上被放大。清洁在第一步。"
+        },
+        {
+          "q": "定影像尺寸应该在什么时候做？",
+          "type": "single",
+          "options": [
+            "对焦之后",
+            "对焦之前",
+            "显影之后",
+            "定影之后"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "先定尺寸，再对焦。改变尺寸后必须重新对焦。"
+        },
+        {
+          "q": "Ilford 给出的安全灯直接照射相纸的最长时间是多少？",
+          "type": "single",
+          "options": [
+            "4 分钟",
+            "40 分钟",
+            "4 小时",
+            "没有限制"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "Ilford 指出安全灯直接照射不超过 4 分钟，距离 ≥1.2 m。"
+        },
+        {
+          "q": "曝光后多久冲洗会影响印相品质？",
+          "type": "single",
+          "options": [
+            "24 小时内必须冲洗",
+            "24 小时后冲洗品质无明显变化",
+            "必须在一周内冲洗",
+            "只有 RC 相纸受影响"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "Ilford 指出曝光后 24 小时再冲洗，印相品质无明显变化。"
+        }
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "printing.consecutive-prints",
+      "title": "连印法",
+      "title_en": "Consecutive Printing",
+      "aliases": [
+        "consecutive printing",
+        "consecutive print",
+        "连印",
+        "连续印相",
+        "printer point",
+        "打印点"
+      ],
+      "type": "technique",
+      "level": 3,
+      "era": "1870s 至今",
+      "tags": [
+        "连印",
+        "一致性",
+        "印放"
+      ],
+      "summary": "连印法把一组底片在同一台放大机、同一套药液条件下连续印放。连印法保证同组印相的反差与密度一致。商业印相机用打印点（printer point）作为曝光步进单位。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "连印法的定义"
+        },
+        {
+          "kind": "p",
+          "text": "连印法（consecutive printing）指在同一放大机、同一滤片设定、同一批药液下连续处理的一组印相。同组印相共享一个基准曝光时间。这个时间由最平淡的负片的试印条确定。"
+        },
+        {
+          "kind": "p",
+          "text": "连印法的好处是同组印相的影调关系一致。它避免每张单独试印造成的密度漂移。它是画册与展览印相的标准做法。"
+        },
+        {
+          "kind": "h2",
+          "text": "打印点"
+        },
+        {
+          "kind": "p",
+          "text": "打印点（printer point）是商业印相机的曝光步进单位。12 个打印点等于一档曝光。机器印相机的曝光时间以打印点显示。"
+        },
+        {
+          "kind": "formula",
+          "caption": "打印点与曝光量的关系",
+          "text": "曝光量倍数 = 2^(打印点数 / 12)\n\n示例：打印点 12 = 2^(12/12) = 2 倍曝光。打印点 24 = 4 倍。打印点 36 = 8 倍。"
+        },
+        {
+          "kind": "h2",
+          "text": "手工连印的操作"
+        },
+        {
+          "kind": "steps",
+          "caption": "手工连印的步骤",
+          "items": [
+            {
+              "t": "选定组内基准负片",
+              "d": "选组内密度范围最大的负片。它的试印条决定全组的基准曝光。"
+            },
+            {
+              "t": "统一条件",
+              "d": "固定放大倍率、光圈、滤片编号与光源。固定显影液批次与温度。"
+            },
+            {
+              "t": "做基准试印条",
+              "d": "对基准负片做试印条。选出让高光与阴影都不并级的曝光时间。"
+            },
+            {
+              "t": "逐张判定反差",
+              "d": "对每张负片按密度范围选滤片编号。用曝光系数矩阵把基准时间换算成该张的曝光时间。"
+            },
+            {
+              "t": "逐张曝光",
+              "d": "换底片时不改变放大机高度与光圈。按算出的时间曝光。"
+            },
+            {
+              "t": "同批冲洗",
+              "d": "同组印相在同一显影液中冲洗。避免跨越显影液的更换点。"
+            },
+            {
+              "t": "组内对比",
+              "d": "把同组印相并排比较。密度明显不一致时检查是否中途换了药液或温度漂移。"
+            }
+          ],
+          "text": "手工连印的步骤"
+        },
+        {
+          "kind": "table",
+          "caption": "同一组印相的影调一致性的常见干扰因素",
+          "rows": [
+            {
+              "c1": "显影液批次不同",
+              "c2": "反差与最大密度变化。",
+              "c3": "记录每批药的配制日期。",
+              "c4": "同组印相用同一批药。",
+              "c5": "药液氧化程度不同会改变密度。"
+            },
+            {
+              "c1": "显影温度漂移",
+              "c2": "密度随温度上升。",
+              "c3": "每批重新测量温度。",
+              "c4": "把温度调回 20 °C。",
+              "c5": "Ilford 指出 MULTIGRADE 的范围是 20 °C ±0.5 °C。"
+            },
+            {
+              "c1": "显影时间不同",
+              "c2": "密度按时间线性变化。",
+              "c3": "用计时器统一时间。",
+              "c4": "统一显影时间。",
+              "c5": "RC 纸与 FB 纸的时间不同。"
+            },
+            {
+              "c1": "光源光量下降",
+              "c2": "曝光量不足，密度偏低。",
+              "c3": "定期重做试印条。",
+              "c4": "按新时间重算。",
+              "c5": "灯泡老化是主因。"
+            },
+            {
+              "c1": "相纸批次不同",
+              "c2": "反差与色调差异。",
+              "c3": "记录相纸批号。",
+              "c4": "同组用同批相纸。",
+              "c5": "相纸存放时间也影响反差。"
+            },
+            {
+              "c1": "搅拌不一致",
+              "c2": "局部密度不均。",
+              "c3": "用显影盘固定搅拌节奏。",
+              "c4": "统一搅拌动作。",
+              "c5": "Kodak 规定 20 °C 连续搅拌。"
+            }
+          ],
+          "text": "同一组印相的影调一致性的常见干扰因素"
+        },
+        {
+          "kind": "note",
+          "text": "Ilford MULTIGRADE 600 系统为每组印相提供 5 个可编程相纸通道。通道存储滤片编号与曝光时间，使同组印相可重复。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Wikipedia: Enlarger",
+          "url": "https://en.wikipedia.org/wiki/Enlarger",
+          "kind": "article",
+          "note": "printer point 的定义：12 printer point = 一档。"
+        },
+        {
+          "name": "Ilford Photo: Contrast control for Ilford Multigrade (April 2010)",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/03/Contrast-control-for-Ilford-Multigrade.pdf",
+          "kind": "manufacturer",
+          "note": "MULTIGRADE 600 的 5 个可编程相纸通道。"
+        },
+        {
+          "name": "Kodak Publication G-4037: POLYCONTRAST IV RC Paper",
+          "url": "https://125px.com/docs/paper/kodak/g4037.pdf",
+          "kind": "manufacturer",
+          "note": "连续搅拌条件与药液更换对印相的影响。"
+        },
+        {
+          "name": "Ilford Photo: TDS Black and White Paper Developers",
+          "url": "http://ilfordphoto.com.cn/wp-content/uploads/2022/04/Processing-black-and-white-RC-paper.pdf",
+          "kind": "manufacturer",
+          "note": "显影温度范围 20 °C ±0.5 °C。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "printing.print-workflow",
+          "printing.exposure-calculation"
+        ],
+        "next": [
+          "printing.troubleshoot-print"
+        ],
+        "related": [
+          "printing.print-developer",
+          "film-stock.characteristic-curve"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "连印法的基准曝光时间由哪张负片的试印条确定？",
+          "type": "single",
+          "options": [
+            "组内密度最小的一张",
+            "组内密度范围最大的一张",
+            "随机选一张",
+            "最后一张"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "密度范围最大的负片给出最严格的曝光条件。基准时间取自它。"
+        },
+        {
+          "q": "12 个打印点等于多少曝光？",
+          "type": "single",
+          "options": [
+            "半档",
+            "一档（2 倍）",
+            "两档",
+            "三档"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "打印点是曝光的对数步进单位。12 printer point = 一档 = 2 倍。"
+        },
+        {
+          "q": "同组印相的密度漂移最常见的什么原因？",
+          "type": "single",
+          "options": [
+            "相纸尺寸不同",
+            "显影液批次或温度不同",
+            "放大倍率不同",
+            "底片台导轨位置不同"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "显影液批次与温度直接决定密度。同组印相需用同一批药与同一温度。"
+        },
+        {
+          "q": "MULTIGRADE 600 提供几个可编程相纸通道？",
+          "type": "single",
+          "options": [
+            "2 个",
+            "3 个",
+            "5 个",
+            "12 个"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "通道存储滤片与曝光设定，0 至 5 级以 1/10 级步进，共 5 个相纸通道。"
+        }
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "printing.troubleshoot-print",
+      "title": "印放故障排查",
+      "title_en": "Print Troubleshooting",
+      "aliases": [
+        "印放故障",
+        "故障排查",
+        "反差不达标",
+        "白点",
+        "指纹",
+        "起泡",
+        "条纹",
+        "print troubleshooting"
+      ],
+      "type": "pitfall",
+      "level": 3,
+      "era": "1870s 至今",
+      "tags": [
+        "故障排查",
+        "印放",
+        "缺陷"
+      ],
+      "summary": "印放缺陷分为三类：曝光类、反差类与处理类。本文给出 12 种常见缺陷的症状、原因与处理方法。每种缺陷都对应一个可检查的环节。",
+      "blocks": [
+        {
+          "kind": "image",
+          "src": "img/safelight.png",
+          "alt": "暗房安全灯。安全灯漏光或滤色片老化会造成相纸灰雾。",
+          "caption": "暗房安全灯。安全灯漏光或滤色片老化会造成相纸灰雾。",
+          "credit": "Park taeho",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File%3ASafelight_in_a_darkroom.jpg"
+        },
+        {
+          "kind": "h2",
+          "text": "曝光与反差类"
+        },
+        {
+          "kind": "troubleshoot",
+          "caption": "曝光与反差缺陷",
+          "items": [
+            {
+              "t": "反差达不到负片应有的水平",
+              "d": "原因有三类。一，MG 滤片被污痕覆盖，污痕降低反差。二，滤片抽屉有灰尘。三，显影液过度稀释。处理：用软布清洁滤片，清洁抽屉，换新显影液并按标准稀释比配制。Ilford 指出滤片污痕降低印相反差并劣化影像。"
+            },
+            {
+              "t": "反差过高",
+              "d": "原因有三种。一，滤片编号过高。二，显影液稀释不足。三，用聚光型放大机印可变反差纸。处理：换低编号滤片，按标准稀释比配药，或加装扩散板。"
+            },
+            {
+              "t": "反差不足",
+              "d": "原因有四种。一，滤片编号过低。二，显影液过度稀释。三，负片本身密度范围窄。四，用扩散型放大机印相。处理：换高编号滤片，改用标准稀释比，检查负片的密度范围。"
+            },
+            {
+              "t": "整体偏浅",
+              "d": "原因有三类。一，曝光时间偏短。二，灯泡老化使光量下降。三，显影液失效。处理：重做试印条，更换灯泡，换新显影液。"
+            },
+            {
+              "t": "整体偏深",
+              "d": "原因有两类。一，曝光时间偏长。二，显影时间过长。处理：缩短曝光时间，按厂商规定显影。"
+            },
+            {
+              "t": "白点与黑点",
+              "d": "白点来自底片上的灰尘、划痕或相纸上的灰。黑点来自底片气泡或相纸气泡。用放大镜检查底片两面。白点集中在同一区域时查底片夹玻璃。黑点随机分布时查相纸表面。"
+            }
+          ],
+          "text": "曝光与反差缺陷"
+        },
+        {
+          "kind": "h2",
+          "text": "分布类缺陷"
+        },
+        {
+          "kind": "troubleshoot",
+          "caption": "分布不均类缺陷",
+          "items": [
+            {
+              "t": "印相四边比中心暗",
+              "d": "原因有二。一，灯箱中心亮度高于边缘。二，未做均匀曝光。处理：做均匀曝光，或把放大机灯头旋转到四角亮度一致的位置。"
+            },
+            {
+              "t": "一角明显偏暗",
+              "d": "原因有三类。一，扩散板老化发黄不均。二，灯箱某侧灯泡老化。三，镜头板滤片偏移。处理：清洁或更换扩散板，检查灯泡，检查滤片位置。"
+            },
+            {
+              "t": "局部灰雾",
+              "d": "原因有四类。一，遮挡时遮挡棒静止。二，加光的孔边缘太硬。三，安全灯照射过久。四，均匀曝光时间过长。处理：工具持续移动，孔边做渐变，控制安全灯时间，缩短均匀曝光。"
+            },
+            {
+              "t": "平行条纹或条带",
+              "d": "原因有四类。一，相纸在药液中互相粘连。二，显影盘内相纸排列不平。三，相纸在曝光期间移动。四，显影液搅拌不均。处理：单张冲洗，排列相纸使其不相触，曝光期间固定相纸，统一搅拌动作。"
+            },
+            {
+              "t": "显影后出现橙褐色斑",
+              "d": "原因有三类。一，显影液氧化过度。二，停显不足，残留显影液继续作用。三，显影盘上有金属屑。处理：换新显影液，延长停显时间，用塑料或搪瓷显影盘。"
+            },
+            {
+              "t": "水洗后仍有药液痕迹",
+              "d": "原因有四类。一，水洗时间不足。二，水温低于 5 °C。三，纤维基相纸未充分水洗。四，使用了含硬化剂的定影液。处理：延长水洗时间，提高水温，FB 纸按 60 分钟或用 WASHAID，换无硬化定影液。"
+            }
+          ],
+          "text": "分布不均类缺陷"
+        },
+        {
+          "kind": "h2",
+          "text": "装框与干燥类缺陷"
+        },
+        {
+          "kind": "troubleshoot",
+          "caption": "干燥与装框类缺陷",
+          "items": [
+            {
+              "t": "指纹",
+              "d": "原因有三类。一，装底片时触摸了负片乳剂面。二，取相纸时触摸了相纸表面。三，滤片上的指纹。处理：用驼毛刷与除尘液清洁负片，只捏边缘拿滤片，取相纸时捏边角。"
+            },
+            {
+              "t": "相纸起泡或脱乳",
+              "d": "原因有四类。一，显影盘内显影液不足，相纸部分露在液面。二，药液被污染。三，相纸在药液中受压。四，水洗时水流过猛。处理：保证显影盘内液量足够，更换药液，相纸平放而非竖放，降低水流速度。"
+            },
+            {
+              "t": "相纸卷曲",
+              "d": "原因有三类。一，湿加工时间超过 15 分钟。二，RC 纸在显影盘内长时间浸泡。三，去水不彻底。处理：缩短湿加工时间，快速去水，用去水刮片或吸水纸。"
+            },
+            {
+              "t": "边缘渗水",
+              "d": "原因是湿加工时间超过 15 分钟。相纸边缘先干，内部仍湿，边缘卷曲上翘。处理：控制在 15 分钟以内，用热风均匀干燥。"
+            },
+            {
+              "t": "定影后出现乳白色雾",
+              "d": "原因是定影不足。残留银盐在保存过程中继续显影。处理：延长定影时间，检查定影液是否疲劳。"
+            },
+            {
+              "t": "印相日后变黄或发脆",
+              "d": "原因有四类。一，RC 纸未做调色。二，展示照度过高。三，相对湿度波动。四，用了亚克力装框材料。处理：做硫化物调色或硒调色，控制展示照度，稳定湿度，换用玻璃或无酸材料装框。见 $printing.fiber-paper-vs-rc 。"
+            }
+          ],
+          "text": "干燥与装框类缺陷"
+        },
+        {
+          "kind": "note",
+          "text": "排查顺序：先确认曝光时间是否正确，再确认反差是否正确，最后检查处理环节。Ilford 指出在 MULTIGRADE 1+9 下，正确曝光的印相约 6 至 15 秒出现影像。影像出现时间可作为显影液状态的快速判据。"
+        },
+        {
+          "kind": "tip",
+          "text": "保存一张洗好的试印条。每次换药液或换光源时与新试印条并排比较。差异即可定位。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Ilford Photo: Contrast control for Ilford Multigrade (April 2010)",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/03/Contrast-control-for-Ilford-Multigrade.pdf",
+          "kind": "manufacturer",
+          "note": "滤片污痕对反差的影响、扩散板老化与反差范围。"
+        },
+        {
+          "name": "Ilford Photo: Multigrade Filters Instructions (2024)",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2024/09/1762628-Multigrade-Filters-QR-code-PDF-i24.pdf",
+          "kind": "manufacturer",
+          "note": "滤片清洁方法与污痕后果。"
+        },
+        {
+          "name": "Kodak Publication Z-133: How to Process and Print Black-and-White Film",
+          "url": "https://business.kodakmoments.com/sites/default/files/wysiwyg/pro/chemistry/z133.pdf",
+          "kind": "manufacturer",
+          "note": "试印条判读与印相缺陷的判断依据。"
+        },
+        {
+          "name": "Ilford Photo: TDS Black and White Paper Developers",
+          "url": "http://ilfordphoto.com.cn/wp-content/uploads/2022/04/Processing-black-and-white-RC-paper.pdf",
+          "kind": "manufacturer",
+          "note": "水洗条件、定影时间与湿加工时长的限制。"
+        },
+        {
+          "name": "G. Michael Wilhelm, The Permanence and Care of Color Photographs, Chapter 17",
+          "url": "http://wilhelm-research.com/pdf/HW_Book_17_of_20_HiRes_v1c.pdf",
+          "kind": "book",
+          "note": "RC 印相的黄化、银镜变色与装框微气候。"
+        },
+        {
+          "name": "Kodak Publication G-4037: POLYCONTRAST IV RC Paper",
+          "url": "https://125px.com/docs/paper/kodak/g4037.pdf",
+          "kind": "manufacturer",
+          "note": "混色腔老化发黄导致反差永久变软。"
+        },
+        {
+          "name": "Ilford Photo: Reducing Wash Water（纤维基相纸的定影—水洗—ILFORD WASHAID 1+4 间断搅动 10 分钟—终洗序列）",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/03/Reducing-Wash-Water.pdf",
+          "kind": "manufacturer",
+          "note": "厂商原文给出 10 分钟，2015 年 4 月版。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "printing.print-processing"
+        ],
+        "next": [
+          "printing.enlarger-history"
+        ],
+        "related": [
+          "printing.paper-testing",
+          "printing.fiber-paper-vs-rc",
+          "archive.washing-storage",
+          "printing.toning"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "印相反差达不到负片应有的水平，最先检查什么？",
+          "type": "single",
+          "options": [
+            "更换底片",
+            "清洁滤片与滤光抽屉",
+            "更换放大机",
+            "加大安全灯功率"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "Ilford 指出滤片上的灰尘与指纹会降低印相反差并劣化影像。"
+        },
+        {
+          "q": "印相上出现大量随机分布的黑点，来源最可能是？",
+          "type": "single",
+          "options": [
+            "底片夹玻璃上的灰尘",
+            "底片气泡或相纸表面气泡",
+            "显影液温度过高",
+            "灯泡老化"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "白点来自灰尘与划痕。黑点来自气泡。黑点随机分布说明是气泡。"
+        },
+        {
+          "q": "相纸边缘先干、内部仍湿导致卷曲的原因是？",
+          "type": "single",
+          "options": [
+            "曝光时间过长",
+            "湿加工时间超过 15 分钟",
+            "定影液硬化",
+            "相纸基重过大"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "Ilford 指出湿加工超过 15 分钟会使边缘渗水并卷曲。"
+        },
+        {
+          "q": "Ilford 指出哪种调色对 RC 印相的保存最有利？",
+          "type": "single",
+          "options": [
+            "金调色",
+            "硫化物调色（多硫化物）",
+            "漂白",
+            "不调色"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "Image Permanence Institute 测试显示硫化物调色比金调色与硒调色更有效。"
+        }
+      ],
+      "checklist": [
+        "确认曝光时间",
+        "确认反差与滤片编号",
+        "检查滤片与抽屉清洁度",
+        "检查底片夹玻璃",
+        "检查显影液温度与新鲜度",
+        "检查水洗时间与水温",
+        "检查装框材料与保存环境"
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "printing.enlarger-history",
+      "title": "印放工艺的时间线",
+      "title_en": "History of Photographic Printing",
+      "aliases": [
+        "印放史",
+        "盐印法",
+        "明胶银",
+        "timeline",
+        "可变反差史",
+        "涂塑相纸史"
+      ],
+      "type": "timeline",
+      "level": 5,
+      "era": "1850s 至今",
+      "tags": [
+        "时间线",
+        "历史",
+        "工艺"
+      ],
+      "summary": "印放工艺经历了盐印法、明胶银印相、可变反差相纸与涂塑相纸四个阶段。1850 年代是盐印法。1870 年代后明胶银成为主流。1940 年出现可变反差相纸。1968 年后涂塑相纸进入消费市场。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "印放工艺沿革"
+        },
+        {
+          "kind": "timeline",
+          "caption": "印放工艺与相纸技术的时间线",
+          "rows": [
+            {
+              "c1": "1850s",
+              "c2": "盐印法（salt print）用于印相。",
+              "c3": "最早的银盐印相工艺。用氯化银在纸纤维上直接成像。"
+            },
+            {
+              "c1": "1871",
+              "c2": "明胶银（gelatin silver）工艺开始取代盐印法。",
+              "c3": "乳剂中含明胶。显影时明胶膨胀使银粒定位。相纸的颗粒与层次由此奠定。"
+            },
+            {
+              "c1": "1900s",
+              "c2": "聚光型放大机成为暗房标准设备。",
+              "c3": "印相反差成为设备参数。Callier 效应被确立。"
+            },
+            {
+              "c1": "1920s",
+              "c2": "多层（multilayer）相纸出现。相纸改为固定级数分级。",
+              "c3": "每一级反差是独立的一层相纸。Ilford 在 1967 年推出 Ilfobrom 等间距分级纤维基相纸。"
+            },
+            {
+              "c1": "1935",
+              "c2": "Agfacolor 彩色相纸进入市场。",
+              "c3": "印放从银盐黑白扩展到三层彩色。"
+            },
+            {
+              "c1": "1940",
+              "c2": "Ilford 推出首款 Multigrade 相纸，配 3 枚滤片。",
+              "c3": "可变反差相纸首次商业化。一张相纸配合滤片即可给出多级反差。"
+            },
+            {
+              "c1": "1954",
+              "c2": "Ilford 推出下一代 Multigrade，配 5 枚滤片。",
+              "c3": "滤片级数增加，反差范围变宽。"
+            },
+            {
+              "c1": "1957",
+              "c2": "Ilford 的 Ilfoprint 稳定型相纸投产。",
+              "c3": "相纸的稳定性开始被系统改善。"
+            },
+            {
+              "c1": "1968-09",
+              "c2": "Kodak Ektacolor 20 RC 进入消费市场。",
+              "c3": "首个快速涂塑相纸。同时引入二氧化钛聚乙烯层的光致开裂问题。"
+            },
+            {
+              "c1": "1970s",
+              "c2": "Kodak Polycontrast Rapid RC、Kodabrome II RC 等黑白 RC 纸出现严重开裂与氧化变色。",
+              "c3": "1970 年代的一批 RC 黑白相纸出现早期劣变。"
+            },
+            {
+              "c1": "约 1977",
+              "c2": "Kodak 在 RC 纸芯中加入聚乙烯稳定剂。",
+              "c3": "稳定剂扩散进相邻聚乙烯层。抗脆裂能力显著提高。"
+            },
+            {
+              "c1": "1978",
+              "c2": "Ilford 推出大改进版 Multigrade，配 11 枚滤片。",
+              "c3": "滤片级数接近现代的 12 枚。"
+            },
+            {
+              "c1": "1980 年前",
+              "c2": "Kodak 的通用彩色与黑白 RC 纸完成芯层稳定化改造。",
+              "c3": "RC 纸的物理稳定性在制造端得到控制。"
+            },
+            {
+              "c1": "1986",
+              "c2": "Ilford 推出纤维基版本的 Multigrade。",
+              "c3": "可变反差与纤维基相结合，兼顾反差控制与长期保存。"
+            },
+            {
+              "c1": "1990s",
+              "c2": "涂塑相纸成为黑白相纸的主流。Ilford 于 1994 年推出改进的 Multigrade IV RC。",
+              "c3": "水洗 2 分钟即可完成。相纸适合机器冲洗与自动化印放。"
+            },
+            {
+              "c1": "1997",
+              "c2": "Ilford 推出 Multigrade IV RC Portfolio 与 Multigrade Warmtone FB。",
+              "c3": "相纸的色调选择与基面选择分开。"
+            },
+            {
+              "c1": "1999",
+              "c2": "Ilford 推出 Multigrade Cooltone RC。",
+              "c3": "冷色调可变反差相纸进入市场。"
+            },
+            {
+              "c1": "2005",
+              "c2": "Kodak 因数码化停产全部黑白相纸。POLYCONTRAST IV RC 停产后无后续型号。",
+              "c3": "定反差相纸与可变反差相纸的供应集中到少数厂商。"
+            },
+            {
+              "c1": "2010s",
+              "c2": "LED 改装灯头进入暗房市场。",
+              "c3": "曝光时间缩短。低发热减少负片卷曲。"
+            },
+            {
+              "c1": "2020s",
+              "c2": "LED 灯头成为新机默认配置。滤光组转向全滤片式可变反差。Ilford 于 2011 年推出 MULTIGRADE Art 300。",
+              "c3": "反差范围取决于 LED 光源与滤片组的匹配。多数型号需实测确认。"
+            }
+          ],
+          "text": "印放工艺与相纸技术的时间线"
+        },
+        {
+          "kind": "h2",
+          "text": "各阶段的关键变化"
+        },
+        {
+          "kind": "table",
+          "caption": "印放工艺四个阶段的对比",
+          "rows": [
+            {
+              "c1": "盐印法",
+              "c2": "氯化银在纸纤维上成像。",
+              "c3": "换相纸。",
+              "c4": "影像附着力弱。需上光定影。",
+              "c5": "1850s–1870s"
+            },
+            {
+              "c1": "明胶银",
+              "c2": "明胶乳剂中的卤化银。",
+              "c3": "换分级相纸。",
+              "c4": "正确处理并调色后极稳定。",
+              "c5": "1870s–1940s"
+            },
+            {
+              "c1": "可变反差纤维基",
+              "c2": "多层不同感光特性的乳剂。",
+              "c3": "换滤片。",
+              "c4": "水洗时间长。适合长期保存。",
+              "c5": "1940–1990s"
+            },
+            {
+              "c1": "可变反差涂塑",
+              "c2": "多层乳剂 + 聚乙烯涂层。",
+              "c3": "换滤片。",
+              "c4": "水洗 2 分钟。存在光致开裂与变色风险。",
+              "c5": "1968 至今"
+            }
+          ],
+          "text": "印放工艺四个阶段的对比"
+        },
+        {
+          "kind": "note",
+          "text": "Ilford 的官方历史把 Multigrade 首发记为 1940 年，配 3 枚滤片。多数二手资料把可变反差的普及记在 1960 年代。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Ilford Photo: History",
+          "url": "https://www.ilfordphoto.com/about-us/history/",
+          "kind": "manufacturer",
+          "note": "1940 年首款 Multigrade、1954 年 5 枚滤片、1978 年 11 枚滤片、1986 年纤维基版本、1994 年 Multigrade IV RC。"
+        },
+        {
+          "name": "G. Michael Wilhelm, The Permanence and Care of Color Photographs, 全书",
+          "url": "http://wilhelm-research.com/pdf/HW_Book_761_Pages_HiRes_v1c.pdf",
+          "kind": "book",
+          "note": "1968 年 Ektacolor 20 RC、1977 年聚乙烯稳定剂、RC 纸劣变史与 ANSI 标准状态。"
+        },
+        {
+          "name": "Kodak Publication G-4037: POLYCONTRAST IV RC Paper",
+          "url": "https://125px.com/docs/paper/kodak/g4037.pdf",
+          "kind": "manufacturer",
+          "note": "2005 年起因数码化停产全部黑白相纸。"
+        },
+        {
+          "name": "Wikipedia: Albumen print",
+          "url": "https://en.wikipedia.org/wiki/Albumen_print",
+          "kind": "archive",
+          "note": "蛋白印相与盐印法的工艺沿革。"
+        },
+        {
+          "name": "Wikipedia: Gelatin silver process",
+          "url": "https://en.wikipedia.org/wiki/Gelatin_silver_process",
+          "kind": "archive",
+          "note": "明胶银工艺的原理与沿革。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "printing.troubleshoot-print"
+        ],
+        "next": [
+          "archive.washing-storage"
+        ],
+        "related": [
+          "printing.contact-printing",
+          "printing.fiber-paper-vs-rc",
+          "printing.multigrade"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "Ilford 官方历史把首款 Multigrade 相纸记在哪一年？",
+          "type": "single",
+          "options": [
+            "1850s",
+            "1940",
+            "1960s",
+            "1978"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "Ilford 官方历史记为 1940 年，配 3 枚滤片。二手资料常把普及记在 1960 年代。"
+        },
+        {
+          "q": "哪个 RC 相纸的化学问题最早进入消费市场？",
+          "type": "single",
+          "options": [
+            "Kodak Ektacolor 20 RC（1968 年 9 月）",
+            "Kodabrome II RC（1970 年代）",
+            "Ilford Multigrade IV RC（1994）",
+            "Ilford MG Portfolio（1997）"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "Ektacolor 20 RC 是首个快速 RC 彩色相纸，同时引入二氧化钛聚乙烯层的光致开裂。"
+        },
+        {
+          "q": "Kodak 在 RC 纸芯中加入聚乙烯稳定剂大约在哪一年？",
+          "type": "single",
+          "options": [
+            "约 1968",
+            "约 1977",
+            "约 1986",
+            "约 1994"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "Kodak 约在 1977 年开始在 RC 纸芯中加稳定剂。1980 年前完成通用 RC 纸的改造。"
+        },
+        {
+          "q": "Kodak 在哪一年因数码化停产全部黑白相纸？",
+          "type": "single",
+          "options": [
+            "1999",
+            "2005",
+            "2011",
+            "2015"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "Kodak 于 2005 年起因数码化停产全部黑白相纸。POLYCONTRAST IV RC 无后续型号。"
+        }
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    }
+  ]
+}

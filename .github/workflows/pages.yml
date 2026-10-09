@@ -1,0 +1,64 @@
+name: 校验并部署到 GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'shards/**'
+      - 'tools/**'
+      - 'web/**'
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同时只允许一个部署；排队中的旧任务直接取消，但不打断正在发布的那个
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # 1. 校验数据源：结构、必填字段、id 唯一性、跨片引用、STE100 违禁表达。
+      #    这一步失败就直接终止，不部署坏数据。
+      - name: 校验数据源
+        run: node tools/validate.mjs
+
+      # 2. 从 shards/ 重新生成 web/data/*。构建是幂等的：
+      #    如果与仓库中已提交的生成物不一致，说明作者忘了跑 build，这里予以纠正。
+      - name: 重新生成数据包
+        run: node tools/build.mjs
+
+      - name: 确认生成物无漂移
+        run: |
+          if ! git diff --quiet -- web/data; then
+            echo "::warning::web/data 与 shards/ 不同步，已按 shards/ 为准部署。请在本地重跑 node tools/build.mjs 并提交。"
+            git --no-pager diff --stat -- web/data
+          fi
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

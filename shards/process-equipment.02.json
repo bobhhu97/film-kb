@@ -1,0 +1,2818 @@
+{
+  "module": "process-equipment",
+  "shard": "process-equipment.02",
+  "shard_zh": "冲洗设备与工艺沿革 · 第二分片：喷淋式、混合式与家用实验室设备",
+  "note": "本分片收录喷淋式冲洗机、单浴与一步工艺、家用实验室与 minilab，以及冲洗环节的温控、水源与安全条目。涉及具体机型时，只写已核实的数据；未取得厂商一手资料的机型一律标 status: draft 并在 note 中写明缺口。 本次合并追加：辊轴式机型与废液数据（roller-processor、roller-process）、Ilford Sprint 与 Rotomatic 考证缺口（sprint-process）、混合式冲洗（hybrid-process）、机器维护与温度校准（machine-maintenance）、设备故障排查（troubleshoot-equipment）、微缩胶片（microfilm-process）、设备世代线（equipment-history）。数值来源为 ILFORD 设备手册存档页、ILFOLAB 2150RC 操作与废液资料、JOBO Analog 2020 目录。",
+  "entries": [
+    {
+      "id": "process-equipment.home-lab",
+      "title": "家用实验室冲印系统",
+      "title_en": "Home Lab One-Step Film and Print Processing System",
+      "aliases": [
+        "home lab",
+        "家用实验室",
+        "一站式冲印",
+        "家用冲印机",
+        "2000RT",
+        "Ilford 2000RT"
+      ],
+      "type": "equipment",
+      "level": 3,
+      "era": "1990 年代至今",
+      "tags": [
+        "设备",
+        "家用",
+        "C-41",
+        "RA-4",
+        "药液供应"
+      ],
+      "summary": "家用实验室是在自家房间内完成胶片冲洗与相纸冲印的一站式设备系统。机器把 C-41 胶片工艺与 RA-4 相纸工艺整合到一个带定时器与温控的机身内。操作者装卷、装纸、按键，机器完成显影、漂洗、定影、水洗与干燥。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "定义与形态"
+        },
+        {
+          "kind": "p",
+          "text": "家用实验室（home lab）指不依赖中央实验室、由个人在住宅内完成胶片冲洗与相纸冲印的成套设备。系统把冲洗、冲印、定影、水洗和干燥整合在一个机身上。"
+        },
+        {
+          "kind": "p",
+          "text": "机身一般为桌面尺寸的塑料外壳。内部包含药液槽、加热器、循环泵、定时控制板和干燥风道。片材路径为卷片盘或片盒形式，相纸从纸盒进入并在显影、漂定、水洗后由热风干燥。"
+        },
+        {
+          "kind": "table",
+          "caption": "机身上可由用户控制的环节",
+          "rows": [
+            {
+              "c1": "装片与装纸",
+              "c2": "用户手动",
+              "c3": "需在全暗或暗袋中完成",
+              "c4": "装错方向会卡片",
+              "c5": "错误后果最大的一步"
+            },
+            {
+              "c1": "温度",
+              "c2": "机身温控或用户设定",
+              "c3": "C-41 与 RA-4 的目标温度相同",
+              "c4": "误差直接影响密度",
+              "c5": "见 $process-equipment.temperature-control"
+            },
+            {
+              "c1": "时间",
+              "c2": "预设程序",
+              "c3": "不同工艺对应不同程序",
+              "c4": "机型不同程序名不同",
+              "c5": "以说明书为准"
+            },
+            {
+              "c1": "药液浓度",
+              "c2": "由药液盒决定",
+              "c3": "用户不自行配药",
+              "c4": "补充液按固定比例稀释",
+              "c5": "换批号需重新评估"
+            },
+            {
+              "c1": "水洗与干燥",
+              "c2": "机器自动",
+              "c3": "干燥温度受机型限制",
+              "c4": "过热会使相纸卷曲",
+              "c5": "以说明书限值为准"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "耗材与药液供应"
+        },
+        {
+          "kind": "p",
+          "text": "药液以补充液（part-replenisher）形式供应。用户把药液盒倒入机器的储液槽，机器按厂商配方自动混配成工作液。补充液浓度按原液计算，不按工作液计算。"
+        },
+        {
+          "kind": "p",
+          "text": "工作液的更换周期由药液厂商和机型共同决定。Ilford 2000RT 的说明书给出两个数值：不加补充液时工作液寿命为 7 天，加补充液时为 3 个月；热风干燥的最高温度为 85 °C。这三个数值出自 2000RT 说明书，引用时以说明书原文为准。"
+        },
+        {
+          "kind": "tip",
+          "text": "记录药液批号与配药日期。色彩异常时，批号是第一个可查的变量。"
+        },
+        {
+          "kind": "h2",
+          "text": "色彩还原与银盐成本"
+        },
+        {
+          "kind": "p",
+          "text": "家用实验室没有放大机和控制条系统。机器使用厂商固定工艺配方，操作者不能改变显影反差，也不能指定色罩。相纸的批号差异由厂商在出厂时校正。"
+        },
+        {
+          "kind": "p",
+          "text": "相纸的银盐成本随尺寸上升。5×7 in 相纸的单位面积银量高于 4×6 in 相纸。相纸的显影时间由机器固定，用户无法用缩短冲洗时间来降低银耗。"
+        },
+        {
+          "kind": "warn",
+          "text": "药液与废定影液含银化合物与硫代硫酸盐络离子。把废液倒入下水道前按当地规定处理。参见 $process-equipment.safety。"
+        },
+        {
+          "kind": "h2",
+          "text": "与 minilab 的差别"
+        },
+        {
+          "kind": "ul",
+          "text": "- 处理量：家用实验室每批处理 1 卷胶片与数张相纸。minilab 处理整盘胶片与数十至数百张相纸。\n- 药液经济性：家用实验室的机器储液量小，丢弃的工作液比例高。minilab 用补充液维持浴槽，耗材效率高。\n- 色彩控制：家用实验室没有分析设备，只能依赖厂商配方。minilab 用预先曝光的控制条（control strip）判定药液活性。\n- 安装条件：家用实验室要求台面、水源和电源。minilab 要求专用房间、给排水和废液回收设施。"
+        },
+        {
+          "kind": "note",
+          "text": "缺口：Ilford 2000RT 的推出年代、处理容量、温控方式与精度未取得厂商一手资料；Ilford 当前在售设备清单中没有 2000RT，其设备手册页也未列出该机型。Ilford 的 FP40 胶片处理机手册可下载，但该文件前 3 页无文本层，需人工核对。用到具体年份与容量数值时须以厂商说明书或二手器材目录核对。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "ILFORD FP40 Full Operation Manual",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/06/FP40-Full-Operation-Manual-Eng_SML.pdf",
+          "kind": "manual",
+          "note": "Ilford 胶片处理机操作手册，用于核对家用级处理机的药液路径与温控要求。"
+        },
+        {
+          "name": "ILFORD：冲洗您的第一卷胶片（简体中文版）",
+          "url": "https://ilfordphoto.com.cn/processing-your-first-film/",
+          "kind": "manufacturer",
+          "note": "厂商列出冲洗第一卷所需器材：显影罐、量杯、温度计、定时器与防护用具。"
+        },
+        {
+          "name": "Wikipedia: Minilab",
+          "url": "https://en.wikipedia.org/wiki/Minilab",
+          "kind": "article",
+          "note": "说明 minilab 的药液以补充盒到货、机器自动混配的机制。"
+        },
+        {
+          "name": "Wikipedia: RA-4 process",
+          "url": "https://en.wikipedia.org/wiki/RA-4_process",
+          "kind": "article"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "color-process.c41",
+          "color-process.ra4",
+          "process-equipment.temperature-control"
+        ],
+        "next": [
+          "process-equipment.safety"
+        ],
+        "related": [
+          "process-equipment.minilab",
+          "process-equipment.spray-processor",
+          "color-process.ra4-home-lab",
+          "color-process.ra120-home-lab"
+        ],
+        "contrast": [
+          "process-equipment.tank",
+          "process-equipment.roller-processor"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "家用实验室机器上，片材的显影反差由谁决定？",
+          "type": "single",
+          "options": [
+            "操作者手动设定",
+            "厂商固定工艺配方",
+            "相纸批号自动匹配",
+            "水温"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "家用实验室没有控制条和放大机，反差锁定在厂商预设程序内。"
+        },
+        {
+          "q": "Ilford 2000RT 说明书给出的两种工作液寿命分别是多少？",
+          "type": "single",
+          "options": [
+            "1 天与 1 个月",
+            "7 天与 3 个月",
+            "30 天与 6 个月",
+            "14 天与 2 个月"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "不加补充液为 7 天，加补充液为 3 个月。"
+        },
+        {
+          "q": "家用实验室的废定影液可以按什么方式处理？",
+          "type": "single",
+          "options": [
+            "直接倒入下水道",
+            "倒入阳台花盆",
+            "按当地规定回收或处理",
+            "用吸水纸吸干后丢弃"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "废定影液含银的硫代硫酸盐络离子，排放受管制。"
+        }
+      ],
+      "updated": "2026-02-16",
+      "status": "draft"
+    },
+    {
+      "id": "process-equipment.minilab",
+      "title": "minilab 快速冲印连锁系统",
+      "title_en": "Minilab Quick Service System",
+      "aliases": [
+        "minilab",
+        "QSS",
+        "Quick Service System",
+        "数码 minilab",
+        "干式 minilab",
+        "Frontier",
+        "QSS-1"
+      ],
+      "type": "equipment",
+      "level": 3,
+      "era": "1951 至今（QSS 系统 1976 至今）",
+      "tags": [
+        "设备",
+        "商业冲印",
+        "沿革",
+        "C-41",
+        "RA-4"
+      ],
+      "summary": "快速冲印系统（minilab）是安装在照相店与冲印门店里的小型胶片冲洗与相纸冲印系统。它用滚轴输送式处理机处理 C-41 胶片，用 RA-4 工艺冲印相纸，把中央实验室的一周周转压缩到一小时以内。1976 年 Noritsu 推出第一台 QSS-1，1996 年 Fujifilm 推出第一台数码 minilab。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "系统组成"
+        },
+        {
+          "kind": "p",
+          "text": "一台 minilab 至少包含两台设备：一台胶片处理机和一台相纸冲印机。两台机器可以分体安装。数码 minilab 另配订单终端（kiosk），供顾客输入取件号码和相纸尺寸。"
+        },
+        {
+          "kind": "p",
+          "text": "胶片处理机是滚轴输送式（roller transport）。胶片沿蛇形路径绕过多个滚轴，在每个带补充液的化学槽中停留一段时间。处理时间等于走片速度与浸没路径长度之积。药液需搅拌、过滤并加热到 38 °C。"
+        },
+        {
+          "kind": "p",
+          "text": "数码激光银盐（laser silver-halide）相纸从纸盒送出，经激光或光阀曝光后依次通过显影槽、漂定槽、水洗槽和调理液槽，最后由热风烘干。药液从药液盒自动混配，废液集中到单一容器。"
+        },
+        {
+          "kind": "h2",
+          "text": "年代沿革"
+        },
+        {
+          "kind": "timeline",
+          "caption": "minilab 关键节点",
+          "rows": [
+            {
+              "c1": "1951",
+              "c2": "西本兼一在和歌山用水轮原理试制相纸水洗机",
+              "c3": "公司技术起点"
+            },
+            {
+              "c1": "1956",
+              "c2": "Noritsu Optical Instrument Factory 成立",
+              "c3": "设备供应照相店"
+            },
+            {
+              "c1": "1961",
+              "c2": "推出 RF-20E 黑白胶片处理机，Noritsu 首次实现黑白冲洗自动化",
+              "c3": "同年在东京证券交易所第一部上市前的扩张期"
+            },
+            {
+              "c1": "1976",
+              "c2": "推出 QSS-1，把胶片冲洗与相纸冲印合为一个系统",
+              "c3": "第一代 minilab，冲印时间从一周缩到约一小时"
+            },
+            {
+              "c1": "1979",
+              "c2": "QSS-2 把冲洗到彩色冲印缩到 45 分钟",
+              "c3": "门店内即时取件成为常态"
+            },
+            {
+              "c1": "1996",
+              "c2": "Fujifilm 推出 Frontier，全球第一台数码 minilab",
+              "c3": "从底片放大转为数码激光成像"
+            },
+            {
+              "c1": "1998",
+              "c2": "Konica 推出 QD-21，第一台支持存储卡的数码 minilab",
+              "c3": "顾客直接送入数字文件"
+            },
+            {
+              "c1": "2002",
+              "c2": "Noritsu 与 Seiko Epson 开发干式 minilab，用喷墨成像，免去显影药液",
+              "c3": "开启第三条技术路线"
+            },
+            {
+              "c1": "2005",
+              "c2": "Agfa 破产退出，联合开发方 Copal 随之退出",
+              "c3": "行业第一次大规模收缩"
+            },
+            {
+              "c1": "2006",
+              "c2": "Konica Minolta 把 minilab 业务转让给 Noritsu；同年 Noritsu 与 Fujifilm 结成同盟",
+              "c3": "厂商数量收缩到两家"
+            },
+            {
+              "c1": "2010",
+              "c2": "法国 KIS 退出 minilab 业务",
+              "c3": "门店设备保有量下降"
+            },
+            {
+              "c1": "2012",
+              "c2": "Kodak 破产",
+              "c3": "失去主要 OEM 伙伴"
+            },
+            {
+              "c1": "2013",
+              "c2": "干式 minilab 的运行成本低于湿式方案",
+              "c3": "无药液成为成本优势"
+            },
+            {
+              "c1": "2016",
+              "c2": "Noritsu 出售摄影相关业务，改名 Noritsu Precision",
+              "c3": "湿式胶片设备业务延续"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "药液与耗材"
+        },
+        {
+          "kind": "p",
+          "text": "药液以补充盒（replenishment cartridge）形式到货。每盒分开封装漂白、显影、定影等成分，机器按配方自动混配。相纸以纸盒形式到货，机器按订单取纸。"
+        },
+        {
+          "kind": "p",
+          "text": "药液在低使用量下会失稳。门店需要用预先曝光的控制条判定活性，活性下降时整体更换浴液或加补充液。药液被氧化后不可回收。"
+        },
+        {
+          "kind": "warn",
+          "text": "显影液必须持续搅拌。搅拌不足会产生显影不均的条痕。"
+        },
+        {
+          "kind": "h2",
+          "text": "维护与故障"
+        },
+        {
+          "kind": "troubleshoot",
+          "caption": "常见问题",
+          "items": [
+            {
+              "t": "相纸出现条纹或局部密度不均",
+              "d": "激光调制组件（AOM）驱动异常。检查 AOM 供电与驱动信号。定期校准可预防。"
+            },
+            {
+              "t": "色彩还原偏离控制条",
+              "d": "药液活性下降或药液批次混用。用控制条重判。检查补充液加注记录。"
+            },
+            {
+              "t": "药液提前失效",
+              "d": "门店冲洗量不足。浴液在低用量下不稳定。补足冲洗量或缩短浴液更换周期。"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "沿革数据来自 Wikipedia 的 Noritsu 与 Minilab 词条，条目本身标注缺少参考文献。年份用于说明技术路线顺序，若要引用到印刷级资料，须以厂商年表或行业年鉴核对。数码 minilab 的整机售价可达 25 万美元量级，该数字同样来自 Wikipedia，需另行核实。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Wikipedia: Minilab",
+          "url": "https://en.wikipedia.org/wiki/Minilab",
+          "kind": "article",
+          "note": "minilab 系统组成、补充盒药液机制与 QSS-1、Frontier、干式 minilab 的推出年份。"
+        },
+        {
+          "name": "Wikipedia: Noritsu",
+          "url": "https://en.wikipedia.org/wiki/Noritsu",
+          "kind": "article",
+          "note": "1951 年创立、1961 年 RF-20E、1976 年 QSS-1、2002 年与 Epson 开发干式、2016 年出售摄影业务。"
+        },
+        {
+          "name": "Wikipedia: Konica Minolta",
+          "url": "https://en.wikipedia.org/wiki/Konica_Minolta",
+          "kind": "article",
+          "note": "1998 年 QD-21 与 2006 年 minilab 业务转让。"
+        },
+        {
+          "name": "Wikipedia: Agfa",
+          "url": "https://en.wikipedia.org/wiki/Agfa",
+          "kind": "article",
+          "note": "2005 年退出影像业务。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "color-process.c41",
+          "color-process.ra4"
+        ],
+        "next": [
+          "process-equipment.home-lab"
+        ],
+        "related": [
+          "process-equipment.roller-processor",
+          "process-equipment.temperature-control",
+          "process-equipment.safety",
+          "color-process.c41-control-strips",
+          "process-equipment.hybrid-process"
+        ],
+        "contrast": [
+          "process-equipment.home-lab",
+          "process-equipment.tank"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "第一台 minilab QSS-1 由哪家厂商推出？",
+          "type": "single",
+          "options": [
+            "Fujifilm",
+            "Noritsu",
+            "Kodak",
+            "Agfa"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "Noritsu 于 1976 年推出 QSS-1。"
+        },
+        {
+          "q": "全球第一台数码 minilab Frontier 由哪家厂商推出，年份是哪一年？",
+          "type": "single",
+          "options": [
+            "1992 年 Fujifilm",
+            "1996 年 Fujifilm",
+            "1998 年 Konica",
+            "2002 年 Noritsu"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "Fujifilm 1996 年推出 Frontier；1998 年 Konica 的 QD-21 是第一台支持存储卡的机型。"
+        },
+        {
+          "q": "minilab 用什么方法判断药液活性？",
+          "type": "single",
+          "options": [
+            "测量显影液 pH 值",
+            "用预先曝光的控制条显影",
+            "称量药液重量",
+            "目视检查药液颜色"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "控制条给出与药液活性对应的参考密度。"
+        },
+        {
+          "q": "干式 minilab 与湿式 minilab 的主要差别是什么？",
+          "type": "single",
+          "options": [
+            "干式不处理胶片",
+            "干式免去相纸显影药液，用喷墨成像",
+            "干式只能输出黑白",
+            "干式必须用胶片"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "干式路线用喷墨直接成像，相纸不经过显影药液，2013 年起运行成本低于湿式。"
+        }
+      ],
+      "updated": "2026-02-16",
+      "status": "reviewed"
+    },
+    {
+      "id": "process-equipment.mixed-chemistry",
+      "title": "单浴与一步工艺",
+      "title_en": "Single-Bath and One-Step Combined Processes",
+      "aliases": [
+        "单浴",
+        "一步工艺",
+        "显影定影合一",
+        "developer-fix",
+        "combined process",
+        "single-step process",
+        "BwXX",
+        "Df96"
+      ],
+      "type": "process",
+      "level": 3,
+      "era": "19 世纪末至今",
+      "tags": [
+        "工艺",
+        "单浴",
+        "黑白",
+        "反差",
+        "保存性"
+      ],
+      "summary": "单浴工艺把显影与定影合并到一个浴槽，胶片在同一槽内完成成像与定影。工艺省水、省时间，也省掉停显与水洗步骤。代价是反差低、灰雾高、影像保存性差，因此彩色工艺与精密黑白放大不用它。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "原理"
+        },
+        {
+          "kind": "p",
+          "text": "单浴工艺（single-bath process, single-step process）把两个以上化学步骤合并到一个浴槽。显影与定影合一时，配方同时含显影剂和硫代硫酸钠（hypo）。"
+        },
+        {
+          "kind": "p",
+          "text": "显影剂把曝光处的卤化银转成金属银。硫代硫酸钠同时溶去未显影的卤化银，也溶掉一部分刚生成的金属银。显影与定影在同一浴槽内竞争，反应比例随时间改变。"
+        },
+        {
+          "kind": "p",
+          "text": "结果是有效显影时间缩短，黑位下降。定影剂生成的银硫代硫酸盐络合物残留于乳剂内，使影像的保存性下降。参见 $archive.storage-environment。"
+        },
+        {
+          "kind": "h2",
+          "text": "历史与适用片材"
+        },
+        {
+          "kind": "p",
+          "text": "早期的一次成像（one-shot）相机与早期干板时代已用单浴。19 世纪末的一次成像相机只需一个不透光容器，操作者在室外装片后当场冲洗。这些早期机型的厂商、型号与年份未取得一手资料，本文不给出具体年份。"
+        },
+        {
+          "kind": "p",
+          "text": "现代单浴工艺主要服务两个场景：现场快速出片，以及低反差连续影调的长调影像。常见形式是浓缩双组分的显影定影合一液，例如 BwXX 一类与 Df96 一类。"
+        },
+        {
+          "kind": "table",
+          "caption": "单浴工艺与分步工艺的差别",
+          "rows": [
+            {
+              "c1": "浴槽数量",
+              "c2": "单浴：1 个主浴",
+              "c3": "分步：显影、停显、定影、水洗共 4 个以上",
+              "c4": "单浴省水",
+              "c5": "分步可控性高"
+            },
+            {
+              "c1": "反差",
+              "c2": "单浴：低",
+              "c3": "分步：由显影配方与时间决定",
+              "c4": "单浴黑位不足",
+              "c5": "分步可做高反差放大"
+            },
+            {
+              "c1": "灰雾",
+              "c2": "单浴：较高",
+              "c3": "分步：可控",
+              "c4": "单浴需靠预曝或追加冲洗压灰雾",
+              "c5": "分步可用停显控制"
+            },
+            {
+              "c1": "保存性",
+              "c2": "单浴：较差",
+              "c3": "分步：二次定影与海波清除可改善",
+              "c4": "单浴残留络合物",
+              "c5": "参见 $archive.vinegar-syndrome"
+            },
+            {
+              "c1": "药液管理",
+              "c2": "单浴：一次性使用",
+              "c3": "分步：可用补充液延寿",
+              "c4": "单浴不需补充",
+              "c5": "分步需记录补充量"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "为何彩色工艺不用单浴"
+        },
+        {
+          "kind": "p",
+          "text": "彩色成色剂（colour coupler）必须与显影剂的氧化态偶合，才能生成染料。显影剂一旦被消耗，彩色影像便无法继续形成。定影剂会溶去未显影的卤化银，等于在彩色层显影完成前就取走了反应物。"
+        },
+        {
+          "kind": "p",
+          "text": "彩色负片的染料层对残余药液极其敏感。硫代硫酸盐与显影副产物会改变三层染料的平衡，使色彩偏移。C-41 与 RA-4 因此都保留独立的漂白与定影步骤。"
+        },
+        {
+          "kind": "h2",
+          "text": "正当的合并工艺"
+        },
+        {
+          "kind": "p",
+          "text": "把步骤合并并非一律不可行。RA-4 提供可选的漂定合一（bleach-fix）浴，把两步缩成一步，步骤更少。E-6 的三浴家用版本同样把首洗与反转步骤的辅助浴合并，以减少浴槽数量。"
+        },
+        {
+          "kind": "p",
+          "text": "这两种合并都由工艺厂商定义并给出完整配方，色彩与保存性有保障。合并的可行性取决于分步工艺中相邻两步的化学是否互相破坏。"
+        },
+        {
+          "kind": "compare",
+          "caption": "单浴工艺与分步工艺",
+          "rows": [
+            {
+              "c1": "单浴工艺",
+              "c2": "显影与定影在同一浴槽完成",
+              "c3": "省水省时",
+              "c4": "反差低、灰雾高、保存性差",
+              "c5": "适合黑白快速出片"
+            },
+            {
+              "c1": "分步工艺",
+              "c2": "每一步用独立药液与独立温度",
+              "c3": "步骤多、用液量大",
+              "c4": "反差与密度可精确控制",
+              "c5": "适合彩色与精密黑白放大"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "易混概念：一次性显影（one-shot development）指每卷胶片用新鲜配好的工作液，配方仍是分步工艺的显影液。它与单浴工艺的差别在于浴槽数量，不在于配方。参见 $bw-process.developer-types。"
+        },
+        {
+          "kind": "warn",
+          "text": "显影定影合一的药液不可回收银。废液中的络合物与银总量须按当地规定处理。参见 $process-equipment.safety。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Wikipedia: Photographic processing",
+          "url": "https://en.wikipedia.org/wiki/Photographic_processing",
+          "kind": "article",
+          "note": "黑白分步工艺的浴序、停显与定影定义，以及商业连续处理与控制条。"
+        },
+        {
+          "name": "Wikipedia: List of photographic processes",
+          "url": "https://en.wikipedia.org/wiki/List_of_photographic_processes",
+          "kind": "article",
+          "note": "单浴与一步工艺在工艺谱系中的位置。"
+        },
+        {
+          "name": "Wikipedia: RA-4 process",
+          "url": "https://en.wikipedia.org/wiki/RA-4_process",
+          "kind": "article",
+          "note": "RA-4 提供可选的漂定合一浴，属厂商定义的正当合并工艺。"
+        },
+        {
+          "name": "Wikipedia: E-6 process",
+          "url": "https://en.wikipedia.org/wiki/E-6_process",
+          "kind": "article",
+          "note": "三浴家用版本通过减少浴槽数量简化流程，附各浴时间与温度。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "bw-process.developer-types",
+          "bw-process.stop-bath-fix"
+        ],
+        "next": [
+          "color-process.c41"
+        ],
+        "related": [
+          "bw-process.stop-bath-fix",
+          "process-equipment.tank",
+          "process-equipment.home-lab",
+          "archive.storage-environment"
+        ],
+        "contrast": [
+          "color-process.c41",
+          "color-process.e6",
+          "color-process.ra4"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "单浴工艺中，硫代硫酸钠同时起哪两个作用？",
+          "type": "multi",
+          "options": [
+            "溶去未显影的卤化银",
+            "溶掉一部分已生成的金属银",
+            "把显影剂氧化成染料",
+            "提高乳剂渗透速度"
+          ],
+          "answer": [
+            0,
+            1
+          ],
+          "why": "定影在单浴中与显影同时进行，金属银也会被络合，因此黑位下降。"
+        },
+        {
+          "q": "单浴工艺的影像保存性较差，主要原因是什么？",
+          "type": "single",
+          "options": [
+            "乳剂层太厚",
+            "残留银的硫代硫酸盐络合物",
+            "片基含铁",
+            "显影温度过高"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "络合物残留在乳剂内，在储存条件下继续变化。"
+        },
+        {
+          "q": "哪一种合并由工艺厂商正式提供配方？",
+          "type": "single",
+          "options": [
+            "显影与定影合一的单浴",
+            "RA-4 的漂定合一",
+            "黑白显影与漂白合一",
+            "定影与水洗合一"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "RA-4 的漂定合一是厂商定义的工艺选项，E-6 三浴版本也属同类。"
+        },
+        {
+          "q": "一次性显影（one-shot）指的是什么？",
+          "type": "single",
+          "options": [
+            "每卷胶片用新鲜配好的工作液，配方不变",
+            "把显影与定影放在同一浴槽",
+            "只冲洗一张相纸",
+            "不用水洗"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "one-shot 描述的是药液用量方式，不是浴槽数量，与单浴工艺不同。"
+        }
+      ],
+      "updated": "2026-02-16",
+      "status": "draft"
+    },
+    {
+      "id": "process-equipment.safety",
+      "title": "冲洗间的通风、废液与个人防护",
+      "title_en": "Darkroom Ventilation, Waste Handling and Personal Protection",
+      "aliases": [
+        "安全",
+        "通风",
+        "废定影液",
+        "银回收",
+        "个人防护",
+        "MSDS",
+        "SDS"
+      ],
+      "type": "setting",
+      "level": 2,
+      "era": "至今",
+      "tags": [
+        "安全",
+        "通风",
+        "废液",
+        "银回收"
+      ],
+      "summary": "冲洗间的化学风险集中在显影剂、定影剂和硬化剂。定影剂分解后放出二氧化硫，硬化剂放出甲醛。废定影液含银络合物，排放受管制。通风、下水改道和手套护目是三项基本措施。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "主要化学风险"
+        },
+        {
+          "kind": "p",
+          "text": "显影剂（developer）的还原胺被氧化后产生气体。通风不良时室内二氧化硫与胺类浓度上升，出现眼与呼吸道刺激。"
+        },
+        {
+          "kind": "image",
+          "src": "img/safelight.png",
+          "alt": "暗房安全灯。安全灯同时承担照明与人身安全提示的作用。",
+          "caption": "暗房安全灯。安全灯同时承担照明与人身安全提示的作用。",
+          "credit": "Park taeho",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File%3ASafelight_in_a_darkroom.jpg"
+        },
+        {
+          "kind": "p",
+          "text": "定影剂（fixer）的硫代硫酸钠在酸性条件下分解，放出二氧化硫。酸化定影液的刺激性更强。"
+        },
+        {
+          "kind": "p",
+          "text": "硬化剂（hardener）中的甲醛与戊二醛是呼吸道致敏物与致癌物。甲醛硬化浴在老工艺中使用，现代片基已不再需要。"
+        },
+        {
+          "kind": "table",
+          "caption": "常见药液的健康影响与处置",
+          "rows": [
+            {
+              "c1": "显影液",
+              "c2": "还原胺、氢醌",
+              "c3": "皮肤致敏、刺激眼与呼吸道",
+              "c4": "手套加通风",
+              "c5": "废液按当地规定处理"
+            },
+            {
+              "c1": "停显液",
+              "c2": "醋酸、柠檬酸",
+              "c3": "低浓度时刺激有限",
+              "c4": "常规通风",
+              "c5": "可与显影废液分开收集"
+            },
+            {
+              "c1": "定影液",
+              "c2": "硫代硫酸钠、酸",
+              "c3": "酸雾、二氧化硫、皮肤刺激",
+              "c4": "通风加手套",
+              "c5": "废液必须回收银后排放"
+            },
+            {
+              "c1": "漂白液",
+              "c2": "铁氰化物或 EDTA 类络合剂",
+              "c3": "严禁入口，避免与酸混合",
+              "c4": "专用容器",
+              "c5": "不得倒入普通下水"
+            },
+            {
+              "c1": "水洗助剂",
+              "c2": "海波清除剂、表面活性剂",
+              "c3": "低毒",
+              "c4": "常规通风",
+              "c5": "减少非必要用量"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "通风"
+        },
+        {
+          "kind": "p",
+          "text": "冲洗间需要机械通风。通风口设在操作者呼吸区之外，风量足以把二氧化硫排出室外。排风口不设在门口，避免污染其他房间。"
+        },
+        {
+          "kind": "p",
+          "text": "定影与显影槽上方各设排气罩时，排气罩不遮挡安全灯的滤光效果。安全灯的通风罩使用与安全灯匹配的材料。"
+        },
+        {
+          "kind": "h2",
+          "text": "废液与银"
+        },
+        {
+          "kind": "p",
+          "text": "废定影液含银的硫代硫酸盐络离子。排放的银浓度受法规管制。大型处理厂收集废定影液，用硫代硫酸钠析出或电解法回收银。"
+        },
+        {
+          "kind": "p",
+          "text": "药液配方里的 EDTA、DTPA 等络合剂难以生物降解。少量多次排放比一次大量排放更不利。集中收集后交给有资质的处理单位。"
+        },
+        {
+          "kind": "steps",
+          "caption": "废液处理流程",
+          "items": [
+            {
+              "t": "分开收集",
+              "d": "显影废液与定影废液分开装桶。两者混合会产生不溶性沉淀并改变银的络合状态。"
+            },
+            {
+              "t": "不倒入水槽",
+              "d": "家用下水没有银回收设施。小量冲洗的废液收集后交给冲印店或回收点。"
+            },
+            {
+              "t": "记录",
+              "d": "记录废液来源、药液品牌与累积量，交接时一并提供。"
+            },
+            {
+              "t": "容器标识",
+              "d": "容器贴标签写明药液名称与日期。过期药液单独存放。"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "个人防护"
+        },
+        {
+          "kind": "ul",
+          "text": "- 戴丁腈手套接触药液。乳胶手套对显影剂的防护不足。\n- 护目镜在配药与倒药时佩戴。\n- 通风良好时配药。\n- 显影罐排液时手保持在上方，避免接触槽内药液。\n- 冲洗后在水中洗手，再接触食物或餐具。\n- 婴儿与宠物不进冲洗间。"
+        },
+        {
+          "kind": "note",
+          "text": "药液厂商提供化学品安全技术说明书（SDS）。配药前阅读 SDS 中的第一急救与泄漏处置章节。Ilford 的化学 SDS 下载页在其官网的 Health & Safety 栏目。"
+        },
+        {
+          "kind": "warn",
+          "text": "漂白液不可与酸性定影液混合。混合会释放氰化物相关气体并生成不溶性沉淀。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Wikipedia: Photographic processing",
+          "url": "https://en.wikipedia.org/wiki/Photographic_processing",
+          "kind": "article",
+          "note": "废定影液的银络离子与排放管制、硬化浴与甲醛、药液中的 EDTA 与 DTPA。"
+        },
+        {
+          "name": "Wikipedia: Darkroom",
+          "url": "https://en.wikipedia.org/wiki/Darkroom",
+          "kind": "article",
+          "note": "冲洗间通风与安全灯的基本要求。"
+        },
+        {
+          "name": "ILFORD：健康与安全（简体中文版）",
+          "url": "https://ilfordphoto.com.cn/health-safety/",
+          "kind": "manufacturer",
+          "note": "厂商化学品安全技术说明书下载入口。"
+        },
+        {
+          "name": "ILFORD：减少洗涤用水",
+          "url": "https://ilfordphoto.com.cn/wp-content/uploads/2022/01/Reducing-Wash-Water.pdf",
+          "kind": "manufacturer",
+          "note": "厂商给出的减少洗片用水方法，含水洗流量与海波清除方案。"
+        }
+      ],
+      "links": {
+        "prereq": [],
+        "next": [],
+        "related": [
+          "process-equipment.home-lab",
+          "process-equipment.minilab",
+          "process-equipment.water-supply",
+          "archive.storage-environment"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "废定影液中需要回收的是什么金属？",
+          "type": "single",
+          "options": [
+            "铜",
+            "银",
+            "锌",
+            "铅"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "定影液溶解卤化银，废液中含银的硫代硫酸盐络合物。"
+        },
+        {
+          "q": "老工艺中的甲醛硬化浴属于哪类健康风险？",
+          "type": "single",
+          "options": [
+            "仅刺激皮肤",
+            "呼吸道致敏与致癌",
+            "只影响味觉",
+            "无风险"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "甲醛是呼吸道致敏物与致癌物，现代片基已不需要硬化浴。"
+        },
+        {
+          "q": "为什么要把显影废液与定影废液分开收集？",
+          "type": "single",
+          "options": [
+            "混合后颜色变深",
+            "混合产生沉淀并改变银的络合状态",
+            "混合会爆炸",
+            "混合后气味更好"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "分开收集保证银的回收效率与废液性质稳定。"
+        },
+        {
+          "q": "冲洗间机械通风的排风口应设在哪里？",
+          "type": "single",
+          "options": [
+            "操作者呼吸区正上方",
+            "门口",
+            "排到室外，避免污染其他房间",
+            "天花板中央向上排"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "二氧化硫必须排到室外，且不能回流到工作区或其他房间。"
+        }
+      ],
+      "updated": "2026-02-16",
+      "status": "reviewed"
+    },
+    {
+      "id": "process-equipment.spray-processor",
+      "title": "喷淋式冲洗机",
+      "title_en": "Spray Film Processor",
+      "aliases": [
+        "喷淋式",
+        "spray processor",
+        "spray processor",
+        "Ilford Sprite",
+        "Sprite",
+        "喷淋冲洗",
+        "射流冲洗"
+      ],
+      "type": "equipment",
+      "level": 3,
+      "era": "1970 年代至今",
+      "tags": [
+        "设备",
+        "喷淋",
+        "E-6",
+        "C-41",
+        "故障"
+      ],
+      "summary": "喷淋式冲洗机用高压泵把药液从喷嘴射向乳剂面，靠液膜而不是靠浸没来传递药液。药液量少、处理快、机身紧凑，适合 E-6 反转片与 C-41 家用机型。喷嘴堵塞、药液回流和交叉污染是三类主要故障。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "原理"
+        },
+        {
+          "kind": "p",
+          "text": "喷淋式冲洗机（spray processor）不把胶片浸在药液里。机器用泵把工作液加压，从排列成排的喷嘴射到胶片表面。液膜在乳剂上停留的时间由泵压与走片速度决定。"
+        },
+        {
+          "kind": "p",
+          "text": "传质靠液膜冲击与强制对流完成。显影与漂洗这类需要均匀接触的步骤，液膜的均匀性比浴槽浸泡更关键。反转工艺的灰化步骤需要定量的光量，机内的时间与药液条件必须稳定。"
+        },
+        {
+          "kind": "h2",
+          "text": "与旋转式和罐式的差别"
+        },
+        {
+          "kind": "compare",
+          "caption": "喷淋式与旋转式的差别",
+          "rows": [
+            {
+              "c1": "喷淋式",
+              "c2": "药液由喷嘴射到乳剂面，液膜传质",
+              "c3": "药液用量小，机身可做小",
+              "c4": "喷嘴与泵是主要故障点",
+              "c5": "适合 E-6 与 C-41 家用机型"
+            },
+            {
+              "c1": "旋转式",
+              "c2": "胶片绕轴在药液中翻转，靠搅动传质",
+              "c3": "药液在槽内循环，用量中等",
+              "c4": "轴端密封与转速是主要故障点",
+              "c5": "适合黑白罐式与旋转筒式处理"
+            }
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "罐式（tank）与旋转式的共同点是药液保持在槽内。喷淋式的药液只在管路与液膜中存在，因此不占用大量槽体空间。参见 $process-equipment.tank 与 $process-equipment.rotator。"
+        },
+        {
+          "kind": "h2",
+          "text": "适用的工艺"
+        },
+        {
+          "kind": "p",
+          "text": "喷淋式处理机用于 E-6 反转片。E-6 的首显与彩显对温度极为敏感，Kodak Z-119 规定首显与首洗的水浴为 37.8 °C，偏差范围小。喷淋式的液膜薄、蓄热小，升温与降温比旋转筒快。参见 $color-process.e6。"
+        },
+        {
+          "kind": "p",
+          "text": "部分机型也用于 C-41 负片。C-41 的显影、漂白、定影、稳定四步顺序固定，机内路径按此顺序排布。参见 $color-process.c41 与 $color-process.c41-home-kits。"
+        },
+        {
+          "kind": "h2",
+          "text": "药液流动与喷嘴"
+        },
+        {
+          "kind": "p",
+          "text": "药液从储液槽经泵、阀、喷嘴管路到达喷嘴。喷嘴排成一行或多行，覆盖片宽。喷嘴孔径通常小于 1 mm。药液射到片面后沿片面流下，回到回液槽。"
+        },
+        {
+          "kind": "note",
+          "text": "喷孔尺寸、喷嘴排布、泵流量与走片速度的具体数值属厂商规格。Ilford 当前设备手册中未列出喷淋机型，因此这些数值在本文不给，需要以厂商说明书核对。"
+        },
+        {
+          "kind": "h2",
+          "text": "常见故障"
+        },
+        {
+          "kind": "troubleshoot",
+          "caption": "喷淋机三类典型故障",
+          "items": [
+            {
+              "t": "药液回流或串浴",
+              "d": "回液管路倒坡、管接头松动或止回阀失效。高低压药液串到同一回路。处理：检查管路坡度与接头，紧固后重做空载试压。"
+            },
+            {
+              "t": "喷嘴堵塞",
+              "d": "药液中的银沉淀、硬化剂析出或水垢堵住喷孔。表现是片面上出现未显影的条带。处理：拆下喷嘴用温水与专用清洗剂清理，滤芯同时更换。"
+            },
+            {
+              "t": "交叉污染",
+              "d": "片基破损的胶片在前一道药液中溶出卤化银，污染后续药液。表现是一条胶片污染后同批次后续胶片异常。处理：加装片基预检，发现破片立即取出并更换受影响药液。"
+            },
+            {
+              "t": "浓度不均",
+              "d": "液膜分布不均或药液被前一工序带入。表现是同卷内密度呈横向条带。处理：检查喷嘴是否全部通畅，校准泵压。"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "交叉污染的隔离"
+        },
+        {
+          "kind": "ul",
+          "text": "- 每道工序用独立的药液回路。\n- 在换卷点加片基完整性检查，破片立即取出。\n- 显影废液与定影废液分开收集。\n- 药液槽加盖，减少氧化与灰尘落入。\n- 定期清洗喷嘴与滤芯，间隔以说明书为准。"
+        },
+        {
+          "kind": "compare",
+          "caption": "防止交叉污染的两种隔离方案",
+          "rows": [
+            {
+              "c1": "机械隔离",
+              "c2": "各工序药液回路物理分开",
+              "c3": "成本高，占空间",
+              "c4": "彩色片与黑白片不能共机",
+              "c5": "适合固定的家用机型"
+            },
+            {
+              "c1": "流程隔离",
+              "c2": "同一药液槽在换卷间彻底清洗并换液",
+              "c3": "成本低，费药液",
+              "c4": "换卷时间延长",
+              "c5": "适合低冲洗量的情形"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "缺口：Ilford Sprite 等家用喷淋机型的推出年代、处理容量、喷嘴规格、温控精度与是否仍在生产，均未取得厂商一手资料。Ilford 当前的设备手册清单只列 FP40 胶片处理机、RC 干燥机、RC 相纸处理机、MULTIGRADE 曝光设备、DT600 定时器与 EM10 曝光监视器，不含喷淋机型。Ilford 的化学技术文档中也没有喷淋机的专页。相关年代与规格须以厂商说明书或二手器材目录核对后再写入。本条目 status 为 draft。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "JOBO / Tetenal E-6 Process Manual（Kodak Z-119 体系）",
+          "url": "https://www.mr-alvandi.com/downloads/film-and-processing/e6-process-manual.pdf",
+          "kind": "manual",
+          "note": "E-6 各浴时间与温度、bath error 诊断表；全文检索无 spray 机型内容，仅用于工艺控制依据。"
+        },
+        {
+          "name": "Wikipedia: E-6 process",
+          "url": "https://en.wikipedia.org/wiki/E-6_process",
+          "kind": "article",
+          "note": "首显与首洗的温度要求 37.8 °C，三浴家用版本的浴序与时间。"
+        },
+        {
+          "name": "Wikipedia: C-41 process",
+          "url": "https://en.wikipedia.org/wiki/C-41_process",
+          "kind": "article",
+          "note": "C-41 的显影、再卤化漂白、定影、稳定浴序。"
+        },
+        {
+          "name": "ILFORD 技术下载与设备手册（简体中文版）",
+          "url": "https://ilfordphoto.com.cn/downloads/",
+          "kind": "manufacturer",
+          "note": "Ilford 当前设备手册清单中不含喷淋机型，缺口说明的依据。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "color-process.e6",
+          "color-process.c41"
+        ],
+        "next": [
+          "process-equipment.roller-processor"
+        ],
+        "related": [
+          "process-equipment.temperature-control",
+          "process-equipment.safety",
+          "color-process.e6-bath-errors",
+          "color-process.c41-cross-process"
+        ],
+        "contrast": [
+          "process-equipment.rotator",
+          "process-equipment.tank",
+          "process-equipment.roller-processor"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "喷淋式冲洗机传递药液主要靠什么？",
+          "type": "single",
+          "options": [
+            "把胶片浸在药液里",
+            "喷嘴射出的液膜冲击乳剂面",
+            "片基的多孔结构",
+            "加热蒸发"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "液膜的冲击与强制对流完成传质，机器不保存大量槽液。"
+        },
+        {
+          "q": "片面上出现未显影的条带，最先查哪一项？",
+          "type": "single",
+          "options": [
+            "喷嘴是否通畅",
+            "安全灯颜色",
+            "相纸的批号",
+            "晾片钉的数量"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "喷孔堵塞会让药液射不到该处，形成未显影的条带。"
+        },
+        {
+          "q": "E-6 对喷淋式设备最敏感的控制项是什么？",
+          "type": "single",
+          "options": [
+            "温度稳定性",
+            "纸张尺寸",
+            "相纸基面",
+            "扩印倍率"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "首显与彩显对温度极为敏感，喷淋式液膜薄、蓄热小，温度波动直接影响密度与色彩。"
+        },
+        {
+          "q": "破片造成后续药液污染时，正确处理是什么？",
+          "type": "single",
+          "options": [
+            "继续冲洗，机内会自行恢复",
+            "取出破片并更换受影响药液",
+            "提高温度继续冲洗",
+            "延长定影时间"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "破片溶出的卤化银会污染后续药液，处理后需更换受影响药液。"
+        }
+      ],
+      "updated": "2026-02-16",
+      "status": "draft"
+    },
+    {
+      "id": "process-equipment.water-supply",
+      "title": "冲洗用水的水源与过滤",
+      "title_en": "Processing Water Supply and Filtration",
+      "aliases": [
+        "水源",
+        "水质",
+        "过滤",
+        "硬度",
+        "余氯",
+        "water supply",
+        "洗片用水"
+      ],
+      "type": "setting",
+      "level": 2,
+      "era": "至今",
+      "tags": [
+        "水源",
+        "水质",
+        "过滤",
+        "水洗"
+      ],
+      "summary": "冲洗用水影响药液寿命与水洗效果。硬水在药液中形成沉淀，余氯氧化显影剂，悬浮物堵喷嘴与滚轴。水的来源分为自来水、纯化水与反渗透水，混药与洗片的用水要求不同。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "水对冲洗的影响"
+        },
+        {
+          "kind": "p",
+          "text": "配药用水是药液的组成部分。水中杂质改变药液的 pH、络合能力与保存性。洗片用水决定残留海波的清除速度。"
+        },
+        {
+          "kind": "p",
+          "text": "硬水含钙与镁离子。彩色药液中的碳酸盐与磷酸盐缓冲体系会与钙反应生成沉淀。沉淀附着在滚轴与喷嘴上会划伤片面。"
+        },
+        {
+          "kind": "p",
+          "text": "余氯是自来水中的氧化剂。它消耗显影剂，降低药液活性。参见 $color-process.water-quality-materials。"
+        },
+        {
+          "kind": "table",
+          "caption": "水质问题与后果",
+          "rows": [
+            {
+              "c1": "硬度",
+              "c2": "钙镁离子",
+              "c3": "药液生成沉淀，滚轴与喷嘴结垢",
+              "c4": "混药用软化水或纯化水",
+              "c5": "沉淀会划伤片面"
+            },
+            {
+              "c1": "余氯",
+              "c2": "氧化性余氯",
+              "c3": "消耗显影剂，缩短药液寿命",
+              "c4": "静置或用除氯剂处理",
+              "c5": "对彩色药液影响更明显"
+            },
+            {
+              "c1": "悬浮物与铁锈",
+              "c2": "颗粒",
+              "c3": "堵喷嘴、堵滚轴、造成划伤",
+              "c4": "在进水口装滤芯",
+              "c5": "处理机与冲印机都需过滤"
+            },
+            {
+              "c1": "微生物",
+              "c2": "细菌与藻类",
+              "c3": "药液变质、产生异味",
+              "c4": "储水槽定期清洗与消毒",
+              "c5": "低浓度药液更易滋生微生物"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "水源的选择"
+        },
+        {
+          "kind": "compare",
+          "caption": "自来水与纯化水",
+          "rows": [
+            {
+              "c1": "自来水",
+              "c2": "成本低，供应稳定",
+              "c3": "含硬度、余氯与悬浮物",
+              "c4": "洗片可用，混药需预处理",
+              "c5": "进水口加滤芯"
+            },
+            {
+              "c1": "纯化水或反渗透水",
+              "c2": "硬度与余氯低",
+              "c3": "混药稳定性更好",
+              "c4": "设备成本与维护成本高",
+              "c5": "小型处理机不必强制"
+            }
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "水洗用水量由药液与片基决定。Ilford 提供减少洗涤用水的技术文档，内容包括水洗流量与海波清除方案。使用海波清除剂（hypo clear）可缩短水洗时间，代价是药液成本上升。"
+        },
+        {
+          "kind": "h2",
+          "text": "水洗与保存"
+        },
+        {
+          "kind": "p",
+          "text": "水洗的目标是清除乳剂内的硫代硫酸盐与络合物。水洗不足会在影像中留下残留物，储存时产生酸性变化。参见 $archive.vinegar-syndrome 与 $bw-process.washing-storage。"
+        },
+        {
+          "kind": "steps",
+          "caption": "建立进水条件",
+          "items": [
+            {
+              "t": "测硬度",
+              "d": "先测当地自来水硬度。数值决定是否需要软化或反渗透。"
+            },
+            {
+              "t": "装滤芯",
+              "d": "在机器进水口装过滤芯。更换周期以厂商说明为准。"
+            },
+            {
+              "t": "去余氯",
+              "d": "静置或加少量亚硫酸盐类除氯剂。处理后测余氯是否降到可检测限以下。"
+            },
+            {
+              "t": "分用途取水",
+              "d": "配药用水与洗片用水分开设置。配药水走纯化水，洗片水走过滤自来水。"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "文中水质项目为冲洗化学的通用要求。具体硬度阈值、余氯上限与滤芯更换周期取决于药液厂商的水质说明，Ilford 等厂商在各自的技术文档中给出数值范围。数值需以所用药液的厂商文件为准，本文不给出统一阈值。"
+        },
+        {
+          "kind": "tip",
+          "text": "先记录水洗用水的流量。流量不足时延长时间比换水更快见效。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "ILFORD：减少洗涤用水",
+          "url": "https://ilfordphoto.com.cn/wp-content/uploads/2022/01/Reducing-Wash-Water.pdf",
+          "kind": "manufacturer",
+          "note": "厂商给出的减少胶片与照片洗片用水量的方法，含永久性洗涤方案。"
+        },
+        {
+          "name": "Wikipedia: Washing (photography)",
+          "url": "https://en.wikipedia.org/wiki/Washing_(photography)",
+          "kind": "article",
+          "note": "洗片流程与残留硫代硫酸盐对保存性的影响。"
+        },
+        {
+          "name": "ILFORD：处理黑白 RC 相纸",
+          "url": "https://ilfordphoto.com.cn/wp-content/uploads/2022/04/Processing-black-and-white-RC-paper.pdf",
+          "kind": "manufacturer",
+          "note": "厂商给出相纸的浴序、时间、温度与水洗要求。"
+        }
+      ],
+      "links": {
+        "prereq": [],
+        "next": [],
+        "related": [
+          "bw-process.washing-storage",
+          "color-process.washing-drying",
+          "process-equipment.safety",
+          "archive.vinegar-syndrome"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "余氯对冲洗药液的主要影响是什么？",
+          "type": "single",
+          "options": [
+            "提高药液显影力",
+            "消耗显影剂，缩短药液寿命",
+            "加快定影",
+            "提高干燥速度"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "余氯是氧化剂，会消耗显影剂。"
+        },
+        {
+          "q": "硬水在彩色药液中形成的沉淀主要危害是什么？",
+          "type": "multi",
+          "options": [
+            "堵喷嘴与滚轴",
+            "划伤片面",
+            "使相纸更快干燥",
+            "提高反差"
+          ],
+          "answer": [
+            0,
+            1
+          ],
+          "why": "沉淀附着在流道表面，既堵塞也划伤片面。"
+        },
+        {
+          "q": "水洗的目标是什么？",
+          "type": "single",
+          "options": [
+            "降低药液温度",
+            "清除乳剂内的硫代硫酸盐与络合物",
+            "提高影像反差",
+            "缩短定影时间"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "残留硫代硫酸盐在储存时产生酸性变化，影响保存。"
+        }
+      ],
+      "updated": "2026-02-16",
+      "status": "reviewed"
+    },
+    {
+      "id": "process-equipment.equipment-history",
+      "title": "冲洗设备的世代线",
+      "title_en": "Generations of Film Processing Equipment",
+      "aliases": [
+        "设备沿革",
+        "世代线",
+        "冲洗机历史"
+      ],
+      "type": "timeline",
+      "level": 4,
+      "era": "1900s 至今",
+      "tags": [
+        "设备沿革",
+        "世代线",
+        "手工冲洗",
+        "家用实验室",
+        "数字时代"
+      ],
+      "summary": "冲洗设备经历七代演进，从手工药盆到家用实验室。每一代解决的是上一代的温度与搅拌可重复性两个瓶颈。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "七代划分"
+        },
+        {
+          "kind": "timeline",
+          "caption": "冲洗设备的世代推进",
+          "rows": [
+            {
+              "c1": "1900s 起",
+              "c2": "手工药盆",
+              "c3": "红光下靠盆与温度计，搅拌与温度全靠人手"
+            },
+            {
+              "c1": "1940s 起",
+              "c2": "罐式冲洗与螺旋卷轴",
+              "c3": "Paterson 等系统让明房完成黑白显影"
+            },
+            {
+              "c1": "1960s 起",
+              "c2": "日光操作罐",
+              "c3": "避光顶盖与装片袋减少暗房环节"
+            },
+            {
+              "c1": "1972 起",
+              "c2": "JOBO 旋转系统",
+              "c3": "磁铁与齿圈把摆动罐转为旋转罐，Lift 实现旋转换液"
+            },
+            {
+              "c1": "1970s 至 1990s",
+              "c2": "商业辊轴式冲洗机",
+              "c3": "ILFOLAB 2150RC 桌面机与 MG 2650 落地机把相纸冲洗压到秒级"
+            },
+            {
+              "c1": "1990s 起",
+              "c2": "家用实验室成型",
+              "c3": "Nova 1983 年造相纸处理器，1995 年起造日光胶片处理器"
+            },
+            {
+              "c1": "2010s 至今",
+              "c3": "数字时代",
+              "c4": "彩色实验室大量关闭，需求集中到家用设备与少数专业暗房"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "每一代解决的问题"
+        },
+        {
+          "kind": "table",
+          "caption": "世代与瓶颈的对应关系",
+          "rows": [
+            {
+              "c1": "世代",
+              "c2": "解决的瓶颈",
+              "c3": "遗留的瓶颈",
+              "c4": "代表设备",
+              "c5": "在产状态"
+            },
+            {
+              "c1": "手工药盆",
+              "c2": "把显影从暗房手工操作固定下来",
+              "c3": "温度与搅拌依赖个人手法",
+              "c4": "不锈钢或塑料药盆",
+              "c5": "在产"
+            },
+            {
+              "c1": "罐式冲洗",
+              "c2": "明房完成黑白显影",
+              "c3": "药液量偏大，搅拌强度不均",
+              "c4": "Paterson 通用罐",
+              "c5": "在产"
+            },
+            {
+              "c1": "旋转系统",
+              "c2": "恒定搅拌与药液减量",
+              "c3": "需要电机或手动滚轴配合",
+              "c4": "JOBO 1510 加磁铁 #1504",
+              "c5": "在产"
+            },
+            {
+              "c1": "商业辊轴机",
+              "c2": "相纸冲洗的效率与一致性",
+              "c3": "成本高、体积大、维护要求高",
+              "c4": "ILFOLAB 2150RC、MG 2650",
+              "c5": "已停产，厂商仍提供手册"
+            },
+            {
+              "c1": "家用实验室",
+              "c2": "把控温与罐体组合成一体机",
+              "c3": "依赖家用电源规格，配件供应紧张",
+              "c4": "Nova FP 系列",
+              "c5": "胶片机在产，相纸机 2026 年中计划复产"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "手工搅拌到电动搅拌"
+        },
+        {
+          "kind": "p",
+          "text": "Jollinger 暗房设备指南把搅拌归为三类：倒转、轴上手转、电机底座旋转。倒转靠密封防漏，成本最低。轴上手转会因胶片脱轴贴壁而使边缘显影偏深。电机底座旋转解放双手，代价是价格与水封维护。"
+        },
+        {
+          "kind": "h2",
+          "text": "厂商寿命的实证"
+        },
+        {
+          "kind": "p",
+          "text": "JOBO 自述创立于 1923 年，现为第三代家族经营，仍在售 CPE-3 与 CPP-3。ILFORD 在官网存档页提供已停产设备的 PDF 手册，并写明已停止提供这些设备的维修支持。Nova 相纸处理器页面写明产品线因供应链与成本问题重新设计，预计 2026 年年中分阶段复产。三家厂商的状态构成设备寿命的现实样本。"
+        },
+        {
+          "kind": "note",
+          "text": "考证范围：年代区间取自厂商页面与官方目录。Kodak Varsity、Bell & Howell 4670、Durst M-8、Ilford Penrose、Beseler 23C III RC 属常见机型，本次检索未取到一手资料，表中未列其规格。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "process-equipment.tank"
+        ],
+        "next": [
+          "process-equipment.home-lab"
+        ],
+        "related": [
+          "process-equipment.roller-processor",
+          "process-equipment.spray-processor",
+          "process-equipment.troubleshoot-equipment",
+          "process-equipment.microfilm-process"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "ILFOLAB MG 2650 属于哪一类设备？",
+          "type": "single",
+          "options": [
+            "落地式大容量相纸冲洗机",
+            "家用胶片罐",
+            "放大机",
+            "胶片干燥机"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "ILFORD 设备手册存档页描述 MG 2650 为落地式大容量机器，可在 75 秒内完成黑白 RC 相纸冲洗。"
+        },
+        {
+          "q": "Nova 相纸处理器线的当前状态是什么？",
+          "type": "single",
+          "options": [
+            "重新设计中，计划 2026 年年中复产",
+            "已全面停产",
+            "在产并扩充型号",
+            "转为彩色相纸专用"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "Nova 产品页写明该产品线因疫情、全球价格波动与关键元件供应商停业而重新设计，预计 2026 年年中重新上市并可能分阶段进行。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Ilford Photo：设备手册目录（archive.org 快照，主站 HTML 对本环境返回 403）",
+          "url": "https://web.archive.org/web/2023/https://www.ilfordphoto.com/equipment-manuals/",
+          "kind": "manufacturer",
+          "note": "ilfordphoto.com 的 HTML 页面对本环境返回 403，改指 archive.org 快照。"
+        },
+        {
+          "name": "JOBO 公司介绍",
+          "url": "https://www.jobo.com/wir-ueber-uns",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Nova Print Processors 产品页",
+          "url": "https://www.theimagingwarehouse.com/Products/Nova-Print-Processors",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Jollinger Darkroom Equipment Guide",
+          "url": "http://www.jollinger.com/photo/articles/darkequp.htm",
+          "kind": "article"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "process-equipment.roller-processor",
+      "title": "辊轴式冲洗机的原理与机型",
+      "title_en": "Roller Processors",
+      "aliases": [
+        "roller processor",
+        "辊轴式",
+        "轧辊",
+        "相纸冲洗机"
+      ],
+      "type": "equipment",
+      "level": 4,
+      "era": "1970s 至 1990s",
+      "tags": [
+        "辊轴式",
+        "相纸冲洗机",
+        "商用",
+        "已停产"
+      ],
+      "summary": "辊轴式冲洗机（roller processor）用成对辊轴把相纸拉过药槽，节拍以秒计。它是彩色实验室时代的主力机型，ILFORD 官网至今存档这一系列的手册。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "结构与原理"
+        },
+        {
+          "kind": "p",
+          "text": "相纸从进纸口进入，绕过若干对辊轴，依次经过显影槽、停显槽、定影槽、水洗槽，最后进入干燥段。辊轴与药槽长度决定节拍。液体在机内按工艺顺序循环，水洗段用清水持续冲洗。"
+        },
+        {
+          "kind": "h2",
+          "text": "ILFORD 存档机型"
+        },
+        {
+          "kind": "table",
+          "caption": "ILFORD 官网存档的辊轴式机型",
+          "rows": [
+            {
+              "c1": "机型",
+              "c2": "定位",
+              "c3": "特点",
+              "c4": "状态",
+              "c5": "手册来源"
+            },
+            {
+              "c1": "ILFOLAB 2150RC",
+              "c2": "桌面式高速黑白相纸机",
+              "c3": "RC 相纸，带 READY 灯与可听信号",
+              "c4": "已停产",
+              "c5": "ILFORD 存档 PDF"
+            },
+            {
+              "c1": "ILFOLAB 2240RC",
+              "c2": "RC 相纸冲洗机",
+              "c3": "与 2150RC 同系列",
+              "c4": "已停产",
+              "c5": "ILFORD 存档 PDF"
+            },
+            {
+              "c1": "ILFOLAB MG 2650",
+              "c2": "落地式大容量机",
+              "c3": "黑白 RC 相纸 75 秒完成",
+              "c4": "已停产",
+              "c5": "ILFORD 存档页说明"
+            },
+            {
+              "c1": "ILFOLAB MG 2950",
+              "c2": "大容量落地机",
+              "c3": "与 MG 2650 同系列",
+              "c4": "已停产",
+              "c5": "ILFORD 存档 PDF"
+            },
+            {
+              "c1": "ILFOLAB FP40",
+              "c2": "胶片处理器",
+              "c3": "有完整操作与维修手册",
+              "c4": "已停产",
+              "c5": "ILFORD 存档 PDF"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "操作界面与信号"
+        },
+        {
+          "kind": "p",
+          "text": "ILFOLAB 2150RC 的操作信息给出明确信号规则：一次短音表示可以进纸；持续长音表示进纸时机早于 READY 灯停止闪烁；三声短音表示冲洗周期完成；警告音在按进水键 30 秒后机盖仍开或前槽液位偏低时响起，持续 3 分钟后机器自动关机。控制件包括电源开关、混药指示灯、READY 灯、液位警告灯、1 至 6 档干燥温度控制与进水按钮。"
+        },
+        {
+          "kind": "h2",
+          "text": "辊轴式与罐式的分工"
+        },
+        {
+          "kind": "compare",
+          "caption": "辊轴式冲洗机与罐式冲洗对照",
+          "rows": [
+            {
+              "c1": "辊轴式冲洗机",
+              "c2": "相纸连续通过药槽，节拍以秒计，夹持与输运由辊轴完成",
+              "c3": "药液循环使用，按处理量定期更换，机器依赖电源与进水",
+              "c4": "适合相纸批量作业与暗房高产",
+              "c5": "维护要点是辊轴、槽体与泵管"
+            },
+            {
+              "c1": "罐式冲洗",
+              "c2": "整卷胶片在罐内靠倒转或旋转交换药液，节拍以分钟计",
+              "c3": "药液多为一次性配液，工艺时间由人计时",
+              "c4": "适合少量胶片与家庭暗房",
+              "c5": "维护要点是罐体、卷轴与密封件"
+            }
+          ]
+        },
+        {
+          "kind": "warn",
+          "text": "辊轴式机器的进纸时机由 READY 灯控制。提前进纸触发长音并造成叠片，等 READY 灯稳定后再进纸。"
+        },
+        {
+          "kind": "note",
+          "text": "考证范围：ILFORD 官网存档页写明已停止为停产设备提供维修与保养支持，仍以 PDF 形式提供手册。Kodak Varsity、Bell & Howell 4670 与 Durst M-8 属同世代机型，本次检索未取到一手资料。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "process-equipment.machine-maintenance"
+        ],
+        "next": [
+          "process-equipment.equipment-history"
+        ],
+        "related": [
+          "process-equipment.roller-process",
+          "process-equipment.trays",
+          "process-equipment.sprint-process"
+        ],
+        "contrast": [
+          "process-equipment.tank"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "ILFOLAB MG 2650 处理黑白 RC 相纸的标称时间是多少？",
+          "type": "single",
+          "options": [
+            "75 秒",
+            "75 分钟",
+            "5 分钟",
+            "12 分钟"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "ILFORD 设备手册存档页写明 MG 2650 能在 75 秒内完成黑白 RC 相纸冲洗。"
+        },
+        {
+          "q": "ILFOLAB 2150RC 进纸过早时机器给出什么信号？",
+          "type": "single",
+          "options": [
+            "持续长音",
+            "一次短音",
+            "三声短音",
+            "警告音持续 3 分钟后关机"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "一次短音表示可进纸，持续长音表示进纸早于 READY 灯停止，三声短音表示周期完成，警告音对应液位低或机盖未关。"
+        },
+        {
+          "q": "辊轴式冲洗机的维护重点包括哪些？",
+          "type": "multi",
+          "options": [
+            "辊轴清洁",
+            "槽体清洁",
+            "泵管更换",
+            "卷轴更换"
+          ],
+          "answer": [
+            0,
+            1,
+            2
+          ],
+          "why": "ILFOLAB 2150RC 的维护周期为每日清洁辊轴、每月清洁辊轴架与槽体并排水。卷轴属于罐式系统。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Ilford Photo：设备手册目录（archive.org 快照，主站 HTML 对本环境返回 403）",
+          "url": "https://web.archive.org/web/2023/https://www.ilfordphoto.com/equipment-manuals/",
+          "kind": "manufacturer",
+          "note": "ilfordphoto.com 的 HTML 页面对本环境返回 403，改指 archive.org 快照。"
+        },
+        {
+          "name": "ILFOLAB 2150RC Operating Information",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/06/2150RC_Processor_Operating-Information.pdf",
+          "kind": "manual"
+        },
+        {
+          "name": "Jollinger Darkroom Equipment Guide",
+          "url": "http://www.jollinger.com/photo/articles/darkequp.htm",
+          "kind": "article"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "process-equipment.roller-process",
+      "title": "辊轴式机型实例与废液数据",
+      "title_en": "Roller Processor Models and Effluent Data",
+      "aliases": [
+        "Varsity",
+        "Bell & Howell 4670",
+        "Durst M-8",
+        "ILFOLAB",
+        "2150RC"
+      ],
+      "type": "equipment",
+      "level": 4,
+      "era": "1970s 至 1990s",
+      "tags": [
+        "辊轴式",
+        "废液",
+        "银回收",
+        "Kodak"
+      ],
+      "summary": "可取到一手资料的辊轴式机型是 ILFORD 的 ILFOLAB 系列。ILFORD 同时公开了机内药液的废液成分数据，可用于评估排放处理与银回收。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "已取证的机型"
+        },
+        {
+          "kind": "p",
+          "text": "ILFOLAB 2150RC 是桌面式高速黑白相纸冲洗机，机内配浓缩药自动稀释装置。2240RC 与 MG 2950 属同系列。MG 2650 为落地式大容量机。FP40 是胶片处理器，官网提供完整操作与维修手册。"
+        },
+        {
+          "kind": "h2",
+          "text": "机内稀释与废液"
+        },
+        {
+          "kind": "table",
+          "caption": "ILFOLAB 2150RC 机内稀释后的废液成分",
+          "rows": [
+            {
+              "c1": "药液",
+              "c2": "稀释比",
+              "c3": "主要成分",
+              "c4": "浓度区间",
+              "c5": "其他指标"
+            },
+            {
+              "c1": "ILFORD 2000TL 显影液",
+              "c2": "1+2.75",
+              "c3": "对苯二酚及氧化产物",
+              "c4": "4 至 12 g/L",
+              "c5": "COD 13 g/L，pH 10.3 至 10.6"
+            },
+            {
+              "c1": "ILFORD 2000TL 显影液",
+              "c2": "1+2.75",
+              "c3": "碳酸根离子",
+              "c4": "4 至 8 g/L",
+              "c5": "溴离子 1.8 至 2.6 g/L"
+            },
+            {
+              "c1": "ILFORD 2000TL 定影液",
+              "c2": "1+2.75",
+              "c3": "硫代硫酸根",
+              "c4": "80 至 110 g/L",
+              "c5": "铵离子 20 至 40 g/L"
+            },
+            {
+              "c1": "ILFORD 2000TL 定影液",
+              "c2": "1+2.75",
+              "c3": "银",
+              "c4": "3 至 6 g/L",
+              "c5": "溴离子 4 至 10 g/L"
+            }
+          ]
+        },
+        {
+          "kind": "warn",
+          "text": "厂商文件要求处理废液前遵守当地法规，并取得许可后方可排入下水道。银与硫代硫酸根属重点监控项。"
+        },
+        {
+          "kind": "h2",
+          "text": "手册可用性"
+        },
+        {
+          "kind": "p",
+          "text": "ILFORD 官网的设备手册存档页覆盖相纸冲洗机、干燥机、曝光系统、定时器与曝光计。页面写明停产设备的维护支持已停止，手册仍以 PDF 形式提供。FP40 与 2150RC 的 PDF 存档件为扫描图像，需光学字符识别读取。"
+        },
+        {
+          "kind": "note",
+          "text": "考证范围：Kodak Varsity、Bell & Howell 4670 与 Durst M-8 的规格在本次检索中未取到可访问的一手资料，本条目未列入其数值。废液处置流程见 $process-equipment.safety。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "process-equipment.roller-processor"
+        ],
+        "next": [
+          "process-equipment.safety"
+        ],
+        "related": [
+          "process-equipment.troubleshoot-equipment",
+          "process-equipment.equipment-history"
+        ],
+        "contrast": [
+          "process-equipment.spray-processor"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "ILFORD 2000TL 显影液在机内按多少比例自动稀释？",
+          "type": "single",
+          "options": [
+            "1+2.75",
+            "1+9",
+            "1+14",
+            "1+4"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "ILFOLAB 2150RC 废液资料写明显影液与定影液均按 1+2.75 自动稀释。1+9 与 1+14 是 ILFOSOL 3 罐式稀释比。"
+        },
+        {
+          "q": "定影废液中硫代硫酸根的浓度区间是多少？",
+          "type": "single",
+          "options": [
+            "80 至 110 g/L",
+            "4 至 12 g/L",
+            "20 至 40 g/L",
+            "3 至 6 g/L"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "定影废液的硫代硫酸根为 80 至 110 g/L，铵离子 20 至 40 g/L，银 3 至 6 g/L。4 至 12 g/L 是显影废液的对苯二酚及其氧化产物。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "ILFOLAB 2150RC Effluent Data",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/06/2150RC_Processor_Effluent-Data.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Ilford Photo：设备手册目录（archive.org 快照，主站 HTML 对本环境返回 403）",
+          "url": "https://web.archive.org/web/2023/https://www.ilfordphoto.com/equipment-manuals/",
+          "kind": "manufacturer",
+          "note": "ilfordphoto.com 的 HTML 页面对本环境返回 403，改指 archive.org 快照。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "process-equipment.sprint-process",
+      "title": "Ilford Sprint 与 Rotomatic 变量型处理器",
+      "title_en": "Ilford Sprint and Rotomatic Variable Processors",
+      "aliases": [
+        "Sprint",
+        "Sprint 4",
+        "Rotomatic",
+        "Ilford Sprint",
+        "变量型"
+      ],
+      "type": "equipment",
+      "level": 5,
+      "era": "1980s 至 1990s",
+      "tags": [
+        "Ilford",
+        "Sprint",
+        "Rotomatic",
+        "考证缺口"
+      ],
+      "summary": "Ilford Sprint（伊尔福德 冲刺型）与 Rotomatic（伊尔福德 旋转型）属 1980 年代的变量型处理器。本次检索未取到厂商一手资料，本条目标记为考证缺口。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "可确认的信息"
+        },
+        {
+          "kind": "p",
+          "text": "第三方冲洗时间计算器页面列出 Ilford HP5 Plus 配 Sprint Standard 的冲洗条件，页面含 1+9 稀释与 33 °C 温度栏。这一线索指向 Sprint 存在官方推荐的 1+9 稀释与高于常规 20 °C 的显影温度，符合变量型处理器的定位。"
+        },
+        {
+          "kind": "h2",
+          "text": "考证缺口"
+        },
+        {
+          "kind": "ul",
+          "text": "- ILFORD 官网设备手册存档页覆盖 FP40、2150RC、2240RC、MG 2650、MG 2950、干燥机与曝光系统，未列 Sprint。\n- ILFORD 官网目录页在售设备以罐与配件为主，未列处理器。\n- Wayback Machine 的 ilfordphoto.com 全域 URL 列表中，sprint、penrose、rotomat 与 combi 的命中数为 0。\n- 厂商 PDF 与产品页均未出现在可访问的检索结果中。"
+        },
+        {
+          "kind": "warn",
+          "text": "在缺少厂商手册的条件下，本条目只记录可确认的线索。容量、转速、温度精度、电源与耗材型号等待一手资料补全后写入。"
+        },
+        {
+          "kind": "note",
+          "text": "考证范围：Sprint 与 Rotomatic 的年份区间取自任务清单与第三方页面的工艺栏表述，属参考区间。转速、容量与耗材型号列为考证缺口。"
+        },
+        {
+          "kind": "note",
+          "text": "同世代的可替代考证对象是 JOBO 的 CPE 与 CPP 系列，规格见 $process-equipment.jobo。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "process-equipment.spray-processor"
+        ],
+        "next": [
+          "process-equipment.equipment-history"
+        ],
+        "related": [
+          "process-equipment.jobo"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "第三方时间计算器给出的 Sprint Standard 冲洗条件包含什么？",
+          "type": "single",
+          "options": [
+            "1+9 稀释与 33 °C 温度栏",
+            "1+4 稀释与 20 °C 温度栏",
+            "干式显影",
+            "常温 18 °C 与 1+19"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "darkroom-solutions.com 的冲洗计算器页面含 1+9 稀释与 33 °C 温度栏。该站点对本环境返回 403，只能作为间接线索。"
+        },
+        {
+          "q": "本次检索对 Sprint 的一手资料覆盖情况如何？",
+          "type": "single",
+          "options": [
+            "未取到厂商手册或产品页",
+            "取到完整规格表",
+            "取到操作手册 PDF",
+            "取到 Wayback 存档页"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "ILFORD 官网设备手册存档页与 Wayback 全域 URL 列表均无 Sprint 条目。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Ilford Photo：设备手册目录（archive.org 快照，主站 HTML 对本环境返回 403）",
+          "url": "https://web.archive.org/web/2023/https://www.ilfordphoto.com/equipment-manuals/",
+          "kind": "manufacturer",
+          "note": "ilfordphoto.com 的 HTML 页面对本环境返回 403，改指 archive.org 快照。"
+        },
+        {
+          "name": "ILFORD ILFOSOL 3 技术资料",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2019/08/ILFOSOL-3-June2019.pdf",
+          "kind": "manufacturer"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "draft"
+    },
+    {
+      "id": "process-equipment.hybrid-process",
+      "title": "手动与机器并用的混合冲洗",
+      "title_en": "Hybrid Manual and Machine Processing",
+      "aliases": [
+        "hybrid",
+        "混合式",
+        "Ilford Penrose",
+        "手动加机器",
+        "Penrose"
+      ],
+      "type": "technique",
+      "level": 4,
+      "era": "1990s 至 2010s",
+      "tags": [
+        "混合式",
+        "手动",
+        "机器",
+        "Penrose",
+        "考证缺口"
+      ],
+      "summary": "混合冲洗把机器温控与罐体搅拌分开处理。Ilford Penrose（伊尔福德 彭罗斯型）属这一类机型，本次检索未取到厂商一手资料。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "方法结构"
+        },
+        {
+          "kind": "p",
+          "text": "混合冲洗的做法是把机器的温控与罐的搅拌分开处理。机器负责恒温槽或水浴，把罐体放入后由人手动倒转或用滚轴驱动搅拌。药液按一次性配方配制。这样既省去人工控温，也保留手动控制搅拌节奏的余地。Nova 的 FP 系列正是这一结构：机身控温加内嵌 Paterson 罐，搅拌靠倒转或随附搅棒。"
+        },
+        {
+          "kind": "h2",
+          "text": "手用滚轴作为中间方案"
+        },
+        {
+          "kind": "p",
+          "text": "JOBO 滚轴 #1509 提供旋转搅拌而无需购机。用户在罐与 Expert Drum 上获得固定转速的旋转，配合加热器控温即可构成一套混合流程。厂家把该滚轴定位为未购处理器用户的过渡方案，售价 89.90 欧元。"
+        },
+        {
+          "kind": "h2",
+          "text": "考证缺口"
+        },
+        {
+          "kind": "ul",
+          "text": "- ILFORD 官网设备手册存档页未列 Penrose。\n- Wayback Machine 的 ilfordphoto.com 全域 URL 列表中 penrose 命中数为 0。\n- darkroom-solutions.com 对本环境返回 403，其余第三方站点未提供一手参数。\n- Penrose 的容量、转速、温度精度、电源与耗材型号待补。"
+        },
+        {
+          "kind": "note",
+          "text": "考证范围：本条目把 Penrose 标记为考证缺口。可替代考证对象为 Nova FP 系列与 JOBO 滚轴，规格见 $process-equipment.home-lab 与 $process-equipment.jobo-xtrollers。"
+        },
+        {
+          "kind": "note",
+          "text": "混合冲洗的化学侧仍遵循一次性药液原则，参见 $process-equipment.mixed-chemistry。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "process-equipment.mixed-chemistry"
+        ],
+        "next": [
+          "process-equipment.home-lab"
+        ],
+        "related": [
+          "process-equipment.rotator",
+          "process-equipment.jobo-xtrollers"
+        ],
+        "contrast": [
+          "process-equipment.roller-processor"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "混合冲洗把哪两件事分开处理？",
+          "type": "single",
+          "options": [
+            "机器控温与罐体搅拌",
+            "显影与定影",
+            "装片与冲洗",
+            "水洗与干燥"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "机器负责恒温，罐体搅拌由倒转或滚轴完成。Nova FP 系列与 JOBO 滚轴方案都属这一结构。"
+        },
+        {
+          "q": "本次检索对 Ilford Penrose 的覆盖情况如何？",
+          "type": "single",
+          "options": [
+            "未取到厂商手册或产品页",
+            "取到完整规格",
+            "取到 PDF 手册",
+            "取到产品目录页"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "ILFORD 官网存档页与 Wayback 全域列表均无 Penrose 条目。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Ilford Photo：设备手册目录（archive.org 快照，主站 HTML 对本环境返回 403）",
+          "url": "https://web.archive.org/web/2023/https://www.ilfordphoto.com/equipment-manuals/",
+          "kind": "manufacturer",
+          "note": "ilfordphoto.com 的 HTML 页面对本环境返回 403，改指 archive.org 快照。"
+        },
+        {
+          "name": "Nova Daylight Film Processors 产品页",
+          "url": "https://www.theimagingwarehouse.com/Products/Nova-Daylight-Film-Processors",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "JOBO Roller #1509 产品页",
+          "url": "https://www.jobo.com/analog/1509-jobo-roller",
+          "kind": "manufacturer"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "draft"
+    },
+    {
+      "id": "process-equipment.machine-maintenance",
+      "title": "冲洗机的清洗、换泵管与温度校准",
+      "title_en": "Processor Cleaning, Pump Tube Replacement and Temperature Calibration",
+      "aliases": [
+        "machine maintenance",
+        "机器维护",
+        "清洗",
+        "泵管",
+        "温度校准",
+        "calibration"
+      ],
+      "type": "technique",
+      "level": 4,
+      "era": "1970s 至今",
+      "tags": [
+        "维护",
+        "清洗",
+        "泵管",
+        "温度校准",
+        "耗材周期"
+      ],
+      "summary": "冲洗机的维护围绕三项展开：保持辊轴与槽体清洁，按周期更换药液，定期校准温度。ILFOLAB 2150RC 的操作信息给出日与月两个层级的维护清单。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "维护周期"
+        },
+        {
+          "kind": "table",
+          "caption": "ILFOLAB 2150RC 维护周期",
+          "rows": [
+            {
+              "c1": "周期",
+              "c2": "项目",
+              "c3": "方法",
+              "c4": "目的",
+              "c5": "来源"
+            },
+            {
+              "c1": "每日",
+              "c2": "清洁辊轴",
+              "c3": "用几张灰雾相纸通过机器",
+              "c4": "去除辊面残银与药垢",
+              "c5": "2150RC 操作信息"
+            },
+            {
+              "c1": "每日",
+              "c2": "换接片盘水",
+              "c3": "使用干燥机时每天至少换一次",
+              "c4": "抑制细菌与杂质沉积",
+              "c5": "2150RC 操作信息"
+            },
+            {
+              "c1": "每两周",
+              "c2": "更换化学液",
+              "c3": "或达到标称处理量时提前更换",
+              "c4": "维持显影活性",
+              "c5": "2150RC 操作信息"
+            },
+            {
+              "c1": "每月",
+              "c2": "清洁槽体与排水",
+              "c3": "逐个取出辊轴架用温水与无绒布清洗",
+              "c4": "清除槽底沉积",
+              "c5": "2150RC 操作信息"
+            },
+            {
+              "c1": "每月",
+              "c2": "复装并加新药",
+              "c3": "装回辊轴架后冲洗槽体再加新药",
+              "c4": "排除残留旧液",
+              "c5": "2150RC 操作信息"
+            },
+            {
+              "c1": "每月",
+              "c2": "清洁干燥机辊轴架",
+              "c3": "与主槽同样方法清洗",
+              "c4": "防止干燥段结垢",
+              "c5": "2150RC 操作信息"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "泵管与循环系统"
+        },
+        {
+          "kind": "ol",
+          "text": "1. 停机断电，释放槽内压力。\n2. 排空药液，标记泵管走向。\n3. 松开卡箍，取出旧泵管。\n4. 用温水冲洗循环泵与管路，去除药垢。\n5. 装入同规格泵管，恢复卡箍并检查密封。\n6. 加新药后试运行，观察有无渗漏与流量变化。"
+        },
+        {
+          "kind": "p",
+          "text": "泵管是易损件，老化后会在管壁出现裂纹与渗漏。ILFORD 的机型文件未公布泵管型号，本次检索也未取到厂商的泵管规格表。更换时按管径与长度匹配，并记录更换日期纳入维护台账。"
+        },
+        {
+          "kind": "h2",
+          "text": "温度校准"
+        },
+        {
+          "kind": "steps",
+          "caption": "温度校准步骤",
+          "items": [
+            {
+              "t": "1. 准备基准温度计",
+              "d": "选一支经校准的标准温度计。彩色工序用 1 °C 分度温度计已够读数，校准时用标准表。"
+            },
+            {
+              "t": "2. 稳定恒温槽",
+              "d": "把机器与温度计同处恒温环境，待读数稳定 5 分钟再记录。"
+            },
+            {
+              "t": "3. 比对设定值",
+              "d": "把机器显示温度与标准温度计读数比对，记录偏差值。"
+            },
+            {
+              "t": "4. 调整设定",
+              "d": "把机器设定值加上偏差值，重新观察 10 分钟确认稳定。"
+            },
+            {
+              "t": "5. 复测药液温度",
+              "d": "把温度计放入实际药液槽中复测。槽内温度与设定值一致才算通过。"
+            },
+            {
+              "t": "6. 记录并复检",
+              "d": "记录校准日期、偏差值与室温。彩色工序建议每次换药时复测。"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "机器水浴的标称精度为参考值：JOBO CPP-3 为 ±0.2 °C，CPE-3 目录值为 ±0.4 °C，Nova FP 系列为 ±0.25 °C。校准的目标是把实际温度拉到工艺容差内。"
+        },
+        {
+          "kind": "h2",
+          "text": "耗材更换周期"
+        },
+        {
+          "kind": "table",
+          "caption": "耗材与更换周期",
+          "rows": [
+            {
+              "c1": "耗材",
+              "c2": "适用设备",
+              "c3": "周期",
+              "c4": "理由",
+              "c5": "来源"
+            },
+            {
+              "c1": "干燥棒 #3007 与 #3008",
+              "c2": "Expert Drum",
+              "c3": "每 12 个月",
+              "c4": "避免损伤筒壁",
+              "c5": "JOBO 2020 目录"
+            },
+            {
+              "c1": "过滤网",
+              "c2": "Mistral 3 干燥器",
+              "c3": "按积尘情况",
+              "c4": "维持风量",
+              "c5": "JOBO 2020 目录"
+            },
+            {
+              "c1": "化学液",
+              "c2": "辊轴式机器",
+              "c3": "最长两周",
+              "c4": "维持显影活性",
+              "c5": "2150RC 操作信息"
+            },
+            {
+              "c1": "泵管",
+              "c2": "辊轴式机器",
+              "c3": "按厂商规格与老化情况",
+              "c4": "渗漏与流量下降",
+              "c5": "厂商未公布规格，属待补项"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "考证范围：泵管型号与周期在可访问的厂商文件中缺位。维护基准取自 ILFOLAB 2150RC 操作信息，属 1998 年 6 月印发的机型文件。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "process-equipment.roller-processor"
+        ],
+        "next": [
+          "process-equipment.troubleshoot-equipment"
+        ],
+        "related": [
+          "process-equipment.temperature-control",
+          "process-equipment.spray-processor"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "ILFOLAB 2150RC 的化学液更换周期上限是多久？",
+          "type": "single",
+          "options": [
+            "两周",
+            "一天",
+            "一个月",
+            "三个月"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "操作信息写明化学液最长两周更换一次，或达到标称处理量时提前更换。每日项目为清洁辊轴。"
+        },
+        {
+          "q": "清洁辊轴架的规范方法是什么？",
+          "type": "single",
+          "options": [
+            "逐个取出，用温水与无绒布清洗",
+            "用钢丝刷刷洗",
+            "用压缩空气吹",
+            "整机下水冲洗"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "操作信息写明每月逐个取出辊轴架用温水与无绒布清洗，复装冲洗后加新药。"
+        },
+        {
+          "q": "下面哪些属于机器的每日维护项？",
+          "type": "multi",
+          "options": [
+            "用灰雾相纸清洁辊轴",
+            "更换接片盘水",
+            "更换泵管",
+            "清洁槽体并排水"
+          ],
+          "answer": [
+            0,
+            1
+          ],
+          "why": "清洁辊轴与换接片盘水为每日项目。清洁槽体并排水为每月项目，泵管更换按老化情况。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "ILFOLAB 2150RC Operating Information",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/06/2150RC_Processor_Operating-Information.pdf",
+          "kind": "manual"
+        },
+        {
+          "name": "JOBO Analog 2020 产品目录",
+          "url": "https://www.jobo.com//bin/ecms_streamer.php?emb_label=flyer_jobo_analog_2020_final&inline=",
+          "kind": "manufacturer"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "process-equipment.troubleshoot-equipment",
+      "title": "冲洗设备故障排查总表",
+      "title_en": "Processing Equipment Troubleshooting",
+      "aliases": [
+        "troubleshoot",
+        "故障排查",
+        "设备故障",
+        "渗漏",
+        "密度不匀"
+      ],
+      "type": "pitfall",
+      "level": 4,
+      "era": "1970s 至今",
+      "tags": [
+        "故障排查",
+        "渗漏",
+        "密度不匀",
+        "温度",
+        "维护"
+      ],
+      "summary": "冲洗设备故障集中在五类：漏光与渗漏、密度不匀、温度偏离、药液起泡与机械卡阻。本条目按罐式、旋转处理器与辊轴式三种机型归类症状与处理顺序。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "按机型归类的症状"
+        },
+        {
+          "kind": "table",
+          "caption": "三类机型的典型症状与处理",
+          "rows": [
+            {
+              "c1": "机型",
+              "c2": "症状",
+              "c3": "常见原因",
+              "c4": "处理顺序",
+              "c5": "复查判据"
+            },
+            {
+              "c1": "罐式",
+              "c2": "全片灰雾升高",
+              "c3": "顶盖密封老化、卷轴未到位",
+              "c4": "换密封圈、检查卷轴到位、做装片袋抽气测试",
+              "c5": "空罐进光后片基仍为浅灰"
+            },
+            {
+              "c1": "罐式",
+              "c2": "画面出现圆形亮斑",
+              "c3": "气泡困在两片胶片之间",
+              "c4": "倒转后停顿两秒、显影末段敲工作台",
+              "c5": "再冲一卷同条件样片对比"
+            },
+            {
+              "c1": "旋转处理器",
+              "c2": "药液从机身底盘渗出",
+              "c3": "压力平衡盖老化、罐体未到位",
+              "c4": "换盖膜、按手册确认罐位",
+              "c5": "空载运行十分钟底盘保持干燥"
+            },
+            {
+              "c1": "旋转处理器",
+              "c2": "同罐各卷密度差",
+              "c3": "片数与药量不匹配、转速过低",
+              "c4": "校核容量表、把转速设在中段",
+              "c5": "同条件三卷密度差小于 0.05"
+            },
+            {
+              "c1": "辊轴式机器",
+              "c2": "叠片与长音",
+              "c3": "进纸早于 READY 灯稳定",
+              "c4": "等 READY 灯稳后再进纸",
+              "c5": "连续十张进纸无叠片"
+            },
+            {
+              "c1": "辊轴式机器",
+              "c2": "画面密度偏浅",
+              "c3": "药液接近寿命、辊面结垢",
+              "c4": "按周期换液并清洁辊轴",
+              "c5": "对照试条密度回到目标值"
+            },
+            {
+              "c1": "辊轴式机器",
+              "c2": "警告音后自动关机",
+              "c3": "按进水键 30 秒后机盖仍开或前槽液位低",
+              "c4": "关盖、补液、检查进水阀",
+              "c5": "报警不再出现"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "通用排查顺序"
+        },
+        {
+          "kind": "ol",
+          "text": "1. 确认温度。先测药液温度，再谈密度问题。\n2. 确认药液状态。核对配制时间、稀释比与片数配比。\n3. 确认避光。检查顶盖密封、卷轴到位与装片袋。\n4. 确认搅拌。按机型核对转速或倒转次数。\n5. 确认机械。清理齿圈、辊轴与槽体。\n6. 做对照样片。用同批胶片与同罐药液重冲一卷。"
+        },
+        {
+          "kind": "note",
+          "text": "温度是第一变量。C-41 与 E-6 的容差在零点几摄氏度量级，温度偏差会同时改变密度与色彩平衡。参见 $color-process.temperature-critical。"
+        },
+        {
+          "kind": "note",
+          "text": "维护相关的耗材周期见 $process-equipment.machine-maintenance。罐体与卷轴的故障见 $process-equipment.tank。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "process-equipment.machine-maintenance"
+        ],
+        "next": [
+          "process-equipment.equipment-history"
+        ],
+        "related": [
+          "process-equipment.temperature-control",
+          "process-equipment.rotator"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "遇到密度偏低时的第一项检查是什么？",
+          "type": "single",
+          "options": [
+            "药液温度",
+            "胶片品牌",
+            "罐体颜色",
+            "房间湿度"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "温度是冲洗工艺的第一变量，温度偏低直接压低密度与反差。"
+        },
+        {
+          "q": "辊轴式机器出现叠片与长音时怎么处理？",
+          "type": "single",
+          "options": [
+            "等 READY 灯稳定后再进纸",
+            "加大进水压力",
+            "提高干燥温度档位",
+            "调高显影液浓度"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "持续长音表示进纸时机早于 READY 灯停止闪烁，等灯稳定即可。"
+        },
+        {
+          "q": "罐式冲洗出现圆形亮斑时的原因包括哪些？",
+          "type": "single",
+          "options": [
+            "气泡困在两片胶片之间",
+            "卷轴装反",
+            "显影温度偏高",
+            "顶盖漏光"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "气泡造成局部药液交换中断，形成圆形亮斑。卷轴装反与漏光造成划伤与灰雾，温度偏高造成整体密度偏深。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "ILFOLAB 2150RC Operating Information",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/06/2150RC_Processor_Operating-Information.pdf",
+          "kind": "manual"
+        },
+        {
+          "name": "JOBO Analog 2020 产品目录",
+          "url": "https://www.jobo.com//bin/ecms_streamer.php?emb_label=flyer_jobo_analog_2020_final&inline=",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Jollinger Darkroom Equipment Guide",
+          "url": "http://www.jollinger.com/photo/articles/darkequp.htm",
+          "kind": "article"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "process-equipment.microfilm-process",
+      "title": "微缩胶片冲洗设备",
+      "title_en": "Microfilm Processing Equipment",
+      "aliases": [
+        "microfilm",
+        "微缩胶片",
+        "微缩胶卷",
+        "档案缩微"
+      ],
+      "type": "process",
+      "level": 3,
+      "era": "1960s 至 1990s",
+      "tags": [
+        "微缩胶片",
+        "档案",
+        "大容量",
+        "一次性药液"
+      ],
+      "summary": "微缩胶片冲洗面向档案与文献的大批量复制，单卷容量可达数百帧。它沿用浓缩药液与机器自动稀释的思路，产线式作业取代手工分卷。具体机型本次未取到一手资料。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "工艺特征"
+        },
+        {
+          "kind": "ul",
+          "text": "- 单卷帧数多，卷径大，需要专用走片机构。\n- 使用高银量显影液，药液成本按帧计。\n- 显影与定影在线连续完成，节拍由走片速度决定。\n- 冲洗后的胶卷立即进入干燥段，减少人工搬运。\n- 档案级流程要求水洗达标，参见 $archive.washing-storage。"
+        },
+        {
+          "kind": "h2",
+          "text": "与常规胶片的共同点"
+        },
+        {
+          "kind": "p",
+          "text": "微缩冲洗沿用罐式与辊轴式两种架构。浓缩显影液由机器按固定比例自动稀释，ILFOLAB 2150RC 的废液资料即给出 1+2.75 这一自动稀释比例。药液循环制度见 $process-equipment.mixed-chemistry。"
+        },
+        {
+          "kind": "note",
+          "text": "考证状态：draft。任务清单把 microfilm-process 列为条目。本次检索未取到微缩胶片冲洗机的厂商产品页或手册，本条目只记录工艺特征与共用架构，机型参数列为待补项。"
+        },
+        {
+          "kind": "note",
+          "text": "年代区间取自缩微技术在档案与文献复制中的使用期，属参考区间。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "process-equipment.roller-processor"
+        ],
+        "next": [
+          "process-equipment.equipment-history"
+        ],
+        "related": [
+          "archive.washing-storage",
+          "process-equipment.mixed-chemistry"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "微缩胶片冲洗的单卷容量相对常规 135 胶片的差别是什么？",
+          "type": "single",
+          "options": [
+            "帧数多出两个数量级",
+            "帧数更少",
+            "两者相同",
+            "取决于片基厚度"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "微缩胶片按每卷数百帧设计，卷径大，需要专用走片机构与高银量药液。"
+        },
+        {
+          "q": "本条目的状态是什么？",
+          "type": "single",
+          "options": [
+            "draft，机型参数待补",
+            "reviewed，全部参数已考证",
+            "stable，已定稿",
+            "仅有摘要无正文"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "本次检索未取到微缩胶片冲洗机的厂商产品页或手册，机型参数列为待补项。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "ILFOLAB 2150RC Effluent Data",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/06/2150RC_Processor_Effluent-Data.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Ilford Photo：设备手册目录（archive.org 快照，主站 HTML 对本环境返回 403）",
+          "url": "https://web.archive.org/web/2023/https://www.ilfordphoto.com/equipment-manuals/",
+          "kind": "manufacturer",
+          "note": "ilfordphoto.com 的 HTML 页面对本环境返回 403，改指 archive.org 快照。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "draft"
+    }
+  ]
+}

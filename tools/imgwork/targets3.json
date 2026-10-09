@@ -1,0 +1,10 @@
+{
+"t3_film": ["photographic film cross-section diagram layers","film emulsion coating layers diagram","silver halide crystals micrograph emulsion","photographic emulsion microscope","film base emulsion subbing layer diagram","gelatin silver halide grain electron micrograph","photographic film layers illustration","film sensitometry diagram density curve"],
+"t3_capture": ["gray card 18 percent reflectance","Kodak gray card photography","camera film loading take-up spool","35mm camera film chamber loading","aperture ring f-stop markings lens","exposure meter dial photography"],
+"t3_bw": ["zone system Adams negative density","wetting agent photographic solution","photo flo solution","darkroom chemical bottles photographic","film developer stock solution bottle","stop bath indicator darkroom","darkroom trays print developing"],
+"t3_color": ["slide mount transparency 35mm plastic","mounted colour slide 35mm","Kodak slide mount cardboard","colour transparency film mounted slide","C-41 development diagram","reversal film E-6 diagram"],
+"t3_print": ["exposure test strip enlarger photographic","photographic test strip print","contact printing frame photographic","photographic print washing tray","fiber based photographic paper"],
+"t3_equip": ["minilab film processor photofinishing machine","film processing dip and dunk machine","rotary film processor drum","photographic processing equipment","film dryer darkroom","C-41 processing machine"],
+"t3_scan": ["film negative dust scratches damage","scratched film negative","photographic negative dust","film scanner hardware","scanner CCD sensor"],
+"t3_arch": ["print washer photographic","photographic print washer darkroom","silver recovery electrolytic","film archive cold storage nitrate","nitrate film vault storage","film preservation archive shelves"]
+}

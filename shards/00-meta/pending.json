@@ -1,0 +1,4 @@
+{
+  "note": "已规划但尚未撰写的 entry id：全库中被 links 或正文 $ref 引用、但目前不存在的条目。validate.mjs 对指向本清单的链接放行。本文件由 tools/pending.mjs 自动生成，分片收齐后应清空为 []。",
+  "planned": []
+}

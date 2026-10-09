@@ -1,0 +1,1528 @@
+{
+  "module": "bw-process",
+  "shard": "bw-process.02",
+  "shard_zh": "停显、定影、水洗、混合控制与操作流程",
+  "note": "配方与时间数值以厂商技术资料为准。本分片中标注 draft 的条目需以厂商最新说明书复核。",
+  "entries": [
+    {
+      "id": "bw-process.stop-bath-fix",
+      "title": "停显液与定影液",
+      "title_en": "Stop Bath and Fixer",
+      "aliases": [
+        "stop bath",
+        "停显液",
+        "Kodak Stop Bath",
+        "Ilfostop",
+        "fixer",
+        "定影液",
+        "Kodak Fixer",
+        "F-5",
+        "F-10",
+        "TF-3",
+        "Hypam",
+        "Rapid Fixer",
+        "硫代硫酸钠",
+        "硫代硫酸铵",
+        "clearing time",
+        "清透时间",
+        "HCA",
+        "Hypo Clearing Agent"
+      ],
+      "type": "chemical",
+      "level": 3,
+      "era": "1874 至今",
+      "tags": [
+        "停显",
+        "定影",
+        "配方",
+        "酸度",
+        "容量",
+        "保存"
+      ],
+      "summary": "停显液把胶片从显影状态转到可定影状态。定影液用硫代硫酸盐溶去未曝光的卤化银。两者的酸度、容量与保存期决定保存结果。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "停显的三条技术路线"
+        },
+        {
+          "kind": "p",
+          "text": "停显液（stop bath）的作用有两个：尽快彻底停止显影；把胶片调到适于酸硬化定影液的 pH 区间。第二个作用在实际使用中更重要：酸硬化定影液的寿命取决于硬化剂是否淤积，停显液决定进液时的 pH 是否落在可用区间内。显影时间短于 10 分钟时，快速停显的价值最大。"
+        },
+        {
+          "kind": "table",
+          "caption": "三种停显液对比",
+          "rows": [
+            {
+              "c1": "酸停显（1–2% 醋酸）",
+              "c2": "尽快停止显影",
+              "c3": "把胶片调到 pH 4–5，延长硬化定影液寿命",
+              "c4": "显影液含碳酸盐时起泡，可能引起网纹；有气味",
+              "c5": "开罐首 1–2 次可能无法在 10 s 内停止显影"
+            },
+            {
+              "c1": "缓冲酸停显（如 TS-7）",
+              "c2": "3 秒内停止显影",
+              "c3": "高盐含量防起泡、防网纹与过度膨胀，与酸定影液兼容最好",
+              "c4": "pH 4.5 最理想，pH 5 为安全上限",
+              "c5": "用指示剂（BCG）监控"
+            },
+            {
+              "c1": "亚硫酸氢钠或硼酸停显",
+              "c2": "停止显影",
+              "c3": "pH 较高，不起泡，不干扰金属硬化剂",
+              "c4": "酸性弱，停止速度不如醋酸",
+              "c5": "硼酸 3–5%，约可处理 10 张 8×10"
+            },
+            {
+              "c1": "清水停显（流水）",
+              "c2": "稀释并耗尽显影液",
+              "c3": "同时产生有价值的锐度邻接效应",
+              "c4": "高光迅速耗尽，暗部继续片刻",
+              "c5": "显影时间须相应缩短"
+            }
+          ],
+          "text": "三种停显液对比"
+        },
+        {
+          "kind": "formula",
+          "caption": "缓冲停显液 TS-7 原液（1 L）",
+          "text": "水（52 °C）500 mL\n28% 醋酸 120 mL\n乙酸钠 80 g\n冷水至 1 L\n理想 pH 4.5，总酸度提供耐力"
+        },
+        {
+          "kind": "formula",
+          "caption": "商品停显液（Kodak SB-5 / Ilford Ilfostop）",
+          "text": "Kodak SB-5：1% 醋酸 + 硫酸钠 45 g/L（用于 D-23/D-25，去除亚硫酸钙白垢）\nIlford ILFOSTOP：按厂商说明稀释 1+19，18–24 °C，20 °C 时 10 秒，容量 15 卷 135-36/L"
+        },
+        {
+          "kind": "note",
+          "text": "柠檬酸类停显液会络合硬化剂金属离子而削弱硬化，不与酸硬化定影液配合使用。指示剂：溴甲酚绿（BCG）在 pH 4 以下呈黄色，刚过 4 转绿，pH 5 以上转蓝。液体转蓝后不久应弃用。pH 计须先用标准液校准。5% 食用白醋按 1:1 或 1:2 稀释可作应急停显液。"
+        },
+        {
+          "kind": "h2",
+          "text": "定影的化学原理"
+        },
+        {
+          "kind": "p",
+          "text": "定影液（fixer）用硫代硫酸盐与未曝光的卤化银反应，生成可溶的银络合物，从乳剂中洗去。反应速度决定清透时间（clearing time）。影像本身的金属银不溶于硫代硫酸盐，因此在碱性定影液中过定影不会损失影像。"
+        },
+        {
+          "kind": "table",
+          "caption": "定影液类型",
+          "rows": [
+            {
+              "c1": "酸硬化定影（F-5、F-10）",
+              "c2": "硫代硫酸钠 + 明矾 + 硼酸盐",
+              "c3": "明胶硬化，抗划伤，适合未冲洗前的湿片存放",
+              "c4": "可用 pH 范围 4.2–6.2，最大硬化在 pH 4.5",
+              "c5": "需配缓冲停显液；水洗需 20–30 min"
+            },
+            {
+              "c1": "酸非硬化定影（Kodak Fixer）",
+              "c2": "硫代硫酸钠 + 硼酸盐",
+              "c3": "不硬化，乳剂保持柔软",
+              "c4": "适合显影后直接水洗的流程",
+              "c5": "水洗 10–15 min 或加 HCA"
+            },
+            {
+              "c1": "快速定影（Rapid Fixer）",
+              "c2": "硫代硫酸铵为主",
+              "c3": "约比硫代硫酸钠快一倍",
+              "c4": "常配氯化铵或硫酸铵",
+              "c5": "定影 2–5 min"
+            },
+            {
+              "c1": "碱性定影（TF-2、TF-3）",
+              "c2": "硫代硫酸铵 + 偏硼酸钠",
+              "c3": "不溶解银影像，过定影无损失；水洗极快",
+              "c4": "推荐用于 pyro 等染色显影液",
+              "c5": "TF-3 工作液 1+4；需总水洗 2 min"
+            }
+          ],
+          "text": "定影液类型"
+        },
+        {
+          "kind": "formula",
+          "caption": "F-5 酸硬化定影液（每 L）",
+          "text": "硫代硫酸钠五水合物 240 g\n亚硫酸钠 15 g\n硼酸 7.5 g\n28% 醋酸 48 mL\n钾明矾 15 g"
+        },
+        {
+          "kind": "formula",
+          "caption": "F-10 酸硬化定影液（每 L）",
+          "text": "硫代硫酸钠 330 g\n亚硫酸钠 7.5 g\n偏硼酸钠（Kodalk）30 g\n28% 醋酸 71.25 mL\n钾明矾 22.5 g"
+        },
+        {
+          "kind": "formula",
+          "caption": "TF-3 碱性定影液（每 L 原液）",
+          "text": "57–60% 硫代硫酸铵 800 mL\n亚硫酸钠 60 g\n偏硼酸钠 5 g\n工作液稀释 1+4"
+        },
+        {
+          "kind": "formula",
+          "caption": "Hypo Clearing Agent（1 L 原液）",
+          "text": "水（52 °C）750 mL\n无水亚硫酸钠 200 g\n亚硫酸氢钠 15 g\n冷水至 1 L\n工作液稀释 1:10（酸定影流程使用）"
+        },
+        {
+          "kind": "h2",
+          "text": "容量、酸度与保存"
+        },
+        {
+          "kind": "table",
+          "caption": "工作条件",
+          "rows": [
+            {
+              "c1": "定影温度",
+              "c2": "18–24 °C",
+              "c3": "20 °C 时 2–5 min",
+              "c4": "温度与显影液相同",
+              "c5": "参见 $bw-process.mixing-temp-control"
+            },
+            {
+              "c1": "搅拌",
+              "c2": "入液后连续搅 30 s",
+              "c3": "螺旋罐与 Ilfortec HC 定影节奏相同",
+              "c4": "轻敲罐排气泡",
+              "c5": "参见 $process-equipment.tank"
+            },
+            {
+              "c1": "定影时间",
+              "c2": "清透时间的 2–3 倍",
+              "c3": "最少 3 min",
+              "c4": "过定影会降低永久性",
+              "c5": "参见 $film-stock.latitude"
+            },
+            {
+              "c1": "容量",
+              "c2": "每 L 约 20–25 卷 135-36 不补充",
+              "c3": "Ilford Rapid/Hypam 1+4 为 24 卷/L",
+              "c4": "经验上限每 L 不超过 20 张 8×10",
+              "c5": "见下方测试法"
+            },
+            {
+              "c1": "停显衔接",
+              "c2": "入酸定影前在新鲜酸停显液搅 30–60 s，或流水冲 60 s",
+              "c3": "然后加 1 min HCA",
+              "c4": "流水洗 5–10 min",
+              "c5": "碱性定影免 HCA"
+            },
+            {
+              "c1": "保存（工作液）",
+              "c2": "不超过 2 个月",
+              "c3": "环境温度超 29 °C 时不超过 2 周",
+              "c4": "发黄发浑即硫析出，立即弃用",
+              "c5": "见下方提示"
+            },
+            {
+              "c1": "保存（商品原液）",
+              "c2": "不超过 1 年",
+              "c3": "存放过 1 个月须满瓶密封",
+              "c4": "5–20 °C 避光",
+              "c5": "原液按厂商说明书"
+            }
+          ],
+          "text": "工作条件"
+        },
+        {
+          "kind": "h2",
+          "text": "清透时间测试"
+        },
+        {
+          "kind": "ol",
+          "text": "开红灯。取一段同批 35 mm 引片或 1–2 英寸的 120 片，浸入新鲜定影液，轻搅。\n观察底片完全透明所需的时间，记录为清透时间。\n每次换液前用同一类胶片重复测试。清透时间翻倍即弃液。\n测试片用湿片。干片的清透时间偏慢，会给出错误判断。"
+        },
+        {
+          "kind": "warn",
+          "text": "多数酸定影配方因酸与亚硫酸钠反应放出二氧化硫，气味重。F-6 与 F-10 配方把醋酸与亚硫酸钠的比例调低，气味明显减轻。指示型停显液的染料会被带入定影液，掩盖硫析出信号，因此不要用指示型停显液配满容量的定影流程。"
+        },
+        {
+          "kind": "note",
+          "text": "归档要求：定影后必须彻底清除硫代硫酸盐。残留量高时影像随时间褪色为黄色再转为棕色。参见 $archive.washing-storage 与 $bw-process.washing-storage。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "The Film Developing Cookbook 第 12 章（停显与定影）",
+          "url": "https://dupa.ie/wp-content/uploads/2023/03/Bill-Troop-Steve-Anchell-The-Film-Developing-Cookbook-2019-Routledge.pdf",
+          "kind": "book",
+          "note": "停显原理、TS-7 配方、F-5/F-6/F-10/F-24/TF-2/TF-3 配方、清透测试、HCA 配方。"
+        },
+        {
+          "name": "Ilfortec HC 技术资料（Ilfostop 与 Hypam / Rapid Fixer 条件）",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2025/02/ILFOTEC-HC-200225.pdf",
+          "kind": "manufacturer",
+          "note": "Ilfostop 1+19 10 秒 15 卷/L；Hypam 与 Rapid Fixer 1+4，2–5 分钟，24 卷/L。"
+        },
+        {
+          "name": "Ilfortec DD-X 技术资料（配套停显与定影）",
+          "url": "https://ilford.co.jp/photo/wp-content/uploads/2025/06/TDS_ILFOTEC_DDX_AUG19.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Ilford Photo：Kodak 化学药品对照表（Kodak Fixer ↔ Hypam / Rapid Fixer）",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/03/ILFORD-PHOTO-to-Kodak-equivalents.pdf",
+          "kind": "manufacturer"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "bw-process.developer-types"
+        ],
+        "next": [
+          "bw-process.washing-storage"
+        ],
+        "related": [
+          "bw-process.sop-tank",
+          "bw-process.stain-troubleshoot"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "酸停显液的两个主要作用是什么？",
+          "type": "single",
+          "options": [
+            "冷却胶片、提高片速",
+            "停止显影并把胶片调到适于硬化定影液的 pH",
+            "补充银盐",
+            "去除水"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "停显的第二个作用决定酸硬化定影液的寿命，比单纯停显更实用。"
+        },
+        {
+          "q": "理想缓冲停显液的 pH 是多少？",
+          "type": "single",
+          "options": [
+            "2.5",
+            "3.0",
+            "4.5",
+            "6.5"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "pH 4.5 兼顾停止速度与明胶稳定，pH 5 为安全上限。"
+        },
+        {
+          "q": "定影时间应如何确定？",
+          "type": "single",
+          "options": [
+            "固定 5 分钟",
+            "清透时间的 2–3 倍，最少 3 分钟",
+            "清透时间的一半",
+            "与显影时间相同"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "定影时间是清透时间的安全倍数。过定影降低影像永久性。"
+        },
+        {
+          "q": "碱性定影液相对酸定影液的关键优势是什么？",
+          "type": "single",
+          "options": [
+            "价格低",
+            "不溶解银影像，过定影无损失且水洗快",
+            "气味小到无味",
+            "不需要搅拌"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "硫代硫酸盐在碱性条件不与银影像媒染，因此提高永久性并缩短水洗。"
+        }
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "bw-process.mixing-temp-control",
+      "title": "配药、温度与搅拌控制",
+      "title_en": "Mixing, Temperature and Agitation Control",
+      "aliases": [
+        "混合",
+        "配药",
+        "温度控制",
+        "搅拌",
+        "搅拌控制",
+        "temperature compensation",
+        "容量"
+      ],
+      "type": "process",
+      "level": 3,
+      "era": "1880 至今",
+      "tags": [
+        "配药",
+        "温度",
+        "搅拌",
+        "容量",
+        "计时"
+      ],
+      "summary": "显影结果由四个变量决定：配药准确、温度准确、搅拌一致、时间准确。前三者出错时结果不可重复。本条目给出控制方法与允许偏差。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "配药的四条规则"
+        },
+        {
+          "kind": "ol",
+          "text": "按顺序加入组分。先把保护剂完全溶解，再加显影主体，最后加加速剂。加固体前液温需按配方要求（多为 40–52 °C）。\n每加一种组分后等待其完全溶解再继续。粉末结块会造成局部高浓度，形成显影不均。\n定容到规定体积。称量误差 5% 以内可接受；碱类必须精确。\n标明配制日期、批次与稀释比。工作液瓶上写明稀释比。"
+        },
+        {
+          "kind": "warn",
+          "text": "配氢氧化钠溶液时把碱加到水中并持续搅拌，不要把水倒入碱液。稀释液若显影液被水过度稀释，密度会明显不足。见 $bw-process.exhaustion。"
+        },
+        {
+          "kind": "h2",
+          "text": "温度控制"
+        },
+        {
+          "kind": "table",
+          "caption": "温度与时间的换算",
+          "rows": [
+            {
+              "c1": "温度偏差",
+              "c2": "显影时间调整",
+              "c3": "依据",
+              "c4": "适用",
+              "c5": "备注"
+            },
+            {
+              "c1": "低 1 °C",
+              "c2": "+10%",
+              "c3": "Ilfortec HC 官方换算",
+              "c4": "所有显影液",
+              "c5": "推荐区间 20–24 °C"
+            },
+            {
+              "c1": "高 1 °C",
+              "c2": "−10%",
+              "c3": "Ilfortec HC 官方换算",
+              "c4": "所有显影液",
+              "c5": "20 °C 4 分约等于 23 °C 3 分"
+            },
+            {
+              "c1": "低于推荐区间",
+              "c2": "按厂商低温表查时间",
+              "c3": "厂商逐档时间表",
+              "c4": "18 °C 及以下",
+              "c5": "D-76、D-89 各给 18–24 °C 档"
+            },
+            {
+              "c1": "水洗温度",
+              "c2": "与处理液相差 5 °C 以内",
+              "c3": "Ilford 与 Kodak 均要求",
+              "c4": "停显、定影、水洗",
+              "c5": "温差过大会引起网纹"
+            },
+            {
+              "c1": "染色显影液",
+              "c2": "严格按厂商温度",
+              "c3": "Pyrocat-HD 给 21/24/27 °C 三档",
+              "c4": "pyro 类",
+              "c5": "见 $bw-process.pyro"
+            }
+          ],
+          "text": "温度与时间的换算"
+        },
+        {
+          "kind": "p",
+          "text": "显影温度是密度与反差最敏感的变量。温差 1 °C 相当于密度变化显著。测量水温时测处理液本体，不测水浴。深罐的温度变化比小罐慢，但每次补液会改变温度，因此补液液温须与罐内一致。"
+        },
+        {
+          "kind": "image",
+          "src": "img/lab-balance.png",
+          "alt": "Mettler AE-260 分析天平。配液时的称量精度直接影响显影活性。",
+          "caption": "Mettler AE-260 分析天平。配液时的称量精度直接影响显影活性。",
+          "credit": "US DEA",
+          "license": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File%3AAnalytical_balance_mettler_ae-260.jpg"
+        },
+        {
+          "kind": "h2",
+          "text": "搅拌控制"
+        },
+        {
+          "kind": "table",
+          "caption": "规范搅拌节奏",
+          "rows": [
+            {
+              "c1": "阶段",
+              "c2": "操作",
+              "c3": "目的",
+              "c4": "适用",
+              "c5": "不做的后果"
+            },
+            {
+              "c1": "入液后 5 s 内",
+              "c2": "小型罐 5–7 个翻转周期",
+              "c3": "润湿乳剂并排气泡",
+              "c4": "所有小型罐显影",
+              "c5": "气泡处显影受抑制，形成低密度圆斑"
+            },
+            {
+              "c1": "首 30 s",
+              "c2": "静置",
+              "c3": "让液流稳定",
+              "c4": "Kodak 罐显规范",
+              "c5": "初始扰动影响密度"
+            },
+            {
+              "c1": "其后",
+              "c2": "小型罐每 30 s 搅 5 s，2–5 周期",
+              "c3": "带出表面副产物",
+              "c4": "标准节奏",
+              "c5": "显影不均、灰雾上升"
+            },
+            {
+              "c1": "深罐",
+              "c2": "首 15–30 s 连续上下；其后每分钟提出滴干 5–10 s，倾斜方向交替",
+              "c3": "整体交换液体",
+              "c4": "多卷批量",
+              "c5": "层间密度差"
+            },
+            {
+              "c1": "Ilfortec",
+              "c2": "首 10 s 倒转 4 次；其后每分钟头 10 s 倒转 4 次；每次搅拌后轻敲罐底",
+              "c3": "排气泡并均匀",
+              "c4": "螺旋罐",
+              "c5": "低密度斑"
+            },
+            {
+              "c1": "锐度显影液",
+              "c2": "最少且一致的搅拌",
+              "c3": "保持高锐度",
+              "c4": "Rodinal、Pyrocat-HD",
+              "c5": "锐度下降或出现条纹"
+            }
+          ],
+          "text": "规范搅拌节奏"
+        },
+        {
+          "kind": "note",
+          "text": "搅拌不足使明胶层邻近面局部耗尽、双向扩散变慢，显影速率下降。搅拌过强在显影时间短时使密度上升约 30%、反差约上升一倍。搅拌方式须随机，不要固定方向，否则流动方向会积累密度形成条纹。参见 $bw-process.hc-110。"
+        },
+        {
+          "kind": "h2",
+          "text": "容量与液量"
+        },
+        {
+          "kind": "table",
+          "caption": "每卷所需最小液量",
+          "rows": [
+            {
+              "c1": "工作液状态",
+              "c2": "最小液量",
+              "c3": "适用",
+              "c4": "卷数",
+              "c5": "备注"
+            },
+            {
+              "c1": "未稀释显影液",
+              "c2": "至少 250 mL（建议 300–350 mL）",
+              "c3": "D-76、Xtol、DD-X 1+4",
+              "c4": "单卷小型罐",
+              "c5": "必须完全浸没 reel"
+            },
+            {
+              "c1": "稀释显影液",
+              "c2": "至少 500 mL",
+              "c3": "D-76 1:1、Rodinal 1:25–1:50、HC-110 1+31",
+              "c4": "单卷",
+              "c5": "见 $bw-process.rodinal"
+            },
+            {
+              "c1": "高度稀释显影液",
+              "c2": "至少 1 L",
+              "c3": "D-76 1:3、Rodinal 1+100、HC-110 1+90",
+              "c4": "单卷",
+              "c5": "见 $bw-process.hc-110"
+            },
+            {
+              "c1": "定影液",
+              "c2": "覆盖卷数并留搅动空间",
+              "c3": "所有定影液",
+              "c4": "每 L 20–25 卷 135-36",
+              "c5": "见 $bw-process.stop-bath-fix"
+            },
+            {
+              "c1": "预水洗",
+              "c2": "同显影液温度的清水",
+              "c3": "pyro 与盘显片",
+              "c4": "每卷",
+              "c5": "预水洗 2 min"
+            }
+          ],
+          "text": "每卷所需最小液量"
+        },
+        {
+          "kind": "p",
+          "text": "转膜时排干液体再入下一步。带液入下一步会稀释下一步药液，降低其有效浓度并改变 pH。转膜滴干时间控制在 10 秒内。参见 $bw-process.sop-tank。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Kodak Professional D-76 说明书 TSC 0460（搅拌规范）",
+          "url": "https://kodakalaris.co.jp/images/TSC0460-D-76.pdf",
+          "kind": "manufacturer",
+          "note": "小型罐、深罐、盘显三种搅拌程序。"
+        },
+        {
+          "name": "Ilfortec HC 技术资料（温度换算与搅拌节奏）",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2025/02/ILFOTEC-HC-200225.pdf",
+          "kind": "manufacturer",
+          "note": "每降 1 °C 加 10%，每升 1 °C 减 10%；连续搅拌减约 15%。"
+        },
+        {
+          "name": "The Film Developing Cookbook 第 4 章（搅拌影响与容量数据）",
+          "url": "https://dupa.ie/wp-content/uploads/2023/03/Bill-Troop-Steve-Anchell-The-Film-Developing-Cookbook-2019-Routledge.pdf",
+          "kind": "book",
+          "note": "引 Ives & Jensen (1943) 的搅拌对密度与反差的影响数据。"
+        },
+        {
+          "name": "Kodak 白黑现像液 技術資料 TSC0599（逐档温度时间表）",
+          "url": "http://kodakalaris.co.jp/images/TSC0599.pdf",
+          "kind": "manufacturer"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "bw-process.developer-types"
+        ],
+        "next": [
+          "bw-process.sop-tank"
+        ],
+        "related": [
+          "bw-process.exhaustion",
+          "process-equipment.tank"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "工作液温度比推荐值低 1 °C 时，显影时间如何调整？",
+          "type": "single",
+          "options": [
+            "缩短 10%",
+            "延长 10%",
+            "不变",
+            "延长一倍以上"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "Ilfortec HC 官方换算为每降 1 °C 加 10%。"
+        },
+        {
+          "q": "入液后不排气泡会造成什么结果？",
+          "type": "single",
+          "options": [
+            "密度上升",
+            "气泡处显影受抑制，形成低密度圆斑",
+            "灰雾上升",
+            "定影变慢"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "气泡隔开显影液与乳剂，该区域显影不足，形成圆形低密度斑。"
+        },
+        {
+          "q": "小型罐显影的规范初始搅拌是？",
+          "type": "single",
+          "options": [
+            "入液后 5 s 内 5–7 个翻转周期",
+            "首 30 s 连续搅",
+            "首 1 分钟静置",
+            "每 30 s 完整翻转罐体一次"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "Kodak 规范为 5 秒内 5–7 个翻转周期，随后首 30 s 静置。"
+        },
+        {
+          "q": "转膜时带液入下一步会造成什么？",
+          "type": "single",
+          "options": [
+            "提高下一步药液浓度",
+            "稀释下一步药液并改变 pH",
+            "提高片速",
+            "缩短下一步时间"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "前一步残液稀释后一步药液，浓度与 pH 同时偏离设计值。"
+        }
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "bw-process.washing-storage",
+      "title": "水洗、润湿、除静电与保存",
+      "title_en": "Washing, Wetting, Antistatic and Storage",
+      "aliases": [
+        "washing",
+        "水洗",
+        "Ilford Wash",
+        "archive washer",
+        "润湿剂",
+        "rinse aid",
+        "静电",
+        "保存",
+        "hypo clearing",
+        "wash aid"
+      ],
+      "type": "process",
+      "level": 3,
+      "era": "1930 至今",
+      "tags": [
+        "水洗",
+        "润湿",
+        "静电",
+        "保存",
+        "档案"
+      ],
+      "summary": "水洗的目标是彻底清除硫代硫酸盐与显影剂残留。方法分流水冲洗与省水换水法两类。润湿剂促进均匀干燥，除静电措施防止放电曝光。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "水洗的化学要求"
+        },
+        {
+          "kind": "p",
+          "text": "定影后必须把硫代硫酸盐洗出乳剂。残留硫代硫酸盐在湿热环境下分解，生成的产物使银影像褪色，表现为先黄后棕。显影剂残留（尤其对苯二酚与邻苯二酚）形成染色。因此水洗的目标是硫代硫酸盐，其次是显影剂残留。"
+        },
+        {
+          "kind": "image",
+          "src": "img/bw-negative-strip.png",
+          "alt": "黑白 135 负片、Instamatic 彩色负片与装框幻灯片的对照。水洗与保存条件针对不同片基材料。",
+          "caption": "黑白 135 负片、Instamatic 彩色负片与装框幻灯片的对照。水洗与保存条件针对不同片基材料。",
+          "credit": "Friedrich Haag",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File%3A2015_04_08_009_Analogfilme.jpg"
+        },
+        {
+          "kind": "table",
+          "caption": "水洗时间",
+          "rows": [
+            {
+              "c1": "定影液类型",
+              "c2": "水洗方式",
+              "c3": "时间",
+              "c4": "附加步骤",
+              "c5": "依据"
+            },
+            {
+              "c1": "酸硬化定影（F-5、F-10）",
+              "c2": "流水",
+              "c3": "20–30 min（无 HCA）",
+              "c4": "加 HCA 则 5–10 min",
+              "c5": "cookbook 第 12 章"
+            },
+            {
+              "c1": "酸非硬化定影",
+              "c2": "流水",
+              "c3": "10–15 min",
+              "c4": "HCA 1 min 连续搅",
+              "c5": "cookbook 第 12 章"
+            },
+            {
+              "c1": "碱性定影（TF-3）",
+              "c2": "流水",
+              "c3": "40 s 达档案级",
+              "c4": "总水洗 2 min，去除显影剂残留",
+              "c5": "Haist, book II p.203"
+            },
+            {
+              "c1": "pyro 染色显影",
+              "c2": "流水",
+              "c3": "10–15 min",
+              "c4": "预水洗 2 min",
+              "c5": "见 $bw-process.pyro"
+            },
+            {
+              "c1": "海水冲洗后",
+              "c2": "淡水终洗",
+              "c3": "5 min 或 2×2 min 换洗",
+              "c4": "海水不可配药",
+              "c5": "cookbook 第 12 章"
+            }
+          ],
+          "text": "水洗时间"
+        },
+        {
+          "kind": "p",
+          "text": "水温升高加快水洗。洗水温度保持在 20 °C 左右，与处理液相差 5 °C 以内。温差过大会引起网纹（reticulation）：明胶层交替溶胀与收缩，银发生迁移，颗粒感大幅增加。参见 $bw-process.stain-troubleshoot。"
+        },
+        {
+          "kind": "h2",
+          "text": "流水冲洗与省水换水法"
+        },
+        {
+          "kind": "steps",
+          "caption": "Ilford 螺旋罐省水冲洗法",
+          "items": [
+            {
+              "t": "定影后装满",
+              "d": "用与处理液相差 5 °C 以内的清水装满螺旋罐。"
+            },
+            {
+              "t": "倒转 5 次",
+              "d": "倒转罐体 5 次。"
+            },
+            {
+              "t": "排干重装，倒转 10 次",
+              "d": "排干水，重新装满，再倒转 10 次。"
+            },
+            {
+              "t": "排干重装，倒转 20 次",
+              "d": "排干水，重新装满，倒转 20 次，然后排干。"
+            },
+            {
+              "t": "加润湿剂终洗",
+              "d": "最后用加了几滴润湿剂的清水冲洗。该法适用于非硬化定影液。"
+            }
+          ],
+          "text": "Ilford 螺旋罐省水冲洗法"
+        },
+        {
+          "kind": "p",
+          "text": "Ilford 公布的上述省水法省略了换水间的静置时间。配方研究文献给出的版本在每次换水后静置 5 分钟：装满倒转 5 次静置 5 min；排干重装倒转 10 次静置 5 min；排干重装倒转 20 次静置 5 min 再排干。Ilford 承认自己的版本缺乏实验数据。硬化定影液需要更长的水洗时间，该法不适用。"
+        },
+        {
+          "kind": "h2",
+          "text": "档案洗片机"
+        },
+        {
+          "kind": "p",
+          "text": "档案洗片机（archival washer）与 Ilford Wash 等洗药设备用分槽流水把水与药液分开。相纸使用带独立卡槽（discrete slots）的洗片机可提高洗效率并降低流量。相纸洗药（wash aid）如 ILFORD WASHAID 按厂商比例稀释后使用，纤维基相纸的推荐流程为：定影 1 min → 流水 5 min → WASHAID 1+4 间断搅动 10 min → 流水 5 min。树脂相纸只需 30 秒 vigorous 流水水洗。参见 $printing.print-processing。"
+        },
+        {
+          "kind": "p",
+          "text": "水质影响水洗能力。硬水（含碳酸盐）与含微量碳酸氢钠的软水比蒸馏水更适合水洗。蒸馏水不是好的水洗介质。洗水须过滤去除颗粒物，溶解性硫化物用煮沸去除。"
+        },
+        {
+          "kind": "h2",
+          "text": "润湿剂"
+        },
+        {
+          "kind": "p",
+          "text": "润湿剂（wetting agent / rinse aid）用低泡精制洗涤剂。加在最后一次清水冲洗中，用量为每升水 5 mL（Ilford ILFOTOL 1+200）。它降低水的表面张力，使水膜排干均匀，缩短干燥时间。过多或少都会造成干燥不均。干燥前刮去表面水。"
+        },
+        {
+          "kind": "h2",
+          "text": "除静电"
+        },
+        {
+          "kind": "table",
+          "caption": "静电来源与对策",
+          "rows": [
+            {
+              "c1": "来源",
+              "c2": "表现",
+              "c3": "对策",
+              "c4": "适用范围",
+              "c5": "备注"
+            },
+            {
+              "c1": "干燥时的快速水分蒸发",
+              "c2": "指纹状或树枝状静电印痕",
+              "c3": "最后水洗加润湿剂；降低干燥速率",
+              "c4": "全部胶片",
+              "c5": "首选措施"
+            },
+            {
+              "c1": "拆卷时的机械摩擦",
+              "c2": "条状静电斑",
+              "c3": "开卷时缓慢分离；保持室内湿度 40–60%",
+              "c4": "卷片与散片",
+              "c5": "湿度低于 30% 时风险高"
+            },
+            {
+              "c1": "导电不良的塑料容器",
+              "c2": "随机放电",
+              "c3": "使用导电接地的工作台；使用离子风机",
+              "c4": "暗房与扫描前",
+              "c5": "扫描前除静电可避免扫描条纹"
+            },
+            {
+              "c1": "尼龙衣物与手套",
+              "c2": "放电印痕",
+              "c3": "改用纯棉衣物",
+              "c4": "暗房操作",
+              "c5": "参见 $scanning.scan-settings"
+            }
+          ],
+          "text": "静电来源与对策"
+        },
+        {
+          "kind": "h2",
+          "text": "干燥与保存"
+        },
+        {
+          "kind": "p",
+          "text": "干片在 30–40 °C 的通风干燥柜中晾挂。片基面朝外，乳剂面避免相互接触。FP4 Plus 等需要用干净刮水器刮水后挂晾。参见 $archive.washing-storage。"
+        },
+        {
+          "kind": "table",
+          "caption": "短期与长期保存",
+          "rows": [
+            {
+              "c1": "时期",
+              "c2": "条件",
+              "c3": "关键指标",
+              "c4": "检查",
+              "c5": "参见"
+            },
+            {
+              "c1": "冲洗后 24 h 内",
+              "c2": "阴凉通风处直立存放",
+              "c3": "干燥后无残留药液",
+              "c4": "确认干燥后再封装",
+              "c5": "本条目"
+            },
+            {
+              "c1": "短期（数月）",
+              "c2": "纸袋或无酸封套，15–25 °C，相对湿度 30–50%",
+              "c3": "避光",
+              "c4": "避免高温高湿",
+              "c5": "$archive.washing-storage"
+            },
+            {
+              "c1": "长期（数年）",
+              "c2": "低温低湿密封存放",
+              "c3": "低温显著延长寿命",
+              "c4": "定期检查霉变",
+              "c5": "$archive.cold-storage"
+            },
+            {
+              "c1": "入扫描仪前",
+              "c2": "扫描前除静电",
+              "c3": "无放电印痕",
+              "c4": "接地工作台或离子风机",
+              "c5": "$scanning.scan-settings"
+            }
+          ],
+          "text": "短期与长期保存"
+        },
+        {
+          "kind": "warn",
+          "text": "醋酸停显液残留的负片在归档时会加速褪色。归档级负片采用清水停显或彻底水洗。参见 $archive.mould-removal 与 $archive.cold-storage。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Ilford：Washing Photographic Film & Papers — Instructions for Minimum Water Usage",
+          "url": "http://ilfordphoto.com.cn/wp-content/uploads/2022/01/Reducing-Wash-Water.pdf",
+          "kind": "manufacturer",
+          "note": "螺旋罐省水冲洗法、ILFOTOL 1+200、WASHAID 1+4 相纸流程。"
+        },
+        {
+          "name": "Ilfortec HC 技术资料（定影后水洗与润湿）",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2025/02/ILFOTEC-HC-200225.pdf",
+          "kind": "manufacturer",
+          "note": "水洗 5–10 min、温度 ±5 °C、ILFOTOL 5 mL/L、刮水与干燥。"
+        },
+        {
+          "name": "The Film Developing Cookbook 第 12 章（水洗、网纹、水质、润湿剂）",
+          "url": "https://dupa.ie/wp-content/uploads/2023/03/Bill-Troop-Steve-Anchell-The-Film-Developing-Cookbook-2019-Routledge.pdf",
+          "kind": "book"
+        },
+        {
+          "name": "Ilford Photo：Kodak 化学药品对照表（Washaid ↔ Ilfotol、Photo-flo ↔ Ilfotol）",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/03/ILFORD-PHOTO-to-Kodak-equivalents.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Ilford Photo: Reducing Wash Water（纤维基相纸的定影—水洗—ILFORD WASHAID 1+4 间断搅动 10 分钟—终洗序列）",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2017/03/Reducing-Wash-Water.pdf",
+          "kind": "manufacturer",
+          "note": "厂商原文给出 10 分钟，2015 年 4 月版。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "bw-process.stop-bath-fix"
+        ],
+        "next": [
+          "bw-process.sop-tank"
+        ],
+        "related": [
+          "archive.washing-storage",
+          "archive.cold-storage"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "水洗的首要目标是什么？",
+          "type": "single",
+          "options": [
+            "去除显影液",
+            "去除硫代硫酸盐",
+            "提高反差",
+            "软化乳剂"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "硫代硫酸盐残留使银影像随时间褪色，是水洗的首要目标。"
+        },
+        {
+          "q": "洗水温度与处理液相差多少以内合适？",
+          "type": "single",
+          "options": [
+            "1 °C",
+            "5 °C",
+            "15 °C",
+            "不限制"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "温差过大会引起网纹，明胶层交替溶胀收缩使银迁移。"
+        },
+        {
+          "q": "Ilford 省水冲洗法的适用条件是什么？",
+          "type": "single",
+          "options": [
+            "硬化定影液",
+            "非硬化定影液",
+            "所有定影液",
+            "只适用相纸"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "Ilford 明确说明该法适用于非硬化定影液（Hypam 或 Rapid）。"
+        },
+        {
+          "q": "润湿剂的用量是多少？",
+          "type": "single",
+          "options": [
+            "每升 5 mL",
+            "每升 50 mL",
+            "每升 500 mL",
+            "不用定量"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "ILFOTOL 为 5 mL/L（1+200）。过多或过少都会造成干燥不均。"
+        }
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "bw-process.sop-tank",
+      "title": "家庭罐显标准操作流程",
+      "title_en": "Home Tank Developing SOP",
+      "aliases": [
+        "SOP",
+        "操作流程",
+        "家庭冲洗",
+        "罐显流程",
+        "checklist"
+      ],
+      "type": "process",
+      "level": 2,
+      "era": "至今",
+      "tags": [
+        "SOP",
+        "流程",
+        "家庭",
+        "操作",
+        "检查清单"
+      ],
+      "summary": "本条目给出 13 步家庭罐显流程。以 D-76 原液与 F-5 定影液为例，适用于 135/120 黑白卷片。",
+      "blocks": [
+        {
+          "kind": "image",
+          "src": "img/developing-tank.jpg",
+          "alt": "LPL 35 mm 不锈钢显影罐、两个卷轴与装片器。罐显的基本器材组合。",
+          "caption": "LPL 35 mm 不锈钢显影罐、两个卷轴与装片器。罐显的基本器材组合。",
+          "credit": "Joost J. Bakker IJmuiden",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File%3ALPL_35mm_Stainless_Steel_Developing_Tank_and_Reels_(2X)_%26_Handy_Loader_(51878855221).jpg"
+        },
+        {
+          "kind": "image",
+          "src": "img/reel-winding.png",
+          "alt": "把胶片绕上显影卷轴的走向。螺旋槽决定片距，绕反会造成叠片。",
+          "caption": "把胶片绕上显影卷轴的走向。螺旋槽决定片距，绕反会造成叠片。",
+          "credit": "きたし",
+          "license": "CC BY 2.5",
+          "source": "https://commons.wikimedia.org/wiki/File%3AFilm_reel_winding.svg"
+        },
+        {
+          "kind": "image",
+          "src": "img/developing-film-1937.png",
+          "alt": "1937 年在暗房红灯下手工显影胶片。罐显与盘显都依赖全黑或安全灯环境。",
+          "caption": "1937 年在暗房红灯下手工显影胶片。罐显与盘显都依赖全黑或安全灯环境。",
+          "credit": "Don O'Brien (Flickr: dok1)",
+          "license": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File%3ADevelopingFilm1937.jpg"
+        },
+        {
+          "kind": "steps",
+          "caption": "13 步家庭罐显流程（135/120，D-76 原液，20 °C）",
+          "items": [
+            {
+              "t": "1 暗房准备",
+              "d": "确认温度 20 °C，清洗罐体与 reel，准备 3 个容器：显影、停显、定影。量出显影液 300 mL 与定影液 300 mL，另备清水。"
+            },
+            {
+              "t": "2 装片",
+              "d": "在全黑或暗袋中把胶片装入 reel，确认胶片完全贴紧螺旋槽。胶片弯折方向必须一致。"
+            },
+            {
+              "t": "3 预水洗",
+              "d": "可选。用同温水装满罐体，倒转 5 次，排干。预水洗让乳剂均匀吸水，减少显影不均。大型机处理前的预水洗为 2 min。"
+            },
+            {
+              "t": "4 量取显影液",
+              "d": "按厂商配方量取显影液，温度 20 °C。若用稀释液，此时才配液，用后废弃。参见 $bw-process.mixing-temp-control。"
+            },
+            {
+              "t": "5 装液",
+              "d": "把显影液倒入空罐。罐内应无空气泡残留。"
+            },
+            {
+              "t": "6 入片",
+              "d": "暗处把 reel 放入显影液，立即盖盖。从约 2.5 cm 高处轻敲罐底排气泡。气泡会造成低密度圆斑。"
+            },
+            {
+              "t": "7 初始搅拌",
+              "d": "5 秒内做 5–7 个翻转周期。之后首 30 秒保持静止。参见 $process-equipment.tank。"
+            },
+            {
+              "t": "8 显影计时",
+              "d": "启动计时器。首 30 秒后每 30 秒搅拌 5 秒，2–5 个周期。显影时间按胶片与显影液查厂商表。参见 $bw-process.d-76。"
+            },
+            {
+              "t": "9 停显",
+              "d": "显影结束前 10 秒排液。到时间后立即倒掉显影液，滴干约 10 秒，转入停显液，连续搅 30 秒，滴干后转入定影液。参见 $bw-process.stop-bath-fix。"
+            },
+            {
+              "t": "10 定影",
+              "d": "定影时间取清透时间的 2–3 倍，最少 3 分钟。入液后连续搅 30 秒，随后按搅拌节奏进行。参见 $bw-process.stop-bath-fix。"
+            },
+            {
+              "t": "11 排液与检查",
+              "d": "定影结束前 10 秒排液。取出 reel，在清水中轻搅检查清透情况。定影液不可见浑浊或黄色。"
+            },
+            {
+              "t": "12 水洗",
+              "d": "流水冲洗 10–15 分钟（酸非硬化定影）或 20–30 分钟（酸硬化定影，无 HCA）。硬性定影液加 HCA 1:10 搅 1 分钟，可缩短至 5–10 分钟。参见 $bw-process.washing-storage。"
+            },
+            {
+              "t": "13 润湿与干燥",
+              "d": "最后清水加几滴润湿剂（约 5 mL/L）冲洗。取出胶片，刮去表面水，挂晾在 30–40 °C 的通风干燥柜中。装入封套前确认完全干燥。参见 $archive.washing-storage。"
+            }
+          ],
+          "text": "13 步家庭罐显流程（135/120，D-76 原液，20 °C）"
+        },
+        {
+          "kind": "table",
+          "caption": "各步骤的时间与温度",
+          "rows": [
+            {
+              "c1": "步骤",
+              "c2": "温度",
+              "c3": "时间",
+              "c4": "搅拌",
+              "c5": "参见"
+            },
+            {
+              "c1": "预水洗",
+              "c2": "20 °C",
+              "c3": "30 s 倒转（可选）",
+              "c4": "倒转 5 次",
+              "c5": "$bw-process.washing-storage"
+            },
+            {
+              "c1": "显影",
+              "c2": "20 °C",
+              "c3": "按厂商表（Tri-X 400 原液 6.75 min）",
+              "c4": "首 5 s 内 5–7 周期，其后每 30 s 搅 5 s",
+              "c5": "$bw-process.d-76"
+            },
+            {
+              "c1": "停显",
+              "c2": "20 °C",
+              "c3": "30 s",
+              "c4": "连续搅",
+              "c5": "$bw-process.stop-bath-fix"
+            },
+            {
+              "c1": "定影",
+              "c2": "20 °C",
+              "c3": "5–10 min",
+              "c4": "入液搅 30 s",
+              "c5": "$bw-process.stop-bath-fix"
+            },
+            {
+              "c1": "水洗",
+              "c2": "20 °C",
+              "c3": "10–15 min",
+              "c4": "流水",
+              "c5": "$bw-process.washing-storage"
+            },
+            {
+              "c1": "干燥",
+              "c2": "30–40 °C",
+              "c3": "视片长 1–2 h",
+              "c4": "无",
+              "c5": "$archive.washing-storage"
+            }
+          ],
+          "text": "各步骤的时间与温度"
+        },
+        {
+          "kind": "ul",
+          "text": "开始前的检查项"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Kodak Professional D-76 说明书 TSC 0460（罐显搅拌程序）",
+          "url": "https://kodakalaris.co.jp/images/TSC0460-D-76.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Ilfortec HC 技术资料（每步结束前 10 秒排液、螺旋罐搅拌）",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2025/02/ILFOTEC-HC-200225.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Ilford：Washing Photographic Film & Papers",
+          "url": "http://ilfordphoto.com.cn/wp-content/uploads/2022/01/Reducing-Wash-Water.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "The Film Developing Cookbook 第 4、12 章",
+          "url": "https://dupa.ie/wp-content/uploads/2023/03/Bill-Troop-Steve-Anchell-The-Film-Developing-Cookbook-2019-Routledge.pdf",
+          "kind": "book"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "bw-process.mixing-temp-control"
+        ],
+        "next": [
+          "bw-process.stain-troubleshoot"
+        ],
+        "related": [
+          "process-equipment.tank",
+          "process-equipment.rotator"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "转膜时滴干时间是多久？",
+          "type": "single",
+          "options": [
+            "不滴干立即转入",
+            "约 10 秒",
+            "30 秒",
+            "60 秒"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "滴干约 10 秒可排掉残液，又不至于让乳剂过度干燥。"
+        },
+        {
+          "q": "为什么入片后要轻敲罐底？",
+          "type": "single",
+          "options": [
+            "让显影液均匀",
+            "排掉乳剂表面的气泡",
+            "加速显影",
+            "降低温度"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "气泡隔开显影液与乳剂，该区域显影不足，形成圆形低密度斑。"
+        },
+        {
+          "q": "定影后水洗的首要目的是什么？",
+          "type": "single",
+          "options": [
+            "提高锐度",
+            "清除硫代硫酸盐",
+            "冷却",
+            "软化乳剂"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "硫代硫酸盐残留会使银影像在湿热环境下褪色。"
+        },
+        {
+          "q": "显影结束前 10 秒排液的作用是什么？",
+          "type": "single",
+          "options": [
+            "延长显影",
+            "排掉已耗尽的显影液，减少带入下一步的污染",
+            "降温",
+            "增加密度"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "提前排液可减少残液对停显液与定影液的稀释。"
+        }
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed",
+      "checklist": [
+        "显影液温度 20 °C，用温度计测药液本体",
+        "显影液为新鲜配液或新鲜原液，记录稀释比与配制日期",
+        "reel 无变形，胶片装入到位",
+        "三个容器（显影、停显、定影）已清洗并装好药液",
+        "定影液已用测试片测过清透时间",
+        "停显液用 BCG 指示剂确认 pH 在 4–5",
+        "全暗或暗袋环境可用，罐盖与漏斗备妥",
+        "计时器就位，可读秒",
+        "片基面朝外挂晾位置与干燥柜已预热",
+        "完成后记录温度、时间、搅拌方式与药液批次"
+      ]
+    },
+    {
+      "id": "bw-process.stain-troubleshoot",
+      "title": "黑白冲洗故障排查",
+      "title_en": "Black-and-White Processing Troubleshooting",
+      "aliases": [
+        "troubleshoot",
+        "故障排查",
+        "雾",
+        "竖纹",
+        "密度不均",
+        "紫斑",
+        "生物污染",
+        "条痕",
+        "斑驳",
+        "mottling",
+        "fogging"
+      ],
+      "type": "pitfall",
+      "level": 3,
+      "era": "至今",
+      "tags": [
+        "故障",
+        "雾",
+        "条纹",
+        "斑点",
+        "生物污染",
+        "排查"
+      ],
+      "summary": "本条目按症状排列冲洗故障：雾、竖纹、密度不均、紫斑、生物污染、染色、刮伤、定影不彻底、网纹。",
+      "blocks": [
+        {
+          "kind": "troubleshoot",
+          "caption": "按症状排查",
+          "items": [
+            {
+              "t": "全片均匀灰雾升高",
+              "d": "原因：显影时间过长、显影液 pH 过高、显影液重复使用过久、旧显影液被稀释污染、停显失效。处理：换新鲜显影液；校准 pH；校正计时；测显影液比重；换新停显液并用 BCG 指示剂确认 pH。参见 $bw-process.exhaustion。"
+            },
+            {
+              "t": "局部斑驳（mottling）",
+              "d": "原因：搅拌不均或过弱；显影液被部分排干；显影时间短于 5 分钟而搅拌不足。处理：按规范节奏搅拌；保持每次搅拌幅度一致；延长显影时间到 6 分钟以上。参见 $bw-process.mixing-temp-control。"
+            },
+            {
+              "t": "竖向条纹（vertical lines / streaks）",
+              "d": "原因：罐内药液固定方向流动，密度在流动方向积累。处理：随机方向搅拌；每次搅拌改变方向；避免把罐放在单一方向上静置。参见 $bw-process.pyro。"
+            },
+            {
+              "t": "横向条纹与密度不均",
+              "d": "原因：显影不足、显影液混合不均（配药时组分未完全溶解）、罐内液位低于 reel 上缘。处理：延长显影时间；重配显影液并延长溶解时间；保证液量完全浸没 reel。"
+            },
+            {
+              "t": "圆形低密度斑（气泡斑）",
+              "d": "原因：乳剂表面残留气泡。处理：入片后从约 2.5 cm 高处轻敲罐底排气泡；入液后立即做初始搅拌。参见 $process-equipment.tank。"
+            },
+            {
+              "t": "紫色或红紫色斑",
+              "d": "原因：显影不足的乳剂在停显与定影后残留氧化态显影剂；或显影液被污染。处理：延长显影时间；换新鲜显影液；检查停显液 pH 是否太低（pH 过低引起网纹与紫斑）。参见 $bw-process.stop-bath-fix。"
+            },
+            {
+              "t": "黄色或黄褐色污渍",
+              "d": "原因：显影剂氧化产物沉积；显影液储存过久；焦性没食子酸与邻苯二酚显影后的残留。处理：用新鲜显影液；缩短显影液储存期；pyro 显影后延长水洗。参见 $bw-process.pyro。"
+            },
+            {
+              "t": "生物污染（bio-contamination）",
+              "d": "现象：药液表面出现菌膜或絮状物，负片出现树枝状或霉斑状印痕。原因：药液储存过久、温度偏高、容器未清洗、稀释水含微生物。处理：弃液；彻底清洗容器；用新鲜配液；避免用自来水配制；容器加盖。参见 $archive.mould-removal。"
+            },
+            {
+              "t": "网纹（reticulation）",
+              "d": "原因：明胶层交替溶胀与收缩，常见于洗水温度高于处理液温度；稀酸停显液也可造成。处理：洗水温度保持在与处理液相差 5 °C 以内；改用缓冲停显液；换用非硬化定影液。参见 $bw-process.washing-storage。"
+            },
+            {
+              "t": "定影不彻底（残留卤化银）",
+              "d": "现象：负片在光下继续变黑；薄乳剂处呈奶白色。处理：定影时间取清透时间的 2–3 倍；换新鲜定影液；检查定影液 pH。参见 $bw-process.stop-bath-fix。"
+            },
+            {
+              "t": "划伤（scratch）",
+              "d": "原因：reel 变形、胶片在装片时受力不均、片基干后粘连。处理：换新 reel；装片时保持胶片不受力；干片须待完全干燥后再取下；操作时指甲不得接触乳剂面。"
+            },
+            {
+              "t": "静电印痕",
+              "d": "现象：指纹状或树枝状放电斑，多在干燥或拆卷时出现。处理：最后水洗加润湿剂；降低干燥速率；保持室内湿度 40–60%；使用离子风机。参见 $bw-process.washing-storage。"
+            },
+            {
+              "t": "密度过高（negative too dense）",
+              "d": "原因：显影时间过长；温度过高；显影液过浓；曝光过度。处理：缩短显影时间；按温度换算表调整；检查显影液稀释；核对 $capture.exposure-metering。"
+            },
+            {
+              "t": "密度过低（negative too thin）",
+              "d": "原因：显影时间过短；温度过低；显影液被稀释；曝光不足。处理：延长显影时间；检查温度；排干后再转膜以免稀释下一步；核对曝光。参见 $capture.exposure-metering。"
+            },
+            {
+              "t": "反差偏低",
+              "d": "原因：显影液重复使用过久；显影时间过短；低反差配方稀释过度。处理：用新鲜显影液；延长显影时间；改用标准配方。参见 $bw-process.exhaustion。"
+            },
+            {
+              "t": "二向色雾（dichroic fog）",
+              "d": "现象：乳剂面呈蓝黑色，背面呈黄褐色，厚乳剂最明显。原因：快速片在长时间高 pH 显影中产生。处理：缩短显影时间；改用更低稀释；pyro 快速片按厂商建议降低稀释或缩短时间。参见 $bw-process.pyro。"
+            }
+          ],
+          "text": "按症状排查"
+        },
+        {
+          "kind": "troubleshoot",
+          "caption": "按排查顺序定位",
+          "items": [
+            {
+              "t": "1 统计分布",
+              "d": "看问题是全片、整卷、还是局部。全片问题指向药液或温度；整卷问题指向该卷的曝光或保存；局部问题指向操作（气泡、条纹、刮伤）。"
+            },
+            {
+              "t": "2 排除操作",
+              "d": "检查搅拌、温度、计时、转膜滴干、罐体清洁。"
+            },
+            {
+              "t": "3 排除药液",
+              "d": "检查显影液新鲜度与比重、停显液 pH、定影液清透时间。"
+            },
+            {
+              "t": "4 交叉验证",
+              "d": "用同一显影液配一卷已知曝光的测试片。结果正常则问题在操作；结果异常则问题在药液或温度。"
+            },
+            {
+              "t": "5 记录",
+              "d": "记录温度、显影液批次与稀释比、时间、搅拌方式、罐型。水洗与保存问题往往在数月后才显现，因此记录须完整。参见 $archive.washing-storage。"
+            }
+          ],
+          "text": "按排查顺序定位"
+        },
+        {
+          "kind": "note",
+          "text": "诊断应先看特性曲线，再看画面。密度、反差与灰雾三项数据可区分曝光问题与冲洗问题。参见 $film-stock.characteristic-curve。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "The Film Developing Cookbook 第 4、8、12 章（显影不均、条纹、网纹、生物污染）",
+          "url": "https://dupa.ie/wp-content/uploads/2023/03/Bill-Troop-Steve-Anchell-The-Film-Developing-Cookbook-2019-Routledge.pdf",
+          "kind": "book",
+          "note": "含搅拌与条纹关系、网纹成因、起泡条件与染色排查。"
+        },
+        {
+          "name": "Kodak Professional D-76 说明书 TSC 0460（气泡斑与搅拌造成的密度不均）",
+          "url": "https://kodakalaris.co.jp/images/TSC0460-D-76.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Pyrocat-HD 使用说明（Bostick-Sullivan）（dichroic fog 与减少搅拌）",
+          "url": "https://www.bostick-sullivan.com/wp-content/uploads/2022/03/Pyro-HD-instructions.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Ilford：Washing Photographic Film & Papers（润湿与干燥）",
+          "url": "http://ilfordphoto.com.cn/wp-content/uploads/2022/01/Reducing-Wash-Water.pdf",
+          "kind": "manufacturer"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "bw-process.sop-tank"
+        ],
+        "next": [],
+        "related": [
+          "film-stock.characteristic-curve",
+          "bw-process.exhaustion"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "负片上出现圆形低密度斑，最可能的原因是什么？",
+          "type": "single",
+          "options": [
+            "显影液温度过高",
+            "乳剂表面残留气泡",
+            "定影液过旧",
+            "胶片受光过度"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "气泡隔开显影液与乳剂，该区域显影不足，形成圆形低密度斑。"
+        },
+        {
+          "q": "竖向条纹的成因是什么？",
+          "type": "single",
+          "options": [
+            "药液固定方向流动",
+            "显影温度过低",
+            "定影时间过长",
+            "胶片未完全干燥"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "罐内固定方向的液流使密度在流动方向积累形成竖纹，须随机搅拌。"
+        },
+        {
+          "q": "网纹（reticulation）的常见成因是什么？",
+          "type": "single",
+          "options": [
+            "洗水温度高于处理液温度",
+            "显影液过旧",
+            "润湿剂过多",
+            "定影液容量不足"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "温差引起明胶层交替溶胀收缩，银迁移使颗粒感大增。"
+        },
+        {
+          "q": "药液表面出现菌膜时应如何处理？",
+          "type": "single",
+          "options": [
+            "过滤后继续使用",
+            "弃液并彻底清洗容器，用新鲜配液",
+            "加入更多定影液",
+            "加热到 40 °C 继续使用"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "生物污染会污染负片；弃液、清洗容器、避免用自来水配制是标准对策。"
+        }
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    }
+  ]
+}

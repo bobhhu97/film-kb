@@ -1,0 +1,2893 @@
+{
+ "module": "color-process",
+ "shard": "color-process.02",
+ "shard_zh": "E-6 反转工艺、RA-4 印放与彩色化",
+ "note": "本分片覆盖 E-6 反转工艺、RA-4 印放工艺、化学反转变黑白、彩色负片的保存与染料稳定性，以及彩色冲洗史。VEBRA 与 RA-120 缺少权威来源，相关条目标 draft。",
+ "entries": [
+  {
+   "id": "color-process.dye-stabilization",
+   "title": "染料稳定性与彩色材料保存",
+   "title_en": "Dye Stability and Preservation of Color Materials",
+   "aliases": [
+    "染料稳定性",
+    "褪色",
+    "色偏",
+    "保存",
+    "档案",
+    "冷存",
+    "档案性能"
+   ],
+   "type": "concept",
+   "level": 4,
+   "era": "至今",
+   "tags": [
+    "染料",
+    "褪色",
+    "保存",
+    "档案",
+    "甲醛",
+    "稳定"
+   ],
+   "summary": "彩色材料的染料由显影时的成色剂反应生成。染料会随时间褪色或色偏。保存条件决定档案性能。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "染料的生成与不稳定性"
+    },
+    {
+     "kind": "p",
+     "text": "彩色材料的染料在显影时由氧化的显影剂与乳剂内的成色剂反应生成。染料分子在光、氧、水汽与酸性条件下发生分解。因此彩色材料属非永久档案材料。"
+    },
+    {
+     "kind": "p",
+     "text": "C-41 负片会随时间褪色或色偏。早期片材的问题更明显。新片是否属档案级仍有争议。参见 $scanning.digital-hold-on-film。"
+    },
+    {
+     "kind": "h2",
+     "text": "稳定剂的作用"
+    },
+    {
+     "kind": "p",
+     "text": "稳定液与稳定浴（stabilizer）的功能是提高染料的耐光与耐湿稳定性。E-6 的稳定浴含甲醛与润湿剂。甲醛作染料防腐剂。E-6 的终淋在 1990 年代中期前称稳定浴，因含甲醛；现用表面活性剂与抗真菌剂 miconazole。"
+    },
+    {
+     "kind": "p",
+     "text": "稳定不足的后果是成片日后向绿色偏移。偏差在数月或数年后才显现。稳定后不得再冲洗，否则冲掉稳定组分。"
+    },
+    {
+     "kind": "warn",
+     "text": "Kodak 的 Final Rinse 不含稳定剂。用 Final Rinse 加 Replenisher 处理 Vericolor SO-279 与 SO-5072 会降低影像稳定性。此类片材使用 Stabilizer III 加 Replenisher。"
+    },
+    {
+     "kind": "h2",
+     "text": "定影与档案性能"
+    },
+    {
+     "kind": "p",
+     "text": "E-6 的第二级定影（可选）用新鲜定影液反向级联（reverse cascade），可大幅改善片材与相纸的档案性能。许多 C-41RA minilab 也用两级反向级联定影以提高产能。参见 $color-process.e6-formulas。"
+    },
+    {
+     "kind": "p",
+     "text": "水洗不彻底时，残留的硫代硫酸钠继续与染料反应。因此末级水洗用新鲜流动水，并保证流量。参见 $archive.washing-storage。"
+    },
+    {
+     "kind": "h2",
+     "text": "保存条件"
+    },
+    {
+     "kind": "ul",
+     "text": "低温、低湿、避光。参见 $archive.cold-storage。"
+    },
+    {
+     "kind": "ul",
+     "text": "使用无酸材料存放。相纸与片基材料避免与含硫或含酸材料接触。"
+    },
+    {
+     "kind": "ul",
+     "text": "扫描或印放后保留原件。数字化不等于替代原件。参见 $archive.digital-preservation。"
+    },
+    {
+     "kind": "ul",
+     "text": "记录处理条件与扫描设置，作为档案元数据。参见 $color-process.color-negative-logs。"
+    },
+    {
+     "kind": "h2",
+     "text": "染料与颗粒的差异"
+    },
+    {
+     "kind": "p",
+     "text": "C-41 印片不含银颗粒。颗粒是染料云的外观。因此放大时的对焦方式与黑白胶片不同。参见 $printing.enlarger 与 $color-process.c41-cross-process。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "JOBO E-6 Processing Manual（稳定浴成分与绿偏移后果）",
+     "url": "https://www.mr-alvandi.com/downloads/film-and-processing/e6-process-manual.pdf",
+     "kind": "manual"
+    },
+    {
+     "name": "C-41 process — Wikipedia（染料不稳定性与档案争议）",
+     "url": "https://en.wikipedia.org/wiki/C-41_process",
+     "kind": "article"
+    },
+    {
+     "name": "KODAK Publication Z-131: Using KODAK FLEXICOLOR Chemicals（Stabilizer III 与 Final Rinse 的差异）",
+     "url": "https://business.kodakmoments.com/sites/default/files/wysiwyg/pro/chemistry/z131.pdf",
+     "kind": "manufacturer"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "color-process.c41"
+    ],
+    "next": [
+     "archive.cold-storage"
+    ],
+    "related": [
+     "scanning.digital-hold-on-film",
+     "archive.digital-preservation",
+     "color-process.color-negative-logs"
+    ],
+    "contrast": []
+   },
+   "quiz": [
+    {
+     "q": "E-6 稳定浴失效导致成片日后出现什么现象？",
+     "type": "single",
+     "options": [
+      "向绿色偏移",
+      "向红色偏移",
+      "变蓝",
+      "变黄"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "染料耐久性不足，数月或数年后向绿色偏移。"
+    },
+    {
+     "q": "E-6 终淋现用的添加物是什么？",
+     "type": "single",
+     "options": [
+      "甲醛",
+      "表面活性剂与抗真菌剂 miconazole",
+      "溴酸钾",
+      "对苯二胺"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "1990 年代中期前用甲醛。现用表面活性剂与 miconazole。"
+    },
+    {
+     "q": "第二级定影改善档案性能的方式是？",
+     "type": "single",
+     "options": [
+      "反向级联",
+      "提高温度",
+      "延长水洗",
+      "增加稳定液"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "用新鲜定影液反向级联。"
+    },
+    {
+     "q": "C-41 负片能否作为永久档案材料？",
+     "type": "bool",
+     "options": [
+      "是",
+      "否"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "染料会随时间褪色或色偏。新片是否档案级仍有争议。"
+    }
+   ],
+   "updated": "2026-01-12",
+   "status": "reviewed"
+  },
+  {
+   "id": "color-process.e6",
+   "title": "E-6 彩色反转工艺",
+   "title_en": "E-6 Color Reversal Process",
+   "aliases": [
+    "E-6",
+    "E6",
+    "反转工艺",
+    "color reversal",
+    "Ektachrome",
+    "Fujichrome",
+    "六浴工艺"
+   ],
+   "type": "process",
+   "level": 3,
+   "era": "1972 至今",
+   "tags": [
+    "反转工艺",
+    "彩色正片",
+    "E-6",
+    "工艺原理"
+   ],
+   "summary": "E-6 是显影彩色反转片的工艺。它用化学方法代替中间曝光，把曝光的卤化银转为未曝光的卤化银。E-6 于 1972 年推出，取代 E-3 与 E-4。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "工艺定位"
+    },
+    {
+     "kind": "p",
+     "text": "E-6 属于显影成色工艺（chromogenic process）。显影剂在还原金属银的同时被氧化。氧化的显影剂与各层的成色剂反应生成染料。"
+    },
+    {
+     "kind": "image",
+     "src": "img/e6-process.png",
+     "alt": "E-6 反转冲洗中银被漂除后剩余的染料影像。",
+     "caption": "E-6 反转冲洗中银被漂除后剩余的染料影像。",
+     "credit": "Mliu92",
+     "license": "CC BY-SA 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File%3AE-6_step_05.svg"
+    },
+    {
+     "kind": "p",
+     "text": "E-6 于 1972 年推出，取代此前的 E-3 与 E-4。E-3 需要用光雾化实现反转，成品褪色快。E-4 使用污染性化学品，例如剧毒的反转剂 borane tert-butylamine（TBAB）。E-6 去除了这些化学品。"
+    },
+    {
+     "kind": "p",
+     "text": "1980 年代起非 Kodak 彩色反转片也兼容 E-6。例外是 Fujichrome 1600 Professional D。该片兼容 E-6，最佳结果用定制的 PZ 工艺。"
+    },
+    {
+     "kind": "h2",
+     "text": "乳剂结构"
+    },
+    {
+     "kind": "p",
+     "text": "片基上叠三层感光乳剂：红感光层、绿感光层、蓝感光层。蓝感光层下方设黄滤色层（Carey Lea silver）。该黄滤色层阻止蓝光曝到绿感光层与红感光层。"
+    },
+    {
+     "kind": "h2",
+     "text": "十一个步骤的化学作用"
+    },
+    {
+     "kind": "steps",
+     "text": "按顺序执行十一步。全过程在全暗中进行。前七步为工艺主浴，第 8 步水洗为可选，之后是终洗、稳定与干燥。商业冲洗按化学浴计为「六浴」：首显、反转、彩显、预漂洗、漂白、定影；水洗、稳定与干燥不计入浴数。",
+     "items": [
+      {
+       "t": "1. 首显（first developer）",
+       "d": "黑白显影剂（potassium hydroquinone monosulfonate–phenidone 体系）把三层已曝光的卤化银还原为金属银。形成负像银。本步决定密度、反差、Dmax 与 Dmin，是全流程最关键的一步。优选显影剂为 4-hydroxymethyl-4-methyl-1-phenyl-3-pyrazolidinone。"
+      },
+      {
+       "t": "2. 首洗（first rinse）",
+       "d": "停显并防止显影液带入反转浴。本步过去用醋酸停显浴，后改为纯水浴，代价是首显液强度略降。"
+      },
+      {
+       "t": "3. 反转（reversal）",
+       "d": "内含替代中间曝光的化学品（tin dichloride、propionic acid）。使拍摄时未曝光的卤化银得以显影。反转浴之后不得水洗。反转浴也可用 800 footcandle-seconds（8.6 klx·s）的光量替代。"
+      },
+      {
+       "t": "4. 彩色显影（color developer）",
+       "d": "含 CD-3。作用于首显未显影的已化学曝光的卤化银，形成正像银。首显形成的负像金属银在本步不参与反应。本步生成青、品红、黄染料。误差影响反差、Dmax、雾、色平衡与显影均匀度。"
+      },
+      {
+       "t": "5. 预漂洗（pre-bleach，原 conditioner bath）",
+       "d": "甲醛作染料防腐剂，EDTA 启动漂白。本浴依赖彩色显影液的带入工作，因此彩色显影与预漂洗之间无水洗。浓度过高（增加 50 % 以上）会生成 leuco-cyan 染料，表现为红色（测得的青染料）Dmax 过低与红调阴影。"
+      },
+      {
+       "t": "6. 漂白（bleach）",
+       "d": "用 iron(III) EDTA 把金属银重新变回卤化银，以便在定影中去除。反应为 Fe3+ EDTA + Ag + Br⁻ → Fe2+ EDTA + AgBr。误差导致残留银、红色 Dmax 偏低与黄雾（蓝 Dmin 过高）。"
+      },
+      {
+       "t": "7. 定影（fixing）",
+       "d": "把残留的卤化银转为可溶银化合物并洗出。误差导致黄雾与斑点。"
+      },
+      {
+       "t": "8. 水洗（可选）",
+       "d": "冲掉漂白液并延长定影浴寿命。推荐用于转筒、管线等低液量场合。"
+      },
+      {
+       "t": "9. 终洗（final rinse）",
+       "d": "去除残留显影物质。不充分会缩短胶片寿命。"
+      },
+      {
+       "t": "10. 稳定（stabilizer）",
+       "d": "提高染料耐久性，含甲醛与润湿剂。稳定后不得再冲洗。误差导致成品透明片日后向绿色偏移。"
+      },
+      {
+       "t": "11. 干燥",
+       "d": "温度不高于 145 °F（63 °C），在无尘环境进行。"
+      }
+     ]
+    },
+    {
+     "kind": "warn",
+     "text": "首显、首洗与反转浴三步必须在全暗中进行。彩色显影之后可在安全光下操作。"
+    },
+    {
+     "kind": "h2",
+     "text": "标准时间与温度"
+    },
+    {
+     "kind": "table",
+     "caption": "Kodak E-6 浴序条件（引用 Kodak Publication Z-119 的步骤表，标称值为目标值）",
+     "rows": [
+      {
+       "c1": "首显",
+       "c2": "6 分钟",
+       "c3": "98–103 °F（36.7–39.4 °C）",
+       "c4": "最关键的一步",
+       "c5": "时间温度敏感"
+      },
+      {
+       "c1": "首洗",
+       "c2": "2 分钟",
+       "c3": "92–103 °F（33.3–39.4 °C）",
+       "c4": "过去用醋酸停显浴",
+       "c5": "现为纯水浴，目标值 2 分钟"
+      },
+      {
+       "c1": "反转浴",
+       "c2": "2 分钟",
+       "c3": "75–103 °F（23.9–39.4 °C）",
+       "c4": "可用光量替代",
+       "c5": "浴后不水洗"
+      },
+      {
+       "c1": "彩色显影",
+       "c2": "6 分钟",
+       "c3": "98–103 °F（36.7–39.4 °C）",
+       "c4": "含 CD-3",
+       "c5": "pH 变化引起色偏"
+      },
+      {
+       "c1": "预漂洗",
+       "c2": "2 分钟",
+       "c3": "75–103 °F（23.9–39.4 °C）",
+       "c4": "依赖彩色显影液带入",
+       "c5": "1990s 前称 conditioner"
+      },
+      {
+       "c1": "漂白",
+       "c2": "6 分钟",
+       "c3": "92–103 °F（33.3–39.4 °C）",
+       "c4": "Fe3+ EDTA 氧化银",
+       "c5": "依赖预漂洗带入"
+      },
+      {
+       "c1": "定影",
+       "c2": "4 分钟",
+       "c3": "92–103 °F（33.3–39.4 °C）",
+       "c4": "可选第二级定影",
+       "c5": "反向级联改善档案性能"
+      },
+      {
+       "c1": "终洗",
+       "c2": "4 分钟",
+       "c3": "92–103 °F（33.3–39.4 °C）",
+       "c4": "水",
+       "c5": "可选步骤"
+      },
+      {
+       "c1": "终淋",
+       "c2": "1 分钟",
+       "c3": "环境温度",
+       "c4": "含表面活性剂与抗真菌剂 miconazole",
+       "c5": "1990s 前称稳定浴"
+      }
+     ],
+     "text": "Kodak E-6 浴序条件（引用 Kodak Publication Z-119 的步骤表，标称值为目标值）"
+    },
+    {
+     "kind": "note",
+     "text": "以上为 Kodak Publication Z-119 的步骤时间表目标值。首洗的目标值为 2 分钟，厂商给出的允许范围为 1–4 分钟，超出范围才需要重配首显液；库内其他资料按 3 分钟叙述，属该范围内的可用值。转盘式处理器的具体时间见 $color-process.e6-formulas。E-6 的浴数多于其他工艺，带来更多潜在错误源。"
+    },
+    {
+     "kind": "h2",
+     "text": "为什么 E-6 特别敏感"
+    },
+    {
+     "kind": "p",
+     "text": "E-6 的浴数带来更多潜在错误源。轻微色偏或密度波动无法像负-正工艺那样在放大到相纸时补偿。片材上的每个错误直接落到最终结果。之后不存在纠正机会。因此 E-6 比所有常用工艺需要更高的谨慎与洁净度。"
+    },
+    {
+     "kind": "p",
+     "text": "反转成片是最终影像。扫描前没有修正环节。参见 $scanning.scan-settings 与 $film-stock.color-balance。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "E-6 process — Wikipedia（引用 Kodak Publication Z-119 的浴温与时间表）",
+     "url": "https://en.wikipedia.org/wiki/E-6_process",
+     "kind": "article"
+    },
+    {
+     "name": "JOBO E-6 Processing Manual (J.J. Bockemühl, JOBO Labortechnik)",
+     "url": "https://www.mr-alvandi.com/downloads/film-and-processing/e6-process-manual.pdf",
+     "kind": "manual",
+     "note": "JOBO 的 E-6 处理手册（J.J. Bockemühl），含浴序、温度、时间与洁净度要求。原文件为德文版，99 页。"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "bw-process.developer-types"
+    ],
+    "next": [
+     "color-process.e6-formulas",
+     "color-process.e6-push-pull"
+    ],
+    "related": [
+     "color-process.reversal-black-white",
+     "color-process.c41",
+     "color-process.dye-stabilization",
+     "color-process.timeline"
+    ],
+    "contrast": [
+     "color-process.c41"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "E-6 工艺中哪一步取代了中间曝光？",
+     "type": "single",
+     "options": [
+      "首显",
+      "首洗",
+      "反转浴",
+      "彩色显影"
+     ],
+     "answer": [
+      2
+     ],
+     "why": "反转浴内含替代中间曝光的化学品。"
+    },
+    {
+     "q": "E-6 首显使用哪类显影剂？",
+     "type": "single",
+     "options": [
+      "CD-3",
+      "CD-4",
+      "potassium hydroquinone monosulfonate–phenidone",
+      "对苯二胺"
+     ],
+     "answer": [
+      2
+     ],
+     "why": "首显是黑白显影，形成负像银。"
+    },
+    {
+     "q": "E-6 的彩色显影使用哪一号显影剂？",
+     "type": "single",
+     "options": [
+      "CD-3",
+      "CD-4",
+      "Phenidone",
+      "Metol"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "彩色显影用 CD-3。C-41 用 CD-4。"
+    },
+    {
+     "q": "E-6 反转浴之后能否立即水洗？",
+     "type": "bool",
+     "options": [
+      "是",
+      "否"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "带入的反转物质在彩色显影时需要。"
+    }
+   ],
+   "updated": "2026-01-12",
+   "status": "reviewed"
+  },
+  {
+   "id": "color-process.e6-bath-errors",
+   "title": "E-6 各浴误差与补偿",
+   "title_en": "E-6 Bath Errors and Compensation",
+   "aliases": [
+    "E-6 误差",
+    "浴误差",
+    "leuco-cyan",
+    "残留银",
+    "黄雾",
+    "绿偏移",
+    "色偏"
+   ],
+   "type": "table",
+   "level": 5,
+   "era": "至今",
+   "tags": [
+    "E-6",
+    "误差诊断",
+    "色偏",
+    "leuco-cyan"
+   ],
+   "summary": "E-6 的每一浴都对应特定的误差后果。本表按浴列出受影响的质量指标与典型症状。定位症状可缩小误差范围。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "各浴的误差后果"
+    },
+    {
+     "kind": "table",
+     "caption": "E-6 各浴被扰动时的表现",
+     "rows": [
+      {
+       "c1": "首显 First Developer",
+       "c2": "密度、反差、Dmax、Dmin",
+       "c3": "首显时间温度敏感，反差由本步控制",
+       "c4": "最关键的一步",
+       "c5": "调整首选延长或缩短首显时间"
+      },
+      {
+       "c1": "首洗 First Rinse",
+       "c2": "密度与色偏",
+       "c3": "停显不充分会把显影液带入反转浴",
+       "c4": "现为纯水浴，无停显剂",
+       "c5": "保证水洗流量与时间"
+      },
+      {
+       "c1": "反转 Reversal",
+       "c2": "反差与 Dmax",
+       "c3": "未曝光的卤化银未充分转为可显影状态",
+       "c4": "可用 8.6 klx·s 光量替代排查",
+       "c5": "浴后不水洗"
+      },
+      {
+       "c1": "彩色显影 Color Developer",
+       "c2": "反差、Dmax、雾、色平衡、显影均匀度",
+       "c3": "显影液被稀释使染料量上升；只有稀释到 3–4 倍水量才使染料量下降",
+       "c4": "pH 变化引起色偏",
+       "c5": "检查显影液浓度与带入量"
+      },
+      {
+       "c1": "预漂洗 Pre-bleach",
+       "c2": "青染料 Dmax 与阴影色",
+       "c3": "浓度过高（增加 50 % 以上）生成 leuco-cyan 染料",
+       "c4": "表现为红色 Dmax 过低与红调阴影",
+       "c5": "降低预漂洗浓度"
+      },
+      {
+       "c1": "漂白 Bleach",
+       "c2": "残留银、红色 Dmax、黄雾",
+       "c3": "铁被还原为铁（II），氧化能力下降",
+       "c4": "黄雾表现为蓝 Dmin 过高",
+       "c5": "检查铁浓度与 pH"
+      },
+      {
+       "c1": "定影 Fixing",
+       "c2": "黄雾与斑点",
+       "c3": "残留卤化银未络合",
+       "c4": "定影不充分",
+       "c5": "延长定影，检查硫代硫酸盐"
+      },
+      {
+       "c1": "终洗 Final Rinse",
+       "c2": "胶片寿命",
+       "c3": "残留显影物质继续反应",
+       "c4": "存放后雾加深",
+       "c5": "保证终洗流量"
+      },
+      {
+       "c1": "稳定 Stabilizer",
+       "c2": "染料耐久性",
+       "c3": "甲醛与润湿剂不足",
+       "c4": "成品透明片日后向绿色偏移，数月或数年后显现",
+       "c5": "使用新鲜稳定液"
+      }
+     ],
+     "text": "E-6 各浴被扰动时的表现"
+    },
+    {
+     "kind": "h2",
+     "text": "pH 与色轴"
+    },
+    {
+     "kind": "p",
+     "text": "彩色显影液的 pH 变化引起色偏。偏色方向随片材代数而异。Kodak E100G 与 E100GX 以及 Fujichrome 的 pH 变化在绿-品红轴产生色偏。旧款 Ektachrome 的 pH 变化在黄-蓝轴产生色偏。"
+    },
+    {
+     "kind": "h2",
+     "text": "测控片判定"
+    },
+    {
+     "kind": "p",
+     "text": "测控片减参考片的三色（RGB）密度差过大即产生颜色离散（color spread）。为排除可见偏色，HD 与 LD 控制步中最远两个彩色密度间距不得超过限值。"
+    },
+    {
+     "kind": "table",
+     "caption": "密度偏差容差实测示例",
+     "rows": [
+      {
+       "c1": "Dmin",
+       "c2": "约 ± 0.10 至 ± 0.15",
+       "c3": "低于底片片基雾与残留染料",
+       "c4": "超限提示水洗或染色残留",
+       "c5": "参考值由实测建立"
+      },
+      {
+       "c1": "LD",
+       "c2": "约 ± 0.10 至 ± 0.15",
+       "c3": "低密度步",
+       "c4": "超限提示显影不足",
+       "c5": "参考值由实测建立"
+      },
+      {
+       "c1": "HD",
+       "c2": "约 ± 0.10 至 ± 0.15",
+       "c3": "高密度步",
+       "c4": "超限提示显影过度",
+       "c5": "参考值由实测建立"
+      },
+      {
+       "c1": "Dmax",
+       "c2": "约 ± 0.10 至 ± 0.15",
+       "c3": "最大密度",
+       "c4": "超限提示显影或染料生成不足",
+       "c5": "参考值由实测建立"
+      }
+     ],
+     "text": "密度偏差容差实测示例"
+    },
+    {
+     "kind": "p",
+     "text": "上表的容差是 Agfa、Fuji 与 Kodak 实测的量级。精确控制限由所用参考片系列与密度计标定确定。"
+    },
+    {
+     "kind": "h2",
+     "text": "视觉过程控制"
+    },
+    {
+     "kind": "p",
+     "text": "JOBO 手册附录提供自制的颜色测试表作为参考标准。测 1/3/5/6 灰阶各 3 次取均值。在标准光源箱下目视比对该表，可快速发现色偏方向。"
+    },
+    {
+     "kind": "note",
+     "text": "pH 修正用 NaOH 或硫酸滴定。滴定方法与目标 pH 以 JOBO 手册附录与所用药液说明书为准。相关数值标 draft。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "JOBO E-6 Processing Manual（各浴误差后果与 pH 修正附录）",
+     "url": "https://www.mr-alvandi.com/downloads/film-and-processing/e6-process-manual.pdf",
+     "kind": "manual"
+    },
+    {
+     "name": "E-6 process — Wikipedia（彩色显影 pH 与色轴的关系）",
+     "url": "https://en.wikipedia.org/wiki/E-6_process",
+     "kind": "article"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "color-process.e6"
+    ],
+    "next": [
+     "color-process.e6-push-pull"
+    ],
+    "related": [
+     "color-process.dye-stabilization",
+     "color-process.troubleshoot-color",
+     "film-stock.color-balance"
+    ],
+    "contrast": [],
+    "part_of": [
+     "color-process.e6"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "E-6 预漂洗浓度过高会导致什么染料？",
+     "type": "single",
+     "options": [
+      "leuco-cyan",
+      "leuco-magenta",
+      "leuco-yellow",
+      "formazan"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "浓度增加 50 % 以上生成 leuco-cyan 染料。"
+    },
+    {
+     "q": "预漂洗浓度过高的表现是什么？",
+     "type": "single",
+     "options": [
+      "蓝 Dmin 过高",
+      "红调阴影",
+      "绿偏移",
+      "品红过重"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "青染料 Dmax 过低，阴影偏红。"
+    },
+    {
+     "q": "稳定浴失效会导致成片日后出现什么现象？",
+     "type": "single",
+     "options": [
+      "向绿色偏移",
+      "向红色偏移",
+      "变蓝",
+      "变黄"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "染料耐久性不足，数月或数年后向绿色偏移。"
+    },
+    {
+     "q": "彩色显影液被稀释会使染料量如何变化？",
+     "type": "single",
+     "options": [
+      "下降",
+      "上升",
+      "不变",
+      "先升后降"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "稀释使染料量上升。只有稀释到 3–4 倍水量才使染料量下降。"
+    }
+   ],
+   "updated": "2026-01-12",
+   "status": "reviewed"
+  },
+  {
+   "id": "color-process.e6-formulas",
+   "title": "E-6 配方与工作液容量",
+   "title_en": "E-6 Formulas and Working Solution Volume",
+   "aliases": [
+    "E-6 配方",
+    "Tetenal 三浴",
+    "Kodak E-6",
+    "Fuji E-6",
+    "Bellini E-6",
+    "first developer 配方"
+   ],
+   "type": "chemical",
+   "level": 4,
+   "era": "1972 至今",
+   "tags": [
+    "配方",
+    "E-6",
+    "三浴",
+    "容量",
+    "保存期"
+   ],
+   "summary": "本条并列 Bellini、JOBO/Kodak 与 Tetenal 三浴的 E-6 配比与时间表。Tetenal 三浴已因厂商变动停产。公开文档只给体积配比，原液克数与 pH 标 draft。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "Bellini E-6 Kit 工作液配比"
+    },
+    {
+     "kind": "table",
+     "caption": "Bellini KIT E6/1（REV1 20/11/2025）每 1 L 工作液配比",
+     "rows": [
+      {
+       "c1": "首显液 First Developer",
+       "c2": "750 mL 水",
+       "c3": "浓缩液 250 mL",
+       "c4": "黑白显影剂体系",
+       "c5": "分两步加料"
+      },
+      {
+       "c1": "反转浴 Reversal",
+       "c2": "900 mL 水",
+       "c3": "浓缩液 100 mL",
+       "c4": "含 tin dichloride 与 propionic acid",
+       "c5": "浴后不水洗"
+      },
+      {
+       "c1": "彩色显影液 Color Developer",
+       "c2": "700 mL 水",
+       "c3": "Part A 250 mL + Part B 50 mL",
+       "c4": "含 CD-3 类显影剂",
+       "c5": "先加 A 后加 B"
+      },
+      {
+       "c1": "预漂洗液 Pre-bleach",
+       "c2": "900 mL 水",
+       "c3": "浓缩液 100 mL",
+       "c4": "含 formaldehyde 与 EDTA",
+       "c5": "依赖彩色显影液带入"
+      },
+      {
+       "c1": "漂白液 Bleach",
+       "c2": "490 mL 水",
+       "c3": "浓缩液 510 mL",
+       "c4": "铁（III）EDTA 体系",
+       "c5": "配比接近 1:1"
+      },
+      {
+       "c1": "定影液 Fixer",
+       "c2": "900 mL 水",
+       "c3": "浓缩液 100 mL",
+       "c4": "含硫代硫酸铵与亚硫酸钠",
+       "c5": "低温段用 33–38 °C"
+      },
+      {
+       "c1": "稳定液 Stabilizer",
+       "c2": "990 mL 水",
+       "c3": "浓缩液 10 mL",
+       "c4": "含 formaldehyde 与润湿剂",
+       "c5": "配 10 L 使用"
+      }
+     ],
+     "text": "Bellini KIT E6/1（REV1 20/11/2025）每 1 L 工作液配比"
+    },
+    {
+     "kind": "p",
+     "text": "Bellini 套药每套配 1 L 首显、1 L 反转、1 L 彩色显影、1 L 预漂洗、1 L 漂白、1 L 定影与 10 L 稳定液。平均容量 12 卷 36 画幅彩色反转片。"
+    },
+    {
+     "kind": "h2",
+     "text": "Bellini E-6 工艺条件"
+    },
+    {
+     "kind": "table",
+     "caption": "Bellini E-6 步骤表（1–6 卷 / 7–12 卷）",
+     "rows": [
+      {
+       "c1": "预热 Pre-heat",
+       "c2": "38.0 °C",
+       "c3": "3:00 / 3:00",
+       "c4": "干式预热，避免水预热",
+       "c5": "首显最关键"
+      },
+      {
+       "c1": "首显 First Developer",
+       "c2": "38.00 ± 0.3 °C",
+       "c3": "6:00 / 7:00 或 6:30 / 7:30",
+       "c4": "前 15 秒连续搅拌，之后每 30 秒 5 秒",
+       "c5": "过曝延长，欠曝缩短"
+      },
+      {
+       "c1": "水洗 Wash",
+       "c2": "38.0 °C",
+       "c3": "2:00 / 2:00",
+       "c4": "同首显搅拌",
+       "c5": "纯水浴"
+      },
+      {
+       "c1": "反转 Reversal",
+       "c2": "38.0 °C",
+       "c3": "2:00 / 2:00",
+       "c4": "只前 15 秒搅拌",
+       "c5": "浴后不水洗"
+      },
+      {
+       "c1": "彩色显影 Color Developer",
+       "c2": "38.00 ± 1.0 °C",
+       "c3": "6:00 / 6:30",
+       "c4": "同首显搅拌",
+       "c5": "pH 影响色偏"
+      },
+      {
+       "c1": "预漂洗 Pre-bleach",
+       "c2": "38.0 °C",
+       "c3": "2:00 / 2:00",
+       "c4": "只前 15 秒搅拌",
+       "c5": "浓度不可过高"
+      },
+      {
+       "c1": "漂白 Bleach",
+       "c2": "38.0 °C",
+       "c3": "6:00 / 6:00",
+       "c4": "同首显搅拌",
+       "c5": "彻底氧化"
+      },
+      {
+       "c1": "定影 Fixer",
+       "c2": "33.0–38.0 °C",
+       "c3": "4:00 / 4:00",
+       "c4": "同首显搅拌",
+       "c5": "可选第二级定影"
+      },
+      {
+       "c1": "水洗 ×3",
+       "c2": "33.0–38.0 °C",
+       "c3": "2:00 ×2",
+       "c4": "同首显搅拌",
+       "c5": "冲洗干净"
+      },
+      {
+       "c1": "稳定 Stabilizer",
+       "c2": "20.0 °C",
+       "c3": "0:30 / 0:30",
+       "c4": "只前 15 秒搅拌",
+       "c5": "稳定后不再冲洗"
+      }
+     ],
+     "text": "Bellini E-6 步骤表（1–6 卷 / 7–12 卷）"
+    },
+    {
+     "kind": "note",
+     "text": "Bellini 稳定液在常温下使用，用 1–2 L 稳定液在流程末做 3–4 次水洗式漂洗，每次换新鲜稳定液。稳定后不再冲洗。参见 $color-process.dye-stabilization。"
+    },
+    {
+     "kind": "h2",
+     "text": "各厂商 E-6 时间差异"
+    },
+    {
+     "kind": "table",
+     "caption": "JOBO 手册给出的 38 °C 时间表（预热 5:00）",
+     "rows": [
+      {
+       "c1": "Kodak E-6",
+       "c2": "首显 6:30",
+       "c3": "反转 2:00 + 预漂洗 2:00 + 漂白 6:00",
+       "c4": "定影 4:00",
+       "c5": "稳定 1:00"
+      },
+      {
+       "c1": "Fuji Hunt",
+       "c2": "首显 6:30",
+       "c3": "反转 2:00 + 预漂洗 2:00 + 漂白 6:00",
+       "c4": "定影 4:00",
+       "c5": "稳定 1:00"
+      },
+      {
+       "c1": "Agfa AP 44",
+       "c2": "首显 6:30",
+       "c3": "无反转浴、无预漂洗，漂白 6:00",
+       "c4": "定影 4:00",
+       "c5": "稳定 1:00"
+      },
+      {
+       "c1": "Tetenal 3 Bath",
+       "c2": "首显 6:30",
+       "c3": "反转与显影合并、漂定合并",
+       "c4": "漂定 4:00",
+       "c5": "稳定 1:00"
+      },
+      {
+       "c1": "Photo Technology 1 Bath",
+       "c2": "首显 6:00",
+       "c3": "反转 2:00 + 预漂洗 2:00 + 漂定合一 6:00",
+       "c4": "定影 4:00",
+       "c5": "稳定 1:00"
+      }
+     ],
+     "text": "JOBO 手册给出的 38 °C 时间表（预热 5:00）"
+    },
+    {
+     "kind": "p",
+     "text": "Fuji 片若按 21 DIN（如 Fujichrome 100）须首显 7:00。欲用 6:30 需过曝 1/3 档，最多 2/3 档。Kodak 与 Photo Technology 建议转盘处理用 60 % 反转浴浓度（1 L 用 30 mL 浓缩加 970 mL 水）。"
+    },
+    {
+     "kind": "h2",
+     "text": "工作液容量"
+    },
+    {
+     "kind": "table",
+     "caption": "转筒最少药液量（135-36 每卷，mL）",
+     "rows": [
+      {
+       "c1": "1 卷",
+       "c2": "125 mL",
+       "c3": "单卷",
+       "c4": "小型转筒",
+       "c5": "7 卷以下各档加 125 mL"
+      },
+      {
+       "c1": "5 卷",
+       "c2": "625 mL",
+       "c3": "单卷",
+       "c4": "中型转筒",
+       "c5": "8 卷 1000 mL，9 卷 1125 mL，10 卷 1250 mL"
+      },
+      {
+       "c1": "12 卷",
+       "c2": "1500 mL",
+       "c3": "单卷",
+       "c4": "标准",
+       "c5": "135 格式 11 卷 1375 mL，12 卷 1500 mL"
+      },
+      {
+       "c1": "120 格式 1 卷",
+       "c2": "110 mL",
+       "c3": "单卷",
+       "c4": "120 系统",
+       "c5": "6 卷 660 mL，8 卷 880 mL，10 卷 1100 mL"
+      },
+      {
+       "c1": "4×5 英寸",
+       "c2": "33 mL/卷",
+       "c3": "单卷",
+       "c4": "大片",
+       "c5": "8 卷 264 mL，12 卷 396 mL"
+      },
+      {
+       "c1": "13×18 cm",
+       "c2": "57 mL/卷",
+       "c3": "单卷",
+       "c4": "大片",
+       "c5": "6 卷 342 mL"
+      }
+     ],
+     "text": "转筒最少药液量（135-36 每卷，mL）"
+    },
+    {
+     "kind": "h2",
+     "text": "浓缩液保存"
+    },
+    {
+     "kind": "table",
+     "caption": "JOBO E-6 浓缩液保存要求",
+     "rows": [
+      {
+       "c1": "存储温度",
+       "c2": "+5 至 +27 °C",
+       "c3": "低于此温度析出或分层",
+       "c4": "首显、彩色显影 A 部、预漂洗、漂白、定影在 −18 至 +4 °C 析出",
+       "c5": "回温后搅拌使结晶复溶"
+      },
+      {
+       "c1": "未开封原包装",
+       "c2": "至少 6 个月",
+       "c3": "按规格储存",
+       "c4": "更高温度加速反应",
+       "c5": "过期不得使用"
+      },
+      {
+       "c1": "大桶分装推荐",
+       "c2": "首显、反转、彩色显影 4 周",
+       "c3": "预漂洗、漂白、定影、稳定 8 周",
+       "c4": "向液面喷重气体防氧化",
+       "c5": "Tetenal Protectan Spray 等"
+      },
+      {
+       "c1": "配好的工作液（转盘机内）",
+       "c2": "首显、反转、彩色显影 1 周",
+       "c3": "预漂洗、漂白、定影未用 8 周用过 4 周",
+       "c4": "定期更换",
+       "c5": "记录配液日期"
+      }
+     ],
+     "text": "JOBO E-6 浓缩液保存要求"
+    },
+    {
+     "kind": "warn",
+     "text": "在 40 °C 加热后仍不溶的结晶，该浓缩液不得使用。稳定液在 +4 °C 以下出现的沉淀不可再溶。使用前检查浓缩液外观。"
+    },
+    {
+     "kind": "note",
+     "text": "公开文档只给体积配比与保存条件。各浓缩液的克数（g/L）与各浴 pH 未在公开文档中给出，相关字段标 draft，需以厂商最新说明书为准。"
+    },
+    {
+     "kind": "h2",
+     "text": "Tetenal 三浴工艺现状"
+    },
+    {
+     "kind": "p",
+     "text": "Tetenal 的 Colortec E-6 等三浴套药曾广泛用于家用冲洗。Tetenal 于 2019 年几近倒闭，2020 年经管理层收购以 Tetenal 1847 GmbH 重开网店。化学品生产部门于 2022 年剥离为 Norderstedter Chemiewerke，该公司于 2023 年 2 月破产。Tetenal 三浴工艺已不再供应。"
+    },
+    {
+     "kind": "p",
+     "text": "Adox 等厂商仍提供三浴套药。三浴时间表：首显 6:15–6:45 @ 100 ± 0.5 °F（37.8 ± 0.3 °C），水洗 2:30 @ 100 ± 1 °F，彩色显影 6–8 分钟 @ 100 ± 1 °F，水洗 2:30 @ 97 ± 5 °F，漂定 6–8 分钟 @ 97 ± 5 °F，水洗 4 分钟 @ 97 ± 5 °F，稳定 1 分钟 @ 68–77 °F（20.0–25.0 °C），片取出罐外完成。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Bellini Foto KIT E6/1 Technical Data Sheet (REV1 20/11/2025)",
+     "url": "https://web.archive.org/web/2024/https://www.bellinifoto.it/wp-content/uploads/2019/07/E6_scheda-tecnica.pdf",
+     "kind": "manufacturer",
+     "note": "原链接已失效，改用 archive.org 快照。"
+    },
+    {
+     "name": "JOBO E-6 Processing Manual（各厂商时间表、容量与保存要求）",
+     "url": "https://www.mr-alvandi.com/downloads/film-and-processing/e6-process-manual.pdf",
+     "kind": "manual"
+    },
+    {
+     "name": "E-6 process — Wikipedia（Tetenal 三浴时间表与停产经过）",
+     "url": "https://en.wikipedia.org/wiki/E-6_process",
+     "kind": "article"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "color-process.e6"
+    ],
+    "next": [
+     "color-process.e6-push-pull"
+    ],
+    "related": [
+     "color-process.e6-bath-errors",
+     "color-process.temperature-critical"
+    ],
+    "contrast": [
+     "color-process.c41-chemistry"
+    ],
+    "part_of": [
+     "color-process.e6"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "Bellini E-6 首显液配 1 L 时用多少浓缩液？",
+     "type": "single",
+     "options": [
+      "100 mL",
+      "250 mL",
+      "510 mL",
+      "10 mL"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "首显液为 750 mL 水加 250 mL 浓缩液。"
+    },
+    {
+     "q": "Bellini E-6 漂白液配 1 L 时用多少浓缩液？",
+     "type": "single",
+     "options": [
+      "100 mL",
+      "250 mL",
+      "510 mL",
+      "990 mL"
+     ],
+     "answer": [
+      2
+     ],
+     "why": "漂白液为 490 mL 水加 510 mL 浓缩液。"
+    },
+    {
+     "q": "Tetenal 三浴工艺目前的状态是？",
+     "type": "single",
+     "options": [
+      "仍在供应",
+      "已停产",
+      "改为四浴",
+      "仅在欧洲供应"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "Tetenal 生产部门破产，三浴工艺不再供应。"
+    },
+    {
+     "q": "转筒冲洗 12 卷 135-36 反转片最少需多少药液？",
+     "type": "single",
+     "options": [
+      "1000 mL",
+      "1250 mL",
+      "1500 mL",
+      "2000 mL"
+     ],
+     "answer": [
+      2
+     ],
+     "why": "12 卷需 1500 mL。"
+    }
+   ],
+   "checklist": [
+    "按顺序先加水再加浓缩液",
+    "浓缩液回温后搅拌至澄清",
+    "记录配液日期",
+    "检查 40 °C 加热后是否仍析出",
+    "每卷用新鲜稳定液漂洗 3–4 次"
+   ],
+   "updated": "2026-01-12",
+   "status": "reviewed"
+  },
+  {
+   "id": "color-process.e6-push-pull",
+   "title": "E-6 push 与 pull",
+   "title_en": "E-6 Push and Pull",
+   "aliases": [
+    "E-6 push",
+    "E-6 pull",
+    "首显延长",
+    "首显缩短",
+    "过曝显影",
+    "欠曝显影"
+   ],
+   "type": "technique",
+   "level": 4,
+   "era": "1972 至今",
+   "tags": [
+    "push",
+    "pull",
+    "首显",
+    "容差",
+    "Dmax"
+   ],
+   "summary": "E-6 的 push 用延长首显实现。pull 用缩短首显实现。首显是唯一可调的步骤。push/pull 片不适合用标准控片监控。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "定义"
+    },
+    {
+     "kind": "p",
+     "text": "push 指欠曝曝光后延长首显时间。延长首显使未充分曝光的区域达到目标密度。pull 指过曝曝光后缩短首显时间，减少整体密度。"
+    },
+    {
+     "kind": "p",
+     "text": "E-6 只调首显时间。其他步骤的时间按表执行。不用调温控制密度。参见 $color-process.temperature-critical。"
+    },
+    {
+     "kind": "h2",
+     "text": "调整范围"
+    },
+    {
+     "kind": "table",
+     "caption": "首显时间调整限值",
+     "rows": [
+      {
+       "c1": "密度普遍过高",
+       "c2": "延长首显 15 秒增量",
+       "c3": "上限 8 分 00 秒",
+       "c4": "比标准 6:30 长 90 秒",
+       "c5": "不调温度"
+      },
+      {
+       "c1": "密度过低",
+       "c2": "缩短首显 15 秒增量",
+       "c3": "下限 6 分 00 秒",
+       "c4": "比标准 6:30 短 30 秒",
+       "c5": "不调温度"
+      },
+      {
+       "c1": "未知药液",
+       "c2": "先试首显 6:30",
+       "c3": "再按结果微调",
+       "c4": "按厂商表执行",
+       "c5": "记录试片"
+      }
+     ],
+     "text": "首显时间调整限值"
+    },
+    {
+     "kind": "h2",
+     "text": "三浴工艺的 push 时间"
+    },
+    {
+     "kind": "p",
+     "text": "三浴套药的首显时间按曝光量调整。欠曝可延长，过曝可缩短。每 1 档约 25 % 调整。具体时间取决于药液量与片数。"
+    },
+    {
+     "kind": "h2",
+     "text": "后果"
+    },
+    {
+     "kind": "table",
+     "caption": "E-6 push/pull 的结果",
+     "rows": [
+      {
+       "c1": "push（欠曝后过显）",
+       "c2": "Dmax 更低",
+       "c3": "曝光余量更小、反差更高",
+       "c4": "颗粒更粗、有偏色",
+       "c5": "低感片损失最明显"
+      },
+      {
+       "c1": "push 2–3 档",
+       "c2": "Dmax 低与强制首显的雾",
+       "c3": "透明片呈烟雾状",
+       "c4": "质量必然明显损失",
+       "c5": "选专为此设计的片"
+      },
+      {
+       "c1": "pull（过曝后欠显）",
+       "c2": "反差更低",
+       "c3": "彩度更低",
+       "c4": "有偏色",
+       "c5": "过曝超过 2 档同样损失质量"
+      },
+      {
+       "c1": "频繁 push",
+       "c2": "选专用高速片",
+       "c3": "如 Ektachrome P 800/1600 Professional",
+       "c4": "Fujichrome P 1600 Prof D",
+       "c5": "记录每批首显时间"
+      }
+     ],
+     "text": "E-6 push/pull 的结果"
+    },
+    {
+     "kind": "warn",
+     "text": "push/pull 片不适合用标准工艺的感光测控片做过程控制。错误目录对 push/pull 片只有有限适用性。Kodak 提供专用 push test strips。"
+    },
+    {
+     "kind": "note",
+     "text": "push 会缩短有效曝光余量，且 C-41 与 E-6 的表现不同。参见 $color-process.c41-push-pull 与 $film-stock.latitude。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "JOBO E-6 Processing Manual（首显调整限值与 push/pull 后果）",
+     "url": "https://www.mr-alvandi.com/downloads/film-and-processing/e6-process-manual.pdf",
+     "kind": "manual"
+    },
+    {
+     "name": "E-6 process — Wikipedia（三浴 push 时间与专用测控片）",
+     "url": "https://en.wikipedia.org/wiki/E-6_process",
+     "kind": "article"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "color-process.e6-formulas"
+    ],
+    "next": [],
+    "related": [
+     "film-stock.latitude",
+     "color-process.c41-push-pull",
+     "color-process.e6-bath-errors"
+    ],
+    "contrast": [],
+    "part_of": [
+     "color-process.e6"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "E-6 中唯一可调的时间是？",
+     "type": "single",
+     "options": [
+      "首显时间",
+      "彩色显影时间",
+      "漂白时间",
+      "定影时间"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "只用首显时间控制密度。"
+    },
+    {
+     "q": "首显时间调整的上限是多少？",
+     "type": "single",
+     "options": [
+      "6 分 00 秒",
+      "7 分 00 秒",
+      "8 分 00 秒",
+      "9 分 00 秒"
+     ],
+     "answer": [
+      2
+     ],
+     "why": "密度过高时延长至上限 8 分 00 秒。"
+    },
+    {
+     "q": "push 片可以用标准感光测控片监控吗？",
+     "type": "bool",
+     "options": [
+      "是",
+      "否"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "错误目录对 push/pull 片只有有限适用性。"
+    },
+    {
+     "q": "push 2–3 档的 E-6 透明片的表现是？",
+     "type": "single",
+     "options": [
+      "清晰",
+      "烟雾状",
+      "偏黄",
+      "过蓝"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "Dmax 低与强制首显的雾使透明片呈烟雾状。"
+    }
+   ],
+   "updated": "2026-01-12",
+   "status": "reviewed"
+  },
+  {
+   "id": "color-process.ra120-home-lab",
+   "title": "RA-120 家用洗印系统",
+   "title_en": "RA-120 Home Processing System",
+   "aliases": [
+    "RA-120",
+    "家用洗印",
+    "民用冲洗机",
+    "一站式冲洗",
+    "家庭暗房"
+   ],
+   "type": "equipment",
+   "level": 3,
+   "era": "1980s 至今",
+   "tags": [
+    "RA-120",
+    "家用",
+    "民用",
+    "冲洗系统",
+    "draft"
+   ],
+   "summary": "RA-120 是民用市场的一站式彩色冲印系统。它把装药、冲洗与干燥集成在一台机器内。检索未取得可靠技术文档，相关描述标 draft。",
+   "blocks": [
+    {
+     "kind": "warn",
+     "text": "本条为待考证条目。检索未取得 RA-120 的权威技术文档。以下内容为定性描述，数值需以厂商最新说明书为准。"
+    },
+    {
+     "kind": "h2",
+     "text": "系统定位"
+    },
+    {
+     "kind": "p",
+     "text": "RA-120 属于民用一站式冲洗系统。该类系统把药液盒、显影罐（或显影槽）、搅拌与干燥集成。用户装入胶卷与药液盒后按按钮完成流程。"
+    },
+    {
+     "kind": "h2",
+     "text": "与暗房分步冲洗的对照"
+    },
+    {
+     "kind": "table",
+     "caption": "一站式系统与分步暗房冲洗的差异",
+     "rows": [
+      {
+       "c1": "药液供给",
+       "c2": "预装药液盒，按卷投放",
+       "c3": "手工配液，浓度与体积可控",
+       "c4": "药液盒的容量与配方固定",
+       "c5": "可重复性依赖药液盒批次"
+      },
+      {
+       "c1": "温度控制",
+       "c2": "内置加热与控温",
+       "c3": "外置水浴或控温罐",
+       "c4": "一站式机的精度标 draft",
+       "c5": "分步可用 ± 0.3 °C 级控温"
+      },
+      {
+       "c1": "搅拌",
+       "c2": "固定程序倒转或旋转",
+       "c3": "手动倒转或旋转器",
+       "c4": "程序固定",
+       "c5": "手动可控性高"
+      },
+      {
+       "c1": "干燥",
+       "c2": "内置热风",
+       "c3": "独立晾片或热风",
+       "c4": "温度受控",
+       "c5": "手动可控制上限"
+      },
+      {
+       "c1": "显影类型",
+       "c2": "多为 C-41 负片",
+       "c3": "C-41 与 E-6 分别处理",
+       "c4": "见厂商规格",
+       "c5": "分步更灵活"
+      },
+      {
+       "c1": "结果可控性",
+       "c2": "开箱即用，效果稳定",
+       "c3": "可 push/pull、可交叉冲洗",
+       "c4": "一站式限制多",
+       "c5": "分步适合实验"
+      }
+     ],
+     "text": "一站式系统与分步暗房冲洗的差异"
+    },
+    {
+     "kind": "h2",
+     "text": "选购要点"
+    },
+    {
+     "kind": "ul",
+     "text": "确认系统支持的片材类型。C-41 与 E-6 需要不同药液。"
+    },
+    {
+     "kind": "ul",
+     "text": "确认温度控制精度与容差。该指标决定 push 与稳定复现性。"
+    },
+    {
+     "kind": "ul",
+     "text": "确认药液盒的保存条件与有效期。药液盒的氧化与时效影响结果。"
+    },
+    {
+     "kind": "ul",
+     "text": "确认是否可更换药液盒为第三方套药。兼容性有限时无法自定义配方。"
+    },
+    {
+     "kind": "h2",
+     "text": "与暗房的分工"
+    },
+    {
+     "kind": "p",
+     "text": "一站式系统适合常规批量冲洗。暗房分步冲洗适合需要 push/pull、交叉冲洗或特殊片材的场合。参见 $process-equipment.home-lab 与 $color-process.c41-push-pull。"
+    },
+    {
+     "kind": "note",
+     "text": "若需精确的工艺控制数据，改用分步暗房冲洗。参见 $color-process.c41-chemistry 与 $color-process.e6-formulas。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "KODAK Publication Z-100: Using KODAK Chemicals in Minilabs（批量冲洗系统的工艺控制思路）",
+     "url": "https://business.kodakmoments.com/sites/default/files/wysiwyg/pro/chemistry/z100.pdf",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "Procédé RA-4 — Wikipédia（民用冲洗服务的存在背景）",
+     "url": "https://fr.wikipedia.org/wiki/Proc%C3%A9d%C3%A9_RA-4",
+     "kind": "article"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "color-process.c41"
+    ],
+    "next": [],
+    "related": [
+     "process-equipment.home-lab",
+     "process-equipment.spray-processor",
+     "color-process.ra4-home-lab"
+    ],
+    "contrast": [
+     "process-equipment.tank"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "一站式冲洗系统的药液供给方式是？",
+     "type": "single",
+     "options": [
+      "预装药液盒",
+      "手工配液",
+      "浓缩液现场稀释",
+      "自动注射"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "该类系统按卷投放预装药液盒。"
+    },
+    {
+     "q": "分步暗房冲洗相对一站式系统的优势是？",
+     "type": "multi",
+     "options": [
+      "可 push/pull",
+      "可交叉冲洗",
+      "温度精度更高",
+      "成本更低"
+     ],
+     "answer": [
+      0,
+      1,
+      2
+     ],
+     "why": "分步冲洗可控性更高，但设备与药水成本更高。"
+    },
+    {
+     "q": "RA-120 的权威技术文档检索结果如何？",
+     "type": "single",
+     "options": [
+      "已取得完整规格",
+      "未取得可靠来源",
+      "仅厂商目录",
+      "已停产无记录"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "检索未命中可靠技术文档。相关内容标 draft。"
+    }
+   ],
+   "updated": "2026-01-12",
+   "status": "draft"
+  },
+  {
+   "id": "color-process.ra4",
+   "title": "RA-4 彩色印放工艺",
+   "title_en": "RA-4 Color Print Process",
+   "aliases": [
+    "RA-4",
+    "RA4",
+    "彩色印放",
+    "彩色相纸",
+    "Colorprint",
+    "EnviroPrint",
+    "ILFOCOLOR"
+   ],
+   "type": "process",
+   "level": 3,
+   "era": "1970s 至今",
+   "tags": [
+    "印放",
+    "彩色相纸",
+    "RA-4",
+    "CD-3",
+    "minilab"
+   ],
+   "summary": "RA-4 是 Kodak 给最常用的彩色相纸印放工艺起的商业名称。它既用于 minilab 的湿式卤化银数字印片机，也用于光学放大机加手动冲洗。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "定义"
+    },
+    {
+     "kind": "p",
+     "text": "RA-4 是 Kodak 的商标名（trade name），既指工艺，也指配套药液。其他厂商用各自名称生产兼容相纸或兼容药液。RA-4 已成为通用术语。"
+    },
+    {
+     "kind": "image",
+     "src": "img/color-negative-strip.jpg",
+     "alt": "135 彩色负片条。RA-4 印相需要彩色负片或反转片通过放大机成色。",
+     "caption": "135 彩色负片条。RA-4 印相需要彩色负片或反转片通过放大机成色。",
+     "credit": "LoMit",
+     "license": "CC BY 4.0",
+     "source": "https://commons.wikimedia.org/wiki/File%3AColor_print_film_strip_01_-_negative.jpg"
+    },
+    {
+     "kind": "p",
+     "text": "2017 年时的 RA-4 化学品生产商为 Kodak、Freestyle、Rollei、Unicolor 与 Tetenal。Fujifilm 的 Colorprint RA 与 EnviroPrint 体系用于处理 RA4/FA 兼容相纸。Ilford 的 ILFOCOLOR ACP II 也属该类。"
+    },
+    {
+     "kind": "h2",
+     "text": "四个步骤"
+    },
+    {
+     "kind": "steps",
+     "text": "按顺序执行四步。工艺本体在 37.8 °C 进行。",
+     "items": [
+      {
+       "t": "1. 彩色显影（color developer）",
+       "d": "使用 Color Developing Agent 3（CD-3）与乳剂内的成色剂反应生成染料。"
+      },
+      {
+       "t": "2. 漂定浴（bleach-fix）",
+       "d": "去除金属银并定影未显影的卤化银。三缸机在显影与漂定之间加醋酸停显浴。"
+      },
+      {
+       "t": "3. 稳定浴（stabilizer）",
+       "d": "稳定相纸并洗去化学品。"
+      },
+      {
+       "t": "4. 干燥",
+       "d": "树脂涂层（resin coated）相纸平放干燥。"
+      }
+     ]
+    },
+    {
+     "kind": "p",
+     "text": "结果为 Type C 成色相纸（chromogenic print）。"
+    },
+    {
+     "kind": "h2",
+     "text": "处理方式"
+    },
+    {
+     "kind": "p",
+     "text": "可用机器处理。minilab 的转筒输送机每小时可处理数百张 6 英寸相纸。也可用托盘在暗房手动处理。参见 $process-equipment.roller-processor 与 $printing.enlarger。"
+    },
+    {
+     "kind": "h2",
+     "text": "与 E-6 的对照"
+    },
+    {
+     "kind": "compare",
+     "caption": "E-6 与 RA-4 的基本差异",
+     "rows": [
+      {
+       "c1": "E-6（彩色反转）",
+       "c2": "反转型片材。输出透明片或放映用正片。显影用 CD-3，六浴加反转浴。首显决定反差。",
+       "c3": "37.8 °C 附近。Kodak 规定 36.7–39.4 °C。",
+       "c4": "无厂家冲洗服务，多数人自己冲洗。",
+       "c5": "转盘容量小。需精确温度与控片。"
+      },
+      {
+       "c1": "RA-4（彩色印放）",
+       "c2": "正型片材（相纸）。输出反射印相。显影用 CD-3，漂定合一。三缸机在显影与漂定之间加醋酸停显浴，参见 $color-process.ra4-home-lab。",
+       "c3": "38 °C（辊式机 35 °C）附近。Fujifilm Colorprint RA 为 35 °C。",
+       "c4": "厂家或 minilab 提供冲洗服务。",
+       "c5": "转筒与托盘均可。可放大机冲洗。"
+      }
+     ],
+     "text": "E-6 与 RA-4 的基本差异"
+    },
+    {
+     "kind": "h2",
+     "text": "显影剂"
+    },
+    {
+     "kind": "p",
+     "text": "RA-4 使用 Color Developing Agent 3（CD-3）与乳剂内的成色剂反应生成染料。该显影剂与 E-6 彩色显影相同。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "RA-4 process — Wikipedia（引用 Kodak Publication Z-130）",
+     "url": "https://en.wikipedia.org/wiki/RA-4_process",
+     "kind": "article",
+     "note": "页面标注 needs more citations 模板，权威性有限，作旁证。"
+    },
+    {
+     "name": "Procédé RA-4 — Wikipédia（法语版，含四步流程与工艺温度）",
+     "url": "https://fr.wikipedia.org/wiki/Proc%C3%A9d%C3%A9_RA-4",
+     "kind": "article"
+    },
+    {
+     "name": "JOBO Professional RA-4 Operating Manual（德/英/西/俄四语）",
+     "url": "https://silvergrainclassics.com/download/87/chemistry/3640/ra_4.pdf",
+     "kind": "manual"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "color-process.e6"
+    ],
+    "next": [
+     "color-process.ra4-home-lab"
+    ],
+    "related": [
+     "printing.multigrade",
+     "printing.enlarger",
+     "color-process.dye-stabilization",
+     "color-process.vebra",
+     "color-process.ra4-home-lab"
+    ],
+    "contrast": [
+     "color-process.e6"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "RA-4 使用哪个显影剂？",
+     "type": "single",
+     "options": [
+      "CD-3",
+      "CD-4",
+      "Phenidone",
+      "Metol"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "Color Developing Agent 3（CD-3）。"
+    },
+    {
+     "q": "RA-4 的工艺温度是多少？",
+     "type": "single",
+     "options": [
+      "20 °C",
+      "25 °C",
+      "37.8 °C",
+      "45 °C"
+     ],
+     "answer": [
+      2
+     ],
+     "why": "工艺本体在 37.8 °C。Fujifilm Colorprint RA 为 35 °C。"
+    },
+    {
+     "q": "RA-4 的输出类型是什么？",
+     "type": "single",
+     "options": [
+      "透明片",
+      "负片",
+      "反射印相",
+      "黑白相纸"
+     ],
+     "answer": [
+      2
+     ],
+     "why": "RA-4 输出正型反射印相。"
+    },
+    {
+     "q": "RA-4 在三缸机中是否需要独立的醋酸停显浴？",
+     "type": "bool",
+     "options": [
+      "是",
+      "否"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "三缸机在显影与漂定之间加醋酸停显浴。辊式机可省去停显浴，参见 $color-process.ra4-home-lab。"
+    }
+   ],
+   "updated": "2026-01-12",
+   "status": "reviewed"
+  },
+  {
+   "id": "color-process.ra4-home-lab",
+   "title": "家用 RA-4 印放与故障排除",
+   "title_en": "Home RA-4 Printing and Troubleshooting",
+   "aliases": [
+    "RA-4 家用",
+    "暗房印放",
+    "手工 RA-4",
+    "托盘冲洗",
+    "印放故障"
+   ],
+   "type": "technique",
+   "level": 4,
+   "era": "至今",
+   "tags": [
+    "印放",
+    "手工冲洗",
+    "故障排除",
+    "转筒",
+    "托盘"
+   ],
+   "summary": "RA-4 可在暗房用转筒或托盘手工冲洗。本条给出 JOBO 的工作液配比、工艺条件与故障对照表。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "工作液配比"
+    },
+    {
+     "kind": "table",
+     "caption": "JOBO RA-4 每 1 L 工作液配比",
+     "rows": [
+      {
+       "c1": "显影液 Developer",
+       "c2": "905 mL 水",
+       "c3": "Part A 35 mL",
+       "c4": "Part B 10 mL",
+       "c5": "Part C 50 mL"
+      },
+      {
+       "c1": "漂定液 Bleach-Fixer",
+       "c2": "760 mL 水",
+       "c3": "Part A 120 mL",
+       "c4": "Part B 120 mL",
+       "c5": "无 Part C"
+      }
+     ],
+     "text": "JOBO RA-4 每 1 L 工作液配比"
+    },
+    {
+     "kind": "table",
+     "caption": "JOBO RA-4 每 1 L 补充液配比（10 L 装）",
+     "rows": [
+      {
+       "c1": "显影补充液 Developer Replenisher",
+       "c2": "886 mL 水",
+       "c3": "Part A 50 mL",
+       "c4": "Part B 14 mL",
+       "c5": "Part C 50 mL"
+      },
+      {
+       "c1": "漂定补充液 Bleach-Fixer Replenisher",
+       "c2": "737.5 mL 水",
+       "c3": "Part A 112.5 mL",
+       "c4": "Part B 150 mL",
+       "c5": "无 Part C"
+      }
+     ],
+     "text": "JOBO RA-4 每 1 L 补充液配比（10 L 装）"
+    },
+    {
+     "kind": "table",
+     "caption": "补充液转工作液（含 Starter）",
+     "rows": [
+      {
+       "c1": "配 1 L",
+       "c2": "补充液 700 mL",
+       "c3": "水 275 mL",
+       "c4": "Starter 25 mL",
+       "c5": "漂定液的补充液等于工作液"
+      },
+      {
+       "c1": "配 5 L",
+       "c2": "补充液 3500 mL",
+       "c3": "水 1375 mL",
+       "c4": "Starter 125 mL",
+       "c5": "漂定液的补充液等于工作液"
+      },
+      {
+       "c1": "配 13 L",
+       "c2": "补充液 9100 mL",
+       "c3": "水 3575 mL",
+       "c4": "Starter 325 mL",
+       "c5": "漂定液的补充液等于工作液"
+      }
+     ],
+     "text": "补充液转工作液（含 Starter）"
+    },
+    {
+     "kind": "warn",
+     "text": "必须彻底避免显影液被漂定液污染。每种浓缩液用专用罐与搅拌棒。配液水温 25–40 °C。"
+    },
+    {
+     "kind": "h2",
+     "text": "工艺条件"
+    },
+    {
+     "kind": "table",
+     "caption": "JOBO RA-4 两种工艺",
+     "rows": [
+      {
+       "c1": "辊式机（PrintLabs）显影",
+       "c2": "35 ± 0.3 °C",
+       "c3": "0 分 45 秒",
+       "c4": "漂定 33 ± 5.0 °C 0:45",
+       "c5": "无需停显浴"
+      },
+      {
+       "c1": "三缸机（DuoLab）显影",
+       "c2": "35 ± 0.3 °C",
+       "c3": "0 分 45 秒",
+       "c4": "加 2 %–3 % 醋酸停显浴",
+       "c5": "停显液为 60 % 浓缩液"
+      },
+      {
+       "c1": "转盘式机（AutoLab/ColorProcessor）预温",
+       "c2": "30 °C",
+       "c3": "1 分 00 秒",
+       "c4": "大于 20×25 cm 加大纸预洗 1 分钟",
+       "c5": "转盘装液"
+      },
+      {
+       "c1": "转盘式机显影",
+       "c2": "30 °C",
+       "c3": "1 分 30 秒",
+       "c4": "单张相纸",
+       "c5": "连续搅动"
+      },
+      {
+       "c1": "转盘式机停显",
+       "c2": "30 °C",
+       "c3": "0 分 30 秒",
+       "c4": "醋酸停显浴",
+       "c5": "仅三缸机需要"
+      },
+      {
+       "c1": "转盘式机漂定",
+       "c2": "30 °C",
+       "c3": "1 分 30 秒",
+       "c4": "漂定合一",
+       "c5": "连续搅动"
+      },
+      {
+       "c1": "转盘式机水洗",
+       "c2": "30 °C",
+       "c3": "2 分 00 秒",
+       "c4": "换水 4 次 × 30 秒",
+       "c5": "每级新鲜流动水"
+      }
+     ],
+     "text": "JOBO RA-4 两种工艺"
+    },
+    {
+     "kind": "h2",
+     "text": "工作液保存期"
+    },
+    {
+     "kind": "table",
+     "caption": "JOBO RA-4 工作液与浓缩液保存期",
+     "rows": [
+      {
+       "c1": "机内显影液",
+       "c2": "2 周",
+       "c3": "机内漂定液 4 周",
+       "c4": "按说明书更换",
+       "c5": "记录更换日期"
+      },
+      {
+       "c1": "药瓶内显影液",
+       "c2": "4 周",
+       "c3": "药瓶内漂定液 8 周",
+       "c4": "避光 5–20 °C",
+       "c5": "开封后计时"
+      },
+      {
+       "c1": "浓缩液原瓶",
+       "c2": "18 个月",
+       "c3": "未开封",
+       "c4": "避光常温",
+       "c5": "按产品标签"
+      }
+     ],
+     "text": "JOBO RA-4 工作液与浓缩液保存期"
+    },
+    {
+     "kind": "h2",
+     "text": "补加"
+    },
+    {
+     "kind": "table",
+     "caption": "补加率（mL/m²）",
+     "rows": [
+      {
+       "c1": "显影液",
+       "c2": "160",
+       "c3": "可在 145–175 间调",
+       "c4": "按控片结果调整",
+       "c5": "转盘另按 5 L 套换 1/3 体积"
+      },
+      {
+       "c1": "漂定液",
+       "c2": "215",
+       "c3": "按面积计",
+       "c4": "漂定时间可延长 15 秒",
+       "c5": "换 1/3 原体积为新鲜工作液"
+      }
+     ],
+     "text": "补加率（mL/m²）"
+    },
+    {
+     "kind": "p",
+     "text": "转盘重复使用 5 L 套的做法：首冲后换掉原体积的 1/3 为新鲜工作液。显影时间不变，漂定时间延长 15 秒。"
+    },
+    {
+     "kind": "h2",
+     "text": "故障排除"
+    },
+    {
+     "kind": "troubleshoot",
+     "caption": "RA-4 常见故障",
+     "items": [
+      {
+       "t": "黑白条纹",
+       "d": "灌装量不足或转筒未水平。补足药液。检查转筒水平。"
+      },
+      {
+       "t": "蓝黑色",
+       "d": "显影液被稀释或耗尽，或显影温度过低。补加或新配药液。每次升温 1 °C 修正。"
+      },
+      {
+       "t": "白区雾过高",
+       "d": "工艺温度过高。每次降 1 °C。检查水洗温度。"
+      },
+      {
+       "t": "灰斑",
+       "d": "漂定时间过短，或药液耗尽或被显影液污染。延长漂定。使用专用容器。"
+      },
+      {
+       "t": "偏色改不掉",
+       "d": "安全光漏光。检查暗房安全光。更换相纸批次测试。"
+      },
+      {
+       "t": "蓝或品红偏移",
+       "d": "显影液被漂定液污染。清洗容器。新配药液。使用专用搅拌棒。"
+      },
+      {
+       "t": "品红条纹",
+       "d": "漂定液的停显不均匀。显影后加停显液。"
+      }
+     ],
+     "text": "RA-4 常见故障"
+    },
+    {
+     "kind": "note",
+     "text": "排障顺序：先跑控片确定偏差性质，再查温度与药液，最后查器材与暗房。参见 $color-process.troubleshoot-color。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "JOBO Professional RA-4 Operating Manual（配比、工艺、保存期与故障表）",
+     "url": "https://silvergrainclassics.com/download/87/chemistry/3640/ra_4.pdf",
+     "kind": "manual"
+    },
+    {
+     "name": "Adox RA-4 Print Kit Professional 安全数据表",
+     "url": "https://web.archive.org/web/2020/http://www.adox.de/MSDS/ADOX%20RA-4%20Print%20Kit%20Professional%20(EN).pdf",
+     "kind": "manufacturer",
+     "note": "原链接已失效，改用 archive.org 快照。"
+    }
+   ],
+   "links": {
+    "prereq": [],
+    "next": [],
+    "related": [
+     "color-process.troubleshoot-color",
+     "process-equipment.rotator",
+     "printing.multigrade"
+    ],
+    "contrast": []
+   },
+   "quiz": [
+    {
+     "q": "JOBO RA-4 显影液配 1 L 时 Part A 用多少？",
+     "type": "single",
+     "options": [
+      "35 mL",
+      "50 mL",
+      "120 mL",
+      "10 mL"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "工作液配 1 L 用 Part A 35 mL。"
+    },
+    {
+     "q": "JOBO RA-4 漂定液的补充液配比是？",
+     "type": "single",
+     "options": [
+      "补充液等于工作液",
+      "补充液为工作液的 1/3",
+      "补充液为水",
+      "不需补充"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "漂定液的补充液等于工作液。"
+    },
+    {
+     "q": "转盘式 RA-4 显影时间是多少？",
+     "type": "single",
+     "options": [
+      "0 分 45 秒",
+      "1 分 30 秒",
+      "3 分 15 秒",
+      "4 分 00 秒"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "转盘式显影 1 分 30 秒 @ 30 °C。"
+    },
+    {
+     "q": "RA-4 出现黑白条纹时应检查什么？",
+     "type": "multi",
+     "options": [
+      "灌装量",
+      "转筒是否水平",
+      "显影液 pH",
+      "相纸是否过期"
+     ],
+     "answer": [
+      0,
+      1
+     ],
+     "why": "黑白条纹由灌装量不足或转筒未水平造成。"
+    }
+   ],
+   "checklist": [
+    "显影与漂定用专用罐与搅拌棒",
+    "配液水温 25–40 °C",
+    "三缸机加 2 %–3 % 醋酸停显浴",
+    "补加率按控片调整",
+    "药瓶内显影液 4 周内用完"
+   ],
+   "updated": "2026-01-12",
+   "status": "reviewed"
+  },
+  {
+   "id": "color-process.reversal-black-white",
+   "title": "化学反转变黑白片",
+   "title_en": "Chemical Reversal of Black and White Film",
+   "aliases": [
+    "反转",
+    "reversal",
+    "黑白转彩色",
+    "单色反转",
+    "Ilford reversal",
+    "中间曝光",
+    "reversal bath"
+   ],
+   "type": "technique",
+   "level": 4,
+   "era": "1862 至今",
+   "tags": [
+    "反转",
+    "黑白片",
+    "化学反转",
+    "中间曝光",
+    "彩色化"
+   ],
+   "summary": "化学反转把负片转为正片。1862 年 Charles Russell 提出该方法。家用实现需要漂白与清除两道附加浴，以及一次可控的中间曝光或反转浴。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "历史"
+    },
+    {
+     "kind": "p",
+     "text": "1862 年 Charles Russell 发明反转显影。早期反转靠二次曝光实现。化学反转用漂白与清除两道附加浴代替曝光，控制更精确。"
+    },
+    {
+     "kind": "h2",
+     "text": "Ilford 官方方法（单色反转）"
+    },
+    {
+     "kind": "p",
+     "text": "Ilford 的技术资料《REVERSAL PROCESSING USING ILFORD BLACK & WHITE FILMS TO MAKE MONOCHROME TRANSPARENCIES》（HARMAN/Ilford，2019 年 6 月，5 页）描述用 Ilford 黑白片制作单色反转片的方法。推荐 PAN F Plus（高反差）、FP4 Plus、Delta 100 Professional。不推荐 HP5 Plus 与 Delta 400 Professional（反差过低）。"
+    },
+    {
+     "kind": "p",
+     "text": "曝光按 ISO 起测。过曝 1 档为好起点。"
+    },
+    {
+     "kind": "h2",
+     "text": "药液"
+    },
+    {
+     "kind": "table",
+     "caption": "Ilford 反转法药液配制（20 °C 全程）",
+     "rows": [
+      {
+       "c1": "第一次显影",
+       "c2": "PQ UNIVERSAL 1+5",
+       "c3": "PAN F Plus 加 8 g/L hypo（硫代硫酸钠）",
+       "c4": "FP4 Plus 与 Delta 100 Pro 加 12 g/L hypo",
+       "c5": "12 分 00 秒"
+      },
+      {
+       "c1": "漂白液 A",
+       "c2": "2 g potassium permanganate（高锰酸钾）溶于 500 mL 水",
+       "c3": "现配现用",
+       "c4": "与 B 等比混合",
+       "c5": "氧化金属银"
+      },
+      {
+       "c1": "漂白液 B",
+       "c2": "10 mL 浓硫酸加到 490 mL 水",
+       "c3": "无浓硫酸可用 10 % 稀硫酸 100 mL + 400 mL 水",
+       "c4": "必须酸入水",
+       "c5": "严禁水入酸"
+      },
+      {
+       "c1": "清除液 Clearing",
+       "c2": "25 g sodium/potassium metabisulphite（偏亚硫酸氢钠/钾）溶于 800 mL 水并定容 1 L",
+       "c3": "溶去二氧化锰",
+       "c4": "2 分 00 秒",
+       "c5": "配好后使用"
+      },
+      {
+       "c1": "第二次显影",
+       "c2": "PQ UNIVERSAL 1+9",
+       "c3": "6 分 00 秒",
+       "c4": "做到最大密度",
+       "c5": "时间不关键"
+      },
+      {
+       "c1": "定影",
+       "c2": "Rapid Fixer 1+4 或 Hypam 1+4",
+       "c3": "5 分 00 秒",
+       "c4": "可加固色定影液（漂白会过度软化乳剂）",
+       "c5": "5 分 00 秒水洗"
+      },
+      {
+       "c1": "终洗",
+       "c2": "ILFOTOL 1+200",
+       "c3": "冲洗与干燥",
+       "c4": "润湿与无斑干燥",
+       "c5": "水洗 10 分 00 秒"
+      }
+     ],
+     "text": "Ilford 反转法药液配制（20 °C 全程）"
+    },
+    {
+     "kind": "h2",
+     "text": "时间表"
+    },
+    {
+     "kind": "table",
+     "caption": "Ilford 单色反转时间表（全程 20 °C）",
+     "rows": [
+      {
+       "c1": "第一次显影",
+       "c2": "12:00",
+       "c3": "时间长图像淡，时间短图像深",
+       "c4": "装片后 10 秒内倒转 4 次并敲击排气泡",
+       "c5": "每分钟倒转 10 秒并敲击"
+      },
+      {
+       "c1": "第一次水洗",
+       "c2": "5:00",
+       "c3": "清水",
+       "c4": "洗去显影液",
+       "c5": "—"
+      },
+      {
+       "c1": "漂白",
+       "c2": "5:00",
+       "c3": "连续剧烈搅动",
+       "c4": "酸性强，瞬停显影，漂白白变奶油黄色",
+       "c5": "—"
+      },
+      {
+       "c1": "第二次水洗",
+       "c2": "1:00",
+       "c3": "清水",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "清除浴",
+       "c2": "2:00",
+       "c3": "溶去二氧化锰",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "第三次水洗",
+       "c2": "1:00",
+       "c3": "清水",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "中间曝光",
+       "c2": "1:00 每面",
+       "c3": "46 cm/18 in 处 100 W 钨灯 30–60 秒，或 30 cm/12 in 处日光灯",
+       "c4": "2–4 倍安全，过量致高光轻微发雾",
+       "c5": "不可阳光曝晒，会 print-out"
+      },
+      {
+       "c1": "第二次显影",
+       "c2": "6:00",
+       "c3": "PQ Universal 1+9",
+       "c4": "做到最大密度",
+       "c5": "—"
+      },
+      {
+       "c1": "第四次水洗",
+       "c2": "1:00",
+       "c3": "清水",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "定影",
+       "c2": "5:00",
+       "c3": "Rapid Fixer 1+4 或 Hypam 1+4",
+       "c4": "—",
+       "c5": "—"
+      },
+      {
+       "c1": "第五次水洗",
+       "c2": "10:00",
+       "c3": "清水",
+       "c4": "—",
+       "c5": "—"
+      }
+     ],
+     "text": "Ilford 单色反转时间表（全程 20 °C）"
+    },
+    {
+     "kind": "warn",
+     "text": "浓硫酸必须酸入水。严禁水入酸。接触后用含碳酸氢钠的水冲洗。戴手套与护目镜。"
+    },
+    {
+     "kind": "h2",
+     "text": "彩色化路径"
+    },
+    {
+     "kind": "p",
+     "text": "把 Ilford 单色反转法的第二次显影浴从 PQ Universal 换成彩色显影液，即可把黑白片转为彩色反转片。这需要在第二次显影时引入成色剂体系。Kodak Reversal Kit 与 Ilford 的相关套药是该路径的产品化方案。"
+    },
+    {
+     "kind": "p",
+     "text": "该路径的公开配方未取得。Kodak Reversal Kit 与 Ilford Chromaflex 的完整彩色显影浴配方无公开权威来源。相关内容标 draft，需以厂商最新说明书为准。"
+    },
+    {
+     "kind": "note",
+     "text": "从技术上可行到可重复操作之间存在明显差距。彩色化需要精确的温度、时间与显影液配比，误差直接落在成片上。家用环境下建议先用黑白反转法验证流程与曝光基准，再引入彩色显影浴。参见 $color-process.e6 与 $film-stock.expired-film。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "HARMAN/Ilford: REVERSAL PROCESSING USING ILFORD BLACK & WHITE FILMS TO MAKE MONOCHROME TRANSPARENCIES (June 2019)",
+     "url": "https://ilfordphoto.com/wp/wp-content/uploads/2019/06/REVERSAL-180619.pdf",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "HARMAN/Ilford 同一技术资料（mr-alvandi 镜像）",
+     "url": "https://www.mr-alvandi.com/downloads/film-and-processing/reversal-processing-of-ilford-black-and-white-films.pdf",
+     "kind": "manufacturer"
+    },
+    {
+     "name": "JOBO E-6 Processing Manual（反转浴的化学作用与浴后不水洗）",
+     "url": "https://www.mr-alvandi.com/downloads/film-and-processing/e6-process-manual.pdf",
+     "kind": "manual"
+    },
+    {
+     "name": "EP 1 109 063 A1（反转工艺步骤序列与去污剂浓度范围）",
+     "url": "http://patentimages.storage.googleapis.com/5c/92/80/879d277e14b44e/EP1109063A1.pdf",
+     "kind": "standard"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "bw-process.stop-bath-fix"
+    ],
+    "next": [
+     "color-process.e6"
+    ],
+    "related": [
+     "color-process.c41-cross-process",
+     "bw-process.developer-types",
+     "film-stock.expired-film"
+    ],
+    "contrast": []
+   },
+   "quiz": [
+    {
+     "q": "Ilford 反转法推荐使用哪款胶片？",
+     "type": "single",
+     "options": [
+      "HP5 Plus",
+      "PAN F Plus",
+      "Delta 400 Professional",
+      "FP4 Plus（不推荐）"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "PAN F Plus 高反差，适合作反转片。"
+    },
+    {
+     "q": "Ilford 反转法的第一次显影加多少 hypo？",
+     "type": "multi",
+     "options": [
+      "8 g/L（PAN F Plus）",
+      "12 g/L（FP4 Plus）",
+      "25 g/L",
+      "不需要"
+     ],
+     "answer": [
+      0,
+      1
+     ],
+     "why": "PAN F Plus 用 8 g/L，FP4 Plus 与 Delta 100 Pro 用 12 g/L。"
+    },
+    {
+     "q": "漂白液的 A、B 两液如何配制？",
+     "type": "single",
+     "options": [
+      "A、B 等比混合现配现用",
+      "先用 A 后用 B",
+      "A 加 3 倍 B",
+      "只用 A"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "A（高锰酸钾）与 B（硫酸）等比混合现配现用。"
+    },
+    {
+     "q": "浓硫酸的正确稀释方式是？",
+     "type": "single",
+     "options": [
+      "水入酸",
+      "酸入水",
+      "同时倒入",
+      "不用稀释"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "必须酸入水。严禁水入酸。"
+    }
+   ],
+   "checklist": [
+    "浓硫酸酸入水",
+    "装片后 10 秒内倒转 4 次并敲击排气泡",
+    "每分钟倒转 10 秒并敲击",
+    "中间曝光不可阳光曝晒",
+    "第二次显影做到最大密度"
+   ],
+   "updated": "2026-01-12",
+   "status": "reviewed"
+  },
+  {
+   "id": "color-process.timeline",
+   "title": "彩色冲洗工艺发展时间线",
+   "title_en": "Timeline of Color Photographic Processes",
+   "aliases": [
+    "timeline",
+    "工艺史",
+    "彩色显影发明",
+    "Autotype",
+    "Kodachrome",
+    "C-41 引入",
+    "数码"
+   ],
+   "type": "timeline",
+   "level": 5,
+   "era": "1810 至今",
+   "tags": [
+    "工艺史",
+    "时间线",
+    "考据",
+    "Kodachrome"
+   ],
+   "summary": "本条按年代排列彩色冲洗工艺的关键节点。从 1810 年 Seebeck 的光谱色重现阶段到 2000 年后的数码转换。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "时间线"
+    },
+    {
+     "kind": "timeline",
+     "caption": "彩色冲洗工艺的关键节点",
+     "rows": [
+      {
+       "c1": "1810",
+       "c2": "Thomas Johann Seebeck 在耶拿观察氯化银可一定程度复现光谱色",
+       "c3": "光使氯化银变黑，长波光使已析出的银改变表面而呈色。图像不耐久，色相来自析出的银",
+       "c4": "被称 Heliochromie（太阳色）"
+      },
+      {
+       "c1": "1862",
+       "c2": "Charles Russell 发明反转显影",
+       "c3": "负片直接转正片的原理确立",
+       "c4": "早期反转靠二次曝光"
+      },
+      {
+       "c1": "1891",
+       "c2": "Rodinal（p-氨基酚）出现",
+       "c3": "显影剂家族扩展",
+       "c4": "Andresen"
+      },
+      {
+       "c1": "1902–1907",
+       "c2": "Autochrome（Lumière）投产",
+       "c3": "最早的彩色摄影商品化路径之一，用染色淀粉颗粒作滤色介质",
+       "c4": "彩色版的 Autotype 系列"
+      },
+      {
+       "c1": "1904",
+       "c2": "Autochrome 商业化（Lumière 兄弟）",
+       "c3": "颗粒屏彩色摄影普及",
+       "c4": "常被列为彩色商业摄影的开端"
+      },
+      {
+       "c1": "1910",
+       "c2": "彩色显影（color development）原理确立",
+       "c3": "在显影液中引入成色剂，使影像在显影时带上颜色",
+       "c4": "具体发明年份以各文献记述为准，本条标 draft"
+      },
+      {
+       "c1": "1916",
+       "c2": "Agfacolor 的先驱 Agfa 彩色工艺",
+       "c3": "染料偶合显影的早期工业化尝试",
+       "c4": "与后来的 C-41 同属成色剂路线"
+      },
+      {
+       "c1": "1935",
+       "c2": "Kodachrome 由 Leopold Mannes 与 Leopold Godowsky Jr. 推出",
+       "c3": "需要外厂冲洗的多色成色反转片，配三套装显影液",
+       "c4": "大幅提升彩色饱和度与稳定性"
+      },
+      {
+       "c1": "1950",
+       "c2": "Kodachrome 十六进制工艺改进",
+       "c3": "降低反冲次数",
+       "c4": "仍需外厂冲洗"
+      },
+      {
+       "c1": "1950s",
+       "c2": "C-41 的前身工艺进入商用",
+       "c3": "成色剂耦合的彩色负片工艺逐步成熟，为 1972 年 FLEXICOLOR 铺路",
+       "c4": "自配药液冲洗进入家庭暗房"
+      },
+      {
+       "c1": "1959",
+       "c2": "Kodak 申请 C-22 之后的成色剂负片体系",
+       "c3": "为彩色负片配自冲洗工艺铺路",
+       "c4": "C-22 于 1940s–1970s 用于民用彩色负片"
+      },
+      {
+       "c1": "1972",
+       "c2": "Kodak 推出 FLEXICOLOR（Process C-41）",
+       "c3": "彩色负片自冲洗工艺确立，随 Kodacolor II 与 Vericolor II 推出，取代 C-22",
+       "c4": "工作温度 100 °F，总处理时间约为 C-22 的一半"
+      },
+      {
+       "c1": "1972",
+       "c2": "E-6 推出，取代 E-3 与 E-4",
+       "c3": "去除 E-4 的剧毒反转剂 borane tert-butylamine（TBAB），彩色反转片自冲洗",
+       "c4": "1980 年代起成为行业标准"
+      },
+      {
+       "c1": "1970s",
+       "c2": "RA-4 成为彩色相纸印放的主流工艺",
+       "c3": "minilab 与暗房印放并行",
+       "c4": "minilab 印片机普及"
+      },
+      {
+       "c1": "1978–1983",
+       "c2": "Agfacolor AP-41 逐步过渡到 E-6",
+       "c3": "Agfa 在 1978 年前的彩色负片用 AP-41",
+       "c4": "1983 年后全面转 E-6"
+      },
+      {
+       "c1": "1991",
+       "c2": "Photoshop 1.0 发布",
+       "c3": "数字图像编辑的商业化",
+       "c4": "彩色冲洗与印放开始被数字流程替代"
+      },
+      {
+       "c1": "1990s 中期",
+       "c2": "E-6 稳定浴改为无甲醛配方",
+       "c3": "改用表面活性剂与抗真菌剂 miconazole；预漂洗由 conditioner 改名",
+       "c4": "减少甲醛的 OSHA 记录负担"
+      },
+      {
+       "c1": "2000s",
+       "c2": "数码单反与扫描普及",
+       "c3": "彩色负片与反转片大量转为数字文件，湿式冲洗需求下降",
+       "c4": "E-6 与 RA-4 转为小众与收藏用途"
+      },
+      {
+       "c1": "2012",
+       "c2": "Kodak 申请破产保护后重整",
+       "c3": "胶片与化学业务大幅缩减，F-6 数据的冲印能力收缩",
+       "c4": "C-41 与 E-6 商业冲洗的可及性下降"
+      },
+      {
+       "c1": "2014–2018",
+       "c2": "Kodak 逐步停止多款彩色胶片与化学品的生产",
+       "c3": "含 BW400CN 于 2014 年 8 月停产",
+       "c4": "Tetenal 生产部门于 2023 年 2 月破产"
+      },
+      {
+       "c1": "2020 至今",
+       "c2": "小批量手工冲洗与收藏级扫描成为主要用途",
+       "c3": "C-41 与 E-6 的工艺文档多由厂商与第三方社区维护",
+       "c4": "本知识库的配方条目以此背景编写"
+      }
+     ],
+     "text": "彩色冲洗工艺的关键节点"
+    },
+    {
+     "kind": "note",
+     "text": "1910 彩色显影发明一项未取得直接权威来源。Basel 讲义的时间线只到 1810 年 Seebeck。该年份在不同文献中记述不一，使用时需核对原始专利或论文。"
+    },
+    {
+     "kind": "note",
+     "text": "Kodachrome 的推出年份在不同文献中记为 1935（申请）与 1936（上市）。本表取 1935。Autotype 的具体商品化年份取 1904 与 1907 两个节点，使用时需核对来源。"
+    },
+    {
+     "kind": "h2",
+     "text": "工艺谱系"
+    },
+    {
+     "kind": "p",
+     "text": "彩色工艺分三大族。成色剂偶合负片：C-41（1972）、C-22（1960s 以前）。成色剂偶合反转片：E-6（1972）、E-4、E-3、K-14（Kodachrome）。成色剂偶合印放：RA-4、VEBRA、ECP、EP（K-14 为 Kodachrome 的 K 工艺）。"
+    },
+    {
+     "kind": "p",
+     "text": "屏式颗粒工艺如 Autochrome、Kinemacolor、Dufaycolor 不属于显影成色工艺。该族用染料颗粒或染料层作滤色介质，曝光后经反转与固定处理。参见 $film-stock.halide-crystal。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Script zur Vorlesung Farbphotographie（WS 2001/02, Institut für Medienwissenschaften, Basel）",
+     "url": "https://digital.slub-dresden.de/werkansicht/dlf/607759/329",
+     "kind": "archive",
+     "note": "德文讲义，含 Seebeck 1810、Autotype/显影液史与彩色稳定性章节。"
+    },
+    {
+     "name": "List of photographic processes — Wikipedia（工艺谱系与替代工艺）",
+     "url": "https://en.wikipedia.org/wiki/List_of_photographic_processes",
+     "kind": "article"
+    },
+    {
+     "name": "C-41 process — Wikipedia（1972 年推出与 C-22 替代关系）",
+     "url": "https://en.wikipedia.org/wiki/C-41_process",
+     "kind": "article"
+    },
+    {
+     "name": "E-6 process — Wikipedia（1972 年推出与 E-3/E-4 替代关系）",
+     "url": "https://en.wikipedia.org/wiki/E-6_process",
+     "kind": "article"
+    }
+   ],
+   "links": {
+    "prereq": [],
+    "next": [
+     "color-process.c41",
+     "color-process.e6"
+    ],
+    "related": [
+     "film-stock.halide-crystal",
+     "archive.digital-preservation"
+    ],
+    "contrast": []
+   },
+   "quiz": [
+    {
+     "q": "C-41 由哪家公司于哪年推出？",
+     "type": "single",
+     "options": [
+      "Kodak 1972",
+      "Agfa 1940",
+      "Fuji 1960",
+      "Ilford 1980"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "Kodak 于 1972 年推出 FLEXICOLOR（Process C-41）。"
+    },
+    {
+     "q": "1810 年观察光谱色重现的是谁？",
+     "type": "single",
+     "options": [
+      "Thomas Johann Seebeck",
+      "Charles Russell",
+      "Louis Lumière",
+      "Leopold Mannes"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "Seebeck 在耶拿观察到氯化银可一定程度复现光谱色。"
+    },
+    {
+     "q": "E-4 使用的剧毒反转剂是什么？",
+     "type": "single",
+     "options": [
+      "borane tert-butylamine（TBAB）",
+      "potassium ferricyanide",
+      "sodium thiosulphate",
+      "hydroquinone"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "E-4 使用污染性化学品 TBAB。E-6 去除了它。"
+    },
+    {
+     "q": "反转显影由谁在 1862 年发明？",
+     "type": "single",
+     "options": [
+      "Charles Russell",
+      "Georges Eastman",
+      "Thomas Seebeck",
+      "William Fox Talbot"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "1862 年 Charles Russell 发明反转显影。"
+    }
+   ],
+   "updated": "2026-01-12",
+   "status": "reviewed"
+  },
+  {
+   "id": "color-process.vebra",
+   "title": "VEBRA 一次性冲洗套药",
+   "title_en": "VEBRA Process",
+   "aliases": [
+    "VEBRA",
+    "Vebra",
+    "VE 3"
+   ],
+   "type": "process",
+   "level": 3,
+   "era": "1970s 至今",
+   "tags": [
+    "印放",
+    "彩色相纸",
+    "VEBRA",
+    "chromogenic",
+    "待考证"
+   ],
+   "summary": "VEBRA 是东德 VEB 摄影化学联合体推出的 C-41 兼容彩色负片冲洗套药名称，用于家用与小型暗房冲洗彩色负片。它与 RA-4 属于不同工艺：RA-4 用于彩色相纸印放，VEBRA 套药用于彩色负片冲洗。该套药的各浴配方、温度与时间在公开文档中缺少权威来源，本条目仅作历史套药条目收录，所有参数按待考证处理。",
+   "blocks": [
+    {
+     "kind": "h2",
+     "text": "VEBRA：东德出品的 C-41 兼容套药"
+    },
+    {
+     "kind": "p",
+     "text": "VEBRA 是东德 VEB 摄影化学联合体（VEB Fotochemisches Kombinat）出品的彩色负片冲洗套药名称，为 C-41 兼容工艺，面向家用与小型暗房一次性冲洗场景。"
+    },
+    {
+     "kind": "p",
+     "text": "VEBRA 与 RA-4 是不同工艺：RA-4 用于彩色相纸印放，VEBRA 套药用于彩色负片冲洗。两者不可混用。"
+    },
+    {
+     "kind": "note",
+     "text": "本条目为历史套药条目。VEBRA 各浴的配方、温度、显影时间与保存期缺少权威公开来源，所有参数待考证，使用前须以可靠资料核对。"
+    },
+    {
+     "kind": "table",
+     "caption": "VEBRA 待考证项",
+     "rows": [
+      {
+       "c1": "工艺温度",
+       "c2": "draft",
+       "c3": "待考证"
+      },
+      {
+       "c1": "显影时间",
+       "c2": "draft",
+       "c3": "待考证"
+      },
+      {
+       "c1": "浴数",
+       "c2": "draft",
+       "c3": "待考证"
+      },
+      {
+       "c1": "各液 pH",
+       "c2": "draft",
+       "c3": "待考证"
+      },
+      {
+       "c1": "原液保存期",
+       "c2": "draft",
+       "c3": "待考证"
+      }
+     ]
+    }
+   ],
+   "refs": [
+    {
+     "name": "RA-4 process — Wikipedia（引用 Kodak Publication Z-130）",
+     "url": "https://en.wikipedia.org/wiki/RA-4_process",
+     "kind": "article",
+     "note": "页面标注 needs more citations 模板，权威性有限，作旁证。"
+    },
+    {
+     "name": "Procédé RA-4 — Wikipédia（法语版，含四步流程与工艺温度）",
+     "url": "https://fr.wikipedia.org/wiki/Proc%C3%A9d%C3%A9_RA-4",
+     "kind": "article"
+    },
+    {
+     "name": "JOBO Professional RA-4 Operating Manual（德/英/西/俄四语）",
+     "url": "https://silvergrainclassics.com/download/87/chemistry/3640/ra_4.pdf",
+     "kind": "manual"
+    }
+   ],
+   "links": {
+    "prereq": [
+     "color-process.ra4"
+    ],
+    "next": [
+     "color-process.ra4-home-lab"
+    ],
+    "related": [
+     "printing.multigrade",
+     "printing.enlarger",
+     "color-process.dye-stabilization"
+    ],
+    "contrast": [
+     "color-process.e6"
+    ]
+   },
+   "quiz": [
+    {
+     "q": "VEBRA 与 RA-4 是同一种工艺吗？",
+     "type": "single",
+     "options": [
+      "是，VEBRA 是 RA-4 的欧洲别名",
+      "不是，VEBRA 是 C-41 兼容的彩色负片冲洗套药，与 RA-4 无关"
+     ],
+     "answer": [
+      1
+     ],
+     "why": "VEBRA 用于彩色负片冲洗，RA-4 用于彩色相纸印放，两者是不同工艺。"
+    },
+    {
+     "q": "VEBRA 套药用于哪类感光材料的冲洗？",
+     "type": "single",
+     "options": [
+      "彩色负片",
+      "彩色相纸",
+      "黑白负片",
+      "反转片"
+     ],
+     "answer": [
+      0
+     ],
+     "why": "VEBRA 是东德 VEB 摄影化学联合体出的 C-41 兼容彩色负片冲洗套药。"
+    }
+   ],
+   "updated": "2026-01-12",
+   "status": "draft"
+  }
+ ]
+}

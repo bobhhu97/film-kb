@@ -1,0 +1,3600 @@
+{
+  "module": "color-process",
+  "shard": "color-process.01",
+  "shard_zh": "C-41 彩色负片工艺与配方",
+  "note": "本分片覆盖 C-41 工艺原理、药液配方、过程控制与故障排除。配方条目以厂商公开技术页的体积配比为准；原液克数（g/L）与各浴 pH 未在公开文档中披露，相关字段标 draft。",
+  "entries": [
+    {
+      "id": "color-process.c41",
+      "title": "C-41 彩色负片工艺",
+      "title_en": "C-41 Color Negative Process",
+      "aliases": [
+        "C-41",
+        "FLEXICOLOR",
+        "CN-16",
+        "CNK-4",
+        "AP-70",
+        "chromogenic process",
+        "彩色负片工艺"
+      ],
+      "type": "process",
+      "level": 3,
+      "era": "1972 至今",
+      "tags": [
+        "彩色负片",
+        "成色剂",
+        "工艺原理",
+        "FLEXICOLOR"
+      ],
+      "summary": "C-41 是显影时同时生成彩色染料的负片工艺。Kodak 于 1972 年推出该工艺，取代 C-22。它是当前所有主流彩色负片的标准冲洗工艺。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "工艺定位"
+        },
+        {
+          "kind": "p",
+          "text": "C-41 属于显影成色工艺（chromogenic process）。显影剂（color developer）在还原金属银的同时被氧化。氧化的显影剂分子与乳剂层内的成色剂（color coupler）反应，生成染料。染料而非金属银构成最终影像。"
+        },
+        {
+          "kind": "image",
+          "src": "img/c41-layers.png",
+          "alt": "彩色负片各感光层对不同波长光的曝光。三层分别感受蓝、绿、红并生成对应的成色剂影像。",
+          "caption": "彩色负片各感光层对不同波长光的曝光。三层分别感受蓝、绿、红并生成对应的成色剂影像。",
+          "credit": "Mliu92",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File%3AC-41_step_01.svg"
+        },
+        {
+          "kind": "p",
+          "text": "Kodak 于 1972 年随 Kodacolor II 与 Vericolor II 推出该工艺，商品名 FLEXICOLOR。其他厂商的兼容工艺包括 Fuji CN-16、Konica CNK-4、Agfa AP-70。"
+        },
+        {
+          "kind": "h2",
+          "text": "乳剂结构与橙色掩膜"
+        },
+        {
+          "kind": "p",
+          "text": "片基上叠三层感光乳剂：红感光层、绿感光层、蓝感光层。蓝感光层下方设黄滤色层（Carey Lea silver）。该黄滤色层在 C-41 中被显影液去除。"
+        },
+        {
+          "kind": "p",
+          "text": "三层分别生成互补色染料：蓝感光层生成黄染料，绿感光层生成品红染料，红感光层生成青染料。绿感光层未曝光区残留黄色，红感光层未曝光区残留红色。这些残留染料构成彩色掩膜（color mask），补偿品红染料吸收蓝光、青染料吸收绿光的光学缺陷。掩膜使负片呈橙色。"
+        },
+        {
+          "kind": "note",
+          "text": "部分供扫描用的 C-41 负片不带橙色掩膜。此类负片在彩印机上印出的中性区色偏不同。参见 $scanning.scan-settings。"
+        },
+        {
+          "kind": "h2",
+          "text": "四个步骤的化学作用"
+        },
+        {
+          "kind": "steps",
+          "text": "按顺序执行四步。各步作用见下表。",
+          "items": [
+            {
+              "t": "1. 显影（color developer）",
+              "d": "CD-4 类显影剂把已曝光的卤化银还原为金属银。同时生成染料。显影液温度 37.8 ± 0.15 °C，时间 3 分 15 秒。本步决定密度、反差与色平衡。"
+            },
+            {
+              "t": "2. 漂白（bleach）",
+              "d": "把显影产生的全部金属银转回卤化银状态。漂白后金属银不再遮挡染料。漂白液需彻底氧化，残留银会在定影后形成高密度与雾。"
+            },
+            {
+              "t": "3. 水洗（wash）",
+              "d": "洗去显影液带入的碱与显影剂。漂洗不足会稀释下一浴并抬升 pH。"
+            },
+            {
+              "t": "4. 定影（fixer）",
+              "d": "硫代硫酸钠络合未显影的卤化银，生成可溶性银络合物并洗出。定影不足会残留卤化银，底片见光后转为雾状。"
+            },
+            {
+              "t": "5. 水洗（wash）",
+              "d": "洗去残留的硫代硫酸钠。残留络合物在存放期继续与染料反应。"
+            },
+            {
+              "t": "6. 稳定（stabilizer）",
+              "d": "提高染料的耐光与耐湿稳定性。稳定液含六亚甲基四胺等成膜组分，并含润湿剂。稳定液在片脱离药罐后最后施加。"
+            },
+            {
+              "t": "7. 干燥（dry）",
+              "d": "热风干燥，温度不高于 60 °C（140 °F）。"
+            },
+            {
+              "t": "8. 预热（pre-heat）",
+              "d": "把罐与药液带至工作温度，保证显影起点准确。挂式槽与转筒的预热要求见 $process-equipment.tank 与 $process-equipment.rotator。"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "标准时间与温度"
+        },
+        {
+          "kind": "table",
+          "caption": "Process C-41 标准步骤条件",
+          "rows": [
+            {
+              "c1": "显影 Developer",
+              "c2": "3 分 15 秒",
+              "c3": "37.8 ± 0.15 °C（100.0 ± 0.25 °F）",
+              "c4": "转筒时间随装片数增加",
+              "c5": "最关键的一步"
+            },
+            {
+              "c1": "漂白 Bleach III",
+              "c2": "4 分 20 秒至 6 分 30 秒",
+              "c3": "38 ± 3 °C",
+              "c4": "延长时间则可放宽至 24–41 °C",
+              "c5": "缩短时间会残留银"
+            },
+            {
+              "c1": "水洗 1",
+              "c2": "1 分 05 秒",
+              "c3": "24–41 °C",
+              "c4": "清水",
+              "c5": "流水量按洗水量确定"
+            },
+            {
+              "c1": "定影 Fixer",
+              "c2": "4 分 20 秒",
+              "c3": "38 ± 3 °C",
+              "c4": "推荐两级对流",
+              "c5": "两级定影提高产能与稳定性"
+            },
+            {
+              "c1": "水洗 2",
+              "c2": "3 分 15 秒",
+              "c3": "24–41 °C",
+              "c4": "清水",
+              "c5": "末级用新鲜流动水"
+            },
+            {
+              "c1": "稳定 Stabilizer III",
+              "c2": "1 分 05 秒",
+              "c3": "24–41 °C",
+              "c4": "禁用气泡搅拌",
+              "c5": "防止干燥斑与残留"
+            },
+            {
+              "c1": "干燥",
+              "c2": "10–20 分钟",
+              "c3": "24–41 °C",
+              "c4": "热风",
+              "c5": "上限 60 °C（140 °F）"
+            }
+          ],
+          "text": "Process C-41 标准步骤条件"
+        },
+        {
+          "kind": "h2",
+          "text": "搅拌与材质要求"
+        },
+        {
+          "kind": "ul",
+          "text": "显影浴用 turbulence 搅拌或 99 % 纯度湿化氮气。用空气会使显影液氧化。氮气鼓泡直径 4 mm，升液高度 1.5 cm，鼓泡 2 秒，每分钟 6 次。"
+        },
+        {
+          "kind": "ul",
+          "text": "漂白浴可用无油压缩空气，频率与显影浴相同。"
+        },
+        {
+          "kind": "ul",
+          "text": "稳定浴禁用气泡搅拌。气泡造成严重起泡与干燥斑。"
+        },
+        {
+          "kind": "ul",
+          "text": "显影槽用 316 不锈钢。漂白浴与定影浴快速腐蚀黄铜、铜与低等级不锈钢。"
+        },
+        {
+          "kind": "warn",
+          "text": "显影液污染是彩色偏色的第一原因。定影液或漂定液进入显影液会立即破坏色平衡。参见 $color-process.troubleshoot-color。"
+        },
+        {
+          "kind": "h2",
+          "text": "工艺变体"
+        },
+        {
+          "kind": "ul",
+          "text": "C-41RA：minilab 使用的快速定影变体。需要高定影搅拌（direct impingement 或 high turbulence），并使用 RA Bleach 与 RA Fixer。可设计为免水洗（washless）。"
+        },
+        {
+          "kind": "ul",
+          "text": "C-41B：缩短时间的变体。取消两次水洗并缩短定影时间。用于老式 minilab 片处理机。"
+        },
+        {
+          "kind": "ul",
+          "text": "漂定合一（blix）：把漂白与定影合并为一道。商用 C-41 处理机使用分离浴。家用与野外用套药销售该变体。参见 $color-process.c41-blix。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "KODAK Publication Z-131: Using KODAK FLEXICOLOR Chemicals",
+          "url": "https://business.kodakmoments.com/sites/default/files/wysiwyg/pro/chemistry/z131.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "KODAK Publication Z-100: Using KODAK Chemicals in Minilabs",
+          "url": "https://business.kodakmoments.com/sites/default/files/wysiwyg/pro/chemistry/z100.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "C-41 process — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/C-41_process",
+          "kind": "article",
+          "note": "引用 Bob Nadler, The Color Printing Manual (Amphoto, 1978, ISBN 0-8174-2414-8) 作为乳剂结构与工艺主源。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "bw-process.developer-types"
+        ],
+        "next": [
+          "color-process.c41-chemistry",
+          "color-process.temperature-critical"
+        ],
+        "related": [
+          "color-process.e6",
+          "film-stock.color-balance",
+          "color-process.c41-push-pull",
+          "color-process.timeline"
+        ],
+        "contrast": [
+          "color-process.e6"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "C-41 工艺的显影剂是？",
+          "type": "single",
+          "options": [
+            "CD-3",
+            "CD-4",
+            "Phenidone",
+            "Metol"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "C-41 显影液用 CD-4 类显影剂。E-6 彩色显影用 CD-3。"
+        },
+        {
+          "q": "C-41 负片呈橙色是因为？",
+          "type": "single",
+          "options": [
+            "片基染色",
+            "残留成色剂形成彩色掩膜",
+            "显影液中的染料",
+            "乳剂氧化"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "掩膜由未曝光区的残留黄与红色成色剂组成。"
+        },
+        {
+          "q": "显影浴可以使用空气搅拌。",
+          "type": "bool",
+          "options": [
+            "是",
+            "否"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "空气中的氧会氧化显影液。使用 turbulence 或高纯度氮气。"
+        },
+        {
+          "q": "C-41 显影标准温度与容差是多少？",
+          "type": "single",
+          "options": [
+            "24 °C ± 3 °C",
+            "30 °C ± 0.5 °C",
+            "37.8 °C ± 0.15 °C",
+            "45 °C ± 5 °C"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "Kodak 规定 100.0 ± 0.25 °F，即 37.8 ± 0.15 °C。"
+        }
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "color-process.c41-blix",
+      "title": "C-41 漂定合一（blix）",
+      "title_en": "C-41 Bleach-Fix Combined Process",
+      "aliases": [
+        "blix",
+        "漂定合一",
+        "bleach-fix",
+        "漂定液",
+        "Bleichfixierbad"
+      ],
+      "type": "chemical",
+      "level": 3,
+      "era": "1970s 至今",
+      "tags": [
+        "漂定合一",
+        "bleach-fix",
+        "家用冲洗",
+        "化学"
+      ],
+      "summary": "漂定合一把漂白与定影合并为一道浴。它减少用水与工序。家用套药多采用该形式。商用 C-41 处理机使用分离浴。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "作用原理"
+        },
+        {
+          "kind": "p",
+          "text": "漂定液同时完成两件事：用铁（EDTA 或硫代硫酸盐）络合体系氧化并溶出显影产生的金属银，同时络合未显影的卤化银。两步反应在同一浴内顺序进行。"
+        },
+        {
+          "kind": "p",
+          "text": "漂定液的定影容量有限。单位体积的漂定液可处理的银量低于同等体积的定影液。装片量过大时，未显影的卤化银残留。"
+        },
+        {
+          "kind": "h2",
+          "text": "配方实例"
+        },
+        {
+          "kind": "table",
+          "caption": "Rollei COLORCHEM C-41 套药（标准 38 °C 档）每 1 L 工作液配比",
+          "rows": [
+            {
+              "c1": "显影液 Developer",
+              "c2": "800 mL 水",
+              "c3": "Part A 100 mL",
+              "c4": "Part B 50 mL",
+              "c5": "Part C 50 mL"
+            },
+            {
+              "c1": "漂定液 Bleach-Fixer",
+              "c2": "600 mL 水",
+              "c3": "Part A 200 mL",
+              "c4": "Part B 200 mL",
+              "c5": "无 Part C"
+            },
+            {
+              "c1": "稳定液 Stabilizer",
+              "c2": "950 mL 水",
+              "c3": "Part A 50 mL",
+              "c4": "无 Part B",
+              "c5": "无 Part C"
+            }
+          ],
+          "text": "Rollei COLORCHEM C-41 套药（标准 38 °C 档）每 1 L 工作液配比"
+        },
+        {
+          "kind": "p",
+          "text": "配液水温 25–40 °C。先加水，再逐个加入浓缩液。每加入一个部分后搅拌约 30 秒，再加下一个部分。"
+        },
+        {
+          "kind": "warn",
+          "text": "显影液分 A、B、C 三份。计量误差即使很小也会造成色平衡偏移。使用同一量具逐一量取。"
+        },
+        {
+          "kind": "h2",
+          "text": "工艺条件"
+        },
+        {
+          "kind": "table",
+          "caption": "Rollei COLORCHEM 标准 38 °C 工艺",
+          "rows": [
+            {
+              "c1": "预热",
+              "c2": "38 °C",
+              "c3": "4 分 00 秒",
+              "c4": "装片前完成",
+              "c5": "转筒内外温度一致"
+            },
+            {
+              "c1": "显影",
+              "c2": "38 ± 0.3 °C",
+              "c3": "3 分 15 秒",
+              "c4": "连续搅拌",
+              "c5": "最关键一步"
+            },
+            {
+              "c1": "漂定",
+              "c2": "38 ± 2 °C",
+              "c3": "6 分 00 秒",
+              "c4": "连续搅拌",
+              "c5": "承担漂白与定影双重任务"
+            },
+            {
+              "c1": "水洗",
+              "c2": "38 ± 2 °C",
+              "c3": "3 分 15 秒",
+              "c4": "至少 4 次换水",
+              "c5": "末级用新鲜流动水"
+            },
+            {
+              "c1": "稳定",
+              "c2": "20–25 °C",
+              "c3": "1 分 00 秒",
+              "c4": "在药罐外进行",
+              "c5": "温度低于工艺温度"
+            }
+          ],
+          "text": "Rollei COLORCHEM 标准 38 °C 工艺"
+        },
+        {
+          "kind": "note",
+          "text": "该套药另设 45 °C 快速档与 25 °C 低温档。三档只改温度与时间，配液比例相同。"
+        },
+        {
+          "kind": "h2",
+          "text": "保存期"
+        },
+        {
+          "kind": "table",
+          "caption": "Rollei COLORCHEM C-41 套药保存期",
+          "rows": [
+            {
+              "c1": "显影液",
+              "c2": "满瓶密闭 6 周",
+              "c3": "开瓶 2 周",
+              "c4": "玻璃或塑料密闭瓶",
+              "c5": "避光"
+            },
+            {
+              "c1": "漂定液",
+              "c2": "满瓶密闭 8 周",
+              "c3": "开瓶 4 周",
+              "c4": "同上",
+              "c5": "同上"
+            },
+            {
+              "c1": "稳定液",
+              "c2": "满瓶密闭 8 周",
+              "c3": "开瓶后按厂商说明",
+              "c4": "同上",
+              "c5": "同上"
+            },
+            {
+              "c1": "浓缩液原封",
+              "c2": "2 年",
+              "c3": "分装后 3 个月",
+              "c4": "原厂包装",
+              "c5": "避光常温"
+            }
+          ],
+          "text": "Rollei COLORCHEM C-41 套药保存期"
+        },
+        {
+          "kind": "h2",
+          "text": "污染风险"
+        },
+        {
+          "kind": "warn",
+          "text": "漂定液萃取物（blix carry-over）会污染显影液。少量萃取物即可显著改变色平衡。显影容器与量具与漂定用容器分开，并清晰标记。"
+        },
+        {
+          "kind": "p",
+          "text": "未分离漂定液的 minilab 需要控制带入量。参见 $color-process.vigour-replenishment 的补加率设定。"
+        },
+        {
+          "kind": "h2",
+          "text": "容量与一次性使用"
+        },
+        {
+          "kind": "p",
+          "text": "该类 1 L 套药按单卷 35 mm 负片的一次性用量标注。原液保存期与工作液使用期是两个概念。原液在有效期内可按厂商容量表配多份工作液。"
+        },
+        {
+          "kind": "note",
+          "text": "公开技术页给出体积配比与保存期，未披露各组分的克数（g/L）与 pH。原液成分克数标 draft。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "COLORCHEM C-41 Kit 操作手册（Rollei C-41 Maco-Set，德/英/意三语）",
+          "url": "https://www.freestylephoto.com/static/pdf/product_pdfs/rollei/C-41_Maco-Set_DE-EN-IT_08012013_final.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "C-41 process — Wikipedia（bleach-fix 家用变体说明）",
+          "url": "https://en.wikipedia.org/wiki/C-41_process",
+          "kind": "article"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "color-process.c41"
+        ],
+        "next": [
+          "color-process.vigour-replenishment"
+        ],
+        "related": [
+          "color-process.unicolor-k2-formula",
+          "process-equipment.tank"
+        ],
+        "contrast": [
+          "bw-process.stop-bath-fix"
+        ],
+        "part_of": [
+          "color-process.c41"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "漂定合一浴中金属银如何去除？",
+          "type": "single",
+          "options": [
+            "靠定影剂络合卤化银，金属银另行溶解",
+            "铁与硫代硫酸盐体系先氧化银再络合卤化银",
+            "靠水洗溶解",
+            "靠稳定液固定"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "漂定液先氧化金属银并络合，再定影未显影卤化银。"
+        },
+        {
+          "q": "Rollei COLORCHEM 的显影液由几部分浓缩液配成？",
+          "type": "single",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "显影液含 Part A、B、C 三部分。"
+        },
+        {
+          "q": "漂定液进入显影液的后果是？",
+          "type": "single",
+          "options": [
+            "密度提高",
+            "色平衡偏移",
+            "干燥变慢",
+            "定影延长"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "萃取物改变显影液组成，直接改变色平衡。"
+        },
+        {
+          "q": "Rollei COLORCHEM 漂定液的工艺容差是多少？",
+          "type": "single",
+          "options": [
+            "± 0.3 °C",
+            "± 2 °C",
+            "± 5 °C",
+            "不控制"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "漂定液为 38 ± 2 °C。显影液为 38 ± 0.3 °C。"
+        }
+      ],
+      "checklist": [
+        "配液时先加水再加浓缩液",
+        "每加一个部分后搅拌 30 秒",
+        "显影容器与漂定容器分开标记",
+        "水洗至少换水 4 次",
+        "稳定在 20–25 °C 药罐外完成"
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "color-process.c41-chemistry",
+      "title": "C-41 药液配方对照",
+      "title_en": "C-41 Chemistry Formulas Compared",
+      "aliases": [
+        "Flexicolor C-41",
+        "Kodak C-41",
+        "Bellini C-41",
+        "C-41 配方",
+        "C-41 chemistry"
+      ],
+      "type": "table",
+      "level": 4,
+      "era": "1972 至今",
+      "tags": [
+        "配方",
+        "C-41",
+        "药液",
+        "配比"
+      ],
+      "summary": "本表并列 Kodak FLEXICOLOR、Bellini、Rollei COLORCHEM 与 Photo Systems UNICOLOR 的 C-41 工作液配比与工艺条件。四家公开文档均给出体积配比，原液克数未公开。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "工作液配比对照"
+        },
+        {
+          "kind": "table",
+          "caption": "四家 C-41 套药每 1 L 工作液配比（体积比）",
+          "rows": [
+            {
+              "c1": "Kodak FLEXICOLOR（小槽/转筒，不补充）",
+              "c2": "显影：开瓶即用，无需 starter",
+              "c3": "漂白：Bleach III full-strength，不补充",
+              "c4": "定影：按工作液说明配",
+              "c5": "稳定：按工作液说明配"
+            },
+            {
+              "c1": "Bellini KITC41/1（C41-RA）",
+              "c2": "显影 740 mL 水 + 260 mL 浓缩",
+              "c3": "漂白 RA：ready to use 1 L",
+              "c4": "定影 500 mL 水 + 500 mL 浓缩",
+              "c5": "稳定 990 mL 水 + 10 mL 浓缩"
+            },
+            {
+              "c1": "Rollei COLORCHEM（38 °C）",
+              "c2": "显影 800 mL 水 + A 100 + B 50 + C 50",
+              "c3": "漂定 600 mL 水 + A 200 + B 200",
+              "c4": "漂定合一",
+              "c5": "稳定 950 mL 水 + A 50"
+            },
+            {
+              "c1": "Photo Systems UNICOLOR K-2 粉剂",
+              "c2": "1 L 粉剂包配 1 L",
+              "c3": "粉剂含碳酸钠与 CD-4 硫酸盐",
+              "c4": "漂定含硫代硫酸铵",
+              "c5": "稳定含六亚甲基四胺"
+            }
+          ],
+          "text": "四家 C-41 套药每 1 L 工作液配比（体积比）"
+        },
+        {
+          "kind": "h2",
+          "text": "工作液容量"
+        },
+        {
+          "kind": "table",
+          "caption": "各套药的工作液配给与容量",
+          "rows": [
+            {
+              "c1": "Bellini KITC41/1",
+              "c2": "显影 1 L、RA 漂白 1 L、RA 定影 1 L、稳定 10 L",
+              "c3": "16 卷 35 mm 36 画幅负片",
+              "c4": "显影时间随卷数递增",
+              "c5": "1–4 卷 3:15，13–16 卷 4:00"
+            },
+            {
+              "c1": "Rollei COLORCHEM 1 L",
+              "c2": "显影 1 L、漂定 1 L、稳定 1 L",
+              "c3": "按单卷 35 mm 负片计",
+              "c4": "一次性用量标注",
+              "c5": "原液可在有效期内配多份"
+            },
+            {
+              "c1": "Kodak FLEXICOLOR 1 加仑装",
+              "c2": "显影 3.8 L、Bleach III 3.8 L、定影 3.8 或 19 L、稳定 3.8 L",
+              "c3": "小槽与转筒批次用量",
+              "c4": "批次系统不补充",
+              "c5": "开瓶即用"
+            }
+          ],
+          "text": "各套药的工作液配给与容量"
+        },
+        {
+          "kind": "h2",
+          "text": "工艺条件对照"
+        },
+        {
+          "kind": "table",
+          "caption": "显影温度与时间",
+          "rows": [
+            {
+              "c1": "Kodak FLEXICOLOR（商用挂式槽/辊式）",
+              "c2": "37.8 ± 0.15 °C",
+              "c3": "3 分 15 秒",
+              "c4": "加药转移时间不超 20 秒",
+              "c5": "turbulation 或 99 % 氮气"
+            },
+            {
+              "c1": "Bellini C41-RA（转筒）",
+              "c2": "38.0 ± 0.2 °C",
+              "c3": "3 分 15 秒至 4 分 00 秒",
+              "c4": "按卷数分档",
+              "c5": "前 15 秒连续搅拌，之后每 30 秒 5 秒"
+            },
+            {
+              "c1": "Rollei COLORCHEM（转筒）",
+              "c2": "38 ± 0.3 °C",
+              "c3": "3 分 15 秒",
+              "c4": "另有 45 °C 与 25 °C 档",
+              "c5": "连续搅拌"
+            },
+            {
+              "c1": "Kodak C-41RA（minilab）",
+              "c2": "37.8 ± 0.15 °C",
+              "c3": "3 分 15 秒",
+              "c4": "补加 35 mL/m",
+              "c5": "高定影搅拌"
+            }
+          ],
+          "text": "显影温度与时间"
+        },
+        {
+          "kind": "h2",
+          "text": "显影之后的浴"
+        },
+        {
+          "kind": "table",
+          "caption": "漂白、定影与稳定的条件差异",
+          "rows": [
+            {
+              "c1": "Kodak 标准 C-41",
+              "c2": "漂白 4:20–6:30 @ 38 ± 3 °C",
+              "c3": "定影 4:20 @ 38 ± 3 °C",
+              "c4": "稳定 1:05 @ 24–41 °C",
+              "c5": "两道水洗"
+            },
+            {
+              "c1": "Bellini C41-RA",
+              "c2": "RA 漂白 0:45–1:00 @ 32–38 °C",
+              "c3": "RA 定影 1:30–2:00 @ 32–38 °C",
+              "c4": "稳定 3:00 @ 32–38 °C",
+              "c5": "可免水洗"
+            },
+            {
+              "c1": "Rollei COLORCHEM",
+              "c2": "漂定 6:00 @ 38 ± 2 °C",
+              "c3": "与漂白合并",
+              "c4": "稳定 1:00 @ 20–25 °C",
+              "c5": "水洗 3:15，换水 4 次"
+            },
+            {
+              "c1": "Kodak C-41RA",
+              "c2": "漂白 1:00 @ 38 ± 3 °C",
+              "c3": "定影两级对流各 1:00",
+              "c4": "终洗 0:20 × 3 级",
+              "c5": "可加 1:40 水洗"
+            }
+          ],
+          "text": "漂白、定影与稳定的条件差异"
+        },
+        {
+          "kind": "h2",
+          "text": "有效成分"
+        },
+        {
+          "kind": "p",
+          "text": "显影液的有效成分为 CD-4 类显影剂（4-氨基-3-甲基-N-(β-羟乙基)苯胺硫酸盐）。显影液含碳酸盐提供 pH 与缓冲容量。"
+        },
+        {
+          "kind": "p",
+          "text": "漂白液的有效成分为铁（III）与 EDTA 的络合物，以及溴酸盐类氧化剂。定影液的有效成分为硫代硫酸钠。稳定液的有效成分为六亚甲基四胺与表面活性剂。"
+        },
+        {
+          "kind": "note",
+          "text": "以上成分名单来自厂商安全数据表与公开技术页的 MSDS 摘要，属定性披露。各组分的克数（g/L）与各浴 pH 未在公开文档中给出，相关字段标 draft，需以厂商最新说明书为准。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "KODAK Publication Z-131: Using KODAK FLEXICOLOR Chemicals",
+          "url": "https://business.kodakmoments.com/sites/default/files/wysiwyg/pro/chemistry/z131.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Bellini Foto KIT C41/1 Technical Data Sheet",
+          "url": "https://www.bellinifoto.it/wp-content/uploads/2019/07/C41_scheda-tecnica-1.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "COLORCHEM C-41 Kit 操作手册（Rollei C-41 Maco-Set）",
+          "url": "https://www.freestylephoto.com/static/pdf/product_pdfs/rollei/C-41_Maco-Set_DE-EN-IT_08012013_final.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Photo Systems UNICOLOR K-2 Powder C-41 Processing Instructions (Cat. # 10123, Rev 4/07)",
+          "url": "https://www.freestylephoto.com/static/pdf/product_pdfs/unicolor/unicolor-c-41-powder-1-liter-instructions.pdf",
+          "kind": "manufacturer"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "color-process.c41"
+        ],
+        "next": [
+          "color-process.unicolor-k2-formula",
+          "color-process.temperature-critical"
+        ],
+        "related": [
+          "color-process.c41-blix",
+          "color-process.c41-control-strips"
+        ],
+        "contrast": [
+          "color-process.e6"
+        ],
+        "part_of": [
+          "color-process.c41"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Bellini KITC41/1 的显影液配比是？",
+          "type": "single",
+          "options": [
+            "740 mL 水 + 260 mL 浓缩",
+            "500 mL 水 + 500 mL 浓缩",
+            "990 mL 水 + 10 mL 浓缩",
+            "开瓶即用"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "该配比对应 Bellini 显影液。其余两项分别对应定影与稳定液。"
+        },
+        {
+          "q": "Bellini KITC41/1 的定影液配比是？",
+          "type": "single",
+          "options": [
+            "740 mL 水 + 260 mL 浓缩",
+            "500 mL 水 + 500 mL 浓缩",
+            "990 mL 水 + 10 mL 浓缩",
+            "ready to use"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "Bellini 的 RA 定影为 1 + 1。"
+        },
+        {
+          "q": "Kodak FLEXICOLOR 显影液的显影剂是？",
+          "type": "single",
+          "options": [
+            "CD-3",
+            "CD-4 类",
+            "Phenidone",
+            "对苯二胺"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "C-41 用 CD-4 类显影剂。"
+        },
+        {
+          "q": "Rollei COLORCHEM 的显影液含几份浓缩液？",
+          "type": "single",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "含 Part A、B、C。"
+        }
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "color-process.c41-control-strips",
+      "title": "C-41 控片与 500/5000 测试片",
+      "title_en": "C-41 Control Strips and Reference Tests",
+      "aliases": [
+        "CIA 500-5000",
+        "control strip",
+        "控片",
+        "测试片",
+        "aim value",
+        "action limit"
+      ],
+      "type": "technique",
+      "level": 4,
+      "era": "1972 至今",
+      "tags": [
+        "过程控制",
+        "控片",
+        "容差",
+        "密度测量"
+      ],
+      "summary": "控片（control strip）用统一的曝光与冲洗条件检查每批药液的状态。Kodak 的 CIA 500-5000 测试片覆盖密度与色平衡两端，用于校准密度计与设定目标值。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "控片的用途"
+        },
+        {
+          "kind": "p",
+          "text": "控片在每批药液使用前后冲洗。测得的密度与设定目标值比较。偏差落在控制限内，该批药液合格。偏差落在动作限内，工艺继续运行并记录。偏差超过动作限，停止使用该批药液。"
+        },
+        {
+          "kind": "h2",
+          "text": "控片规格"
+        },
+        {
+          "kind": "table",
+          "caption": "Kodak C-41 控片种类",
+          "rows": [
+            {
+              "c1": "35 mm 12 级片",
+              "c2": "Cat No. 180 3709",
+              "c3": "100 英尺卷约 120 条",
+              "c4": "适用于 35 mm 与小型",
+              "c5": "单条提供完整密度阶梯"
+            },
+            {
+              "c1": "5¼ 英寸 5 级片",
+              "c2": "Cat No. 151 9677",
+              "c3": "按卷计",
+              "c4": "适用于 126/135 系统",
+              "c5": "级数较少"
+            },
+            {
+              "c1": "全画幅 5 级片",
+              "c2": "Cat No. 157 6701",
+              "c3": "100 英尺卷约 80 条",
+              "c4": "适用于 120 系统",
+              "c5": "与 5¼ 英寸片对应"
+            }
+          ],
+          "text": "Kodak C-41 控片种类"
+        },
+        {
+          "kind": "h2",
+          "text": "容差限值"
+        },
+        {
+          "kind": "p",
+          "text": "Process C-41 的容差分四档：目标值调整容差（aim value adjustment tolerance）、动作限（action limit）、控制限（control limit）、色平衡离散限（color balance spread limit）。"
+        },
+        {
+          "kind": "table",
+          "caption": "Process C-41 容差值（密度单位）",
+          "rows": [
+            {
+              "c1": "D-min",
+              "c2": "± 0.03",
+              "c3": "+ 0.03",
+              "c4": "+ 0.05",
+              "c5": "无离散限"
+            },
+            {
+              "c1": "LD",
+              "c2": "± 0.04",
+              "c3": "± 0.06",
+              "c4": "± 0.08",
+              "c5": "无离散限"
+            },
+            {
+              "c1": "HD − LD",
+              "c2": "± 0.03",
+              "c3": "± 0.07",
+              "c4": "± 0.09",
+              "c5": "0.09"
+            },
+            {
+              "c1": "D-maxB − YB",
+              "c2": "± 0.07",
+              "c3": "+ 0.10",
+              "c4": "+ 0.12",
+              "c5": "无离散限"
+            }
+          ],
+          "text": "Process C-41 容差值（密度单位）"
+        },
+        {
+          "kind": "h2",
+          "text": "CIA 500-5000 测试片"
+        },
+        {
+          "kind": "p",
+          "text": "CIA 500-5000 是 Kodak 的参考密度片（reference density strip）。片上带已知的光学密度。测试片按指定方式冲洗后，用密度计测得的值与参考值比较。差值反映药液状态。"
+        },
+        {
+          "kind": "p",
+          "text": "该测试片覆盖低密度与高密度两端。500 对应阴影区，5000 对应高光区。两端同时检查，可同时判断显影活性、残留银与染料生成量。"
+        },
+        {
+          "kind": "note",
+          "text": "CIA 500-5000 用于密度计校准与过程控制参考。具体使用步骤以 Kodak 随片说明书为准。参见 $color-process.color-negative-logs。"
+        },
+        {
+          "kind": "h2",
+          "text": "控片保管"
+        },
+        {
+          "kind": "ul",
+          "text": "未处理的控片在 0 °F（−18 °C）以下保存。"
+        },
+        {
+          "kind": "ul",
+          "text": "取用与处理在暗房全暗条件下进行。"
+        },
+        {
+          "kind": "ul",
+          "text": "处理后的控片避光保存，保留作趋势记录。"
+        },
+        {
+          "kind": "h2",
+          "text": "密度计"
+        },
+        {
+          "kind": "p",
+          "text": "使用透射式密度计读取负片密度。读取彩色密度时使用 RGB 三通道滤色片。D-maxB 表示蓝光通道的最高密度，YB 表示黄光通道的对应值。两者的差值反映残留银与染料生成量。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "KODAK Publication Z-131: Using KODAK FLEXICOLOR Chemicals（控片规格与容差表）",
+          "url": "https://business.kodakmoments.com/sites/default/files/wysiwyg/pro/chemistry/z131.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "JOBO E-6 Processing Manual（密度与色平衡离散判定方法）",
+          "url": "https://www.mr-alvandi.com/downloads/film-and-processing/e6-process-manual.pdf",
+          "kind": "manufacturer"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "color-process.c41"
+        ],
+        "next": [
+          "color-process.color-negative-logs",
+          "color-process.vigour-replenishment"
+        ],
+        "related": [
+          "scanning.scan-settings",
+          "film-stock.characteristic-curve"
+        ],
+        "contrast": [],
+        "part_of": [
+          "color-process.c41"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Process C-41 的 HD − LD 控制限是多少？",
+          "type": "single",
+          "options": [
+            "± 0.03",
+            "± 0.07",
+            "± 0.09",
+            "± 0.12"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "HD − LD 的控制限为 ± 0.09。"
+        },
+        {
+          "q": "未处理的控片保存温度要求是？",
+          "type": "single",
+          "options": [
+            "低于 −18 °C",
+            "低于 0 °C",
+            "20 °C",
+            "冷藏 4 °C"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "Kodak 要求 0 °F（−18 °C）以下保存。"
+        },
+        {
+          "q": "色平衡离散限只对下列哪一项设限？",
+          "type": "single",
+          "options": [
+            "D-min",
+            "LD",
+            "HD − LD",
+            "D-maxB − YB"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "HD − LD 是唯一有离散限 0.09 的项目。"
+        },
+        {
+          "q": "控片偏差超过哪一档时停止使用该批药液？",
+          "type": "single",
+          "options": [
+            "目标值调整容差",
+            "动作限",
+            "控制限",
+            "任何偏差"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "超过控制限时停止使用。"
+        }
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "color-process.c41-cross-process",
+      "title": "C-41 与 E-6 交叉冲洗",
+      "title_en": "Cross Processing C-41 and E-6",
+      "aliases": [
+        "cross processing",
+        "交叉冲洗",
+        "互洗",
+        "C-41 洗 E-6",
+        "E-6 洗 C-41"
+      ],
+      "type": "technique",
+      "level": 3,
+      "era": "1970s 至今",
+      "tags": [
+        "交叉冲洗",
+        "实验",
+        "单色化",
+        "交叉"
+      ],
+      "summary": "交叉冲洗用一种工艺的药液冲洗另一种工艺的片材。结果偏色且饱和度提高。该方法用于风格化效果与单色负片生成。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "两种方向"
+        },
+        {
+          "kind": "table",
+          "caption": "交叉冲洗方向与结果",
+          "rows": [
+            {
+              "c1": "C-41 冲洗 E-6 反转片",
+              "c2": "得到负片",
+              "c3": "偏色，饱和度更高",
+              "c4": "生成染料但无双色调",
+              "c5": "需增加显影时间"
+            },
+            {
+              "c1": "E-6 冲洗 C-41 负片",
+              "c2": "得到正像",
+              "c3": "强烈绿色偏色",
+              "c4": "橙色掩膜被当作染料层处理",
+              "c5": "绿色来自掩膜残留"
+            },
+            {
+              "c1": "C-41 显影液冲洗黑白负片",
+              "c2": "得到单色负片",
+              "c3": "反差极低且发浑浊",
+              "c4": "仅形成银像，不做漂白步骤",
+              "c5": "橙色掩膜影响结果"
+            }
+          ],
+          "text": "交叉冲洗方向与结果"
+        },
+        {
+          "kind": "h2",
+          "text": "单色化用途"
+        },
+        {
+          "kind": "p",
+          "text": "用 C-41 显影液冲洗传统高反差黑白片（如监控片或 Kodak Technical Pan）可降低反差，得到柔和的单色影像。此应用只形成银像，跳过 C-41 的漂白步骤。漂白会破坏银像。"
+        },
+        {
+          "kind": "p",
+          "text": "C-41 药液冲洗普通黑白负片的结果反差极低且发浑浊。原因是彩色显影液对传统黑白乳剂的作用与对彩色乳剂不同，加上橙色掩膜的存在。"
+        },
+        {
+          "kind": "h2",
+          "text": "chromogenic 黑白片"
+        },
+        {
+          "kind": "p",
+          "text": "Ilford XP2 Super 是兼容 C-41 的 chromogenic 黑白片。片结构与传统黑白片不同：各层对所有色光均敏感，并设计生成黑色染料。片基色为紫色。"
+        },
+        {
+          "kind": "p",
+          "text": "Kodak BW400CN 于 2014 年 8 月停产。该片基色为橙色，可在标准彩印机上印出正确黑位。但在 variable-contrast 黑白纸上印相困难，因为该纸的反差由彩色滤镜决定。"
+        },
+        {
+          "kind": "note",
+          "text": "使用 variable-contrast 黑白纸时参考 $printing.multigrade。C-41 印片不含银颗粒，颗粒是染料云的外观。此点影响放大时的对焦判断，参见 $printing.enlarger。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "C-41 process — Wikipedia（交叉冲洗与黑白片章节）",
+          "url": "https://en.wikipedia.org/wiki/C-41_process",
+          "kind": "article"
+        },
+        {
+          "name": "Photo Systems UNICOLOR K-2 Powder C-41 Processing Instructions（黑白片显影时间加成）",
+          "url": "https://www.freestylephoto.com/static/pdf/product_pdfs/unicolor/unicolor-c-41-powder-1-liter-instructions.pdf",
+          "kind": "manufacturer"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "color-process.c41"
+        ],
+        "next": [
+          "color-process.e6"
+        ],
+        "related": [
+          "color-process.reversal-black-white",
+          "printing.multigrade",
+          "film-stock.color-balance"
+        ],
+        "contrast": [
+          "color-process.e6"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "用 E-6 冲洗 C-41 负片得到什么偏色的正像？",
+          "type": "single",
+          "options": [
+            "偏红",
+            "强烈偏绿",
+            "偏蓝",
+            "无偏色"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "橙色掩膜被处理产生强烈绿色偏色。"
+        },
+        {
+          "q": "用 C-41 显影液降低黑白片反差时应跳过哪一步？",
+          "type": "single",
+          "options": [
+            "显影",
+            "漂白",
+            "定影",
+            "稳定"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "该应用只形成银像。漂白会破坏银像。"
+        },
+        {
+          "q": "Kodak BW400CN 于何时停产？",
+          "type": "single",
+          "options": [
+            "2004 年",
+            "2009 年",
+            "2014 年",
+            "2020 年"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "该片于 2014 年 8 月停产。"
+        },
+        {
+          "q": "Ilford XP2 Super 的片基色是什么？",
+          "type": "single",
+          "options": [
+            "橙色",
+            "紫色",
+            "透明",
+            "黄色"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "XP2 Super 的片基色为紫色。"
+        }
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "color-process.c41-home-kits",
+      "title": "家用 C-41 套药与 pH 窗口",
+      "title_en": "Home C-41 Kits and pH Window",
+      "aliases": [
+        "Adtec",
+        "Flexicolor C-41 Kit",
+        "家用套药",
+        "pH 10.2",
+        "显影液 pH",
+        "C-41 家用"
+      ],
+      "type": "chemical",
+      "level": 4,
+      "era": "1972 至今",
+      "tags": [
+        "配方",
+        "家用套药",
+        "pH",
+        "Adtec"
+      ],
+      "summary": "家用 C-41 套药多为 1 L 或 500 mL 装，含显影、漂定与稳定三部分。Adtec 未公开技术页。显影液 pH 约 10.2，其余各浴 pH 未公开。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "市场格局"
+        },
+        {
+          "kind": "p",
+          "text": "C-41 套药市场的主要产品包括 Kodak FLEXICOLOR、Bellini、Rollei COLORCHEM、Photo Systems UNICOLOR、Adtec 与 Fomax。该市场供应分散，各家配比与容量标注不同。"
+        },
+        {
+          "kind": "p",
+          "text": "2017 年时的 RA-4 彩色相纸化学品生产商为 Kodak、Freestyle、Rollei、Unicolor 与 Tetenal。同一批厂商通常同时供应 C-41 负片套药。"
+        },
+        {
+          "kind": "h2",
+          "text": "规格对照"
+        },
+        {
+          "kind": "table",
+          "caption": "家用 C-41 套药规格",
+          "rows": [
+            {
+              "c1": "Bellini KITC41/1",
+              "c2": "显影 1 L + RA 漂白 1 L + RA 定影 1 L + 稳定 10 L",
+              "c3": "16 卷 35 mm 36 画幅",
+              "c4": "38.0 ± 0.2 °C 显影",
+              "c5": "漂白 ready to use"
+            },
+            {
+              "c1": "Rollei COLORCHEM RC11K",
+              "c2": "显影 1 L + 漂定 1 L + 稳定 1 L",
+              "c3": "1 L 规格（另有 2×2.5 L 与 2×5 L）",
+              "c4": "38 ± 0.3 °C 显影",
+              "c5": "漂定合一"
+            },
+            {
+              "c1": "Photo Systems UNICOLOR K-2",
+              "c2": "粉剂包 1 L 配 1 L",
+              "c3": "单卷用量标注",
+              "c4": "按厂商说明书",
+              "c5": "粉剂形式"
+            },
+            {
+              "c1": "Kodak FLEXICOLOR 1 加仑",
+              "c2": "显影 3.8 L + Bleach III 3.8 L + 定影 3.8 L + 稳定 3.8 L",
+              "c3": "小槽与转筒批次",
+              "c4": "37.8 ± 0.15 °C",
+              "c5": "开瓶即用"
+            },
+            {
+              "c1": "Adtec C-41",
+              "c2": "家用 1 L 套",
+              "c3": "单卷用量",
+              "c4": "未公开",
+              "c5": "无公开技术页"
+            }
+          ],
+          "text": "家用 C-41 套药规格"
+        },
+        {
+          "kind": "h2",
+          "text": "pH 窗口"
+        },
+        {
+          "kind": "settings",
+          "caption": "各浴 pH（公开资料可查范围）",
+          "rows": [
+            {
+              "param": "显影液 Developer",
+              "recommend": "约 pH 10.2",
+              "why": "强碱体系，CD-4 类显影剂在该 pH 下工作",
+              "alt": "厂商标称值以说明书为准"
+            },
+            {
+              "param": "漂白液 Bleach",
+              "recommend": "draft",
+              "why": "公开文档未给出",
+              "alt": "按厂商说明书"
+            },
+            {
+              "param": "定影液 Fixer",
+              "recommend": "draft",
+              "why": "公开文档未给出",
+              "alt": "按厂商说明书"
+            },
+            {
+              "param": "稳定液 Stabilizer",
+              "recommend": "draft",
+              "why": "公开文档未给出",
+              "alt": "按厂商说明书"
+            }
+          ],
+          "text": "各浴 pH（公开资料可查范围）"
+        },
+        {
+          "kind": "warn",
+          "text": "显影液 pH 直接决定密度与色平衡。pH 漂移会同时改变三层的显影速率。使用厂商提供的显影液 pH 试剂盒监测，并按说明加酸或加碱修正。"
+        },
+        {
+          "kind": "p",
+          "text": "漂白浴 pH 受显影液带入影响。带入量过大时 pH 上升，铁的有效浓度下降，残留银增加。按 $color-process.troubleshoot-color 处理。"
+        },
+        {
+          "kind": "h2",
+          "text": "原液保存期"
+        },
+        {
+          "kind": "p",
+          "text": "公开文档只给出部分产品的工作液保存期。原液（浓缩液）的保存期按各自说明书执行。Rollei COLORCHEM 给出浓缩液原封未开 2 年、分装后 3 个月。"
+        },
+        {
+          "kind": "note",
+          "text": "Adtec 无公开技术页。其配比、温度、时间与 pH 均未取得权威数据。该行数值为 draft，需以厂商最新说明书为准。配方类字段标 draft。"
+        },
+        {
+          "kind": "h2",
+          "text": "采购与储存"
+        },
+        {
+          "kind": "ul",
+          "text": "浓缩液在原厂包装中避光常温保存。温度范围按说明书。"
+        },
+        {
+          "kind": "ul",
+          "text": "配好的工作液装在密闭棕色或不锈钢瓶中。显影液装塑料瓶，漂白液与定影液装玻璃或不锈钢容器。"
+        },
+        {
+          "kind": "ul",
+          "text": "显影液装液量尽量小。氧化与二氧化碳吸收随暴露面积上升。参见 $bw-process.washing-storage 的保存通则。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Bellini Foto KIT C41/1 Technical Data Sheet",
+          "url": "https://www.bellinifoto.it/wp-content/uploads/2019/07/C41_scheda-tecnica-1.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "COLORCHEM C-41 Kit 操作手册（Rollei C-41 Maco-Set）",
+          "url": "https://www.freestylephoto.com/static/pdf/product_pdfs/rollei/C-41_Maco-Set_DE-EN-IT_08012013_final.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Photo Systems UNICOLOR K-2 Powder C-41 Processing Instructions",
+          "url": "https://www.freestylephoto.com/static/pdf/product_pdfs/unicolor/unicolor-c-41-powder-1-liter-instructions.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "KODAK Publication Z-131: Using KODAK FLEXICOLOR Chemicals",
+          "url": "https://business.kodakmoments.com/sites/default/files/wysiwyg/pro/chemistry/z131.pdf",
+          "kind": "manufacturer"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "color-process.c41-chemistry"
+        ],
+        "next": [],
+        "related": [
+          "color-process.c41-blix",
+          "bw-process.developer-types",
+          "color-process.temperature-critical"
+        ],
+        "contrast": [],
+        "part_of": [
+          "color-process.c41-chemistry"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "C-41 显影液的 pH 约为多少？",
+          "type": "single",
+          "options": [
+            "pH 4.5",
+            "pH 7.0",
+            "pH 10.2",
+            "pH 12.5"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "强碱体系约 pH 10.2。"
+        },
+        {
+          "q": "Bellini KITC41/1 的 RA 漂白液形态是？",
+          "type": "single",
+          "options": [
+            "需稀释",
+            "ready to use",
+            "粉剂",
+            "双液混合"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "技术页标注 BLEACH 1L 为 READY TO USE。"
+        },
+        {
+          "q": "Adtec C-41 套药的公开技术资料状况是？",
+          "type": "single",
+          "options": [
+            "公开完整配方",
+            "无公开技术页",
+            "仅有英文摘要",
+            "仅在日本市场发布"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "未取得该厂商的公开技术页。相关数值标 draft。"
+        },
+        {
+          "q": "漂定液进入显影液对 pH 的影响是？",
+          "type": "single",
+          "options": [
+            "pH 下降",
+            "pH 上升",
+            "pH 不变",
+            "pH 归零"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "漂定液的酸度低，带入会抬高显影浴 pH。"
+        }
+      ],
+      "checklist": [
+        "每批监测显影液 pH",
+        "浓缩液避光常温保存",
+        "显影液装液量尽量小",
+        "漂白与定影容器分开"
+      ],
+      "updated": "2026-01-12",
+      "status": "draft"
+    },
+    {
+      "id": "color-process.c41-push-pull",
+      "title": "C-41 push 与 pull",
+      "title_en": "C-41 Push and Pull",
+      "aliases": [
+        "push",
+        "pull",
+        "迫冲",
+        "追冲",
+        "过冲",
+        "欠曝显影",
+        "显影时间补偿"
+      ],
+      "type": "technique",
+      "level": 3,
+      "era": "1972 至今",
+      "tags": [
+        "push",
+        "pull",
+        "曝光补偿",
+        "容差"
+      ],
+      "summary": "push 用延长显影时间补偿欠曝。pull 用缩短显影时间补偿过曝。C-41 显影液对时间敏感，因此 push 幅度有限。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "定义"
+        },
+        {
+          "kind": "p",
+          "text": "push 指欠曝曝光后延长显影时间。延长显影使未充分曝光的区域达到目标密度。pull 指过曝曝光后缩短显影时间，减少整体密度。"
+        },
+        {
+          "kind": "p",
+          "text": "Kodak 建议推 1 档时显影时间增加 30 秒。该数值基于标准工艺的 3 分 15 秒显影。增量在显影时间的后段效果更强。"
+        },
+        {
+          "kind": "h2",
+          "text": "时间换算"
+        },
+        {
+          "kind": "table",
+          "caption": "常见 push 档位与显影时间换算（基于 3 分 15 秒正常显影）",
+          "rows": [
+            {
+              "c1": "正常",
+              "c2": "3 分 15 秒",
+              "c3": "1.0 倍",
+              "c4": "反差与颗粒正常",
+              "c5": "基准"
+            },
+            {
+              "c1": "push 1 档",
+              "c2": "3 分 45 秒（Kodak +30 秒）或 4 分 24 秒（1.25 倍）",
+              "c3": "1.08–1.25 倍",
+              "c4": "反差上升",
+              "c5": "颗粒略粗"
+            },
+            {
+              "c1": "push 2 档",
+              "c2": "5 分 15 秒（1.5 倍）",
+              "c3": "1.5 倍",
+              "c4": "反差明显上升",
+              "c5": "颗粒明显变粗"
+            }
+          ],
+          "text": "常见 push 档位与显影时间换算（基于 3 分 15 秒正常显影）"
+        },
+        {
+          "kind": "p",
+          "text": "不同厂商的换算系数不同。使用前查阅所用套药的说明书。"
+        },
+        {
+          "kind": "h2",
+          "text": "pull"
+        },
+        {
+          "kind": "p",
+          "text": "pull 通过缩短显影时间实现。过曝 1 档相当于曝光量增加一倍，密度已偏高。缩短显影时间会降低最大密度。"
+        },
+        {
+          "kind": "p",
+          "text": "pull 对反差的影响与 push 相反：反差下降，颗粒相对变细。高光层次可能损失。"
+        },
+        {
+          "kind": "h2",
+          "text": "结果评估"
+        },
+        {
+          "kind": "table",
+          "caption": "push 幅度的典型后果",
+          "rows": [
+            {
+              "c1": "push 1 档",
+              "c2": "可用",
+              "c3": "反差升高",
+              "c4": "颗粒略粗",
+              "c5": "彩色负片质量可接受"
+            },
+            {
+              "c1": "push 2 档",
+              "c2": "勉强可用",
+              "c3": "反差明显升高",
+              "c4": "颗粒明显粗",
+              "c5": "低感片损失最明显"
+            },
+            {
+              "c1": "push 3 档以上",
+              "c2": "不推荐",
+              "c3": "最大密度下降",
+              "c4": "颗粒极粗",
+              "c5": "出现明显偏色"
+            }
+          ],
+          "text": "push 幅度的典型后果"
+        },
+        {
+          "kind": "p",
+          "text": "C-41 显影液在 pH 约 10.2 的强碱条件下工作。延长显影时间会同时增加染料生成量与显影雾。因此 push 会缩短有效曝光余量。参见 $film-stock.latitude。"
+        },
+        {
+          "kind": "note",
+          "text": "push 与 pull 的片材不适合用标准过程控片监控。控片的标准曲线针对正常曝光条件。频繁 push 时应记录每批的实际显影时间。"
+        },
+        {
+          "kind": "h2",
+          "text": "替代方案"
+        },
+        {
+          "kind": "p",
+          "text": "拍摄时优先选择所需速度的高速片。ISO 100 推 2 档到 ISO 400 通常没有收益。高速片的现代乳剂在额定速度下的表现优于低感片 push。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "C-41 process — Wikipedia（push 30 秒增量与 pull 说明）",
+          "url": "https://en.wikipedia.org/wiki/C-41_process",
+          "kind": "article",
+          "note": "文中引用 Kodak 文献页 2-9。"
+        },
+        {
+          "name": "Photo Systems UNICOLOR K-2 Powder C-41 Processing Instructions（push 时间表）",
+          "url": "https://www.freestylephoto.com/static/pdf/product_pdfs/unicolor/unicolor-c-41-powder-1-liter-instructions.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "JOBO E-6 Processing Manual（push/pull 对 Dmax 与反差的影响）",
+          "url": "https://www.mr-alvandi.com/downloads/film-and-processing/e6-process-manual.pdf",
+          "kind": "manufacturer"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "color-process.c41"
+        ],
+        "next": [
+          "color-process.troubleshoot-color"
+        ],
+        "related": [
+          "film-stock.latitude",
+          "capture.exposure-metering",
+          "color-process.e6"
+        ],
+        "contrast": [],
+        "part_of": [
+          "color-process.c41"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Kodak 建议 push 1 档时显影时间增加多少？",
+          "type": "single",
+          "options": [
+            "10 秒",
+            "30 秒",
+            "60 秒",
+            "90 秒"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "Kodak 文献给出 30 秒增量。"
+        },
+        {
+          "q": "push 对反差的影响是？",
+          "type": "single",
+          "options": [
+            "下降",
+            "上升",
+            "不变",
+            "先升后降"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "延长显影时间提高反差。"
+        },
+        {
+          "q": "pull 通过什么方式实现？",
+          "type": "single",
+          "options": [
+            "缩短显影时间",
+            "延长显影时间",
+            "提高显影温度",
+            "降低漂白时间"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "过曝后缩短显影时间可降低密度。"
+        },
+        {
+          "q": "ISO 100 推 2 档到 ISO 400 的通常结果是？",
+          "type": "single",
+          "options": [
+            "画质改善",
+            "无收益",
+            "颗粒变细",
+            "反差下降"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "厂商建议优先选高速片而非 push。"
+        }
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "color-process.color-negative-logs",
+      "title": "彩色负片处理日志",
+      "title_en": "Color Negative Processing Logs",
+      "aliases": [
+        "log",
+        "处理记录",
+        "工艺日志",
+        "补加记录",
+        "控片记录"
+      ],
+      "type": "technique",
+      "level": 3,
+      "era": "至今",
+      "tags": [
+        "记录",
+        "质量管理",
+        "控片",
+        "补加"
+      ],
+      "summary": "处理日志记录每批药液的温度、时间、补加量与控片结果。日志用于追溯偏差与建立目标值。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "记录字段"
+        },
+        {
+          "kind": "table",
+          "caption": "每批冲洗的记录项",
+          "rows": [
+            {
+              "c1": "日期与时间",
+              "c2": "冲洗批次的时间戳",
+              "c3": "与配药时间对照",
+              "c4": "确定药液龄期",
+              "c5": "必填"
+            },
+            {
+              "c1": "套药名称与批次号",
+              "c2": "厂商与产品编号",
+              "c3": "配比与有效期",
+              "c4": "定位配方问题",
+              "c5": "必填"
+            },
+            {
+              "c1": "显影温度",
+              "c2": "起始与结束温度",
+              "c3": "容差 ± 0.15 °C（C-41）",
+              "c4": "偏差记录原因",
+              "c5": "必填"
+            },
+            {
+              "c1": "显影时间",
+              "c2": "含 push/pull 修正后的实际时间",
+              "c3": "装片数与卷号",
+              "c4": "push 批次单独标注",
+              "c5": "必填"
+            },
+            {
+              "c1": "补加量",
+              "c2": "各浴的补加体积",
+              "c3": "按处理面积计算",
+              "c4": "偏离建议率需注明",
+              "c5": "必填"
+            },
+            {
+              "c1": "控片结果",
+              "c2": "D-min、LD、HD、D-maxB、YB",
+              "c3": "目标值与偏差",
+              "c4": "超限需注明处理",
+              "c5": "必填"
+            },
+            {
+              "c1": "水洗与干燥",
+              "c2": "水洗次数与换水量",
+              "c3": "干燥温度",
+              "c4": "异常标注",
+              "c5": "建议填"
+            }
+          ],
+          "text": "每批冲洗的记录项"
+        },
+        {
+          "kind": "h2",
+          "text": "目标值的建立"
+        },
+        {
+          "kind": "p",
+          "text": "按顺序建立目标值。"
+        },
+        {
+          "kind": "steps",
+          "text": "目标值建立步骤",
+          "items": [
+            {
+              "t": "1. 配新槽液",
+              "d": "按说明书加入 starter 配液。记录配液时间。"
+            },
+            {
+              "t": "2. 跑控片",
+              "d": "按标准条件冲洗控片。测量密度与色平衡离散。"
+            },
+            {
+              "t": "3. 设目标值",
+              "d": "把多次测量的均值设为目标值。取 3 次以上结果平均。"
+            },
+            {
+              "t": "4. 修正",
+              "d": "偏差在目标值调整容差内时，调整目标值而非药液。偏差超出控制限时更换药液。"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "趋势分析"
+        },
+        {
+          "kind": "p",
+          "text": "连续记录的控片数据形成趋势曲线。D-min 与 D-maxB 的缓慢漂移提示药液老化。HD − LD 的缓慢上升提示显影活性下降。色平衡离散的单向漂移提示某一浴的污染。"
+        },
+        {
+          "kind": "p",
+          "text": "季节变化影响水温，进而影响配药 pH。日志中记录室温可帮助分离水温因素。"
+        },
+        {
+          "kind": "note",
+          "text": "归档保存的胶片附带处理日志，构成该批影像的处理条件证据。参见 $archive.digital-preservation 的元数据保存原则。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "KODAK Publication Z-131: Using KODAK FLEXICOLOR Chemicals（控片与容差表）",
+          "url": "https://business.kodakmoments.com/sites/default/files/wysiwyg/pro/chemistry/z131.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "JOBO E-6 Processing Manual（目标值、颜色离散与控制值的判定方法）",
+          "url": "https://www.mr-alvandi.com/downloads/film-and-processing/e6-process-manual.pdf",
+          "kind": "manufacturer"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "color-process.c41-control-strips"
+        ],
+        "next": [],
+        "related": [
+          "color-process.temperature-critical",
+          "archive.digital-preservation"
+        ],
+        "contrast": [],
+        "part_of": [
+          "color-process.c41"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "偏差落在目标值调整容差内时应如何处理？",
+          "type": "single",
+          "options": [
+            "更换药液",
+            "调整目标值",
+            "提高温度",
+            "延长显影"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "小幅偏差通过调整目标值吸收。"
+        },
+        {
+          "q": "HD − LD 的缓慢上升提示什么？",
+          "type": "single",
+          "options": [
+            "显影活性下降",
+            "残留银增加",
+            "定影不足",
+            "干燥过度"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "反差上升说明显影推进过度或活性变化。"
+        },
+        {
+          "q": "push 批次在日志中须如何标注？",
+          "type": "single",
+          "options": [
+            "并入正常批次",
+            "单独标注实际显影时间",
+            "不记录",
+            "只记录卷号"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "push 批次的显影时间偏离标准值，须单独标注。"
+        }
+      ],
+      "checklist": [
+        "记录套药批次号",
+        "记录显影起止温度",
+        "记录 push 修正后的实际时间",
+        "记录各浴补加量",
+        "记录控片五项读数"
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "color-process.temperature-critical",
+      "title": "彩色冲洗的温度控制",
+      "title_en": "Temperature Control in Color Processing",
+      "aliases": [
+        "temperature",
+        "温度控制",
+        "温度容差",
+        "38 °C",
+        "37.8 °C",
+        "恒温"
+      ],
+      "type": "pitfall",
+      "level": 4,
+      "era": "至今",
+      "tags": [
+        "温度控制",
+        "工艺容差",
+        "恒温",
+        "显影"
+      ],
+      "summary": "彩色工艺对温度敏感。显影温度偏差改变密度与反差。E-6 的容差比 C-41 更严。全程温度须控制在规定范围内。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "原则"
+        },
+        {
+          "kind": "p",
+          "text": "温度影响显影速率。温度升高，速率加快，密度上升。温度降低，速率减慢，密度下降。彩色工艺同时生成染料，因此温度偏差也改变染料量与色平衡。"
+        },
+        {
+          "kind": "p",
+          "text": "显影时间与温度不可互换补偿。改变温度后须重新确定目标值（aim value），否则控片偏差会持续存在。"
+        },
+        {
+          "kind": "h2",
+          "text": "C-41 与 E-6 的容差差异"
+        },
+        {
+          "kind": "compare",
+          "caption": "显影液温度容差对比",
+          "rows": [
+            {
+              "c1": "C-41（Process C-41，Kodak 商用）",
+              "c2": "37.8 ± 0.15 °C（100.0 ± 0.25 °F）",
+              "c3": "± 0.15 °C",
+              "c4": "转筒套药多为 38.0 ± 0.2 至 ± 0.3 °C",
+              "c5": "漂白、定影、稳定可用 24–41 °C 宽窗口"
+            },
+            {
+              "c1": "E-6（Process E-6，JOBO/Kodak）",
+              "c2": "37.8 ± 0.3 °C（100 ± 0.5 °F）",
+              "c3": "± 0.3 °C",
+              "c4": "彩色显影容差与首显接近，漂定与水洗可用 33.3–39.4 °C",
+              "c5": "反转浴与预漂洗可用 23.9–39.4 °C"
+            }
+          ],
+          "text": "显影液温度容差对比"
+        },
+        {
+          "kind": "p",
+          "text": "C-41 的显影容差为 ± 0.15 °C，E-6 的容差为 ± 0.3 °C。两者都比黑白工艺严格。黑白工艺的容差通常为 ± 0.5 °C。参见 $bw-process.mixing-temp-control。"
+        },
+        {
+          "kind": "note",
+          "text": "E-6 的其他浴容差更宽。反转浴与预漂洗可用 23.9–39.4 °C。首显、首洗与彩色显影必须严格恒温。E-6 的调整原则是只调首显时间，不用调温控制密度。"
+        },
+        {
+          "kind": "h2",
+          "text": "温度偏差的后果"
+        },
+        {
+          "kind": "table",
+          "caption": "温度偏差对结果的影响",
+          "rows": [
+            {
+              "c1": "显影温度偏高",
+              "c2": "密度上升",
+              "c3": "反差上升",
+              "c4": "染料量上升",
+              "c5": "可用缩短显影时间或降低显影温度修正"
+            },
+            {
+              "c1": "显影温度偏低",
+              "c2": "密度下降",
+              "c3": "反差下降",
+              "c4": "染料量下降，色彩变淡",
+              "c5": "可用延长显影时间或提高显影温度修正"
+            },
+            {
+              "c1": "E-6 彩色显影液被稀释",
+              "c2": "染料量上升",
+              "c3": "密度上升",
+              "c4": "色偏向绿-品红轴或黄-蓝轴",
+              "c5": "需稀释到 3–4 倍水量才使染料量下降"
+            },
+            {
+              "c1": "E-6 预漂洗浓度过高",
+              "c2": "生成 leuco-cyan 染料",
+              "c3": "实测青染料 Dmax 过低",
+              "c4": "阴影偏红",
+              "c5": "降低预漂洗浓度"
+            }
+          ],
+          "text": "温度偏差对结果的影响"
+        },
+        {
+          "kind": "h2",
+          "text": "温度控制方法"
+        },
+        {
+          "kind": "ul",
+          "text": "使用带循环水套的显影罐或槽。参见 $process-equipment.tank 与 $process-equipment.spray-processor。"
+        },
+        {
+          "kind": "ul",
+          "text": "药液加热到工艺温度后再装片。装片过程会带走热量。"
+        },
+        {
+          "kind": "ul",
+          "text": "预热时长使罐壁与药液温度一致。Bellini C41-RA 规定预热 3 分 00 秒，Rollei 规定 4 分 00 秒。"
+        },
+        {
+          "kind": "ul",
+          "text": "使用电子温度计，精度优于 0.1 °C。玻璃温度计的响应滞后偏大。"
+        },
+        {
+          "kind": "ul",
+          "text": "室温波动大的环境使用恒温工作台。参见 $process-equipment.home-lab。"
+        },
+        {
+          "kind": "warn",
+          "text": "稳定浴温度与工艺温度不同。Rollei 规定稳定在 20–25 °C，E-6 稳定在 20.0–25.0 °C。按各自说明书执行。"
+        },
+        {
+          "kind": "h2",
+          "text": "记录"
+        },
+        {
+          "kind": "p",
+          "text": "每次冲洗记录药液温度、显影时间与所用套药批次。温度偏差后的目标值调整依据这些记录。参见 $color-process.color-negative-logs。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "KODAK Publication Z-131: Using KODAK FLEXICOLOR Chemicals（温度、搅拌与容差表）",
+          "url": "https://business.kodakmoments.com/sites/default/files/wysiwyg/pro/chemistry/z131.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "JOBO E-6 Processing Manual（E-6 温度容差与 pH 修正附录）",
+          "url": "https://www.mr-alvandi.com/downloads/film-and-processing/e6-process-manual.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "E-6 process — Wikipedia（引用 Kodak Publication Z-119 的浴温表）",
+          "url": "https://en.wikipedia.org/wiki/E-6_process",
+          "kind": "article"
+        },
+        {
+          "name": "Bellini Foto KIT C41/1 Technical Data Sheet（预热与显影容差）",
+          "url": "https://www.bellinifoto.it/wp-content/uploads/2019/07/C41_scheda-tecnica-1.pdf",
+          "kind": "manufacturer"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "color-process.c41"
+        ],
+        "next": [
+          "color-process.c41-control-strips"
+        ],
+        "related": [
+          "bw-process.mixing-temp-control",
+          "process-equipment.tank",
+          "color-process.e6"
+        ],
+        "contrast": [],
+        "part_of": [
+          "color-process.c41"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Kodak 商用 Process C-41 的显影温度容差是多少？",
+          "type": "single",
+          "options": [
+            "± 0.15 °C",
+            "± 0.3 °C",
+            "± 0.5 °C",
+            "± 1.0 °C"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "规定为 100.0 ± 0.25 °F，即 37.8 ± 0.15 °C。"
+        },
+        {
+          "q": "E-6 首显的温度容差是多少？",
+          "type": "single",
+          "options": [
+            "± 0.15 °C",
+            "± 0.3 °C",
+            "± 1.0 °C",
+            "± 2.0 °C"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "E-6 要求 ± 0.3 °C（± 0.5 °F）。"
+        },
+        {
+          "q": "显影温度偏高时的结果是什么？",
+          "type": "single",
+          "options": [
+            "密度下降",
+            "密度上升",
+            "密度不变",
+            "只影响色平衡"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "温度升高加快显影速率，密度上升。"
+        },
+        {
+          "q": "E-6 的调整原则是什么？",
+          "type": "single",
+          "options": [
+            "调整温度控制密度",
+            "只调首显时间",
+            "同时调温与时间",
+            "调整漂白时间"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "E-6 用首显时间控制密度，不用调温。"
+        }
+      ],
+      "checklist": [
+        "药液先加热到工艺温度",
+        "装片后完成预热",
+        "使用精度 0.1 °C 的温度计",
+        "记录每次温度与时间",
+        "按各自说明书执行稳定浴温度"
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "color-process.troubleshoot-color",
+      "title": "C-41 故障排除",
+      "title_en": "C-41 Troubleshooting",
+      "aliases": [
+        "故障排除",
+        "troubleshoot",
+        "偏色",
+        "条痕",
+        "reticulation",
+        "残留银",
+        "雾"
+      ],
+      "type": "pitfall",
+      "level": 4,
+      "era": "至今",
+      "tags": [
+        "故障排除",
+        "偏色",
+        "条痕",
+        "雾",
+        "残留银"
+      ],
+      "summary": "本条按症状列出 C-41 常见故障的原因与处理。每项故障给出可执行的检查步骤。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "偏色"
+        },
+        {
+          "kind": "troubleshoot",
+          "caption": "色偏类故障",
+          "items": [
+            {
+              "t": "整体偏红或偏品红",
+              "d": "漂定液耗尽、漂定温度过低或漂定时间过短。检查漂定液寿命与温度。片材可在药液中重新漂洗。使用新配漂定液。"
+            },
+            {
+              "t": "偏蓝黑、密度与反差过高",
+              "d": "显影温度过高或显影时间过长。降低显影温度或缩短显影时间。检查控片密度是否超出控制限。"
+            },
+            {
+              "t": "偏品红，齿孔旁密度偏高",
+              "d": "普通罐中搅拌过猛，齿孔处的机械力造成局部过度显影。降低搅拌强度。使用旋转式罐。"
+            },
+            {
+              "t": "偏色且无法用印放修正",
+              "d": "安全光漏光，或显影液被漂定液污染。检查暗房安全光。更换显影液并清洁专用容器。"
+            },
+            {
+              "t": "印刷结果偏平",
+              "d": "显影不足。延长显影时间或提高显影温度。"
+            }
+          ],
+          "text": "色偏类故障"
+        },
+        {
+          "kind": "h2",
+          "text": "密度与反差"
+        },
+        {
+          "kind": "troubleshoot",
+          "caption": "密度类故障",
+          "items": [
+            {
+              "t": "底片整体密度过高",
+              "d": "显影温度过高、显影时间过长或显影液过度补加。检查温度计与计时器。检查补加量。降低温度或缩短时间。"
+            },
+            {
+              "t": "底片整体密度过低",
+              "d": "显影温度过低、显影时间过短或显影液活性衰减。提高温度或延长时间。使用新配显影液。检查显影液 pH 漂移。"
+            },
+            {
+              "t": "高光或暗部层次丢失",
+              "d": "显影过度。缩短显影时间或降低显影温度。检查控片 HD 与 LD 值。"
+            },
+            {
+              "t": "最大密度不足、高光发白",
+              "d": "残留银导致染料量受限。检查漂白液氧化能力。按 $color-process.vigour-replenishment 补加再生剂并曝气。"
+            }
+          ],
+          "text": "密度类故障"
+        },
+        {
+          "kind": "h2",
+          "text": "条痕与不均匀"
+        },
+        {
+          "kind": "troubleshoot",
+          "caption": "机械与污染类故障",
+          "items": [
+            {
+              "t": "沿片长度方向的条痕",
+              "d": "显影液被漂定液污染。使用专用容器。按 $color-process.vigour-replenishment 更换药液并加强容器清洗。"
+            },
+            {
+              "t": "周期性横条痕",
+              "d": "转筒反转机构卡滞或倒转不彻底。清洁导轨。检查倒转弹簧。参见 $process-equipment.rotator。"
+            },
+            {
+              "t": "齿孔附近密度不均",
+              "d": "装片张力不足或倒转时未排气。装片后 10 秒内倒转 4 次并敲击排气泡。"
+            },
+            {
+              "t": "局部斑点",
+              "d": "显影前药液被颗粒污染。过滤药液至 10–30 µm。清洁药罐。"
+            },
+            {
+              "t": "黑色斑点与白斑（ISO 5247 片）",
+              "d": "碳基底未在终洗中完全去除。延长终洗时间。检查稳定液状态。"
+            }
+          ],
+          "text": "机械与污染类故障"
+        },
+        {
+          "kind": "h2",
+          "text": "染料晕开与网纹"
+        },
+        {
+          "kind": "troubleshoot",
+          "caption": "乳剂层损伤类故障",
+          "items": [
+            {
+              "t": "染料晕开（reticulation）",
+              "d": "乳剂层在高湿高温下膨胀，随后收缩开裂。成核剂（nucleating agent）由显影液带入，或水洗与药液温差过大。控制环境湿度。药液温度保持一致。参见 $bw-process.mixing-temp-control。"
+            },
+            {
+              "t": "整体网状纹理",
+              "d": "显影过程中机械搅动过强，且乳剂层处于膨胀状态。降低搅拌强度。使用旋转式罐而非轴向倒转。"
+            },
+            {
+              "t": "水洗时出现花斑",
+              "d": "药液与清水温差过大。统一水温后再水洗。"
+            }
+          ],
+          "text": "乳剂层损伤类故障"
+        },
+        {
+          "kind": "h2",
+          "text": "雾"
+        },
+        {
+          "kind": "troubleshoot",
+          "caption": "雾类故障",
+          "items": [
+            {
+              "t": "高密度区发雾、透明度差",
+              "d": "定影不足。残留卤化银在存放期转雾。延长定影时间。检查定影液酸度与耗银量。"
+            },
+            {
+              "t": "全片均匀低雾",
+              "d": "安全光漏光、显影液过度补加、或显影液被污染。检查暗房。检查显影液状态。使用新配显影液。"
+            },
+            {
+              "t": "存储后雾加深",
+              "d": "水洗不彻底，残留的硫代硫酸钠继续与染料反应。延长末级水洗。使用新鲜流动水。"
+            },
+            {
+              "t": "E-6 透明片黄雾",
+              "d": "漂白不彻底或定影不彻底。残留银形成黄色。检查漂白与定影时间。"
+            }
+          ],
+          "text": "雾类故障"
+        },
+        {
+          "kind": "h2",
+          "text": "污染与器材"
+        },
+        {
+          "kind": "troubleshoot",
+          "caption": "器材与配液类故障",
+          "items": [
+            {
+              "t": "配液后立即出现色偏",
+              "d": "显影液配液计量误差。使用同一量具逐一量取三份浓缩液。"
+            },
+            {
+              "t": "槽壁腐蚀",
+              "d": "漂白浴与定影浴腐蚀黄铜、铜与低等级不锈钢。使用 316 不锈钢或钛。参见 $process-equipment.tank。"
+            },
+            {
+              "t": "显影浴起泡",
+              "d": "稳定液或漂定液混入显影液，或用空气搅拌显影液。使用氮气或 turbulence。使用专用量具。"
+            }
+          ],
+          "text": "器材与配液类故障"
+        },
+        {
+          "kind": "note",
+          "text": "排障顺序：先跑控片确定偏差性质，再查温度与时间，再查药液状态，最后查器材与操作。使用控片可避免盲目调整。参见 $color-process.c41-control-strips。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "KODAK Publication Z-131: Using KODAK FLEXICOLOR Chemicals（残留银、条纹与材质故障诊断）",
+          "url": "https://business.kodakmoments.com/sites/default/files/wysiwyg/pro/chemistry/z131.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Photo Systems UNICOLOR K-2 Powder C-41 Processing Instructions（故障对照表）",
+          "url": "https://www.freestylephoto.com/static/pdf/product_pdfs/unicolor/unicolor-c-41-powder-1-liter-instructions.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Ilford reversal processing 技术资料（装片排气与网纹成因）",
+          "url": "https://ilfordphoto.com/wp/wp-content/uploads/2019/06/REVERSAL-180619.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "JOBO Professional RA-4 Operating Manual（色偏与条纹故障对照表）",
+          "url": "https://silvergrainclassics.com/download/87/chemistry/3640/ra_4.pdf",
+          "kind": "manufacturer"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "color-process.c41"
+        ],
+        "next": [
+          "color-process.color-negative-logs"
+        ],
+        "related": [
+          "color-process.temperature-critical",
+          "process-equipment.rotator",
+          "color-process.vigour-replenishment"
+        ],
+        "contrast": [],
+        "part_of": [
+          "color-process.c41"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "负片高光发白、最大密度不足的最可能原因是？",
+          "type": "single",
+          "options": [
+            "显影不足",
+            "残留银",
+            "定影过度",
+            "干燥温度过高"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "残留银限制染料生成量，抬高 DmaxB 与 YB。"
+        },
+        {
+          "q": "齿孔旁密度偏高且偏品红的原因是？",
+          "type": "single",
+          "options": [
+            "搅拌过猛",
+            "温度过高",
+            "水洗不足",
+            "安全光漏光"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "齿孔处机械力造成局部过度显影。"
+        },
+        {
+          "q": "染料晕开（reticulation）的成因是什么？",
+          "type": "single",
+          "options": [
+            "乳剂层在湿热下膨胀后收缩开裂",
+            "显影液氧化",
+            "定影液耗尽",
+            "干燥温度过低"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "成核剂带入或温差过大导致乳剂层开裂。"
+        },
+        {
+          "q": "全片均匀低雾的检查顺序第一步是什么？",
+          "type": "single",
+          "options": [
+            "更换相纸",
+            "检查暗房安全光",
+            "提高显影温度",
+            "延长干燥时间"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "先排除安全光漏光，再查药液状态。"
+        }
+      ],
+      "checklist": [
+        "先跑控片",
+        "检查温度与时间记录",
+        "检查药液寿命与污染",
+        "检查器材材质与排障顺序"
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "color-process.unicolor-k2-formula",
+      "title": "Photo Systems UNICOLOR K-2 粉剂 C-41 配方",
+      "title_en": "Photo Systems UNICOLOR K-2 Powder C-41",
+      "aliases": [
+        "UNICOLOR K-2",
+        "Photo Systems K-2",
+        "K-2 powder",
+        "C-41 粉剂"
+      ],
+      "type": "chemical",
+      "level": 4,
+      "era": "2007 至今",
+      "tags": [
+        "配方",
+        "C-41",
+        "粉剂",
+        "MSDS"
+      ],
+      "summary": "UNICOLOR K-2 是 1 L 粉剂套药，含显影、漂定与稳定三部分。安全数据表公开了三部分的主要成分名。该套药还给出 push 时间表与故障对照表。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "规格"
+        },
+        {
+          "kind": "p",
+          "text": "产品编号 K-2 POWDER，Cat # 10123，1 L 粉剂包配 1 L 工作液，Rev 4/07。适用于 Kodacolor、Vericolor 及 C-41 兼容负片。该套药也可冲洗 chromogenic 黑白片。"
+        },
+        {
+          "kind": "h2",
+          "text": "成分披露"
+        },
+        {
+          "kind": "table",
+          "caption": "三部分的安全数据表成分（定性披露）",
+          "rows": [
+            {
+              "c1": "显影液 Developer",
+              "c2": "碳酸钠（sodium carbonate）",
+              "c3": "CD-4 硫酸盐（4-氨基-3-甲基-N-(β-羟乙基)苯胺硫酸盐）",
+              "c4": "提供碱度与显影剂",
+              "c5": "克数未公开"
+            },
+            {
+              "c1": "漂定液 Blix",
+              "c2": "硫代硫酸铵（ammonium thiosulfate）",
+              "c3": "铁络合体系未在摘要中列出",
+              "c4": "定影主体",
+              "c5": "克数未公开"
+            },
+            {
+              "c1": "稳定液 Stabilizer",
+              "c2": "六亚甲基四胺（hexamine）",
+              "c3": "表面活性剂未在摘要中列出",
+              "c4": "提高染料稳定性与润湿",
+              "c5": "克数未公开"
+            }
+          ],
+          "text": "三部分的安全数据表成分（定性披露）"
+        },
+        {
+          "kind": "note",
+          "text": "成分来自 MSDS 级披露，只给物质名与 CAS 描述，不含浓度。各组分的克数与工作液 pH 标 draft，需以厂商最新说明书为准。"
+        },
+        {
+          "kind": "h2",
+          "text": "配液与工艺"
+        },
+        {
+          "kind": "p",
+          "text": "配液水温须高于工艺温度数度。1 L 粉剂包按厂商顺序投入，先投显影成分，再投漂定与稳定成分。每投完一包充分搅拌。"
+        },
+        {
+          "kind": "table",
+          "caption": "厂商给出的 push 显影时间（正常时间 3.5 分钟）",
+          "rows": [
+            {
+              "c1": "正常曝光",
+              "c2": "3 分 30 秒",
+              "c3": "1.0 倍",
+              "c4": "标准显影时间",
+              "c5": "推荐起点"
+            },
+            {
+              "c1": "欠曝 1 档",
+              "c2": "4 分 24 秒",
+              "c3": "1.25 倍",
+              "c4": "约 2 倍曝光量",
+              "c5": "反差上升"
+            },
+            {
+              "c1": "欠曝 2 档",
+              "c2": "5 分 15 秒",
+              "c3": "1.5 倍",
+              "c4": "约 4 倍曝光量",
+              "c5": "颗粒变粗，容差变小"
+            }
+          ],
+          "text": "厂商给出的 push 显影时间（正常时间 3.5 分钟）",
+          "note": "安全数据表在 4 分 24 秒与 4 分 25 秒两处并列。本表取 4 分 24 秒，差值 1 秒对结果无实质影响。厂商说明书为准。"
+        },
+        {
+          "kind": "p",
+          "text": "厂商建议优先选用高速胶片而非 push。ISO 100 推 2 档到 ISO 400 通常没有收益。"
+        },
+        {
+          "kind": "h2",
+          "text": "chromogenic 黑白片显影"
+        },
+        {
+          "kind": "table",
+          "caption": "彩色显影液冲洗黑白片的显影时间加成",
+          "rows": [
+            {
+              "c1": "ISO 100",
+              "c2": "标准时间",
+              "c3": "1.0 倍",
+              "c4": "反差正常",
+              "c5": "推荐"
+            },
+            {
+              "c1": "ISO 400",
+              "c2": "标准时间",
+              "c3": "1.0 倍",
+              "c4": "反差正常",
+              "c5": "推荐"
+            },
+            {
+              "c1": "ISO 800",
+              "c2": "标准时间 + 40 %",
+              "c3": "1.4 倍",
+              "c4": "反差下降",
+              "c5": "可接受"
+            },
+            {
+              "c1": "ISO 1600",
+              "c2": "标准时间 + 80 %",
+              "c3": "1.8 倍",
+              "c4": "反差下降明显",
+              "c5": "颗粒粗"
+            }
+          ],
+          "text": "彩色显影液冲洗黑白片的显影时间加成"
+        },
+        {
+          "kind": "h2",
+          "text": "厂商故障对照"
+        },
+        {
+          "kind": "troubleshoot",
+          "caption": "UNICOLOR K-2 常见问题",
+          "items": [
+            {
+              "t": "底片过薄",
+              "d": "检查显影温度、相机曝光、显影液寿命与显影液温度上限。逐项排除。"
+            },
+            {
+              "t": "偏品红，齿孔旁密度偏高",
+              "d": "普通罐中的搅拌过猛。降低搅拌强度。使用旋转式罐。"
+            },
+            {
+              "t": "黑点与白斑（ISO 5247 片）",
+              "d": "碳基底未在终洗中完全去除。延长终洗。检查稳定液状态。"
+            },
+            {
+              "t": "印相结果偏平",
+              "d": "显影不足。延长显影时间或提高显影温度。"
+            },
+            {
+              "t": "高光或暗部层次丢失",
+              "d": "显影过度。缩短显影时间或降低显影温度。"
+            },
+            {
+              "t": "红色偏色",
+              "d": "漂定液耗尽、漂定温度过低或漂定时间过短。可在药液中重新漂洗。"
+            }
+          ],
+          "text": "UNICOLOR K-2 常见问题"
+        },
+        {
+          "kind": "warn",
+          "text": "漂定液对显影液的污染极敏感。少量萃取物即可毁掉显影液。使用专用容器并清晰标记。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Photo Systems UNICOLOR K-2 Powder C-41 Processing Instructions (Cat # 10123, Rev 4/07)",
+          "url": "https://www.freestylephoto.com/static/pdf/product_pdfs/unicolor/unicolor-c-41-powder-1-liter-instructions.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "KODAK Publication Z-131: Using KODAK FLEXICOLOR Chemicals（push 与漂定故障对照）",
+          "url": "https://business.kodakmoments.com/sites/default/files/wysiwyg/pro/chemistry/z131.pdf",
+          "kind": "manufacturer"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "color-process.c41-chemistry"
+        ],
+        "next": [
+          "color-process.c41-push-pull"
+        ],
+        "related": [
+          "film-stock.latitude",
+          "color-process.troubleshoot-color"
+        ],
+        "contrast": [
+          "color-process.e6"
+        ],
+        "part_of": [
+          "color-process.c41-chemistry"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "UNICOLOR K-2 漂定液的主要定影成分是？",
+          "type": "single",
+          "options": [
+            "硫代硫酸钠",
+            "硫代硫酸铵",
+            "氯化铵",
+            "亚硫酸钠"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "MSDS 摘要列出 ammonium thiosulfate。"
+        },
+        {
+          "q": "欠曝 2 档时的显影时间是正常时间的几倍？",
+          "type": "single",
+          "options": [
+            "1.1",
+            "1.25",
+            "1.5",
+            "2.0"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "3.5 分钟乘 1.5 等于 5 分 15 秒。"
+        },
+        {
+          "q": "偏品红且齿孔旁密度偏高通常由什么引起？",
+          "type": "single",
+          "options": [
+            "显影温度过高",
+            "普通罐中搅拌过猛",
+            "定影不足",
+            "干燥温度过高"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "齿孔处的机械力造成局部过度显影。"
+        },
+        {
+          "q": "稳定液中公开披露的成分是？",
+          "type": "single",
+          "options": [
+            "六亚甲基四胺",
+            "甲醛",
+            "溴酸钾",
+            "对苯二胺"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "MSDS 摘要列出 hexamine。"
+        }
+      ],
+      "checklist": [
+        "配液水温高于工艺温度",
+        "1 L 粉剂包配 1 L 工作液",
+        "漂定容器与显影容器分开",
+        "显影时间按卷数与曝光量查表"
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "color-process.vigour-replenishment",
+      "title": "药液活性衰减与补加",
+      "title_en": "Chemistry Vigour Depletion and Replenishment",
+      "aliases": [
+        "vigour",
+        "replenisher",
+        "补加",
+        "regenerator",
+        "seasoned solution",
+        "starter",
+        "药力衰减"
+      ],
+      "type": "process",
+      "level": 4,
+      "era": "1972 至今",
+      "tags": [
+        "补加",
+        "再生",
+        "药力",
+        "过程控制"
+      ],
+      "summary": "显影与漂白药液随冲洗消耗活性组分。补加液恢复浓度。再生液回收槽液溢流。定影与漂白液需要监测耗银量。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "术语"
+        },
+        {
+          "kind": "defs",
+          "term": "浓缩液（concentrate）",
+          "text": "厂商供应的高浓度药液。加水配成工作液。"
+        },
+        {
+          "kind": "defs",
+          "term": "新液（fresh solution）",
+          "text": "按说明书新配的工作液。活性组分浓度处于标称值。"
+        },
+        {
+          "kind": "defs",
+          "term": "陈化液（seasoned solution）",
+          "text": "已处理并补充一段时间的工作液。化学组分与副产物处于最佳状态。"
+        },
+        {
+          "kind": "defs",
+          "term": "引子（starter）",
+          "text": "配新槽液时加入的物质。使新液的组成接近陈化液。"
+        },
+        {
+          "kind": "defs",
+          "term": "补充液（replenisher）",
+          "text": "按面积或卷数加回槽液的药液。恢复活性组分浓度。"
+        },
+        {
+          "kind": "defs",
+          "term": "再生剂（regenerator）",
+          "text": "加入槽液的浓缩液。恢复漂白液的氧化能力。"
+        },
+        {
+          "kind": "h2",
+          "text": "衰减机制"
+        },
+        {
+          "kind": "p",
+          "text": "显影过程中显影剂被消耗。药液 pH 随显影剂消耗而下降。显影速率下降，密度下降。"
+        },
+        {
+          "kind": "p",
+          "text": "漂白过程中铁（III）被还原为铁（II）。氧化能力下降。金属银无法完全转化，出现残留银。"
+        },
+        {
+          "kind": "p",
+          "text": "显影液带入漂白与定影浴会改变其组成。定影液中的硫代硫酸钠下降，络合能力下降。"
+        },
+        {
+          "kind": "h2",
+          "text": "补加率"
+        },
+        {
+          "kind": "table",
+          "caption": "Kodak C-41RA 商用补加率（minilab）",
+          "rows": [
+            {
+              "c1": "显影液",
+              "c2": "40 mL/25 画幅卷（35 mL/m）",
+              "c3": "与处理面积成正比",
+              "c4": "3 分 15 秒 @ 37.8 ± 0.15 °C",
+              "c5": "按控片结果调整"
+            },
+            {
+              "c1": "终洗",
+              "c2": "40 mL/135-24 卷（36 mL/m）",
+              "c3": "第三级对流补加",
+              "c4": "0 分 20 秒 × 3 级",
+              "c5": "降低沉积与干燥斑"
+            },
+            {
+              "c1": "水洗（加装时）",
+              "c2": "1250 mL/135-24 卷（1080 mL/m）",
+              "c3": "两级对流",
+              "c4": "单级则加倍",
+              "c5": "终洗缩到 40 秒"
+            }
+          ],
+          "text": "Kodak C-41RA 商用补加率（minilab）"
+        },
+        {
+          "kind": "p",
+          "text": "上表的补加率是按 25 画幅 ADVANTIX 片估算的平均值。实际补加率按控片结果调整。"
+        },
+        {
+          "kind": "h2",
+          "text": "再生"
+        },
+        {
+          "kind": "p",
+          "text": "Kodak 提供 Bleach III Regenerator 与 Bleach III HV Regenerator。HV 再生剂使用与 Bleach III 相同的补加率，但单位再生量使用的浓缩液减半。"
+        },
+        {
+          "kind": "steps",
+          "text": "残留银的诊断与再生步骤",
+          "items": [
+            {
+              "t": "1. 确认症状",
+              "d": "D-maxB − YB 与 HD − LD 曲线抬高，说明残留银增加。参见 $color-process.c41-control-strips。"
+            },
+            {
+              "t": "2. 补加再生剂",
+              "d": "每升槽液加入 Bleach III Regenerator Concentrate 30 mL。或加入 Bleach III NR Replenisher Concentrate 35 mL。使用 RA Bleach 的情形加 70 mL FLEXICOLOR RA Bleach。"
+            },
+            {
+              "t": "3. 曝气",
+              "d": "开循环并曝气不少于 15 分钟。恢复铁的氧化能力。"
+            },
+            {
+              "t": "4. 复测",
+              "d": "重跑控片，确认残留银回到容差内。"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "新液与陈化液"
+        },
+        {
+          "kind": "p",
+          "text": "新配槽液的溶氧与副产物含量不同于陈化液。厂商提供 starter 调整该差异。小容量批次系统用未补充的现配液，另选小包装产品。"
+        },
+        {
+          "kind": "table",
+          "caption": "Kodak FLEXICOLOR 化学品线（续式系统）",
+          "rows": [
+            {
+              "c1": "FLEXICOLOR Developer",
+              "c2": "补充式槽液",
+              "c3": "配补充液",
+              "c4": "多规格",
+              "c5": "需 starter 调整"
+            },
+            {
+              "c1": "FLEXICOLOR Bleach III",
+              "c2": "补充式槽液",
+              "c3": "配补充液",
+              "c4": "多规格",
+              "c5": "需 starter 调整"
+            },
+            {
+              "c1": "FLEXICOLOR Bleach III Regenerator",
+              "c2": "再生槽液溢流",
+              "c3": "降低漂白成本",
+              "c4": "1 加仑装",
+              "c5": "按厂商比例"
+            },
+            {
+              "c1": "FLEXICOLOR Bleach Starter",
+              "c2": "配槽液用",
+              "c3": "无臭、非腐蚀、不起泡",
+              "c4": "1 加仑配 20 U.S. gal Bleach III NR 或 8.3 U.S. gal RA Bleach NR",
+              "c5": "按厂商比例"
+            }
+          ],
+          "text": "Kodak FLEXICOLOR 化学品线（续式系统）"
+        },
+        {
+          "kind": "note",
+          "text": "Kodak 提供单独出版物 Z-131 专门讲解 Bleach III 的再生。原液保存期与工作液保存期按各自产品说明书执行，相关数值以厂商最新说明书为准。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "KODAK Publication Z-100: Using KODAK Chemicals in Minilabs（术语定义与 C-41RA 补加率）",
+          "url": "https://business.kodakmoments.com/sites/default/files/wysiwyg/pro/chemistry/z100.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "KODAK Publication Z-131: Using KODAK FLEXICOLOR Chemicals（再生剂与残留银诊断）",
+          "url": "https://business.kodakmoments.com/sites/default/files/wysiwyg/pro/chemistry/z131.pdf",
+          "kind": "manufacturer"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "color-process.c41"
+        ],
+        "next": [
+          "color-process.c41-control-strips"
+        ],
+        "related": [
+          "color-process.troubleshoot-color",
+          "process-equipment.rotator"
+        ],
+        "contrast": [
+          "bw-process.washing-storage"
+        ],
+        "part_of": [
+          "color-process.c41"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "starter 的作用是什么？",
+          "type": "single",
+          "options": [
+            "提高药液 pH",
+            "使新液组成接近陈化液",
+            "加速显影",
+            "抑制氧化"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "starter 调整新液的溶氧与副产物含量。"
+        },
+        {
+          "q": "残留银升高时每升槽液加多少 Bleach III Regenerator Concentrate？",
+          "type": "single",
+          "options": [
+            "10 mL",
+            "20 mL",
+            "30 mL",
+            "70 mL"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "标准用量为 30 mL/L。RA Bleach 情形用 70 mL。"
+        },
+        {
+          "q": "再生后曝气多长时间？",
+          "type": "single",
+          "options": [
+            "不少于 5 分钟",
+            "不少于 15 分钟",
+            "不少于 45 分钟",
+            "不必曝气"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "开循环并曝气不少于 15 分钟。"
+        },
+        {
+          "q": "C-41RA 显影液补加率是多少？",
+          "type": "single",
+          "options": [
+            "35 mL/m",
+            "40 mL/25 画幅卷",
+            "160 mL/m²",
+            "215 mL/m²"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "40 mL/25 画幅卷即 35 mL/m。160 与 215 是 RA-4 相纸的补加率。"
+        }
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "color-process.washing-drying",
+      "title": "水洗、终洗与干燥",
+      "title_en": "Washing, Final Rinse and Drying",
+      "aliases": [
+        "水洗",
+        "终洗",
+        "stabilizer",
+        "wash",
+        "final rinse",
+        "干燥"
+      ],
+      "type": "process",
+      "level": 3,
+      "era": "1972 至今",
+      "tags": [
+        "水洗",
+        "稳定",
+        "干燥",
+        "保存"
+      ],
+      "summary": "水洗洗去残留药液。终洗稳定浴提高染料耐久性并实现无斑干燥。干燥温度受控。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "水洗的作用"
+        },
+        {
+          "kind": "p",
+          "text": "C-41 有两道水洗。第一道在显影与漂白之间，洗去显影液带入。第二道在定影与稳定之间，洗去硫代硫酸钠。"
+        },
+        {
+          "kind": "p",
+          "text": "水洗不足会把显影剂带入漂白浴，抬高漂白浴 pH，降低总铁的有效浓度。后果是残留银增加与色偏。"
+        },
+        {
+          "kind": "h2",
+          "text": "水洗条件"
+        },
+        {
+          "kind": "table",
+          "caption": "Kodak Process C-41 水洗条件",
+          "rows": [
+            {
+              "c1": "水洗 1",
+              "c2": "1 分 05 秒",
+              "c3": "24–41 °C",
+              "c4": "清水",
+              "c5": "置于漂白与定影之间"
+            },
+            {
+              "c1": "水洗 2",
+              "c2": "3 分 15 秒",
+              "c3": "24–41 °C",
+              "c4": "清水，末级新鲜流动水",
+              "c5": "置于定影与稳定之间"
+            },
+            {
+              "c1": "Rollei COLORCHEM 水洗",
+              "c2": "3 分 15 秒",
+              "c3": "38 ± 2 °C",
+              "c4": "至少 4 次换水",
+              "c5": "漂定之后"
+            }
+          ],
+          "text": "Kodak Process C-41 水洗条件"
+        },
+        {
+          "kind": "p",
+          "text": "水洗流量按 10–30 µm 过滤后的清水确定。进水需 15 µm 过滤。水温保持在规定范围内。"
+        },
+        {
+          "kind": "h2",
+          "text": "稳定浴"
+        },
+        {
+          "kind": "p",
+          "text": "稳定浴（stabilizer）是最后一道药液浴。Kodak FLEXICOLOR Stabilizer III 的时间为 1 分 05 秒，温度 24–41 °C。稳定液含六亚甲基四胺类成膜剂与润湿剂。"
+        },
+        {
+          "kind": "warn",
+          "text": "稳定浴禁用气泡搅拌。气泡造成严重起泡，影响润湿与干燥。"
+        },
+        {
+          "kind": "p",
+          "text": "稳定在片脱离药罐后进行。这样可避免稳定液残留在罐内污染下一次显影。参见 $process-equipment.rotator。"
+        },
+        {
+          "kind": "h2",
+          "text": "终洗的替代"
+        },
+        {
+          "kind": "p",
+          "text": "Kodak 提供 Final Rinse 替代 Stabilizer III。Final Rinse 含表面活性剂以减少沉积与干燥斑，并抑制生物生长。该产品不含稳定剂。"
+        },
+        {
+          "kind": "warn",
+          "text": "Vericolor SO-279 与 SO-5072 用 Final Rinse 加 Replenisher 处理会降低影像稳定性。此类片材使用 Stabilizer III 加 Replenisher。"
+        },
+        {
+          "kind": "h2",
+          "text": "免水洗方案"
+        },
+        {
+          "kind": "p",
+          "text": "Bellini C41-RA 在定影后提供两种选择：先用流水洗，再做一次稀释稳定液洗；或只用稀释稳定液洗 3–4 次，每次 45 秒至 1 分钟。"
+        },
+        {
+          "kind": "p",
+          "text": "Kodak C-41RA 也可设计为免水洗（washless）。加装水洗时，水温须足够高。"
+        },
+        {
+          "kind": "h2",
+          "text": "干燥"
+        },
+        {
+          "kind": "p",
+          "text": "干燥温度不高于 60 °C（140 °F）。E-6 透明片的干燥温度上限为 63 °C（145 °F）。温度过高造成染料迁移与雾。"
+        },
+        {
+          "kind": "p",
+          "text": "稳定浴中的润湿剂保证干燥均匀。缺少润湿剂会出现干燥斑。参见 $color-process.troubleshoot-color。"
+        },
+        {
+          "kind": "h2",
+          "text": "存放"
+        },
+        {
+          "kind": "p",
+          "text": "冲洗后尽快扫描或印放。彩色负片的染料随时间褪色或色偏。C-41 负片不属永久档案材料。保存条件参见 $archive.cold-storage。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "KODAK Publication Z-131: Using KODAK FLEXICOLOR Chemicals（水洗、稳定与干燥条件）",
+          "url": "https://business.kodakmoments.com/sites/default/files/wysiwyg/pro/chemistry/z131.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "KODAK Publication Z-100: Using KODAK Chemicals in Minilabs（washless 与水洗方案）",
+          "url": "https://business.kodakmoments.com/sites/default/files/wysiwyg/pro/chemistry/z100.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Bellini Foto KIT C41/1 Technical Data Sheet（定影后水洗与稳定方案）",
+          "url": "https://www.bellinifoto.it/wp-content/uploads/2019/07/C41_scheda-tecnica-1.pdf",
+          "kind": "manufacturer"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "color-process.c41"
+        ],
+        "next": [
+          "color-process.dye-stabilization"
+        ],
+        "related": [
+          "archive.washing-storage",
+          "bw-process.washing-storage",
+          "archive.cold-storage"
+        ],
+        "contrast": [],
+        "part_of": [
+          "color-process.c41"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "稳定浴的搅拌方式是什么？",
+          "type": "single",
+          "options": [
+            "氮气鼓泡",
+            "连续气泡搅拌",
+            "不使用气泡搅拌",
+            "剧烈倒转"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "气泡造成严重起泡，影响润湿与干燥。"
+        },
+        {
+          "q": "Kodak Process C-41 的干燥温度上限是多少？",
+          "type": "single",
+          "options": [
+            "40 °C",
+            "50 °C",
+            "60 °C",
+            "80 °C"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "上限 60 °C（140 °F）。"
+        },
+        {
+          "q": "哪一类片材不能用 Final Rinse 处理？",
+          "type": "single",
+          "options": [
+            "Portra",
+            "Vericolor SO-279 与 SO-5072",
+            "Ektar",
+            "所有片材都可"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "Final Rinse 会降低该片材的影像稳定性。"
+        },
+        {
+          "q": "水洗不足会把显影液带入哪一浴？",
+          "type": "single",
+          "options": [
+            "显影浴",
+            "漂白浴",
+            "定影浴",
+            "稳定浴"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "显影液进入漂白浴会抬高 pH 并降低有效铁浓度。"
+        }
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    },
+    {
+      "id": "color-process.water-quality-materials",
+      "title": "进水水质与器材材质",
+      "title_en": "Water Quality and Equipment Materials",
+      "aliases": [
+        "水质",
+        "pH",
+        "硬度",
+        "316",
+        "钛",
+        "材质",
+        "废液",
+        "银回收"
+      ],
+      "type": "table",
+      "level": 4,
+      "era": "至今",
+      "tags": [
+        "水质",
+        "材质",
+        "废液",
+        "环保",
+        "安全"
+      ],
+      "summary": "进水水质直接药液 pH 与寿命。器材材质影响腐蚀与污染。本条给出 Kodak 的进水限值与器材选材要求。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "进水水质"
+        },
+        {
+          "kind": "p",
+          "text": "配药用水的水质限值比洗水用水严格。洗水用水的溶解固体限值为 1000 ppm，配药用水为 250 ppm。水源硬度影响药液 pH。"
+        },
+        {
+          "kind": "table",
+          "caption": "Kodak 进水水质限值（ppm）",
+          "rows": [
+            {
+              "c1": "溶解固体",
+              "c2": "洗水 1000",
+              "c3": "配药 250",
+              "c4": "过高缩短药液寿命",
+              "c5": "首选去离子水"
+            },
+            {
+              "c1": "pH",
+              "c2": "6.5–8.5",
+              "c3": "6.5–8.5",
+              "c4": "偏离抬高药液 pH",
+              "c5": "显影液为强碱体系"
+            },
+            {
+              "c1": "硬度（CaCO3）",
+              "c2": "40（宜）–150",
+              "c3": "同左",
+              "c4": "硬度占位碳酸盐消耗",
+              "c5": "软化水优先"
+            },
+            {
+              "c1": "铜、铁、锰（各）",
+              "c2": "0.10",
+              "c3": "0.10",
+              "c4": "催化氧化并污染药液",
+              "c5": "严格限制"
+            },
+            {
+              "c1": "余氯",
+              "c2": "2",
+              "c3": "2",
+              "c4": "氧化显影液",
+              "c5": "必要时脱氯"
+            },
+            {
+              "c1": "氯化物",
+              "c2": "100",
+              "c3": "100",
+              "c4": "腐蚀器材",
+              "c5": "严格限制"
+            },
+            {
+              "c1": "碳酸氢盐",
+              "c2": "150",
+              "c3": "150",
+              "c4": "改变缓冲容量",
+              "c5": "严格限制"
+            },
+            {
+              "c1": "硫酸盐",
+              "c2": "200",
+              "c3": "200",
+              "c4": "改变离子强度",
+              "c5": "严格限制"
+            },
+            {
+              "c1": "硫化物",
+              "c2": "0.10",
+              "c3": "0.10",
+              "c4": "产生银斑",
+              "c5": "严格限制"
+            },
+            {
+              "c1": "二氧化硅",
+              "c2": "20",
+              "c3": "20",
+              "c4": "沉积与雾",
+              "c5": "严格限制"
+            }
+          ],
+          "text": "Kodak 进水水质限值（ppm）"
+        },
+        {
+          "kind": "h2",
+          "text": "过滤"
+        },
+        {
+          "kind": "ul",
+          "text": "药液与洗水过滤至 10–30 µm。"
+        },
+        {
+          "kind": "ul",
+          "text": "进水过滤至 15 µm。"
+        },
+        {
+          "kind": "h2",
+          "text": "器材材质"
+        },
+        {
+          "kind": "table",
+          "caption": "各浴的推荐材质",
+          "rows": [
+            {
+              "c1": "显影浴",
+              "c2": "316 不锈钢",
+              "c3": "耐强碱",
+              "c4": "禁用黄铜与铜",
+              "c5": "316 或更好"
+            },
+            {
+              "c1": "漂白浴与定影浴",
+              "c2": "316 不锈钢",
+              "c3": "快速腐蚀黄铜、铜与低等级不锈钢",
+              "c4": "按厂商说明选材",
+              "c5": "定期检查槽壁"
+            },
+            {
+              "c1": "FLEXICOLOR Bleach III 与 Fixer 槽",
+              "c2": "316",
+              "c3": "厂家指定",
+              "c4": "适用常规要求",
+              "c5": "按产品手册"
+            },
+            {
+              "c1": "RA Bleach 与 RA Fixer 槽",
+              "c2": "优选钛",
+              "c3": "耐强氧化与络合体系",
+              "c4": "钛延长槽体寿命",
+              "c5": "按产品手册"
+            }
+          ],
+          "text": "各浴的推荐材质"
+        },
+        {
+          "kind": "h2",
+          "text": "废液与银回收"
+        },
+        {
+          "kind": "p",
+          "text": "定影废液的银浓度达 3–5 g/L 时需要电解回收。回收把废液中的银转为金属银。"
+        },
+        {
+          "kind": "p",
+          "text": "废液排放前须脱银至 0.5 g/L 以下。漂液须中和至 pH 7。废定影液的硫代硫酸钠保持在 0.5–1.2 g/L。"
+        },
+        {
+          "kind": "note",
+          "text": "Kodak 提供专门出版物 J-212《The Technology of Silver Recovery》与 J-98R《Health, Safety, and Hazardous Materials》。排放标准按当地法规执行。"
+        },
+        {
+          "kind": "h2",
+          "text": "安全"
+        },
+        {
+          "kind": "p",
+          "text": "显影液与漂定液不可混合。配制时酸入水。接触药液后用流水冲洗。穿戴手套与护目镜。安全数据表向厂商索取。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "KODAK Publication Z-131: Using KODAK FLEXICOLOR Chemicals（进水水质表、材质与废液处理）",
+          "url": "https://business.kodakmoments.com/sites/default/files/wysiwyg/pro/chemistry/z131.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "JOBO Professional RA-4 Operating Manual（配液水温与废液注意事项）",
+          "url": "https://silvergrainclassics.com/download/87/chemistry/3640/ra_4.pdf",
+          "kind": "manufacturer"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "color-process.c41"
+        ],
+        "next": [
+          "color-process.c41-chemistry"
+        ],
+        "related": [
+          "process-equipment.tank",
+          "archive.cold-storage"
+        ],
+        "contrast": [],
+        "part_of": [
+          "color-process.c41"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "配药用水的溶解固体限值是多少？",
+          "type": "single",
+          "options": [
+            "250 ppm",
+            "500 ppm",
+            "1000 ppm",
+            "150 ppm"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "洗水为 1000 ppm，配药为 250 ppm。"
+        },
+        {
+          "q": "进水的 pH 允许范围是多少？",
+          "type": "single",
+          "options": [
+            "5.0–6.5",
+            "6.5–8.5",
+            "8.5–10.0",
+            "无限制"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "规定为 6.5–8.5。"
+        },
+        {
+          "q": "显影槽推荐使用什么材质？",
+          "type": "single",
+          "options": [
+            "黄铜",
+            "316 不锈钢",
+            "铝",
+            "玻璃"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "显影浴用 316 不锈钢。黄铜与铜被快速腐蚀。"
+        },
+        {
+          "q": "废定影液排放前的脱银目标是多少？",
+          "type": "single",
+          "options": [
+            "低于 0.5 g/L",
+            "低于 1 g/L",
+            "低于 3 g/L",
+            "无需脱银"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "废液脱银至 0.5 g/L 以下。"
+        }
+      ],
+      "updated": "2026-01-12",
+      "status": "reviewed"
+    }
+  ]
+}

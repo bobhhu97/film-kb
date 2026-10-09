@@ -1,0 +1,27 @@
+# ===== 构建与测试产物（不进版本控制）=====
+# 浏览器二进制，567M
+.pw-home/
+# npx / playwright 依赖缓存，51M
+.npm-cache/
+# 上游字体缓存，66M（可用 tools/build-fonts.py 重新下载）
+tools/.fontsrc/
+# 图片抓取原始缓存，17M
+tools/imgwork/orig_cache/
+# 截图与测试报告，170M
+output/
+
+# ===== 生成物（由 tools/build.mjs 重建，避免大 diff）=====
+web/data/bundle.json
+
+# ===== 编辑器 / 系统 =====
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/
+
+# ===== 依赖 =====
+node_modules/
+
+# imgwork 的运行日志（含本机 fontconfig 噪音）
+tools/imgwork/fetch_all.log

@@ -1,0 +1,10 @@
+{
+"process_equipment": ["Jobo processor film","film processing machine photofinishing","minilab photo printer film processing","film developing machine C-41","roller transport processor","water bath temperature control laboratory","CP-31 roller transport","photographic film processing rack"],
+"film_stock2": ["photographic emulsion layers diagram","film cross section diagram gelatin","film grain silver halide micrograph","edge code film number latent image","DX film canister coding","photographic film strip negative 35mm","characteristic curve film density","sensitometry curve film"],
+"bw_process2": ["developing tank 35mm stainless steel reel","film developing tank","spiral reel film winding","photo chemicals darkroom bottles","Ilford developer bottle","zone system chart photography","stop bath fixer darkroom"],
+"color_process2": ["slide mount 35mm transparency frame","colour negative film strip","C-41 process diagram","E-6 process diagram","slide projector transparency mount","color transparency 35mm mounted"],
+"printing2": ["enlarger head photographic condenser","diffusion enlarger darkroom","photographic paper safe darkroom","test strip enlarger exposure","darkroom print tray chemicals","contact print frame darkroom"],
+"scanning2": ["Epson Perfection flatbed scanner","film scanner 35mm slide adapter","film dust scratches negative scan","image histogram photography tonal","negatives scanner batch"],
+"archive2": ["film vault storage archive","photographic archive cold storage","print washer archival","silver recovery photography","film leader archive storage box","16mm film archive can"],
+"capture2": ["aperture diaphragm lens blades","camera light meter selenium","18 percent gray card photography","film loading camera spool 35mm","SLR camera mirror prism cutaway","lens f-stop scale"]
+}

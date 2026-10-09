@@ -1,0 +1,407 @@
+{
+  "module": "archive",
+  "shard": "archive.04",
+  "shard_zh": "照片与底片的展示、装裱与照明",
+  "note": "本分片只写 archive.display-framing 一条。光照限值取自 Library of Congress 照相藏品信息单与 PMG Conservation Wiki 的照明标准综述；ISO 与 NISO 编号只以这两个来源的转述形式出现，不作为独立 ref。幻灯片的装片介质与胶片本体见 film-stock.fujifilm-slide，纤维基彩色相纸的保存见 film-stock.colour-paper。",
+  "entries": [
+    {
+      "id": "archive.display-framing",
+      "title": "照片与底片的展示、装裱与照明",
+      "title_en": "Display, Mounting and Framing of Photographs and Film",
+      "aliases": [
+        "照片展示光照",
+        "装裱",
+        "相框",
+        "幻灯片装片",
+        "无酸卡纸",
+        "exhibition lighting",
+        "photographic framing",
+        "mounting and framing photographs",
+        "slide mounting"
+      ],
+      "type": "process",
+      "level": 4,
+      "era": "1888 年至今；装裱材料规范在 1970 至 1990 年间成形，1990 年后被 ISO 18902 与 PAT ISO 18916 等标准替代",
+      "tags": [
+        "展示",
+        "装裱",
+        "照明",
+        "紫外过滤",
+        "无酸材料",
+        "卡纸",
+        "相框",
+        "幻灯片装片",
+        "加拿大树胶",
+        "UV",
+        "lux",
+        "archival"
+      ],
+      "summary": "照片与底片一旦见光就开始不可逆褪色，展示限值由光照强度、暴露时长与光谱三项共同决定。装裱材料必须是无酸、无木质素、无 PVC 的，黏合剂不得接触相纸。装框与装片只是把材料隔开，遮光与低照度才是控制光损的手段。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "为什么展示要先于装裱考虑"
+        },
+        {
+          "kind": "p",
+          "text": "照片的损伤是累积的。同一张相纸在 50 lux 下放三个月所受的伤害，等于在 150 lux 下放一个月。装裱与相框不能停止这个累积，只能把光挡在外面并在不用时把作品盖住。美国国会图书馆的照相藏品信息单写明：不建议永久展示照片，展示照度应保持在 30 至 100 lux 的范围内，并且要保持得越低越好。同一张信息单记录了 Kodachrome 彩色幻灯片在投影仪中曝光 10 分钟就出现明显褪色。"
+        },
+        {
+          "kind": "image",
+          "src": "img/slide-projector.png",
+          "alt": "双规格桌面幻灯片投影机。反转片以直透光放映为常见展示方式，与反射观看的相纸不同。",
+          "caption": "双规格桌面幻灯片投影机。反转片以直透光放映为常见展示方式，与反射观看的相纸不同。",
+          "credit": "Rollei (manufacturer) / Museo Nazionale Scienza e Tecnologia",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File%3AProiettore_per_diapositive_bipasso%2C_a_caricatore_orizzontale_-_Museo_scienza_tecnologia_Milano_09317.jpg"
+        },
+        {
+          "kind": "p",
+          "text": "光的伤害按波长分布。300 至 400 nm 的近紫外（near ultraviolet, UV）区和 400 至 500 nm 的蓝光区最有害。阳光和普通荧光灯都是强 UV 源。钨丝灯的 UV 含量最低，但仍然需要过滤。衰老的粉末状染料影像、19 世纪的蛋白照片和盐印照片在低照度下也不适合展示。Wilhelm 建议盐印照片与蛋白照片即使短时间也不展示。"
+        },
+        {
+          "kind": "h2",
+          "text": "照度限值与累计曝光量"
+        },
+        {
+          "kind": "table",
+          "caption": "常见照度与累计曝光量限值及其依据",
+          "rows": [
+            {
+              "c1": "照度上限",
+              "c2": "50 lux（约 4.6 footcandle）",
+              "c3": "彩色照片、chromogenic 与 instant 彩色片、19 世纪照片",
+              "c4": "Lavédrine 分类 1，年度累计 ≤12,000 lux·hour"
+            },
+            {
+              "c1": "照度上限",
+              "c2": "75 lux（约 7 footcandle）",
+              "c3": "染料转印、银盐漂白彩色相纸、树脂基黑白相纸",
+              "c4": "Lavédrine 分类 2，年度累计 ≤42,000 lux·hour"
+            },
+            {
+              "c1": "照度上限",
+              "c2": "150 lux（约 14 footcandle）",
+              "c3": "钡地纸黑白相纸、单色或颜料彩色",
+              "c4": "Lavédrine 分类 3，年度累计 ≤84,000 lux·hour"
+            },
+            {
+              "c1": "展览通用区间",
+              "c2": "30 至 100 lux",
+              "c3": "所有类别的一般上限",
+              "c4": "Library of Congress 照相藏品信息单"
+            },
+            {
+              "c1": "美国实践",
+              "c2": "50 至 100 lux（约 4.6 至 9.3 footcandle），每年展示不超过 12 周",
+              "c3": "NISO Z39.79:1999 综述值，需同时减少 UV",
+              "c4": "PMG Conservation Wiki 照明标准综述"
+            },
+            {
+              "c1": "紫外含量",
+              "c2": "不超过 75 microwatt per lumen",
+              "c3": "所有展览用光源",
+              "c4": "Canadian Conservation Institute 综述，LoC 与 PMG 双方一致引用"
+            }
+          ],
+          "text": "常见照度与累计曝光量限值及其依据"
+        },
+        {
+          "kind": "p",
+          "text": "Lavédrine 的四档分类假设 UV 与红外已被完全消除，并且材料本身质量合格。彩色照片属于最敏感的一档。不属于彩色、也不属于白炽的彩色方式的纤维基黑白照片可以放宽到 150 lux。累计曝光量按 lux·hour 或 footcandle·hour 计算，1 footcandle 相当于 10.76 lux。多数博物馆按每年可用曝光量反推展出月数，例如展 3 个月后暗存 57 个月。"
+        },
+        {
+          "kind": "note",
+          "text": "以上数字是文献综述值，不是本条自订标准。LoC 早期指引按敏感度分三档给出年度累计曝光量：极敏感类只展复制品；很敏感类 3,000 至 5,000 footcandle·hour；较敏感类 5,000 至 10,000 footcandle·hour；不敏感类 10,000 至 20,000 footcandle·hour。引用这些数字时必须说明它假定材料通过 PAT ISO 14523:2000 加速老化试验、相对湿度 45% 至 50%、空气污染物已过滤。"
+        },
+        {
+          "kind": "h2",
+          "text": "光源选择与紫外过滤"
+        },
+        {
+          "kind": "table",
+          "caption": "常见展示光源的色温、紫外含量与过滤要求",
+          "rows": [
+            {
+              "c1": "钨丝白炽灯",
+              "c2": "2700 至 3100 K",
+              "c3": "65 至 75 microwatt per lumen",
+              "c4": "UV 最低的一类，仍应加 UV 与红外滤片；距展品不近于 1 m；19 世纪照片的首选"
+            },
+            {
+              "c1": "石英卤素灯",
+              "c2": "约 3100 K，色温不随调光变化",
+              "c3": "约 120 microwatt per lumen",
+              "c4": "UV 明显高于普通钨丝灯，必须配 UV 滤片并加隔热玻璃；距展品不近于 1 m"
+            },
+            {
+              "c1": "荧光灯",
+              "c2": "3000 至 5000 K",
+              "c3": "40 至 150 microwatt per lumen",
+              "c4": "必须滤到 75 microwatt per lumen 以下；发光峰在 313 与 365 nm；显色性极差，不适合彩色照片判读；灯管寿命约 9000 小时"
+            },
+            {
+              "c1": "光纤或导光",
+              "c2": "不随调光变化",
+              "c3": "不传出 UV 与红外",
+              "c4": "优先选玻璃导管；塑料导管会被强 UV 源缩短寿命"
+            },
+            {
+              "c1": "LED",
+              "c2": "2700 至 4000 K，博物馆常用显色指数 90 以上",
+              "c3": "一般不发 UV，但带 violet 芯片的型号在 400 至 410 nm 有强峰",
+              "c4": "选用无 violet 芯片的型号；Blue Wool 标准卡对 LED 的判读不可靠"
+            },
+            {
+              "c1": "阳光",
+              "c2": "不适用",
+              "c3": "12,000 footcandle 约 129,000 lux，UV 丰富",
+              "c4": "照片不得直接置于阳光中"
+            }
+          ],
+          "text": "常见展示光源的色温、紫外含量与过滤要求"
+        },
+        {
+          "kind": "p",
+          "text": "滤片材料也有讲究。Wilhelm 建议使用 UV 吸收亚克力片，例如 Lucite SAR UF-3 与 Plexiglas UF-3。对带 UV 吸收过涂层的材料，例如 Ektacolor、Fujicolor、Konica 与 Agfacolor 等染料型彩色相纸，褪色主要来自可见光，加 UV 滤片帮助有限。对 Ilfochrome、Cibachrome 和 Kodak 染料转印相纸这类没有有效 UV 吸收涂层的材料，必须依靠 UV 吸收玻璃。相纸中的光学增白剂在 397 至 400 nm 被激发，加 UV 滤片同时抑制增白剂自身的褪色。"
+        },
+        {
+          "kind": "warn",
+          "text": "把相片插在幻灯片夹中带到明亮房间是错误做法。彩色片在投影仪中 10 分钟即可出现可见褪色。移动作品时使用不透明容器，并在室内也保持遮光。"
+        },
+        {
+          "kind": "h2",
+          "text": "装裱材料的选择"
+        },
+        {
+          "kind": "table",
+          "caption": "酸性卡材与碱性卡材的对照",
+          "rows": [
+            {
+              "c1": "对比项",
+              "c2": "酸性卡材",
+              "c3": "碱性卡材"
+            },
+            {
+              "c1": "化学成分",
+              "c2": "木质素、过氧化物与残余酸会随时间释放酸雾。",
+              "c3": "alpha 纤维素含量 87% 以上，纤维本身接近中性，加碳酸盐类碱性储备。"
+            },
+            {
+              "c1": "典型材料",
+              "c2": "木质刨花板、木质书封、木质搁板、原木浆纸、玻璃纸（glassine）、聚氯乙烯（polyvinyl chloride, PVC）、彩色纸。",
+              "c3": "无酸卡纸、无木质素卡纸、聚酯（polyethylene terephthalate, PET）薄片、聚乙烯与聚丙烯薄片、纺粘聚烯烃片、聚苯乙烯片。"
+            },
+            {
+              "c1": "长期后果",
+              "c2": "酸雾迁移到相邻的相纸、卡纸与黏合剂，纸基发脆并变黄，同时加速银像氧化与涂膜层开裂。",
+              "c3": "pH 稳定在 7 至 9.5，可长期接触影像层，不产生酸迁移。"
+            },
+            {
+              "c1": "选用要求",
+              "c2": "只用于与影像隔离的外层，例如相框背板的最外层。",
+              "c3": "凡与影像层、卡纸黏贴面或封片面直接接触，一律选碱性与无酸材料。"
+            }
+          ],
+          "text": ""
+        },
+        {
+          "kind": "p",
+          "text": "木质搁板和木质制品应当避免。它们含木质素、过氧化物和油脂，会放出酸雾并迁移到邻近材料上。未处理的木浆纸、玻璃纸和 PVC 一律不得作为装具。彩色纸也不使用。Library of Congress 的信息单要求装具满足 ISO 18902 与 PAT ISO 18916。"
+        },
+        {
+          "kind": "defs",
+          "term": "无酸纸（Acid-free Paper）",
+          "text": "浸入水中仍呈中性或碱性 pH 的纸。无酸纸不含木质素，也不含硫。它可由任何纤维素纤维制成，前提是加工过程去掉了呈酸性的纸浆。"
+        },
+        {
+          "kind": "defs",
+          "term": "无酸缓冲卡纸（Buffered Acid-free Board）",
+          "text": "无酸纸基材中加入了碳酸盐类碱性储备物质，使成纸的 pH 稳定在 7 至 9.5。ISO 建议 mount board 的 alpha 纤维素含量在 87% 以上，不含木质素、不含磨木、不用明矾-松香施胶。pH 6 至 7 的无酸纸用于氰版照片（cyanotype）与建筑图纸一类本身偏碱的材料。"
+        },
+        {
+          "kind": "p",
+          "text": "塑料卡套不是越厚越好。可用的材料是聚酯、聚乙烯、聚丙烯、纺粘聚烯烃与聚苯乙烯。要避开含填料、含涂料或含紫外吸收剂的塑料。相对湿度长期高于 80% 时不使用塑料装具。硝酸片基和早期的醋酸片基也不放进塑料套。片基本身的检查方法见 $archive.base-type，醋酸片基的分解见 $archive.vinegar-syndrome，储存温湿度见 $archive.storage-environment 与 $archive.cold-storage。"
+        },
+        {
+          "kind": "h2",
+          "text": "黏合剂、固定与装框"
+        },
+        {
+          "kind": "p",
+          "text": "黏合剂与固定件是照片受损的常见来源。不要使用橡皮胶（rubber cement）、压敏胶带（pressure-sensitive tape）、回形针和橡皮筋。信封胶会在银像上造成染色。影像面必须背对封边，封边只能走侧边。装框时要检查卡纸与铰接（hinging）的质量。"
+        },
+        {
+          "kind": "steps",
+          "text": "装裱操作顺序",
+          "items": [
+            {
+              "t": "戴手套",
+              "d": "戴干净的无绒棉手套或惰性塑料手套，例如丁腈手套。指纹中的盐分与油脂会吸到乳剂里。"
+            },
+            {
+              "t": "检查底片",
+              "d": "在放大镜或观片灯上检查乳剂面。乳剂面朝上托在辅助支撑上，支撑可用有机玻璃板、2 层或 4 层 rag board 或文件夹卡纸。"
+            },
+            {
+              "t": "选卡纸",
+              "d": "用无酸缓冲卡纸，开窗尺寸留出 3 至 5 mm 边。卡纸与照片之间不加任何材料。"
+            },
+            {
+              "t": "固定",
+              "d": "用无酸纸条或档案级铰接条固定在相框背板上，固定点放在侧边，影像面背对固定件。"
+            },
+            {
+              "t": "封边",
+              "d": "封边胶走侧边，不经过影像面，也不经过相纸切边以外的余量。"
+            },
+            {
+              "t": "装玻璃",
+              "d": "用 UV 过滤玻璃或 UV 吸收亚克力片。亚克力轻且抗裂，玻璃反射强、隔热差、有破碎风险。"
+            },
+            {
+              "t": "加背板",
+              "d": "背板用无酸材料，用螺钉或交错压条固定，不用会生锈或释放酸的东西。"
+            },
+            {
+              "t": "存放",
+              "d": "不使用时用深色布或遮光罩盖住。如果有专门的存放空间，框装作品应存放其中而不是挂在墙上。"
+            }
+          ]
+        },
+        {
+          "kind": "warn",
+          "text": "曝光造成的褪色不可逆，装裱错误造成的迁移、染色和银镜（silver mirroring）同样不可逆。更换材料比修复已经受损的影像容易。装框前先确认影像已经稳定，参见 $archive.washing-storage 与 $bw-process.stop-bath-fix。"
+        },
+        {
+          "kind": "h2",
+          "text": "幻灯片的装片"
+        },
+        {
+          "kind": "p",
+          "text": "diapositive（透明片）指装在框内的透明胶片，用于投影。彩色相纸做成的明片不参与装片。装片有三条路：低玻璃胶片（low glass）把胶片与盖片用胶粘剂热压贴合；加拿大树胶（Canada balsam）用溶剂软化树胶后夹合；聚酯封片把胶片封在两层片基之间。加拿大树胶是北美香脂冷杉的油树脂，挥发掉精油后变成透明的淡黄色块状物，可溶于二氯甲烷或苯甲醇。"
+        },
+        {
+          "kind": "p",
+          "text": "传统树胶封片含挥发性有机物，聚合后仍有酸性副产物，长期存放会伤害影像。今天以低玻璃胶片和聚酯封片为主，胶层越薄越稳定。装片时戴手套，用装片夹或镊子从边缘夹取，不触碰影像面。装片完成后去掉所有余胶并清洁盖片。Fujichrome 之类的彩色反转片因为乳剂面平整、颜色饱和，是装片与投影的常见对象，片种见 $film-stock.fujifilm-slide；纤维基彩色相纸的保存条件见 $film-stock.colour-paper。"
+        },
+        {
+          "kind": "tip",
+          "text": "阅览而不是展出时，用低 UV 灯泡、UV 吸收灯管套、UV 过滤窗或遮光帘，把照度压到 30 至 100 lux，并加定时开关或人来才开的感应开关。幻灯片不按展品标准对待时，仍按同一限值执行，因为人眼对图像敏感度的下降会在多年后被察觉。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "archive.cleaning-and-handling",
+          "archive.storage-environment"
+        ],
+        "next": [
+          "archive.washing-storage"
+        ],
+        "related": [
+          "archive.vinegar-syndrome",
+          "archive.cold-storage",
+          "archive.base-type",
+          "archive.mould-removal",
+          "film-stock.colour-paper",
+          "film-stock.fujifilm-slide"
+        ],
+        "contrast": [
+          "archive.digital-preservation"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "展出一张钡地纸黑白纤维基照片，博物馆常用的最大照度是多少？",
+          "type": "single",
+          "options": [
+            "50 lux",
+            "75 lux",
+            "150 lux",
+            "300 lux"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "Lavédrine 分类 3 覆盖钡地纸黑白、单色与颜料彩色，限值是 150 lux。50 lux 对应的是彩色照片那一档。"
+        },
+        {
+          "q": "以下哪几种材料不得用作照片装具？",
+          "type": "multi",
+          "options": [
+            "玻璃纸（glassine）",
+            "聚氯乙烯（PVC）",
+            "木质刨花板",
+            "alpha 纤维素 87% 以上的无酸卡纸"
+          ],
+          "answer": [
+            0,
+            1,
+            2
+          ],
+          "why": "LoC 信息单写明不得使用未处理木浆纸、玻璃纸与 PVC 制作的装具，木质品因释放酸与过氧化物也应避免。无酸卡纸是标准装具材料。"
+        },
+        {
+          "q": "石英卤素灯的紫外含量约为 120 microwatt per lumen，高于普通钨丝灯。",
+          "type": "bool",
+          "options": [
+            "是",
+            "否"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "PMG 的照明选项综述给出石英卤素灯约 120 microwatt per lumen，普通钨丝灯为 65 至 75。卤素灯必须配 UV 滤片并加隔热玻璃。"
+        },
+        {
+          "q": "装框时，黏合与固定件的正确做法是什么？",
+          "type": "single",
+          "options": [
+            "用压敏胶带把照片固定在背板上，方便日后更换",
+            "用无酸固定件固定在侧边，影像面背对封边，禁用橡皮胶与压敏胶带",
+            "用回形针夹住相片四角以节省卡纸尺寸",
+            "用普通白胶沿相片四边封边以防灰尘进入"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "橡皮胶、压敏胶带、回形针和橡皮筋都会造成化学或物理损伤。封边胶只走侧边，不接触影像面。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Library of Congress Information Leaflet: Care, Handling, and Storage of Photographs",
+          "url": "https://www.loc.gov/preservation/care/photolea.html",
+          "kind": "manual",
+          "note": "照度 30 至 100 lux、UV 75 microwatt per lumen、木质素与 PVC 禁用、无酸卡纸规格、黏合与手套要求均出自此单。Mark Roosa 编，IFLA 1991 初版，2002 年修订。"
+        },
+        {
+          "name": "PMG Conservation Wiki: Standards, Guidelines, and Recommendations for Light Levels During Exhibition",
+          "url": "https://conservation-wiki.com/wiki/PMG_Section_1.4.1_Standards,_Guidelines,_and_Recommendations_for_Light_Levels_During_Exhibition",
+          "kind": "standard",
+          "note": "Lavédrine 四档分类的照度与年度累计 lux·hour 限值、NISO Z39.79:1999 的 50 至 100 lux 与每年 12 周、各馆实例均出自此综述。"
+        },
+        {
+          "name": "PMG Conservation Wiki: Lighting Options",
+          "url": "https://conservation-wiki.com/wiki/PMG_Section_1.5.2_Lighting_Options",
+          "kind": "article",
+          "note": "钨丝、石英卤素、荧光、光纤与 LED 的色温与 UV 数值，以及 UV 吸收亚克力片与材料 UV 吸收涂层的差别均出自此页，含 LED 章节。"
+        },
+        {
+          "name": "Library of Congress Information Leaflet: Standards for Photographic Materials",
+          "url": "https://www.loc.gov/preservation/care/photostn.html",
+          "kind": "standard",
+          "note": "列出 ANSI IT9.1-1988 银盐明胶稳定性规格、ANSI IT9.2-1991 归档容器、ANSI IT9.9-1990 彩色方法稳定性、ANSI PH4.8-1985 残留硫代硫酸盐测定等标准编号，用于核对装具与材料规格所依据的标准体系。"
+        },
+        {
+          "name": "CIE 157:2004 Control of Damage to Museum Objects by Optical Radiation",
+          "url": "https://cie.co.at/publications/control-damage-museum-objects-optical-radiation",
+          "kind": "standard",
+          "note": "光辐射损伤控制的标准出处，页面提供出版物信息，不含配方数值。"
+        }
+      ],
+      "updated": "2026-03-01",
+      "status": "draft"
+    }
+  ]
+}

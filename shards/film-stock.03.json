@@ -1,0 +1,3057 @@
+{
+  "module": "film-stock",
+  "shard": "film-stock.03",
+  "shard_zh": "片基与乳剂工艺",
+  "note": "分片 03。覆盖片基代际、乳剂层次、晶体形态、颗粒与感光度、相纸结构、雾、片基密度，以及实验室特性曲线测法。",
+  "entries": [
+    {
+      "id": "film-stock.film-base",
+      "title": "片基与代际变化",
+      "title_en": "Film Base and Its Generations",
+      "aliases": [
+        "film base",
+        "片基",
+        "support",
+        "acetate",
+        "triacetate",
+        "PET",
+        "ESTAR",
+        "聚酯片基"
+      ],
+      "type": "concept",
+      "level": 3,
+      "era": "1889 至今",
+      "tags": [
+        "片基",
+        "材质",
+        "醋酸纤维素酯",
+        "聚酯",
+        "稳定性"
+      ],
+      "summary": "片基（film base）承载感光乳剂。它提供机械强度和尺寸稳定。摄影用片基有三代：硝基、醋酸纤维素酯、聚酯。前两代已停产。聚酯在 1990 年代成为印片和 135 相机胶片的主流。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "片基承担什么"
+        },
+        {
+          "kind": "p",
+          "text": "片基（film base）是支撑材料。乳剂涂在片基上。片基承担四项任务。\n1. 保持透明。只有少量密度。\n2. 保持平面。卷曲会破坏成像面与焦平面之间的距离。\n3. 承受拉力。相机走片和运输会产生拉力。片基应当先断，而不是拉坏片门。\n4. 抵抗水和药液。显影、定影和水洗会长时间接触片基。\n\n片基厚度主要决定胶片总厚度。乳剂只占很小一部分。"
+        },
+        {
+          "kind": "image",
+          "src": "img/film-canister.jpg",
+          "alt": "1950 至 1960 年代美国制造的柯达 35 mm 铝制暗盒。暗盒与片基同属胶片的物理载体。",
+          "caption": "1950 至 1960 年代美国制造的柯达 35 mm 铝制暗盒。暗盒与片基同属胶片的物理载体。",
+          "credit": "R. Henrik Nilsson",
+          "license": "CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File%3AKodak_35mm_film_aluminium_canisters_made_in_the_US_1950s_or_1960s.jpg"
+        },
+        {
+          "kind": "h2",
+          "text": "三代替代顺序"
+        },
+        {
+          "kind": "table",
+          "caption": "片基的三个世代",
+          "rows": [
+            {
+              "c1": "硝基纤维素酯（cellulose nitrate）",
+              "c2": "1889 至约 1951",
+              "c3": "最早的商业感光片基。易燃。可自持燃烧。已停产。",
+              "c4": "三氯乙烯浮力试验中下沉",
+              "c5": "已停用"
+            },
+            {
+              "c1": "醋酸纤维素酯（cellulose acetate, triacetate）",
+              "c2": "1952 起全面替代硝基",
+              "c3": "安全片基（safety film）。会收缩并发醋酸味。现为 120 和 4×5 干版的主流。",
+              "c4": "三氯乙烯浮力试验中漂浮",
+              "c5": "在产"
+            },
+            {
+              "c1": "聚酯（polyethylene terephthalate, PET）",
+              "c2": "1955 引入，1990 年代普及",
+              "c3": "Kodak 商标 ESTAR。强度高、尺寸稳定、水浸后不软化。现代 135 胶片和印片底片的主流。",
+              "c4": "浮力试验中悬停于中间；偏振光下显红绿干涉色",
+              "c5": "在产"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "转换年份"
+        },
+        {
+          "kind": "timeline",
+          "caption": "片基代际的关键节点",
+          "rows": [
+            {
+              "c1": "1889",
+              "c2": "Kodak 首次销售硝基透明卷片",
+              "c3": "硝基成为商业感光片基"
+            },
+            {
+              "c1": "1908",
+              "c2": "Kodak 推出醋酸安全片基",
+              "c3": "安全片基开始替代硝基"
+            },
+            {
+              "c1": "1951",
+              "c2": "35 mm 院线片基停止使用硝基",
+              "c3": "硝基退出院线发行"
+            },
+            {
+              "c1": "1952",
+              "c2": "Kodak 完成四年转换，全部改用醋酸片基",
+              "c3": "醋酸成为唯一的 Kodak 片基"
+            },
+            {
+              "c1": "1955",
+              "c2": "聚酯片基进入专业摄影应用",
+              "c3": "第三代替代开始"
+            },
+            {
+              "c1": "1990 年代",
+              "c2": "聚酯成为印片底片主流",
+              "c3": "聚酯取代醋酸"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "聚碳酸酯的位置"
+        },
+        {
+          "kind": "p",
+          "text": "聚碳酸酯（polycarbonate）强度高于聚酯。它出现在少数专业用途中。它没有取代聚酯成为 135 胶片的主流片基。需要确认的用途请查厂商最新说明书。"
+        },
+        {
+          "kind": "note",
+          "text": "PET 片基相当于一根光导管。光在片基内部被全反射引导。厂商因此给片基染色。染色增加片基密度，并抑制散射。详见 $film-stock.base-density。"
+        },
+        {
+          "kind": "h2",
+          "text": "接片方式随片基改变"
+        },
+        {
+          "kind": "p",
+          "text": "醋酸片基用片基粘合剂（film cement）接片。溶剂会软化醋酸。聚酯片基不与溶剂反应。聚酯只接受热熔接片或超声波接片。"
+        },
+        {
+          "kind": "warn",
+          "text": "维修相机时不要在聚酯片基上使用醋酸型片基粘合剂。胶合层会失效。选用聚酯专用胶或胶带。"
+        },
+        {
+          "kind": "troubleshoot",
+          "caption": "片基相关故障",
+          "items": [
+            {
+              "t": "胶片在片门中卡住后变白或起皱",
+              "d": "醋酸片基受潮后强度下降。检查相机是否漏雨。检查胶卷是否在高温高湿环境中存放。"
+            },
+            {
+              "t": "扫描底片出现边缘发亮的白晕",
+              "d": "检查片基是否为聚酯。聚酯会把扫描光源沿片基内部传播。降低扫描亮度并使用遮光黑框。"
+            },
+            {
+              "t": "硝酸酯材料发出刺鼻气体并变琥珀色",
+              "d": "按 $film-stock.nitrate-base 处理。隔离该材料。不要与安全胶片放在同一防火分区。"
+            }
+          ]
+        }
+      ],
+      "refs": [
+        {
+          "name": "Wikipedia: Film base",
+          "url": "https://en.wikipedia.org/wiki/Film_base",
+          "kind": "article"
+        },
+        {
+          "name": "Kodak Publication F-5: Film Storage",
+          "url": "https://www.kodak.com/content/dam/Kodak/Film/Pubs/F-5.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Wikipedia: Nitrocellulose",
+          "url": "https://en.wikipedia.org/wiki/Nitrocellulose",
+          "kind": "article"
+        },
+        {
+          "name": "Kodak, How Film Makes an Image (FilmEss 04, archived)",
+          "url": "https://web.archive.org/web/20200325120116/http://www.kodak.com/uploadedfiles/motion/US_plugins_acrobat_en_motion_newsletters_filmEss_04_How-film-makes-image.pdf",
+          "kind": "manufacturer"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "film-stock.halide-crystal"
+        ],
+        "next": [
+          "film-stock.nitrate-base",
+          "film-stock.base-density"
+        ],
+        "related": [
+          "film-stock.emulsion",
+          "archive.cold-storage",
+          "archive.mould-removal"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "哪种片基是易燃的？",
+          "type": "single",
+          "options": [
+            "醋酸纤维素酯",
+            "硝基纤维素酯",
+            "聚酯",
+            "聚碳酸酯"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "硝基纤维素酯内含氧。着火后不能用水灭火。"
+        },
+        {
+          "q": "醋酸片基用什么方法接片？",
+          "type": "single",
+          "options": [
+            "片基粘合剂",
+            "热熔接片",
+            "超声波接片",
+            "金属焊片"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "醋酸可被溶剂软化。聚酯只能热熔或超声波接片。"
+        },
+        {
+          "q": "Kodak 的聚酯片基商标是什么？",
+          "type": "single",
+          "options": [
+            "ESTAR",
+            "KODAK 4010",
+            "VESTAR",
+            "ACETEX"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "ESTAR 是 Kodak 的聚酯片基商标。"
+        },
+        {
+          "q": "聚酯片基需要染色吗？",
+          "type": "bool",
+          "options": [
+            "是",
+            "否"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "聚酯把光沿片基内部引导。染色抑制这种导光，并降低散射。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.nitrate-base",
+      "title": "硝基片基的燃烧危险与处理",
+      "title_en": "Nitrate Film Base Hazards and Handling",
+      "aliases": [
+        "nitrate base",
+        "硝基片基",
+        "硝酸纤维素",
+        "guncotton",
+        "醋酸综合征的对立面",
+        "易燃胶片"
+      ],
+      "type": "pitfall",
+      "level": 3,
+      "era": "1889 至约 1951",
+      "tags": [
+        "片基",
+        "安全",
+        "火灾",
+        "档案",
+        "危险品"
+      ],
+      "summary": "硝基片基在 1951 年前用于所有商业胶片。它会释放可燃气体，并在密闭通风条件下自持燃烧。处理它需要专用库房和危险品资质。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "自持燃烧的原因"
+        },
+        {
+          "kind": "p",
+          "text": "硝基纤维素酯（cellulose nitrate）是硝酸酯。分子内含氧。分解时不需要外界氧气。火灾因此不能扑灭。\n\n分解分四个阶段。\n1. 释放气体。\n2. 材料变黏。渗出液体。\n3. 液体凝固成硬块。\n4. 材料变成粉末。\n\n自燃危险随阶段升高。燃烧温度区间是 160 至 170 °C。闪点是 4.4 °C。NFPA 704 评级为健康 2、可燃性 3、稳定性 3。火焰明亮黄色。"
+        },
+        {
+          "kind": "image",
+          "src": "img/nitrate-cans.png",
+          "alt": "已劣化的硝酸片基影片金属罐。硝酸片基分解后罐体锈蚀、片卷粘连，是判断分解阶段的直观线索。",
+          "caption": "已劣化的硝酸片基影片金属罐。硝酸片基分解后罐体锈蚀、片卷粘连，是判断分解阶段的直观线索。",
+          "credit": "Unknown (U.S. National Archives / EDIS)",
+          "license": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File%3AFile--cans_of_deteriorated_nitrate_motion_picture_film%3F-_%28bef80b82-047f-4d8e-93ae-7ad785938681%29.jpg"
+        },
+        {
+          "kind": "warn",
+          "text": "硝基胶片火灾无法用水扑灭，也无法用二氧化碳扑灭。起火时撤离人员并通知消防部门。让消防部门按危险品处理。"
+        },
+        {
+          "kind": "h2",
+          "text": "损失记录"
+        },
+        {
+          "kind": "p",
+          "text": "1978 年两处美国库房发生自燃。美国国家档案馆（NARA）和乔治·伊曼森故居的硝基库房同时起火。伊曼森故居永久损失 329 部影片的原始摄影底片。国家档案馆损失 1260 万英尺新闻纪录片，约 384 万米。"
+        },
+        {
+          "kind": "p",
+          "text": "美国国会图书馆 2013 年报告指出，美国默片正片约 70 % 已损失。原因之一是硝酸酯成分比例最高的拷贝先被销毁。"
+        },
+        {
+          "kind": "h2",
+          "text": "处理步骤"
+        },
+        {
+          "kind": "steps",
+          "caption": "接触硝基材料时的操作",
+          "items": [
+            {
+              "t": "确认材料身份",
+              "d": "在通风良好的区域观察。琥珀色变色加刺激性气味提示硝酸酯。醋酸材料呈红色或蓝色变色并释放醋酸味。"
+            },
+            {
+              "t": "隔离存放",
+              "d": "放入防火分隔间。使用独立排风。不要与安全胶片混放。硝酸酯气体也会降解邻近的乳剂。"
+            },
+            {
+              "t": "远离热源与火花",
+              "d": "避开取暖设备、明火、焊接作业和高温灯。不要在硝基库房内使用会产生火花的工具。"
+            },
+            {
+              "t": "按危险品运输",
+              "d": "硝酸酯胶片在运输法规中属于危险品。申请危险品运输资质并申报数量。"
+            },
+            {
+              "t": "记录当前状态",
+              "d": "拍摄材料外观。测量长度。登记存放日期和温湿度。状态变化时重新登记。"
+            },
+            {
+              "t": "复制后销毁",
+              "d": "先制作安全复制件。销毁按当地危险废物规程执行。"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "caption": "三种片基的鉴别特征",
+          "rows": [
+            {
+              "c1": "硝基纤维素酯",
+              "c2": "深蓝（苯胺 + 硫酸试剂）；荧光下不显色",
+              "c3": "三氯乙烯中下沉；可溶于甲醇、乙醇、乙醚",
+              "c4": "黄色明亮火焰",
+              "c5": "琥珀色，刺激性气体，柔软发黏"
+            },
+            {
+              "c1": "醋酸纤维素酯",
+              "c2": "不发蓝",
+              "c3": "三氯乙烯中漂浮",
+              "c4": "发烟燃烧",
+              "c5": "醋酸味，红或蓝变色，收缩变脆"
+            },
+            {
+              "c1": "聚酯",
+              "c2": "不发蓝",
+              "c3": "三氯乙烯中悬停",
+              "c4": "发烟燃烧",
+              "c5": "偏振光下红绿干涉色；侧光下透光"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "1951 年之后 Kodak 未再生产硝基片基。1955 年之前未出现聚酯片基。据此判断材料的年代范围，再结合外观确认。"
+        },
+        {
+          "kind": "p",
+          "text": "醋酸材料也会老化。参见 $film-stock.base-density 与 $archive.cold-storage。两种材料共用同一套隔离存放方法。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Wikipedia: Film base（nitrate 火灾与 1978 年库房记录）",
+          "url": "https://en.wikipedia.org/wiki/Film_base",
+          "kind": "article"
+        },
+        {
+          "name": "Wikipedia: Nitrocellulose（CAS 9004-70-0，NFPA 704 参数）",
+          "url": "https://en.wikipedia.org/wiki/Nitrocellulose",
+          "kind": "article"
+        },
+        {
+          "name": "Library of Congress, The Survival of American Silent Feature Films: 1912-1929 (Pub. 158)",
+          "url": "https://www.loc.gov/static/programs/national-film-preservation-board/documents/pub158.final_version_sept_2013.pdf",
+          "kind": "archive"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "film-stock.film-base"
+        ],
+        "next": [
+          "film-stock.emulsion"
+        ],
+        "related": [
+          "archive.cold-storage",
+          "archive.mould-removal",
+          "archive.cleaning-film",
+          "archive.digital-preservation"
+        ],
+        "contrast": [
+          "film-stock.film-base"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "硝基胶片起火后可以用水扑灭吗？",
+          "type": "bool",
+          "options": [
+            "是",
+            "否"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "硝基纤维素酯分子内含氧。燃烧不依赖外界氧气。"
+        },
+        {
+          "q": "1978 年哪两处美国库房发生硝基自燃？",
+          "type": "single",
+          "options": [
+            "柯达与富士的工厂",
+            "美国国家档案馆与乔治·伊曼森故居",
+            "宝丽来与柯达",
+            "伊尔福与富士"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "两处库房同年自燃。国家档案馆损失 1260 万英尺新闻纪录片。"
+        },
+        {
+          "q": "三氯乙烯浮力试验中，聚酯片基的表现是什么？",
+          "type": "single",
+          "options": [
+            "下沉",
+            "漂浮",
+            "悬停于中间",
+            "溶解"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "硝酸酯下沉，醋酸漂浮，聚酯悬停于中间。"
+        },
+        {
+          "q": "苯胺加硫酸试剂使硝基片基呈什么颜色？",
+          "type": "single",
+          "options": [
+            "深蓝",
+            "琥珀色",
+            "红绿干涉色",
+            "无变化"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "该试剂是硝酸酯的专用鉴别试剂。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.emulsion",
+      "title": "乳剂的层次与制备类型",
+      "title_en": "Emulsion Layer Structure and Coating Types",
+      "aliases": [
+        "emulsion",
+        "乳剂",
+        "涂层结构",
+        "subbing layer",
+        "背层",
+        "正片乳剂",
+        "负片乳剂",
+        "反转片乳剂"
+      ],
+      "type": "concept",
+      "level": 3,
+      "era": "1871 至今",
+      "tags": [
+        "乳剂",
+        "涂布",
+        "层结构",
+        "防晕光",
+        "底层"
+      ],
+      "summary": "乳剂（emulsion）是卤化银晶体悬浮在明胶中的薄层。乳剂按成像用途分为正片、负片、反转片三类。三类乳剂的银盐配方、颗粒尺寸和明胶含量不同。成品胶片在乳剂上下另有底层和背层。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "乳剂的组成"
+        },
+        {
+          "kind": "p",
+          "text": "乳剂（emulsion）由三项组成。\n1. 卤化银晶体。晶体悬浮在明胶中。\n2. 明胶（gelatin）。它同时是保护胶。\n3. 染料。染料赋予感色性。\n\n晶体尺寸通常在 0.2 至 2 µm 范围内。乳剂层厚度只有几微米。"
+        },
+        {
+          "kind": "h2",
+          "text": "三类乳剂的差别"
+        },
+        {
+          "kind": "table",
+          "caption": "正片、负片与反转片乳剂",
+          "rows": [
+            {
+              "c1": "正片乳剂（positive）",
+              "c2": "光少处厚",
+              "c3": "低反差，最大密度高",
+              "c4": "颗粒细，低感光度",
+              "c5": "用于相纸和正片复制片"
+            },
+            {
+              "c1": "负片乳剂（negative）",
+              "c2": "光多处厚",
+              "c3": "中等反差，最大密度中等",
+              "c4": "颗粒中等，感光度可至 ISO 3200 以上",
+              "c5": "用于 135/120 相机负片"
+            },
+            {
+              "c1": "反转片乳剂（reversal）",
+              "c2": "光少处厚",
+              "c3": "高反差，密度范围窄",
+              "c4": "颗粒细，加工窗口窄",
+              "c5": "用于 E-6 和 ECN-2 反转片"
+            }
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "负片乳剂追求宽密度范围。它需要长直线部。反转片乳剂追求短直线部和高斜率。它依靠显影中的灰雾步骤拉开黑白两极。参见 $film-stock.fog 与 $color-process.e6。"
+        },
+        {
+          "kind": "h2",
+          "text": "成品胶片的涂层顺序"
+        },
+        {
+          "kind": "steps",
+          "caption": "从片基到表面",
+          "items": [
+            {
+              "t": "片基（base）",
+              "d": "支撑材料。参见 $film-stock.film-base。"
+            },
+            {
+              "t": "底层（subbing）",
+              "d": "把乳剂粘到片基上。改善附着，防止加工时脱层。"
+            },
+            {
+              "t": "防晕光层（antihalation layer）",
+              "d": "吸收透过乳剂的光，消除反射光晕。聚酯片基的防晕光层涂在乳剂下方。醋酸片基常用背层代替。"
+            },
+            {
+              "t": "乳剂层（emulsion）",
+              "d": "一至十余层。每层感不同色带。"
+            },
+            {
+              "t": "中间层（interlayer）",
+              "d": "调整层间感光度差。防止层间界面产生光学效应。"
+            },
+            {
+              "t": "表涂层（overcoat）",
+              "d": "防刮、防静电、阻挡紫外光。"
+            },
+            {
+              "t": "背层（backing）",
+              "d": "含碳层提供导电通路。润滑走片。防止低湿度下起雾。"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "CineStill 去掉 rem-jet 背层。因此它在普通 C-41 实验室中显影。去掉防晕光层的结果是亮部周围出现红色光晕。参见 $film-stock.cinestill。"
+        },
+        {
+          "kind": "h2",
+          "text": "乳剂与显影的关系"
+        },
+        {
+          "kind": "p",
+          "text": "同一卷胶片的乳剂不变。显影改变乳剂的反应速度，因而改变曲线位置。参见 $film-stock.characteristic-curve 与 $bw-process.d-76。"
+        },
+        {
+          "kind": "warn",
+          "text": "不要用锐利工具直接接触乳剂面。乳剂层厚度只有几微米。刮伤在放大后清晰可见。参见 $scanning.dust-scratch-handling。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Kodak, How Film Makes an Image (FilmEss 04, archived)",
+          "url": "https://web.archive.org/web/20200325120116/http://www.kodak.com/uploadedfiles/motion/US_plugins_acrobat_en_motion_newsletters_filmEss_04_How-film-makes-image.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Wikipedia: Photographic film（层结构与背层）",
+          "url": "https://en.wikipedia.org/wiki/Photographic_film",
+          "kind": "article"
+        },
+        {
+          "name": "Fujita, Organic Chemistry of Photography (Springer, 2004)",
+          "url": "https://doi.org/10.1007/978-3-662-06497-8",
+          "kind": "book",
+          "note": "各用途卤化银晶体形态的系统论述。"
+        },
+        {
+          "name": "Mees & James, The Theory of the Photographic Process, 4th ed.",
+          "url": "https://doi.org/10.1007/978-0-230-58018-6",
+          "kind": "book"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "film-stock.halide-crystal",
+          "film-stock.film-base"
+        ],
+        "next": [
+          "film-stock.emulsion-crystal",
+          "film-stock.color-negative"
+        ],
+        "related": [
+          "film-stock.grain",
+          "color-process.e6",
+          "color-process.c41",
+          "bw-process.developer-types"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "负片乳剂的密度曲线比反转片乳剂长还是短？",
+          "type": "single",
+          "options": [
+            "更长",
+            "更短",
+            "相同",
+            "无法比较"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "负片乳剂需要宽密度范围。反转片乳剂追求高斜率和窄范围。"
+        },
+        {
+          "q": "底层（subbing）的作用是什么？",
+          "type": "single",
+          "options": [
+            "消除光晕",
+            "把乳剂粘到片基",
+            "阻挡紫外光",
+            "提供导电通路"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "底层改善乳剂与片基的附着，防止加工时脱层。"
+        },
+        {
+          "q": "聚酯片基的防晕光层通常涂在哪一侧？",
+          "type": "single",
+          "options": [
+            "片基背面",
+            "乳剂下方（正面）",
+            "表涂层之上",
+            "只涂在片基边缘"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "聚酯片基的防晕光层在乳剂下方。醋酸片基多用背层实现同样功能。"
+        },
+        {
+          "q": "黑白负片上的背层通常含有什么？",
+          "type": "single",
+          "options": [
+            "碳",
+            "银",
+            "钡白",
+            "镉"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "碳层提供导电通路。它同时起润滑和防雾作用。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.emulsion-crystal",
+      "title": "晶体形态与感光度的来源",
+      "title_en": "Emulsion Crystal Shape and the Origin of Speed",
+      "aliases": [
+        "T-grain",
+        "tabular grain",
+        "core-shell",
+        "晶体形态",
+        "乳剂晶体",
+        "感光度来源"
+      ],
+      "type": "concept",
+      "level": 4,
+      "era": "1970 至今",
+      "tags": [
+        "乳剂",
+        "晶体",
+        "平板颗粒",
+        "核壳结构",
+        "感光度"
+      ],
+      "summary": "感光度来自晶体的表面积与潜影位置。平板颗粒（tabular grain）晶体更薄，表面积更大，因此分辨率更高。核壳结构在核心提高碘含量，用于控制显影位置。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "感光度的三个来源"
+        },
+        {
+          "kind": "p",
+          "text": "胶片的感光度由三项决定。\n1. 晶体表面积。大表面积捕获更多光子。\n2. 电子陷阱位置。陷阱位于晶体表面时，潜影效率高。位于晶体内部时，潜影效率低。\n3. 电子转移效率。电子在晶体内移动到陷阱的效率决定可用的潜影数。"
+        },
+        {
+          "kind": "p",
+          "text": "增加晶体尺寸可提高感光度。但晶体变大同时使散射增加，分辨率下降。因此提高感光度需要新工艺，不是简单放大晶体。"
+        },
+        {
+          "kind": "h2",
+          "text": "平板颗粒"
+        },
+        {
+          "kind": "p",
+          "text": "平板颗粒（tabular grain）晶体有两个孪晶面。晶体沿片基平面展开成薄片。它只在边缘长大，主晶面几乎不长大。结果是极薄的晶体和很大的表面积。\n\n三项结果随平板化出现。\n1. 表面积增大。染料吸附位点增多。\n2. 晶体在涂布后平躺在片基表面。光散射减少。分辨率上升。\n3. 蓝光敏感性下降。T 颗粒因此不再需要蓝色遮光层（blue filter layer）。"
+        },
+        {
+          "kind": "p",
+          "text": "乳剂工程师在约 1970 年获得以平板颗粒为主的乳剂。1980 年代进入量产。代表产品是 Kodak T-Grain（T-MAX）、Ilford Delta、Fujifilm Neopan，以及几乎所有彩色胶片。"
+        },
+        {
+          "kind": "note",
+          "text": "平板颗粒本身不解释互易律失效的改善。互易律失效的改善来自同期其他工艺，例如潜影稳定性和染料技术。把两者混为一谈会得出错误结论。"
+        },
+        {
+          "kind": "warn",
+          "text": "平板晶体在边缘溶解。定影速度比常规晶体慢。在快速定影液中把定影时间增加到清透时间的两倍以上。用 $bw-process.stop-bath-fix 检查清透程度。"
+        },
+        {
+          "kind": "h2",
+          "text": "核壳与 Sigma 颗粒"
+        },
+        {
+          "kind": "p",
+          "text": "核壳结构（core-shell）在晶体核心使用碘含量更高的碘溴化银。核心碘含量高。显影时核心先溶出银。显影从内部向外扩展。\n\nSigma 颗粒同样是核壳结构。它的用途是控制显影位置与颗粒边缘锐度。核壳结构是 Kodak Vista 与后续彩色产品的基础。"
+        },
+        {
+          "kind": "table",
+          "caption": "常见晶体形态与用途",
+          "rows": [
+            {
+              "c1": "六方板状 AgBrCl",
+              "c2": "彩色负片",
+              "c3": "平板",
+              "c4": "多层叠合使用",
+              "c5": "彩色负片标准形态"
+            },
+            {
+              "c1": "八面体 AgBr",
+              "c2": "即成像底片",
+              "c3": "八面体",
+              "c4": "颗粒较粗",
+              "c5": "快速成像"
+            },
+            {
+              "c1": "立方八面体 AgBrI",
+              "c2": "彩色反转片",
+              "c3": "核壳",
+              "c4": "颗粒细，高反差",
+              "c5": "E-6 反转片"
+            },
+            {
+              "c1": "六方板状 AgBr",
+              "c2": "医用 X 光",
+              "c3": "平板",
+              "c4": "高感光度，双面涂层",
+              "c5": "放射成像"
+            },
+            {
+              "c1": "立方 AgBrCl",
+              "c2": "制版印刷",
+              "c3": "立方",
+              "c4": "高反差，高最大密度",
+              "c5": "印刷制版"
+            }
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "T-MAX 100 的分辨率标称约 200 线每毫米。它常用作镜头分辨率测试片。参见 $film-stock.kodak-t-max。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Wikipedia: Tabular-grain film",
+          "url": "https://en.wikipedia.org/wiki/Tabular-grain_film",
+          "kind": "article"
+        },
+        {
+          "name": "Kofron & Booms, KODAK T-Grain Emulsions in Color Films, J. Soc. Photogr. Sci. Technol. Japan 49(6):499-504",
+          "url": "https://doi.org/10.11454/photogrst1964.49.499",
+          "kind": "book"
+        },
+        {
+          "name": "Fujita, Organic Chemistry of Photography (Springer, 2004)",
+          "url": "https://doi.org/10.1007/978-3-662-06497-8",
+          "kind": "book"
+        },
+        {
+          "name": "Wikipedia: Kodak T-MAX（分辨率标称）",
+          "url": "https://en.wikipedia.org/wiki/Kodak_T-MAX",
+          "kind": "article"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "film-stock.emulsion",
+          "film-stock.halide-crystal"
+        ],
+        "next": [
+          "film-stock.grain",
+          "film-stock.iso-speed"
+        ],
+        "related": [
+          "film-stock.kodak-t-max",
+          "film-stock.ilford-delta",
+          "film-stock.kodak-ektar-100"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "平板颗粒提高分辨率的物理原因是什么？",
+          "type": "single",
+          "options": [
+            "晶体更大",
+            "晶体在片基表面平躺，散射减少",
+            "乳剂层更薄",
+            "明胶更少"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "平板晶体的主晶面平行于片基。光线穿过后散射减少。"
+        },
+        {
+          "q": "平板晶体在快速定影液中的表现是什么？",
+          "type": "single",
+          "options": [
+            "溶解更快",
+            "溶解更慢，需要更长时间",
+            "不受影响",
+            "会转变为彩色"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "平板晶体主要在边缘溶解。清透时间因此延长。"
+        },
+        {
+          "q": "平板颗粒的商业化大约从哪个年代开始？",
+          "type": "single",
+          "options": [
+            "1930 年代",
+            "1950 年代",
+            "1970 年代",
+            "2000 年代"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "乳剂工程师约 1970 年获得以平板颗粒为主的乳剂。1980 年代进入量产。"
+        },
+        {
+          "q": "平板颗粒减少了蓝光敏感性，因此彩色负片不再需要哪一层？",
+          "type": "single",
+          "options": [
+            "防晕光层",
+            "中间层",
+            "蓝色遮光层",
+            "表涂层"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "蓝光敏感性下降使独立的蓝色遮光层不再必要。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.grain",
+      "title": "颗粒的物理来源与控制",
+      "title_en": "Physical Origin and Control of Film Grain",
+      "aliases": [
+        "grain",
+        "颗粒",
+        "银盐颗粒",
+        "RMS granularity",
+        "颗粒度"
+      ],
+      "type": "concept",
+      "level": 4,
+      "era": "1871 至今",
+      "tags": [
+        "颗粒",
+        "乳剂",
+        "分辨率",
+        "显影",
+        "扫描"
+      ],
+      "summary": "颗粒来自乳剂中卤化银晶体的成团。晶体尺寸、形状和显影条件决定颗粒大小。颗粒与分辨率互相制约。彩色染料影像的颗粒感弱于同感光度黑白负片。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "颗粒的物理来源"
+        },
+        {
+          "kind": "p",
+          "text": "颗粒（grain）是乳剂中卤化银晶体以及它们在显影后结成的团块。单个晶体尺寸为 0.2 至 2 µm。显影后金属银在晶体内部聚集成团。团块遮挡邻近区域的光，形成可见的密度起伏。"
+        },
+        {
+          "kind": "p",
+          "text": "三个变量决定颗粒大小。\n1. 晶体尺寸与形状。平板颗粒的表面积大，成团后在密度上表现为更细的纹理。\n2. 晶体在乳剂中的分布密度。分布越密，成团越明显。\n3. 显影条件。稀释显影液和延长时间都会增大颗粒。"
+        },
+        {
+          "kind": "h2",
+          "text": "Eberhard 效应"
+        },
+        {
+          "kind": "p",
+          "text": "低稀释度显影液产生 Eberhard 效应。显影初期，乳剂内层因新鲜显影液补充不足而显影较慢。显影主攻乳剂表层。结果是有效颗粒变大，反差上升。\n\n实际用法：把显影液稀释到 1+100 以上作常温静置显影。可在同一卷胶片上得到更细的颗粒和更高的有效感光度。参见 $bw-process.push-pull 与 $film-stock.rodinal。"
+        },
+        {
+          "kind": "table",
+          "caption": "降低颗粒的操作与代价",
+          "rows": [
+            {
+              "c1": "降低标称感光度",
+              "d": "颗粒明显变细。曝光不足量增加。",
+              "c2": "低感光度规格",
+              "c3": "0.7-1 级",
+              "c4": "景深外的曝光余量减少",
+              "c5": "细节分辨率上升"
+            },
+            {
+              "c1": "改用平板颗粒乳剂",
+              "d": "同感光度下颗粒纹理更细。",
+              "c2": "换型号",
+              "c3": "无",
+              "c4": "价格与反差特性改变",
+              "c5": "趾部略短"
+            },
+            {
+              "c1": "稀释显影并静置",
+              "d": "颗粒变细。反差上升。有效感光度上升。",
+              "c2": "改冲洗",
+              "c3": "时间大幅增加",
+              "c4": "需要控制温度",
+              "c5": "趾部与肩部变陡"
+            },
+            {
+              "c1": "改用染料型黑白片",
+              "d": "影像由染料构成，不含金属银颗粒。",
+              "c2": "换型号",
+              "c3": "无",
+              "c4": "工艺改为 C-41",
+              "c5": "颗粒感最弱"
+            }
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "分辨率与颗粒是一对矛盾指标。厂商标称的分辩率通常以线对每毫米表示。颗粒以均方根颗粒度（RMS granularity）表示。两个数值在同一乳剂上呈反向变化。"
+        },
+        {
+          "kind": "h2",
+          "text": "彩色片与扫描中的颗粒"
+        },
+        {
+          "kind": "p",
+          "text": "彩色负片的染料云尺寸常在 25 µm 上下。它远大于卤化银晶体。染料云内含染料密度低于金属银。因此彩色负片的颗粒感弱于同感光度黑白负片。"
+        },
+        {
+          "kind": "note",
+          "text": "扫描放大会把颗粒放大到可见尺寸。使用均值或中值降噪替代单纯锐化，可抑制颗粒而保留细节。参见 $scanning.scan-settings。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Vitale, Film Grain, Resolution and Fundamental Film Particles (2006, archived)",
+          "url": "https://web.archive.org/web/20200605112132/http://www.tmax100.com/photo/pdf/film.pdf",
+          "kind": "measurement"
+        },
+        {
+          "name": "Kodak, Basic Sensitometry and Characteristics of Film (FilmEss 06, archived)",
+          "url": "https://web.archive.org/web/20160305110302/http://motion.kodak.com/KodakGCG/uploadedfiles/motion/US_plugins_acrobat_en_motion_newsletters_filmEss_06_Characteristics_of_Film.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Mees & James, The Theory of the Photographic Process, 4th ed.",
+          "url": "https://doi.org/10.1007/978-0-230-58018-6",
+          "kind": "book"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "film-stock.emulsion-crystal"
+        ],
+        "next": [
+          "film-stock.iso-speed"
+        ],
+        "related": [
+          "film-stock.latitude",
+          "bw-process.push-pull",
+          "scanning.scan-settings",
+          "film-stock.rodinal"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "黑白负片的颗粒主要由什么形成？",
+          "type": "single",
+          "options": [
+            "显影后成团的金属银",
+            "背层的碳",
+            "片基染色",
+            "表涂层"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "卤化银晶体显影后生成金属银团块。团块遮挡光线形成密度起伏。"
+        },
+        {
+          "q": "Eberhard 效应带来什么结果？",
+          "type": "single",
+          "options": [
+            "颗粒变细，反差下降",
+            "有效颗粒变大，反差上升",
+            "感光度下降",
+            "灰雾消失"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "稀释显影使显影集中在乳剂表层。结果是颗粒变大、反差上升。"
+        },
+        {
+          "q": "彩色负片的颗粒感为何弱于同感光度黑白负片？",
+          "type": "single",
+          "options": [
+            "彩色乳剂层更薄",
+            "染料云的光学密度低于金属银",
+            "彩色片不含卤化银",
+            "彩色片晶粒更小"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "染料云的密度低于金属银。同一密度起伏产生的视觉对比更弱。"
+        },
+        {
+          "q": "均方根颗粒度（RMS granularity）用来描述什么？",
+          "type": "single",
+          "options": [
+            "感光度",
+            "颗粒大小",
+            "片基厚度",
+            "反差"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "它量化微观密度起伏的均方根值。是颗粒的客观度量。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.iso-speed",
+      "title": "ISO 感光度的测定",
+      "title_en": "Determination of ISO Speed",
+      "aliases": [
+        "ISO speed",
+        "ASA",
+        "感光度",
+        "H_m",
+        "H_0",
+        "饱和感光度"
+      ],
+      "type": "concept",
+      "level": 3,
+      "era": "1890 至今",
+      "tags": [
+        "感光度",
+        "标准",
+        "曲线",
+        "测量",
+        "曝光"
+      ],
+      "summary": "ISO 感光度来自特性曲线上的两个曝光量。Hurter 与 Driffield 在 1876 至 1890 年建立方法。ANSI PH3.1 给出现行程序。感光度随显影条件改变。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "方法的来源"
+        },
+        {
+          "kind": "p",
+          "text": "Hurter 与 Driffield 在 1876 年前后建立乳剂感光度测定法。他们 1890 年发表论文 Photochemical Investigations and a New Method of Determination of the Sensitiveness of Photographic Plates，刊登在 Journal of the Society of Chemical Industry，日期 1890 年 5 月 31 日。"
+        },
+        {
+          "kind": "p",
+          "text": "他们的核心判断是：在理想的负片上，各个部位沉积的银量与该部位接收到的光强的对数成正比。这一判断是经验观察的结果，不是推导结论。"
+        },
+        {
+          "kind": "h2",
+          "text": "两个曝光量"
+        },
+        {
+          "kind": "defs",
+          "term": "H_0",
+          "text": "在灰雾以上产生 0.1 密度所需的曝光量。它标记曲线进入直线部的起点。"
+        },
+        {
+          "kind": "defs",
+          "term": "H_m",
+          "text": "在直线部产生灰雾以上 0.1 密度所需的曝光量。它标记曲线中部。"
+        },
+        {
+          "kind": "p",
+          "text": "ANSI PH3.1 用常数 0.8 把这两个曝光量换算成感光度。本知识库在 $film-stock.characteristic-curve 给出算式 ISO = 0.8 × (H_m − H_0)。算式中的两个量因此直接决定标称感光度。"
+        },
+        {
+          "kind": "h2",
+          "text": "显影条件改变标称值"
+        },
+        {
+          "kind": "p",
+          "text": "同一卷胶片在不同显影液、时间和温度下得到不同曲线。曲线位置随条件移动。因此厂商必须声明标称感度对应的标准冲洗条件。\n\n常见变化：\n- 延长显影：曲线左移。有效感光度上升。反差上升。\n- 提高显影温度：效果与延长显影相近。\n- 稀释显影液：曲线左移的幅度减小。静置显影例外，见 $film-stock.grain。\n\n若用户用比标称条件更弱的冲洗，胶片的实际速度低于标称值。测光表按标称值工作会欠曝。"
+        },
+        {
+          "kind": "note",
+          "text": "Tri-X 400 的 400 标称值对应厂商指定的稀释冲洗条件。用 D-76 原液冲洗时有效速度低于 400。参见 $bw-process.d-76 与 $film-stock.kodak-tri-x-400。"
+        },
+        {
+          "kind": "h2",
+          "text": "常见速度等级"
+        },
+        {
+          "kind": "table",
+          "caption": "常用黑白负片的速度与用途",
+          "rows": [
+            {
+              "c1": "ISO 50",
+              "c2": "颗粒最细，宽容度最宽",
+              "c3": "风光、大型相机",
+              "c4": "Fomapan 无此档；Pan F Plus、Acros 100 II 属此类",
+              "c5": "需要稳定支架"
+            },
+            {
+              "c1": "ISO 100",
+              "c2": "细颗粒",
+              "c3": "风光、人像、镜头测试",
+              "c4": "T-MAX 100、Delta 100、FP4 Plus",
+              "c5": "静置显影可提升至 ISO 400"
+            },
+            {
+              "c1": "ISO 400",
+              "c2": "通用",
+              "c3": "纪实、动作、现场光",
+              "c4": "Tri-X 400、HP5 Plus、T-MAX 400、Delta 400",
+              "c5": "静置显影可提升至 ISO 1600"
+            },
+            {
+              "c1": "ISO 3200",
+              "c2": "为推冲洗设计",
+              "c3": "现场光、舞台、运动",
+              "c4": "Delta 3200、P3200",
+              "c5": "颗粒明显粗大"
+            }
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "135 盒片上的 DX 编码记录 ISO 值。相机读取该编码并设定测光。第三方改速片需要同步修改编码。参见 $capture.camera-mechanics。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "ANSI PH3.1-1998: Standard for the Luminance of Film Exposure Printers",
+          "url": "https://webstore.ansi.org/standards/ansi/ph31998",
+          "kind": "standard",
+          "note": "感光度测定程序的标准依据。"
+        },
+        {
+          "name": "Wikipedia: Sensitometry（Hurter 与 Driffield 历史与曲线名称）",
+          "url": "https://en.wikipedia.org/wiki/Sensitometry",
+          "kind": "article"
+        },
+        {
+          "name": "Kodak Publication F-4017: TRI-X 320 and 400 (2007)",
+          "url": "https://125px.com/docs/film/kodak/f4017-400TX-2007.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Ilford Photo Instruction Sheet: Characteristic curves",
+          "url": "https://www.ilfordphoto.com/technical-article-D1.php",
+          "kind": "manufacturer"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "film-stock.characteristic-curve",
+          "film-stock.emulsion-crystal"
+        ],
+        "next": [
+          "film-stock.latitude"
+        ],
+        "related": [
+          "film-stock.lab-sensitometry",
+          "bw-process.d-76",
+          "bw-process.push-pull",
+          "capture.exposure-metering"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "H_0 表示什么？",
+          "type": "single",
+          "options": [
+            "最大密度对应的曝光量",
+            "灰雾以上产生 0.1 密度所需的曝光量",
+            "显影时间",
+            "片基密度"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "H_0 标记曲线进入直线部的起点。"
+        },
+        {
+          "q": "延长显影时间对曲线有何影响？",
+          "type": "single",
+          "options": [
+            "曲线右移",
+            "曲线左移，最大密度与反差上升",
+            "曲线不变",
+            "只影响灰雾"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "显影更完全。曲线左移，有效感光度与反差上升。"
+        },
+        {
+          "q": "Hurter 与 Driffield 建立乳剂感光度测定法的大致年代是？",
+          "type": "single",
+          "options": [
+            "1860 年代",
+            "1870 至 1890 年代",
+            "1930 年代",
+            "1990 年代"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "他们约 1876 年开始工作，1890 年发表奠基论文。"
+        },
+        {
+          "q": "DX 编码记录的是什么信息？",
+          "type": "single",
+          "options": [
+            "胶片批号",
+            "ISO 感光度",
+            "乳剂类型",
+            "片基种类"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "相机读取盒片上的 DX 编码设置测光值。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.latitude",
+      "title": "曝光宽容度",
+      "title_en": "Exposure Latitude",
+      "aliases": [
+        "latitude",
+        "宽容度",
+        "曝光余量",
+        "趾部与肩部"
+      ],
+      "type": "concept",
+      "level": 4,
+      "era": "1874 至今",
+      "tags": [
+        "宽容度",
+        "特性曲线",
+        "曝光",
+        "冲洗"
+      ],
+      "summary": "宽容度（latitude）是曲线直线部覆盖的曝光范围。它由趾部与肩部的长度决定。宽容度随冲洗强度改变。宽容度与反差是一对相反指标。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "宽容度的定义"
+        },
+        {
+          "kind": "p",
+          "text": "宽容度（latitude）等于 H_m − H_0 的对数差。它表示直线部覆盖多少档曝光。直线部内所有区域按同一斜率记录影像。直线部越长，能记录的影调层次越多。"
+        },
+        {
+          "kind": "image",
+          "src": "img/bw-negative-strip.png",
+          "alt": "黑白负片与彩色负片并列对照。彩色负片的宽容度通常小于黑白负片。",
+          "caption": "黑白负片与彩色负片并列对照。彩色负片的宽容度通常小于黑白负片。",
+          "credit": "Friedrich Haag",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File%3A2015_04_08_009_Analogfilme.jpg"
+        },
+        {
+          "kind": "p",
+          "text": "用可读影调的数量衡量更直观。典型经验值：\n- 细颗粒黑白负片直线部约覆盖 20 至 30 级影调。\n- 通用黑白负片约 15 至 20 级。\n- 高感光度粗颗粒片通常更短。\n\n具体数值随型号与冲洗条件变化。查厂商数据表确认。"
+        },
+        {
+          "kind": "h2",
+          "text": "宽容度与反差的关系"
+        },
+        {
+          "kind": "p",
+          "text": "直线部斜率增大时，同一密度范围内可容纳的曝光范围缩小。因此高反差冲洗缩短有效宽容度。宽容度与反差互相制约。"
+        },
+        {
+          "kind": "table",
+          "caption": "冲洗强度对曲线形状的影响",
+          "rows": [
+            {
+              "c1": "显影不足",
+              "c2": "整条曲线下移",
+              "c3": "下降",
+              "c4": "阴影层次偏少",
+              "c5": "有效感光度低"
+            },
+            {
+              "c1": "标准显影",
+              "c2": "曲线在标称位置",
+              "c3": "按型号标称",
+              "c4": "平衡",
+              "c5": "标称值"
+            },
+            {
+              "c1": "显影过度或推冲洗",
+              "c2": "趾部与肩部同时变陡",
+              "c3": "明显缩短",
+              "c4": "暗部与亮部并死",
+              "c5": "有效感光度升高"
+            },
+            {
+              "c1": "稀释显影加静置",
+              "c2": "趾部略陡，肩部变化小",
+              "c3": "中度缩短",
+              "c4": "颗粒变细",
+              "c5": "有效感度升高 1 至 2 级"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "实际使用"
+        },
+        {
+          "kind": "steps",
+          "caption": "利用宽容度的工作方法",
+          "items": [
+            {
+              "t": "测光后保留曝光余量",
+              "d": "把测光值向亮侧偏一到二档。阴影落在直线部而非趾部。"
+            },
+            {
+              "t": "用测光表判断场景反差",
+              "d": "分别测亮部与暗部。差值小于胶片宽容度时可直接曝光。"
+            },
+            {
+              "t": "在放大时补偿反差",
+              "d": "底片反差高于相纸时用 $printing.dodging-burning 调整。反之整体减曝。"
+            },
+            {
+              "t": "确认冲洗条件",
+              "d": "查厂商数据表给出的标准冲洗条件。按该条件计算实际可用宽容度。"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "胶片说明书给出的宽容度数值对应厂商指定的冲洗条件。换成其他显影液时数值不再适用。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Kodak, Basic Sensitometry and Characteristics of Film (FilmEss 06, archived)",
+          "url": "https://web.archive.org/web/20160305110302/http://motion.kodak.com/KodakGCG/uploadedfiles/motion/US_plugins_acrobat_en_motion_newsletters_filmEss_06_Characteristics_of_Film.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Ilford Photo technical downloads（各型号特性曲线）",
+          "url": "https://www.ilfordphoto.com/technical-downloads/film-technical-downloads/",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Mees & James, The Theory of the Photographic Process, 4th ed.",
+          "url": "https://doi.org/10.1007/978-0-230-58018-6",
+          "kind": "book"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "film-stock.characteristic-curve",
+          "film-stock.iso-speed"
+        ],
+        "next": [
+          "film-stock.lab-sensitometry"
+        ],
+        "related": [
+          "film-stock.grain",
+          "capture.exposure-metering",
+          "printing.dodging-burning",
+          "bw-process.push-pull"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "宽容度对应曲线上的哪一段？",
+          "type": "single",
+          "options": [
+            "趾部",
+            "直线部",
+            "肩部",
+            "水平基线"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "宽容度等于直线部覆盖的曝光范围。"
+        },
+        {
+          "q": "推冲洗对宽容度有何影响？",
+          "type": "single",
+          "options": [
+            "延长",
+            "缩短",
+            "不变",
+            "只影响灰雾"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "推冲洗使趾部与肩部同时变陡。直线部缩短。"
+        },
+        {
+          "q": "厂商标注的宽容度数值对应哪种条件？",
+          "type": "single",
+          "options": [
+            "用户自选显影液",
+            "厂商指定的标准冲洗条件",
+            "C-41 工艺",
+            "扫描仪默认设置"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "宽容度随冲洗条件变化。厂商按指定条件标注。"
+        },
+        {
+          "q": "拍摄高反差场景时，宽容度不足的表现是什么？",
+          "type": "single",
+          "options": [
+            "暗部与亮部并死",
+            "影像偏色",
+            "颗粒变细",
+            "灰雾上升"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "曝光范围超出直线部。趾部与肩部的层次被压平。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.color-negative",
+      "title": "彩色负片的多层结构与染料偶合体",
+      "title_en": "Colour Negative Layer Structure and Dye Couplers",
+      "aliases": [
+        "colour negative",
+        "彩色负片",
+        "成色剂",
+        "coupler",
+        "橙色蒙罩",
+        "C-41"
+      ],
+      "type": "concept",
+      "level": 4,
+      "era": "1935 至今",
+      "tags": [
+        "彩色负片",
+        "成色剂",
+        "蒙罩",
+        "C-41",
+        "层数"
+      ],
+      "summary": "彩色负片由多层乳剂叠成。蓝、绿、红三层记录三个色带。成色剂位于油滴中，加工时生成染料。绿层与红层的残留成色剂形成橙色蒙罩，用于校正层间吸收。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "三层理想模型"
+        },
+        {
+          "kind": "p",
+          "text": "彩色负片（C-41）的理想化模型是三层。\n1. 蓝感层。最上面。对蓝光敏感，生成黄色染料。\n2. 黄色 Carey Lea 银滤色层。位于蓝感层下方。\n3. 绿感层与红感层。位于底部。绿感层生成品红色染料。红感层生成青色染料。\n\n黄色滤色层在显影时被溶去。"
+        },
+        {
+          "kind": "image",
+          "src": "img/color-negative-strip.jpg",
+          "alt": "135 柯达 Ektar 100 彩色负片条，手持逆光观察。橙红色的片基色罩来自成色剂侧偶合基团。",
+          "caption": "135 柯达 Ektar 100 彩色负片条，手持逆光观察。橙红色的片基色罩来自成色剂侧偶合基团。",
+          "credit": "LoMit",
+          "license": "CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File%3AColor_print_film_strip_01_-_negative.jpg"
+        },
+        {
+          "kind": "p",
+          "text": "实际产品比三层复杂。每一色带通常由多个乳剂层实现。层内感光度与反差不同。Kodacolor II 使用多达 12 层。层内使用 20 种以上化学品。数据来自 1984 年 6 月 Popular Photography 第 91 卷第 6 期第 55 页。"
+        },
+        {
+          "kind": "h2",
+          "text": "成色剂的封装"
+        },
+        {
+          "kind": "p",
+          "text": "成色剂（colour coupler）不直接分散在明胶中。它被封在油滴里。油滴充当表面活性剂，承担两项保护。\n1. 使成色剂远离卤化银晶体。避免成色剂与未曝光的卤化银反应。\n2. 使成色剂远离明胶。避免成色剂在加工前自行反应。\n\n油滴直径与显影生成的染料云尺寸相关。染料云常在 25 µm 上下。"
+        },
+        {
+          "kind": "h2",
+          "text": "橙色蒙罩"
+        },
+        {
+          "kind": "p",
+          "text": "绿感层与红感层的未曝光区域保留成色剂。它们生成橙色物质。该橙色在减色成色中表现为橙色蒙罩（orange mask）。作用是补偿层间染料吸收的差异。没有蒙罩，影像的色偏会随层间透过率变化而漂移。"
+        },
+        {
+          "kind": "note",
+          "text": "橙色蒙罩是 C-41 负片看起来发橙的原因。扫描时应使用片基色偏校正。参见 $color-process.color-negative-logs 与 $scanning.color-management。部分扫描取向的产品取消蒙罩。"
+        },
+        {
+          "kind": "h2",
+          "text": "层数与命名"
+        },
+        {
+          "kind": "table",
+          "caption": "常见彩色负片工艺代号",
+          "rows": [
+            {
+              "c1": "C-41",
+              "c2": "Kodak 1972 年推出，取代 C-22",
+              "c3": "现在最通用的彩色负片工艺",
+              "c4": "富士 CN-16",
+              "c5": "Konica CNK-4"
+            },
+            {
+              "c1": "C-41 II",
+              "c2": "低银配方",
+              "c3": "减少银含量，降低废银与成本",
+              "c4": "厂商命名不一致",
+              "c5": "需以说明书为准"
+            },
+            {
+              "c1": "CN-16 / CNK-4 / AP-70",
+              "c2": "厂商对 C-41 的对应命名",
+              "c3": "工艺等价",
+              "c4": "Agfa 对应 AP-70",
+              "c5": "富士、Konica 使用不同代号"
+            }
+          ]
+        },
+        {
+          "kind": "warn",
+          "text": "工艺代号 C-41 II 的确切含义各家厂商不同。部分厂商用于指代低银配方或改进了漂白与定影的流程。换用其他厂商的药液前核对说明书。参见 $color-process.c41-chemistry。"
+        },
+        {
+          "kind": "h2",
+          "text": "彩色负片的其他层"
+        },
+        {
+          "kind": "p",
+          "text": "除乳剂层外还有若干功能层。\n- 防晕光层。部分产品涂在片基侧。\n- 紫外阻挡表涂层。\n- 防刮表涂层。\n- 中间层。调整层间感光度。\n- 额外滤色层。"
+        },
+        {
+          "kind": "p",
+          "text": "C-41 显影后的彩色负片可能几乎不含金属银。定影液的废银可回收。不含金属银是彩色负片颗粒感弱的原因。参见 $film-stock.grain。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Wikipedia: C-41 process（层结构、蒙罩、过程控制时间表）",
+          "url": "https://en.wikipedia.org/wiki/C-41_process",
+          "kind": "article"
+        },
+        {
+          "name": "Watkins, The FOCALGUIDE to Colour Film Processing (1978)",
+          "url": "https://archive.org/details/focalguidetocolo0000watk/",
+          "kind": "book",
+          "note": "过程控制参考手册，不是通用配方。"
+        },
+        {
+          "name": "Nadler, The Color Printing Manual (Amphoto, 1978)",
+          "url": "https://archive.org/details/colorprintingman0000nadl/",
+          "kind": "book"
+        },
+        {
+          "name": "Fujifilm technical bulletin TB_C41 (Negacolor)",
+          "url": "https://www.fujifilm.eu/fileadmin/countries/europe/United_Kingdom/Photofinishing_data_files/Technical_bulletins/TB_C41_E13_09-10.pdf",
+          "kind": "manufacturer"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "film-stock.emulsion",
+          "film-stock.emulsion-crystal"
+        ],
+        "next": [
+          "film-stock.color-balance"
+        ],
+        "related": [
+          "color-process.c41",
+          "color-process.c41-chemistry",
+          "color-process.dye-stabilization",
+          "film-stock.kodak-portra",
+          "film-stock.base-density",
+          "film-stock.fujifilm-negatives"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "C-41 负片的橙色来自哪里？",
+          "type": "single",
+          "options": [
+            "片基染色",
+            "绿感层与红感层的残留成色剂形成的蒙罩",
+            "定影液",
+            "防晕光层"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "未曝光区域的成色剂生成橙色。它补偿层间染料吸收差异。"
+        },
+        {
+          "q": "成色剂为什么封装在油滴中？",
+          "type": "single",
+          "options": [
+            "降低乳剂厚度",
+            "隔离成色剂与卤化银和明胶",
+            "提高感光度",
+            "防止静电"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "油滴充当表面活性剂。防止成色剂与卤化银或明胶提前反应。"
+        },
+        {
+          "q": "蓝感层生成的染料是什么颜色？",
+          "type": "single",
+          "options": [
+            "青色",
+            "品红色",
+            "黄色",
+            "无色"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "蓝层生成黄色染料。绿层生成品红。红层生成青色。"
+        },
+        {
+          "q": "C-41 由哪家公司于哪一年推出？",
+          "type": "single",
+          "options": [
+            "Kodak 1972 年",
+            "Fuji 1963 年",
+            "Agfa 1936 年",
+            "Ilford 2004 年"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "Kodak 1972 年推出 C-41。它取代了 C-22。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.color-balance",
+      "title": "彩色感光材料的色温平衡",
+      "title_en": "Colour Balance of Photographic Materials",
+      "aliases": [
+        "color balance",
+        "色平衡",
+        "色温",
+        "白平衡",
+        "日光型",
+        "灯光型"
+      ],
+      "type": "concept",
+      "level": 4,
+      "era": "1873 至今",
+      "tags": [
+        "色彩",
+        "色温",
+        "感色性",
+        "C-41",
+        "E-6"
+      ],
+      "summary": "彩色感光材料按光谱响应设计一个色温平衡点。平衡点以下的灯光使影像偏暖。平衡点以上的灯光使影像偏冷。彩色负片和彩色反转片的平衡点不同。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "感色性如何改变"
+        },
+        {
+          "kind": "p",
+          "text": "1873 年 Vogel 发现，加入少量染料可使乳剂感光范围延伸到绿光和黄光。1883 年出现首批商品化染料增感干版，即等色干版和正色干版。1894 年 Lumière 制出全色干版。1910 年代全色乳剂进入商品供应。"
+        },
+        {
+          "kind": "p",
+          "text": "染料增感把感色范围向长波方向扩展。扩展后乳剂对各色带的响应不再均衡。厂商据此选择工作色温。"
+        },
+        {
+          "kind": "h2",
+          "text": "日光型与灯光型"
+        },
+        {
+          "kind": "table",
+          "caption": "常见彩色负片的平衡点",
+          "rows": [
+            {
+              "c1": "日光型（daylight）",
+              "c2": "约 5500 K",
+              "c3": "户外日光",
+              "c4": "日光、阴天、闪光灯加 CTO",
+              "c5": "CineStill 50D、Fujifilm C200"
+            },
+            {
+              "c1": "灯光型（tungsten）",
+              "c2": "约 3200 K",
+              "c3": "钨丝灯",
+              "c4": "钨丝灯、白炽灯",
+              "c5": "Kodak Vision3 500T、CineStill 800T"
+            },
+            {
+              "c1": "彩色反转片",
+              "c2": "随型号指定",
+              "c3": "投影或复制用",
+              "c4": "按数据表设定光源",
+              "c5": "Ektachrome E100、Provia 100F"
+            }
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "实际光色温度低于平衡点时，乳剂对蓝光响应偏强。影像呈暖调。高于平衡点时，红光响应偏强。影像呈冷调。"
+        },
+        {
+          "kind": "h2",
+          "text": "补偿方法"
+        },
+        {
+          "kind": "ul",
+          "text": "- 使用滤色镜把光源色温移到平衡点。参见 $capture.filter。\n- 拍摄时改变光源色温。使用日光型胶片配闪光灯时加 CTO 滤镜。\n- 扫描后在色彩管理中设定白场色温。参见 $scanning.color-management。\n- 打印时用光源强度与滤色片调整。参见 $color-process.dye-stabilization。"
+        },
+        {
+          "kind": "h2",
+          "text": "黑白材料的等价判断"
+        },
+        {
+          "kind": "p",
+          "text": "黑白材料按对红光的响应分三类。\n- 蓝色盲（blue-sensitive）黑白片：只对蓝光敏感。例如 Ilford MG 相纸。\n- 正色（orthochromatic）黑白片：对蓝与绿敏感，对红不敏感。例如 Foma Ortho 400。\n- 全色（panchromatic）黑白片：对全部可见光敏感。Tri-X、HP5 Plus、T-MAX、Delta 属此类。"
+        },
+        {
+          "kind": "warn",
+          "text": "正色黑白片在红色安全灯下感光弱。红色安全灯只适用于蓝色盲相纸。参见 $film-stock.bw-paper。"
+        },
+        {
+          "kind": "note",
+          "text": "黑白材料的感色性直接影响人像肤色还原。人像专用黑白片对红色层加感光，形成红色滤镜效果。HP5 Plus 的乳剂可追溯到 1931 年的 HYPan。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Wikipedia: Photographic film（染料增感史）",
+          "url": "https://en.wikipedia.org/wiki/Photographic_film",
+          "kind": "article"
+        },
+        {
+          "name": "Kodak Vision3 5219/7219 Sell Sheet (archived)",
+          "url": "https://www.kodak.com/content/products-brochures/Film/VISION3-5219-7219-sell-sheet-EN.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "CineStill 800T 产品数据",
+          "url": "https://cinestillfilm.com/",
+          "kind": "manufacturer",
+          "note": "列出 800T 与 50D 的推荐曝光指数与平衡点。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "film-stock.color-negative",
+          "film-stock.emulsion"
+        ],
+        "next": [],
+        "related": [
+          "capture.filter",
+          "scanning.color-management",
+          "film-stock.cinestill",
+          "film-stock.ektachrome-e100"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "在低于平衡点的色温下拍摄，彩色负片的影像偏向什么？",
+          "type": "single",
+          "options": [
+            "冷调",
+            "暖调",
+            "中性",
+            "无色"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "蓝光响应相对偏强。影像呈暖调。"
+        },
+        {
+          "q": "哪一类黑白材料对红色安全灯不感光？",
+          "type": "single",
+          "options": [
+            "全色",
+            "正色",
+            "蓝色盲",
+            "核壳型"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "蓝色盲相纸只对蓝光敏感。红色安全灯可安全使用。"
+        },
+        {
+          "q": "染料增感剂的作用是什么？",
+          "type": "single",
+          "options": [
+            "固定银",
+            "把感光范围向长波扩展",
+            "增加片基强度",
+            "降低片基密度"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "染料吸附在晶体表面。它扩展长波响应并改变感色平衡。"
+        },
+        {
+          "q": "CineStill 800T 的命名色温对应哪个平衡点？",
+          "type": "single",
+          "options": [
+            "5500 K",
+            "3200 K",
+            "2856 K",
+            "7500 K"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "800T 为钨丝型。Kodak 对 5219 的标称值为 3200 K。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.fog",
+      "title": "静态雾与动态雾",
+      "title_en": "Static Fog and Dynamic Fog",
+      "aliases": [
+        "fog",
+        "灰雾",
+        "静态雾",
+        "动态雾",
+        "二色雾",
+        "chemical fog"
+      ],
+      "type": "pitfall",
+      "level": 4,
+      "era": "1871 至今",
+      "tags": [
+        "灰雾",
+        "雾",
+        "诊断",
+        "冲洗",
+        "辐射"
+      ],
+      "summary": "灰雾（fog）是曝光之外的银或染料沉积。按形成阶段分为静态雾与动态雾。静态雾在制造、储存或曝光时形成。动态雾在显影过程中形成。二者都抬高 Dmin 并压平阴影。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "灰雾的定义"
+        },
+        {
+          "kind": "p",
+          "text": "灰雾（fogging）是感光材料上出现的、与曝光无关的银或染料沉积。它压平阴影反差。它与药液污染造成的化学染色外观相近。诊断时先区分成因。"
+        },
+        {
+          "kind": "h2",
+          "text": "静态雾与动态雾"
+        },
+        {
+          "kind": "table",
+          "caption": "两种雾的成因与时间点",
+          "rows": [
+            {
+              "c1": "静态雾（static fog）",
+              "c2": "制造、储存、曝光、冲洗前的辐射",
+              "c3": "曝光前或显影前",
+              "c4": "整幅密度均匀上升",
+              "c5": "冷藏与避光可预防"
+            },
+            {
+              "c1": "动态雾（dynamic fog）",
+              "c2": "显影液作用于未曝光的卤化银",
+              "c3": "显影过程中",
+              "c4": "密度随显影时间与温度上升",
+              "c5": "换新药液并控制时间"
+            }
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "动态雾随显影时间与温度升高而增加。显影过度时它贡献大部分灰雾上升。$film-stock.characteristic-curve 中的 Dmin 因此随冲洗条件改变。"
+        },
+        {
+          "kind": "h2",
+          "text": "灰雾的来源"
+        },
+        {
+          "kind": "ul",
+          "text": "- 光雾。胶片在处理前漏光。表现为全幅变暗，包括边缘齿孔区。参见 $archive.cleaning-film。\n- 辐射。X 射线使遮光的干板起雾。1901 年 Röntgen 与 Becquerel 的工作即由此发现放射性。航空 X 光检查胶卷会加重此项。参见 $capture.camera-mechanics。\n- 化学雾。药液失效、程序错误、级间水洗不足。最常见原因是药液失效。它同时降低反差并产生褐色污染。参见 $bw-process.stop-bath-fix。\n- 二色雾（dichroic fog）。显影中、尤其含溶剂的显影液中产生。极薄的金属银再沉积在表面。反射光下呈红色，透射光下呈绿色。可在数年内持续显影。定影或水洗不良会加重。\n- 反转片的有意灰雾。第二次显影前对材料做灰雾处理。E-6 用化学灰雾剂在彩色显影液中把未曝光的卤化银转成染料。参见 $color-process.e6。"
+        },
+        {
+          "kind": "h2",
+          "text": "诊断顺序"
+        },
+        {
+          "kind": "steps",
+          "caption": "灰雾排查",
+          "items": [
+            {
+              "t": "确认漏光范围",
+              "d": "检查暗部是否覆盖全幅，包括边缘。齿孔阴影提示曝光侧漏光。"
+            },
+            {
+              "t": "测量 Dmin",
+              "d": "用透射密度计读未曝光区域。ISO 感光度标称条件下 Dmin 通常远低于 0.1。"
+            },
+            {
+              "t": "换新药液复测",
+              "d": "用新鲜药液和标准冲洗条件处理同批试片。Dmin 下降说明主因是动态雾。"
+            },
+            {
+              "t": "检查储存条件",
+              "d": "高温或高湿度环境会加重静态雾。参见 $archive.cold-storage。"
+            },
+            {
+              "t": "检查水洗",
+              "d": "残留的定影液与显影液继续作用。二色雾常在此环节加重。"
+            }
+          ]
+        },
+        {
+          "kind": "warn",
+          "text": "机场 X 光扫描仪的剂量足以使感光材料起雾。托运前把胶片从行李中取出。手持金属探测仪一般不影响胶片。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Wikipedia: Fogging (photography)",
+          "url": "https://en.wikipedia.org/wiki/Fogging_(photography)",
+          "kind": "article"
+        },
+        {
+          "name": "Ilford Photo: Common processing problems",
+          "url": "https://www.ilfordphoto.com/common-processing-problems/",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Kodak Publication F-5: Film Storage",
+          "url": "https://www.kodak.com/content/dam/Kodak/Film/Pubs/F-5.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Wikipedia: Densitometer",
+          "url": "https://en.wikipedia.org/wiki/Densitometer",
+          "kind": "article"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "film-stock.characteristic-curve",
+          "film-stock.iso-speed"
+        ],
+        "next": [
+          "film-stock.base-density"
+        ],
+        "related": [
+          "bw-process.stop-bath-fix",
+          "bw-process.mixing-temp-control",
+          "archive.cold-storage",
+          "color-process.e6"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "动态雾在什么阶段形成？",
+          "type": "single",
+          "options": [
+            "涂布时",
+            "显影过程中",
+            "定影后",
+            "扫描时"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "显影液作用于未曝光的卤化银。显影时间和温度越高，动态雾越大。"
+        },
+        {
+          "q": "最常见的灰雾成因是什么？",
+          "type": "single",
+          "options": [
+            "药液失效",
+            "X 射线",
+            "漏光",
+            "低温"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "化学雾最常见。它同时降低反差并产生褐色污染。"
+        },
+        {
+          "q": "二色雾在反射光与透射光下各呈什么颜色？",
+          "type": "single",
+          "options": [
+            "都呈蓝色",
+            "反射红、透射绿",
+            "反射绿、透射红",
+            "都呈橙色"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "极薄金属银层在两种观察方式下呈互补色。"
+        },
+        {
+          "q": "E-6 工艺中的灰雾处理起到什么作用？",
+          "type": "single",
+          "options": [
+            "提高反差",
+            "把未曝光的卤化银转为染料",
+            "去除背层",
+            "清洁片基"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "化学灰雾剂在彩色显影液中完成这一步。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.base-density",
+      "title": "片基密度及其对扫描的影响",
+      "title_en": "Base Density and Its Effect on Scanning",
+      "aliases": [
+        "base density",
+        "片基密度",
+        "D-base",
+        "光导管",
+        "背景密度",
+        "扫描基线"
+      ],
+      "type": "concept",
+      "level": 3,
+      "era": "1940 至今",
+      "tags": [
+        "片基",
+        "密度",
+        "扫描",
+        "色偏",
+        "黑白场"
+      ],
+      "summary": "片基密度是片基本身产生的均匀密度。它不含影像信息。它抬高扫描的黑场，并可能把扫描光沿片基传播。片基密度在换片基类型时变化明显。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "片基为什么有密度"
+        },
+        {
+          "kind": "p",
+          "text": "片基需要具备一定密度，才能吸收乳剂内部形成的多余光。密度不足会使反差下降。\n\n聚酯片基是光导管。光在片基内部被全反射引导。因此聚酯片基必须染色。染色既抑制导光，又降低散射。黑白片基吸收更多染色。彩色片基吸收较少。"
+        },
+        {
+          "kind": "h2",
+          "text": "片基密度在曲线上的位置"
+        },
+        {
+          "kind": "p",
+          "text": "片基密度是 D-logE 曲线起点处的密度。它与显影灰雾共同构成 Dmin。诊断时把两部分分开。Dmin 上升时先测未曝光胶片在冲洗前的密度，即可分离出片基密度。"
+        },
+        {
+          "kind": "note",
+          "text": "醋酸片基在老化后继续收缩并变黄。黄化会使扫描的蓝色通道密度上升。参见 $film-stock.film-base 与 $archive.cold-storage。"
+        },
+        {
+          "kind": "h2",
+          "text": "对扫描的影响"
+        },
+        {
+          "kind": "steps",
+          "caption": "用片基密度稳定扫描",
+          "items": [
+            {
+              "t": "测量片基密度",
+              "d": "用透射密度计读未曝光区。记录 D-base 值与片基类型。"
+            },
+            {
+              "t": "设置黑白场",
+              "d": "把黑场设在该卷胶片的 Dmin 处。把白场设在胶片密度上限处。参见 $scanning.scan-settings。"
+            },
+            {
+              "t": "不要用固定黑白场跨片基换用",
+              "d": "从醋酸片基换到聚酯片基时，D-base 变化会带来整体色调偏移。"
+            },
+            {
+              "t": "处理聚酯导光",
+              "d": "聚酯片基可能把扫描光沿片基传播。降低光源强度并检查遮光边框。"
+            },
+            {
+              "t": "使用蒙罩校正",
+              "d": "彩色负片用片基色偏校正抵消橙色蒙罩。参见 $scanning.color-management。"
+            },
+            {
+              "t": "先清洁再扫描",
+              "d": "片基上的浮尘和划痕会散射光线。参见 $scanning.dust-scratch-handling 与 $archive.cleaning-film。"
+            }
+          ]
+        },
+        {
+          "kind": "table",
+          "caption": "问题与片基原因",
+          "rows": [
+            {
+              "c1": "扫描整体发灰，暗部发白",
+              "c2": "黑白场设置固定，未按该卷 Dmin 校正",
+              "c3": "读取未曝光区密度并重设黑场",
+              "c4": "低",
+              "c5": "检查扫描仪密度计"
+            },
+            {
+              "c1": "扫描图像边缘出现亮带或光晕",
+              "c2": "聚酯片基导光",
+              "c3": "降低光源强度，检查遮光边框",
+              "c4": "中",
+              "c5": "确认片基类型"
+            },
+            {
+              "c1": "扫描结果偏黄",
+              "c2": "醋酸片基老化黄化",
+              "c3": "用蓝通道调整或换用更平的剖正",
+              "c4": "高",
+              "c5": "储存条件决定黄化程度"
+            },
+            {
+              "c1": "彩色负片扫描结果偏绿",
+              "c2": "蒙罩校正未启用",
+              "c3": "启用蒙罩或片基色偏校正",
+              "c4": "中",
+              "c5": "参见 $scanning.color-management"
+            }
+          ]
+        },
+        {
+          "kind": "warn",
+          "text": "扫描软件把片基当作影像的一部分。忽略片基密度会使中间调变亮、对比变平。用胶片专用密度点校正黑白场。"
+        },
+        {
+          "kind": "p",
+          "text": "低银配方的彩色片基更透明。片基密度更低。参见 $film-stock.color-negative 中 C-41 II 的说明。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Wikipedia: Photographic film（PET 光导管与片基染色）",
+          "url": "https://en.wikipedia.org/wiki/Photographic_film",
+          "kind": "article"
+        },
+        {
+          "name": "Wikipedia: Densitometer（黑白场与透射/反射模式）",
+          "url": "https://en.wikipedia.org/wiki/Densitometer",
+          "kind": "article"
+        },
+        {
+          "name": "Kodak, Basic Sensitometry and Characteristics of Film (FilmEss 06, archived)",
+          "url": "https://web.archive.org/web/20160305110302/http://motion.kodak.com/KodakGCG/uploadedfiles/motion/US_plugins_acrobat_en_motion_newsletters_filmEss_06_Characteristics_of_Film.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Kodak Publication F-5: Film Storage（醋酸黄化）",
+          "url": "https://www.kodak.com/content/dam/Kodak/Film/Pubs/F-5.pdf",
+          "kind": "manufacturer"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "film-stock.film-base",
+          "film-stock.characteristic-curve"
+        ],
+        "next": [
+          "film-stock.paper-structure"
+        ],
+        "related": [
+          "film-stock.fog",
+          "scanning.scan-settings",
+          "scanning.color-management",
+          "scanning.dust-scratch-handling"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "聚酯片基为什么必须染色？",
+          "type": "single",
+          "options": [
+            "提高强度",
+            "抑制片基内部的光导管效应",
+            "防静电",
+            "降低成本"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "聚酯把光沿片基内部引导。染色抑制导光并降低散射。"
+        },
+        {
+          "q": "从醋酸片基换到聚酯片基后扫描结果偏灰，原因是什么？",
+          "type": "single",
+          "options": [
+            "感光度变化",
+            "片基密度变化而黑白场未更新",
+            "颗粒变细",
+            "蒙罩缺失"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "D-base 变化。固定黑白场会把这一变化算进影像色调。"
+        },
+        {
+          "q": "醋酸片基老化后扫描结果偏什么色？",
+          "type": "single",
+          "options": [
+            "蓝",
+            "黄",
+            "绿",
+            "品红"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "老化使片基黄化。蓝色通道密度上升。"
+        },
+        {
+          "q": "测量片基密度应使用哪种密度计模式？",
+          "type": "single",
+          "options": [
+            "反射模式",
+            "透射模式",
+            "两者皆可",
+            "无需测量"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "胶片是透射式材料。使用透射密度计读取未曝光区。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.paper-structure",
+      "title": "相纸结构：明胶银盐层与基材",
+      "title_en": "Photographic Paper Structure: Gelatin Silver Layer and Base",
+      "aliases": [
+        "photographic paper",
+        "相纸",
+        "钡白",
+        "baryta",
+        "fibre-based",
+        "FB",
+        "RC",
+        "resin-coated",
+        "钡纸"
+      ],
+      "type": "concept",
+      "level": 3,
+      "era": "1870 至今",
+      "tags": [
+        "相纸",
+        "基材",
+        "钡白",
+        "RC",
+        "印放",
+        "彩色相纸"
+      ],
+      "summary": "相纸由卤化银盐、明胶和基材三层组成。基材分钡白纤维基（FB）、树脂涂层（RC）和聚酯三类。彩色相纸只在 RC 或聚酯基材上生产。选择 FB 还是 RC 由用途决定。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "感光层"
+        },
+        {
+          "kind": "p",
+          "text": "相纸的感光层是明胶中的卤化银。黑白相纸对蓝绿敏感，对 600 nm 以上的红光不敏感。因此使用红色安全灯。彩色相纸由青、品红、黄三层染料相减成像。"
+        },
+        {
+          "kind": "p",
+          "text": "彩色相纸没有相减用的滤色层。层速从青层（红感）到品红层（绿感）到黄层（蓝感）依次升高。黄层接近 ISO 100，青层约 ISO 25。印放时施加黄色滤光以均衡蓝光。"
+        },
+        {
+          "kind": "h2",
+          "text": "纤维基与钡白层"
+        },
+        {
+          "kind": "p",
+          "text": "纤维基相纸（fibre-based, FB）的原纸涂有钡白层（baryta coating）。钡白是硫酸钡与硫酸锶的混合物。两者比例随厂商而异。化学分析可据此识别厂商，有时可断代。\n\n钡白承担两项功能。\n1. 提高影像亮度。细小硫酸钡颗粒把光散射回银层。\n2. 阻挡纸纤维吸附的药液进入明胶。\n\n多数 FB 相纸带硬化的透明明胶表涂层。没有表涂层的 FB 相纸适合溴油相。溴油相由油墨在明胶中显影得到。"
+        },
+        {
+          "kind": "h2",
+          "text": "树脂涂层"
+        },
+        {
+          "kind": "p",
+          "text": "树脂涂层相纸（resin-coated, RC）在原纸两面各封一层聚乙烯。液体无法渗入。因此冲洗、水洗与干燥时间大幅缩短。印片在 20 至 30 分钟内干燥。尺寸稳定性好，干燥时不卷曲。\n\n现在所有彩色感光材料都在 RC 相纸或实心聚酯片基上生产。"
+        },
+        {
+          "kind": "table",
+          "caption": "三种相纸基材的比较",
+          "rows": [
+            {
+              "c1": "纤维基 FB（钡白）",
+              "c2": "多道工序",
+              "c3": "展品级手工上色",
+              "c4": "15 分钟以上",
+              "c5": "湿时操作需谨慎"
+            },
+            {
+              "c1": "树脂涂层 RC",
+              "c2": "一道工序",
+              "c3": "普通商业印放",
+              "c4": "20 至 30 分钟干燥",
+              "c5": "干燥时不卷曲"
+            },
+            {
+              "c1": "聚酯片基",
+              "c2": "无底材",
+              "c3": "连续调配色设备的中间片",
+              "c4": "快",
+              "c5": "尺寸最稳定"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "正片式印放材料的状态"
+        },
+        {
+          "kind": "p",
+          "text": "乳剂本身含染料的材料称为 Ilfochrome 式。成色剂与彩色显影液反应的类型称为 C 型。R 型指正片到正片的成色材料，例如 Ektachrome 相纸。该类型已全部停产。放映用透明片必须先制作中间负片再印相纸。"
+        },
+        {
+          "kind": "p",
+          "text": "全色黑白相纸可从彩色负片印出完整的黑白层次。Kodak Panalure Select RC 是代表，2005 年停产。使用它需要接近全黑的暗房。参见 $film-stock.bw-paper 与 $printing.print-processing。"
+        },
+        {
+          "kind": "note",
+          "text": "Fujiflex Crystal Archive 是彩色相纸。它采用聚酯基材与混合影像稳定技术，供 RA-4 工艺使用。参见 $film-stock.colour-paper。"
+        },
+        {
+          "kind": "h2",
+          "text": "选择要点"
+        },
+        {
+          "kind": "ul",
+          "text": "- 需要调色、上色、修版时选 FB。它容易吸收处理液。\n- 需要快速冲洗或批量印放时选 RC。\n- 需要极致尺寸稳定性时选聚酯基材。\n- FB 在湿状态下易破。操作时用托盘支撑。\n- 参见 $printing.fiber-paper-vs-rc 与 $printing.paper-testing。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Wikipedia: Photographic paper（FB、RC、钡白与相纸层结构）",
+          "url": "https://en.wikipedia.org/wiki/Photographic_paper",
+          "kind": "article"
+        },
+        {
+          "name": "Ilford Photo: Photographic paper（产品线与基材分类）",
+          "url": "https://www.ilfordphoto.com/photographic-paper",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Ilford Photo: Resin coated paper",
+          "url": "https://www.ilfordphoto.com/photographic-paper/resin-coated-paper",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Ilford Photo: Fibre based paper",
+          "url": "https://www.ilfordphoto.com/photographic-paper/fibre-base-paper",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Fujifilm: Fujiflex Crystal Archive",
+          "url": "https://www.fujifilm.com/ca/en/business/professional-photography/color-papers-and-printing-materials/Fujiflex-crystal-archive-printing-material",
+          "kind": "manufacturer"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "film-stock.halide-crystal",
+          "film-stock.base-density"
+        ],
+        "next": [],
+        "related": [
+          "printing.fiber-paper-vs-rc",
+          "printing.paper-testing",
+          "printing.multigrade",
+          "film-stock.bw-paper",
+          "film-stock.colour-paper"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "黑白相纸在哪种光源下操作？",
+          "type": "single",
+          "options": [
+            "蓝灯",
+            "黄灯",
+            "红色安全灯",
+            "白光"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "黑白相纸对 600 nm 以上红光不感光。红色安全灯安全。"
+        },
+        {
+          "q": "钡白层的主要功能之一是什么？",
+          "type": "single",
+          "options": [
+            "提高感光度",
+            "把光散射回银层以提高亮度",
+            "防止静电",
+            "降低成本"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "细小硫酸钡颗粒把光散射回银层。同时阻挡纸纤维药液。"
+        },
+        {
+          "q": "树脂涂层相纸相对纤维基相纸的主要优势是什么？",
+          "type": "single",
+          "options": [
+            "曝光宽容度更宽",
+            "冲洗水洗与干燥时间大幅缩短",
+            "颗粒更细",
+            "感光度更高"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "聚乙烯层阻液。印片 20 至 30 分钟内干燥。"
+        },
+        {
+          "q": "彩色相纸为什么没有相减用的滤色层？",
+          "type": "single",
+          "options": [
+            "成本高",
+            "层速从青到黄依次升高，印放时施加黄色滤光均衡",
+            "工艺不需要",
+            "染料层更厚"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "彩色相纸依靠印放时的黄色滤光均衡层速差。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.lab-sensitometry",
+      "title": "特性曲线的实验室测法",
+      "title_en": "Laboratory Measurement of the Characteristic Curve",
+      "aliases": [
+        "sensitometry",
+        "感光测定",
+        "特性曲线测法",
+        "曝光楔",
+        "密度计",
+        "process control"
+      ],
+      "type": "process",
+      "level": 4,
+      "era": "1876 至今",
+      "tags": [
+        "感光测定",
+        "测量",
+        "标准",
+        "冲洗",
+        "质量控制"
+      ],
+      "summary": "实验室用感光仪（sensitometer）打曝光楔，用透射密度计读密度。冲洗条件必须声明，否则曲线不可比。厂商数据表与 Ilford 公布的曲线都附有条件。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "测量链条"
+        },
+        {
+          "kind": "steps",
+          "caption": "一次完整测量",
+          "items": [
+            {
+              "t": "在暗室装片",
+              "d": "把受试胶片装入感光仪。装片与曝光全部在安全光或全黑条件下完成。"
+            },
+            {
+              "t": "打曝光楔",
+              "d": "让试样依次接受若干级已知曝光量。级差按 1/3 档到 1 档设置。"
+            },
+            {
+              "t": "按声明条件冲洗",
+              "d": "显影液牌号、稀释比、温度、时间必须与参考条件一致。参见 $bw-process.mixing-temp-control。"
+            },
+            {
+              "t": "水洗与定影",
+              "d": "按标准程序完成。定影不足会干扰后续读数。"
+            },
+            {
+              "t": "读密度",
+              "d": "用透射密度计逐级读密度。得到曝光量与密度的对应表。"
+            },
+            {
+              "t": "绘制曲线",
+              "d": "以曝光量对数为横轴、密度为纵轴绘出 D-logE 曲线。"
+            },
+            {
+              "t": "读取参数",
+              "d": "读出 Dmin、直线部斜率、最大密度、H_0 与 H_m。参见 $film-stock.iso-speed。"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "条件决定可比性"
+        },
+        {
+          "kind": "p",
+          "text": "显影液、稀释比、温度与时间中任何一项改变，曲线都会移动。因此一份曲线数据必须附带四项条件。缺少条件的曲线无法用于比较。"
+        },
+        {
+          "kind": "settings",
+          "caption": "两种常用条件及其后果",
+          "items": [
+            {
+              "t": "D-76 原液，20 °C",
+              "d": "输出有效感光度低于标称值。曲线位置偏右。反差与最大密度较高。"
+            },
+            {
+              "t": "D-76 1+1 稀释，20 °C",
+              "d": "多数厂商以此作为标准冲洗条件。输出接近标称值。"
+            },
+            {
+              "t": "改变显影温度",
+              "d": "按厂商温度补偿表调整显影时间。参见 $bw-process.mixing-temp-control。"
+            },
+            {
+              "t": "改变显影液",
+              "d": "曲线随之改变。跨厂商比较时必须注明所用显影液。"
+            },
+            {
+              "t": "延长显影时间",
+              "d": "曲线左移。反差与最大密度上升。Dmin 上升。参见 $film-stock.fog。"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "厂商对同一卷胶片公布多条曲线，分别对应不同显影条件。Kodak Publication F-4017 给出 TRI-X 320 与 400 在多种显影条件下的曲线组。它是读取该型号曲线的标准来源。"
+        },
+        {
+          "kind": "h2",
+          "text": "厂商与实验室的公布方式"
+        },
+        {
+          "kind": "table",
+          "caption": "曲线数据的来源",
+          "rows": [
+            {
+              "c1": "Kodak 数据表",
+              "c2": "列出显影条件与 Dmin、曲线组",
+              "c3": "以 TRI-X 400 使用的 F-4017 为例",
+              "c4": "中",
+              "c5": "英文 PDF"
+            },
+            {
+              "c1": "Ilford 特性曲线页",
+              "c2": "每型号一组条件",
+              "c3": "https://www.ilfordphoto.com/technical-article-D1.php",
+              "c4": "低",
+              "c5": "网页与 PDF"
+            },
+            {
+              "c1": "实验室自测",
+              "c2": "自定条件，自定结论",
+              "c3": "用于批内比较和工艺控制",
+              "c4": "需设备投入",
+              "c5": "内部文档"
+            },
+            {
+              "c1": "ISO 与 ANSI 标准",
+              "c2": "规定测法程序",
+              "c3": "ANSI PH3.1-1998",
+              "c4": "需购买",
+              "c5": "标准原文"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "日常实验室的最低配置"
+        },
+        {
+          "kind": "ul",
+          "text": "- 感光仪一台。带可控光源与级差档。\n- 透射密度计一台。可为 T/R 切换式。\n- 恒温水浴一套。控温精度满足显影要求。\n- 标准冲洗设备。参见 $process-equipment.tank 与 $process-equipment.rotator。\n- 记录表一份。每卷记录条件与结果。"
+        },
+        {
+          "kind": "warn",
+          "text": "没有密度计就无法验证冲洗结果。此时只能依靠厂商标称值。切勿用肉眼对比密度差来判断冲洗是否合格。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "ANSI PH3.1-1998: Standard for the Luminance of Film Exposure Printers",
+          "url": "https://webstore.ansi.org/standards/ansi/ph31998",
+          "kind": "standard",
+          "note": "感光度与曝光测定的程序依据。"
+        },
+        {
+          "name": "Ilford Photo Instruction Sheet: Characteristic curves",
+          "url": "https://www.ilfordphoto.com/technical-article-D1.php",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Kodak Publication F-4017: TRI-X 320 and 400 (2007)",
+          "url": "https://125px.com/docs/film/kodak/f4017-400TX-2007.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Wikipedia: Densitometer",
+          "url": "https://en.wikipedia.org/wiki/Densitometer",
+          "kind": "article"
+        },
+        {
+          "name": "Wikipedia: Sensitometry",
+          "url": "https://en.wikipedia.org/wiki/Sensitometry",
+          "kind": "article"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "film-stock.characteristic-curve",
+          "film-stock.iso-speed"
+        ],
+        "next": [],
+        "related": [
+          "film-stock.latitude",
+          "bw-process.mixing-temp-control",
+          "process-equipment.tank",
+          "process-equipment.home-lab"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "测量特性曲线的第一件设备是什么？",
+          "type": "single",
+          "options": [
+            "放大机",
+            "感光仪",
+            "密度计",
+            "冷藏箱"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "感光仪施加已知曝光量。密度计随后读密度。"
+        },
+        {
+          "q": "为什么曲线数据必须附带冲洗条件？",
+          "type": "single",
+          "options": [
+            "便于排版",
+            "改变显影条件会使曲线移动，脱离条件的曲线不可比",
+            "条件可以省略",
+            "只影响成本"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "显影液、稀释比、温度、时间四项都会改变曲线位置与斜率。"
+        },
+        {
+          "q": "读取胶片密度应使用哪种密度计模式？",
+          "type": "single",
+          "options": [
+            "反射",
+            "透射",
+            "任意",
+            "两者取平均"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "胶片靠透射光成像。相纸靠反射。"
+        },
+        {
+          "q": "没有密度计时可以怎样判断冲洗结果？",
+          "type": "single",
+          "options": [
+            "用肉眼比较密度差",
+            "凭厂商标称值，不能自行判断",
+            "看颜色",
+            "用温度计代替"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "密度判断需要仪器。没有密度计时无法验证冲洗质量。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "draft"
+    },
+    {
+      "id": "film-stock.film-comparison",
+      "title": "同机位同场景的胶片对比示例",
+      "title_en": "Comparing Films on the Same Camera Position and Scene",
+      "aliases": [
+        "film comparison",
+        "胶片对比",
+        "同机位对比",
+        "对比测试"
+      ],
+      "type": "comparison",
+      "level": 4,
+      "era": "1939 至今",
+      "tags": [
+        "对比",
+        "测试方法",
+        "颗粒",
+        "反差",
+        "色偏"
+      ],
+      "summary": "对比不同胶片时固定机位、光线、曝光、洗冲与扫描设置。把差异限制在乳剂本身。这样得到的差异可直接归因于乳剂工艺。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "为什么必须固定条件"
+        },
+        {
+          "kind": "p",
+          "text": "胶片影像的差异来自五个变量：乳剂、光线、曝光、洗冲、扫描。只改动乳剂一项时，差异原因明确。改动两项以上时，结论不可靠。"
+        },
+        {
+          "kind": "h2",
+          "text": "测试规程"
+        },
+        {
+          "kind": "steps",
+          "caption": "单变量对比",
+          "items": [
+            {
+              "t": "固定机位",
+              "d": "三脚架锁定。标记构图位置。拍摄一张参考帧。"
+            },
+            {
+              "t": "固定光线",
+              "d": "关闭自动白平衡。关灯。记录光源色温。"
+            },
+            {
+              "t": "固定曝光量",
+              "d": "用手动模式。以参考帧的测光值为基准。每卷胶片按同一曝光量拍摄。"
+            },
+            {
+              "t": "统一冲洗",
+              "d": "同一显影液、同一稀释比、同一温度、同一时间与搅拌。参见 $bw-process.d-76。"
+            },
+            {
+              "t": "统一扫描",
+              "d": "同一次扫描中完成全部样片。固定光源强度与黑白场。参见 $scanning.scan-settings。"
+            },
+            {
+              "t": "统一放大",
+              "d": "同一放大机、同一镜头、同一曝光与滤镜。参见 $printing.multigrade。"
+            },
+            {
+              "t": "记录观察项",
+              "d": "记录颗粒、反差、色偏、趾部层次、最大密度与显影时间余量。"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "同场景对比实例"
+        },
+        {
+          "kind": "table",
+          "caption": "ISO 400 全色黑白片在相同条件下的观察项",
+          "rows": [
+            {
+              "c1": "Kodak Tri-X 400",
+              "c2": "中等偏粗",
+              "c3": "中高",
+              "c4": "长",
+              "c5": "宽。推冲洗余量大"
+            },
+            {
+              "c1": "Ilford HP5 Plus",
+              "c2": "中等",
+              "c3": "中",
+              "c4": "较长",
+              "c5": "宽。显影时间容差大"
+            },
+            {
+              "c1": "Kodak T-MAX 400",
+              "c2": "细",
+              "c3": "高",
+              "c4": "中等",
+              "c5": "较窄。趾部短"
+            },
+            {
+              "c1": "Ilford Delta 400",
+              "c2": "细",
+              "c3": "高",
+              "c4": "中",
+              "c5": "窄。趾部短"
+            }
+          ]
+        },
+        {
+          "kind": "compare",
+          "caption": "HP5 Plus 与 T-MAX 400 的直接对照",
+          "rows": [
+            {
+              "c1": "乳剂晶体",
+              "c2": "平板颗粒，1989 年起",
+              "c3": "平板颗粒 T-Grain，1986 年起",
+              "c4": "平板颗粒是双方共同前提",
+              "c5": "差异在明胶配方与染料技术"
+            },
+            {
+              "c1": "记录取向",
+              "c2": "通用。衍生 HYPan 乳剂可追溯到 1931 年",
+              "c3": "极致颗粒与分辨率",
+              "c4": "HP5 优先宽容度",
+              "c5": "T-MAX 优先分辨率"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "彩色片对比要点"
+        },
+        {
+          "kind": "ul",
+          "text": "- 先关闭扫描仪的自动色偏校正。再比较蒙罩色偏。\n- 记录各卷的实际感光度与显影时间。曝光量不同的两卷不可直接比较。\n- 反转片对比使用同一台放映设备与同一环境光。参见 $color-process.e6。\n- CineStill 需单独记录光晕强度。它来自被去掉的背层。参见 $film-stock.cinestill。"
+        },
+        {
+          "kind": "warn",
+          "text": "不要用不同胶片的照片直接目视比较反差点。必须在同一印相条件下输出，并同时看底片密度读数。参见 $film-stock.lab-sensitometry。"
+        },
+        {
+          "kind": "note",
+          "text": "厂商数据表给出的曲线是更高效的对比方式。曲线对比不需要拍摄。参见 $film-stock.latitude。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Ilford Photo: HP5 Plus",
+          "url": "https://www.ilfordphoto.com/hp5-plus-bulk-length-film",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Kodak Alaris: Professional Black & White Film",
+          "url": "https://kodakprofessional.com/en-gb/photographers/film/black-white",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Kodak Publication F-4017: TRI-X 320 and 400 (2007)",
+          "url": "https://125px.com/docs/film/kodak/f4017-400TX-2007.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Kodak, Basic Sensitometry and Characteristics of Film (FilmEss 06, archived)",
+          "url": "https://web.archive.org/web/20160305110302/http://motion.kodak.com/KodakGCG/uploadedfiles/motion/US_plugins_acrobat_en_motion_newsletters_filmEss_06_Characteristics_of_Film.pdf",
+          "kind": "manufacturer"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "film-stock.lab-sensitometry",
+          "film-stock.grain"
+        ],
+        "next": [],
+        "related": [
+          "film-stock.kodak-t-max",
+          "film-stock.ilford-hp5-plus",
+          "film-stock.kodak-tri-x-400",
+          "film-stock.ilford-delta"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "对比两卷胶片时必须固定的关键变量是什么？",
+          "type": "multi",
+          "options": [
+            "机位与构图",
+            "曝光量与冲洗条件",
+            "扫描与放大设置",
+            "胶卷的生产批次"
+          ],
+          "answer": [
+            0,
+            1,
+            2
+          ],
+          "why": "只有胶片型号本身允许变化。生产批次差异属于材料本身。"
+        },
+        {
+          "q": "HP5 Plus 的乳剂可追溯到哪一年的 HYPan？",
+          "type": "single",
+          "options": [
+            "1908 年",
+            "1931 年",
+            "1959 年",
+            "1986 年"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "HP5 Plus 的乳剂谱系追溯到 1931 年的 HYPan。"
+        },
+        {
+          "q": "T-MAX 系列的平板颗粒商标是什么？",
+          "type": "single",
+          "options": [
+            "T-Grain",
+            "Sigma",
+            "Core-Shell",
+            "S-grain"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "Kodak 把平板颗粒技术称为 T-Grain。"
+        },
+        {
+          "q": "比较反转片色彩时应使用什么条件？",
+          "type": "single",
+          "options": [
+            "任意投影仪",
+            "同一台放映设备与同一环境光",
+            "屏幕亮度最大",
+            "只看扫描图"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "投影条件不同会改变对色彩与反差的判断。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    }
+  ]
+}

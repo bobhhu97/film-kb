@@ -1,0 +1,1640 @@
+{
+  "module": "archive",
+  "shard": "archive.02",
+  "shard_zh": "清洁、霉菌处理与数字档案",
+  "note": "保存模块第二分片。内容为清洁与操作、霉菌处置、数字化策略、文件格式、元数据标准、存储备份与数字保存。数字侧数值依据美国联邦数字化指南第 3 版、美国国会图书馆推荐格式与可持续性因素、OCFL 规范、网络数字保存等级。",
+  "entries": [
+    {
+      "id": "archive.cleaning-and-handling",
+      "title": "清洁与操作",
+      "title_en": "Film Cleaning and Handling",
+      "aliases": [
+        "cleaning",
+        "清洁",
+        "handling",
+        "操作",
+        "isopropyl alcohol",
+        "异丙醇",
+        "FilmGuard",
+        "nitrile gloves"
+      ],
+      "type": "technique",
+      "level": 3,
+      "era": "1940s 至今",
+      "tags": [
+        "清洁",
+        "溶剂",
+        "异丙醇",
+        "手套",
+        "划痕"
+      ],
+      "summary": "浮尘与颗粒是划痕的主要来源。清洁用稀异丙醇或庚烷，配无绒棉布。擦拭方向单向，一次只润湿一次。手套与洁净环境同样影响结果。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "为什么清洁"
+        },
+        {
+          "kind": "p",
+          "text": "胶片在相机、片盒、扫描仪与放大机走纸路径上反复接触。每一处摩擦都可能把颗粒压进乳剂。扫描时一片灰尘会挡住整条像素行。存放多年的胶片表面常有未显影的残留银盐与防静电层老化产物。这些都需要先清除再扫描。"
+        },
+        {
+          "kind": "image",
+          "src": "img/bw-negative-strip.png",
+          "alt": "黑白与彩色负片的外观对照。清洁操作需按片基与乳剂类型区分。",
+          "caption": "黑白与彩色负片的外观对照。清洁操作需按片基与乳剂类型区分。",
+          "credit": "Friedrich Haag",
+          "license": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File%3A2015_04_08_009_Analogfilme.jpg"
+        },
+        {
+          "kind": "h2",
+          "text": "清洁液选择"
+        },
+        {
+          "kind": "p",
+          "text": "柯达技术资料 TI-2597《胶片清洁方法》（2010 年 3 月版，2010 年 3 月 10 日修订）原文写明：清洁液用 91% 异丙醇（isopropyl alcohol）或庚烷（heptane）。资料同时写明，水会使明胶软化，从而易于划伤，因此清洁液避开水。使用异丙醇时 91% 以上为佳，70% 水分过多。"
+        },
+        {
+          "kind": "formula",
+          "caption": "工作液配方",
+          "text": "异丙醇工作液：原液为 91% 异丙醇 + 9% 水，按体积。工作液直接使用，保持原浓度，润湿一次性擦拭布（wipe）。庚烷替代方案：原液为纯庚烷，直接使用。两种方案都在室温下擦过胶片表面，不做浸泡。"
+        },
+        {
+          "kind": "note",
+          "text": "原液与工作液的保存期在 TI-2597 中未给出。保存条件按密闭、阴凉、远离火源处理，并在每次使用前确认液体清亮无杂质。公开的厂商保存期数值需以厂商说明书为准。瓶装异丙醇建议小量分装并记录开封日期。"
+        },
+        {
+          "kind": "table",
+          "caption": "两种工作液的适用条件",
+          "rows": [
+            {
+              "c1": "标准",
+              "c2": "异丙醇",
+              "c3": "91% 或更高",
+              "c4": "常规照片与制版用胶片，柯达推荐的优先方案",
+              "head": [
+                "方案",
+                "液体",
+                "浓度",
+                "适用条件"
+              ]
+            },
+            {
+              "c1": "标准",
+              "c2": "庚烷",
+              "c3": "纯品",
+              "c4": "对某些塑料片基更温和，柯达并列为可选方案"
+            },
+            {
+              "c1": "应避开",
+              "c2": "水",
+              "c3": "纯水",
+              "c4": "软化明胶，划伤风险上升"
+            },
+            {
+              "c1": "应避开",
+              "c2": "70% 异丙醇",
+              "c3": "70%",
+              "c4": "水分过多，柯达明确写为过湿"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "擦拭材料"
+        },
+        {
+          "kind": "ul",
+          "text": "- 无绒、柔软、吸水、无划伤性的棉布（Webril Hand-Pads 或同等物）。\n- 棉布可能留纤维。可改用 100% 针织涤纶洁净室擦拭布（cleanroom photo wipe）。\n- 擦拭布在整卷胶片上要频繁翻面更换。"
+        },
+        {
+          "kind": "h2",
+          "text": "擦拭动作"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            {
+              "t": "润湿",
+              "d": "把认可的清洁液挤到擦拭布上。不要把布浸入液体。拧干或风干到不过饱和。"
+            },
+            {
+              "t": "单向擦",
+              "d": "胶片表面自上而下沿一个方向擦过。沿用这一方向的擦拭，颗粒被带走；往返或圆周擦拭会把颗粒带回胶片。"
+            },
+            {
+              "t": "换面",
+              "d": "擦拭过程中频繁翻转擦拭布。"
+            },
+            {
+              "t": "一次一区",
+              "d": "一块只润湿一次的擦拭布，用完即弃。清理面积最大为擦拭布面积的十倍。"
+            }
+          ]
+        },
+        {
+          "kind": "warn",
+          "text": "TI-2597 原文写明：擦洗式动作（圆周或往返）会把颗粒挑起并压进乳剂，造成严重划伤。"
+        },
+        {
+          "kind": "h2",
+          "text": "厂商设备方案"
+        },
+        {
+          "kind": "table",
+          "caption": "商用清洁设备",
+          "rows": [
+            {
+              "c1": "柯达",
+              "c2": "P-200 胶片清洁系统",
+              "c3": "2010 年前后在售",
+              "c4": "以 HFE 7200 胶片清洁液为介质，电子控制擦拭压力与走带速度",
+              "c5": "在售",
+              "head": [
+                "厂商",
+                "型号",
+                "年代",
+                "原理",
+                "在产"
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "该系统的厂商页面描述为经济、紧凑、数字控制的胶片清洁系统，使用 HFE 7200 胶片清洁液。资料未给出该型号的生产年代区间与停产年份。"
+        },
+        {
+          "kind": "h2",
+          "text": "手工操作规范"
+        },
+        {
+          "kind": "ul",
+          "text": "- 戴洁净的棉质无绒手套或惰性塑料手套（丁腈手套即可）。\n- 手掌托住胶片边缘。指腹接触乳剂层时容易留下指纹油脂。\n- 全程在洁净环境操作。洁净室等级按洁净工作台要求设置。\n- 一次只取一卷。手上工作完成前不做下一卷。\n- 全过程参考材料安全数据表（Material Safety Data Sheet, MSDS）。"
+        },
+        {
+          "kind": "p",
+          "text": "环境指标见 $archive.storage-environment。霉菌污染的清洁流程见 $archive.mold-treatment。扫描前的除尘见 $archive.digitization-strategy。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "How to Clean Film for Phototooling Applications, TI-2597, Eastman Kodak Company",
+          "url": "https://www.kodak.com/content/products-brochures/Advanced-Materials/KODAK-How-to-Clean-Film-for-Phototooling-Applications-Brochure-EN.pdf",
+          "kind": "manual",
+          "note": "91% 异丙醇或庚烷、避开水、70% 过湿、单向擦拭、禁止擦洗、一次润湿覆盖十倍面积、擦拭布材料与 MSDS 要求。"
+        },
+        {
+          "name": "Film accessories, Kodak Motion Picture and Entertainment",
+          "url": "https://www.kodak.com/en/motion/page/film-accessories/",
+          "kind": "manufacturer",
+          "note": "KODAK P-200 胶片清洁系统与 HFE 7200 清洁液的厂商描述。"
+        },
+        {
+          "name": "Care, Handling, and Storage of Photographs, Library of Congress",
+          "url": "https://www.loc.gov/preservation/care/photolea.html",
+          "kind": "archive",
+          "note": "棉质无绒手套与丁腈手套的佩戴要求，避免接触照片表面。"
+        },
+        {
+          "name": "Film Preservation Guide, National Film Preservation Foundation",
+          "url": "https://www.filmpreservation.org/userfiles/image/PDFs/fpg_6.pdf",
+          "kind": "book",
+          "note": "容器材质、平放堆叠、片库选址等操作背景。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "archive.storage-environment"
+        ],
+        "next": [
+          "archive.mold-treatment"
+        ],
+        "related": [
+          "archive.mold-prevention",
+          "archive.digitization-strategy"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "柯达资料推荐的清洁液是？",
+          "type": "single",
+          "options": [
+            "70% 异丙醇",
+            "91% 异丙醇或庚烷",
+            "纯水",
+            "稀碳酸钠溶液"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "TI-2597 写明用 91% 异丙醇或庚烷，水会使明胶软化，70% 水分过多。"
+        },
+        {
+          "q": "擦拭胶片时的方向是？",
+          "type": "single",
+          "options": [
+            "圆周",
+            "往返",
+            "自上而下单向",
+            "随意"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "单向擦拭把颗粒带走；圆周或往返擦拭会把颗粒挑起压进乳剂，造成严重划伤。"
+        },
+        {
+          "q": "一块只润湿一次的擦拭布最多清理多大面积？",
+          "type": "single",
+          "options": [
+            "擦拭布面积的 2 倍",
+            "擦拭布面积的 10 倍",
+            "整卷胶片",
+            "不限制"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "TI-2597 规定清理面积最大为擦拭布面积的十倍，用完即弃。"
+        },
+        {
+          "q": "戴手套是清洁流程的必需环节。",
+          "type": "bool",
+          "options": [
+            "是",
+            "否"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "国会图书馆要求戴洁净的棉质无绒手套或丁腈手套，并避免接触照片表面。"
+        }
+      ],
+      "checklist": [
+        "准备 91% 以上异丙醇与无绒擦拭布。",
+        "擦拭布放在洁净工作台上，准备好 MSDS。",
+        "全程单向擦拭，一次润湿只覆盖十倍面积。",
+        "手套与洁净服在进入工作区前穿戴好。"
+      ],
+      "updated": "2026-10-09",
+      "status": "draft"
+    },
+    {
+      "id": "archive.digital-preservation",
+      "title": "数字保存",
+      "title_en": "Digital Preservation",
+      "aliases": [
+        "digital preservation",
+        "数字保存",
+        "OAIS",
+        "可信数字库",
+        "trusted repository",
+        "fixity"
+      ],
+      "type": "concept",
+      "level": 5,
+      "era": "1990s 至今",
+      "tags": [
+        "数字保存",
+        "保存规划",
+        "格式迁移",
+        "完整性校验"
+      ],
+      "summary": "数字保存指在一段时间内保持数字对象可读、可信与可取用。核心动作是保存多副本、校验完整性、迁移过时格式。保存计划由参考模型与成熟度等级两种路线组织。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "定义要素"
+        },
+        {
+          "kind": "p",
+          "text": "美国国会图书馆的可持续性因素页面指出：不可与某一特定物理载体绑定的数字格式不适合作长期保存格式；把使用限制在特定设备上、或阻止可信数字库建立备份与灾难恢复流程的格式实现，同样不适合长期保存。加密与使用限制属于传输环节的常规做法，会妨碍托管方履行保存职责。"
+        },
+        {
+          "kind": "defs",
+          "term": "七项可持续性因素",
+          "text": "公开性（disclosure）、采纳度（adoption）、透明度（transparency）、自我描述性（self-documentation）、外部依赖（external dependencies）、专利影响（impact of patents）、技术保护机制（technical protection mechanisms）。公开性的关键在于存在完整文档，而不是标准机构的批准。"
+        },
+        {
+          "kind": "h2",
+          "text": "参考模型的元数据分类"
+        },
+        {
+          "kind": "p",
+          "text": "开放档案信息系统参考模型（Open Archival Information System, OAIS）按用途把支持信息分为五类。表示信息让数据可呈现为信息并可使用。参考信息用于识别与描述内容。上下文信息记录内容产生的目的。固定性信息（fixity）用于校验内容数据的完整性。溯源信息记录保管链与内容创建后的全部变更。"
+        },
+        {
+          "kind": "note",
+          "text": "该五类分类经国会图书馆可持续性因素页面转述。本库未取得 ISO 14721 标准原文，引用时按转述来源标注。"
+        },
+        {
+          "kind": "h2",
+          "text": "成熟度等级"
+        },
+        {
+          "kind": "p",
+          "text": "数字保存等级（Levels of Digital Preservation）由工作组编写，2013 年发布初版，2019 年发布 2.0 版。2.1 版由 2024 年到 2026 年的工作组于 2026 年 3 月发布，主题为环境可持续性。配套资料包括等级矩阵、实施指南与工作定义、评估工具、数字策展决策指南与培训幻灯片。全部版本存放于开放科学框架（Open Science Framework, OSF）项目页。"
+        },
+        {
+          "kind": "p",
+          "text": "工作定义文件给出每一级的具体动作。等级矩阵的条目文字取自开放科学框架上的矩阵文件。引用具体条目时应回到矩阵文件核对原文。"
+        },
+        {
+          "kind": "h2",
+          "text": "面向照片馆藏的动作清单"
+        },
+        {
+          "kind": "ol",
+          "text": "1. 按固定性与来源记录建立保存计划，写明负责人与复核周期。\n2. 母版文件用无压缩或低压缩比的无损格式保存，见 $archive.file-formats。\n3. 用校验和（checksum）固定每份文件，校验结果随文件一同保存。\n4. 至少保存三份副本，放在两种以上介质上，其中一份异地。\n5. 用打包规范与文件布局规范固定字节流，见下两节。\n6. 按计划复检格式，必要时迁移到新版本。\n7. 记录全部变更事件，用保存元数据模型表达。"
+        },
+        {
+          "kind": "h2",
+          "text": "打包规范"
+        },
+        {
+          "kind": "p",
+          "text": "打包规范（BagIt）把内容（payload）与标签（tags）分开。必备的清单文件列出内容中的每个文件及其校验和。bagit.txt 文件声明这是一个包并写明 BagIt-Version。清单文件名为 manifest-md5.txt 一类。字符编码必须声明。空目录不受支持。间接内容用 fetch.txt 声明。"
+        },
+        {
+          "kind": "note",
+          "text": "打包规范的上述描述取自公开百科条目。本库未取得该规范的官方规范页原文，引用版本号与字段定义前需回到官方文本核对。"
+        },
+        {
+          "kind": "h2",
+          "text": "文件布局规范"
+        },
+        {
+          "kind": "p",
+          "text": "牛津共用文件布局规范（Oxford Common File Layout, OCFL）是一种与应用无关的数字信息存储方法，目标是结构化、透明、可预测。它列出的优点是完整性、可解析性、抗错性、版本化与存储多样性。1.0 版发布于 2020 年 7 月 7 日，1.1 版发布于 2022 年 10 月 7 日，1.1.1 版于 2024 年 11 月 7 日公布。规范提供编辑草案、扩展、实现清单与校验测试样本。"
+        },
+        {
+          "kind": "p",
+          "text": "存储多样性一条与照片馆藏直接相关：保存系统的存储后端可以采用常规文件系统，也可以采用对象存储。"
+        },
+        {
+          "kind": "h2",
+          "text": "物理载体与数字副本的关系"
+        },
+        {
+          "kind": "p",
+          "text": "原件保存与数字保存解决两类问题。原件保存控制醋酸降解与霉变，见 $archive.storage-environment。数字保存控制格式过时与介质失效。两者并行执行时，原件仍是最终依据，数字副本是服务层。"
+        },
+        {
+          "kind": "p",
+          "text": "相关条目：$archive.metadata-standards、$archive.storage-and-backup、$archive.digitization-strategy。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Sustainability of Digital Formats, Library of Congress",
+          "url": "https://www.loc.gov/preservation/digital/formats/sustain/sustain.shtml",
+          "kind": "archive",
+          "note": "七项可持续性因素的定义、透明性与技术保护机制的表述、OAIS 五类元数据分类的转述。"
+        },
+        {
+          "name": "Levels of Digital Preservation, National Digital Stewardship Alliance",
+          "url": "https://www.ndsa.org/publications/levels-of-digital-preservation/",
+          "kind": "article",
+          "note": "2013 年初版、2019 年 2.0 版、2026 年 3 月 2.1 版与各版本在开放科学框架上的存放位置。"
+        },
+        {
+          "name": "Oxford Common File Layout specification, version 1.1",
+          "url": "https://ocfl.io/1.1/spec/",
+          "kind": "standard",
+          "note": "1.1 版规范正文与版本日期；首页 https://ocfl.io/ 列出五项优点与 1.1.1 版公告。"
+        },
+        {
+          "name": "PREMIS Data Dictionary for Preservation Metadata, Library of Congress",
+          "url": "https://www.loc.gov/standards/premis/",
+          "kind": "standard",
+          "note": "保存元数据国际标准，当前版本 3.0。"
+        },
+        {
+          "name": "BagIt",
+          "url": "https://en.wikipedia.org/wiki/BagIt",
+          "kind": "article",
+          "note": "内容与标签的划分、必备清单文件、bagit.txt 与 BagIt-Version 字段。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "archive.file-formats"
+        ],
+        "next": [
+          "archive.storage-and-backup"
+        ],
+        "related": [
+          "archive.metadata-standards",
+          "archive.digitization-strategy"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "开放档案信息系统参考模型把支持信息分为几类？",
+          "type": "single",
+          "options": [
+            "3 类",
+            "4 类",
+            "5 类",
+            "7 类"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "五类为表示、参考、上下文、固定性与溯源。"
+        },
+        {
+          "q": "数字保存等级 2.1 版发布于哪一年？",
+          "type": "single",
+          "options": [
+            "2013 年",
+            "2019 年",
+            "2026 年",
+            "2030 年"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "2.1 版由 2024 到 2026 年工作组于 2026 年 3 月发布，主题为环境可持续性。"
+        },
+        {
+          "q": "牛津共用文件布局规范 1.0 版发布于哪一年？",
+          "type": "single",
+          "options": [
+            "2016 年",
+            "2020 年",
+            "2022 年",
+            "2024 年"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "1.0 版发布于 2020 年 7 月 7 日，1.1 版为 2022 年 10 月 7 日，1.1.1 版于 2024 年 11 月 7 日公布。"
+        },
+        {
+          "q": "保存元数据国际标准的当前版本是 3.0。",
+          "type": "bool",
+          "options": [
+            "是",
+            "否"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "保存元数据数据字典（PREMIS）当前版本为 3.0。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "stable"
+    },
+    {
+      "id": "archive.digitization-strategy",
+      "title": "数字化策略",
+      "title_en": "Digitization Strategy for Film",
+      "aliases": [
+        "digitization",
+        "数字化",
+        "扫描策略",
+        "sampling frequency",
+        "采样频率",
+        "bit depth",
+        "位深",
+        "star level",
+        "星级"
+      ],
+      "type": "process",
+      "level": 4,
+      "era": "1990s 至今",
+      "tags": [
+        "数字化",
+        "采样频率",
+        "位深",
+        "母版",
+        "优先级"
+      ],
+      "summary": "数字化策略先排优先级，再选采样频率与位深，最后定义母版处理规则。美国联邦数字化指南按星级给出照片与缩微胶片的量化指标。母版文件保持原始像质。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "先排优先级"
+        },
+        {
+          "kind": "ol",
+          "text": "1. 按保存风险排序。醋酸综合症检测条读数 2 及以上、已出现收缩的负片排在最前，见 $archive.vinegar-syndrome。\n2. 按唯一性排序。同一画面的其他副本会降低单件的紧迫度。\n3. 按使用需求排序。展览、出版与研究用途提高扫描规格。\n4. 记录排序依据，形成可复核的批次计划。"
+        },
+        {
+          "kind": "h2",
+          "text": "采样频率与位深"
+        },
+        {
+          "kind": "p",
+          "text": "美国联邦数字化指南（Federal Agencies Digital Guidelines Initiative, FADGI）第 3 版技术指南给出 35 mm 至 4×5 英寸照片负片与透明片的量化指标。四档星级对应不同的采样频率下限。4×5 英寸及以上的透明片适用同一张表。缩微胶片按画幅尺寸给出另一组数值。"
+        },
+        {
+          "kind": "table",
+          "caption": "35 mm 至 4×5 英寸负片与透明片指标",
+          "rows": [
+            {
+              "c1": "1 星",
+              "c2": "不低于 1950 ppi",
+              "c3": "8 bit",
+              "c4": "3.5",
+              "c5": "TIFF 或 JPEG2000",
+              "head": [
+                "星级",
+                "采样频率下限",
+                "位深",
+                "动态范围",
+                "母版格式"
+              ]
+            },
+            {
+              "c1": "2 星",
+              "c2": "不低于 2970 ppi",
+              "c3": "8 bit",
+              "c4": "3.8",
+              "c5": "TIFF 或 JPEG2000"
+            },
+            {
+              "c1": "3 星",
+              "c2": "不低于 3960 ppi",
+              "c3": "16 bit",
+              "c4": "3.9",
+              "c5": "TIFF 或 JPEG2000"
+            },
+            {
+              "c1": "4 星",
+              "c2": "不低于 4000 ppi",
+              "c3": "16 bit",
+              "c4": "4.0",
+              "c5": "JPEG2000"
+            }
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "同表还给出再现比例精度要求：1000 ppi 处允许负 3%，3000 ppi 处负 2%，4000 ppi 处负 1%。色彩空间按星级在灰度伽马 2.2、sRGB、Adobe RGB (1998) 与 Adobe RGB (1998) ProPhoto 之间选择。高光与暗部容差统一为 96 正负 2 的 L* 值。色调响应上限从 1 星的小于 5.25 收紧到 4 星的小于 1.5。白平衡差值上限从 1 星的小于 5.25 收紧到 4 星的小于 1.5。"
+        },
+        {
+          "kind": "p",
+          "text": "指南对摄影类原件另加一条说明：彩色与黑白原件的全部母版文件都按 3 星及以上性能成像，通常为 16 位彩色。位深换算关系为 8 位 256 级，16 位 65536 级，24 位等于 3 乘 8 位，48 位等于 3 乘 16 位。后期工作在 48 位 RGB 或 16 位灰度上进行。"
+        },
+        {
+          "kind": "p",
+          "text": "缩微胶片的采样频率按画幅尺寸给出，画幅为 3000、3500、4000 与 4500 ppi 四档，各档位深均为 8 位，动态范围为 3.5、3.8、3.9 与 4.2。"
+        },
+        {
+          "kind": "note",
+          "text": "指南同时写明：摄影胶片无法与再现比例关联，除非画面内有可测量的参照物。胶片按尺寸与设备能力选择合适的采样频率。"
+        },
+        {
+          "kind": "h2",
+          "text": "设备选择"
+        },
+        {
+          "kind": "p",
+          "text": "指南对 4×5 英寸及以上的透明片列出推荐技术：胶片扫描仪、行星式扫描仪、数字相机、平板扫描仪。转鼓扫描仪（drum scanner）列为不推荐。透明片的最大黑密度可接近 4.0，相邻最小密度约 0.05，因此需要宽动态范围的照明与传感器。设备对照见 $scanning.film-scanner-compare。"
+        },
+        {
+          "kind": "h2",
+          "text": "母版处理规则"
+        },
+        {
+          "kind": "ul",
+          "text": "- 母版文件上的除尘步骤取消，扫描过程中的数字去尘做法同样未获批准。\n- 母版文件上的调色、影调增强与修复操作取消。\n- 每次曝光拍入参照标（reference target）并随母版一同保留。\n- 锐化在母版文件上不可逆，锐化量设上限。\n- 玻璃干板展平存在乳剂开裂风险，操作前评估。\n- 当原件存在受损风险时立即停止操作并寻求协助。"
+        },
+        {
+          "kind": "warn",
+          "text": "尘点是扫描图像中最常见的缺陷来源，却恰恰在母版文件上被排除处理。扫描前清洁到位，见 $archive.cleaning-and-handling。"
+        },
+        {
+          "kind": "h2",
+          "text": "看片环境"
+        },
+        {
+          "kind": "p",
+          "text": "指南给出的看片条件：反射稿用 5000 K、显色指数不低于 90 的观片灯箱。透明片用 5000 K 透射光箱，显色指数高于 90。指南同时写明，6500 K 属于印刷业标准，不作为透明片的看片光源。影像须在将要保存的色彩空间中查看。"
+        },
+        {
+          "kind": "h2",
+          "text": "输出"
+        },
+        {
+          "kind": "p",
+          "text": "母版文件格式见 $archive.file-formats。母版之外的衍生文件按用途生成，例如网页用 JPEG2000 有损版本或 TIFF 缩略图。保存元数据按 $archive.metadata-standards 记录。副本保存按 $archive.storage-and-backup 执行。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Technical Guidelines for Digitizing Cultural Heritage Materials, 3rd edition, FADGI",
+          "url": "https://www.digitizationguidelines.gov/guidelines/FADGI%20Technical%20Guidelines%20for%20Digitizing%20Cultural%20Heritage%20Materials_3rd%20Edition_05092023.pdf",
+          "kind": "standard",
+          "note": "第 3.9 节透明片与第 3.11 节负片的星级指标表，第 3.10 节大尺寸透明片，第 3.15 节缩微胶片，以及母版处理规则与看片光源。"
+        },
+        {
+          "name": "Technical Guidelines for Digitizing Cultural Heritage Materials, landing page, FADGI",
+          "url": "https://www.digitizationguidelines.gov/guidelines/digitize-technical.html",
+          "kind": "standard",
+          "note": "指南版本与下载入口。"
+        },
+        {
+          "name": "Using A-D Strips to Measure Acetic Acid Accumulation, Image Permanence Institute",
+          "url": "https://filmcare.org/ad_strips.php",
+          "kind": "measurement",
+          "note": "检测条等级 2 建议冻结并宜复制，用于建立数字化优先批次。"
+        },
+        {
+          "name": "Six stages of acetate film base deterioration, Library and Archives Canada",
+          "url": "https://www.canada.ca/en/library-archives/collection/engage-learn/publications/lingua-franca/visual-glossary/acetate.html",
+          "kind": "archive",
+          "note": "三阶段之前负片仍保有可读细节并可复制，四到六阶段可读性下降。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "archive.vinegar-syndrome"
+        ],
+        "next": [
+          "archive.file-formats"
+        ],
+        "related": [
+          "scanning.film-scanner-compare",
+          "archive.cleaning-and-handling"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "35 mm 至 4×5 英寸负片的 3 星采样频率下限是多少？",
+          "type": "single",
+          "options": [
+            "不低于 1950 ppi",
+            "不低于 2970 ppi",
+            "不低于 3960 ppi",
+            "不低于 4000 ppi"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "四档依次为 1950、2970、3960 与 4000 ppi，3 星对应 3960 ppi。"
+        },
+        {
+          "q": "1 星与 2 星的位深是？",
+          "type": "single",
+          "options": [
+            "8 bit",
+            "16 bit",
+            "24 bit",
+            "48 bit"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "1 星与 2 星为 8 位，3 星与 4 星为 16 位；后期工作在 48 位 RGB 或 16 位灰度上完成。"
+        },
+        {
+          "q": "指南对 4×5 英寸及以上透明片列为推荐的技术包括哪些？",
+          "type": "multi",
+          "options": [
+            "胶片扫描仪",
+            "行星式扫描仪",
+            "数字相机",
+            "转鼓扫描仪"
+          ],
+          "answer": [
+            0,
+            1,
+            2
+          ],
+          "why": "推荐胶片扫描仪、行星式扫描仪、数字相机与平板扫描仪；转鼓扫描仪列为不推荐。"
+        },
+        {
+          "q": "母版文件允许使用数字去尘技术处理尘点。",
+          "type": "bool",
+          "options": [
+            "是",
+            "否"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "指南写明母版文件上的除尘步骤取消，扫描过程中的数字去尘做法同样未获批准。"
+        }
+      ],
+      "checklist": [
+        "按醋酸综合症检测条等级与唯一性排出扫描批次。",
+        "确定星级目标，并换算采样频率与位深。",
+        "在母版策略中明确去尘、调色与锐化的边界。",
+        "确认看片光源为 5000 K 且显色指数达标。",
+        "拍入参照标并随母版一同保存。"
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "archive.file-formats",
+      "title": "文件格式",
+      "title_en": "File Formats for Preservation Masters",
+      "aliases": [
+        "TIFF",
+        "JPEG2000",
+        "PNG",
+        "Exif",
+        "DNG",
+        "母版格式",
+        "master file"
+      ],
+      "type": "concept",
+      "level": 4,
+      "era": "1990s 至今",
+      "tags": [
+        "文件格式",
+        "母版",
+        "无损压缩",
+        "格式说明文档"
+      ],
+      "summary": "母版文件用非专有、无损、自描述的格式。首选标签图像文件格式（Tagged Image File Format, TIFF）、JPEG2000 与便携式网络图形（Portable Network Graphics, PNG）。可接受格式用于访问，不作长期母版。格式文件里禁止加使用限制。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "推荐与可接受"
+        },
+        {
+          "kind": "p",
+          "text": "美国国会图书馆静像作品的推荐格式声明（Recommended Formats Statement, RFS）把 TIFF（.tif）、JPEG2000（.jp2）与 PNG（.png）列为照片与图形的首选格式。可接受格式包括 JPEG/JFIF、Photoshop (.psd)、JPEG2000 Part 2 (.jpf/.jpx)、DNG (.dng)、相机原始专有格式（.nef/.crw/.arw/.iiq）与 GIF（.gif）。"
+        },
+        {
+          "kind": "p",
+          "text": "缩微胶片类的模拟载体首选为：银盐感光材料、正片极性、有彩色时用彩色、聚酯片基。卷式缩微胶片排在缩微平片与盒式介质之前，尺寸用 35 mm。"
+        },
+        {
+          "kind": "h2",
+          "text": "首选格式的技术特征"
+        },
+        {
+          "kind": "table",
+          "caption": "静像母版的首选技术特征",
+          "rows": [
+            {
+              "c1": "分辨率",
+              "c2": "取设备可得的最高值，不做重采样或插值",
+              "c3": "接近首选",
+              "head": [
+                "特征",
+                "首选要求",
+                "可接受"
+              ]
+            },
+            {
+              "c1": "位深",
+              "c2": "取设备可得的最高值，每个通道 16 位",
+              "c3": "接近首选"
+            },
+            {
+              "c1": "色彩",
+              "c2": "嵌入色彩描述文件，或指定色彩空间",
+              "c3": "接近首选"
+            },
+            {
+              "c1": "压缩",
+              "c2": "无压缩，或低压缩比的无损压缩",
+              "c3": "分层格式，在受支持的前提下"
+            },
+            {
+              "c1": "结构",
+              "c2": "单层，不分层",
+              "c3": "分层格式，在受支持的前提下"
+            },
+            {
+              "c1": "变换",
+              "c2": "离散小波变换优于离散余弦变换",
+              "c3": "接近首选"
+            }
+          ]
+        },
+        {
+          "kind": "warn",
+          "text": "该声明同时写明：文件中禁止包含限制使用或阻止使用的措施，例如数字版权管理技术与加密。"
+        },
+        {
+          "kind": "h2",
+          "text": "元数据嵌入"
+        },
+        {
+          "kind": "p",
+          "text": "该声明要求按格式支持程度写入题名、创作者、创作日期、出版地、出版者与联系方式。可用时另写入语种、其他标识符、主题词、摘要、技术生产信息与常用嵌入模式（例如 IPTC）。另一条路径是把元数据写进外置的文本、CSV 或 XML 边车文件（sidecar file）。"
+        },
+        {
+          "kind": "p",
+          "text": "拍摄元数据的常用容器是交换图像文件格式（Exif）。格式说明文档给出 Exif 2.2 的技术细节：该版本于 2002 年 4 月发布，规范编号 JEITA CP-3451。未压缩形式为 TIFF 修订版 6.0 加扩展标签，压缩形式为带 APP1 或 APP2 段的基线 JPEG。像素构成为 RGB 4:4:4、YCbCr 4:2:2 或 4:2:0，每个分量 8 位。Exif 2.2 的缺省色彩空间为 sRGB。该文档同时说明，国会图书馆的推荐格式声明并未强制或建议使用 Exif 数据。"
+        },
+        {
+          "kind": "h2",
+          "text": "PNG 现状"
+        },
+        {
+          "kind": "p",
+          "text": "便携式网络图形（Portable Network Graphics, PNG）格式说明文档给出的版本历史为：1.0 版 1996 年 10 月 1 日世界万维网联盟建议，1.1 版 1998 年 12 月 31 日，1.2 版 1999 年 8 月，ISO/IEC 15948:2004，以及 2025 年 6 月 24 日世界万维网联盟 3.0 版建议。样例位深为 1 位到 16 位。互联网媒体类型为 image/png。该文档同时记录，截至 2025 年 7 月，国会图书馆馆藏中已有超过 16 TB、数量超过 5200 万个 PNG 文件。国际文件格式比较项目把 PNG 1.2 列为多个国家的首选或可接受格式。"
+        },
+        {
+          "kind": "h2",
+          "text": "网络存档格式"
+        },
+        {
+          "kind": "p",
+          "text": "网页存档使用网页归档（Web ARChive, WARC）格式。该格式是互联网档案 ARC 格式的修订与推广。一条记录由记录头、内容块与两个换行符组成。记录头含文档日期、文档类型与文档长度等必填字段。记录类型共有八种：warcinfo、response、resource、request、metadata、revisit、conversion、continuation。需要随机访问时，一条记录对应一个 gzip 流。互联网媒体类型为 application/warc。该规范由 2009 年 5 月批准的 ISO 28500:2009 对应，2005 年 5 月作为 ISO 技术委员会第 46 分委员会第 4 工作组的工作项提交。国会图书馆的网络存档推荐格式声明把 WARC 列为网页存档的首选格式。"
+        },
+        {
+          "kind": "h2",
+          "text": "选择判据"
+        },
+        {
+          "kind": "ol",
+          "text": "1. 先查该格式的格式说明文档是否存在完整文档。\n2. 查采纳度：有多少机构在用。\n3. 查透明度：格式是否绑定特定载体或特定设备。\n4. 查自我描述性：格式能否承载表示、参考、上下文、固定性与溯源五类信息。\n5. 查是否含技术保护机制。加解密会阻断可信数字库的保存流程。"
+        },
+        {
+          "kind": "p",
+          "text": "判据出处见 $archive.digital-preservation 的七项可持续性因素。母版指标的来源见 $archive.digitization-strategy。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Recommended Formats Statement, Still Image Works, Library of Congress",
+          "url": "https://www.loc.gov/preservation/resources/rfs/stillimg.html",
+          "kind": "archive",
+          "note": "首选格式 TIFF、JPEG2000、PNG 与可接受格式清单；技术特征表；禁止数字版权管理与加密；元数据与边车文件；缩微胶片首选项。"
+        },
+        {
+          "name": "PNG (Portable Network Graphics), Format Description Document fdd000153, Library of Congress",
+          "url": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000153.shtml",
+          "kind": "archive",
+          "note": "版本历史与 2025 年 6 月 24 日 3.0 版；位深 1 到 16 位；馆藏规模统计。"
+        },
+        {
+          "name": "Exif 2.2, Format Description Document fdd000146, Library of Congress",
+          "url": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000146.shtml",
+          "kind": "archive",
+          "note": "2002 年 4 月发布、JEITA CP-3451、像素构成与每个分量 8 位、缺省 sRGB，以及推荐格式声明未强制使用 Exif 的说明。"
+        },
+        {
+          "name": "WARC, Web ARChive file format, Format Description Document fdd000236, Library of Congress",
+          "url": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000236.shtml",
+          "kind": "archive",
+          "note": "记录结构、八种记录类型、gzip 随机访问方式、application/warc 媒体类型与 ISO 28500:2009。"
+        },
+        {
+          "name": "Sustainability of Digital Formats, Library of Congress",
+          "url": "https://www.loc.gov/preservation/digital/formats/sustain/sustain.shtml",
+          "kind": "archive",
+          "note": "格式选择用的七项可持续性因素。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "archive.digitization-strategy"
+        ],
+        "next": [
+          "archive.metadata-standards"
+        ],
+        "related": [
+          "archive.digital-preservation",
+          "scanning.software"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "静像母版文件的首选格式是哪一组？",
+          "type": "single",
+          "options": [
+            "TIFF、JPEG2000、PNG",
+            "JPEG、GIF、PSD",
+            "DNG、CRW、ARW",
+            "PDF、XML、CSV"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "国会图书馆静像推荐格式声明把 TIFF、JPEG2000 与 PNG 列为首选格式。"
+        },
+        {
+          "q": "推荐格式声明对文件内的技术保护措施有何要求？",
+          "type": "single",
+          "options": [
+            "允许加密",
+            "允许数字版权管理",
+            "禁止限制使用或阻止使用的措施",
+            "由机构自定"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "声明写明文件中禁止包含限制使用或阻止使用的措施，例如数字版权管理技术与加密。"
+        },
+        {
+          "q": "首选格式在压缩上倾向哪一类？",
+          "type": "single",
+          "options": [
+            "高压缩比的有损压缩",
+            "无压缩或低压缩比的无损压缩",
+            "任何压缩",
+            "仅限不压缩"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "首选要求无压缩或低压缩比的无损压缩；可接受格式在受支持的前提下放宽到分层格式。"
+        },
+        {
+          "q": "网页存档的首选格式是 WARC。",
+          "type": "bool",
+          "options": [
+            "是",
+            "否"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "国会图书馆的网络存档推荐格式声明把网页归档格式列为网页存档的首选格式。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "archive.metadata-standards",
+      "title": "元数据标准",
+      "title_en": "Metadata Standards for Photographic Archives",
+      "aliases": [
+        "metadata",
+        "元数据",
+        "IPTC",
+        "PREMIS",
+        "METS",
+        "EXIF",
+        "sidecar"
+      ],
+      "type": "concept",
+      "level": 4,
+      "era": "1990s 至今",
+      "tags": [
+        "元数据",
+        "描述元数据",
+        "保存元数据",
+        "结构元数据",
+        "边车文件"
+      ],
+      "summary": "照片档案的元数据分描述、保存与结构三类。国际新闻通讯社照片元数据标准描述内容，预存元数据模型记录保存事件，元数据编码与传输标准记录结构与嵌入。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "三类分工"
+        },
+        {
+          "kind": "p",
+          "text": "国会图书馆推荐的静像格式声明把元数据处理分成两条路径：按格式支持程度嵌入，或写进外置的文本、CSV 与 XML 边车文件。该声明要求写入题名、创作者、创作日期、出版地、出版者与联系方式，并在可用时写入语种、其他标识符、主题词、摘要与技术生产信息。"
+        },
+        {
+          "kind": "h2",
+          "text": "描述元数据：IPTC"
+        },
+        {
+          "kind": "p",
+          "text": "国际新闻通讯社照片元数据标准（IPTC Photo Metadata Standard）当前版本为 2025.1 修订 1。该标准包含两套元数据模式。规范文本以知识共享署名 4.0 许可发布。规范页给出两套模式的字段清单与映射关系。"
+        },
+        {
+          "kind": "p",
+          "text": "拍摄技术参数通常由交换图像文件格式（Exif）承载。格式说明文档给出 Exif 2.2 的细节，详见 $archive.file-formats。国会图书馆的推荐格式声明写明并未强制或建议使用 Exif 数据，因此拍摄参数宜同时写入描述元数据。"
+        },
+        {
+          "kind": "h2",
+          "text": "保存元数据：PREMIS"
+        },
+        {
+          "kind": "p",
+          "text": "预存元数据数据字典（PREMIS Data Dictionary for Preservation Metadata）是支持数字对象保存的元数据国际标准。它由数据字典、XML 模式与配套文档三部分组成。当前版本为 3.0，同时对应 Web 本体语言本体 3。工作组织包括编辑委员会与实施者组。该标准在 2022 年获得数字保存奖。"
+        },
+        {
+          "kind": "p",
+          "text": "该标准按开放档案信息系统参考模型的五类信息组织内容：表示、参考、上下文、固定性与溯源。照片馆藏的固定性事件记录每次校验和计算及其结果，溯源事件记录校验、迁移与衍生生成。"
+        },
+        {
+          "kind": "h2",
+          "text": "结构元数据：METS"
+        },
+        {
+          "kind": "p",
+          "text": "元数据编码与传输标准（Metadata Encoding and Transmission Standard, METS）用万维网联盟的 XML 模式语言表达数字图书馆对象的描述性、管理性与结构性元数据。该标准由 METS 委员会与国会图书馆网络开发部和 MARC 标准办公室协作维护，起点是数字图书馆联盟的倡议。第 2 版模式于 2025 年 3 月 3 日发布，定位为精简后的新版本；第 1 版模式与外部模式、示例文档、配置文件、实现登记表、工具与培训仍在提供。"
+        },
+        {
+          "kind": "h2",
+          "text": "打包与边车"
+        },
+        {
+          "kind": "p",
+          "text": "边车文件方案适合内容文件格式不支持元数据的情形。打包规范（BagIt）把内容与标签分开，清单文件列出内容中的每个文件及其校验和，因此边车与校验和可纳入同一清单。文件布局规范（OCFL）同样为每个对象保存校验与内容信息，见 $archive.digital-preservation。"
+        },
+        {
+          "kind": "h2",
+          "text": "落地做法"
+        },
+        {
+          "kind": "ol",
+          "text": "1. 描述层用 IPTC 字段填写题名、创作者、日期、地点、权利与索引词。\n2. 技术层用 Exif 记录拍摄与扫描设备参数，同时把关键项复制到描述层。\n3. 保存层用 PREMIS 记录校验、迁移与衍生事件。\n4. 结构层用 METS 或打包规范的清单表达文件之间的关系。\n5. 用固定性校验和把内容与元数据绑定，记录到保存层。"
+        },
+        {
+          "kind": "table",
+          "caption": "四类元数据与承载标准",
+          "rows": [
+            {
+              "c1": "描述",
+              "c2": "IPTC 照片元数据标准",
+              "c3": "题名、创作者、日期、地点、权利、索引词",
+              "c4": "嵌入或边车",
+              "head": [
+                "层次",
+                "承载标准",
+                "主要内容",
+                "载体"
+              ]
+            },
+            {
+              "c1": "技术",
+              "c2": "Exif",
+              "c3": "设备、曝光、扫描仪参数",
+              "c4": "嵌入"
+            },
+            {
+              "c1": "保存",
+              "c2": "PREMIS",
+              "c3": "固定性、溯源、事件、代理",
+              "c4": "边车或 XML"
+            },
+            {
+              "c1": "结构",
+              "c2": "METS",
+              "c3": "文件清单、层级、管理信息",
+              "c4": "XML"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "各标准的版本号取自各自规范页的当前声明。机构在采购或建设时按规范页核对版本，并记录引用日期。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "IPTC Photo Metadata Standard, specification",
+          "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata",
+          "kind": "standard",
+          "note": "当前版本 2025.1 修订 1、两套元数据模式、规范以知识共享署名 4.0 许可发布。"
+        },
+        {
+          "name": "PREMIS Data Dictionary, Library of Congress",
+          "url": "https://www.loc.gov/standards/premis/",
+          "kind": "standard",
+          "note": "保存元数据国际标准，当前版本 3.0，由数据字典、XML 模式与配套文档组成。"
+        },
+        {
+          "name": "Metadata Encoding and Transmission Standard (METS), Library of Congress",
+          "url": "https://www.loc.gov/standards/mets/",
+          "kind": "standard",
+          "note": "第 2 版模式 2025 年 3 月 3 日发布；第 1 版模式与外部模式、配置文件、实现登记表仍在提供。"
+        },
+        {
+          "name": "Recommended Formats Statement, Still Image Works, Library of Congress",
+          "url": "https://www.loc.gov/preservation/resources/rfs/stillimg.html",
+          "kind": "archive",
+          "note": "元数据嵌入与边车文件两条路径，必备与可用的字段清单。"
+        },
+        {
+          "name": "Exif 2.2, Format Description Document fdd000146, Library of Congress",
+          "url": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000146.shtml",
+          "kind": "archive",
+          "note": "Exif 版本与像素构成，以及推荐格式声明未强制使用 Exif 的说明。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "archive.file-formats"
+        ],
+        "next": [
+          "archive.digital-preservation"
+        ],
+        "related": [
+          "archive.digitization-strategy",
+          "archive.storage-and-backup"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "哪一类元数据记录校验、迁移与衍生事件？",
+          "type": "single",
+          "options": [
+            "描述元数据",
+            "技术元数据",
+            "保存元数据",
+            "结构元数据"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "保存元数据标准 PREMIS 按五类信息组织，其中固定性与溯源事件记录校验、迁移与衍生。"
+        },
+        {
+          "q": "IPTC 照片元数据标准的当前版本是？",
+          "type": "single",
+          "options": [
+            "2023.1",
+            "2024.1",
+            "2025.1 修订 1",
+            "2026.1"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "规范页声明当前版本为 2025.1 修订 1。"
+        },
+        {
+          "q": "METS 第 2 版模式发布于哪一年？",
+          "type": "single",
+          "options": [
+            "2015 年",
+            "2020 年",
+            "2025 年",
+            "2026 年"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "METS 第 2 版模式于 2025 年 3 月 3 日发布。"
+        },
+        {
+          "q": "国会图书馆的静像推荐格式声明强制要求使用 Exif 数据。",
+          "type": "bool",
+          "options": [
+            "是",
+            "否"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "格式说明文档写明推荐格式声明并未强制或建议使用 Exif 数据。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "archive.mold-treatment",
+      "title": "霉菌处置",
+      "title_en": "Mold Remediation",
+      "aliases": [
+        "mold remediation",
+        "除霉",
+        "杀真菌",
+        "ethanol",
+        "乙醇",
+        "freeze inactivation",
+        "HEPA vacuum"
+      ],
+      "type": "chemical",
+      "level": 4,
+      "era": "1960s 至今",
+      "tags": [
+        "霉菌",
+        "除霉",
+        "乙醇",
+        "冻结",
+        "干法清理"
+      ],
+      "summary": "除霉分两级阈值：先干法清理，再按需加杀真菌处理。杀真菌处理用乙醇与水的混合液。冻结能杀死正在生长的霉菌，孢子仍存活。明胶一旦被酶破坏即不可逆。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "两级阈值"
+        },
+        {
+          "kind": "p",
+          "text": "美国文物保护学会修复组词条把处置分成两级。阈值一执行干法清理，该步骤本身不具杀真菌作用。阈值二在干法清理之外追加杀真菌处理。该词条同时写明：杀死真菌后，用户面临的健康风险依然存在；杀真菌处理不是预防措施。"
+        },
+        {
+          "kind": "h2",
+          "text": "干法清理步骤"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            {
+              "t": "抽吸",
+              "d": "用带高效颗粒滤层（HEPA）或水捕获的吸尘器。吸嘴距材料约 10 cm。"
+            },
+            {
+              "t": "刷动",
+              "d": "用专用于除霉工作的软毛刷，把霉菌刷向吸嘴。轻压，避免把霉菌压进材料。"
+            },
+            {
+              "t": "两面各两次",
+              "d": "先竖向再横向，每个面各刷两次。脆弱材料加聚酯网屏作为界面。"
+            },
+            {
+              "t": "隔离",
+              "d": "作业区保持负压或隔离，作业后对环境与器具做清理。"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "杀真菌工作液配方"
+        },
+        {
+          "kind": "formula",
+          "caption": "乙醇水工作液",
+          "text": "原液：乙醇与水按体积 70 比 30 混合。工作液：直接使用，不做稀释。温度：22 °C 室温。处理方式一：浸泡，处理时间 2.5 分钟。处理方式二：蒸气处理，处理时间 2 小时。喷淋方式达到抑菌效果，纸基需 3 天才显现。"
+        },
+        {
+          "kind": "p",
+          "text": "该词条解释配比原因：未稀释的醇没有抗真菌作用，需要与水混合才能渗入真菌细胞壁。70 比 30 的乙醇水混合液杀真菌效果最好。甲醇效果最强但有毒，因此以乙醇为首选。"
+        },
+        {
+          "kind": "warn",
+          "text": "该词条同时记录了三种配比在不同材料上的副作用。70 比 30 浸泡会溶解彩色树脂涂层纸的部分染料；在 Ektachrome 上会引起醋酸片基强烈不可逆的平面变形；70 比 30 蒸气处理 2 小时、22 °C 下纸张外观保持不变，但会使醋酸片基产生强烈不可逆的平面变形，并使彩色照片变色。逐次 30 比 70 再 70 比 30 的乙醇水浴在 Kodachrome 与 Ektachrome 上未出现颜色或机械变化。"
+        },
+        {
+          "kind": "note",
+          "text": "乙醇水工作液的原液保存期与工作液保存期在来源文档中未给出。乙醇挥发使配比漂移，因此按单次作业量现配现用，剩余液体在两周内用完。保存期数值需以所用溶剂厂商说明书为准。配方中的比例按体积计，配制后即刻使用。"
+        },
+        {
+          "kind": "table",
+          "caption": "乙醇水方案的三种作用方式",
+          "rows": [
+            {
+              "c1": "浸泡",
+              "c2": "70 比 30 乙醇水，纸基 2.5 分钟",
+              "c3": "杀真菌",
+              "c4": "醋酸片基与彩色树脂涂层纸有变形与染料风险",
+              "head": [
+                "方式",
+                "参数",
+                "效果",
+                "注意"
+              ]
+            },
+            {
+              "c1": "蒸气",
+              "c2": "70 比 30 乙醇水，22 °C，2 小时",
+              "c3": "纸基与银明胶照片杀真菌",
+              "c4": "醋酸片基出现强烈不可逆平面变形"
+            },
+            {
+              "c1": "喷淋",
+              "c2": "乙醇水",
+              "c3": "抑菌，纸基需 3 天延迟显现",
+              "c4": "用于已干法清理的材料做补充"
+            },
+            {
+              "c1": "顺序浴",
+              "c2": "先 30 比 70，再 70 比 30",
+              "c3": "Kodachrome 与 Ektachrome 上无颜色与机械变化",
+              "c4": "适合醋酸片基彩色片"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "冻结处置"
+        },
+        {
+          "kind": "p",
+          "text": "加拿大文物保护研究所的应急响应页把冻结列为杀死正在生长的霉菌的快速方法，同时写明孢子能耐受低温并保持活性。该所给出的参数是：家用卧式冷冻柜一般工作在零下 18 °C 到零下 28 °C，可处理少量物件；冻结前把物件装入透明聚乙烯袋密封。大件可租用步入式冷冻柜或冷冻卡车。"
+        },
+        {
+          "kind": "p",
+          "text": "该所把纺织物、兽皮、羽毛、皮革、纸与木材列为可冻结对象，把玻璃干板负片、油画与丙烯画列为不推荐冻结的对象。"
+        },
+        {
+          "kind": "warn",
+          "text": "美国文物保护学会修复组词条写明：冻结不是杀真菌技术，照片需要冻结到零下 20 °C 才能完全停止霉菌生长。高于此温度时生长只是变慢。该词条另写明，干孢子在冻结后仍保持活性。"
+        },
+        {
+          "kind": "h2",
+          "text": "其他处理手段的现状"
+        },
+        {
+          "kind": "p",
+          "text": "该词条评估了多种历史与现行手段。环氧乙烷自 1929 年起具杀真菌作用，1960 年代广泛使用，之后在美国、加拿大与部分欧洲国家受限，法国等国仍在使用，与二氧化碳按 30 比 70、15 比 85、10 比 90 的体积比混合使用；该词条记录它会断裂明胶链、降低乳剂黏度，并使硝酸片基轻微收缩。钴 60 伽马射线按种类与阶段不同需 3 到 25 kGy 的致死剂量，但会降解纤维素并使其变黄变脆。缺氧处理把氧含量降到 0.1% 以下，加拿大国家研究委员会测试 37 株霉菌，10 株被破坏，其余仍存活。紫外线、微波与真空干燥均不作为单独处置手段。"
+        },
+        {
+          "kind": "p",
+          "text": "该词条对两种商用生物杀灭剂给出明确结论：目前不建议用它们处理照片材料，原因是残留铝、油腻手感与光学变化。被禁用的历史药剂包括甲醛、百里酚、邻苯基酚与季铵盐，以及柯达 1,1,2-三氯-1,1,2-三氟乙烷清洁剂，该清洁剂对明胶粘结剂与塑料片基无不良影响，已在《蒙特利尔议定书》之后淘汰。"
+        },
+        {
+          "kind": "h2",
+          "text": "处置顺序"
+        },
+        {
+          "kind": "ol",
+          "text": "1. 请有经验的保护专业人员判断，图像永久性研究所把这一步列为第一项。\n2. 按面积定级并配置防护装备，装备要求见 $archive.mold-prevention。\n3. 隔离藏品，装入密封箱或袋。\n4. 干法清理。\n5. 超过阈值一时追加杀真菌处理。\n6. 转入低温低湿环境，处置不替代预防。"
+        },
+        {
+          "kind": "note",
+          "text": "图像永久性研究所写明：一旦霉菌侵入明胶，损伤不可逆。加拿大文物保护研究所写明：霉菌孢子无需保持活性即可保留致敏与产毒特性。"
+        },
+        {
+          "kind": "p",
+          "text": "预防阈值见 $archive.mold-prevention。作业环境与手套要求见 $archive.cleaning-and-handling。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Photographic Materials Group, Mold Remediation, AIC Conservation Wiki",
+          "url": "https://conservation-wiki.com/wiki/PMG_Mold_Remediation",
+          "kind": "article",
+          "note": "两级阈值、干法清理四步、70 比 30 乙醇水配比与四种作用方式的参数与副作用、环氧乙烷与伽马射线剂量、缺氧法结果、两种商用杀灭剂的禁用结论、历史药剂清单。"
+        },
+        {
+          "name": "Mould Outbreak – An Immediate Response, Canadian Conservation Institute",
+          "url": "https://www.canada.ca/en/conservation-institute/services/preventive-conservation/mould-outbreak-immediate-response.html",
+          "kind": "article",
+          "note": "家用冷冻柜零下 18 °C 到零下 28 °C 的工作区间、透明聚乙烯袋封装要求、可冻结与不推荐冻结的物件清单。"
+        },
+        {
+          "name": "Mold, Image Permanence Institute FilmCare",
+          "url": "https://www.filmcare.org/vd_mold.php",
+          "kind": "manual",
+          "note": "先咨询专业人员、通风与防护要求、包装外部清洁、霉菌侵入明胶后不可逆的表述。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "archive.mold-prevention"
+        ],
+        "next": [
+          "archive.cleaning-and-handling"
+        ],
+        "related": [
+          "archive.storage-environment",
+          "archive.mould-removal"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "杀真菌用的乙醇水配比是？",
+          "type": "single",
+          "options": [
+            "95 比 5",
+            "70 比 30",
+            "50 比 50",
+            "100 比 0"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "未稀释的醇没有抗真菌作用，需要与水混合才能渗入细胞壁；70 比 30 的乙醇水混合液杀真菌效果最好。"
+        },
+        {
+          "q": "未稀释的乙醇对霉菌的作用是？",
+          "type": "single",
+          "options": [
+            "杀真菌",
+            "抑菌",
+            "无效",
+            "促进生长"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "来源文档写明未稀释的醇没有抗真菌作用，必须与水混合才能渗入真菌细胞。"
+        },
+        {
+          "q": "家用卧式冷冻柜的常见工作温度区间是？",
+          "type": "single",
+          "options": [
+            "0 °C 到 -5 °C",
+            "-18 °C 到 -28 °C",
+            "-40 °C 到 -50 °C",
+            "5 °C 到 10 °C"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "加拿大文物保护研究所写明家用卧式冷冻柜一般工作在 -18 °C 到 -28 °C，可处理少量物件。"
+        },
+        {
+          "q": "冻结构成杀真菌处理手段。",
+          "type": "bool",
+          "options": [
+            "是",
+            "否"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "冻结能杀死正在生长的霉菌，孢子仍能耐受并保持活性；美国文物保护学会词条称冻结不是杀真菌技术，需 -20 °C 才完全停止生长。"
+        }
+      ],
+      "checklist": [
+        "确认作业区的防护等级与呼吸防护。",
+        "先干法清理，再判断是否需要杀真菌处理。",
+        "醋酸片基彩色片按先 30 比 70 再 70 比 30 的顺序浴处理。",
+        "冻结前把物件装入透明聚乙烯袋密封。",
+        "处置完成后转入低温低湿环境。"
+      ],
+      "updated": "2026-10-09",
+      "status": "draft"
+    },
+    {
+      "id": "archive.storage-and-backup",
+      "title": "存储与备份",
+      "title_en": "Digital Storage and Backup",
+      "aliases": [
+        "3-2-1",
+        "备份",
+        "异地副本",
+        "checksum",
+        "校验和",
+        "geographically separated"
+      ],
+      "type": "process",
+      "level": 3,
+      "era": "2000s 至今",
+      "tags": [
+        "备份",
+        "副本",
+        "校验和",
+        "异地",
+        "灾难恢复"
+      ],
+      "summary": "副本策略是保存的第一道保险。三份副本放在两种以上介质上，其中一份异地。备份与数字保存的区别在于校验和迁移。原件冷存储与数字副本并行。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "3-2-1 规则"
+        },
+        {
+          "kind": "p",
+          "text": "3-2-1 规则由摄影师兼作者推广，被信息技术人员、档案工作者与数字保存专家广泛采用。规则要求保存三份数据副本，放在两种不同类型的介质上，其中一份放在异地。异地副本的作用是应对火灾、水灾与盗窃这类同时破坏本地副本的灾害。"
+        },
+        {
+          "kind": "note",
+          "text": "该规则的上述表述取自一份厂商博客。公共机构的做法表述宜与数字保存等级文件核对。本库未取到把该规则归于某一政府机构的权威页面。"
+        },
+        {
+          "kind": "h2",
+          "text": "备份与数字保存的差别"
+        },
+        {
+          "kind": "p",
+          "text": "单纯备份解决副本数量问题。数字保存还要解决两类时间相关的问题。第一类是完整性丢失：磁盘静默损坏后副本数量不变但内容已变，因此每次写入与定期巡检都要计算校验和并比对。第二类是格式过时：载体可读时格式仍可能失去支持，因此需要按计划迁移。"
+        },
+        {
+          "kind": "table",
+          "caption": "副本与校验动作",
+          "rows": [
+            {
+              "c1": "写入时计算校验和",
+              "c2": "每次新增或修改",
+              "c3": "校验和随文件一同保存",
+              "head": [
+                "动作",
+                "频率",
+                "记录"
+              ]
+            },
+            {
+              "c1": "完整性巡检",
+              "c2": "按固定周期",
+              "c3": "巡检结果与差异清单"
+            },
+            {
+              "c1": "格式复核",
+              "c2": "按格式寿命设定",
+              "c3": "格式风险评估记录"
+            },
+            {
+              "c1": "恢复演练",
+              "c2": "按固定周期",
+              "c3": "演练记录与实际耗时"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "介质与布局"
+        },
+        {
+          "kind": "ul",
+          "text": "- 两种以上介质意味着在线阵列与离线介质分开，避免同一控制器的单点故障。\n- 文件布局规范（OCFL）的存储多样性一条允许后端使用常规文件系统或对象存储。\n- 打包规范（BagIt）的清单文件把内容与标签固定为可校验的一组。\n- 迁移时新旧副本同时保留，直到新副本通过完整性与可读性校验。"
+        },
+        {
+          "kind": "h2",
+          "text": "与原件冷存储的关系"
+        },
+        {
+          "kind": "p",
+          "text": "数字副本替代不了原件。醋酸综合症只能靠低温低湿延缓，胶片也可能在扫描之后继续收缩。因此原件按 $archive.storage-environment 与 $archive.cold-storage 保存，数字副本按本条目保存，两者并行执行。反过来，原件在扫描与复制之前需要完成回温与湿度平衡。"
+        },
+        {
+          "kind": "p",
+          "text": "相关条目：$archive.digital-preservation、$archive.file-formats。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "The 3-2-1 Backup Rule, Backblaze",
+          "url": "https://www.permanent.org/blog/the-3-2-1-backup-rule/",
+          "kind": "article",
+          "note": "三份副本、两种介质、一份异地的表述与异地副本的作用。"
+        },
+        {
+          "name": "Levels of Digital Preservation, National Digital Stewardship Alliance",
+          "url": "https://www.ndsa.org/publications/levels-of-digital-preservation/",
+          "kind": "article",
+          "note": "2.1 版实施指南与工作定义文件位置，用于核对机构级副本与校验动作。"
+        },
+        {
+          "name": "Oxford Common File Layout specification, version 1.1",
+          "url": "https://ocfl.io/1.1/spec/",
+          "kind": "standard",
+          "note": "存储多样性、完整性、可解析性与版本化等存储布局要求。"
+        },
+        {
+          "name": "Low Temperature Storage Implementation Basics, Image Permanence Institute",
+          "url": "https://filmcare.org/lowtempstorage.php",
+          "kind": "manual",
+          "note": "原件冷冻包装与回温要求，说明原件保存与数字副本是两条并行的线。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "archive.file-formats"
+        ],
+        "next": [],
+        "related": [
+          "archive.digital-preservation",
+          "archive.storage-environment"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "3-2-1 规则指什么？",
+          "type": "single",
+          "options": [
+            "三份副本、两种介质、一份异地",
+            "三份副本、两种格式、一份加密",
+            "两份副本、两种介质、一份本地",
+            "一份副本、两种介质、三次备份"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "规则要求三份数据副本、两种不同类型的介质，其中一份异地存放。"
+        },
+        {
+          "q": "备份与数字保存的主要差别之一是？",
+          "type": "single",
+          "options": [
+            "副本数量",
+            "完整性校验与格式迁移",
+            "存储成本",
+            "访问速度"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "单纯备份解决副本数量；数字保存还要解决静默损坏导致的完整性丢失与格式过时。"
+        },
+        {
+          "q": "异地副本主要用于应对哪类风险？",
+          "type": "single",
+          "options": [
+            "误删除单个文件",
+            "磁盘静默损坏",
+            "火灾、水灾与盗窃",
+            "格式过时"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "异地副本应对同时破坏本地副本的灾害，如火灾、水灾与盗窃。"
+        }
+      ],
+      "checklist": [
+        "确认三份副本分布在两种以上介质上。",
+        "确认至少一份副本异地存放。",
+        "为每个文件生成校验和并保存记录。",
+        "设定完整性巡检与恢复演练周期。"
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    }
+  ]
+}

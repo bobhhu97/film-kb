@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "language": "zh-CN",
+  "modules": [
+    {
+      "id": "film-stock",
+      "name": "胶片与相纸",
+      "name_en": "Film Stocks & Paper",
+      "color": "#d98a3f",
+      "icon": "01",
+      "desc": "片基、乳剂、感光度、特性曲线、胶片与相纸的种类与年代。"
+    },
+    {
+      "id": "capture",
+      "name": "拍摄与曝光",
+      "name_en": "Shooting & Exposure",
+      "color": "#c9a648",
+      "icon": "02",
+      "desc": "测光、曝光、镜头、机身、滤镜、胶片相机操作与特殊技法。"
+    },
+    {
+      "id": "bw-process",
+      "name": "黑白冲洗化学",
+      "name_en": "B&W Chemistry",
+      "color": "#93a04a",
+      "icon": "03",
+      "desc": "显影液成分与工作原理、药液配方、显影控制、冲洗流程。"
+    },
+    {
+      "id": "color-process",
+      "name": "彩色冲洗",
+      "name_en": "Color Processing",
+      "color": "#c1624f",
+      "icon": "04",
+      "desc": "C-41、E-6、VEBRA/RA-4 工艺、药液配方与色彩控制。"
+    },
+    {
+      "id": "process-equipment",
+      "name": "冲洗设备与工艺沿革",
+      "name_en": "Process & Equipment History",
+      "color": "#9179ad",
+      "icon": "05",
+      "desc": "从手工盘式到旋转式、轴式、喷淋式、数码混合冲洗机的年代演变与差异。"
+    },
+    {
+      "id": "printing",
+      "name": "放大与印放",
+      "name_en": "Enlarging & Printing",
+      "color": "#b8708c",
+      "icon": "06",
+      "desc": "放大机、相纸、曝光测试、放大配方、局部控制、印样与冲印。"
+    },
+    {
+      "id": "scanning",
+      "name": "扫描与数字化",
+      "name_en": "Film Scanning",
+      "color": "#4f8fae",
+      "icon": "07",
+      "desc": "扫描原理、光源与传感器对比、机型逐一设置、软件流程、色彩管理与扫描技巧。"
+    },
+    {
+      "id": "archive",
+      "name": "保存与档案",
+      "name_en": "Storage & Archive",
+      "color": "#5d9179",
+      "icon": "08",
+      "desc": "保存环境、片基分解、霉菌处理、清洁、档案级数字保存。"
+    }
+  ],
+  "entry_types": [
+    {
+      "id": "concept",
+      "name": "概念"
+    },
+    {
+      "id": "process",
+      "name": "工艺流程"
+    },
+    {
+      "id": "equipment",
+      "name": "设备"
+    },
+    {
+      "id": "chemical",
+      "name": "药液/配方"
+    },
+    {
+      "id": "film",
+      "name": "胶片/相纸型号"
+    },
+    {
+      "id": "setting",
+      "name": "设置方案"
+    },
+    {
+      "id": "timeline",
+      "name": "年代沿革"
+    },
+    {
+      "id": "technique",
+      "name": "技法"
+    },
+    {
+      "id": "pitfall",
+      "name": "常见错误"
+    },
+    {
+      "id": "comparison",
+      "name": "对比"
+    },
+    {
+      "id": "table",
+      "name": "速查表"
+    }
+  ],
+  "levels": [
+    {
+      "n": 1,
+      "name": "入门",
+      "desc": "零基础可读。"
+    },
+    {
+      "n": 2,
+      "name": "基础",
+      "desc": "有摄影基础可读。"
+    },
+    {
+      "n": 3,
+      "name": "进阶",
+      "desc": "自己动手冲洗前必读。"
+    },
+    {
+      "n": 4,
+      "name": "专业",
+      "desc": "含精确配方、机型号差异。"
+    },
+    {
+      "n": 5,
+      "name": "考据",
+      "desc": "年代考据、冷门细节，需核对 refs。"
+    }
+  ]
+}

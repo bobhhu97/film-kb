@@ -1,0 +1,3661 @@
+{
+  "module": "film-stock",
+  "shard": "film-stock.02",
+  "shard_zh": "胶片与相纸的种类与型号",
+  "note": "按用途列出黑白负片、彩色负片、反转片、黑白相纸与彩色相纸的主要在产型号。每条型号条目写明推出年代、生产区间、核心工艺、相对上一代的变化、关键规格与在产状态。停产年份只在有公开来源时写。",
+  "entries": [
+    {
+      "id": "film-stock.kodak-tri-x-400",
+      "title": "柯达 Tri-X 400 黑白负片",
+      "title_en": "Kodak Professional T-X 400 (TRI-X)",
+      "aliases": [
+        "Tri-X",
+        "TRI-X",
+        "400TX",
+        "Tri-X 400",
+        "三X"
+      ],
+      "type": "film",
+      "level": 3,
+      "era": "1940 至今",
+      "tags": [
+        "黑白负片",
+        "全色",
+        "新闻摄影",
+        "在产"
+      ],
+      "summary": "Tri-X 是 Kodak 的通用型高感全色黑白负片。它推出于 1940 年。当前在产两个速度：ISO 400 的 400TX 和 ISO 320 的 TRI-X 320。它以宽曝光容度和稳定的显影曲线用于新闻、纪实和运动摄影。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "推出与变迁"
+        },
+        {
+          "kind": "p",
+          "text": "Tri-X 于 1940 年以片装（sheet film）形式推出。当时标称 ASA 200（日光）与 ASA 160（钨丝灯）。1954 年推出 35 mm 与 120 卷装。1960 年前后，ASA 标准修订，同一批乳剂的名义感光度由 200 改为 400。乳剂本身未改。2007 年 Kodak 重新设计该片，型号由 TX 与 TX400 改为 400TX，颗粒变细，含银量下降。"
+        },
+        {
+          "kind": "p",
+          "text": "2013 年至 2025 年由 Kodak Alaris 经销。2026 年 1 月起，Eastman Kodak 重新直接经销 Tri-X 与 Ektar 等产品。"
+        },
+        {
+          "kind": "h2",
+          "text": "关键规格"
+        },
+        {
+          "kind": "table",
+          "caption": "Tri-X 在产规格",
+          "rows": [
+            {
+              "c1": "400TX",
+              "c2": "ISO 400 / 27°",
+              "c3": "全色，片状颗粒感光乳剂",
+              "c4": "24/135、36/135、120、35 mm 与 100 ft 卷装",
+              "c5": "标准冲洗可用 EI 800；更精细的显影控制可支持 EI 1600"
+            },
+            {
+              "c1": "TRI-X 320",
+              "c2": "ISO 320 / 26°",
+              "c3": "全色，颗粒较细",
+              "c4": "4×5、5×7、8×10 片装",
+              "c5": "在产"
+            },
+            {
+              "c1": "Tri-X 反转片 7266",
+              "c2": "ISO 200 日光 / 160 钨丝",
+              "c3": "16 mm 与 Super 8 电影胶片",
+              "c4": "16 mm",
+              "c5": "在产，用 $bw-process.d-76 之外的厂商反转工艺处理"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "按 ISO 400 冲洗时，400TX 达到标称速度。把片速提高到 EI 800 时反差和颗粒明显上升。参见 $bw-process.push-pull 与 $film-stock.latitude。"
+        },
+        {
+          "kind": "h2",
+          "text": "冲洗选择"
+        },
+        {
+          "kind": "p",
+          "text": "Tri-X 在标准显影与稀释显影（stand development）中都可工作。选择显影液类型时考虑反差、颗粒与冲洗时间的关系，参见 $bw-process.developer-types。"
+        },
+        {
+          "kind": "settings",
+          "caption": "400TX 的常规冲洗条件",
+          "items": [
+            {
+              "t": "标准显影液",
+              "d": "D-76 原液 1+1，20 °C，6 分 45 秒（厂商数据值，按药液说明书复核）"
+            },
+            {
+              "t": "稀释显影液",
+              "d": "Rodinal 1+100，20 °C，约 75 分钟，配合间歇搅拌，参见 $bw-process.mixing-temp-control"
+            },
+            {
+              "t": "定影",
+              "d": "定影至透明；片状颗粒晶体溶解慢，稀释定影液中把定影时间加倍，参见 $bw-process.stop-bath-fix"
+            },
+            {
+              "t": "水洗",
+              "d": "流水冲洗 20 分钟，之后充分晾干，参见 $bw-process.washing-storage"
+            }
+          ]
+        },
+        {
+          "kind": "tip",
+          "text": "Tri-X 的颗粒结构属于传统立方体颗粒。追求更细颗粒和更高分辨率时改用 $film-stock.kodak-t-max。要求更高反差时改用 $film-stock.ilford-delta。"
+        },
+        {
+          "kind": "h2",
+          "text": "为什么它长期在产"
+        },
+        {
+          "kind": "p",
+          "text": "Tri-X 在 1970 年代至 1980 年代随彩色胶片普及而销量下降。数码化后，报刊大幅减少用胶片。它的产线与 emulsion 配方规模仍可维持，成本低于新设计。当前是黑白负片产量的基准型号。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Kodak T-MAX and TRI-X film 页面（Kodak Alaris，2026 访问）",
+          "url": "https://kodakprofessional.com/en-gb/photographers/film/black-white",
+          "kind": "manufacturer",
+          "note": "在产状态与可获得规格。"
+        },
+        {
+          "name": "Kodak TRI-X 400TX data sheet F-4017（2007）",
+          "url": "https://125px.com/docs/film/kodak/f4017-400TX-2007.pdf",
+          "kind": "manufacturer",
+          "note": "厂商曲线与冲洗条件；需以最新说明书复核。"
+        },
+        {
+          "name": "Tri-X (film) — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Kodak_Tri-X",
+          "kind": "article",
+          "note": "推出年代、规格变迁与经销权变化。"
+        },
+        {
+          "name": "Kodak Regains Direct Distribution of Ektar and Tri-X (2026-01)",
+          "url": "https://petapixel.com/2026/01/21/ektar-and-tri-x-are-now-being-distributed-directly-by-kodak/",
+          "kind": "article"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "film-stock.halide-crystal"
+        ],
+        "next": [
+          "film-stock.kodak-t-max",
+          "bw-process.d-76"
+        ],
+        "related": [
+          "film-stock.grain",
+          "film-stock.iso-speed",
+          "bw-process.push-pull",
+          "film-stock.film-comparison"
+        ],
+        "contrast": [
+          "film-stock.kodak-t-max",
+          "film-stock.ilford-hp5-plus"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Tri-X 400TX 的标称感光度是多少？",
+          "type": "single",
+          "options": [
+            "ISO 100",
+            "ISO 160",
+            "ISO 320",
+            "ISO 400"
+          ],
+          "answer": [
+            3
+          ],
+          "why": "400TX 是 ISO 400 / 27°。ISO 320 对应 TRI-X 320 片装。"
+        },
+        {
+          "q": "Tri-X 在 1960 年前后标称感光度由 ASA 200 变为 400，原因为何？",
+          "type": "single",
+          "options": [
+            "乳剂重新配方",
+            "ASA 标准修订",
+            "片基从醋酸改为聚酯",
+            "显影液更换"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "这次变化来自 ASA 感光度标准的修订，不是乳剂改动。"
+        },
+        {
+          "q": "稀释显影液中定影时间需要加长的原因是？",
+          "type": "single",
+          "options": [
+            "片基密度高",
+            "片状颗粒晶体主要从边缘溶解",
+            "银盐颗粒变细",
+            "防灰雾层被溶解除"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "片状颗粒晶体的棱边是主要溶解位置，定影速度比传统颗粒慢。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.kodak-t-max",
+      "title": "柯达 T-MAX 黑白负片系列",
+      "title_en": "Kodak Professional T-MAX Films",
+      "aliases": [
+        "T-Max",
+        "T-MAX",
+        "TMX",
+        "TMY",
+        "TMZ",
+        "P3200",
+        "T-Grain"
+      ],
+      "type": "film",
+      "level": 3,
+      "era": "1986 至今",
+      "tags": [
+        "黑白负片",
+        "片状颗粒",
+        "高感",
+        "在产"
+      ],
+      "summary": "T-MAX 是 Kodak 的片状颗粒（tabular grain, T-grain）黑白负片系列，1986 年推出。它把颗粒的平面取向用于提升分辨率。当前在产型号为 T-MAX 100、T-MAX 400 和 T-MAX P3200。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "核心工艺"
+        },
+        {
+          "kind": "p",
+          "text": "T-MAX 使用片状颗粒乳剂。晶体呈扁平形，涂布时平行于片基表面排列。扁平晶体的散射光较少，因此提高分辨率并降低可见颗粒感。参见 $film-stock.emulsion-crystal 与 $film-stock.grain。"
+        },
+        {
+          "kind": "note",
+          "text": "片状颗粒本身不等于倒易律失效改善。倒易律改善来自同期多项工艺，参见 $film-stock.emulsion-crystal。"
+        },
+        {
+          "kind": "h2",
+          "text": "型号与规格"
+        },
+        {
+          "kind": "table",
+          "caption": "T-MAX 系列在产规格",
+          "rows": [
+            {
+              "c1": "T-MAX 100（TMX）",
+              "c2": "ISO 100 / 21°",
+              "c3": "分辨率约 200 线/mm",
+              "c4": "24/135、36/135、120、4×5、5×7、8×10、35/100 ft",
+              "c5": "在产；常用作镜头分辨率测试片"
+            },
+            {
+              "c1": "T-MAX 400（TMY）",
+              "c2": "ISO 400 / 27°",
+              "c3": "2007 年改版后分辨率约 200 线/mm",
+              "c4": "24/135、36/135、120、4×5 至 20×24、35/100 ft",
+              "c5": "在产"
+            },
+            {
+              "c1": "T-MAX P3200（TMZ）",
+              "c2": "标称 ISO 3200，实际按 EI 800–1000 曝光",
+              "c3": "多速胶片；片边标记 TMZ；135 盒装 DX 编码为 3200",
+              "c4": "36/135",
+              "c5": "在产；推荐 EI 1600–25000"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "推出与停产记录"
+        },
+        {
+          "kind": "timeline",
+          "caption": "T-MAX 系列大事",
+          "rows": [
+            {
+              "c1": "1986",
+              "c2": "Eastman Kodak 开始生产 T-MAX 片状颗粒黑白负片",
+              "c3": "T 颗粒进入量产"
+            },
+            {
+              "c1": "2002",
+              "c2": "名称由 Kodak T-MAX Professional 改为 Kodak Professional T-MAX",
+              "c3": "差异在显影时间表"
+            },
+            {
+              "c1": "2007",
+              "c2": "TMY 改版为 TMY-2，分辨率提升",
+              "c3": "400 速度达到 200 线/mm"
+            },
+            {
+              "c1": "2012-10-01",
+              "c2": "T-MAX P3200 停产",
+              "c3": "需求量有限"
+            },
+            {
+              "c1": "2018-03",
+              "c2": "P3200 恢复生产",
+              "c3": "2018 年 2 月 23 日宣布，3 月到货"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "与 Tri-X 的关系"
+        },
+        {
+          "kind": "compare",
+          "caption": "T-MAX 400 与 Tri-X 400 的定位",
+          "rows": [
+            {
+              "c1": "颗粒结构",
+              "c2": "片状颗粒，颗粒感低",
+              "c3": "传统颗粒，颗粒感明显",
+              "c4": "$film-stock.grain",
+              "c5": "在需要细腻影调时用 T-MAX；在需要粗颗粒质感时用 Tri-X"
+            },
+            {
+              "c1": "反差",
+              "c2": "中低反差",
+              "c3": "中反差",
+              "c4": "$film-stock.latitude",
+              "c5": "按冲洗液与时间调整"
+            }
+          ]
+        },
+        {
+          "kind": "settings",
+          "caption": "P3200 的曝光与冲洗",
+          "items": [
+            {
+              "t": "曝光",
+              "d": "按 EI 800–1000 测光。DX 编码 3200 对应盒装名义值，实际拍摄按 EI 使用"
+            },
+            {
+              "t": "标准冲洗",
+              "d": "T-MAX 原液 1+4，20 °C，6 分 15 秒（厂商数据值，需以最新说明书复核）"
+            },
+            {
+              "t": "提高感光度",
+              "d": "加长显影时间并配合分步显影，参见 $bw-process.push-pull"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "P3200 是多速胶片。它的实际感光度由显影强度决定，不由盒装标称值决定。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Kodak Professional T-MAX Films 页面（Kodak Alaris）",
+          "url": "https://kodakprofessional.com/en-gb/photographers/film/black-white",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Kodak Publication F-32: T-MAX Professional Films (2002)",
+          "url": "https://web.archive.org/web/20080516231258/http://www.kodak.com/global/en/professional/support/techPubs/f32/f32.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Kodak Publication F-4016: T-MAX 100 and T-MAX 400 Films (2007)",
+          "url": "https://web.archive.org/web/20080509143954/http://www.kodak.com/global/en/professional/support/techPubs/f4016/f4016.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "T-MAX — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Kodak_T-MAX",
+          "kind": "article"
+        },
+        {
+          "name": "Tabular-grain film — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Tabular-grain_film",
+          "kind": "article",
+          "note": "片状颗粒的原理与定影影响。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "film-stock.halide-crystal"
+        ],
+        "next": [
+          "film-stock.ilford-delta",
+          "bw-process.developer-types"
+        ],
+        "related": [
+          "film-stock.grain",
+          "film-stock.latitude"
+        ],
+        "contrast": [
+          "film-stock.kodak-tri-x-400"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "T-MAX 系列的核心工艺是什么？",
+          "type": "single",
+          "options": [
+            "芯壳颗粒",
+            "片状颗粒（T-grain）",
+            "染料型黑白",
+            "染料偶合剂多层"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "T-MAX 使用扁平状、平行片基排列的片状颗粒。"
+        },
+        {
+          "q": "T-MAX P3200 在 2012 年发生了什么？",
+          "type": "single",
+          "options": [
+            "首次推出",
+            "停产",
+            "改成 ISO 800 标称",
+            "改为彩色片"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "2012 年 10 月 1 日停产，2018 年 3 月恢复生产。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.ilford-hp5-plus",
+      "title": "伊尔福德 HP5 Plus 黑白负片",
+      "title_en": "Ilford HP5 Plus",
+      "aliases": [
+        "HP5+",
+        "HP5 Plus",
+        "伊尔福德HP5"
+      ],
+      "type": "film",
+      "level": 3,
+      "era": "1989 至今",
+      "tags": [
+        "黑白负片",
+        "全色",
+        "宽容度",
+        "在产"
+      ],
+      "summary": "HP5 Plus 是 Ilford Photo 的通用型 ISO 400 中反差全色黑白负片。它推出于 1989 年，乳剂沿用 1931 年 HYPan 的技术谱系。它以宽曝光容度和在各种光源下的稳定表现用于纪实、新闻和低光拍摄。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "推出与定位"
+        },
+        {
+          "kind": "p",
+          "text": "HP5 Plus 于 1989 年推出。它的乳剂技术可追溯到 1931 年的 HYPan。它是通用型胶片，不是专用低感或高感片。它的设计目标是宽曝光容度和一致的曲线。"
+        },
+        {
+          "kind": "h2",
+          "text": "关键规格"
+        },
+        {
+          "kind": "table",
+          "caption": "HP5 Plus 规格",
+          "rows": [
+            {
+              "c1": "感光度",
+              "c2": "ISO 400",
+              "c3": "中反差",
+              "c4": "全色（含橙红色盲）",
+              "c5": "宽曝光容度"
+            },
+            {
+              "c1": "片基",
+              "c2": "三醋酸纤维素酯（triacetate）",
+              "c3": "35 mm、120、17 m 与 30.5 m 卷装",
+              "c4": "另有片装与散装裁切长度",
+              "c5": "在产；部分规格为散装（bulk）"
+            },
+            {
+              "c1": "DX 编码",
+              "c2": "135 盒装有 DX 编码",
+              "c3": "编码值与标称速度一致",
+              "c4": "相机读码后设定测光基准",
+              "c5": "改变实际感光度后要重设基准"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "与同类片的相对位置"
+        },
+        {
+          "kind": "compare",
+          "caption": "HP5 Plus 与同速黑白负片",
+          "rows": [
+            {
+              "c1": "颗粒",
+              "c2": "中等，可配合稀释显影降低",
+              "c3": "Tri-X 更粗，T-MAX 400 更细",
+              "c4": "$film-stock.grain",
+              "c5": "按放大倍率要求选择"
+            },
+            {
+              "c1": "容度",
+              "c2": "宽，适合光线变化大的场景",
+              "c3": "T-MAX 400 偏精细，Delta 400 偏高反差",
+              "c4": "$film-stock.latitude",
+              "c5": "在弱光与强反差场景中容度更实用"
+            }
+          ]
+        },
+        {
+          "kind": "settings",
+          "caption": "HP5 Plus 的常规冲洗",
+          "items": [
+            {
+              "t": "标准显影",
+              "d": "Ilford ID-11 或 Ilfotec DD 原液 1+1，20 °C，7 分 30 秒（按厂商冲洗表复核）"
+            },
+            {
+              "t": "稀释显影",
+              "d": "1+4，20 °C，延长到约 13 分钟，获得更高反差"
+            },
+            {
+              "t": "推片",
+              "d": "把片速提高到 EI 800 或 1600 时加长显影时间，参见 $bw-process.push-pull"
+            },
+            {
+              "t": "冲洗设备",
+              "d": "旋转式冲洗机适合温度控制，参见 $process-equipment.tank 与 $process-equipment.rotator"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "Ilford 的产品可用性清单（Product Availability List）与厂商技术资料页提供当前可获得的规格。规格随地区与时间变化，拍摄前复核。"
+        },
+        {
+          "kind": "h2",
+          "text": "厂商与生产"
+        },
+        {
+          "kind": "p",
+          "text": "Ilford Photo 由 Harman Technology Ltd 运营，1879 年创立。2005 年 2 月管理层收购后成立该公司。2015 年由 Pemberstone Ventures 收购。Ilford Photo 在黑白胶片市场占有大部分份额。参见 $film-stock.film-timeline。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Ilford HP5 Plus Bulk Length Film 页面",
+          "url": "https://www.ilfordphoto.com/hp5-plus-bulk-length-film",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Ilford Photo 技术资料下载页",
+          "url": "https://www.ilfordphoto.com/technical-downloads/",
+          "kind": "manufacturer",
+          "note": "含胶片冲洗表、温度补偿表与齿孔代码表。"
+        },
+        {
+          "name": "Ilford Photo Product Availability List (2024 年 3 月版)",
+          "url": "https://www.ilfordphoto.com/wp/wp-content/uploads/2024/06/PAL-version-1-March-2024.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Ilford Photo — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Ilford_Photo",
+          "kind": "article",
+          "note": "公司史与产品年代。"
+        },
+        {
+          "name": "List of photographic films — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/List_of_photographic_films",
+          "kind": "article",
+          "note": "推出年代与片基代号表。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "film-stock.halide-crystal"
+        ],
+        "next": [
+          "film-stock.ilford-delta",
+          "bw-process.developer-types"
+        ],
+        "related": [
+          "film-stock.latitude"
+        ],
+        "contrast": [
+          "film-stock.kodak-tri-x-400",
+          "film-stock.kodak-t-max"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "HP5 Plus 的标称感光度是多少？",
+          "type": "single",
+          "options": [
+            "ISO 100",
+            "ISO 200",
+            "ISO 400",
+            "ISO 3200"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "HP5 Plus 是 ISO 400 的中反差通用片。"
+        },
+        {
+          "q": "HP5 Plus 的片基是什么？",
+          "type": "single",
+          "options": [
+            "硝酸片基",
+            "三醋酸纤维素酯",
+            "聚酯",
+            "聚碳酸酯"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "Ilford 的 135 与 120 黑白片使用三醋酸纤维素酯片基。"
+        },
+        {
+          "q": "Ilford Photo 目前由哪家公司运营？",
+          "type": "single",
+          "options": [
+            "Kodak Alaris",
+            "Harman Technology",
+            "Fujifilm",
+            "Ilford Imaging Europe"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "Ilford Photo 是 Harman Technology Ltd 的商号。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.ilford-delta",
+      "title": "伊尔福德 Delta 黑白负片系列",
+      "title_en": "Ilford DELTA Films",
+      "aliases": [
+        "Delta 100",
+        "Delta 400",
+        "Delta 3200",
+        "DELTA",
+        "核心壳颗粒"
+      ],
+      "type": "film",
+      "level": 3,
+      "era": "1990 至今",
+      "tags": [
+        "黑白负片",
+        "芯壳颗粒",
+        "高反差",
+        "在产"
+      ],
+      "summary": "Delta 是 Ilford Photo 的芯壳颗粒（core-shell）黑白负片系列。它是 Ilford 对 Kodak T-MAX 的回应。Delta 3200 是面向高感场景的机型。三个速度当前均在产。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "推出与工艺"
+        },
+        {
+          "kind": "p",
+          "text": "Delta 400 于 1990 年推出，Delta 100 于 1992 年推出，Delta 3200 于 1998 年推出。Delta 使用芯壳颗粒技术：晶体的外壳层与核心层的感光特性不同。这种结构提高有效表面积，从而在控制颗粒尺寸的同时提高感光度。参见 $film-stock.emulsion-crystal。"
+        },
+        {
+          "kind": "h2",
+          "text": "型号与规格"
+        },
+        {
+          "kind": "table",
+          "caption": "Delta 系列规格",
+          "rows": [
+            {
+              "c1": "Delta 100",
+              "c2": "ISO 100",
+              "c3": "芯壳颗粒",
+              "c4": "三醋酸纤维素酯片基",
+              "c5": "在产；颗粒细"
+            },
+            {
+              "c1": "Delta 400",
+              "c2": "ISO 400",
+              "c3": "芯壳颗粒，2001 年改版",
+              "c4": "三醋酸纤维素酯片基",
+              "c5": "在产"
+            },
+            {
+              "c1": "Delta 3200",
+              "c2": "标称 ISO 1000，需推片",
+              "c3": "芯壳颗粒",
+              "c4": "三醋酸纤维素酯片基",
+              "c5": "在产；推至 EI 3200 或更高使用"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "显影条件"
+        },
+        {
+          "kind": "settings",
+          "caption": "Delta 的冲洗",
+          "items": [
+            {
+              "t": "Delta 100",
+              "d": "Ilfotec DD 原液 1+4，20 °C，约 10 分钟（按厂商冲洗表复核）"
+            },
+            {
+              "t": "Delta 400",
+              "d": "Ilfotec DD 原液 1+4，20 °C，约 10 分 30 秒（按厂商冲洗表复核）"
+            },
+            {
+              "t": "Delta 3200",
+              "d": "原液 1+4，20 °C，延长显影以达到目标 EI，参见 $bw-process.push-pull"
+            }
+          ]
+        },
+        {
+          "kind": "warn",
+          "text": "Delta 系列按厂商冲洗表给出的时间显影。缩短显影会显著降低反差并提高阴影灰雾。"
+        },
+        {
+          "kind": "h2",
+          "text": "选择依据"
+        },
+        {
+          "kind": "ul",
+          "text": "- 需要明显反差与高锐度的题材选 Delta。\n- 需要柔和连续影调的题材选 $film-stock.ilford-hp5-plus。\n- 需要在放大中保持极细颗粒的题材选 $film-stock.kodak-t-max。\n- 需要在低反差光线中保留层次时按 $film-stock.latitude 比较各型号。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Ilford Photo 技术资料下载页",
+          "url": "https://www.ilfordphoto.com/technical-downloads/film-technical-downloads/",
+          "kind": "manufacturer",
+          "note": "含胶片冲洗表与胶片工艺控制表。"
+        },
+        {
+          "name": "List of photographic films — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/List_of_photographic_films",
+          "kind": "article",
+          "note": "Delta 系列的推出年代与技术描述。"
+        },
+        {
+          "name": "Tabular-grain film — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Tabular-grain_film",
+          "kind": "article",
+          "note": "芯壳与片状颗粒的原理对比。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "film-stock.halide-crystal"
+        ],
+        "next": [
+          "bw-process.developer-types"
+        ],
+        "related": [
+          "film-stock.grain"
+        ],
+        "contrast": [
+          "film-stock.kodak-t-max",
+          "film-stock.ilford-hp5-plus"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Delta 系列使用的晶体结构是？",
+          "type": "single",
+          "options": [
+            "传统立方体",
+            "片状颗粒",
+            "芯壳颗粒",
+            "染料颗粒"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "Delta 使用芯壳颗粒技术。"
+        },
+        {
+          "q": "Delta 3200 的标称感光度是多少？",
+          "type": "single",
+          "options": [
+            "ISO 400",
+            "ISO 1000",
+            "ISO 1600",
+            "ISO 3200"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "标称为 ISO 1000，需推片到 EI 3200 或更高。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.fomapan",
+      "title": "Fomapan 黑白负片系列",
+      "title_en": "Fomapan Black and White Films",
+      "aliases": [
+        "Fomapan",
+        "FOMA",
+        "Fomapan 100",
+        "Fomapan 200",
+        "Fomapan 400",
+        "Foma"
+      ],
+      "type": "film",
+      "level": 3,
+      "era": "1991 至今",
+      "tags": [
+        "黑白负片",
+        "捷克制造",
+        "方块与片状混合",
+        "在产"
+      ],
+      "summary": "Fomapan 是 Foma Bohemia（捷克共和国 Hradec Králové）生产的黑白负片系列。它是仍在生产的传统黑白胶片之一。在产主型号为 Fomapan 100 Classic、Fomapan 200 Creative 与 Fomapan 400 Action。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "厂商"
+        },
+        {
+          "kind": "p",
+          "text": "Foma Bohemia spol. s r.o. 成立于 1921 年，工厂位于捷克共和国 Hradec Králové。它是少数保持传统黑白负片生产的厂商之一。它同时为其他品牌代工涂布，包括 Arista EDU 系列。"
+        },
+        {
+          "kind": "h2",
+          "text": "型号与规格"
+        },
+        {
+          "kind": "table",
+          "caption": "Fomapan 在产规格",
+          "rows": [
+            {
+              "c1": "Fomapan 100 Classic",
+              "c2": "1991 起",
+              "c3": "ISO 100，135 用 T 片基，120 与片装用 P 片基",
+              "c4": "24/135、17 m、30.5 m、50 m、120、片装",
+              "c5": "在产"
+            },
+            {
+              "c1": "Fomapan 200 Creative",
+              "c2": "1996 起，2015 年改版",
+              "c3": "ISO 200，方块颗粒与片状 T 颗粒混合",
+              "c4": "135 与 120",
+              "c5": "在产"
+            },
+            {
+              "c1": "Fomapan 400 Action",
+              "c2": "1994 起",
+              "c3": "ISO 400，传统全色乳剂",
+              "c4": "135 与 120",
+              "c5": "在产"
+            },
+            {
+              "c1": "Fomapan R 100",
+              "c2": "1998 起",
+              "c3": "黑白反转片，P 片基",
+              "c4": "135 与 120",
+              "c5": "在产"
+            },
+            {
+              "c1": "Foma Ortho 400",
+              "c2": "2023 起",
+              "c3": "ISO 400 正色片（对红光不感光）",
+              "c4": "135、120、片装",
+              "c5": "在产"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "表中的 T 代表三醋酸纤维素酯片基，P 代表聚酯片基。片基代号含义见 $film-stock.film-base。"
+        },
+        {
+          "kind": "h2",
+          "text": "已停产型号"
+        },
+        {
+          "kind": "p",
+          "text": "Retropan 320 Soft 于 2015 年推出，135 规格在 2019 年停产，120 规格从 2018 年生产，系列在 2021 年停产。"
+        },
+        {
+          "kind": "h2",
+          "text": "选择依据"
+        },
+        {
+          "kind": "ul",
+          "text": "- 需要可获得的标准黑白负片时选 Fomapan 系列。\n- 需要与 Kodak 或 Ilford 片对比乳剂特性时使用 Fomapan。\n- 使用正色片时按 $capture.filter 的原则处理光源与滤镜，避免红光影响曝光。"
+        },
+        {
+          "kind": "tip",
+          "text": "Fomapan 的产品目录（brožura）按年更新。订购前核对具体规格与片基。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "FOMA 产品目录 brožura",
+          "url": "http://www.foma.cz/Upload/foma/prilohy/broz_c.pdf",
+          "kind": "manufacturer",
+          "note": "型号、年代与规格表。"
+        },
+        {
+          "name": "List of photographic films — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/List_of_photographic_films",
+          "kind": "article",
+          "note": "Fomapan 型号的推出与停产年份。"
+        },
+        {
+          "name": "Granit 胶片品牌普查（2025-12-09）",
+          "url": "https://granit.app/blog/guide-pellicules-argentique",
+          "kind": "article",
+          "note": "在产品牌与型号清单。"
+        },
+        {
+          "name": "35mmc: Foma releases Ortho 400 medium format film",
+          "url": "https://www.35mmc.com/27/05/2023/news-foma-releases-ortho-400-medium-format-film/",
+          "kind": "article"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "film-stock.halide-crystal"
+        ],
+        "next": [
+          "bw-process.developer-types"
+        ],
+        "related": [
+          "film-stock.grain"
+        ],
+        "contrast": [
+          "film-stock.kodak-tri-x-400",
+          "film-stock.ilford-hp5-plus"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Fomapan 的生产国是？",
+          "type": "single",
+          "options": [
+            "德国",
+            "捷克共和国",
+            "英国",
+            "日本"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "工厂位于捷克共和国 Hradec Králové。"
+        },
+        {
+          "q": "Fomapan 200 Creative 的乳剂特点是什么？",
+          "type": "single",
+          "options": [
+            "全部为片状颗粒",
+            "方块颗粒与片状 T 颗粒混合",
+            "芯壳颗粒",
+            "染料型黑白"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "该片混合使用方块颗粒与片状颗粒。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.rodinal",
+      "title": "Rodinal 高锐度显影液",
+      "title_en": "Rodinal (4-aminophenol Developer)",
+      "aliases": [
+        "Rodinal",
+        "R09",
+        "4-aminophenol",
+        "阿克法Rodinal",
+        "ADOX Rodinal"
+      ],
+      "type": "chemical",
+      "level": 3,
+      "era": "1891 至今",
+      "tags": [
+        "显影液",
+        "高锐度",
+        "稀释显影",
+        "在产"
+      ],
+      "summary": "Rodinal 是以 4-氨基苯酚（4-aminophenol）为基础的高锐度黑白显影液。它于 1891 年取得专利，是仍在商业销售的最古老摄影用品。它以浓缩液形式出售，稀释比决定冲洗强度。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "历史"
+        },
+        {
+          "kind": "p",
+          "text": "Rodinal 于 1891 年 1 月 27 日取得专利，最初由德国的 Agfa 生产。吉尼斯世界纪录把它列为销售时间最长的摄影用品。它当时的新奇之处是以液体浓缩液出售，稀释比大幅改变显影速度。"
+        },
+        {
+          "kind": "p",
+          "text": "AgfaPhoto 于 2005 年破产后，生产转到重组的 ADOX。ADOX 买下欧洲商标（不含法国），并继续以 Rodinal 名称销售。原厂产品与 Ilfotec 系列分属不同厂商，选购时核对包装。"
+        },
+        {
+          "kind": "h2",
+          "text": "组成"
+        },
+        {
+          "kind": "table",
+          "caption": "Rodinal 原液成分",
+          "rows": [
+            {
+              "c1": "4-氨基苯酚",
+              "c2": "显影主剂",
+              "c3": "把曝光后的卤化银还原为金属银",
+              "c4": "决定高锐度的特性",
+              "c5": "标准值"
+            },
+            {
+              "c1": "氢氧化钾",
+              "c2": "pH 控制",
+              "c3": "提供碱性环境",
+              "c4": "影响显影速度与保存期",
+              "c5": "标准值"
+            },
+            {
+              "c1": "亚硫酸钾",
+              "c2": "保存与溶解控制",
+              "c3": "防止主剂氧化并改善溶解",
+              "c4": "过量时抑制颗粒感",
+              "c5": "标准值"
+            },
+            {
+              "c1": "溴化钾",
+              "c2": "反差控制",
+              "c3": "抑制阴影显影",
+              "c4": "过量时抬高灰雾",
+              "c5": "标准值"
+            },
+            {
+              "c1": "EDTA 酸",
+              "c2": "螯合剂",
+              "c3": "结合金属离子，减少硬水影响",
+              "c4": "改善保存稳定",
+              "c5": "标准值"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "上表列出成分类别。精确含量随产品版本变化。以厂商现行说明书为准。"
+        },
+        {
+          "kind": "h2",
+          "text": "稀释比"
+        },
+        {
+          "kind": "table",
+          "caption": "常见稀释比与用途",
+          "rows": [
+            {
+              "c1": "1+25",
+              "c2": "短时间显影，高反差取向",
+              "c3": "标准浓度稀释",
+              "c4": "适合高反差印相",
+              "c5": "常见变体"
+            },
+            {
+              "c1": "1+50",
+              "c2": "中等强度",
+              "c3": "常用工作稀释",
+              "c4": "配合旋转冲洗机",
+              "c5": "常见变体"
+            },
+            {
+              "c1": "1+100 及更稀",
+              "c2": "长时间稀释显影（stand development），锐度高",
+              "c3": "工作液一次性使用",
+              "d": "",
+              "c4": "用于高反差、细颗粒影调",
+              "c5": "常见变体"
+            }
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "稀释倍数越高，显影时间越长，成片的锐度观感越强。这一现象与 Eberhard 效应相关：稀释显影时低密度区的显影被抑制，中密度区的反差相对上升。"
+        },
+        {
+          "kind": "settings",
+          "caption": "Rodinal 稀释显影条件",
+          "items": [
+            {
+              "t": "稀释比",
+              "d": "1+100（体积比）"
+            },
+            {
+              "t": "温度",
+              "d": "20 °C。温度控制方式参见 $bw-process.mixing-temp-control"
+            },
+            {
+              "t": "时间",
+              "d": "Tri-X 400 约 75 分钟。间隔搅拌，首次 30 秒后每小时搅拌 5 秒（常见值，按胶片与药液批次复核）"
+            },
+            {
+              "t": "设备",
+              "d": "使用旋转式或立式冲洗罐，参见 $process-equipment.tank"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "保存"
+        },
+        {
+          "kind": "p",
+          "text": "原液与空气接触会氧化变褐。厂家建议用比空气重的气体密封保存，或在瓶中放入玻璃珠。已变褐的原液仍可工作。瓶底结晶不影响性能，可用咖啡滤纸过滤。稀释后的工作液一次性使用。"
+        },
+        {
+          "kind": "warn",
+          "text": "Rodinal 与部分彩显药液中的某些成分混用会产生沉淀。使用前按 $process-equipment.mixed-chemistry 的规则分开容器与工具。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Rodinal — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Rodinal",
+          "kind": "article",
+          "note": "专利日期、成分、稀释比与保存方法。"
+        },
+        {
+          "name": "Ilford Photo 药品目录（对照用，说明 Rodinal 不在 Harman 目录中）",
+          "url": "https://www.ilfordphoto.com/chemistry",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Guy Got a 100-Year-Old Bottle of Film Developer, Tried It (PetaPixel)",
+          "url": "https://petapixel.com/2018/01/02/guy-got-100-year-old-bottle-film-developer-tried/",
+          "kind": "article",
+          "note": "老化原液仍可工作的社区实测记录；原文如此。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "bw-process.developer-types"
+        ],
+        "next": [
+          "bw-process.mixing-temp-control"
+        ],
+        "related": [
+          "bw-process.push-pull",
+          "film-stock.grain"
+        ],
+        "contrast": [
+          "bw-process.d-76"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Rodinal 的显影主剂是什么？",
+          "type": "single",
+          "options": [
+            "对苯二酚",
+            "4-氨基苯酚",
+            "邻苯二胺",
+            "抗坏血酸"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "Rodinal 以 4-氨基苯酚为基础。"
+        },
+        {
+          "q": "把 Rodinal 稀释到 1+100 后的直接效果是什么？",
+          "type": "single",
+          "options": [
+            "显影时间缩短",
+            "显影时间延长且反差观感变强",
+            "颜色改变",
+            "感光度翻倍"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "稀释倍数越高，显影时间越长，反差观感越强。"
+        },
+        {
+          "q": "Rodinal 现在由哪家厂商生产？",
+          "type": "single",
+          "options": [
+            "Agfa",
+            "Harman Technology",
+            "ADOX",
+            "Ilford Imaging Europe"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "AgfaPhoto 2005 年破产后生产转到 ADOX。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.kodak-consumer-colour",
+      "title": "柯达彩色负片消费级系列",
+      "title_en": "Kodak Consumer Colour Negatives (Gold, UltraMax, ColorPlus, Pro Image)",
+      "aliases": [
+        "Gold 200",
+        "UltraMax 400",
+        "ColorPlus 200",
+        "Pro Image 400H",
+        "Kodak Gold",
+        "Vista"
+      ],
+      "type": "film",
+      "level": 4,
+      "era": "1980s 至今",
+      "tags": [
+        "彩色负片",
+        "C-41",
+        "日光平衡",
+        "在产"
+      ],
+      "summary": "这一系列是 Kodak 面向普通用户的彩色负片。它们用 C-41 工艺冲洗。当前在产的代表型号为 Gold 200 与 UltraMax 400。Gold 200 为低感光度日光型，UltraMax 400 为通用高感型。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "共同规格"
+        },
+        {
+          "kind": "table",
+          "caption": "在产型号规格",
+          "rows": [
+            {
+              "c1": "Gold 200",
+              "c2": "ISO 200 / 21°",
+              "c3": "日光平衡，用于自然光或电子闪光",
+              "c4": "24/135、36/135、120",
+              "c5": "在产；厂商描述为色彩饱和、颗粒细、锐度高"
+            },
+            {
+              "c1": "UltraMax 400",
+              "c2": "ISO 400 / 27°",
+              "c3": "通用型，适用室内、低光与闪光",
+              "c4": "24/135、36/135",
+              "c5": "在产；闪光覆盖范围较大"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "以上为 2026 年 10 月在 Kodak Alaris 官网 Everyday Film 栏目可查到的型号。厂商技术资料页同时提供 UltraMax 400 与 Gold 200 的数据表。"
+        },
+        {
+          "kind": "h2",
+          "text": "停产与更名记录"
+        },
+        {
+          "kind": "ul",
+          "text": "- ColorPlus 200 与 Pro Image 400H 属于 Kodak 专业消费级线。它们的停产时间在公开渠道缺少明确公告，引用第三方销售清单时需注明来源与日期。\n- Kodak 曾在 2009 年前后调整这一系列的产品线，Vista 等名称退出。调整年份以厂商公告为准。\n- Fujifilm 在 2022 年于欧洲、2021 年于北美推出名为 Fujifilm 200 的产品，该产品被确认是 Kodak Gold 200 的换牌产品。"
+        },
+        {
+          "kind": "h2",
+          "text": "工艺定位"
+        },
+        {
+          "kind": "p",
+          "text": "这一系列全部用 C-41 工艺冲洗。它们不含橙色遮罩（orange mask）或遮罩较弱，因此扫描时白点更接近中性。参见 $film-stock.base-density 与 $color-process.c41。"
+        },
+        {
+          "kind": "image",
+          "src": "img/rollfilm-120.png",
+          "alt": "120 型卷片与背纸。背纸上印有不同画幅的计数窗对应的曝光张数。",
+          "caption": "120 型卷片与背纸。背纸上印有不同画幅的计数窗对应的曝光张数。",
+          "credit": "Thomas Wydra (de.wikipedia)",
+          "license": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File%3ARollfilm_120.jpg"
+        },
+        {
+          "kind": "settings",
+          "caption": "冲洗与扫描要点",
+          "items": [
+            {
+              "t": "冲洗",
+              "d": "C-41 全过程，参见 $color-process.c41 与 $color-process.c41-chemistry"
+            },
+            {
+              "t": "推片",
+              "d": "提高感光度会同时提高反差与颗粒，参见 $bw-process.push-pull"
+            },
+            {
+              "t": "扫描",
+              "d": "在扫描仪中做灰世界或手动白平衡，参见 $scanning.color-management"
+            }
+          ]
+        }
+      ],
+      "refs": [
+        {
+          "name": "Kodak Alaris Everyday Film 栏目（2026 访问）",
+          "url": "https://kodakprofessional.com/en-gb/photographers/film/everyday-film",
+          "kind": "manufacturer",
+          "note": "在产型号与可获得规格。"
+        },
+        {
+          "name": "Kodak Professional GOLD Film in 120 Format 页面",
+          "url": "https://kodakprofessional.com/en-gb/photographers/film/color/kodak-professional-gold-film-120-format/514",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Kodak Publication E7022: GOLD 200 Film",
+          "url": "https://kodakprofessional.com/sites/default/files/wysiwyg/E7022-1.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Kodak UltraMax 400 Tech Sheet",
+          "url": "https://kodakprofessional.com/sites/default/files/wysiwyg/KodakUltraMax400TechSheet-1.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "List of photographic films — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/List_of_photographic_films",
+          "kind": "article",
+          "note": "含 Fujifilm 200 与 Kodak Gold 200 的换牌说明。"
+        }
+      ],
+      "links": {
+        "prereq": [],
+        "next": [
+          "color-process.c41"
+        ],
+        "related": [
+          "film-stock.kodak-portra",
+          "scanning.color-management"
+        ],
+        "contrast": [
+          "film-stock.kodak-portra"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Kodak Gold 200 的标称感光度是多少？",
+          "type": "single",
+          "options": [
+            "ISO 100",
+            "ISO 200",
+            "ISO 400",
+            "ISO 800"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "Gold 200 是 ISO 200 / 21° 的日光型负片。"
+        },
+        {
+          "q": "这一系列使用哪种冲洗工艺？",
+          "type": "single",
+          "options": [
+            "E-6",
+            "C-41",
+            "D-76",
+            "K-14"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "彩色负片用 C-41 工艺冲洗。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "draft"
+    },
+    {
+      "id": "film-stock.kodak-portra",
+      "title": "柯达 Portra 彩色负片系列",
+      "title_en": "Kodak Professional PORTRA Films",
+      "aliases": [
+        "Portra 160",
+        "Portra 400",
+        "Portra 800",
+        "PORTRA",
+        "柯达 Portrait"
+      ],
+      "type": "film",
+      "level": 3,
+      "era": "1998 至今",
+      "tags": [
+        "彩色负片",
+        "人像",
+        "肤色还原",
+        "在产"
+      ],
+      "summary": "Portra 是 Kodak 面向人像与婚礼的日光平衡专业彩色负片，1998 年推出。当前在产速度为 ISO 160、ISO 400 与 ISO 800。它以细腻颗粒和自然的肤色还原著称。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "推出与谱系"
+        },
+        {
+          "kind": "p",
+          "text": "Portra 于 1998 年推出。它接替 Kodak Vericolor（VPS 与 VPL），而 Vericolor 又接替 Ektacolor。定位是日光平衡的专业彩色负片。"
+        },
+        {
+          "kind": "h2",
+          "text": "型号与规格"
+        },
+        {
+          "kind": "table",
+          "caption": "Portra 在产规格",
+          "rows": [
+            {
+              "c1": "Portra 160",
+              "c2": "ISO 160 / 23°",
+              "c3": "颗粒结构显著变细，改善扫描与放大表现",
+              "c4": "36/135、120、4×5、5×7、8×10、12×20、20×24",
+              "c5": "在产"
+            },
+            {
+              "c1": "Portra 400",
+              "c2": "ISO 400 / 27°",
+              "c3": "标称真 ISO 400，低反差、平衡饱和度",
+              "c4": "36/135、120、4×5、4×10、5×7、8×10、11×14、20×24",
+              "c5": "在产；高速片中的细颗粒"
+            },
+            {
+              "c1": "Portra 800",
+              "c2": "ISO 800 / 30°",
+              "c3": "欠曝容度大",
+              "c4": "36/135、120",
+              "c5": "在产"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "版本演进"
+        },
+        {
+          "kind": "timeline",
+          "caption": "Portra 版本沿革",
+          "rows": [
+            {
+              "c1": "1998",
+              "c2": "Portra 首次推出，160 与 400 分 Natural Color 与 Vivid Color 两个版本",
+              "c3": "按用途分两档反差与饱和度"
+            },
+            {
+              "c1": "2006",
+              "c2": "加入 Portra 800",
+              "c3": "扩展高速人像用途"
+            },
+            {
+              "c1": "2010",
+              "c2": "新版 Portra 400 取代 400NC 与 400VC",
+              "c3": "引入 Kodak Vision 运动片技术，颗粒更细、锐度提高、扫描表现改善"
+            },
+            {
+              "c1": "2026",
+              "c2": "官网新增 Portra 160 强调细颗粒与扫描适应性",
+              "c3": "面向扫描与放大工作流"
+            }
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "合并 Natural Color 与 Vivid Color 的原因是反差与饱和度在扫描后用数字方式调整更容易，而多数相纸成品本来就来自扫描文件。"
+        },
+        {
+          "kind": "h2",
+          "text": "工艺定位"
+        },
+        {
+          "kind": "p",
+          "text": "Portra 用 C-41 工艺冲洗。它含橙色遮罩，扫描时做白色平衡可去掉偏色。参见 $color-process.c41 与 $scanning.color-management。"
+        },
+        {
+          "kind": "settings",
+          "caption": "Portra 400 的实用条件",
+          "items": [
+            {
+              "t": "冲洗",
+              "d": "C-41 全过程，参见 $color-process.c41"
+            },
+            {
+              "t": "推片",
+              "d": "Portra 400 常推到 EI 800。增加显影时间会带来反差与颗粒上升，参见 $bw-process.push-pull"
+            },
+            {
+              "t": "扩印",
+              "d": "多用于扫描后数字扩印；传统 RA-4 相纸扩印同样可行，参见 $printing.print-processing"
+            }
+          ]
+        },
+        {
+          "kind": "tip",
+          "text": "拍摄人像时用柔和的散射光。避免阳光直射造成的强对比，使肤色落在曲线的直线段。曝光判断参考 $capture.exposure-metering。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Kodak Alaris Professional Colour Film 栏目（2026 访问）",
+          "url": "https://kodakprofessional.com/en-gb/photographers/film/color",
+          "kind": "manufacturer",
+          "note": "在产规格与厂商描述。"
+        },
+        {
+          "name": "KODAK PROFESSIONAL PORTRA 400 Film 页面",
+          "url": "https://kodakprofessional.com/en-gb/photographers/film/color/kodak-professional-portra-400-film/516",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "KODAK PROFESSIONAL PORTRA 160 Film 页面",
+          "url": "https://kodakprofessional.com/en-gb/photographers/film/color/kodak-professional-portra-160-film/529",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Kodak Portra — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Kodak_Portra",
+          "kind": "article",
+          "note": "推出年代与版本合并原因。"
+        },
+        {
+          "name": "Kodak Publication E4040: PORTRA 160/400NC/400VC/800 Films (2009)",
+          "url": "http://www.kodak.com/global/en/professional/support/techPubs/e4040/e4040.pdf",
+          "kind": "manufacturer",
+          "note": "旧版数据表，供曲线比对使用。"
+        }
+      ],
+      "links": {
+        "prereq": [],
+        "next": [
+          "color-process.c41",
+          "scanning.color-management"
+        ],
+        "related": [
+          "film-stock.color-balance",
+          "film-stock.latitude"
+        ],
+        "contrast": [
+          "film-stock.kodak-consumer-colour",
+          "film-stock.kodak-ektar-100"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Portra 系列于哪一年推出？",
+          "type": "single",
+          "options": [
+            "1986",
+            "1994",
+            "1998",
+            "2006"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "Portra 于 1998 年推出，接替 Vericolor 系列。"
+        },
+        {
+          "q": "Portra 400 的 Natural Color 与 Vivid Color 版本为何在 2010 年合并？",
+          "type": "single",
+          "options": [
+            "乳剂配方统一为一种",
+            "反差与饱和度在数字流程中更易调整",
+            "片基改用聚酯",
+            "取消 120 规格"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "多数相纸成品来自扫描文件，数字调整比区分配方更方便。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.kodak-ektar-100",
+      "title": "柯达 Ektar 100 彩色负片",
+      "title_en": "Kodak Professional EKTAR 100 Film",
+      "aliases": [
+        "Ektar 100",
+        "EKTAR",
+        "柯达 Ektar"
+      ],
+      "type": "film",
+      "level": 4,
+      "era": "1989 / 2008 至今",
+      "tags": [
+        "彩色负片",
+        "低感光度",
+        "高饱和度",
+        "在产"
+      ],
+      "summary": "Ektar 是 Kodak 的低感光度专业彩色负片。当前在产的 Ektar 100 于 2008 年 9 月推出。它的定位是极细颗粒与高饱和度，适合自然、风光、时尚与产品摄影。Ektar 名称在 1989 年已用于一次半专业彩色负片。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "名称的两段历史"
+        },
+        {
+          "kind": "p",
+          "text": "Ektar 最早是 Kodak 从 1936 年使用到 1960 年代的优质镜头品牌。后来它用作品质标记，不对应固定的镜头公式。"
+        },
+        {
+          "kind": "p",
+          "text": "1989 年 Eastman Kodak 把 Ektar 用作半专业 35 mm 与 120 彩色负片的名称，目标是超细颗粒。当时有 ISO 25、ISO 100、ISO 1000 与 ISO 400 四个速度。ISO 125 在 1991 年 6 月因销量不佳被 ISO 100 取代。Kodak 在 1994 年终止该片，120 规格在 1997 年停产，由 Royal Gold 取代。"
+        },
+        {
+          "kind": "h2",
+          "text": "现役型号"
+        },
+        {
+          "kind": "table",
+          "caption": "Ektar 100 规格",
+          "rows": [
+            {
+              "c1": "推出",
+              "c2": "2008 年 9 月",
+              "c3": "先上市 35 mm，随后 120，2010 年加入片装",
+              "c4": "冲印工艺 C-41",
+              "c5": "在产"
+            },
+            {
+              "c1": "感光度",
+              "c2": "ISO 100 / 21°",
+              "c3": "单一速度",
+              "c4": "135 盒装有 DX 编码",
+              "c5": "与相机测光匹配"
+            },
+            {
+              "c1": "片基",
+              "c2": "三醋酸纤维素酯（135、120）",
+              "c3": "片装为聚酯",
+              "c4": "片基代号见 $film-stock.film-base",
+              "c5": "片基厚度影响扫描时的弯折与清晰度"
+            },
+            {
+              "c1": "乳剂",
+              "c2": "多层彩色负片乳剂",
+              "c3": "含橙色遮罩",
+              "c4": "扫描时做白色平衡去掉偏色",
+              "c5": "参见 $film-stock.base-density"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "相对上一代的变化"
+        },
+        {
+          "kind": "ul",
+          "text": "- 相比同厂的 Portra 100 级产品，Ektar 100 的饱和度更高，反差更大。\n- 设计目标是适配胶片扫描数字化工作流。\n- 颗粒更细，适合大幅放大。\n- 与同期 1989 年版相比，现役版只提供 ISO 100 一个速度，简化了产品线。"
+        },
+        {
+          "kind": "settings",
+          "caption": "Ektar 100 的冲洗与扫描",
+          "items": [
+            {
+              "t": "冲洗",
+              "d": "C-41 全过程，参见 $color-process.c41"
+            },
+            {
+              "t": "推片",
+              "d": "推到 EI 200 或 400 时反差与颗粒上升，参见 $bw-process.push-pull"
+            },
+            {
+              "t": "扫描",
+              "d": "高饱和度片在扫描仪上需要固定的白平衡设置，参见 $scanning.color-management"
+            },
+            {
+              "t": "滤镜",
+              "d": "风光题材可按 $capture.filter 的原则控制高光"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "2022 年起，香港 Reto Production 在 Kodak 品牌授权下生产半格画幅 Ektar 相机（H35、H35N）。这是器材产品，与胶片同名。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "KODAK PROFESSIONAL EKTAR 100 Film 页面（Kodak Alaris）",
+          "url": "https://kodakprofessional.com/en-gb/photographers/film/color/kodak-professional-ektar-100-film/530",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Kodak Publication E4046: Professional EKTAR 100 Film",
+          "url": "https://imaging.kodakalaris.com/sites/default/files/files/products/e4046_ektar_100.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Kodak Alaris Professional Colour Film 栏目",
+          "url": "https://kodakprofessional.com/en-gb/photographers/film/color",
+          "kind": "manufacturer",
+          "note": "确认 Ektar 100 与 Ektachrome E100 在产。"
+        },
+        {
+          "name": "Kodak Ektar — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Ektar",
+          "kind": "article",
+          "note": "1989 年版的速度、停产与现役版推出时间。"
+        },
+        {
+          "name": "Kodak 品牌授权案例：Reto Production Ektar",
+          "url": "https://www.kodak.com/en/company/page/doing-business-with-kodak/brand-licensing/case-study-reto/",
+          "kind": "manufacturer"
+        }
+      ],
+      "links": {
+        "prereq": [],
+        "next": [
+          "color-process.c41"
+        ],
+        "related": [
+          "scanning.color-management"
+        ],
+        "contrast": [
+          "film-stock.kodak-portra"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "现役 Ektar 100 于哪一年推出？",
+          "type": "single",
+          "options": [
+            "1989",
+            "1994",
+            "2008",
+            "2018"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "2008 年 9 月推出，1989 年的版本是另一次命名使用。"
+        },
+        {
+          "q": "Ektar 100 的定位是？",
+          "type": "single",
+          "options": [
+            "高速新闻负片",
+            "低感光度高饱和度专业负片",
+            "黑白负片",
+            "反转片"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "ISO 100、高饱和度、极细颗粒，用于自然、风光、时尚与产品摄影。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.fujifilm-negatives",
+      "title": "富士彩色负片产品线",
+      "title_en": "Fujifilm Colour Negative Films",
+      "aliases": [
+        "Superia",
+        "Superia Premium",
+        "Fujicolor",
+        "Fujifilm 400",
+        "Neopan 100 Acros II",
+        "Acros 100"
+      ],
+      "type": "film",
+      "level": 4,
+      "era": "1980s 至今",
+      "tags": [
+        "彩色负片",
+        "黑白负片",
+        "外采代工",
+        "部分在产"
+      ],
+      "summary": "Fujifilm 的胶片产品线在 2010 年代大幅收缩。日元升值与数码化后，公司停止自产多数相纸与部分彩色负片。当前部分产品改由 Eastman Kodak 生产，再由富士贴牌销售。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "产品线收缩"
+        },
+        {
+          "kind": "p",
+          "text": "Fujifilm 的胶片销量在 2000 年前后见顶，2003 至 2008 年间每年下降约 30%，到 2011 年不足峰值的 10%。公司随后停止 Fujicolor Pro 专业彩色负片的生产，该系列在 2021 年终止。"
+        },
+        {
+          "kind": "h2",
+          "text": "现行与历史型号"
+        },
+        {
+          "kind": "table",
+          "caption": "富士主要胶片型号",
+          "rows": [
+            {
+              "c1": "Fujicolor 100",
+              "c2": "日本市场",
+              "c3": "彩色负片",
+              "c4": "早期产品线",
+              "c5": "区域供应随时变化"
+            },
+            {
+              "c1": "Superia Premium 400",
+              "c2": "2009 起，日本与亚洲",
+              "c3": "产品代码 CH24",
+              "c4": "彩色负片",
+              "c5": "区域供应"
+            },
+            {
+              "c1": "Fujifilm 200",
+              "c2": "2021 北美 / 2022 欧洲",
+              "c3": "被确认为 Kodak Gold 200 的换牌产品",
+              "c4": "产品代码 CA24",
+              "c5": "在产状态见 $film-stock.kodak-consumer-colour"
+            },
+            {
+              "c1": "Fujifilm 400",
+              "c2": "2023 北美",
+              "c3": "由 Eastman Kodak 生产，取代 Superia X-TRA 400",
+              "c4": "彩色负片",
+              "c5": "在产"
+            },
+            {
+              "c1": "Neopan 100 Acros II",
+              "c2": "2019 年 11 月",
+              "c3": "黑白负片，T 片基；在日本 Ashigara 涂布，120 转换与包装由 Harman Technology 完成",
+              "c4": "接续 2018 年停产的 Acros 100",
+              "c5": "在产"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "Neopan 100 Acros II 的厂商数据表说明该片在日本涂布。它是少数仍由日本工厂生产的主流胶片。"
+        },
+        {
+          "kind": "h2",
+          "text": "代工关系"
+        },
+        {
+          "kind": "p",
+          "text": "Fujifilm 从 2021 年起从 Eastman Kodak 采购部分彩色负片。2024 年该公司与中国合作方 YesStar 开设转换与包装工厂。这使富士品牌的胶片在制造层面与柯达生产体系相连。"
+        },
+        {
+          "kind": "warn",
+          "text": "同一商品名在不同年份可能对应不同制造商与不同乳剂。核对包装上的制造商信息与数据表日期，不要按名称推断规格。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "List of photographic films — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/List_of_photographic_films",
+          "kind": "article",
+          "note": "富士型号年代、产品代码与代工说明。"
+        },
+        {
+          "name": "Fujifilm Neopan 100 Acros II 厂商数据表",
+          "url": "https://asset.fujifilm.com/www/us/files/2020-04/299395cd078366c7a2956af612ca9fdb/NeopanAcros100.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Brand New Film From Fujifilm: Neopan 100 Acros II Announced, Begins Shipping Autumn 2019 (Emulsive)",
+          "url": "https://emulsive.org/articles/news/brand-new-film-from-fujifilm-neopan-100-acros-ii-announced-begins-shipping-autumn-2019",
+          "kind": "article"
+        },
+        {
+          "name": "Kodak 公司史与停产经过 — Wikipedia（本条目仅取年代线，不取评价性表述）",
+          "url": "https://en.wikipedia.org/wiki/Kodak",
+          "kind": "article",
+          "note": "原引 PetaPixel 报道在本环境持续 403，已换为 Wikipedia 条目核对年代。"
+        }
+      ],
+      "links": {
+        "prereq": [],
+        "next": [
+          "color-process.c41"
+        ],
+        "related": [
+          "film-stock.kodak-consumer-colour"
+        ],
+        "contrast": [
+          "film-stock.kodak-portra"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Neopan 100 Acros II 于哪一年推出？",
+          "type": "single",
+          "options": [
+            "2010",
+            "2015",
+            "2019",
+            "2021"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "2019 年 11 月推出，接续 2018 年停产的 Acros 100。"
+        },
+        {
+          "q": "Fujifilm 400 彩色负片由谁生产？",
+          "type": "single",
+          "options": [
+            "Fujifilm 自行生产",
+            "Eastman Kodak",
+            "Harman Technology",
+            "Foma"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "该片由 Eastman Kodak 生产，2023 年在北美上市。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.cinestill",
+      "title": "CineStill 电影负片改型胶片",
+      "title_en": "CineStill Films",
+      "aliases": [
+        "CineStill",
+        "800T",
+        "50D",
+        "400D",
+        "BwXX",
+        "RedRum",
+        "去背基"
+      ],
+      "type": "film",
+      "level": 4,
+      "era": "2012 至今",
+      "tags": [
+        "彩色负片",
+        "C-41",
+        "晕光",
+        "在产"
+      ],
+      "summary": "CineStill 在 2012 年由 Brian 与 Brandon Wright 兄弟在洛杉矶创立。它把 Kodak 电影负片上的 rem-jet 背涂层去掉，使胶片可在普通 C-41 实验室冲洗。去掉背涂层带来红色晕光（halation）效果。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "工艺原理"
+        },
+        {
+          "kind": "p",
+          "text": "Kodak 的电影负片在片基背面涂 rem-jet 层。该层承担防晕光、抗静电与保护功能。CineStill 去掉这一层，使胶片能用普通 C-41 冲洗液处理。去掉后，强光在片基内反射，在高光周围产生红色晕光。"
+        },
+        {
+          "kind": "note",
+          "text": "晕光是设计结果，不是缺陷。拍摄时它出现在过曝光源与高反差边缘周围。"
+        },
+        {
+          "kind": "h2",
+          "text": "型号与规格"
+        },
+        {
+          "kind": "table",
+          "caption": "CineStay 型号",
+          "rows": [
+            {
+              "c1": "800Tungsten",
+              "c2": "基于 Kodak Vision3 500T 5219；Kodak 按 EI 500 / 3200 K 标定，CineStill 建议在 C-41 中按 EI 800 曝光",
+              "c3": "35 mm 有 DX 编码，另有 120",
+              "c4": "2012 年测试，2013 年商业上市",
+              "c5": "在产"
+            },
+            {
+              "c1": "50Daylight",
+              "c2": "基于 Vision3 50D 5203；日光 EI 50，约 5500 K 平衡，可用 EI 12–100",
+              "c3": "35 mm 与 120",
+              "c4": "在产",
+              "c5": "低感日光负片"
+            },
+            {
+              "c1": "400Dynamic",
+              "c2": "ISO 400 日光负片",
+              "c3": "35 mm、120、4×5（4×5 为常规产品）",
+              "c4": "2022 年 3 月通过众筹公布，筹得约 68 万美元",
+              "c5": "在产"
+            },
+            {
+              "c1": "BwXX",
+              "c2": "基于 Kodak Double-X 5222；日光 EI 250，钨丝 EI 200",
+              "c3": "120 版本 2021 年 5 月推出",
+              "c4": "黑白负片",
+              "c5": "在产"
+            },
+            {
+              "c1": "RedRum",
+              "c2": "ISO 200 redscale 限量版；800T 乳剂反向卷绕，通过片基曝光",
+              "c3": "仅 120",
+              "c4": "2021 年 10 月限量",
+              "c5": "限量产品"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "冲洗"
+        },
+        {
+          "kind": "p",
+          "text": "推荐用 C-41 冲洗。若用 ECN-2 冲洗，反差低于 C-41，晕光与色彩饱和度也不同。参见 $color-process.c41-chemistry。"
+        },
+        {
+          "kind": "table",
+          "caption": "CineStill 自有冲洗套药",
+          "rows": [
+            {
+              "c1": "Cs41",
+              "c2": "C-41 工艺",
+              "c3": "对应 Kodak C-41",
+              "c4": "推荐用途",
+              "c5": "标准配方"
+            },
+            {
+              "c1": "Cs6",
+              "c2": "E-6 工艺",
+              "c3": "对应 Kodak E-6",
+              "c4": "反转片用",
+              "c5": "标准配方"
+            },
+            {
+              "c1": "Cs2",
+              "c2": "减缩浴 ECN-2",
+              "c3": "低浴比工艺",
+              "c4": "反转路线",
+              "c5": "变体"
+            },
+            {
+              "c1": "Df96",
+              "c2": "黑白单浴",
+              "c3": "显影定影合一",
+              "c4": "BwXX 用",
+              "c5": "变体"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "命名争议"
+        },
+        {
+          "kind": "p",
+          "text": "2023 年 CineStill 与 Reflx Lab 之间就 800T 名称在美国产生商标争议。使用与转售时按现行商标规则处理。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "CineStill 官网",
+          "url": "https://cinestillfilm.com/",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Kodak VISION3 500T Film 5219/7219 Sell Sheet",
+          "url": "https://www.kodak.com/content/products-brochures/Film/VISION3-5219-7219-sell-sheet-EN.pdf",
+          "kind": "manufacturer",
+          "note": "原片标定与规格。"
+        },
+        {
+          "name": "CineStill — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/CineStill",
+          "kind": "article",
+          "note": "公司史、型号沿革与冲洗说明。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "color-process.c41"
+        ],
+        "next": [
+          "color-process.c41-chemistry"
+        ],
+        "related": [
+          "scanning.color-management"
+        ],
+        "contrast": [
+          "film-stock.kodak-consumer-colour"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "CineStill 胶片能进入普通 C-41 实验室的直接原因是什么？",
+          "type": "single",
+          "options": [
+            "改用醋酸片基",
+            "去掉了片基背面的 rem-jet 涂层",
+            "改用芯壳颗粒",
+            "换成 E-6 乳剂"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "去掉 rem-jet 背层后，胶片可在常规 C-41 条件下冲洗。"
+        },
+        {
+          "q": "CineStill 800Tungsten 的晕光来自什么？",
+          "type": "single",
+          "options": [
+            "显影不足",
+            "缺少防晕光背层，强光在片基内反射",
+            "乳剂颗粒过大",
+            "冲洗温度过低"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "防晕光层缺失使强光在片基中散射，形成红色晕光。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.reversal-film",
+      "title": "反转片与彩色反转工艺",
+      "title_en": "Reversal Film and the E-6 Process",
+      "aliases": [
+        "反转片",
+        "正片",
+        "幻灯片",
+        "Reversal",
+        "Slide",
+        "E-6",
+        "透明片"
+      ],
+      "type": "film",
+      "level": 3,
+      "era": "1923 至今",
+      "tags": [
+        "反转片",
+        "E-6",
+        "彩色正片",
+        "投影"
+      ],
+      "summary": "反转片（reversal film）在冲洗后直接得到正像，即幻灯片。彩色反转片用 E-6 工艺冲洗。它适合投影与印刷复制。普通照相机不装这种胶片，它由专用相机或改装的相机拍摄。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "工作原理"
+        },
+        {
+          "kind": "p",
+          "text": "反转片的曝光与显影过程使曝光多的区域变透明，曝光少的区域变黑或变深。结果是正像。彩色反转片在显影时同时生成染料影像，因此画面颜色与被摄体一致。"
+        },
+        {
+          "kind": "p",
+          "text": "反转片不用印相底片。它直接投影，或用专门的相纸（已停产的正—正型相纸）印出正片。今天印彩色反转片通常先做中间负片（internegative），再用 RA-4 印相。参见 $printing.print-processing。"
+        },
+        {
+          "kind": "h2",
+          "text": "工艺沿革"
+        },
+        {
+          "kind": "p",
+          "text": "Kodak 的反转工艺从 E-1（1946 年起）、E-2（1955 至 1966 年）、E-3（1959 至 1976 年）发展到 E-4（1966 至 1996 年）。E-6 于 1977 年首次发布，至今仍是彩色反转片的标准工艺。参见 $color-process.e6。"
+        },
+        {
+          "kind": "h2",
+          "text": "E-6 的组成步骤"
+        },
+        {
+          "kind": "p",
+          "text": "E-6 含显影、停显、反转、漂白、定影、稳定与水洗等步骤。反转步骤把未曝光的卤化银转成可显影状态。E-6 用化学雾化剂代替传统的光化反转，所以整个过程在暗房中完成。E-6 工艺在中型 1990 年代取消甲醛，稳定浴改称最终水洗，漂洗浴改称预漂白。E-6P 是 E-6 的推片版本。"
+        },
+        {
+          "kind": "note",
+          "text": "E-6 的倒易律范围在 10 秒至 1/10000 秒之间。范围外的曝光需要补偿，参见 $film-stock.latitude。"
+        },
+        {
+          "kind": "h2",
+          "text": "兼容与交叉处理"
+        },
+        {
+          "kind": "ul",
+          "text": "- Fujifilm 的 CR-56 与 E-6 交叉授权。\n- 把 E-6 反转片用 C-41 冲洗会得到负片，色偏、饱和度与反差都改变。这是一种常用的实验手法。\n- 把 C-41 负片用 E-6 冲洗会得到带明显绿色偏色的正片，原因是橙色遮罩保留在成品中。\n- Agfachrome 与 Konica CRK-2 曾是 E-6 的等效工艺，两者均已停产。"
+        },
+        {
+          "kind": "compare",
+          "caption": "反转片与负片的用途",
+          "rows": [
+            {
+              "c1": "成品形态",
+              "c2": "透明正片，直接投影",
+              "c3": "带橙色遮罩的负片，需印相或扫描",
+              "c4": "$film-stock.base-density",
+              "c5": "反转片直接用于投影与印刷制版"
+            },
+            {
+              "c1": "拍摄器材",
+              "c2": "专用反转片相机或改装机身",
+              "c3": "普通 135、120 相机",
+              "c4": "$capture.camera-mechanics",
+              "c5": "改装需保证反光镜抬起与横竖构图切换"
+            }
+          ]
+        },
+        {
+          "kind": "warn",
+          "text": "胶片在显影前必须先经过反转步骤。跳过反转会得到密度极低的画面。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Kodak Alaris Professional Colour Film 栏目（Ektachrome 在产确认）",
+          "url": "https://kodakprofessional.com/en-gb/photographers/film/color",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Photographic film — Wikipedia（含反转工艺与基底结构）",
+          "url": "https://en.wikipedia.org/wiki/Photographic_film",
+          "kind": "article"
+        },
+        {
+          "name": "List of photographic films — Wikipedia（E-6 与工艺对照）",
+          "url": "https://en.wikipedia.org/wiki/List_of_photographic_films",
+          "kind": "article"
+        },
+        {
+          "name": "Ilford Photo: Reversal Processing 技术资料",
+          "url": "https://www.ilfordphoto.com/technical-downloads/film-technical-downloads/",
+          "kind": "manufacturer",
+          "note": "含黑白反转片冲洗资料。"
+        }
+      ],
+      "links": {
+        "prereq": [],
+        "next": [
+          "color-process.e6"
+        ],
+        "related": [
+          "film-stock.fujifilm-slide",
+          "color-process.reversal-black-white"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "彩色反转片使用哪种冲洗工艺？",
+          "type": "single",
+          "options": [
+            "C-41",
+            "E-6",
+            "D-76",
+            "C-22"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "E-6 自 1977 年起是彩色反转片的标准工艺。"
+        },
+        {
+          "q": "E-6 工艺用什么代替传统的光化反转？",
+          "type": "single",
+          "options": [
+            "强碱",
+            "化学雾化剂",
+            "第二次曝光",
+            "红外照射"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "E-6 在显影液中加入化学雾化剂，使过程可在暗房完成。"
+        },
+        {
+          "q": "把 C-41 负片用 E-6 冲洗会得到什么？",
+          "type": "single",
+          "options": [
+            "正常颜色的正片",
+            "带明显绿色偏色的正片",
+            "彩色负片",
+            "全黑画面"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "橙色遮罩在 E-6 中不溶解，成品呈现绿色偏色。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.ektachrome-e100",
+      "title": "柯达 Ektachrome E100 反转片",
+      "title_en": "Kodak Professional EKTACHROME Film E100",
+      "aliases": [
+        "Ektachrome",
+        "E100",
+        "Ektachrome 100D",
+        "E100 VS"
+      ],
+      "type": "film",
+      "level": 4,
+      "era": "1946 / 2019 至今",
+      "tags": [
+        "反转片",
+        "E-6",
+        "停产与复产",
+        "在产"
+      ],
+      "summary": "Ektachrome 是 Kodak 的彩色反转片品牌，1946 年推出。它在 2013 年底全部停产，2017 年宣布复产，2018 年 9 月恢复 35 mm 供应。当前在产型号为 Ektachrome E100。",
+      "blocks": [
+        {
+          "kind": "image",
+          "src": "img/kodachrome-slide.jpg",
+          "alt": "1961 年装框的 Kodachrome 反转片。Kodachrome 为外偶式工艺，与 Ektachrome 的内偶式工艺相对照。",
+          "caption": "1961 年装框的 Kodachrome 反转片。Kodachrome 为外偶式工艺，与 Ektachrome 的内偶式工艺相对照。",
+          "credit": "JoshuaGrove",
+          "license": "CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File%3A1961_Kodachrome_Slide.jpg"
+        },
+        {
+          "kind": "h2",
+          "text": "停产记录"
+        },
+        {
+          "kind": "timeline",
+          "caption": "Ektachrome 停产与复产",
+          "rows": [
+            {
+              "c1": "1946",
+              "c2": "Ektachrome 品牌推出，首用 E-1 工艺",
+              "c3": "彩色反转片商业化"
+            },
+            {
+              "c1": "1959",
+              "c2": "High Speed Ektachrome 发布，ASA 160",
+              "c3": "高速反转片进入市场"
+            },
+            {
+              "c1": "2009 年末",
+              "c2": "Ektachrome 64T 与 Ektachrome 100 Plus 停产",
+              "c3": "专业影像市场收缩"
+            },
+            {
+              "c1": "2011-02-04",
+              "c2": "Ektachrome 200 停产",
+              "c3": "余下高速型号继续退出"
+            },
+            {
+              "c1": "2012-03-01",
+              "c2": "三款彩色 Ektachrome 停产",
+              "c3": "产品线收缩至最小"
+            },
+            {
+              "c1": "2012-12",
+              "c2": "Ektachrome 100D 电影胶片部分停产",
+              "c3": "电影线也受影响"
+            },
+            {
+              "c1": "2013 年末",
+              "c2": "全部 Ektachrome 产品停产",
+              "c3": "品牌退出市场约三年"
+            },
+            {
+              "c1": "2017-01-05",
+              "c2": "Kodak Alaris 宣布复产",
+              "c3": "原材料缺货与重新配方推迟上市"
+            },
+            {
+              "c1": "2018-09-25",
+              "c2": "35 mm 上市",
+              "c3": "复产落地"
+            },
+            {
+              "c1": "2018-10-01",
+              "c2": "Super 8 规格上市，型号 Ektachrome 100D 7294",
+              "c3": "电影线恢复"
+            },
+            {
+              "c1": "2019-06-01",
+              "c2": "120 宽幅涂布试产",
+              "c3": "恢复更多规格"
+            },
+            {
+              "c1": "2019-12-10",
+              "c2": "Ektachrome E100 以 120 五卷装与 4×5 十张装上市",
+              "c3": "专业摄影用 E-6 反转片重新可购"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "现役规格"
+        },
+        {
+          "kind": "table",
+          "caption": "Ektachrome E100",
+          "rows": [
+            {
+              "c1": "感光度",
+              "c2": "ISO 100",
+              "c3": "日光平衡",
+              "c4": "135 盒装有 DX 编码",
+              "c5": "与相机测光匹配"
+            },
+            {
+              "c1": "工艺",
+              "c2": "E-6",
+              "c3": "推片用 E-6P",
+              "c4": "参见 $color-process.e6",
+              "c5": "实验室或自建 E-6 设备冲洗"
+            },
+            {
+              "c1": "片基",
+              "c2": "三醋酸纤维素酯（135、120）",
+              "c3": "片装规格的片基按厂商数据表核对",
+              "c4": "参见 $film-stock.film-base",
+              "c5": "记录片基用于保存条件选择"
+            },
+            {
+              "c1": "规格",
+              "c2": "35 mm、120、4×5、5×7、8×10 片装",
+              "c3": "2026 年厂商页面列出",
+              "c4": "按地区核对可获得性",
+              "c5": "在产"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "选择依据"
+        },
+        {
+          "kind": "ul",
+          "text": "- 需要直接投影或印刷制版时用反转片。\n- 需要扫描后数字处理时用 $film-stock.kodak-portra 一类负片，参见 $scanning.digital-hold-on-film。\n- E-6 冲洗需要完整设备。设备选型参见 $process-equipment.home-lab。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "KODAK PROFESSIONAL EKTACHROME Film E100 页面（Kodak Alaris）",
+          "url": "https://kodakprofessional.com/en-gb/photographers/film/color/kodak-professional-ektachrome-film-e100/531",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Kodak Alaris Professional Colour Film 栏目",
+          "url": "https://kodakprofessional.com/en-gb/photographers/film/color",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Ektachrome — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Ektachrome",
+          "kind": "article",
+          "note": "工艺沿革与停产复产时间线。"
+        },
+        {
+          "name": "Photographic film — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Photographic_film",
+          "kind": "article",
+          "note": "复产公告日期。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "film-stock.reversal-film"
+        ],
+        "next": [
+          "color-process.e6"
+        ],
+        "related": [
+          "film-stock.fujifilm-slide",
+          "process-equipment.home-lab"
+        ],
+        "contrast": [
+          "film-stock.kodak-portra"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Ektachrome 品牌首次推出是哪一年？",
+          "type": "single",
+          "options": [
+            "1923",
+            "1936",
+            "1946",
+            "1963"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "1946 年推出，首用 E-1 工艺。"
+        },
+        {
+          "q": "全部 Ektachrome 产品在哪一年底停产？",
+          "type": "single",
+          "options": [
+            "2009",
+            "2011",
+            "2012",
+            "2013"
+          ],
+          "answer": [
+            3
+          ],
+          "why": "2012 年多款陆续停产，到 2013 年底产品全部退出市场。"
+        },
+        {
+          "q": "Ektachrome E100 在 2019 年 12 月以什么形式上市？",
+          "type": "single",
+          "options": [
+            "仅 35 mm",
+            "120 五卷装与 4×5 片装",
+            "仅电影胶片",
+            "16 mm 与 Super 8"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "2019 年 12 月 10 日公布 120 五卷装与 4×5 十张装。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.fujifilm-slide",
+      "title": "富士反转片 Provia 与 Velvia",
+      "title_en": "Fujifilm Provia and Velvia Reversal Films",
+      "aliases": [
+        "Provia 100F",
+        "Velvia 50",
+        "Velvia 100",
+        "RDP III",
+        "RVP",
+        "富士反转片"
+      ],
+      "type": "film",
+      "level": 4,
+      "era": "1999 至今",
+      "tags": [
+        "反转片",
+        "E-6",
+        "风光",
+        "高反差"
+      ],
+      "summary": "Provia 100F 是富士的中性反转片，1999 年推出。Velvia 50 与 Velvia 100 是高反差风光反转片。三个型号都用 E-6 工艺，冲洗条件接近。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "型号与定位"
+        },
+        {
+          "kind": "table",
+          "caption": "富士反转片型号",
+          "rows": [
+            {
+              "c1": "Provia 100F（RDP III）",
+              "c2": "1999 起",
+              "c3": "ISO 100，中性色彩，通用反转片",
+              "c4": "135、120；片装为聚酯片基，卷装为三醋酸纤维素酯",
+              "c5": "在产"
+            },
+            {
+              "c1": "Velvia 50（RVP 50）",
+              "c2": "2007 起",
+              "c3": "ISO 50，高反差高饱和度",
+              "c4": "135、120",
+              "c5": "在产；片装规格在部分地区已停供"
+            },
+            {
+              "c1": "Velvia 100（RVP 100）",
+              "c2": "2005 起",
+              "c3": "ISO 100，高反差高饱和度",
+              "c4": "135、120",
+              "c5": "在美国因一项化学品受 EPA 限制，于 2021 年全部规格停供"
+            }
+          ]
+        },
+        {
+          "kind": "note",
+          "text": "Velvia 50 的片装规格在欧洲与美国于 2012 年停产，5×7 在 2013 年停产，220 规格在 2015 年停产，富士在日本于 2021 年 10 月停止全部片装胶片。按地区核对可获得性。"
+        },
+        {
+          "kind": "h2",
+          "text": "工艺与曝光"
+        },
+        {
+          "kind": "ul",
+          "text": "- 三个型号都用 E-6 冲洗，参见 $color-process.e6。\n- Velvia 的反差与饱和度都高，容度窄。按 $film-stock.latitude 控制曝光，宁可欠曝一档并配合冲洗修正。\n- Provia 100F 的宽容度相对宽，适合一般题材。\n- 反转片的曝光判断与负片不同。以准确曝光换正确密度，参见 $capture.exposure-metering。"
+        },
+        {
+          "kind": "settings",
+          "caption": "反转片的冲洗与存储",
+          "items": [
+            {
+              "t": "冲洗",
+              "d": "E-6 全过程；用 E-6P 做推片"
+            },
+            {
+              "t": "推片",
+              "d": "Provia 100F 可推到 EI 160；Velvia 的推片空间更小，参见 $bw-process.push-pull"
+            },
+            {
+              "t": "存储",
+              "d": "已冲洗反转片避光保存，防潮；参见 $archive.cold-storage"
+            },
+            {
+              "t": "清洁",
+              "d": "投影前按 $archive.cleaning-film 清理片面"
+            }
+          ]
+        },
+        {
+          "kind": "compare",
+          "caption": "Provia 100F 与 Velvia 100",
+          "rows": [
+            {
+              "c1": "反差与饱和度",
+              "c2": "中性，适合一般题材",
+              "c3": "高反差高饱和度，饱和度接近正片",
+              "c4": "$film-stock.color-balance",
+              "c5": "按题材与后期空间选择"
+            },
+            {
+              "c1": "容度",
+              "c2": "较宽",
+              "c3": "窄",
+              "c4": "$film-stock.latitude",
+              "c5": "Velvia 需要更精确的测光"
+            }
+          ]
+        }
+      ],
+      "refs": [
+        {
+          "name": "List of photographic films — Wikipedia（Provia 与 Velvia 条目）",
+          "url": "https://en.wikipedia.org/wiki/List_of_photographic_films",
+          "kind": "article",
+          "note": "推出年代、片基代号与各地区停产记录。"
+        },
+        {
+          "name": "Fujifilm Professional Photography 产品页",
+          "url": "https://www.fujifilm.com/us/en/business/professional-photography",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Fujicolor Crystal Archive 相纸应用指南（含 RA-4 工艺）",
+          "url": "https://www.fujifilm.eu/fileadmin/countries/europe/products/Photo_Imaging/Photographic_Paper/Information_for_download/Fujicolor_Application_Guide_2014_2.pdf",
+          "kind": "manufacturer"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "film-stock.reversal-film"
+        ],
+        "next": [
+          "color-process.e6"
+        ],
+        "related": [
+          "film-stock.ektachrome-e100",
+          "film-stock.color-balance"
+        ],
+        "contrast": [
+          "film-stock.ektachrome-e100"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Provia 100F 与 Velvia 系列使用哪种冲洗工艺？",
+          "type": "single",
+          "options": [
+            "C-41",
+            "E-6",
+            "D-76",
+            "ECN-2"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "三个型号都是 E-6 反转片。"
+        },
+        {
+          "q": "Velvia 100 在美国停供的直接原因是什么？",
+          "type": "single",
+          "options": [
+            "片基供应中断",
+            "一项化学品受 EPA 限制",
+            "显影液停产",
+            "乳剂污染"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "一种受限制的化学品使全部规格在美国停供。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.bw-paper",
+      "title": "黑白相纸与 Multigrade 可变反差相纸",
+      "title_en": "Black and White Photographic Paper and Multigrade",
+      "aliases": [
+        "Multigrade",
+        "MG RC",
+        "Ilford MG RC Deluxe",
+        "Fomapan PM",
+        "纤维基相纸",
+        "RC 相纸"
+      ],
+      "type": "film",
+      "level": 3,
+      "era": "1940s 至今",
+      "tags": [
+        "相纸",
+        "可变反差",
+        "钡白基",
+        "树脂涂层"
+      ],
+      "summary": "黑白相纸把负片影像转成连续调的黑白影像。Multigrade 用显影液控制反差，一卷相纸可做多个反差级。Ilford 的产品线分为树脂涂层、纤维基与棉浆基三类。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "相纸的构成"
+        },
+        {
+          "kind": "p",
+          "text": "相纸由明胶中的卤化银（多为氯化银）涂在承载体上构成。黑白相纸的感光范围到约 600 nm 为止，不感红光与橙光，因此可在红色或橙色安全灯（safelight）下操作。参见 $film-stock.paper-structure。"
+        },
+        {
+          "kind": "h2",
+          "text": "Multigrade 的工作方式"
+        },
+        {
+          "kind": "p",
+          "text": "Multigrade 相纸的乳剂由两层组成。上面一层感光度低、反差高。下面一层感光度高、反差低。使用显影控制（dodging/burning）时也可通过局部曝光改变反差。用普通显影液时相纸呈单一反差。用可变反差显影液（Ilford Ilflo 或 Ilfotec Contrast）改变显影时间即可切换反差级。参见 $printing.multigrade 与 $printing.dodging-burning。"
+        },
+        {
+          "kind": "h2",
+          "text": "Ilford 产品线（2026 年）"
+        },
+        {
+          "kind": "table",
+          "caption": "Ilford 相纸系列",
+          "rows": [
+            {
+              "c1": "MULTIGRADE RC DELUXE",
+              "c2": "树脂涂层",
+              "c3": "缎面、亮光、珍珠面",
+              "c4": "冲洗与干燥快，尺寸稳定",
+              "c5": "在产"
+            },
+            {
+              "c1": "MULTIGRADE RC PORTFOLIO",
+              "c2": "树脂涂层",
+              "c3": "珍珠面、亮光",
+              "c4": "较高档次的表面处理",
+              "c5": "在产"
+            },
+            {
+              "c1": "MULTIGRADE FB CLASSIC",
+              "c2": "纤维基",
+              "c3": "亮光、哑光",
+              "c4": "钡白基，适合放大与手工上色",
+              "c5": "在产"
+            },
+            {
+              "c1": "MULTIGRADE FB WARMTONE",
+              "c2": "纤维基",
+              "c3": "亮光、半哑光",
+              "c4": "基色偏暖",
+              "c5": "在产"
+            },
+            {
+              "c1": "MULTIGRADE FB COOLTONE",
+              "c2": "纤维基",
+              "c3": "多面",
+              "c4": "基色偏冷",
+              "c5": "在产"
+            },
+            {
+              "c1": "ILFORD DIRECT POSITIVE FB",
+              "c2": "纤维基",
+              "c3": "直接正片相纸",
+              "c4": "曝光后不做负—正转换",
+              "c5": "缺货状态需向厂商核对"
+            }
+          ]
+        },
+        {
+          "kind": "p",
+          "text": "Ilford 相纸分为树脂涂层（resin-coated, RC）、纤维基（fibre base, FB）与棉浆基（cotton rag）三类。差别见 $film-stock.paper-structure。"
+        },
+        {
+          "kind": "h2",
+          "text": "Fomapan PM"
+        },
+        {
+          "kind": "p",
+          "text": "Fomapan PM 是 Foma 生产的黑白相纸。它属于该厂 1921 年以来的相纸产品线。按厂商产品目录核对当前规格、表面与尺寸。"
+        },
+        {
+          "kind": "settings",
+          "caption": "RC 与 FB 相纸的冲洗差异",
+          "items": [
+            {
+              "t": "显影",
+              "d": "两者显影时间接近。RC 相纸在显影液中的渗透慢，取出后继续显影的时间更短"
+            },
+            {
+              "t": "定影",
+              "d": "RC 相纸定影时间可短。纤维基相纸需要更充分的定影与水洗"
+            },
+            {
+              "t": "水洗与干燥",
+              "d": "RC 相纸在 20 至 30 分钟内干燥，几乎不卷曲。纤维基需要流水冲洗与平整晾干，参见 $printing.print-processing"
+            },
+            {
+              "t": "相纸测试",
+              "d": "换纸前做测试条，确定曝光与反差，参见 $printing.paper-testing"
+            }
+          ]
+        },
+        {
+          "kind": "tip",
+          "text": "纤维基相纸湿时容易损伤。纤维基相纸适合做色调处理、局部上色与精细修整，因为其表面可接纳二次处理。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Ilford Photo 相纸总览页",
+          "url": "https://www.ilfordphoto.com/photographic-paper",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Ilford Photo Resin Coated Paper 页",
+          "url": "https://www.ilfordphoto.com/photographic-paper/resin-coated-paper",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Ilford Photo Fibre Base Paper 页",
+          "url": "https://www.ilfordphoto.com/photographic-paper/fibre-base-paper",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "FOMA 产品目录 brožura",
+          "url": "http://www.foma.cz/Upload/foma/prilohy/broz_c.pdf",
+          "kind": "manufacturer",
+          "note": "含 Fomapan PM 规格。"
+        },
+        {
+          "name": "Photographic paper — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Photographic_paper",
+          "kind": "article",
+          "note": "钡白基成分、纤维基与 RC 的差别。"
+        }
+      ],
+      "links": {
+        "prereq": [],
+        "next": [
+          "printing.multigrade",
+          "printing.print-processing"
+        ],
+        "related": [
+          "printing.paper-testing",
+          "printing.fiber-paper-vs-rc"
+        ],
+        "contrast": [
+          "film-stock.colour-paper"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "Multigrade 相纸的反差靠什么改变？",
+          "type": "single",
+          "options": [
+            "更换相纸",
+            "改变显影液与显影时间",
+            "改变曝光灯功率",
+            "改变水洗时间"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "可变反差显影液通过显影时间切换乳剂两层的作用比例。"
+        },
+        {
+          "q": "黑白相纸在哪种安全灯下操作？",
+          "type": "single",
+          "options": [
+            "白色灯",
+            "红色或橙色灯",
+            "蓝光",
+            "紫外灯"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "黑白相纸的感光范围止于约 600 nm，红光与橙光安全。"
+        },
+        {
+          "q": "树脂涂层相纸的干燥时间大约是多少？",
+          "type": "single",
+          "options": [
+            "20 至 30 分钟",
+            "2 小时",
+            "12 小时",
+            "需要过夜"
+          ],
+          "answer": [
+            0
+          ],
+          "why": "RC 相纸在 20 至 30 分钟内干燥，且不易卷曲。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.colour-paper",
+      "title": "彩色相纸与 RA-4 印相",
+      "title_en": "Colour Photographic Paper and the RA-4 Process",
+      "aliases": [
+        "Kodak Endura",
+        "Ilfocolor",
+        "Fujiflex",
+        "RA-4",
+        "彩色相纸",
+        "Crystal Archive"
+      ],
+      "type": "film",
+      "level": 3,
+      "era": "1990s 至今",
+      "tags": [
+        "相纸",
+        "RA-4",
+        "彩色印相",
+        "状态待核"
+      ],
+      "summary": "彩色相纸用 RA-4 工艺冲洗，由显影、漂白、定影与稳定组成。当前市场上的三个代表品牌是 Kodak Endura、Fujifilm Fujiflex 与 Ilford 的 Ilfocolor。Endura 的当前供应状态需要向厂商核对。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "相纸结构"
+        },
+        {
+          "kind": "p",
+          "text": "彩色相纸在明胶层中加入成色剂（colour coupler），在彩色显影液中反应生成青、品红、黄三层染料。现代彩色相纸全部涂在树脂涂层相纸或聚酯片基上。参见 $film-stock.paper-structure。"
+        },
+        {
+          "kind": "note",
+          "text": "负片相纸层不含在冲洗中溶解的滤色层。层感光度从青层（感红）到品红层（感绿）再到黄层（感蓝）依次提高。黄层接近 ISO 100，青层约 ISO 25。印相时用黄滤光把蓝光归一化。"
+        },
+        {
+          "kind": "h2",
+          "text": "三个品牌"
+        },
+        {
+          "kind": "table",
+          "caption": "彩色相纸品牌与状态",
+          "rows": [
+            {
+              "c1": "Kodak Endura",
+              "c2": "RA-4 彩色相纸系列，含 Premier 与 Supra 等面层",
+              "c3": "曾为专业印相主流",
+              "c4": "2022 年前后在市场上出现供应中断的讨论",
+              "c5": "当前供应状态需以厂商渠道为准"
+            },
+            {
+              "c1": "Fujifilm Fujiflex",
+              "c2": "聚酯片基白色相纸，灰平衡与层次优良，图像稳定性好",
+              "c3": "用 RA-4 药液冲洗",
+              "c4": "在产",
+              "c5": "含 Hybrid Image Stabilizing Technology 与抗褪色剂"
+            },
+            {
+              "c1": "Ilford Ilfocolor",
+              "c2": "由 Ilford Imaging Europe GmbH 提供的 RA-4 相纸",
+              "c3": "有 Vintage tone 与 Cine tone 等版本",
+              "c4": "部分型号在中国包装",
+              "c5": "在产，版本与规格逐年变化"
+            }
+          ]
+        },
+        {
+          "kind": "warn",
+          "text": "Endura 的供应状态在不同渠道与地区不一致。采购前向厂商或授权经销商确认当前 SKU 与最小订购量。"
+        },
+        {
+          "kind": "h2",
+          "text": "RA-4 工艺"
+        },
+        {
+          "kind": "ol",
+          "text": "1. 显影：染料与成色剂反应生成彩色影像。\n2. 漂白：把未显影的银还原为可溶银盐，同时把染料氧化到稳定态。参见 $color-process.dye-stabilization。\n3. 水洗：带入定影液并带走残留物。\n4. 定影：溶去多余银盐。\n5. 稳定与水洗：提高染料稳定性并完成清洗。"
+        },
+        {
+          "kind": "settings",
+          "caption": "RA-4 印相条件",
+          "items": [
+            {
+              "t": "光源",
+              "d": "恒光箱或 LED 光源。用稳压器与固定色温，参见 $printing.enlarger"
+            },
+            {
+              "t": "曝光",
+              "d": "用测试条确定基础曝光与滤光片，参见 $printing.paper-testing"
+            },
+            {
+              "t": "冲洗",
+              "d": "三液或四液 RA-4 工艺，温度按药液说明书，参见 $process-equipment.roller-processor 与 $process-equipment.spray-processor"
+            },
+            {
+              "t": "保存",
+              "d": "成品在避光、低湿条件下保存，参见 $archive.digital-preservation"
+            }
+          ]
+        },
+        {
+          "kind": "compare",
+          "caption": "彩色相纸与黑白相纸",
+          "rows": [
+            {
+              "c1": "影像构成",
+              "c2": "青、品红、黄三层染料",
+              "c3": "黑色金属银",
+              "c4": "$film-stock.paper-structure",
+              "c5": "彩色相纸可用漂白法减银，减银后更耐光"
+            },
+            {
+              "c1": "印相工艺",
+              "c2": "RA-4",
+              "c3": "黑白显影—定影",
+              "c4": "$printing.print-processing",
+              "c5": "黑白相纸可在放大机中印相，彩色相纸同样"
+            }
+          ]
+        }
+      ],
+      "refs": [
+        {
+          "name": "Fujifilm Fujiflex Crystal Archive Printing Material 页面",
+          "url": "https://www.fujifilm.com/ca/en/business/professional-photography/color-papers-and-printing-materials/Fujiflex-crystal-archive-printing-material",
+          "kind": "manufacturer",
+          "note": "聚酯片基、灰平衡与抗褪色技术。"
+        },
+        {
+          "name": "Fujicolor Crystal Archive 相纸应用指南",
+          "url": "https://www.fujifilm.eu/fileadmin/countries/europe/products/Photo_Imaging/Photographic_Paper/Information_for_download/Fujicolor_Application_Guide_2014_2.pdf",
+          "kind": "manufacturer",
+          "note": "含 RA-4 工艺与相纸结构说明。"
+        },
+        {
+          "name": "ILFOCOLOR 产品资料（Ilford Imaging Europe）",
+          "url": "http://www.ilford.com/en/pdf/prods/ilfocolor/2000728%20Ilfocolor_web_en.pdf",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Photographic paper — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Photographic_paper",
+          "kind": "article",
+          "note": "层感光度与印相滤光说明。"
+        },
+        {
+          "name": "Status of Kodak RA4 Paper in 2022 (Large Format Photography 论坛)",
+          "url": "https://www.largeformatphotography.info/forum/showthread.php?170343-Status-of-Kodak-RA4-Paper-in-2022",
+          "kind": "forum",
+          "note": "社区讨论，非厂商公告，仅作线索。"
+        }
+      ],
+      "links": {
+        "prereq": [],
+        "next": [
+          "printing.print-processing",
+          "color-process.dye-stabilization"
+        ],
+        "related": [
+          "printing.paper-testing",
+          "process-equipment.roller-processor"
+        ],
+        "contrast": [
+          "film-stock.bw-paper"
+        ]
+      },
+      "quiz": [
+        {
+          "q": "彩色相纸使用哪种冲洗工艺？",
+          "type": "single",
+          "options": [
+            "C-41",
+            "E-6",
+            "RA-4",
+            "D-76"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "彩色相纸用 RA-4 工艺冲洗。"
+        },
+        {
+          "q": "Fujiflex 相纸的片基是什么？",
+          "type": "single",
+          "options": [
+            "纤维基",
+            "聚酯片基",
+            "硝酸片基",
+            "三醋酸纤维素酯"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "Fujiflex 是白色聚酯片基相纸，用 RA-4 冲洗。"
+        },
+        {
+          "q": "印彩色负片时为什么使用黄滤光？",
+          "type": "single",
+          "options": [
+            "提高蓝层密度",
+            "把蓝光归一化以平衡三层速度",
+            "防止相纸泛黄",
+            "增加图像反差"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "三层感光度不同，黄滤光把印相光源的蓝光比例调到与三层速度匹配。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "draft"
+    },
+    {
+      "id": "film-stock.film-timeline",
+      "title": "胶片与相纸的年代沿革",
+      "title_en": "Chronology of Photographic Film and Paper",
+      "aliases": [
+        "胶片史",
+        "停产时间线",
+        "timeline",
+        "1888",
+        "数码断点"
+      ],
+      "type": "timeline",
+      "level": 5,
+      "era": "1885 至今",
+      "tags": [
+        "年代考据",
+        "片基",
+        "彩色化",
+        "停产"
+      ],
+      "summary": "本条按年代排列胶片与相纸的关键节点，从 1885 年 Eastman 的卷片到今天的数码断点。它用于判断某型号、某片基或某工艺出现与退出的时间顺序。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "读法"
+        },
+        {
+          "kind": "p",
+          "text": "年份按公开来源记录。同一事件在来源之间有差异时，取有厂商公告支持的年份并标注。停产年份只写有明确公开记录者。"
+        },
+        {
+          "kind": "timeline",
+          "caption": "胶片与相纸大事年表",
+          "rows": [
+            {
+              "c1": "1873",
+              "c2": "Vogel 用染料把光谱感光扩展到绿光与黄光",
+              "c3": "感光材料可记录彩色信息"
+            },
+            {
+              "c1": "1883",
+              "c2": "首批商业染料增感干板上市（等色干板、正色干板）",
+              "c3": "光谱感光成为可调参数"
+            },
+            {
+              "c1": "1885",
+              "c2": "Eastman 出售第一种软片卷，实际涂在纸基上，冲洗时剥下",
+              "c3": "卷片成为商品"
+            },
+            {
+              "c1": "1889",
+              "c2": "Eastman 推出第一卷透明塑料软片，使用硝酸纤维素片基",
+              "c3": "现代片基的起点"
+            },
+            {
+              "c1": "1901",
+              "c2": "120 规格随 Kodak Brownie No. 2 推出",
+              "c3": "该规格至今仍有胶片在产"
+            },
+            {
+              "c1": "1907",
+              "c2": "Lumière 推出 Autochrome 玻璃彩色干板",
+              "c3": "最早的实用彩色摄影材料"
+            },
+            {
+              "c1": "1908",
+              "c2": "Kodak 引入醋酸纤维素酯安全软片",
+              "c3": "安全片基起步"
+            },
+            {
+              "c1": "1933",
+              "c2": "X 光胶片完全改用安全片基",
+              "c3": "硝酸片基退出医疗影像"
+            },
+            {
+              "c1": "1935",
+              "c2": "Kodak 推出 16 mm Kodachrome 家用电影反转片",
+              "c3": "多层减色法彩色片开始量产"
+            },
+            {
+              "c1": "1936",
+              "c2": "Kodachrome 35 mm 静止摄影反转片与 Agfa Color Neu 上市",
+              "c3": "减色法三色成像进入专业市场"
+            },
+            {
+              "c1": "1940",
+              "c2": "Kodak 推出 Tri-X 黑白负片",
+              "c3": "通用高感全色负片长期在产"
+            },
+            {
+              "c1": "1946",
+              "c2": "Kodak 推出 Ektachrome 品牌；Kodak 开始销售硝酸软片作家用",
+              "c3": "彩色反转片品牌化"
+            },
+            {
+              "c1": "1951",
+              "c2": "35 mm 影院软片停止使用硝酸片基",
+              "c3": "硝酸片基在主要用途上退场"
+            },
+            {
+              "c1": "1952",
+              "c2": "Kodak 完成四年转换，全面改产醋酸片基",
+              "c3": "安全片基成为标准"
+            },
+            {
+              "c1": "1955",
+              "c2": "聚酯片基开始用于专业摄影，由 DuPont 率先推出",
+              "c3": "第三代片基登场"
+            },
+            {
+              "c1": "1963",
+              "c2": "Ektachrome 工艺进入 E-3 阶段",
+              "c3": "彩色反转工艺持续演进"
+            },
+            {
+              "c1": "1966",
+              "c2": "Ektachrome 进入 E-4 工艺",
+              "c3": "反转工艺长期稳定期开始"
+            },
+            {
+              "c1": "1972",
+              "c2": "Kodak 推出 C-41 工艺，取代 C-22",
+              "c3": "彩色负片工艺标准化"
+            },
+            {
+              "c1": "1977",
+              "c2": "E-6 工艺首次发布",
+              "c3": "至今仍是彩色反转片标准工艺"
+            },
+            {
+              "c1": "1986",
+              "c2": "Kodak 开始生产 T-MAX 片状颗粒黑白负片",
+              "c3": "T 颗粒进入量产"
+            },
+            {
+              "c1": "1989",
+              "c2": "Ilford 推出 HP5 Plus；Kodak 首次把 Ektar 用于半专业彩色负片",
+              "c3": "通用黑白负片格局稳定"
+            },
+            {
+              "c1": "1990",
+              "c2": "Ilford 推出 Delta 400（芯壳颗粒）",
+              "c3": "芯壳结构量产"
+            },
+            {
+              "c1": "1991",
+              "c2": "Rodinal 取得专利满 100 周年；Fomapan 100 Classic 上市",
+              "c3": "显影液与负片产品线同时长期化"
+            },
+            {
+              "c1": "1995",
+              "c2": "E-6 工艺取消甲醛，浴名改为预漂白与最终水洗",
+              "c3": "工艺安全化"
+            },
+            {
+              "c1": "1998",
+              "c2": "Kodak 推出 Portra；富士推出 Provia 100F",
+              "c3": "专业人像与风光反转片定型"
+            },
+            {
+              "c1": "1998",
+              "c2": "CIPA 统计的胶片相机销量见顶",
+              "c3": "数码替代开始"
+            },
+            {
+              "c1": "2001",
+              "c2": "Polaroid 申请破产保护",
+              "c3": "即时成像产业收缩"
+            },
+            {
+              "c1": "2004-08-20",
+              "c2": "Ilford Imaging UK 进入接管程序",
+              "c3": "2005 年 2 月管理层收购成立 Harman Technology"
+            },
+            {
+              "c1": "2005",
+              "c2": "AgfaPhoto 破产；Ilford Photo 完成重组",
+              "c3": "主要厂商重新分工"
+            },
+            {
+              "c1": "2006",
+              "c2": "Konica Minolta 全面退出胶片业务",
+              "c3": "专业彩色负片市场收缩"
+            },
+            {
+              "c1": "2007",
+              "c2": "Kodak 重新设计 Tri-X 并改名 400TX",
+              "c3": "现有型号的工艺现代化"
+            },
+            {
+              "c1": "2009",
+              "c2": "Ektachrome 64T 与 100 Plus 停产",
+              "c3": "反转片市场开始收缩"
+            },
+            {
+              "c1": "2012",
+              "c2": "Eastman Kodak 申请破产保护",
+              "c3": "2013 至 2026 年由 Kodak Alaris 经销"
+            },
+            {
+              "c1": "2013 年末",
+              "c2": "全部 Ektachrome 产品停产",
+              "c3": "品牌退场约三年"
+            },
+            {
+              "c1": "2018-09-25",
+              "c2": "Ektachrome 35 mm 复产",
+              "c3": "反转片供应恢复"
+            },
+            {
+              "c1": "2019-12-10",
+              "c2": "Ektachrome E100 以 120 与 4×5 上市",
+              "c3": "专业反转片重新可购"
+            },
+            {
+              "c1": "2021",
+              "c2": "Fujifilm 停止 Fujicolor Pro 彩色负片",
+              "c3": "专业线退出"
+            },
+            {
+              "c1": "2022",
+              "c2": "Reto Production 在 Kodak 授权下生产 Ektar 半格相机",
+              "c3": "品牌延伸到器材"
+            },
+            {
+              "c1": "2026-01",
+              "c2": "Eastman Kodak 重新直接经销 Tri-X 与 Ektar",
+              "c3": "经销权回到制造商"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "全球市场收缩的节点"
+        },
+        {
+          "kind": "p",
+          "text": "全球胶片销量在 1999 年约为 2 亿卷，2009 年降至约 500 万卷，2019 年约 1000 万卷。富士胶片销量在 2000 年前后见顶，2003 至 2008 年间每年下降约 30%。数码相机的销量在 2005 年底已接近于零。参见 $scanning.digital-hold-on-film。"
+        },
+        {
+          "kind": "note",
+          "text": "市场数据来自第三方统计机构与行业报道，统计口径（按卷、片张或收入）不同。以具体来源为准。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Photographic film — Wikipedia（历史段落）",
+          "url": "https://en.wikipedia.org/wiki/Photographic_film",
+          "kind": "article",
+          "note": "1885 至 2019 年市场数据与厂商破产记录。"
+        },
+        {
+          "name": "Film base — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Film_base",
+          "kind": "article",
+          "note": "片基代际与转换年份。"
+        },
+        {
+          "name": "List of photographic films — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/List_of_photographic_films",
+          "kind": "article",
+          "note": "型号推出与停产年份。"
+        },
+        {
+          "name": "Kodak Moments：120 规格自 1901 年起在用",
+          "url": "https://kodakprofessional.com/en-gb/photographers/film/color",
+          "kind": "manufacturer"
+        },
+        {
+          "name": "Kodak 公司史与停产经过 — Wikipedia（本条目仅取年代线，不取评价性表述）",
+          "url": "https://en.wikipedia.org/wiki/Kodak",
+          "kind": "article",
+          "note": "原引 PetaPixel 报道在本环境持续 403，已换为 Wikipedia 条目核对年代。"
+        },
+        {
+          "name": "Camera Sales History: this is what the history of camera sales looks like (PetaPixel)",
+          "url": "https://petapixel.com/2015/04/09/this-is-what-the-history-of-camera-sales-looks-like-with-smartphones-included/",
+          "kind": "article"
+        }
+      ],
+      "links": {
+        "prereq": [],
+        "next": [],
+        "related": [
+          "film-stock.expired-film",
+          "film-stock.reversal-film",
+          "film-stock.fomapan"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "Kodak 首次推出透明塑料软片是哪一年？",
+          "type": "single",
+          "options": [
+            "1885",
+            "1889",
+            "1908",
+            "1935"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "1885 年是纸基卷片，1889 年才推出硝酸纤维素透明软片。"
+        },
+        {
+          "q": "C-41 工艺由 Kodak 于哪一年推出？",
+          "type": "single",
+          "options": [
+            "1966",
+            "1972",
+            "1977",
+            "1986"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "1972 年推出，取代 C-22。"
+        },
+        {
+          "q": "Eastman Kodak 于哪一年申请破产保护？",
+          "type": "single",
+          "options": [
+            "2005",
+            "2009",
+            "2012",
+            "2018"
+          ],
+          "answer": [
+            2
+          ],
+          "why": "2012 年申请破产保护，之后胶片业务由 Kodak Alaris 经销。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    },
+    {
+      "id": "film-stock.expired-film",
+      "title": "过期胶片的实际表现",
+      "title_en": "How Expired Film Actually Behaves",
+      "aliases": [
+        "过期胶片",
+        "expired film",
+        "冷藏过期",
+        "绿膜",
+        "色偏"
+      ],
+      "type": "pitfall",
+      "level": 3,
+      "era": "至今",
+      "tags": [
+        "过期",
+        "保存",
+        "灰雾",
+        "色偏"
+      ],
+      "summary": "过期胶片不会整体失效。它的典型变化是灰雾上升、反差下降、色彩饱和度下降与色偏。变化程度取决于过期时长、保存条件与胶片类型。彩色负片还叠加染料层劣化。",
+      "blocks": [
+        {
+          "kind": "h2",
+          "text": "变化的方向"
+        },
+        {
+          "kind": "table",
+          "caption": "过期后的典型表现",
+          "rows": [
+            {
+              "c1": "黑白负片",
+              "c2": "灰雾上升，趾部变缓，反差下降",
+              "c3": "阴影发灰，暗部细节损失",
+              "c4": "可用加反差冲洗部分补偿，参见 $bw-process.push-pull",
+              "c5": "常见方向"
+            },
+            {
+              "c1": "彩色负片",
+              "c2": "青层劣化，饱和度下降，红色记录变弱",
+              "c3": "肤色偏绿或偏黄，阴影出现色斑",
+              "c4": "扫描时做白平衡可部分校正，参见 $scanning.color-management",
+              "c5": "常见方向"
+            },
+            {
+              "c1": "反转片",
+              "c2": "密度与反差下降，颜色变淡",
+              "c3": "投影时对比不足",
+              "c4": "必要时做推片处理",
+              "c5": "常见方向"
+            }
+          ]
+        },
+        {
+          "kind": "warn",
+          "text": "过期胶片的变化在冲洗前无法预知。同一批次不同卷的结果可能不同。重要项目不要只用过期胶片。"
+        },
+        {
+          "kind": "h2",
+          "text": "保存条件的影响"
+        },
+        {
+          "kind": "p",
+          "text": "冷藏保存能显著减慢劣化。热与潮湿加快灰雾上升与染料劣化。参见 $archive.cold-storage 与 $bw-process.washing-storage。"
+        },
+        {
+          "kind": "note",
+          "text": "已冲洗胶片的霉变与硝酸片基的降解是另一类问题，按 $archive.mould-removal 与 $film-stock.nitrate-base 处理。"
+        },
+        {
+          "kind": "h2",
+          "text": "使用策略"
+        },
+        {
+          "kind": "steps",
+          "items": [
+            {
+              "t": "先做测试片",
+              "d": "取同一批次的一卷做试拍与试冲洗，确定密度、反差与色偏的实际偏移量"
+            },
+            {
+              "t": "设定曝光补偿",
+              "d": "根据试冲结果调整测光基准。彩色负片常按 Dmin 与曲线中点重新定位，参见 $film-stock.iso-speed"
+            },
+            {
+              "t": "调整显影",
+              "d": "黑白片用提高显影强度或延长时间来恢复反差，代价是颗粒上升，参见 $bw-process.mixing-temp-control"
+            },
+            {
+              "t": "扫描后校正",
+              "d": "用扫描软件做白平衡与曲线调整，参见 $scanning.scan-settings"
+            },
+            {
+              "t": "分批保存",
+              "d": "把过期批次分开装袋并标注开袋日期与试冲结果，参见 $archive.digital-preservation"
+            }
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "常见误判"
+        },
+        {
+          "kind": "ul",
+          "text": "- 把过期造成的低反差误判为显影不足。先检查试片的 Dmin 与曲线形状。\n- 把彩色负片的色偏误判为扫描仪偏色。用同一批次多卷对比。\n- 把冷藏后取出的胶片直接曝光。取出后在室温回温再装片，避免起雾。\n- 忽视包装完整性。已开封胶片失去原有干燥与避光条件，劣化速度与未开封的封存胶片不同。"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Kodak Publication F-5: Film Storage",
+          "url": "https://www.kodak.com/content/dam/Kodak/Film/Pubs/F-5.pdf",
+          "kind": "manufacturer",
+          "note": "保存条件与有效期原则。"
+        },
+        {
+          "name": "Ilford Photo 常见冲洗问题（Common processing problems）",
+          "url": "https://www.ilfordphoto.com/common-processing-problems/",
+          "kind": "manufacturer",
+          "note": "灰雾与色偏的排查路径。"
+        },
+        {
+          "name": "Fogging (photography) — Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Fogging_(photography)",
+          "kind": "article",
+          "note": "光雾、辐射雾与化学雾的区别。"
+        },
+        {
+          "name": "Archived film storage and handling（过期胶片保存讨论）",
+          "url": "https://www.uniquephoto.com/community/qa/how-usable-is-expired-35mm-color-film-and-does-refrigerated-storage-help",
+          "kind": "forum",
+          "note": "社区经验，非厂商数据，仅作线索。"
+        }
+      ],
+      "links": {
+        "prereq": [
+          "film-stock.characteristic-curve"
+        ],
+        "next": [
+          "archive.cold-storage"
+        ],
+        "related": [
+          "scanning.color-management",
+          "bw-process.push-pull"
+        ],
+        "contrast": []
+      },
+      "quiz": [
+        {
+          "q": "黑白负片过期后最典型的变化是什么？",
+          "type": "single",
+          "options": [
+            "密度下降且反差上升",
+            "灰雾上升且反差下降",
+            "颗粒变细",
+            "片基变硬"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "灰雾上升使趾部变缓，阴影反差下降。"
+        },
+        {
+          "q": "使用过期胶片前的第一步是什么？",
+          "type": "single",
+          "options": [
+            "直接按标称感光度拍摄",
+            "取同批次一卷做试拍与试冲洗",
+            "提高显影温度到 25 °C",
+            "用彩色扫描仪预扫"
+          ],
+          "answer": [
+            1
+          ],
+          "why": "过期偏移量因批次而异，先试冲确定实际偏移。"
+        }
+      ],
+      "updated": "2026-10-09",
+      "status": "reviewed"
+    }
+  ]
+}

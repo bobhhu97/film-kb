@@ -1,0 +1,81 @@
+{
+ "ok": [
+  {
+   "slug": "darkroom-enlarger",
+   "file": "web/img/darkroom-enlarger.png",
+   "source_title": "File:Darkroom enlarger en.svg",
+   "description_url": "https://commons.wikimedia.org/wiki/File:Darkroom_enlarger_en.svg",
+   "license": "CC BY-SA 2.5",
+   "author": "Darkroom enlarger.svg : きたし",
+   "width": 1100,
+   "height": 941,
+   "bytes": 103945,
+   "mime": "image/svg+xml",
+   "credit": "Own work based on: Darkroom enlarger.svg",
+   "description": "enlarger: darkroom equipment to print photographs",
+   "date": "2010-06-01 15:13"
+  }
+ ],
+ "err": [
+  [
+   "film-loading",
+   "UnidentifiedImageError(\"cannot identify image file '/Users/claw/Documents/film-kb/web/img/_t_film-loading'\")"
+  ],
+  [
+   "reel-winding",
+   "CalledProcessError(1, ['magick', '-density', '200', '-background', 'white', '/Users/claw/Documents/film-kb/web/img/_t_reel-winding', '-flatten', '-resize', '1100x1100', '/Users/claw/Documents/film-kb/web/img/reel-winding.png.raw.png'])"
+  ],
+  [
+   "developing-tank",
+   "UnidentifiedImageError(\"cannot identify image file '/Users/claw/Documents/film-kb/web/img/_t_developing-tank'\")"
+  ],
+  [
+   "c41-layers",
+   "CalledProcessError(1, ['magick', '-density', '200', '-background', 'white', '/Users/claw/Documents/film-kb/web/img/_t_c41-layers', '-flatten', '-resize', '1100x1100', '/Users/claw/Documents/film-kb/web/img/c41-layers.png.raw.png'])"
+  ],
+  [
+   "e6-process",
+   "CalledProcessError(1, ['magick', '-density', '200', '-background', 'white', '/Users/claw/Documents/film-kb/web/img/_t_e6-process', '-flatten', '-resize', '1100x1100', '/Users/claw/Documents/film-kb/web/img/e6-process.png.raw.png'])"
+  ],
+  [
+   "color-negative-strip",
+   "UnidentifiedImageError(\"cannot identify image file '/Users/claw/Documents/film-kb/web/img/_t_color-negative-strip'\")"
+  ],
+  [
+   "enlarging-easel",
+   "UnidentifiedImageError(\"cannot identify image file '/Users/claw/Documents/film-kb/web/img/_t_enlarging-easel'\")"
+  ],
+  [
+   "photo-paper-box",
+   "UnidentifiedImageError(\"cannot identify image file '/Users/claw/Documents/film-kb/web/img/_t_photo-paper-box'\")"
+  ],
+  [
+   "jobo-processor",
+   "UnidentifiedImageError(\"cannot identify image file '/Users/claw/Documents/film-kb/web/img/_t_jobo-processor'\")"
+  ],
+  [
+   "water-bath",
+   "UnidentifiedImageError(\"cannot identify image file '/Users/claw/Documents/film-kb/web/img/_t_water-bath'\")"
+  ],
+  [
+   "nikon-coolscan",
+   "UnidentifiedImageError(\"cannot identify image file '/Users/claw/Documents/film-kb/web/img/_t_nikon-coolscan'\")"
+  ],
+  [
+   "coolscan-slide-feeder",
+   "UnidentifiedImageError(\"cannot identify image file '/Users/claw/Documents/film-kb/web/img/_t_coolscan-slide-feeder'\")"
+  ],
+  [
+   "epson-flatbed",
+   "UnidentifiedImageError(\"cannot identify image file '/Users/claw/Documents/film-kb/web/img/_t_epson-flatbed'\")"
+  ],
+  [
+   "vinegar-syndrome",
+   "UnidentifiedImageError(\"cannot identify image file '/Users/claw/Documents/film-kb/web/img/_t_vinegar-syndrome'\")"
+  ],
+  [
+   "film-vault",
+   "UnidentifiedImageError(\"cannot identify image file '/Users/claw/Documents/film-kb/web/img/_t_film-vault'\")"
+  ]
+ ]
+}
