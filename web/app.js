@@ -1282,16 +1282,30 @@ function aiInject() {
     setTimeout(() => { ask.classList.remove('out'); ask.hidden = true; }, 190);
   };
 
-  const showBub = sel => {
-    const hr = document.querySelector('header.top')?.getBoundingClientRect();
-    bub.style.top = Math.max(10, (hr ? hr.bottom : 64) + 10) + 'px';
-    bub.innerHTML = `<span class="aibub-dot"></span>`
-      + `<span class="aibub-t">${esc(sel.length > 16 ? sel.slice(0, 16) + '…' : sel)}</span>`
+  // 气泡贴在选区右上角；只显示问号图标 + 「提问」两字
+  const showBub = (sel, r) => {
+    bub.innerHTML = `<svg class="aibub-i" viewBox="0 0 24 24" fill="none" aria-hidden="true">`
+      + `<circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/>`
+      + `<path d="M9.4 9.3a2.7 2.7 0 0 1 5.2.9c0 1.8-2.6 2-2.6 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>`
+      + `<circle cx="12" cy="16.6" r="1.05" fill="currentColor"/></svg>`
       + `<span class="aibub-k">提问</span>`;
     bub.title = sel;
     bub.hidden = false;
     bub.classList.remove('on'); void bub.offsetWidth; // 重置入场动画
     bub.classList.add('on');
+
+    // 先量尺寸再定位：优先选区右上角外侧，越界则翻到内侧/下方
+    const bw = bub.offsetWidth, bh = bub.offsetHeight, gap = 8, m = 8;
+    const hb = document.querySelector('header.top')?.getBoundingClientRect().bottom || 0;
+    let left = r.right + gap;
+    if (left + bw > window.innerWidth - m) left = r.right - bw - gap;   // 右侧放不下 → 贴到选区左外
+    left = Math.min(Math.max(m, left), window.innerWidth - bw - m);
+    let top = r.top - bh - gap;                                         // 默认在选区上方
+    if (top < hb + m) top = r.bottom + gap;                             // 顶部被 header 占 → 移到下方
+    // 兜底：无论选区是否在视口内，气泡都夹在可视区内（header 之下）
+    top = Math.min(Math.max(hb + m, top), Math.max(hb + m, window.innerHeight - bh - m));
+    bub.style.left = Math.round(left) + 'px';
+    bub.style.top = Math.round(top) + 'px';
   };
 
   document.addEventListener('mouseup', ev => {
@@ -1302,6 +1316,9 @@ function aiInject() {
       if (!selObj || selObj.rangeCount === 0 || sel.length < 2 || sel.length > 300) { hideBub(); return; }
       const r = selObj.getRangeAt(0).getBoundingClientRect();
       if (!r.width && !r.height) { hideBub(); return; }
+      // 选区不在视口内（例如脚本选中了屏外文本）就不弹气泡
+      const hb0 = document.querySelector('header.top')?.getBoundingClientRect().bottom || 0;
+      if (r.bottom < hb0 || r.top > window.innerHeight) { hideBub(); return; }
       // 上下文：选区所在段落的前后各取约 80 字
       const node = selObj.anchorNode?.parentElement;
       const para = node?.closest('.doc, main, body')?.textContent || '';
@@ -1313,7 +1330,7 @@ function aiInject() {
       AI_SEL_RECT = { left: r.left, top: r.top, bottom: r.bottom, width: r.width };
       AI_SEL_ENTRY = V.view === 'entry' ? V.entry : '';
       hideAsk();
-      showBub(sel);
+      showBub(sel, r);
     }, 10);
   });
 
