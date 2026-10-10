@@ -1213,6 +1213,38 @@ let AI_PEND_CTX = '';          // 划词上下文：随下一条提问静默发�
 function aiLoad() { try { return JSON.parse(localStorage.getItem(AI_KEY) || '{}'); } catch (e) { return {}; } }
 function aiSave(cfg) { try { localStorage.setItem(AI_KEY, JSON.stringify(cfg)); } catch (e) {} }
 
+/* 让 AI 针对选中文本生成「可能你想问」的 3 个短问句。
+   失败返回 null，调用方回落到固定三问；不写入 AI_HIST，避免污染正式对话。 */
+async function aiSuggest(sel, ctx) {
+  const cfg = aiLoad();
+  if (!cfg.key) return null;
+  try {
+    const ac = new AbortController();
+    const timer = setTimeout(() => ac.abort(), 8000);
+    const res = await fetch(AI_EP, {
+      method: 'POST',
+      signal: ac.signal,
+      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + cfg.key },
+      body: JSON.stringify({
+        model: AI_MODEL, stream: false, temperature: 0.7, max_tokens: 120,
+        messages: [
+          { role: 'system', content: '你为胶片摄影知识库生成读者可能想问的问题。只输出 3 个简短问句，每行一个，不要编号、不要引号、不要解释。每句不超过 14 个字。用简体中文。' },
+          { role: 'user', content: `读者选中了：「${sel}」\n所在上下文：${String(ctx || '').slice(0, 200)}` }
+        ]
+      })
+    });
+    clearTimeout(timer);
+    if (!res.ok) return null;
+    const j = await res.json();
+    const text = j.choices?.[0]?.message?.content || '';
+    const list = text.split('\n')
+      .map(s => s.replace(/^\s*(?:[-*•]|\d+[.、)])\s*/, '').replace(/^[「"“']|[」"”']$/g, '').trim())
+      .filter(s => s.length >= 4 && s.length <= 40)
+      .slice(0, 3);
+    return list.length === 3 ? list : null;
+  } catch (e) { return null; }
+}
+
 function aiInject() {
   if ($('#ai-fab')) return;
   const fab = document.createElement('button');
@@ -1226,110 +1258,157 @@ function aiInject() {
   fab.addEventListener('click', () => openAI());
   document.body.appendChild(fab);
 
-  // 划词 → 精巧提问弹窗（含上下文预览与建议问题，发送后才进入助手面板）
-  const bub = document.createElement('div');
-  bub.id = 'ai-ask';
-  bub.className = 'aiask';
+  // 划词 → 只在右上角浮出提问气泡；点气泡才展开输入弹窗
+  const bub = document.createElement('button');
+  bub.id = 'ai-bub';
+  bub.type = 'button';
+  bub.className = 'aibub';
   bub.hidden = true;
-  bub.addEventListener('mousedown', ev => ev.preventDefault()); // 防止选区丢失
   document.body.appendChild(bub);
-  let AI_CTX_SEL = ''; // 划词上下文（含前后文），随下一条提问发给 AI
+
+  const ask = document.createElement('div');
+  ask.id = 'ai-ask';
+  ask.className = 'aiask';
+  ask.hidden = true;
+  ask.addEventListener('mousedown', ev => ev.preventDefault()); // 防止选区丢失
+  document.body.appendChild(ask);
+
+  let AI_SEL = '', AI_CTX_SEL = '', AI_SEL_ENTRY = '', AI_SEL_RECT = null;
+
+  const hideBub = () => { bub.classList.remove('on'); bub.hidden = true; };
+  const hideAsk = () => {
+    if (ask.hidden) return;
+    ask.classList.remove('on'); ask.classList.add('out');
+    setTimeout(() => { ask.classList.remove('out'); ask.hidden = true; }, 190);
+  };
+
+  const showBub = sel => {
+    const hr = document.querySelector('header.top')?.getBoundingClientRect();
+    bub.style.top = Math.max(10, (hr ? hr.bottom : 64) + 10) + 'px';
+    bub.innerHTML = `<span class="aibub-dot"></span>`
+      + `<span class="aibub-t">${esc(sel.length > 16 ? sel.slice(0, 16) + '…' : sel)}</span>`
+      + `<span class="aibub-k">提问</span>`;
+    bub.title = sel;
+    bub.hidden = false;
+    bub.classList.remove('on'); void bub.offsetWidth; // 重置入场动画
+    bub.classList.add('on');
+  };
 
   document.addEventListener('mouseup', ev => {
-    if (ev.target.closest?.('.aiask, #ai-panel, #ai-fab')) return;
+    if (ev.target.closest?.('.aiask, #ai-bub, #ai-panel, #ai-fab')) return;
     setTimeout(() => {
       const selObj = window.getSelection?.();
       const sel = String(selObj || '').trim();
-      if (!selObj || selObj.rangeCount === 0 || sel.length < 2 || sel.length > 300) { bub.hidden = true; return; }
+      if (!selObj || selObj.rangeCount === 0 || sel.length < 2 || sel.length > 300) { hideBub(); return; }
       const r = selObj.getRangeAt(0).getBoundingClientRect();
-      if (!r.width && !r.height) { bub.hidden = true; return; }
+      if (!r.width && !r.height) { hideBub(); return; }
       // 上下文：选区所在段落的前后各取约 80 字
       const node = selObj.anchorNode?.parentElement;
       const para = node?.closest('.doc, main, body')?.textContent || '';
       const at = para.indexOf(sel);
       const before = at > 0 ? para.slice(Math.max(0, at - 80), at).trim() : '';
       const after = at >= 0 ? para.slice(at + sel.length, at + sel.length + 80).trim() : '';
+      AI_SEL = sel;
       AI_CTX_SEL = [before && `…${before}`, sel, after && `${after}…`].filter(Boolean).join('');
-      const title = (V.view === 'entry' && ENT.get(V.entry)) ? ENT.get(V.entry).title : document.title.replace(/ · .*$/, '');
-      const em = V.view === 'entry' && ENT.get(V.entry) ? MOD.get(ENT.get(V.entry).module) : null;
-      bub.innerHTML = `
-        <div class="aask-q"><span class="aask-mark">“</span>${esc(sel)}</div>
-        <div class="aask-ctx">${esc(title)}${em ? ` · ${esc(em.name)}` : ''}</div>
-        <div class="aask-sugs">
-          <button class="aask-s" data-sug="「${esc(sel)}」是什么意思？结合上下文用通俗的话解释。">这是什么意思？</button>
-          <button class="aask-s" data-sug="「${esc(sel)}」在实际拍摄/冲洗中怎么用？举个例子。">怎么用？举个例子</button>
-          <button class="aask-s" data-sug="解释「${esc(sel)}」时新手最常犯的错误是什么？">新手常犯的错误</button>
-        </div>
-        <div class="aask-frow">
-          <textarea id="aask-in" rows="1" placeholder="想问点什么…（Enter 发送）"></textarea>
-          <button class="aask-go" data-ask="1" aria-label="发送">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"/><path d="M13 6l6 6-6 6"/></svg>
-          </button>
-        </div>`;
-      bub.hidden = false;
-      bub.classList.remove('on'); void bub.offsetWidth; // 重置入场动画
-      bub.classList.add('on');
-      const bw = Math.min(340, window.innerWidth - 24);
-      bub.style.width = bw + 'px';
-      bub.style.left = Math.min(Math.max(12, r.left + r.width / 2 - bw / 2), window.innerWidth - bw - 12) + 'px';
-      const bubH = 210;
-      const below = r.bottom + 12, aboveSpace = r.top - 12;
-      if (aboveSpace > bubH + 20 && below + bubH > window.innerHeight - 16) {
-        bub.style.top = Math.max(12, r.top - bubH - 12) + 'px';
-      } else {
-        bub.style.top = Math.min(below, window.innerHeight - bubH - 12) + 'px';
-      }
-      bub.dataset.ctx = AI_CTX_SEL;
-      bub.dataset.entry = V.view === 'entry' ? V.entry : '';
-      setTimeout(() => $('#aask-in')?.focus(), 60);
+      AI_SEL_RECT = { left: r.left, top: r.top, bottom: r.bottom, width: r.width };
+      AI_SEL_ENTRY = V.view === 'entry' ? V.entry : '';
+      hideAsk();
+      showBub(sel);
     }, 10);
   });
 
-  // 弹窗交互：建议按钮 / 发送 / Esc 关闭 / 点外关闭
-  bub.addEventListener('click', ev => {
-    const sug = ev.target.closest('[data-sug]');
-    if (sug) {
-      const ta = $('#aask-in');
-      if (ta) { ta.value = sug.dataset.sug; ta.focus(); aiAskDispatch(); }
-      return;
+  // 点气泡 → 展开输入弹窗（含上下文预览与「可能你想问」）
+  function openAsk() {
+    const sel = AI_SEL;
+    if (!sel) return;
+    hideBub();
+    const e = AI_SEL_ENTRY ? ENT.get(AI_SEL_ENTRY) : null;
+    const em = e ? MOD.get(e.module) : null;
+    const title = e ? e.title : document.title.replace(/ · .*$/, '');
+    ask.innerHTML = `
+      <div class="aask-q"><span class="aask-mark">“</span>${esc(sel)}</div>
+      <div class="aask-ctx">${esc(title)}${em ? ` · ${esc(em.name)}` : ''}</div>
+      <div class="aask-sugs"></div>
+      <div class="aask-frow">
+        <textarea id="aask-in" rows="1" placeholder="想问点什么…（Enter 发送）"></textarea>
+        <button class="aask-go" data-ask="1" aria-label="发送">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"/><path d="M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>`;
+
+    const sugs = ask.querySelector('.aask-sugs');
+    const render = (items, byAI) => {
+      sugs.innerHTML = items.map(it =>
+        `<button class="aask-s${byAI ? ' ai' : ''}" data-askq="${esc(it.q)}">${esc(it.label)}</button>`).join('');
+    };
+    const fallback = () => render([
+      { label: '这是什么意思？', q: `「${sel}」是什么意思？结合上下文用通俗的话解释。` },
+      { label: '怎么用？举个例子', q: `「${sel}」在实际拍摄/冲洗中怎么用？举个例子。` },
+      { label: '新手常犯的错误', q: `解释「${sel}」时新手最常犯的错误是什么？` }
+    ], false);
+
+    if (!aiLoad().key) {
+      fallback();                                  // 未接入 AI：用固定三问
+    } else {
+      sugs.innerHTML = '<button class="aask-s sk"></button><button class="aask-s sk"></button><button class="aask-s sk"></button>';
+      aiSuggest(sel, AI_CTX_SEL).then(list => {
+        if (ask.hidden) return;
+        if (list && list.length) render(list.map(q => ({ label: q.length > 13 ? q.slice(0, 13) + '…' : q, q })), true);
+        else fallback();                           // 调用失败：回落固定三问
+      });
     }
-    if (ev.target.closest('[data-ask]')) { aiAskDispatch(); return; }
+
+    ask.hidden = false;
+    ask.classList.remove('on'); void ask.offsetWidth;
+    ask.classList.add('on');
+    const bw = Math.min(340, window.innerWidth - 24);
+    ask.style.width = bw + 'px';
+    const r = AI_SEL_RECT || { left: window.innerWidth / 2, top: 80, bottom: 92, width: 0 };
+    ask.style.left = Math.min(Math.max(12, r.left + r.width / 2 - bw / 2), window.innerWidth - bw - 12) + 'px';
+    const bubH = 210;
+    const below = r.bottom + 12, aboveSpace = r.top - 12;
+    if (aboveSpace > bubH + 20 && below + bubH > window.innerHeight - 16) {
+      ask.style.top = Math.max(12, r.top - bubH - 12) + 'px';
+    } else {
+      ask.style.top = Math.min(below, window.innerHeight - bubH - 12) + 'px';
+    }
+    setTimeout(() => $('#aask-in')?.focus(), 60);
+  }
+  bub.addEventListener('click', openAsk);
+
+  // 弹窗交互：建议 / 发送 / Esc 关闭 / 点外关闭
+  ask.addEventListener('click', ev => {
+    const s = ev.target.closest('[data-askq]');
+    if (s) { dispatchAsk(s.dataset.askq); return; }
+    if (ev.target.closest('[data-ask]')) dispatchAsk();
   });
-  bub.addEventListener('keydown', ev => {
+  ask.addEventListener('keydown', ev => {
     if (ev.target.id !== 'aask-in') return;
-    if (ev.key === 'Enter' && !ev.shiftKey) { ev.preventDefault(); aiAskDispatch(); }
-    if (ev.key === 'Escape') { bub.hidden = true; window.getSelection()?.removeAllRanges(); }
+    if (ev.key === 'Enter' && !ev.shiftKey) { ev.preventDefault(); dispatchAsk(); }
+    if (ev.key === 'Escape') { hideAsk(); window.getSelection()?.removeAllRanges(); }
   });
   document.addEventListener('mousedown', ev => {
-    if (!bub.hidden && !ev.target.closest('.aiask, #ai-fab, #ai-panel')) {
-      bub.hidden = true; AI_CTX_SEL = '';
-    }
+    if (!ev.target.closest('.aiask, #ai-bub, #ai-fab, #ai-panel')) { hideAsk(); hideBub(); }
   });
+  window.addEventListener('scroll', () => { if (ask.hidden) hideBub(); }, { passive: true });
 
-  // 弹窗发送：把划词上下文并入问题，打开主面板并直接开始接收回答
-  function aiAskDispatch() {
+  // 发送：把划词上下文并入问题，打开主面板并直接开始接收回答
+  function dispatchAsk(forced) {
     const ta = $('#aask-in');
-    const q = (ta?.value || '').trim();
-    const sel = bub.querySelector('.aask-q')?.textContent.replace(/^“/, '').trim() || '';
-    const ctx = bub.dataset.ctx || sel;
-    const entryId = bub.dataset.entry || '';
+    const q = String(forced || ta?.value || '').trim();
+    const sel = AI_SEL;
     if (!q && !sel) return;
-    bub.classList.remove('on');
-    bub.classList.add('out');
     const question = q || `「${sel}」是什么意思？`;
+    const title = AI_SEL_ENTRY ? (ENT.get(AI_SEL_ENTRY)?.title || AI_SEL_ENTRY) : '';
     // 上下文静默附加：气泡里只显示问题本身
-    AI_PEND_CTX = (entryId ? `【划词提问】来自词条《${ENT.get(entryId)?.title || entryId}》。\n` : '【划词提问】\n')
-      + `选中文本及前后文：${ctx}\n\n我的问题：${question}`;
+    AI_PEND_CTX = (title ? `【划词提问】来自词条《${title}》。\n` : '【划词提问】\n')
+      + `选中文本及前后文：${AI_CTX_SEL}\n\n我的问题：${question}`;
+    hideAsk(); hideBub();
     setTimeout(() => {
-      bub.hidden = true; bub.classList.remove('out');
       window.getSelection()?.removeAllRanges();
       openAI('');
       const panelTa = $('#ai-in');
-      if (panelTa) {
-        panelTa.value = question;
-        AI_CTX_SEL = '';
-        aiSend();
-      }
+      if (panelTa) { panelTa.value = question; aiSend(); }
     }, 190);
   }
 }
