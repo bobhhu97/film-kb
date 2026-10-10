@@ -47,6 +47,13 @@ jobs:
             git --no-pager diff --stat -- web/data
           fi
 
+      # 3. 给 index.html 的资源引用打内容哈希。
+      #    GitHub Pages 对所有文件发 max-age=600，用户可能在缓存窗口内
+      #    拿到「新样式 + 旧脚本」的混合版本，出现过气泡被旧 CSS 裁切、
+      #    表格渲染成字面竖线等假故障。内容哈希让每次发布都取到配套资源。
+      - name: 资源版本指纹
+        run: node tools/stamp.mjs
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3

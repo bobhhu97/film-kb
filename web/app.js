@@ -1342,7 +1342,7 @@ function openAI(prefill) {
   const ov = document.createElement('div');
   ov.id = 'ai-panel';
   ov.className = 'ai-ov';
-  ov.innerHTML = `<div class="ai">
+  ov.innerHTML = `<div class="ai-box">
     <div class="ai-h"><strong>AI 学习助手</strong>
       <span class="ai-stat" id="ai-stat"></span>
       <span class="ai-actions">

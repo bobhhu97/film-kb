@@ -1121,7 +1121,7 @@ button:focus:not(:focus-visible){outline:none}
   display:flex;align-items:flex-end;justify-content:center;
   animation:fadein .2s var(--ease)
 }
-.ai{
+.ai-box{
   width:min(680px, calc(100vw - 24px));height:min(640px, 86vh);
   margin-bottom:14px;
   background:var(--bg2);border:1px solid var(--line2);border-radius:var(--r);
@@ -1241,7 +1241,7 @@ button:focus:not(:focus-visible){outline:none}
 @media(max-width:720px){
   .fab{right:15px;bottom:15px;width:46px;height:46px}
   .ai-ov{align-items:stretch}
-  .ai{width:100vw;height:100vh;margin:0;border-radius:0;border:none}
+  .ai-box{width:100vw;height:100vh;margin:0;border-radius:0;border:none}
   .ai-msg{max-width:94%}
   .aiask{max-width:calc(100vw - 20px)}
   .aask-sugs{margin-bottom:8px}
