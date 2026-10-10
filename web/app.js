@@ -1206,7 +1206,8 @@ let AI_HIST = [];              // {role, content} 最近对话（内存）
 let AI_BUSY = false;
 let AI_STICK = true;           // 对话区是否吸底（用户上滚即暂停自动跟随）
 let AI_LAST_AUTO = -1;         // 最近一次程序化滚动位置（区分用户滚动）
-function aiAutoScroll(log, y) { AI_LAST_AUTO = y; log.scrollTop = y; }
+let AI_AUTO_AT = -1e9;         // 最近一次程序化滚动时刻
+function aiAutoScroll(log, y) { AI_LAST_AUTO = y; AI_AUTO_AT = performance.now(); log.scrollTop = y; }
 let AI_PEND_CTX = '';          // 划词上下文：随下一条提问静默发给 AI，但不显示在气泡里
 
 function aiLoad() { try { return JSON.parse(localStorage.getItem(AI_KEY) || '{}'); } catch (e) { return {}; } }
@@ -1386,9 +1387,20 @@ function openAI(prefill) {
   });
   // 用户上滚查看历史时暂停吸底；滚回底部恢复
   const log = $('#ai-log');
+  const atBottom = () => log.scrollHeight - log.scrollTop - log.clientHeight < 24;
+  // 下一帧用实际位置校正（用户滚回底部时恢复跟随）
+  const reconcile = () => requestAnimationFrame(() => { AI_STICK = atBottom(); });
+  // 上滚意图要同步判定：wheel 事件里 scrollTop 尚未更新，等一帧会让本帧到达的 delta 把用户拽回底部
+  const upIntent = ev => ev.type === 'wheel' ? ev.deltaY < 0
+    : ev.type === 'keydown' ? /^(ArrowUp|PageUp|Home)$/.test(ev.key) : false;
+  log.addEventListener('wheel', ev => { if (upIntent(ev)) AI_STICK = false; reconcile(); }, { passive: true });
+  log.addEventListener('touchmove', () => { AI_STICK = false; reconcile(); }, { passive: true });
+  log.addEventListener('keydown', ev => { if (upIntent(ev)) AI_STICK = false; reconcile(); });
   log.addEventListener('scroll', () => {
-    if (AI_LAST_AUTO >= 0 && Math.abs(log.scrollTop - AI_LAST_AUTO) < 2) return; // 程序化滚动
-    AI_STICK = log.scrollHeight - log.scrollTop - log.clientHeight < 24;
+    // 程序化滚动后短时间内的 scroll 事件（含滚动锚定触发的）一律忽略
+    if (performance.now() - AI_AUTO_AT < 150) return;
+    if (AI_LAST_AUTO >= 0 && Math.abs(log.scrollTop - AI_LAST_AUTO) < 2) return;
+    reconcile();
   }, { passive: true });
   aiApplyKeyState();
   // 恢复最近一次对话（不入动画，直接铺）
@@ -1518,7 +1530,7 @@ function aiMd(src) {
 function aiLog(kind, text, noanim) {
   const log = $('#ai-log'); if (!log) return;
   const d = document.createElement('div');
-  d.className = 'ai-msg ' + kind;
+  d.className = 'ai-msg ' + (kind === 'ai' ? 'bot' : kind);
   if (!noanim) d.classList.add('in');
   if (kind === 'sys') { d.textContent = text; }
   else if (kind === 'ai') { d.innerHTML = aiMd(text); }
@@ -1569,7 +1581,7 @@ async function aiSend() {
   let holder = null;
   const spawnHolder = () => {
     const h = document.createElement('div');
-    h.className = 'ai-msg ai stream in';
+    h.className = 'ai-msg bot stream in';
     log.appendChild(h);
     const me = h.previousElementSibling;
     if (me) { // 把提问对齐到对话区顶部，回答在其下逐渐生长
@@ -1625,6 +1637,9 @@ async function aiSend() {
     AI_HIST.pop(); // 失败的用户消息不入历史
   }
   if (holder) holder.classList.remove('stream');
+  // 落定补偿：布局/字体稳定后再贴一次底，避免末行被容器边缘切掉
+  requestAnimationFrame(() => aiStick());
+  setTimeout(() => aiStick(), 220);
   AI_BUSY = false;
   const btn = $('#ai-send'); if (btn) btn.disabled = false;
   aiStick();
