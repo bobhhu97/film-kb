@@ -1258,18 +1258,22 @@ function openAI(prefill) {
   ov.className = 'ai-ov';
   ov.innerHTML = `<div class="ai">
     <div class="ai-h"><strong>AI 学习助手</strong>
-      <span class="dim">DeepSeek · 直连本机浏览器，密钥不上传</span>
-      <button class="sm" data-ai="close">关闭</button></div>
+      <span class="ai-stat" id="ai-stat"></span>
+      <span class="ai-actions">
+        <button class="sm" data-ai="exp">导出</button>
+        <button class="sm" data-ai="clear">清屏</button>
+        <button class="sm" data-ai="keytoggle">密钥</button>
+        <button class="sm" data-ai="close">关闭</button>
+      </span></div>
     <div class="ai-log" id="ai-log"></div>
-    <div class="ai-settings" id="ai-set">
+    <div class="ai-settings" id="ai-set" hidden>
       <div class="ai-krow">
-        <input type="password" id="ai-key" placeholder="粘贴 DeepSeek API Key（sk-…）" value="${esc(cfg.key || '')}" autocomplete="off">
-        <button class="sm" data-ai="savekey">保存</button>
+        <input type="password" id="ai-key" placeholder="DeepSeek API Key（sk-…）" value="${esc(cfg.key || '')}" autocomplete="off">
+        <button class="sm pri-sm" data-ai="savekey">保存</button>
       </div>
-      <div class="dim" style="font-size:11.5px">密钥仅保存在浏览器 localStorage，不经过任何服务器。没有 Key？到 platform.deepseek.com 注册获取。</div>
     </div>
     <div class="ai-frow">
-      <textarea id="ai-in" rows="2" placeholder="问我任何胶片摄影问题…（Enter 发送，Shift+Enter 换行）"></textarea>
+      <textarea id="ai-in" rows="2" placeholder="输入问题…（Enter 发送）"></textarea>
       <button class="pri" data-ai="send" id="ai-send">发送</button>
     </div></div>`;
   document.body.appendChild(ov);
@@ -1279,13 +1283,10 @@ function openAI(prefill) {
     if (!b) return;
     const a = b.dataset.ai;
     if (a === 'close') closeAI();
-    if (a === 'savekey') {
-      const k = $('#ai-key').value.trim();
-      aiSave({ key: k });
-      toast(k ? '密钥已保存到本机' : '密钥已清除');
-      $('#ai-set').classList.remove('warn');
-      aiLog('sys', k ? '密钥已保存，可以开始提问。' : '密钥已清除。');
-    }
+    if (a === 'keytoggle') { const s = $('#ai-set'); s.hidden = !s.hidden; if (!s.hidden) $('#ai-key').focus(); }
+    if (a === 'clear') { AI_HIST = []; const log = $('#ai-log'); if (log) log.innerHTML = ''; }
+    if (a === 'exp') aiExport();
+    if (a === 'savekey') aiSaveKey(b);
     if (a === 'send') aiSend();
   });
   const ta = $('#ai-in');
@@ -1293,21 +1294,104 @@ function openAI(prefill) {
     if (ev.key === 'Enter' && !ev.shiftKey) { ev.preventDefault(); aiSend(); }
     if (ev.key === 'Escape') closeAI();
   });
+  aiApplyKeyState();
   // 恢复最近一次对话
   AI_HIST.forEach(m => aiLog(m.role === 'user' ? 'me' : 'ai', m.content));
-  if (!cfg.key) { $('#ai-set').classList.add('warn'); aiLog('sys', '首次使用：请先在下方输入 DeepSeek API Key。密钥只存在这台设备的浏览器里。'); }
+  if (!cfg.key) $('#ai-set').hidden = false;
   if (prefill) { ta.value = prefill; aiSend(); }
   else ta.focus();
 }
 function closeAI() { $('#ai-panel')?.remove(); }
+
+function aiApplyKeyState() {
+  const cfg = aiLoad(), stat = $('#ai-stat'), set = $('#ai-set');
+  if (!stat) return;
+  if (cfg.key) { stat.textContent = 'API 已连接'; stat.className = 'ai-stat ok'; if (set) set.hidden = true; }
+  else { stat.textContent = '未连接'; stat.className = 'ai-stat off'; if (set) set.hidden = false; }
+}
+
+async function aiSaveKey(btn) {
+  const k = $('#ai-key').value.trim();
+  if (!k) { toast('请输入密钥'); return; }
+  btn.disabled = true; const old = btn.textContent; btn.textContent = '验证中…';
+  const ok = await aiTestKey(k);
+  btn.disabled = false; btn.textContent = old;
+  if (ok) {
+    aiSave({ key: k });
+    aiApplyKeyState();
+    toast('API 已连接');
+    aiLog('sys', '密钥可用，开始提问吧。');
+  } else {
+    $('#ai-set').hidden = false;
+    toast('密钥无效或网络失败，请重新输入');
+    $('#ai-key').focus(); $('#ai-key').select();
+  }
+}
+
+async function aiTestKey(key) {
+  try {
+    const r = await fetch(AI_EP, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + key },
+      body: JSON.stringify({ model: AI_MODEL, messages: [{ role: 'user', content: 'ping' }], max_tokens: 4, stream: false })
+    });
+    return r.ok;
+  } catch (e) { return false; }
+}
+
+function aiExport() {
+  if (!AI_HIST.length) { toast('暂无对话可导出'); return; }
+  const lines = ['# AI 学习助手对话', '', `导出时间：${mdDate(Date.now())}`, ''];
+  for (const m of AI_HIST) lines.push(m.role === 'user' ? `**问：** ${m.content}` : `**答：** ${m.content}`, '');
+  const blob = new Blob([lines.join('\n')], { type: 'text/markdown;charset=utf-8' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `filmkb-ai-${mdDate(Date.now())}.md`;
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 3000);
+}
+
+/* 轻量 Markdown → 安全 HTML（先整体转义，再只加自己的标签） */
+function aiMd(src) {
+  const escHtml = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const inline = s => escHtml(s)
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/(^|[^*])\*([^*\n]+)\*/g, '$1<em>$2</em>');
+  const lines = String(src).split('\n');
+  const out = [];
+  let code = null, list = null;
+  const flushList = () => { if (list) { out.push(`<${list.t}>` + list.items.map(i => `<li>${i}</li>`).join('') + `</${list.t}>`); list = null; } };
+  for (const raw of lines) {
+    const t = raw.trim();
+    if (t.startsWith('```')) {
+      if (code !== null) { out.push(`<pre><code>${escHtml(code.join('\n'))}</code></pre>`); code = null; }
+      else { flushList(); code = []; }
+      continue;
+    }
+    if (code !== null) { code.push(raw); continue; }
+    const hm = t.match(/^(#{1,4})\s+(.*)/);
+    if (hm) { flushList(); out.push(`<h4>${inline(hm[2])}</h4>`); continue; }
+    const ul = t.match(/^[-*•]\s+(.*)/);
+    if (ul) { if (!list || list.t !== 'ul') { flushList(); list = { t: 'ul', items: [] }; } list.items.push(inline(ul[1])); continue; }
+    const ol = t.match(/^\d+[.、)]\s+(.*)/);
+    if (ol) { if (!list || list.t !== 'ol') { flushList(); list = { t: 'ol', items: [] }; } list.items.push(inline(ol[1])); continue; }
+    if (!t) { flushList(); continue; }
+    flushList();
+    out.push(`<p>${inline(t)}</p>`);
+  }
+  if (code !== null) out.push(`<pre><code>${escHtml(code.join('\n'))}</code></pre>`);
+  flushList();
+  return out.join('');
+}
 
 function aiLog(kind, text) {
   const log = $('#ai-log'); if (!log) return;
   const d = document.createElement('div');
   d.className = 'ai-msg ' + kind;
   if (kind === 'sys') { d.textContent = text; }
+  else if (kind === 'ai') { d.innerHTML = aiMd(text); }
   else {
-    // 纯文本渲染：textContent 防注入，换行转 <br>
     const s = document.createElement('span');
     s.textContent = text;
     d.appendChild(s);
@@ -1323,13 +1407,13 @@ async function aiSend() {
   const ta = $('#ai-in'), log = $('#ai-log');
   const q = ta.value.trim();
   if (!q) return;
-  if (!cfg.key) { $('#ai-set').classList.add('warn'); $('#ai-key').focus(); aiLog('sys', '请先保存 DeepSeek API Key。'); return; }
+  if (!cfg.key) { $('#ai-set').hidden = false; $('#ai-key').focus(); return; }
   ta.value = '';
   aiLog('me', q);
   AI_HIST.push({ role: 'user', content: q });
 
   // 组装上下文：当前词条 + 最近对话（截断 ~4000 字）
-  const msgs = [{ role: 'system', content: '你是胶片摄影知识库的助教。用简体中文回答，简洁准确，面向摄影学习者。涉及化学操作时提醒安全。' }];
+  const msgs = [{ role: 'system', content: '你是胶片摄影知识库的助教。用简体中文回答，简洁准确，面向摄影学习者，用 Markdown 格式排版（列表、粗体、代码块）。涉及化学操作时提醒安全。' }];
   if (V.view === 'entry') {
     const e = ENT.get(V.entry);
     if (e) msgs.push({ role: 'system', content: `用户正在阅读词条《${e.title}》（${e.title_en}，level ${e.level}）：${e.summary}` });
@@ -1372,7 +1456,7 @@ async function aiSend() {
           const delta = j.choices?.[0]?.delta?.content;
           if (delta) {
             full += delta;
-            holder.textContent = full;
+            holder.innerHTML = aiMd(full);
             log.scrollTop = log.scrollHeight;
           }
         } catch (e) {}
