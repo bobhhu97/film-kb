@@ -1059,15 +1059,62 @@ button:focus:not(:focus-visible){outline:none}
 }
 .fab:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 12px 34px rgba(232,163,61,.45), 0 4px 12px rgba(0,0,0,.45)}
 .fab svg{width:26px;height:26px}
-.aibub{
-  position:fixed;z-index:71;
-  background:var(--amber);color:#1a130a;
-  font-size:12px;font-weight:600;
-  padding:5px 12px;border-radius:999px;cursor:pointer;
-  box-shadow:0 4px 14px rgba(0,0,0,.4);
-  animation:rise .25s var(--ease)
+/* ---------- 划词提问弹窗 ---------- */
+.aiask{
+  position:fixed;z-index:72;
+  background:color-mix(in srgb, var(--bg2) 92%, transparent);
+  backdrop-filter:blur(14px) saturate(1.2);
+  border:1px solid var(--line2);border-radius:var(--r);
+  box-shadow:0 18px 50px rgba(0,0,0,.55), 0 0 0 1px rgba(232,163,61,.05),
+             0 0 34px rgba(232,163,61,.06);
+  padding:13px 14px 12px;
+  opacity:0;pointer-events:none;
+  transform:translateY(6px) scale(.97);
+  transition:opacity .22s var(--ease), transform .22s var(--ease);
 }
-.aibub:hover{background:var(--amber-hi)}
+.aiask.on{opacity:1;pointer-events:auto;transform:none}
+.aiask.out{opacity:0;transform:translateY(-5px) scale(.98);transition:opacity .18s var(--ease), transform .18s var(--ease)}
+.aask-q{
+  font-family:var(--serif);font-size:14px;font-weight:600;color:var(--ink);
+  line-height:1.55;max-height:3.1em;overflow:hidden;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+  word-break:break-word
+}
+.aask-mark{color:var(--amber);font-size:16px;margin-right:2px}
+.aask-ctx{
+  font-family:var(--mono);font-size:10px;color:var(--ink3);
+  letter-spacing:.04em;margin:5px 0 9px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis
+}
+.aask-sugs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.aask-s{
+  font-family:var(--sans);font-size:11.5px;color:var(--ink2);
+  background:color-mix(in srgb, var(--amber) 7%, var(--bg3));
+  border:1px solid var(--line);border-radius:999px;
+  padding:4px 11px;cursor:pointer;
+  transition:border-color .16s var(--ease), color .16s var(--ease), background .16s var(--ease)
+}
+.aask-s:hover{border-color:var(--amber);color:var(--amber-hi);background:color-mix(in srgb, var(--amber) 12%, var(--bg3))}
+.aask-frow{display:flex;gap:7px;align-items:flex-end}
+.aask-frow textarea{
+  flex:1;background:var(--bg);border:1px solid var(--line);border-radius:var(--r-sm);
+  color:var(--ink);font-family:var(--sans);font-size:13px;line-height:1.55;
+  padding:8px 11px;resize:none;min-height:34px;max-height:96px;
+  transition:border-color .16s
+}
+.aask-frow textarea:focus{outline:none;border-color:var(--amber)}
+.aask-frow textarea::placeholder{color:var(--ink4)}
+.aask-go{
+  flex:none;width:34px;height:34px;border-radius:var(--r-sm);
+  background:linear-gradient(150deg, var(--amber) 0%, var(--amber-lo) 100%);
+  border:none;cursor:pointer;color:#1a130a;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 3px 12px rgba(232,163,61,.3);
+  transition:transform .18s var(--ease), box-shadow .18s var(--ease)
+}
+.aask-go svg{width:16px;height:16px;flex:none}
+.aask-go:hover{transform:translateX(2px);box-shadow:0 4px 16px rgba(232,163,61,.42)}
+.aask-go:active{transform:scale(.94)}
 .ai-ov{
   position:fixed;inset:0;z-index:75;
   background:rgba(4,3,2,.62);backdrop-filter:blur(3px);
@@ -1172,6 +1219,8 @@ button:focus:not(:focus-visible){outline:none}
   .ai-ov{align-items:stretch}
   .ai{width:100vw;height:100vh;margin:0;border-radius:0;border:none}
   .ai-msg{max-width:94%}
+  .aiask{max-width:calc(100vw - 20px)}
+  .aask-sugs{margin-bottom:8px}
   .lvlchips{gap:6px}
   .lchip{padding:5px 11px;font-size:12px}
   .pathlist .plv{display:none}
@@ -1190,7 +1239,7 @@ button:focus:not(:focus-visible){outline:none}
   body{background:#fff!important;background-image:none!important;font-size:11.5pt}
   body::before,body::after{display:none!important}
   header.top,footer,.toast,#sug,.gctl,.glegend,button,[data-act],
-  .filters,.quiz,.searchbox,.modal-ov,#navbtns,.fab,.aibub,.ai-ov,.termpop,
+  .filters,.quiz,.searchbox,.modal-ov,#navbtns,.fab,.aiask,.ai-ov,.termpop,
   .pathbox,.lvlchips{display:none!important}
   .term{border-bottom:none;color:#111}
   main{max-width:none;padding:0}

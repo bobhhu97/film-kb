@@ -1205,6 +1205,7 @@ const AI_MODEL = 'deepseek-chat';
 let AI_HIST = [];              // {role, content} 最近对话（内存）
 let AI_BUSY = false;
 let AI_STICK = true;           // 对话区是否吸底（用户上滚即暂停自动跟随）
+let AI_PEND_CTX = '';          // 划词上下文：随下一条提问静默发给 AI，但不显示在气泡里
 
 function aiLoad() { try { return JSON.parse(localStorage.getItem(AI_KEY) || '{}'); } catch (e) { return {}; } }
 function aiSave(cfg) { try { localStorage.setItem(AI_KEY, JSON.stringify(cfg)); } catch (e) {} }
@@ -1222,32 +1223,112 @@ function aiInject() {
   fab.addEventListener('click', () => openAI());
   document.body.appendChild(fab);
 
-  // 划词气泡
+  // 划词 → 精巧提问弹窗（含上下文预览与建议问题，发送后才进入助手面板）
   const bub = document.createElement('div');
-  bub.id = 'ai-bub';
-  bub.className = 'aibub';
-  bub.textContent = '提问';
+  bub.id = 'ai-ask';
+  bub.className = 'aiask';
   bub.hidden = true;
   bub.addEventListener('mousedown', ev => ev.preventDefault()); // 防止选区丢失
-  bub.addEventListener('click', () => {
-    const sel = String(window.getSelection?.() || '').trim();
-    bub.hidden = true;
-    openAI(sel ? `「${sel}」是什么意思？结合本页内容解释一下。` : '');
-  });
   document.body.appendChild(bub);
+  let AI_CTX_SEL = ''; // 划词上下文（含前后文），随下一条提问发给 AI
 
   document.addEventListener('mouseup', ev => {
-    if (ev.target.closest('.aibub, #ai-panel, #ai-fab')) return;
+    if (ev.target.closest?.('.aiask, #ai-panel, #ai-fab')) return;
     setTimeout(() => {
-      const sel = String(window.getSelection?.() || '').trim();
-      if (sel.length < 2 || sel.length > 300) { bub.hidden = true; return; }
-      const r = window.getSelection().getRangeAt(0).getBoundingClientRect();
+      const selObj = window.getSelection?.();
+      const sel = String(selObj || '').trim();
+      if (!selObj || selObj.rangeCount === 0 || sel.length < 2 || sel.length > 300) { bub.hidden = true; return; }
+      const r = selObj.getRangeAt(0).getBoundingClientRect();
       if (!r.width && !r.height) { bub.hidden = true; return; }
+      // 上下文：选区所在段落的前后各取约 80 字
+      const node = selObj.anchorNode?.parentElement;
+      const para = node?.closest('.doc, main, body')?.textContent || '';
+      const at = para.indexOf(sel);
+      const before = at > 0 ? para.slice(Math.max(0, at - 80), at).trim() : '';
+      const after = at >= 0 ? para.slice(at + sel.length, at + sel.length + 80).trim() : '';
+      AI_CTX_SEL = [before && `…${before}`, sel, after && `${after}…`].filter(Boolean).join('');
+      const title = (V.view === 'entry' && ENT.get(V.entry)) ? ENT.get(V.entry).title : document.title.replace(/ · .*$/, '');
+      const em = V.view === 'entry' && ENT.get(V.entry) ? MOD.get(ENT.get(V.entry).module) : null;
+      bub.innerHTML = `
+        <div class="aask-q"><span class="aask-mark">“</span>${esc(sel)}</div>
+        <div class="aask-ctx">${esc(title)}${em ? ` · ${esc(em.name)}` : ''}</div>
+        <div class="aask-sugs">
+          <button class="aask-s" data-sug="「${esc(sel)}」是什么意思？结合上下文用通俗的话解释。">这是什么意思？</button>
+          <button class="aask-s" data-sug="「${esc(sel)}」在实际拍摄/冲洗中怎么用？举个例子。">怎么用？举个例子</button>
+          <button class="aask-s" data-sug="解释「${esc(sel)}」时新手最常犯的错误是什么？">新手常犯的错误</button>
+        </div>
+        <div class="aask-frow">
+          <textarea id="aask-in" rows="1" placeholder="想问点什么…（Enter 发送）"></textarea>
+          <button class="aask-go" data-ask="1" aria-label="发送">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"/><path d="M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>`;
       bub.hidden = false;
-      bub.style.left = Math.min(Math.max(8, r.left + r.width / 2 - 30), window.innerWidth - 70) + 'px';
-      bub.style.top = Math.max(8, r.top - 40) + 'px';
+      bub.classList.remove('on'); void bub.offsetWidth; // 重置入场动画
+      bub.classList.add('on');
+      const bw = Math.min(340, window.innerWidth - 24);
+      bub.style.width = bw + 'px';
+      bub.style.left = Math.min(Math.max(12, r.left + r.width / 2 - bw / 2), window.innerWidth - bw - 12) + 'px';
+      const bubH = 210;
+      const below = r.bottom + 12, aboveSpace = r.top - 12;
+      if (aboveSpace > bubH + 20 && below + bubH > window.innerHeight - 16) {
+        bub.style.top = Math.max(12, r.top - bubH - 12) + 'px';
+      } else {
+        bub.style.top = Math.min(below, window.innerHeight - bubH - 12) + 'px';
+      }
+      bub.dataset.ctx = AI_CTX_SEL;
+      bub.dataset.entry = V.view === 'entry' ? V.entry : '';
+      setTimeout(() => $('#aask-in')?.focus(), 60);
     }, 10);
   });
+
+  // 弹窗交互：建议按钮 / 发送 / Esc 关闭 / 点外关闭
+  bub.addEventListener('click', ev => {
+    const sug = ev.target.closest('[data-sug]');
+    if (sug) {
+      const ta = $('#aask-in');
+      if (ta) { ta.value = sug.dataset.sug; ta.focus(); aiAskDispatch(); }
+      return;
+    }
+    if (ev.target.closest('[data-ask]')) { aiAskDispatch(); return; }
+  });
+  bub.addEventListener('keydown', ev => {
+    if (ev.target.id !== 'aask-in') return;
+    if (ev.key === 'Enter' && !ev.shiftKey) { ev.preventDefault(); aiAskDispatch(); }
+    if (ev.key === 'Escape') { bub.hidden = true; window.getSelection()?.removeAllRanges(); }
+  });
+  document.addEventListener('mousedown', ev => {
+    if (!bub.hidden && !ev.target.closest('.aiask, #ai-fab, #ai-panel')) {
+      bub.hidden = true; AI_CTX_SEL = '';
+    }
+  });
+
+  // 弹窗发送：把划词上下文并入问题，打开主面板并直接开始接收回答
+  function aiAskDispatch() {
+    const ta = $('#aask-in');
+    const q = (ta?.value || '').trim();
+    const sel = bub.querySelector('.aask-q')?.textContent.replace(/^“/, '').trim() || '';
+    const ctx = bub.dataset.ctx || sel;
+    const entryId = bub.dataset.entry || '';
+    if (!q && !sel) return;
+    bub.classList.remove('on');
+    bub.classList.add('out');
+    const question = q || `「${sel}」是什么意思？`;
+    // 上下文静默附加：气泡里只显示问题本身
+    AI_PEND_CTX = (entryId ? `【划词提问】来自词条《${ENT.get(entryId)?.title || entryId}》。\n` : '【划词提问】\n')
+      + `选中文本及前后文：${ctx}\n\n我的问题：${question}`;
+    setTimeout(() => {
+      bub.hidden = true; bub.classList.remove('out');
+      window.getSelection()?.removeAllRanges();
+      openAI('');
+      const panelTa = $('#ai-in');
+      if (panelTa) {
+        panelTa.value = question;
+        AI_CTX_SEL = '';
+        aiSend();
+      }
+    }, 190);
+  }
 }
 
 function openAI(prefill) {
@@ -1434,7 +1515,8 @@ async function aiSend() {
   ta.value = '';
   AI_STICK = true;
   aiLog('me', q);
-  AI_HIST.push({ role: 'user', content: q });
+  AI_HIST.push({ role: 'user', content: AI_PEND_CTX ? `${AI_PEND_CTX}${q}` : q });
+  AI_PEND_CTX = '';
 
   // 组装上下文：当前词条 + 最近对话（截断 ~4000 字）
   const msgs = [{ role: 'system', content: '你是胶片摄影知识库的助教。用简体中文回答，简洁准确，面向摄影学习者，用 Markdown 格式排版（列表、粗体、代码块）。涉及化学操作时提醒安全。' }];
