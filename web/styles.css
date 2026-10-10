@@ -1091,13 +1091,26 @@ button:focus:not(:focus-visible){outline:none}
 .ai-stat.ok{color:var(--green)}
 .ai-stat.ok::before{content:'';display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-right:5px;vertical-align:1px}
 .ai-stat.off{color:var(--ink3)}
-.ai-actions{margin-left:auto;display:flex;gap:6px}
-.ai-actions .sm{font-size:11.5px;padding:4px 10px}
+.ai-actions{margin-left:auto;display:flex;gap:4px}
+.aibtn{
+  width:28px;height:28px;border-radius:var(--r-xs);
+  background:none;border:none;cursor:pointer;color:var(--ink3);
+  display:flex;align-items:center;justify-content:center;
+  transition:color .16s var(--ease), background .16s var(--ease)
+}
+.aibtn svg{width:15px;height:15px;flex:none}
+.aibtn:hover{color:var(--amber-hi);background:color-mix(in srgb, var(--amber) 10%, transparent)}
 .ai-log{
   flex:1 1 0;min-height:0;overflow-y:auto;
-  padding:16px 18px;display:flex;flex-direction:column;gap:10px
+  padding:16px 18px;display:flex;flex-direction:column;gap:10px;
+  scroll-behavior:smooth
 }
 .ai-msg{flex:none;max-width:86%;padding:9px 13px;border-radius:var(--r-sm);font-size:13.5px;line-height:1.75;word-break:break-word}
+.ai-msg.in{animation:aiPop .28s var(--ease) both}
+@keyframes aiPop{
+  from{opacity:0;transform:translateY(7px) scale(.985)}
+  to{opacity:1;transform:none}
+}
 .ai-msg.me{
   align-self:flex-end;
   background:color-mix(in srgb, var(--amber) 16%, var(--bg3));
@@ -1137,6 +1150,8 @@ button:focus:not(:focus-visible){outline:none}
 .ai-msg .ai-err{color:var(--red);font-size:12.5px}
 .ai-settings{padding:12px 18px;border-top:1px solid var(--line);flex:none}
 .ai-settings[hidden]{display:none}
+.ai-knote{margin-top:7px;font-size:11px;color:var(--ink3)}
+.ai-knote::before{content:'※';margin-right:4px;color:var(--ink4)}
 .ai-krow{display:flex;gap:8px}
 .ai-krow input{
   flex:1;background:var(--bg);border:1px solid var(--line);border-radius:var(--r-xs);

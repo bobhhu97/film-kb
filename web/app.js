@@ -1204,6 +1204,7 @@ const AI_EP = 'https://api.deepseek.com/chat/completions';
 const AI_MODEL = 'deepseek-chat';
 let AI_HIST = [];              // {role, content} 最近对话（内存）
 let AI_BUSY = false;
+let AI_STICK = true;           // 对话区是否吸底（用户上滚即暂停自动跟随）
 
 function aiLoad() { try { return JSON.parse(localStorage.getItem(AI_KEY) || '{}'); } catch (e) { return {}; } }
 function aiSave(cfg) { try { localStorage.setItem(AI_KEY, JSON.stringify(cfg)); } catch (e) {} }
@@ -1253,6 +1254,7 @@ function openAI(prefill) {
   closeTermPop();
   $('#ai-panel')?.remove();
   const cfg = aiLoad();
+  AI_STICK = true;
   const ov = document.createElement('div');
   ov.id = 'ai-panel';
   ov.className = 'ai-ov';
@@ -1260,10 +1262,14 @@ function openAI(prefill) {
     <div class="ai-h"><strong>AI 学习助手</strong>
       <span class="ai-stat" id="ai-stat"></span>
       <span class="ai-actions">
-        <button class="sm" data-ai="exp">导出</button>
-        <button class="sm" data-ai="clear">清屏</button>
-        <button class="sm" data-ai="keytoggle">密钥</button>
-        <button class="sm" data-ai="close">关闭</button>
+        <button class="aibtn" data-ai="exp" title="导出对话" aria-label="导出对话">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19h16"/></svg></button>
+        <button class="aibtn" data-ai="clear" title="清屏" aria-label="清屏">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/><path d="M6.5 7l.8 12a1 1 0 0 0 1 .9h7.4a1 1 0 0 0 1-.9l.8-12"/></svg></button>
+        <button class="aibtn" data-ai="keytoggle" title="API 密钥" aria-label="API 密钥">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="14" r="4"/><path d="M11 11L20 2"/><path d="M16.5 5.5L19 8"/><path d="M14 8l2 2"/></svg></button>
+        <button class="aibtn" data-ai="close" title="关闭" aria-label="关闭">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg></button>
       </span></div>
     <div class="ai-log" id="ai-log"></div>
     <div class="ai-settings" id="ai-set" hidden>
@@ -1271,6 +1277,7 @@ function openAI(prefill) {
         <input type="password" id="ai-key" placeholder="DeepSeek API Key（sk-…）" value="${esc(cfg.key || '')}" autocomplete="off">
         <button class="sm pri-sm" data-ai="savekey">保存</button>
       </div>
+      <div class="ai-knote">密钥只保存在本机浏览器 localStorage，不会上传到任何服务器。</div>
     </div>
     <div class="ai-frow">
       <textarea id="ai-in" rows="2" placeholder="输入问题…（Enter 发送）"></textarea>
@@ -1294,9 +1301,14 @@ function openAI(prefill) {
     if (ev.key === 'Enter' && !ev.shiftKey) { ev.preventDefault(); aiSend(); }
     if (ev.key === 'Escape') closeAI();
   });
+  // 用户上滚查看历史时暂停吸底；滚回底部恢复
+  const log = $('#ai-log');
+  log.addEventListener('scroll', () => {
+    AI_STICK = log.scrollHeight - log.scrollTop - log.clientHeight < 24;
+  }, { passive: true });
   aiApplyKeyState();
-  // 恢复最近一次对话
-  AI_HIST.forEach(m => aiLog(m.role === 'user' ? 'me' : 'ai', m.content));
+  // 恢复最近一次对话（不入动画，直接铺）
+  AI_HIST.forEach(m => aiLog(m.role === 'user' ? 'me' : 'ai', m.content, true));
   if (!cfg.key) $('#ai-set').hidden = false;
   if (prefill) { ta.value = prefill; aiSend(); }
   else ta.focus();
@@ -1385,10 +1397,11 @@ function aiMd(src) {
   return out.join('');
 }
 
-function aiLog(kind, text) {
+function aiLog(kind, text, noanim) {
   const log = $('#ai-log'); if (!log) return;
   const d = document.createElement('div');
   d.className = 'ai-msg ' + kind;
+  if (!noanim) d.classList.add('in');
   if (kind === 'sys') { d.textContent = text; }
   else if (kind === 'ai') { d.innerHTML = aiMd(text); }
   else {
@@ -1397,8 +1410,18 @@ function aiLog(kind, text) {
     d.appendChild(s);
   }
   log.appendChild(d);
-  log.scrollTop = log.scrollHeight;
+  if (noanim || AI_STICK) log.scrollTop = log.scrollHeight;
   return d;
+}
+
+/* 对话区吸底跟随（流式输出时每帧调用；流式期间用瞬时滚动，避免 smooth 动画排队掉队） */
+function aiStick() {
+  const log = $('#ai-log'); if (!log) return;
+  if (AI_STICK) {
+    log.style.scrollBehavior = 'auto';
+    log.scrollTop = log.scrollHeight;
+    log.style.scrollBehavior = '';
+  }
 }
 
 async function aiSend() {
@@ -1409,6 +1432,7 @@ async function aiSend() {
   if (!q) return;
   if (!cfg.key) { $('#ai-set').hidden = false; $('#ai-key').focus(); return; }
   ta.value = '';
+  AI_STICK = true;
   aiLog('me', q);
   AI_HIST.push({ role: 'user', content: q });
 
@@ -1424,9 +1448,19 @@ async function aiSend() {
 
   AI_BUSY = true;
   $('#ai-send').disabled = true;
-  const holder = aiLog('ai', '');
-  holder.classList.add('stream');
-  holder.textContent = '…';
+  // 回答框延迟入场：先看到自己的提问，再浮现回答框
+  setTimeout(() => {
+    if (!$('#ai-log')) return;
+    const holder = aiLog('ai', '');
+    holder.classList.add('stream', 'in');
+    holder.textContent = '…';
+    holder.dataset.pending = '1';
+    aiStick();
+  }, 160);
+  // 等回答框就绪后再发请求（保持时序：问题动画 → 回答框 → 流式文字）
+  await new Promise(r => setTimeout(r, 170));
+  const holder = [...log.querySelectorAll('.ai-msg.ai[data-pending]')].pop()
+    || (() => { const h = aiLog('ai', ''); h.classList.add('stream'); h.textContent = '…'; return h; })();
   try {
     const res = await fetch(AI_EP, {
       method: 'POST',
@@ -1457,7 +1491,7 @@ async function aiSend() {
           if (delta) {
             full += delta;
             holder.innerHTML = aiMd(full);
-            log.scrollTop = log.scrollHeight;
+            aiStick();
           }
         } catch (e) {}
       }
@@ -1472,8 +1506,10 @@ async function aiSend() {
     AI_HIST.pop(); // 失败的用户消息不入历史
   }
   holder.classList.remove('stream');
+  delete holder.dataset.pending;
   AI_BUSY = false;
   const btn = $('#ai-send'); if (btn) btn.disabled = false;
+  aiStick();
 }
 
 
