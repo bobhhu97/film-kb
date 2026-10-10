@@ -1205,6 +1205,8 @@ const AI_MODEL = 'deepseek-chat';
 let AI_HIST = [];              // {role, content} 最近对话（内存）
 let AI_BUSY = false;
 let AI_STICK = true;           // 对话区是否吸底（用户上滚即暂停自动跟随）
+let AI_LAST_AUTO = -1;         // 最近一次程序化滚动位置（区分用户滚动）
+function aiAutoScroll(log, y) { AI_LAST_AUTO = y; log.scrollTop = y; }
 let AI_PEND_CTX = '';          // 划词上下文：随下一条提问静默发给 AI，但不显示在气泡里
 
 function aiLoad() { try { return JSON.parse(localStorage.getItem(AI_KEY) || '{}'); } catch (e) { return {}; } }
@@ -1385,6 +1387,7 @@ function openAI(prefill) {
   // 用户上滚查看历史时暂停吸底；滚回底部恢复
   const log = $('#ai-log');
   log.addEventListener('scroll', () => {
+    if (AI_LAST_AUTO >= 0 && Math.abs(log.scrollTop - AI_LAST_AUTO) < 2) return; // 程序化滚动
     AI_STICK = log.scrollHeight - log.scrollTop - log.clientHeight < 24;
   }, { passive: true });
   aiApplyKeyState();
@@ -1525,18 +1528,16 @@ function aiLog(kind, text, noanim) {
     d.appendChild(s);
   }
   log.appendChild(d);
-  if (noanim || AI_STICK) log.scrollTop = log.scrollHeight;
+  if (noanim || AI_STICK) aiAutoScroll(log, log.scrollHeight);
   return d;
 }
 
-/* 对话区吸底跟随（流式输出时每帧调用；流式期间用瞬时滚动，避免 smooth 动画排队掉队） */
+/* 流式跟随：回答末端长过视口底部时才吸底；短回答停在提问处，随内容延长自然下移 */
 function aiStick() {
-  const log = $('#ai-log'); if (!log) return;
-  if (AI_STICK) {
-    log.style.scrollBehavior = 'auto';
-    log.scrollTop = log.scrollHeight;
-    log.style.scrollBehavior = '';
-  }
+  const log = $('#ai-log'); if (!log || !AI_STICK) return;
+  const last = log.querySelector('.ai-msg:last-child'); if (!last) return;
+  const er = last.getBoundingClientRect(), lr = log.getBoundingClientRect();
+  if (er.bottom > lr.bottom - 4) aiAutoScroll(log, log.scrollHeight);
 }
 
 async function aiSend() {
@@ -1564,19 +1565,19 @@ async function aiSend() {
 
   AI_BUSY = true;
   $('#ai-send').disabled = true;
-  // 回答框延迟入场：先看到自己的提问，再浮现回答框
-  setTimeout(() => {
-    if (!$('#ai-log')) return;
-    const holder = aiLog('ai', '');
-    holder.classList.add('stream', 'in');
-    holder.textContent = '…';
-    holder.dataset.pending = '1';
-    aiStick();
-  }, 160);
-  // 等回答框就绪后再发请求（保持时序：问题动画 → 回答框 → 流式文字）
-  await new Promise(r => setTimeout(r, 170));
-  const holder = [...log.querySelectorAll('.ai-msg.ai[data-pending]')].pop()
-    || (() => { const h = aiLog('ai', ''); h.classList.add('stream'); h.textContent = '…'; return h; })();
+  // 回答框不预占位：首个 token 到达时才出现，视角从提问处跟随延长
+  let holder = null;
+  const spawnHolder = () => {
+    const h = document.createElement('div');
+    h.className = 'ai-msg ai stream in';
+    log.appendChild(h);
+    const me = h.previousElementSibling;
+    if (me) { // 把提问对齐到对话区顶部，回答在其下逐渐生长
+      const dy = me.getBoundingClientRect().top - log.getBoundingClientRect().top;
+      aiAutoScroll(log, log.scrollTop + dy - 14);
+    }
+    return h;
+  };
   try {
     const res = await fetch(AI_EP, {
       method: 'POST',
@@ -1605,6 +1606,7 @@ async function aiSend() {
           const j = JSON.parse(data);
           const delta = j.choices?.[0]?.delta?.content;
           if (delta) {
+            if (!holder) holder = spawnHolder();
             full += delta;
             holder.innerHTML = aiMd(full);
             aiStick();
@@ -1612,17 +1614,17 @@ async function aiSend() {
         } catch (e) {}
       }
     }
-    if (!full) { holder.textContent = '（空回复）'; }
+    if (!full) { if (!holder) holder = spawnHolder(); holder.textContent = '（空回复）'; }
     else AI_HIST.push({ role: 'assistant', content: full });
     if (AI_HIST.length > 16) AI_HIST = AI_HIST.slice(-16);
   } catch (err) {
+    if (!holder) holder = spawnHolder();
     holder.classList.remove('stream');
     holder.innerHTML = `<span class="ai-err"></span>`;
     holder.querySelector('.ai-err').textContent = '请求失败：' + err.message;
     AI_HIST.pop(); // 失败的用户消息不入历史
   }
-  holder.classList.remove('stream');
-  delete holder.dataset.pending;
+  if (holder) holder.classList.remove('stream');
   AI_BUSY = false;
   const btn = $('#ai-send'); if (btn) btn.disabled = false;
   aiStick();
