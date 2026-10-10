@@ -1351,7 +1351,7 @@ function aiInject() {
       fallback();                                  // 未接入 AI：用固定三问
     } else {
       sugs.innerHTML = '<button class="aask-s sk"></button><button class="aask-s sk"></button><button class="aask-s sk"></button>';
-      aiSuggest(sel, AI_CTX_SEL).then(list => {
+      aiSuggest(sel, `词条《${title}》：${AI_CTX_SEL}`).then(list => {
         if (ask.hidden) return;
         if (list && list.length) render(list.map(q => ({ label: q.length > 13 ? q.slice(0, 13) + '…' : q, q })), true);
         else fallback();                           // 调用失败：回落固定三问
