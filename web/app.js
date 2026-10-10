@@ -1451,30 +1451,64 @@ function aiMd(src) {
     .replace(/`([^`]+)`/g, '<code>$1</code>')
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
     .replace(/(^|[^*])\*([^*\n]+)\*/g, '$1<em>$2</em>');
+
   const lines = String(src).split('\n');
   const out = [];
-  let code = null, list = null;
+  let code = null, list = null, quote = [], table = null;
+
   const flushList = () => { if (list) { out.push(`<${list.t}>` + list.items.map(i => `<li>${i}</li>`).join('') + `</${list.t}>`); list = null; } };
+  const flushQuote = () => { if (quote.length) { out.push(`<blockquote>` + quote.map(q => `<p>${inline(q)}</p>`).join('') + `</blockquote>`); quote = []; } };
+  const flushTable = () => {
+    if (!table) return;
+    const { head, rows } = table;
+    let h = '<table><thead><tr>' + head.map(c => `<th>${inline(c)}</th>`).join('') + '</tr></thead><tbody>';
+    h += rows.map(r => '<tr>' + r.map(c => `<td>${inline(c)}</td>`).join('') + '</tr>').join('');
+    out.push(h + '</tbody></table>');
+    table = null;
+  };
+  const flushAll = () => { flushList(); flushQuote(); flushTable(); };
+  const splitRow = t => t.replace(/^\||\|$/g, '').split('|').map(c => c.trim());
+
   for (const raw of lines) {
     const t = raw.trim();
+
     if (t.startsWith('```')) {
+      flushAll();
       if (code !== null) { out.push(`<pre><code>${escHtml(code.join('\n'))}</code></pre>`); code = null; }
-      else { flushList(); code = []; }
+      else code = [];
       continue;
     }
     if (code !== null) { code.push(raw); continue; }
+
+    // 表格行：| ... | ... |（分隔行 |---|---| 只作表格边界判定）
+    if (/^\|.*\|/.test(t)) {
+      if (/^\|\s*:?-{2,}/.test(t)) { if (table && !table.sep) table.sep = true; continue; }
+      const cells = splitRow(t);
+      if (!table) table = { head: cells, rows: [], sep: false };
+      else table.rows.push(cells);
+      continue;
+    }
+    flushTable();
+
+    // 引用块
+    const qm = t.match(/^>\s?(.*)/);
+    if (qm) { flushList(); quote.push(qm[1]); continue; }
+    flushQuote();
+
     const hm = t.match(/^(#{1,4})\s+(.*)/);
-    if (hm) { flushList(); out.push(`<h4>${inline(hm[2])}</h4>`); continue; }
+    if (hm) { flushAll(); out.push(`<h4>${inline(hm[2])}</h4>`); continue; }
+
     const ul = t.match(/^[-*•]\s+(.*)/);
-    if (ul) { if (!list || list.t !== 'ul') { flushList(); list = { t: 'ul', items: [] }; } list.items.push(inline(ul[1])); continue; }
+    if (ul) { flushQuote(); if (!list || list.t !== 'ul') { flushList(); list = { t: 'ul', items: [] }; } list.items.push(inline(ul[1])); continue; }
     const ol = t.match(/^\d+[.、)]\s+(.*)/);
-    if (ol) { if (!list || list.t !== 'ol') { flushList(); list = { t: 'ol', items: [] }; } list.items.push(inline(ol[1])); continue; }
-    if (!t) { flushList(); continue; }
-    flushList();
+    if (ol) { flushQuote(); if (!list || list.t !== 'ol') { flushList(); list = { t: 'ol', items: [] }; } list.items.push(inline(ol[1])); continue; }
+
+    if (!t) { flushAll(); continue; }
+    flushAll();
     out.push(`<p>${inline(t)}</p>`);
   }
   if (code !== null) out.push(`<pre><code>${escHtml(code.join('\n'))}</code></pre>`);
-  flushList();
+  flushAll();
   return out.join('');
 }
 

@@ -1186,6 +1186,29 @@ button:focus:not(:focus-visible){outline:none}
   padding:10px 12px;overflow-x:auto;margin:6px 0
 }
 .ai-msg.ai pre code{background:none;border:none;padding:0;color:var(--ink2)}
+.ai-msg.ai blockquote{
+  margin:6px 0;padding:7px 12px;
+  border-left:2px solid var(--amber-lo);
+  background:color-mix(in srgb, var(--amber) 5%, transparent);
+  border-radius:0 var(--r-xs) var(--r-xs) 0;
+  color:var(--ink2)
+}
+.ai-msg.ai blockquote p{margin:0}
+.ai-msg.ai table{
+  border-collapse:collapse;margin:8px 0;width:100%;
+  font-size:12.5px;line-height:1.6
+}
+.ai-msg.ai th,.ai-msg.ai td{
+  border:1px solid var(--line);
+  padding:5px 10px;text-align:left;vertical-align:top
+}
+.ai-msg.ai th{
+  font-family:var(--mono);font-size:11px;letter-spacing:.04em;
+  color:var(--amber);background:color-mix(in srgb, var(--amber) 6%, var(--bg));
+  font-weight:600;white-space:nowrap
+}
+.ai-msg.ai td{color:var(--ink2)}
+.ai-msg.ai td strong{color:var(--ink)}
 .ai-msg.sys{
   align-self:center;max-width:94%;flex:none;
   background:none;border:none;color:var(--ink3);font-size:12px;text-align:center;padding:2px
